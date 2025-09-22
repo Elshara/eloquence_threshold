@@ -8,25 +8,47 @@ gb = BytesIO()
 empty_gb = BytesIO()
 empty_gb.write(b'\0\0')
 onIndexReached = None
-speaking=False
-lang='enu'
+speaking = False
+lang = 'enu'
 from ctypes import *
 import config
 from ctypes import wintypes
 import threading, os, queue, re
 import nvwave
-user32 = windll.user32
+
+IS_64BIT = ctypes.sizeof(ctypes.c_void_p) == 8
+VOICE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "eloquence"))
+voiceDirectory = VOICE_DIR
+_dictionaryDirs = [VOICE_DIR]
+
+user32 = ctypes.WinDLL("user32", use_last_error=True)
+kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+LPMSG = ctypes.POINTER(wintypes.MSG)
+user32.PeekMessageW.argtypes = (LPMSG, wintypes.HWND, wintypes.UINT, wintypes.UINT, wintypes.UINT)
+user32.PeekMessageW.restype = wintypes.BOOL
+user32.GetMessageW.argtypes = (LPMSG, wintypes.HWND, wintypes.UINT, wintypes.UINT)
+user32.GetMessageW.restype = wintypes.BOOL
+user32.TranslateMessage.argtypes = (LPMSG,)
+user32.TranslateMessage.restype = wintypes.BOOL
+user32.DispatchMessageW.argtypes = (LPMSG,)
+user32.DispatchMessageW.restype = wintypes.LRESULT
+user32.PostThreadMessageW.argtypes = (wintypes.DWORD, wintypes.UINT, wintypes.WPARAM, wintypes.LPARAM)
+user32.PostThreadMessageW.restype = wintypes.BOOL
+kernel32.GetCurrentThreadId.restype = wintypes.DWORD
+kernel32.GlobalAlloc.argtypes = (wintypes.UINT, ctypes.c_size_t)
+kernel32.GlobalAlloc.restype = ctypes.c_void_p
+
 eci = None
 tid = None
 bgt = None
-samples=3300
+samples = 3300
 buffer = create_string_buffer(samples*2)
 bgQueue = queue.Queue()
 synth_queue = queue.Queue()
 stopped = threading.Event()
 started = threading.Event()
 param_event = threading.Event()
-Callback = WINFUNCTYPE(c_int, c_int, c_int, c_int, c_void_p)
+Callback = WINFUNCTYPE(c_int, wintypes.HANDLE, wintypes.UINT, wintypes.WPARAM, c_void_p)
 hsz=1
 pitch=2
 fluctuation=3
@@ -45,8 +67,8 @@ langs={'esm': (131073, 'Latin American Spanish'),
 'ita': (327680, 'Italian'),
 'enu': (65536, 'American English'),
 'eng': (65537, 'British English')}
-avLangs=0
-eciPath=0
+avLangs = 0
+eciPath = ""
 WM_PROCESS=1025
 WM_SILENCE = 1026
 WM_PARAM = 1027
@@ -63,13 +85,119 @@ audio_queue = queue.Queue()
 dll = None
 handle = None
 
+_SUPPORTED_64BIT_MACHINES = {0x8664, 0xAA64}
+_SUPPORTED_32BIT_MACHINES = {0x14C}
+
+
+def _machine_type_for(path):
+ try:
+  with open(path, "rb") as f:
+   f.seek(0x3C)
+   offset_bytes = f.read(4)
+   if len(offset_bytes) != 4:
+    return None
+   pe_offset = int.from_bytes(offset_bytes, "little")
+   if pe_offset < 0:
+    return None
+   f.seek(pe_offset)
+   if f.read(4) != b"PE\0\0":
+    return None
+   machine_bytes = f.read(2)
+   if len(machine_bytes) != 2:
+    return None
+   return int.from_bytes(machine_bytes, "little")
+ except OSError:
+  return None
+
+
+def _library_matches_current_arch(path):
+ machine = _machine_type_for(path)
+ if machine is None:
+  return True
+ if IS_64BIT:
+  return machine in _SUPPORTED_64BIT_MACHINES
+ return machine in _SUPPORTED_32BIT_MACHINES
+
+
+def _candidate_library_paths():
+ base_dir = VOICE_DIR
+ candidates = []
+ if IS_64BIT:
+  arch_dirs = ("x64", "amd64", "arm64", "arm64ec")
+  file_names = ("eci.dll", "ECI.DLL", "eci64.dll", "ECI64.DLL", "eci_x64.dll", "ECI_X64.DLL")
+  for arch_dir in arch_dirs:
+   arch_root = os.path.join(base_dir, arch_dir)
+   for name in file_names:
+    candidates.append(os.path.join(arch_root, name))
+  for name in file_names:
+   candidates.append(os.path.join(base_dir, name))
+ else:
+  for name in ("eci.dll", "ECI.DLL"):
+   candidates.append(os.path.join(base_dir, name))
+ return candidates
+
+
+def _resolve_eci_path():
+ for candidate in _candidate_library_paths():
+  if not os.path.exists(candidate):
+   continue
+  if _library_matches_current_arch(candidate):
+   return os.path.abspath(candidate)
+  logging.debug("Skipping Eloquence library at %s due to architecture mismatch", candidate)
+ raise FileNotFoundError(
+  "Missing {arch} Eloquence engine. Expected to find a compatible ECI library in {base}.".format(
+   arch="64-bit" if IS_64BIT else "32-bit",
+   base=VOICE_DIR,
+  )
+ )
+
+
+def _refresh_dictionary_dirs():
+ global _dictionaryDirs, voiceDirectory
+ dirs = []
+ eci_dir = os.path.dirname(eciPath)
+ for entry in (eci_dir, VOICE_DIR):
+  if entry and os.path.isdir(entry) and entry not in dirs:
+   dirs.append(entry)
+ if not dirs:
+  dirs.append(eci_dir)
+ _dictionaryDirs = dirs
+ voiceDirectory = dirs[0]
+ for entry in dirs:
+  try:
+   if any(name.lower().endswith(".syn") for name in os.listdir(entry)):
+    voiceDirectory = entry
+    break
+  except OSError:
+   continue
+
+
+def _find_resource(*names):
+ for directory in _dictionaryDirs:
+  for name in names:
+   candidate = os.path.join(directory, name)
+   if os.path.exists(candidate):
+    return candidate
+ return None
+
+
+def _post_message(message, wparam=0, lparam=0):
+ if tid is None:
+  return
+ user32.PostThreadMessageW(
+  tid,
+  message,
+  wintypes.WPARAM(wparam),
+  wintypes.LPARAM(lparam),
+ )
+
 class eciThread(threading.Thread):
  def run(self):
   global vparams, params, speaking
   global tid, dll, handle
-  tid = windll.kernel32.GetCurrentThreadId()
+  tid = kernel32.GetCurrentThreadId()
   msg = wintypes.MSG()
-  user32.PeekMessageA(byref(msg), None, 0x400, 0x400, 0)
+  user32.PeekMessageW(byref(msg), None, 0x400, 0x400, 0)
   (dll, handle) = eciNew()
   dll.eciRegisterCallback(handle, callback, None)
   dll.eciSetOutputBuffer(handle, samples, pointer(buffer))
@@ -77,22 +205,19 @@ class eciThread(threading.Thread):
   self.dictionaryHandle = dll.eciNewDict(handle)
   dll.eciSetDict(handle, self.dictionaryHandle)
   #0 = main dictionary
-  if os.path.exists(os.path.join(os.path.dirname(eciPath), "enumain.dic")):
-   dll.eciLoadDict(handle, self.dictionaryHandle, 0, os.path.join(os.path.dirname(eciPath), "enumain.dic").encode('mbcs'))
-  elif os.path.exists(os.path.join(os.path.dirname(eciPath), "main.dic")):
-   dll.eciLoadDict(handle, self.dictionaryHandle, 0, os.path.join(os.path.dirname(eciPath), "main.dic").encode('mbcs'))
-  if os.path.exists(os.path.join(os.path.dirname(eciPath), "enuroot.dic")):
-   dll.eciLoadDict(handle, self.dictionaryHandle, 1, os.path.join(os.path.dirname(eciPath), "enuroot.dic").encode('mbcs'))
-  elif os.path.exists(os.path.join(os.path.dirname(eciPath), "root.dic")):
-   dll.eciLoadDict(handle, self.dictionaryHandle, 1, os.path.join(os.path.dirname(eciPath), "root.dic").encode('mbcs'))
-  if os.path.exists(os.path.join(os.path.dirname(eciPath), "enuabbr.dic")):
-   dll.eciLoadDict(handle, self.dictionaryHandle, 2, os.path.join(os.path.dirname(eciPath), "enuabbr.dic").encode('mbcs'))
-  elif os.path.exists(os.path.join(os.path.dirname(eciPath), "abbr.dic")):
-   dll.eciLoadDict(handle, self.dictionaryHandle, 2, os.path.join(os.path.dirname(eciPath), "abbr.dic").encode('mbcs'))
+  main_dict = _find_resource("enumain.dic", "main.dic")
+  if main_dict:
+   dll.eciLoadDict(handle, self.dictionaryHandle, 0, main_dict.encode('mbcs'))
+  root_dict = _find_resource("enuroot.dic", "root.dic")
+  if root_dict:
+   dll.eciLoadDict(handle, self.dictionaryHandle, 1, root_dict.encode('mbcs'))
+  abbr_dict = _find_resource("enuabbr.dic", "abbr.dic")
+  if abbr_dict:
+   dll.eciLoadDict(handle, self.dictionaryHandle, 2, abbr_dict.encode('mbcs'))
   params[9] = dll.eciGetParam(handle, 9)
   started.set()
   while True:
-   user32.GetMessageA(byref(msg), 0, 0, 0)
+   user32.GetMessageW(byref(msg), None, 0, 0)
    user32.TranslateMessage(byref(msg))
    if msg.message == WM_PROCESS:
     internal_process_queue()
@@ -124,30 +249,49 @@ class eciThread(threading.Thread):
     stopped.set()
     break
    else:
-    user32.DispatchMessageA(byref(msg))
+    user32.DispatchMessageW(byref(msg))
 
 def eciCheck():
  global eciPath
- eciPath=os.path.abspath(os.path.join(os.path.dirname(__file__), r"eloquence\eci.dll"))
+ try:
+  eciPath = _resolve_eci_path()
+ except FileNotFoundError as exc:
+  logging.error("%s", exc)
+  return False
+ _refresh_dictionary_dirs()
  iniCheck()
  return os.path.exists(eciPath)
 
 def iniCheck():
- ini=open(eciPath[:-3]+"ini","r+")
- ini.seek(12)
- tml=ini.readline()
- if tml[:-9] != eciPath[:-8]:
+ base_name = os.path.splitext(os.path.basename(eciPath))[0]
+ ini_path = _find_resource(f"{base_name}.ini", "eci.ini", "ECI.INI")
+ if not ini_path:
+  return
+ try:
+  ini = open(ini_path, "r+")
+ except OSError:
+  return
+ with ini:
   ini.seek(12)
-  tmp=ini.read()
-  ini.seek(12)
-  ini.write(tmp.replace(tml[:-9], eciPath[:-8]))
-  ini.truncate()
- ini.close()
+  tml = ini.readline()
+  if not tml:
+   return
+  expected = os.path.dirname(eciPath)
+  if not expected.endswith(os.sep):
+   expected = expected + os.sep
+  current = tml[:-9]
+  if current != expected:
+   ini.seek(12)
+   tmp = ini.read()
+   ini.seek(12)
+   ini.write(tmp.replace(current, expected))
+   ini.truncate()
 
 def eciNew():
  global avLangs
- eciCheck()
- eci = windll.LoadLibrary(eciPath)
+ if not eciCheck():
+  raise RuntimeError("Eloquence engine is not available for this architecture")
+ eci = ctypes.WinDLL(eciPath)
  b=c_int()
  eci.eciGetAvailableLanguages(0,byref(b))
  avLangs=(c_int*b.value)()
@@ -242,10 +386,12 @@ class BgThread(threading.Thread):
 def _bgExec(func, *args, **kwargs):
  global bgQueue
  bgQueue.put((func, args, kwargs))
-def str2mem(str):
- buf = c_buffer(str)
+def str2mem(value):
+ if isinstance(value, str):
+  value = value.encode("mbcs")
+ buf = create_string_buffer(value)
  blen = sizeof(buf)
- ptr = windll.kernel32.GlobalAlloc(0x40, blen)
+ ptr = kernel32.GlobalAlloc(0x40, blen)
  cdll.msvcrt.memcpy(ptr, ctypes.addressof(buf), blen)
  return ptr
 
@@ -291,14 +437,14 @@ def synth():
  dll.eciSynthesize(handle)
 
 def stop():
- user32.PostThreadMessageA(tid, WM_SILENCE, 0, 0)
+ _post_message(WM_SILENCE)
 
 def pause(switch):
  player.pause(switch)
 
 def terminate():
  global bgt, player
- user32.PostThreadMessageA(tid, WM_KILL, 0, 0)
+ _post_message(WM_KILL)
  stopped.wait()
  stopped.clear()
  bgQueue.put((None, None, None))
@@ -309,24 +455,24 @@ def terminate():
  bgt = None
 
 def set_voice(vl):
-  user32.PostThreadMessageA(tid, WM_PARAM, int(vl), 9)
+  _post_message(WM_PARAM, int(vl), 9)
 
 def getVParam(pr):
  return vparams[pr]
  
-def  isInEciThread():
- return tid == windll.kernel32.GetCurrentThreadId()
+def isInEciThread():
+ return tid == kernel32.GetCurrentThreadId()
 
 def setVParam(pr, vl, temporary=False):
  if isInEciThread():
   # We are running inside eciThread, so do it synchronously
   setVParamImpl(pr, vl, temporary)
  else:
-  # Send a message to eciThread
-  assert(not temporary, "Can only set vParams permanently from another thread.")
-  user32.PostThreadMessageA(tid, WM_VPARAM, pr, vl)
-  param_event.wait()
-  param_event.clear()
+   # Send a message to eciThread
+   assert not temporary, "Can only set vParams permanently from another thread."
+   _post_message(WM_VPARAM, pr, vl)
+   param_event.wait()
+   param_event.clear()
   
 def setVParamImpl(param, val, temporary=False):
     global handle
@@ -335,12 +481,12 @@ def setVParamImpl(param, val, temporary=False):
      vparams[param] = val
      
 def setVariant(v):
- user32.PostThreadMessageA(tid, WM_COPYVOICE, v, 0)
+ _post_message(WM_COPYVOICE, v, 0)
  param_event.wait()
  param_event.clear()
 
 def process():
-  user32.PostThreadMessageA(tid, WM_PROCESS, 0, 0)
+  _post_message(WM_PROCESS)
 
 def internal_process_queue():
  lst = synth_queue.get()
