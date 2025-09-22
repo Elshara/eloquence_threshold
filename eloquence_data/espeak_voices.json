@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "source": "Derived from eSpeak NG community voice definitions",
+    "generated": "2024-11-23",
+    "notes": "Suggested Eloquence parameter starting points for language-aware templates"
+  },
+  "parameters": {
+    "rate": {
+      "label": "Speaking rate",
+      "description": "Base speed in words per minute mapped to Eloquence's internal range.",
+      "min": 40,
+      "max": 150,
+      "default": 100,
+      "step": 1,
+      "tags": ["timing"]
+    },
+    "pitch": {
+      "label": "Pitch",
+      "description": "Primary pitch target controlling overall brightness.",
+      "min": 40,
+      "max": 160,
+      "default": 100,
+      "step": 1,
+      "tags": ["tone"]
+    },
+    "inflection": {
+      "label": "Inflection",
+      "description": "Amount of pitch modulation between syllables.",
+      "min": 0,
+      "max": 100,
+      "default": 50,
+      "step": 1,
+      "tags": ["prosody"]
+    },
+    "headSize": {
+      "label": "Head size",
+      "description": "Formant scaling comparable to vocal tract length.",
+      "min": 70,
+      "max": 160,
+      "default": 100,
+      "step": 1,
+      "tags": ["formant"]
+    },
+    "roughness": {
+      "label": "Roughness",
+      "description": "Noise component balancing rasp versus clarity.",
+      "min": 0,
+      "max": 120,
+      "default": 40,
+      "step": 1,
+      "tags": ["texture"]
+    },
+    "breathiness": {
+      "label": "Breathiness",
+      "description": "Adds aspiration to soften consonants.",
+      "min": 0,
+      "max": 120,
+      "default": 32,
+      "step": 1,
+      "tags": ["texture"]
+    },
+    "volume": {
+      "label": "Volume",
+      "description": "Output gain applied before NVDA's volume scaling.",
+      "min": 50,
+      "max": 100,
+      "default": 80,
+      "step": 1,
+      "tags": ["loudness"]
+    }
+  },
+  "defaults": {
+    "template": "espeak-en-us-bright"
+  },
+  "templates": [
+    {
+      "id": "espeak-en-us-bright",
+      "name": "English (US) bright",
+      "language": "en-US",
+      "description": "Balanced eSpeak en-us timbre with elevated clarity",
+      "tags": ["english", "us", "community"],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "en-us",
+      "parameters": {
+        "rate": 118,
+        "pitch": 112,
+        "inflection": 56,
+        "headSize": 128,
+        "roughness": 36,
+        "breathiness": 28,
+        "volume": 90
+      }
+    },
+    {
+      "id": "espeak-en-gb-clarity",
+      "name": "English (UK) clarity",
+      "language": "en-GB",
+      "description": "Crisp consonants inspired by eSpeak en-gb",
+      "tags": ["english", "uk", "community"],
+      "baseVoice": "eng",
+      "variant": "2",
+      "defaultLanguageProfile": "en-gb-basic",
+      "sourceVoice": "en-gb",
+      "parameters": {
+        "rate": 112,
+        "pitch": 98,
+        "inflection": 48,
+        "headSize": 122,
+        "roughness": 32,
+        "breathiness": 24,
+        "volume": 92
+      }
+    },
+    {
+      "id": "espeak-es-latin",
+      "name": "Spanish (Latin America)",
+      "language": "es-419",
+      "description": "Warm cadence following eSpeak es-la",
+      "tags": ["spanish", "latin"],
+      "baseVoice": "esm",
+      "variant": "3",
+      "defaultLanguageProfile": "es-419-basic",
+      "sourceVoice": "es-la",
+      "parameters": {
+        "rate": 116,
+        "pitch": 104,
+        "inflection": 64,
+        "headSize": 134,
+        "roughness": 34,
+        "breathiness": 26,
+        "volume": 88
+      }
+    },
+    {
+      "id": "espeak-es-castilian",
+      "name": "Spanish (Castilian)",
+      "language": "es-ES",
+      "description": "Peninsular prosody with sharper sibilants",
+      "tags": ["spanish", "spain"],
+      "baseVoice": "esp",
+      "variant": "4",
+      "defaultLanguageProfile": "es-es-basic",
+      "sourceVoice": "es",
+      "parameters": {
+        "rate": 108,
+        "pitch": 102,
+        "inflection": 70,
+        "headSize": 130,
+        "roughness": 30,
+        "breathiness": 24,
+        "volume": 90
+      }
+    },
+    {
+      "id": "espeak-fr-velvet",
+      "name": "French velvety",
+      "language": "fr-FR",
+      "description": "Rounded vowels echoing eSpeak fr voice",
+      "tags": ["french"],
+      "baseVoice": "fra",
+      "variant": "5",
+      "defaultLanguageProfile": null,
+      "sourceVoice": "fr",
+      "parameters": {
+        "rate": 106,
+        "pitch": 96,
+        "inflection": 58,
+        "headSize": 140,
+        "roughness": 28,
+        "breathiness": 32,
+        "volume": 86
+      }
+    },
+    {
+      "id": "espeak-de-precision",
+      "name": "German precision",
+      "language": "de-DE",
+      "description": "Focused articulation for German text",
+      "tags": ["german"],
+      "baseVoice": "deu",
+      "variant": "6",
+      "defaultLanguageProfile": null,
+      "sourceVoice": "de",
+      "parameters": {
+        "rate": 114,
+        "pitch": 94,
+        "inflection": 46,
+        "headSize": 124,
+        "roughness": 26,
+        "breathiness": 20,
+        "volume": 93
+      }
+    },
+    {
+      "id": "espeak-it-expressive",
+      "name": "Italian expressive",
+      "language": "it-IT",
+      "description": "Expressive vowels derived from eSpeak it",
+      "tags": ["italian"],
+      "baseVoice": "ita",
+      "variant": "7",
+      "defaultLanguageProfile": null,
+      "sourceVoice": "it",
+      "parameters": {
+        "rate": 110,
+        "pitch": 108,
+        "inflection": 66,
+        "headSize": 126,
+        "roughness": 30,
+        "breathiness": 34,
+        "volume": 89
+      }
+    },
+    {
+      "id": "espeak-pt-br-vibrant",
+      "name": "Portuguese (Brazil) vibrant",
+      "language": "pt-BR",
+      "description": "Open vowels echoing eSpeak pt-br",
+      "tags": ["portuguese", "brazil"],
+      "baseVoice": "ptb",
+      "variant": "8",
+      "defaultLanguageProfile": null,
+      "sourceVoice": "pt-br",
+      "parameters": {
+        "rate": 112,
+        "pitch": 100,
+        "inflection": 60,
+        "headSize": 132,
+        "roughness": 32,
+        "breathiness": 30,
+        "volume": 92
+      }
+    }
+  ]
+}

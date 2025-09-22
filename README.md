@@ -22,11 +22,21 @@ Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-
 3. Install the add-on in NVDA 2019.3 or newer on Windows 10 or Windows 11. NVDA alpha-52705 has been verified when the 64-bit runtime is available.
 4. Visit NVDA's **Preferences → Speech** dialog to select Eloquence and begin exploring customization options—including the growing set of voice and phoneme parameters we surface in the dialog.
 
-## Phoneme customization today
+## Phoneme and voice customization today
 - The add-on now ships with the [eSpeak NG](https://github.com/espeak-ng/espeak-ng) `phsource/phonemes` catalogue under `eloquence_data/espeak_phonemes.txt`. These definitions seed NVDA's phoneme controls without requiring a separate download.
 - A new **Phoneme replacement** option appears in NVDA's voice settings dialog. Each entry lists an Eloquence phoneme (grouped by category) and several keyboard-selectable fallbacks—example words, descriptive labels, IPA symbols, or the raw engine token.
 - Choose a combination with arrow keys and NVDA will announce whether it is the **current** or **default** mapping. Activating a different option immediately updates Eloquence's response when NVDA emits `PhonemeCommand` sequences, so you can tailor pronunciation on the fly without leaving the dialog.
 - Custom choices are stored per phoneme, letting you review or reset mappings at any time. If you ever want to refresh the underlying catalogue with a newer upstream snapshot, replace the bundled file before rebuilding the add-on.
+
+### Build bespoke voices with eSpeak templates
+- Voice templates derived from eSpeak NG live in `eloquence_data/espeak_voices.json`. Each template maps a language label (for example `en-US` or `es-419`) to Eloquence parameters such as pitch, head size, breathiness, and speaking rate.
+- Select **Voice template** inside NVDA's Speech dialog to apply these presets. Eloquence will switch to the appropriate `.syn` voice, set its variant, and adjust sliders instantly. You can still tweak the individual sliders afterward; the template simply provides a faster starting point.
+- Contributors can add more templates by editing the JSON file. The metadata documents the expected ranges for each parameter so community voices stay within Eloquence's safe operating window.
+
+### Share language-aware pronunciation profiles
+- Character-level pronunciation hints now load from `eloquence_data/languages/*.json`. Each profile records IPA transcriptions, spoken mnemonics, stress patterns, and grammatical notes for a particular locale.
+- The new **Language profile** driver setting lets you follow the active voice template automatically, force a specific profile, or turn the hints off entirely. When NVDA sends IPA fallback commands, Eloquence can announce both the unmatched symbol and the language-specific hint so you understand what the command attempted to say.
+- To contribute a new language or extend an existing one, drop a JSON file in the `eloquence_data/languages` folder. Profiles may list default templates so NVDA automatically activates them when users pick the matching voice.
 
 ### Supplying 64-bit Eloquence binaries
 - This project cannot redistribute proprietary Eloquence libraries. Extract the 64-bit runtime from a licensed product (for example, an updated Eloquence synthesizer package) and drop the DLLs into `eloquence_x64` before packaging, or copy them directly into `synthDrivers/eloquence/x64` after installing the add-on.
