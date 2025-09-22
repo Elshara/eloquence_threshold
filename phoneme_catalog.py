@@ -141,9 +141,9 @@ class PhonemeInventory:
             category_label = definition.category or "General"
             category_id = _register_category(self._category_labels, category_label)
             self._by_category[category_id].append(definition)
-        for ipa_value in definition.ipa:
-            if ipa_value and ipa_value not in self._ipa_index:
-                self._ipa_index[ipa_value] = definition
+            for ipa_value in definition.ipa:
+                if ipa_value and ipa_value not in self._ipa_index:
+                    self._ipa_index[ipa_value] = definition
         self._ipa_keys_desc = sorted(self._ipa_index.keys(), key=len, reverse=True)
 
     @property
