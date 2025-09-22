@@ -12,12 +12,20 @@ This project builds on the long-standing community work at [pumper42nickel/eloqu
 - Future-proof the synthesizer against rapid advances in AI and accessibility tech, ensuring that Windows users continue to benefit from dependable, low-latency speech.
 
 ## Staying current with NVDA
-We actively follow the [NVDA source repository](https://github.com/nvaccess/nvda/) and test against stable, beta, and alpha builds. Contributions should note any compatibility insights, especially when NVDA introduces new speech requirements. Regular updates will track NVDA's development cadence so that users can rely on Eloquence throughout major platform transitions.
+We actively follow the [NVDA source repository](https://github.com/nvaccess/nvda/) and test against stable, beta, and alpha builds. The driver now runs against NVDA alpha-52705 (`dc226976`), which finalises the jump to 64-bit Python 3.13. Contributions should call out any compatibility insights—particularly where NVDA's speech stack or win32 bindings change—so we can keep the synthesizer usable for the wider community. Regular updates will track NVDA's development cadence so that users can rely on Eloquence throughout major platform transitions.
+
+Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-bit Eloquence runtime. The driver automatically discovers architecture-specific DLLs (for example, `eloquence/x64/eci.dll`) and falls back to the classic 32-bit build when appropriate. If a compatible library is missing the driver logs a clear error instead of silently failing.
 
 ## Getting started
-1. Download the latest packaged add-on from the [releases page](https://github.com/pumper42nickel/eloquence_threshold/releases/latest/download/eloquence.nvda-addon).
-2. Install the add-on in NVDA 2019.3 or newer, including Windows 10 and Windows 11 builds.
-3. Visit NVDA's **Preferences → Speech** dialog to select Eloquence and begin exploring customization options as they become available.
+1. Download the latest packaged add-on from the [releases page](https://github.com/pumper42nickel/eloquence_threshold/releases/latest/download/eloquence.nvda-addon), or clone this repository to build locally.
+2. If you are building your own package, place the 64-bit Eloquence runtime files (for example `ECI.DLL` plus accompanying `.SYN` voice data) in an `eloquence_x64` folder before running `python build.py`. The build script copies that payload into `synthDrivers/eloquence/x64` inside the generated `.nvda-addon` so NVDA alpha builds can load it.
+3. Install the add-on in NVDA 2019.3 or newer on Windows 10 or Windows 11. NVDA alpha-52705 has been verified when the 64-bit runtime is available.
+4. Visit NVDA's **Preferences → Speech** dialog to select Eloquence and begin exploring customization options—including the growing set of voice and phoneme parameters we surface in the dialog.
+
+### Supplying 64-bit Eloquence binaries
+- This project cannot redistribute proprietary Eloquence libraries. Extract the 64-bit runtime from a licensed product (for example, an updated Eloquence synthesizer package) and drop the DLLs into `eloquence_x64` before packaging, or copy them directly into `synthDrivers/eloquence/x64` after installing the add-on.
+- Dictionaries (`*.dic`) and voice data (`*.syn`) may stay in the legacy `synthDrivers/eloquence` directory—the driver will automatically reference them from either location.
+- When distributing builds to other NVDA users, document how you sourced the binaries so that future maintainers can keep their installations in good standing.
 
 ## Roadmap highlights
 - Iterative releases that surface new phoneme and voice parameters in NVDA's voice dialog.

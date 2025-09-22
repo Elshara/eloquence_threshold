@@ -38,6 +38,16 @@ def updateZip(zipname, filename, filedata):
         zf.write(filedata, filename)
 
 
+def addDirectory(zipname, sourceDir, destRoot):
+    with zipfile.ZipFile(zipname, mode='a', compression=zipfile.ZIP_DEFLATED) as zf:
+        for root, _, files in os.walk(sourceDir):
+            for name in files:
+                src_path = os.path.join(root, name)
+                rel_path = os.path.relpath(src_path, sourceDir)
+                archive_name = os.path.join(destRoot, rel_path).replace(os.sep, "/")
+                zf.write(src_path, archive_name)
+
+
 if not os.path.exists(ORIGINAL_FILE_NAME):
     print("Downloading...")
     with urllib.request.urlopen('https://github.com/pumper42nickel/eloquence_threshold/releases/download/v0.20210417.01/eloquence.nvda-addon') as response:
@@ -48,4 +58,7 @@ shutil.copyfile(ORIGINAL_FILE_NAME, FILE_NAME)
 updateZip(FILE_NAME, "synthDrivers/eloquence.py", "eloquence.py")
 updateZip(FILE_NAME, "synthDrivers/_eloquence.py", "_eloquence.py")
 updateZip(FILE_NAME, "manifest.ini", "manifest.ini")
+if os.path.isdir("eloquence_x64"):
+    print("Embedding 64-bit Eloquence payload...")
+    addDirectory(FILE_NAME, "eloquence_x64", os.path.join("synthDrivers", "eloquence", "x64"))
 print(f"Created {FILE_NAME}")

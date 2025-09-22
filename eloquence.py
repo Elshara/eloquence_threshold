@@ -299,9 +299,19 @@ class SynthDriver(synthDriverHandler.SynthDriver):
 
  def _getAvailableVoices(self):
   o = OrderedDict()
-  for name in os.listdir(_eloquence.eciPath[:-8]):
-   if not name.lower().endswith('.syn'): continue
-   info = _eloquence.langs[name.lower()[:-4]]
+  voice_dir = getattr(_eloquence, "voiceDirectory", os.path.join(os.path.dirname(__file__), "eloquence"))
+  try:
+   entries = os.listdir(voice_dir)
+  except FileNotFoundError:
+   logging.error("Eloquence voice directory not found: %s", voice_dir)
+   return o
+  for name in entries:
+   if not name.lower().endswith('.syn'):
+    continue
+   key = os.path.splitext(name)[0].lower()
+   info = _eloquence.langs.get(key)
+   if not info:
+    continue
    o[str(info[0])] = synthDriverHandler.VoiceInfo(str(info[0]), info[1], None)
   return o
 
