@@ -60,6 +60,12 @@ from synthDriverHandler import SynthDriver, VoiceInfo, synthIndexReached, synthD
 from synthDriverHandler import SynthDriver,VoiceInfo
 from . import _eloquence
 from .phoneme_catalog import PhonemeDefinition, PhonemeInventory, PhonemeReplacement, load_default_inventory
+from .voice_catalog import VoiceCatalog, VoiceTemplate, load_default_voice_catalog
+from .language_profiles import (
+ LanguageProfile,
+ LanguageProfileCatalog,
+ load_default_language_profiles,
+)
 from collections import OrderedDict
 from typing import Dict, List, Optional, Tuple
 import unicodedata
@@ -144,6 +150,18 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   BooleanDriverSetting("ABRDICT","Enable &abbreviation dictionary", False),
   BooleanDriverSetting("phrasePrediction","Enable phrase prediction", False),
   DriverSetting(
+   "voiceTemplate",
+   _("eSpeak voice &template"),
+   availableInSettingsRing=True,
+   displayName=_("Voice template"),
+  ),
+  DriverSetting(
+   "languageProfile",
+   _("Language &profile"),
+   availableInSettingsRing=True,
+   displayName=_("Language profile"),
+  ),
+  DriverSetting(
    "phonemeReplacement",
    _("Phoneme &replacement"),
    availableInSettingsRing=True,
@@ -164,10 +182,28 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  _phonemeInventory: PhonemeInventory
  _phonemeReplacements: Dict[str, str]
  _lastReplacementSelection: Optional[str]
+ _voiceCatalog: VoiceCatalog
+ _voiceTemplateId: Optional[str]
+ _languageProfiles: LanguageProfileCatalog
+ _languageProfileSelection: str
+ _activeLanguageProfileId: Optional[str]
+ _lastVoiceTemplateSelection: Optional[str]
  PROSODY_ATTRS = {
   PitchCommand: _eloquence.pitch,
   VolumeCommand: _eloquence.vlm,
   RateCommand: _eloquence.rate,
+ }
+ _VOICE_TEMPLATE_DEFAULT = "engine-default"
+ _LANGUAGE_PROFILE_AUTO = "auto"
+ _LANGUAGE_PROFILE_DISABLED = "disabled"
+ _VOICE_PARAM_BINDINGS = {
+  "pitch": _eloquence.pitch,
+  "inflection": _eloquence.fluctuation,
+  "headSize": _eloquence.hsz,
+  "roughness": _eloquence.rgh,
+  "breathiness": _eloquence.bth,
+  "rate": _eloquence.rate,
+  "volume": _eloquence.vlm,
  }
 
  description='ETI-Eloquence'
@@ -177,12 +213,19 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   return _eloquence.eciCheck()
  def __init__(self):
   _eloquence.initialize(self._onIndexReached)
-  self.curvoice="enu"
-  self.rate=50
-  self.variant = "1"
-  self._phonemeInventory = load_default_inventory()
-  self._phonemeReplacements = {}
-  self._lastReplacementSelection = None
+ self.curvoice="enu"
+ self.rate=50
+ self.variant = "1"
+ self._phonemeInventory = load_default_inventory()
+ self._phonemeReplacements = {}
+ self._lastReplacementSelection = None
+ self._voiceCatalog = load_default_voice_catalog()
+ self._voiceTemplateId = None
+ self._lastVoiceTemplateSelection = None
+ self._languageProfiles = load_default_language_profiles()
+ self._languageProfileSelection = _LANGUAGE_PROFILE_AUTO
+ self._activeLanguageProfileId = None
+ self._refresh_language_profile()
 
  def speak(self, speechSequence):
   last = None
@@ -287,9 +330,161 @@ class SynthDriver(synthDriverHandler.SynthDriver):
     outputs.append(replacement.output)
   if remainder:
    logging.debug("Unmatched IPA sequence for Eloquence fallback: %s", remainder)
-   outputs.append(remainder)
+   fallback_text = remainder
+   profile = self._active_language_profile()
+   if profile:
+    hint = profile.describe_text(remainder)
+    if hint:
+     fallback_text = f"{remainder} ({hint})"
+   outputs.append(fallback_text)
   spoken = " ".join(part.strip() for part in outputs if isinstance(part, str) and part.strip())
   return spoken or fallback
+
+ def _get_availableVoiceTemplates(self):
+  if self._voiceCatalog.is_empty:
+   raise UnsupportedConfigParameterError()
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  options[_VOICE_TEMPLATE_DEFAULT] = StringParameterInfo(
+   _VOICE_TEMPLATE_DEFAULT,
+   _("Keep Eloquence defaults"),
+  )
+  for template in self._voiceCatalog:
+   label = template.display_label()
+   options[template.id] = StringParameterInfo(template.id, label)
+  return options
+
+ def _get_voiceTemplate(self):
+  if self._voiceCatalog.is_empty:
+   raise UnsupportedConfigParameterError()
+  options = self._get_availableVoiceTemplates()
+  if self._voiceTemplateId and self._voiceTemplateId in options:
+   self._lastVoiceTemplateSelection = self._voiceTemplateId
+   return self._voiceTemplateId
+  if self._lastVoiceTemplateSelection and self._lastVoiceTemplateSelection in options:
+   return self._lastVoiceTemplateSelection
+  self._lastVoiceTemplateSelection = _VOICE_TEMPLATE_DEFAULT if _VOICE_TEMPLATE_DEFAULT in options else next(iter(options))
+  return self._lastVoiceTemplateSelection
+
+ def _set_voiceTemplate(self, value):
+  if self._voiceCatalog.is_empty:
+   raise UnsupportedConfigParameterError()
+  options = self._get_availableVoiceTemplates()
+  if value not in options:
+   raise ValueError(f"Unknown voice template '{value}'")
+  self._lastVoiceTemplateSelection = value
+  if value == _VOICE_TEMPLATE_DEFAULT:
+   self._voiceTemplateId = None
+   self._refresh_language_profile()
+   return
+  template = self._voiceCatalog.get(value)
+  if not template:
+   raise ValueError(f"Unknown voice template '{value}'")
+  self._voiceTemplateId = template.id
+  self._apply_voice_template(template)
+
+ def _apply_voice_template(self, template: VoiceTemplate):
+  voice_code = template.base_voice
+  if voice_code and voice_code in _eloquence.langs:
+   desired_voice = str(_eloquence.langs[voice_code][0])
+   if desired_voice != self._get_voice():
+    self._set_voice(desired_voice)
+  if template.variant:
+   self._set_variant(template.variant)
+  for name, value in template.parameter_items():
+   binding = _VOICE_PARAM_BINDINGS.get(name)
+   if binding is None:
+    continue
+   try:
+    numeric = int(value)
+   except (TypeError, ValueError):
+    continue
+   self.setVParam(binding, numeric)
+   if name == "rate":
+    self._rate = numeric
+  self._refresh_language_profile(template)
+
+ def _default_profile_for_template(self, template: Optional[VoiceTemplate]) -> Optional[str]:
+  if template is None:
+   return None
+  candidate = template.default_language_profile
+  if candidate and self._languageProfiles.get(candidate):
+   return candidate
+  for profile in self._languageProfiles:
+   if template.id in profile.default_voice_templates:
+    return profile.id
+  return None
+
+ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
+  if self._languageProfiles.is_empty:
+   self._activeLanguageProfileId = None
+   return
+  if template is None and self._voiceTemplateId:
+   template = self._voiceCatalog.get(self._voiceTemplateId)
+  if self._languageProfileSelection == _LANGUAGE_PROFILE_DISABLED:
+   self._activeLanguageProfileId = None
+   return
+  if self._languageProfileSelection == _LANGUAGE_PROFILE_AUTO:
+   profile_id = self._default_profile_for_template(template)
+   if profile_id is None and template is None:
+    # fall back to the catalogue default if nothing is selected
+    default_template = self._voiceCatalog.default_template()
+    profile_id = self._default_profile_for_template(default_template)
+   if profile_id and self._languageProfiles.get(profile_id):
+    self._activeLanguageProfileId = profile_id
+   else:
+    self._activeLanguageProfileId = None
+   return
+  if self._languageProfiles.get(self._languageProfileSelection):
+   self._activeLanguageProfileId = self._languageProfileSelection
+  else:
+   self._activeLanguageProfileId = None
+
+ def _active_language_profile(self) -> Optional[LanguageProfile]:
+  return self._languageProfiles.get(self._activeLanguageProfileId)
+
+ def _get_availableLanguageProfiles(self):
+  if self._languageProfiles.is_empty:
+   raise UnsupportedConfigParameterError()
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  options[_LANGUAGE_PROFILE_AUTO] = StringParameterInfo(
+   _LANGUAGE_PROFILE_AUTO,
+   _("Follow voice template"),
+  )
+  options[_LANGUAGE_PROFILE_DISABLED] = StringParameterInfo(
+   _LANGUAGE_PROFILE_DISABLED,
+   _("Disable language hints"),
+  )
+  for profile in self._languageProfiles:
+   options[profile.id] = StringParameterInfo(profile.id, profile.display_label())
+  return options
+
+ def _get_languageProfile(self):
+  if self._languageProfiles.is_empty:
+   raise UnsupportedConfigParameterError()
+  options = self._get_availableLanguageProfiles()
+  if self._languageProfileSelection in options:
+   return self._languageProfileSelection
+  self._languageProfileSelection = _LANGUAGE_PROFILE_AUTO
+  self._refresh_language_profile()
+  return self._languageProfileSelection
+
+ def _set_languageProfile(self, value):
+  if self._languageProfiles.is_empty:
+   raise UnsupportedConfigParameterError()
+  options = self._get_availableLanguageProfiles()
+  if value not in options:
+   raise ValueError(f"Unknown language profile '{value}'")
+  self._languageProfileSelection = value
+  if value == _LANGUAGE_PROFILE_DISABLED:
+   self._activeLanguageProfileId = None
+   return
+  if value == _LANGUAGE_PROFILE_AUTO:
+   self._refresh_language_profile()
+   return
+  if self._languageProfiles.get(value):
+   self._activeLanguageProfileId = value
+  else:
+   self._activeLanguageProfileId = None
 
  def _get_availablePhonemereplacements(self):
   if self._phonemeInventory.is_empty:

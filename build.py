@@ -58,6 +58,8 @@ shutil.copyfile(ORIGINAL_FILE_NAME, FILE_NAME)
 updateZip(FILE_NAME, "synthDrivers/eloquence.py", "eloquence.py")
 updateZip(FILE_NAME, "synthDrivers/_eloquence.py", "_eloquence.py")
 updateZip(FILE_NAME, "synthDrivers/phoneme_catalog.py", "phoneme_catalog.py")
+updateZip(FILE_NAME, "synthDrivers/voice_catalog.py", "voice_catalog.py")
+updateZip(FILE_NAME, "synthDrivers/language_profiles.py", "language_profiles.py")
 updateZip(FILE_NAME, "manifest.ini", "manifest.ini")
 if os.path.isdir("eloquence_x64"):
     print("Embedding 64-bit Eloquence payload...")
