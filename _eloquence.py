@@ -302,10 +302,6 @@ def eciNew():
   vparams[i] = eci.eciGetVoiceParam(handle, 0, i)
  return eci,handle
 
-@WINFUNCTYPE(c_int,c_int,c_int,c_long,c_void_p)
-def _bgExec(func, *args, **kwargs):
- global bgQueue
- bgQueue.put((func, args, kwargs))
 def setLast(lp):
  global lastindex
  lastindex = lp

@@ -305,7 +305,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   except FileNotFoundError:
    logging.error("Eloquence voice directory not found: %s", voice_dir)
    return o
-  for name in entries:
+  for name in sorted(entries):
    if not name.lower().endswith('.syn'):
     continue
    key = os.path.splitext(name)[0].lower()
