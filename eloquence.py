@@ -24,11 +24,30 @@ except ImportError:
         VolumeCommand,
         PhonemeCommand,
     )
-    
+
 try:
-    from driverHandler import NumericDriverSetting, BooleanDriverSetting
+    from driverHandler import NumericDriverSetting, BooleanDriverSetting, DriverSetting
 except ImportError:
     from autoSettingsUtils.driverSetting import BooleanDriverSetting, DriverSetting, NumericDriverSetting
+
+try:
+    from autoSettingsUtils.utils import StringParameterInfo, UnsupportedConfigParameterError
+except ImportError:
+    class UnsupportedConfigParameterError(NotImplementedError):
+        pass
+
+    class StringParameterInfo(object):
+        def __init__(self, id: str, displayName: str):
+            self.id = id
+            self.displayName = displayName
+
+try:
+    import addonHandler
+except ImportError:
+    def _(s):
+        return s
+else:
+    addonHandler.initTranslation()
 
 
 punctuation = ",.?:;"
@@ -40,7 +59,9 @@ import synthDriverHandler, os, config, re, nvwave, threading, logging,driverHand
 from synthDriverHandler import SynthDriver, VoiceInfo, synthIndexReached, synthDoneSpeaking
 from synthDriverHandler import SynthDriver,VoiceInfo
 from . import _eloquence
+from .phoneme_catalog import PhonemeDefinition, PhonemeInventory, PhonemeReplacement, load_default_inventory
 from collections import OrderedDict
+from typing import Dict, List, Optional, Tuple
 import unicodedata
 
 minRate=40
@@ -109,24 +130,46 @@ def normalizeText(s):
   return "".join(result)
 
 class SynthDriver(synthDriverHandler.SynthDriver):
- supportedSettings=(SynthDriver.VoiceSetting(), SynthDriver.VariantSetting(), SynthDriver.RateSetting(), SynthDriver.PitchSetting(),SynthDriver.InflectionSetting(),SynthDriver.VolumeSetting(), NumericDriverSetting("hsz", "Head Size"), NumericDriverSetting("rgh", "Roughness"), NumericDriverSetting("bth", "Breathiness"), BooleanDriverSetting("backquoteVoiceTags","Enable backquote voice &tags", True), BooleanDriverSetting("ABRDICT","Enable &abbreviation dictionary", False), BooleanDriverSetting("phrasePrediction","Enable phrase prediction", False))
+ supportedSettings=(
+  SynthDriver.VoiceSetting(),
+  SynthDriver.VariantSetting(),
+  SynthDriver.RateSetting(),
+  SynthDriver.PitchSetting(),
+  SynthDriver.InflectionSetting(),
+  SynthDriver.VolumeSetting(),
+  NumericDriverSetting("hsz", "Head Size"),
+  NumericDriverSetting("rgh", "Roughness"),
+  NumericDriverSetting("bth", "Breathiness"),
+  BooleanDriverSetting("backquoteVoiceTags","Enable backquote voice &tags", True),
+  BooleanDriverSetting("ABRDICT","Enable &abbreviation dictionary", False),
+  BooleanDriverSetting("phrasePrediction","Enable phrase prediction", False),
+  DriverSetting(
+   "phonemeReplacement",
+   _("Phoneme &replacement"),
+   availableInSettingsRing=True,
+   displayName=_("Phoneme replacement"),
+  ),
+ )
  supportedCommands = {
-    IndexCommand,
-    CharacterModeCommand,
-    LangChangeCommand,
-    BreakCommand,
-    PitchCommand,
-    RateCommand,
-    VolumeCommand,
-    PhonemeCommand,
+     IndexCommand,
+     CharacterModeCommand,
+     LangChangeCommand,
+     BreakCommand,
+     PitchCommand,
+     RateCommand,
+     VolumeCommand,
+     PhonemeCommand,
  }
- supportedNotifications = {synthIndexReached, synthDoneSpeaking} 
+ supportedNotifications = {synthIndexReached, synthDoneSpeaking}
+ _phonemeInventory: PhonemeInventory
+ _phonemeReplacements: Dict[str, str]
+ _lastReplacementSelection: Optional[str]
  PROSODY_ATTRS = {
   PitchCommand: _eloquence.pitch,
   VolumeCommand: _eloquence.vlm,
   RateCommand: _eloquence.rate,
  }
- 
+
  description='ETI-Eloquence'
  name='eloquence'
  @classmethod
@@ -137,29 +180,30 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   self.curvoice="enu"
   self.rate=50
   self.variant = "1"
+  self._phonemeInventory = load_default_inventory()
+  self._phonemeReplacements = {}
+  self._lastReplacementSelection = None
 
- def speak(self,speechSequence):
+ def speak(self, speechSequence):
   last = None
   outlist = []
   for item in speechSequence:
-   if isinstance(item,str):
-    s=str(item)
+   if isinstance(item, str):
+    s = str(item)
     s = self.xspeakText(s)
     outlist.append((_eloquence.speak, (s,)))
     last = s
-   elif isinstance(item,IndexCommand):
+   elif isinstance(item, IndexCommand):
     outlist.append((_eloquence.index, (item.index,)))
-   elif isinstance(item,BreakCommand):
+   elif isinstance(item, BreakCommand):
     # Eloquence doesn't respect delay time in milliseconds.
-    # Therefor we need to adjust waiting time depending on curernt speech rate
-    # The following table of adjustments has been measured empirically
-    # Then we do linear approximation
+    # Therefor we need to adjust waiting time depending on current speech rate.
     coefficients = {
-        10:1,
-        43:2,
-        60:3,
+        10: 1,
+        43: 2,
+        60: 3,
         75: 4,
-        85:5,
+        85: 5,
     }
     ck = sorted(coefficients.keys())
     if self.rate <= ck[0]:
@@ -169,25 +213,31 @@ class SynthDriver(synthDriverHandler.SynthDriver):
     elif self.rate in ck:
      factor = coefficients[self.rate]
     else:
-     li = [index for index, r in enumerate(ck) if r<self.rate][-1]
+     li = [index for index, r in enumerate(ck) if r < self.rate][-1]
      ri = li + 1
      ra = ck[li]
      rb = ck[ri]
-     factor = 1.0 * coefficients[ra] + (coefficients[rb] - coefficients[ra]) * (self.rate - ra) / (rb-ra)
-    pFactor = factor*item.time
+     factor = 1.0 * coefficients[ra] + (coefficients[rb] - coefficients[ra]) * (self.rate - ra) / (rb - ra)
+    pFactor = factor * item.time
     pFactor = int(pFactor)
-    outlist.append((_eloquence.speak, (f'`p{pFactor}.',)))
+    outlist.append((_eloquence.speak, (f"`p{pFactor}.",)))
+   elif isinstance(item, PhonemeCommand):
+    rendered = self._renderPhonemeCommand(item)
+    if rendered:
+     spoken = self.xspeakText(rendered)
+     outlist.append((_eloquence.speak, (spoken,)))
+     last = rendered
    elif type(item) in self.PROSODY_ATTRS:
     pr = self.PROSODY_ATTRS[type(item)]
-    if item.multiplier==1:
+    if item.multiplier == 1:
      # Revert back to defaults
      outlist.append((_eloquence.cmdProsody, (pr, None,)))
     else:
      outlist.append((_eloquence.cmdProsody, (pr, item.multiplier,)))
-  if last is not None and not last.rstrip()[-1] in punctuation:
-   outlist.append((_eloquence.speak, ('`p1.',)))
+  if last is not None and last.rstrip() and last.rstrip()[-1] not in punctuation:
+   outlist.append((_eloquence.speak, ("`p1.",)))
   outlist.append((_eloquence.index, (0xffff,)))
-  outlist.append((_eloquence.synth,()))
+  outlist.append((_eloquence.synth, ()))
   _eloquence.synth_queue.put(outlist)
   _eloquence.process()
 
@@ -219,9 +269,129 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    text = text + ' `p1.'
   return text
   #  _eloquence.speak(text, index)
-  
+
   # def cancel(self):
   #  self.dll.eciStop(self.handle)
+
+ def _renderPhonemeCommand(self, command: PhonemeCommand) -> Optional[str]:
+  inventory = self._phonemeInventory
+  ipa_text = getattr(command, "ipa", "") or ""
+  fallback = command.text or ipa_text
+  if inventory.is_empty:
+   return fallback
+  matches, remainder = inventory.match_ipa_sequence(ipa_text)
+  outputs: List[str] = []
+  for definition in matches:
+   replacement = definition.get_replacement(self._phonemeReplacements.get(definition.name))
+   if replacement and replacement.output:
+    outputs.append(replacement.output)
+  if remainder:
+   logging.debug("Unmatched IPA sequence for Eloquence fallback: %s", remainder)
+   outputs.append(remainder)
+  spoken = " ".join(part.strip() for part in outputs if isinstance(part, str) and part.strip())
+  return spoken or fallback
+
+ def _get_availablePhonemereplacements(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  for category_id, _ in self._phonemeInventory.categories.items():
+   for definition in self._phonemeInventory.phonemes_for_category(category_id):
+    replacements = definition.replacement_options()
+    default_choice = definition.get_replacement(None)
+    active_choice = self._phonemeReplacements.get(definition.name)
+    if active_choice is None and default_choice is not None:
+     active_choice = default_choice.id
+    for replacement_id, replacement in replacements.items():
+     entry_id = f"{definition.name}::{replacement_id}"
+     label = self._format_replacement_label(
+      definition,
+      replacement,
+      active_choice == replacement_id,
+      default_choice is not None and replacement_id == default_choice.id,
+     )
+     options[entry_id] = StringParameterInfo(entry_id, label)
+  if not options:
+   raise UnsupportedConfigParameterError()
+  return options
+
+ def _get_phonemeReplacement(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  options = self._get_availablePhonemereplacements()
+  if self._lastReplacementSelection in options:
+   return self._lastReplacementSelection
+  for entry_id in options:
+   try:
+    phoneme_id, replacement_id = entry_id.split("::", 1)
+   except ValueError:
+    continue
+   definition = self._phonemeInventory.get(phoneme_id)
+   if not definition:
+    continue
+   default_choice = definition.get_replacement(None)
+   active_choice = self._phonemeReplacements.get(phoneme_id)
+   if active_choice is None and default_choice is not None:
+    active_choice = default_choice.id
+   if active_choice == replacement_id:
+    self._lastReplacementSelection = entry_id
+    return entry_id
+  first = next(iter(options), None)
+  if first is None:
+   raise UnsupportedConfigParameterError()
+  self._lastReplacementSelection = first
+  return first
+
+ def _set_phonemeReplacement(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  try:
+   phoneme_id, replacement_id = value.split("::", 1)
+  except ValueError as error:
+   raise ValueError("Invalid phoneme replacement identifier") from error
+  definition = self._phonemeInventory.get(phoneme_id)
+  if not definition:
+   raise ValueError(f"Unknown phoneme '{phoneme_id}'")
+  options = definition.replacement_options()
+  if replacement_id not in options:
+   raise ValueError(f"Unknown replacement '{replacement_id}' for phoneme '{phoneme_id}'")
+  default_choice = definition.get_replacement(None)
+  if default_choice is not None and replacement_id == default_choice.id:
+   self._phonemeReplacements.pop(phoneme_id, None)
+  else:
+   self._phonemeReplacements[phoneme_id] = replacement_id
+  self._lastReplacementSelection = value
+
+ def _format_replacement_label(
+  self,
+  definition: PhonemeDefinition,
+  replacement: PhonemeReplacement,
+  is_active: bool,
+  is_default: bool,
+ ) -> str:
+  if replacement.kind == "example":
+   # Translators: label for a phoneme replacement option derived from an example word.
+   base = _("Example: {word}").format(word=replacement.source)
+  elif replacement.kind == "description":
+   # Translators: label for a phoneme replacement option derived from a description.
+   base = _("Description: {description}").format(description=replacement.source)
+  elif replacement.kind == "ipa":
+   # Translators: label for a phoneme replacement option derived from an IPA symbol.
+   base = _("IPA: {ipa}").format(ipa=replacement.source)
+  elif replacement.kind == "name":
+   # Translators: label for a phoneme replacement option derived from the internal engine symbol.
+   base = _("Engine symbol: {symbol}").format(symbol=replacement.source)
+  else:
+   base = replacement.source
+  status_parts: List[str] = []
+  if is_active:
+   # Translators: short status tag shown for the currently selected phoneme replacement mapping.
+   status_parts.append(_("current"))
+  elif is_default:
+   # Translators: short status tag shown for the default phoneme replacement mapping.
+   status_parts.append(_("default"))
+  status = f" [{', '.join(status_parts)}]" if status_parts else ""
+  return f"{definition.display_label} → {base}{status}"
 
  def pause(self,switch):
   _eloquence.pause(switch)
