@@ -57,8 +57,11 @@ print("Patching...")
 shutil.copyfile(ORIGINAL_FILE_NAME, FILE_NAME)
 updateZip(FILE_NAME, "synthDrivers/eloquence.py", "eloquence.py")
 updateZip(FILE_NAME, "synthDrivers/_eloquence.py", "_eloquence.py")
+updateZip(FILE_NAME, "synthDrivers/phoneme_catalog.py", "phoneme_catalog.py")
 updateZip(FILE_NAME, "manifest.ini", "manifest.ini")
 if os.path.isdir("eloquence_x64"):
     print("Embedding 64-bit Eloquence payload...")
     addDirectory(FILE_NAME, "eloquence_x64", os.path.join("synthDrivers", "eloquence", "x64"))
+if os.path.isdir("eloquence_data"):
+    addDirectory(FILE_NAME, "eloquence_data", os.path.join("synthDrivers", "eloquence_data"))
 print(f"Created {FILE_NAME}")
