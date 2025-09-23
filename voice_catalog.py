@@ -238,10 +238,11 @@ class VoiceCatalog:
         self,
         parameter_ranges: Dict[str, VoiceParameterRange],
         templates: Iterable[VoiceTemplate],
-    default_template_id: Optional[str] = None,
-    metadata: Optional[Dict[str, object]] = None,
+        default_template_id: Optional[str] = None,
+        metadata: Optional[Dict[str, object]] = None,
     ) -> None:
         self._parameter_ranges = dict(parameter_ranges)
+        _ensure_default_parameter_ranges(self._parameter_ranges)
         self._templates: "OrderedDict[str, VoiceTemplate]" = OrderedDict()
         for template in templates:
             if not template.id:
@@ -259,6 +260,11 @@ class VoiceCatalog:
 
     def parameter_range(self, name: str) -> Optional[VoiceParameterRange]:
         return self._parameter_ranges.get(name)
+
+    def parameter_ranges(self) -> Dict[str, VoiceParameterRange]:
+        """Return a copy of the known parameter ranges."""
+
+        return dict(self._parameter_ranges)
 
     def get(self, template_id: str) -> Optional[VoiceTemplate]:
         return self._templates.get(template_id)
