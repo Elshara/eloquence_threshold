@@ -234,6 +234,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   "rate": _eloquence.rate,
   "volume": _eloquence.vlm,
  }
+ _TEMPLATE_BOOLEAN_SETTINGS = {"backquoteVoiceTags", "ABRDICT", "phrasePrediction"}
 
  description='ETI-Eloquence'
  name='eloquence'
@@ -478,7 +479,123 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    self.setVParam(binding, numeric)
    if name == "rate":
     self._rate = numeric
+  self._apply_template_extras(template)
   self._refresh_language_profile(template)
+
+ def _apply_template_extras(self, template: VoiceTemplate) -> None:
+  extras = template.extras if isinstance(template.extras, dict) else {}
+  if not extras:
+   return
+  self._apply_template_boolean_settings(template, extras.get("settings"))
+  self._apply_template_fallback(template, extras.get("phonemeFallback"))
+  overrides = extras.get("phonemeReplacements")
+  if isinstance(overrides, dict):
+   self._apply_template_phoneme_overrides(template, overrides)
+
+ def _apply_template_boolean_settings(self, template: VoiceTemplate, settings):
+  if not isinstance(settings, dict):
+   return
+  for key, raw_value in settings.items():
+   if key not in _TEMPLATE_BOOLEAN_SETTINGS:
+    logging.debug(
+     "Voice template '%s' requested unsupported toggle '%s'",
+     template.id,
+     key,
+    )
+    continue
+   setter = getattr(self, f"_set_{key}", None)
+   if not callable(setter):
+    logging.debug(
+     "Voice template '%s' cannot set toggle '%s' because setter is missing",
+     template.id,
+     key,
+    )
+    continue
+   try:
+    setter(bool(raw_value))
+   except Exception:
+    logging.exception("Unable to apply template toggle '%s' for '%s'", key, template.id)
+
+ def _apply_template_fallback(self, template: VoiceTemplate, preference):
+  if not isinstance(preference, str):
+   return
+  if preference not in _PHONEME_FALLBACK_POLICIES:
+   logging.debug(
+    "Voice template '%s' supplied unknown phoneme fallback '%s'",
+    template.id,
+    preference,
+   )
+   return
+  try:
+   self._set_phonemeFallback(preference)
+  except UnsupportedConfigParameterError:
+   logging.debug(
+    "Phoneme fallback not available while applying template '%s'",
+    template.id,
+   )
+  except ValueError:
+   logging.debug(
+    "Template '%s' failed to update phoneme fallback '%s'",
+    template.id,
+    preference,
+   )
+
+ def _apply_template_phoneme_overrides(self, template: VoiceTemplate, overrides: Dict[str, object]):
+  if self._phonemeInventory.is_empty:
+   return
+  changed = False
+  for phoneme_id, target in overrides.items():
+   if not isinstance(phoneme_id, str):
+    continue
+   if phoneme_id in self._phonemeReplacements:
+    logging.debug(
+     "Skipping template override for phoneme '%s' because a user override is present",
+     phoneme_id,
+    )
+    continue
+   definition = self._phonemeInventory.get(phoneme_id)
+   if definition is None:
+    logging.debug(
+     "Voice template '%s' references unknown phoneme '%s'",
+     template.id,
+     phoneme_id,
+    )
+    continue
+   replacement_id: Optional[str] = None
+   if isinstance(target, str):
+    candidate = target.strip()
+    if candidate in definition.replacement_options():
+     replacement_id = candidate
+    else:
+     found = definition.get_replacement(None, (candidate,))
+     if found is not None:
+      replacement_id = found.id
+     else:
+      for option in definition.replacement_options().values():
+       if option.output == candidate or option.source == candidate:
+        replacement_id = option.id
+        break
+   elif isinstance(target, (list, tuple)):
+    for entry in target:
+     if not isinstance(entry, str):
+      continue
+     found = definition.get_replacement(None, (entry,))
+     if found is not None:
+      replacement_id = found.id
+      break
+   if not replacement_id:
+    logging.debug(
+     "Template '%s' could not resolve replacement '%r' for phoneme '%s'",
+     template.id,
+     target,
+     phoneme_id,
+    )
+    continue
+   self._phonemeReplacements[phoneme_id] = replacement_id
+   changed = True
+  if changed:
+   self._persist_phoneme_replacements()
+   self._reset_replacement_cursor()
 
  def _default_profile_for_template(self, template: Optional[VoiceTemplate]) -> Optional[str]:
   if template is None:
