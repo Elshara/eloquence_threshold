@@ -232,6 +232,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  self.variant = "1"
  self._phonemeInventory = load_default_inventory()
  self._phonemeReplacements = {}
+ self._load_stored_phoneme_replacements()
  self._lastReplacementSelection = None
  self._phonemeCategorySelection = None
  self._phonemeSelection = None
@@ -604,7 +605,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   self._phonemeSelection = value
   self._reset_replacement_cursor()
 
- def _get_availablePhonemereplacements(self):
+ def _get_availablePhonemeReplacements(self):
   if self._phonemeInventory.is_empty:
    raise UnsupportedConfigParameterError()
   self._ensure_phoneme_selection()
@@ -633,7 +634,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  def _get_phonemeReplacement(self):
   if self._phonemeInventory.is_empty:
    raise UnsupportedConfigParameterError()
-  options = self._get_availablePhonemereplacements()
+  options = self._get_availablePhonemeReplacements()
   if self._lastReplacementSelection in options:
    return self._lastReplacementSelection
   for entry_id in options:
@@ -679,7 +680,53 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    self._phonemeReplacements.pop(phoneme_id, None)
   else:
    self._phonemeReplacements[phoneme_id] = replacement_id
+  self._persist_phoneme_replacements()
   self._lastReplacementSelection = value
+
+ def _load_stored_phoneme_replacements(self):
+  if self._phonemeInventory.is_empty:
+   return
+  try:
+   speech_section = config.conf.get("speech")
+  except Exception:
+   speech_section = None
+  if not isinstance(speech_section, dict):
+   return
+  synth_section = speech_section.get(self.name)
+  if not isinstance(synth_section, dict):
+   return
+  stored = synth_section.get("phonemeReplacements", {})
+  if not isinstance(stored, dict):
+   return
+  cleaned: Dict[str, str] = {}
+  changed = False
+  for phoneme_id, replacement_id in stored.items():
+   if not isinstance(phoneme_id, str) or not isinstance(replacement_id, str):
+    changed = True
+    continue
+   definition = self._phonemeInventory.get(phoneme_id)
+   if not definition:
+    changed = True
+    continue
+   options = definition.replacement_options()
+   if replacement_id not in options:
+    changed = True
+    continue
+   cleaned[phoneme_id] = replacement_id
+  self._phonemeReplacements = cleaned
+  if changed or len(cleaned) != len(stored):
+   self._persist_phoneme_replacements()
+
+ def _persist_phoneme_replacements(self):
+  try:
+   speech_section = config.conf.setdefault("speech", {})
+  except Exception:
+   return
+  synth_section = speech_section.setdefault(self.name, {})
+  if self._phonemeReplacements:
+   synth_section["phonemeReplacements"] = dict(self._phonemeReplacements)
+  else:
+   synth_section.pop("phonemeReplacements", None)
 
  def _format_replacement_label(
   self,
