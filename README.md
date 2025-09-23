@@ -18,9 +18,15 @@ Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-
 
 ## Getting started
 1. Download the latest packaged add-on from the [releases page](https://github.com/pumper42nickel/eloquence_threshold/releases/latest/download/eloquence.nvda-addon), or clone this repository to build locally.
-2. If you are building your own package, place the 64-bit Eloquence runtime files (for example `ECI.DLL` plus accompanying `.SYN` voice data) in an `eloquence_x64` folder before running `python build.py`. The build script copies that payload into `synthDrivers/eloquence/x64` inside the generated `.nvda-addon` so NVDA alpha builds can load it.
-3. Install the add-on in NVDA 2019.3 or newer on Windows 10 or Windows 11. NVDA alpha-52705 has been verified when the 64-bit runtime is available.
-4. Visit NVDA's **Preferences → Speech** dialog to select Eloquence and begin exploring customization options—including the growing set of voice and phoneme parameters we surface in the dialog.
+2. If you are building your own package, gather the proprietary Eloquence binaries: place the classic 32-bit runtime (for example `ECI.DLL` and the `.syn` voice data) inside an `eloquence/` directory, and optionally add a 64-bit runtime under `eloquence_x64/`. You can also reuse an earlier add-on as a template by dropping it next to the build script as `eloquence_original.nvda-addon` or by passing `--template /path/to/addon.nvda-addon` when building.
+3. Run `python build.py` to produce `eloquence.nvda-addon` in the repository root. The builder now stages everything locally so offline or firewalled systems no longer block packaging. Supply `--no-download` if you do not want it to attempt downloading the legacy template, or point at a custom cache with `--template`.
+4. Install the add-on in NVDA 2019.3 or newer on Windows 10 or Windows 11. NVDA alpha-52705 has been verified when the 64-bit runtime is available.
+5. Visit NVDA's **Preferences → Speech** dialog to select Eloquence and begin exploring customization options—including the growing set of voice and phoneme parameters we surface in the dialog.
+
+### Build script reference
+- `python build.py --output dist/eloquence.nvda-addon` writes the package to a custom path.
+- `python build.py --template path/to/legacy-addon.nvda-addon` reuses binaries from an existing package instead of copying from `./eloquence/`.
+- `python build.py --no-download --insecure` prevents network access entirely; `--insecure` remains available for environments that must bypass TLS validation when downloading a template from a trusted mirror.
 
 ## Phoneme and voice customization today
 - The add-on now ships with the [eSpeak NG](https://github.com/espeak-ng/espeak-ng) `phsource/phonemes` catalogue under `eloquence_data/espeak_phonemes.txt`. These definitions seed NVDA's phoneme controls without requiring a separate download.
