@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Derived from eSpeak NG community voice definitions",
-    "generated": "2024-11-23",
+    "generated": "2024-11-27",
     "notes": "Suggested Eloquence parameter starting points for language-aware templates"
   },
   "parameters": {
@@ -12,7 +12,9 @@
       "max": 150,
       "default": 100,
       "step": 1,
-      "tags": ["timing"]
+      "tags": [
+        "timing"
+      ]
     },
     "pitch": {
       "label": "Pitch",
@@ -21,7 +23,9 @@
       "max": 160,
       "default": 100,
       "step": 1,
-      "tags": ["tone"]
+      "tags": [
+        "tone"
+      ]
     },
     "inflection": {
       "label": "Inflection",
@@ -30,7 +34,9 @@
       "max": 100,
       "default": 50,
       "step": 1,
-      "tags": ["prosody"]
+      "tags": [
+        "prosody"
+      ]
     },
     "headSize": {
       "label": "Head size",
@@ -39,7 +45,9 @@
       "max": 160,
       "default": 100,
       "step": 1,
-      "tags": ["formant"]
+      "tags": [
+        "formant"
+      ]
     },
     "roughness": {
       "label": "Roughness",
@@ -48,7 +56,9 @@
       "max": 120,
       "default": 40,
       "step": 1,
-      "tags": ["texture"]
+      "tags": [
+        "texture"
+      ]
     },
     "breathiness": {
       "label": "Breathiness",
@@ -57,7 +67,9 @@
       "max": 120,
       "default": 32,
       "step": 1,
-      "tags": ["texture"]
+      "tags": [
+        "texture"
+      ]
     },
     "volume": {
       "label": "Volume",
@@ -66,7 +78,9 @@
       "max": 100,
       "default": 80,
       "step": 1,
-      "tags": ["loudness"]
+      "tags": [
+        "loudness"
+      ]
     }
   },
   "defaults": {
@@ -78,7 +92,11 @@
       "name": "English (US) bright",
       "language": "en-US",
       "description": "Balanced eSpeak en-us timbre with elevated clarity",
-      "tags": ["english", "us", "community"],
+      "tags": [
+        "english",
+        "us",
+        "community"
+      ],
       "baseVoice": "enu",
       "variant": "1",
       "defaultLanguageProfile": "en-us-basic",
@@ -98,7 +116,11 @@
       "name": "English (UK) clarity",
       "language": "en-GB",
       "description": "Crisp consonants inspired by eSpeak en-gb",
-      "tags": ["english", "uk", "community"],
+      "tags": [
+        "english",
+        "uk",
+        "community"
+      ],
       "baseVoice": "eng",
       "variant": "2",
       "defaultLanguageProfile": "en-gb-basic",
@@ -118,7 +140,10 @@
       "name": "Spanish (Latin America)",
       "language": "es-419",
       "description": "Warm cadence following eSpeak es-la",
-      "tags": ["spanish", "latin"],
+      "tags": [
+        "spanish",
+        "latin"
+      ],
       "baseVoice": "esm",
       "variant": "3",
       "defaultLanguageProfile": "es-419-basic",
@@ -138,7 +163,10 @@
       "name": "Spanish (Castilian)",
       "language": "es-ES",
       "description": "Peninsular prosody with sharper sibilants",
-      "tags": ["spanish", "spain"],
+      "tags": [
+        "spanish",
+        "spain"
+      ],
       "baseVoice": "esp",
       "variant": "4",
       "defaultLanguageProfile": "es-es-basic",
@@ -158,10 +186,12 @@
       "name": "French velvety",
       "language": "fr-FR",
       "description": "Rounded vowels echoing eSpeak fr voice",
-      "tags": ["french"],
+      "tags": [
+        "french"
+      ],
       "baseVoice": "fra",
       "variant": "5",
-      "defaultLanguageProfile": null,
+      "defaultLanguageProfile": "fr-fr-basic",
       "sourceVoice": "fr",
       "parameters": {
         "rate": 106,
@@ -178,10 +208,12 @@
       "name": "German precision",
       "language": "de-DE",
       "description": "Focused articulation for German text",
-      "tags": ["german"],
+      "tags": [
+        "german"
+      ],
       "baseVoice": "deu",
       "variant": "6",
-      "defaultLanguageProfile": null,
+      "defaultLanguageProfile": "de-de-basic",
       "sourceVoice": "de",
       "parameters": {
         "rate": 114,
@@ -198,10 +230,12 @@
       "name": "Italian expressive",
       "language": "it-IT",
       "description": "Expressive vowels derived from eSpeak it",
-      "tags": ["italian"],
+      "tags": [
+        "italian"
+      ],
       "baseVoice": "ita",
       "variant": "7",
-      "defaultLanguageProfile": null,
+      "defaultLanguageProfile": "it-it-basic",
       "sourceVoice": "it",
       "parameters": {
         "rate": 110,
@@ -218,10 +252,13 @@
       "name": "Portuguese (Brazil) vibrant",
       "language": "pt-BR",
       "description": "Open vowels echoing eSpeak pt-br",
-      "tags": ["portuguese", "brazil"],
+      "tags": [
+        "portuguese",
+        "brazil"
+      ],
       "baseVoice": "ptb",
       "variant": "8",
-      "defaultLanguageProfile": null,
+      "defaultLanguageProfile": "pt-br-basic",
       "sourceVoice": "pt-br",
       "parameters": {
         "rate": 112,

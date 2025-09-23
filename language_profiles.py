@@ -5,7 +5,7 @@ import json
 import logging
 import os
 from collections import OrderedDict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict, Iterable, Iterator, List, Optional, Tuple
 
 LOG = logging.getLogger(__name__)
@@ -50,6 +50,19 @@ class LanguageProfile:
     sentence_structure: Tuple[str, ...]
     grammar_notes: Tuple[str, ...]
     default_voice_templates: Tuple[str, ...]
+    _lowercase_index: Dict[str, CharacterPronunciation] = field(init=False, repr=False)
+    _max_symbol_length: int = field(init=False, repr=False)
+
+    def __post_init__(self) -> None:
+        self._lowercase_index = {}
+        max_len = 1
+        for symbol, entry in self.characters.items():
+            lower = symbol.lower()
+            if lower not in self._lowercase_index:
+                self._lowercase_index[lower] = entry
+            if len(symbol) > max_len:
+                max_len = len(symbol)
+        self._max_symbol_length = max_len
 
     def display_label(self) -> str:
         pieces: List[str] = [self.display_name]
@@ -61,15 +74,27 @@ class LanguageProfile:
 
     def describe_text(self, text: str) -> str:
         hints: List[str] = []
-        for char in text:
+        position = 0
+        length = len(text)
+        while position < length:
+            char = text[position]
             if char.isspace():
+                position += 1
                 continue
-            entry = self.characters.get(char)
+            entry: Optional[CharacterPronunciation] = None
+            for size in range(self._max_symbol_length, 0, -1):
+                if position + size > length:
+                    continue
+                fragment = text[position : position + size]
+                entry = self.characters.get(fragment)
+                if entry is None:
+                    entry = self._lowercase_index.get(fragment.lower())
+                if entry is not None:
+                    position += size
+                    hints.append(entry.fallback_hint())
+                    break
             if entry is None:
-                entry = self.characters.get(char.lower())
-            if entry is None:
-                continue
-            hints.append(entry.fallback_hint())
+                position += 1
         return "; ".join(hints)
 
 

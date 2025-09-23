@@ -1,0 +1,185 @@
+{
+  "id": "it-it-basic",
+  "language": "it-IT",
+  "displayName": "Italian – open vowels",
+  "description": "Italian vowel core tied to eSpeak it voice",
+  "tags": [
+    "italian",
+    "latin"
+  ],
+  "stress": [
+    "Stress generally on penultimate syllable",
+    "Accents indicate irregular stress"
+  ],
+  "sentenceStructure": [
+    "Subject–Verb–Object with flexible clitics",
+    "Questions marked by rising phrase-final pitch"
+  ],
+  "grammar": [
+    "Double consonants held longer",
+    "Open/closed e and o contrast meaning"
+  ],
+  "defaultVoiceTemplates": [
+    "espeak-it-expressive"
+  ],
+  "characters": [
+    {
+      "symbol": "à",
+      "spoken": "a grave",
+      "ipa": [
+        "a"
+      ],
+      "description": "Open a with marked stress",
+      "example": "città",
+      "notes": [
+        "Marks final-syllable stress"
+      ]
+    },
+    {
+      "symbol": "è",
+      "spoken": "e aperta",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Open e",
+      "example": "caffè",
+      "notes": [
+        "Contrast with é chiusa"
+      ]
+    },
+    {
+      "symbol": "é",
+      "spoken": "e chiusa",
+      "ipa": [
+        "e"
+      ],
+      "description": "Closed e",
+      "example": "perché",
+      "notes": [
+        "Indicates rising stressed vowel"
+      ]
+    },
+    {
+      "symbol": "ò",
+      "spoken": "o aperta",
+      "ipa": [
+        "ɔ"
+      ],
+      "description": "Open o",
+      "example": "perciò",
+      "notes": []
+    },
+    {
+      "symbol": "ó",
+      "spoken": "o chiusa",
+      "ipa": [
+        "o"
+      ],
+      "description": "Closed o",
+      "example": "andrò",
+      "notes": []
+    },
+    {
+      "symbol": "ù",
+      "spoken": "u grave",
+      "ipa": [
+        "u"
+      ],
+      "description": "Closed back vowel",
+      "example": "più",
+      "notes": []
+    },
+    {
+      "symbol": "gli",
+      "spoken": "gli palatale",
+      "ipa": [
+        "ʎ"
+      ],
+      "description": "Palatal lateral digraph",
+      "example": "famiglia",
+      "notes": [
+        "Spelled gli but pronounced single sound"
+      ]
+    },
+    {
+      "symbol": "sc",
+      "spoken": "sc dolce",
+      "ipa": [
+        "ʃ"
+      ],
+      "description": "Palato-alveolar fricative before e,i",
+      "example": "scienza",
+      "notes": []
+    },
+    {
+      "symbol": "À",
+      "spoken": "A grave",
+      "ipa": [
+        "a"
+      ],
+      "description": "Uppercase à",
+      "example": "Àncora",
+      "notes": []
+    },
+    {
+      "symbol": "È",
+      "spoken": "E aperta",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Uppercase è",
+      "example": "È vero",
+      "notes": []
+    },
+    {
+      "symbol": "É",
+      "spoken": "E chiusa",
+      "ipa": [
+        "e"
+      ],
+      "description": "Uppercase é",
+      "example": "Élite",
+      "notes": []
+    },
+    {
+      "symbol": "Ò",
+      "spoken": "O aperta",
+      "ipa": [
+        "ɔ"
+      ],
+      "description": "Uppercase ò",
+      "example": "Òra",
+      "notes": []
+    },
+    {
+      "symbol": "Ó",
+      "spoken": "O chiusa",
+      "ipa": [
+        "o"
+      ],
+      "description": "Uppercase ó",
+      "example": "Ópera",
+      "notes": []
+    },
+    {
+      "symbol": "Ù",
+      "spoken": "U grave",
+      "ipa": [
+        "u"
+      ],
+      "description": "Uppercase ù",
+      "example": "Ùltimo",
+      "notes": []
+    },
+    {
+      "symbol": "Gli",
+      "spoken": "Gli palatale",
+      "ipa": [
+        "ʎ"
+      ],
+      "description": "Capitalised gli digraph",
+      "example": "Gli italiani",
+      "notes": []
+    }
+  ]
+}

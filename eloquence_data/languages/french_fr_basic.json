@@ -1,0 +1,192 @@
+{
+  "id": "fr-fr-basic",
+  "language": "fr-FR",
+  "displayName": "French – nasal warmth",
+  "description": "Core French characters tuned against eSpeak fr defaults",
+  "tags": [
+    "french",
+    "latin"
+  ],
+  "stress": [
+    "Lexical stress falls on the final full syllable",
+    "Function words keep flat intonation"
+  ],
+  "sentenceStructure": [
+    "Subject–Verb–Object with frequent pronoun drop in imperatives",
+    "Intonation rises slightly for yes/no questions"
+  ],
+  "grammar": [
+    "Mute e weakens between consonants",
+    "liaison links final consonants to following vowels"
+  ],
+  "defaultVoiceTemplates": [
+    "espeak-fr-velvet"
+  ],
+  "characters": [
+    {
+      "symbol": "é",
+      "spoken": "é fermé",
+      "ipa": [
+        "e"
+      ],
+      "description": "Close-mid front vowel",
+      "example": "école",
+      "stress": "Carries phrase-final prominence",
+      "notes": [
+        "Contrast with è for open quality"
+      ]
+    },
+    {
+      "symbol": "è",
+      "spoken": "è ouvert",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Open-mid front vowel",
+      "example": "père",
+      "notes": [
+        "Lengthens before silent e"
+      ]
+    },
+    {
+      "symbol": "ê",
+      "spoken": "ê circonflexe",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Circumflex vowel",
+      "example": "fête",
+      "notes": [
+        "Often marks historical consonant"
+      ]
+    },
+    {
+      "symbol": "ç",
+      "spoken": "c cédille",
+      "ipa": [
+        "s"
+      ],
+      "description": "Soft c before a,o,u",
+      "example": "garçon",
+      "notes": [
+        "Prevents hard /k/ pronunciation"
+      ]
+    },
+    {
+      "symbol": "œ",
+      "spoken": "eu ligature",
+      "ipa": [
+        "œ"
+      ],
+      "description": "Rounded front vowel",
+      "example": "cœur",
+      "notes": [
+        "Close to eu in feu"
+      ]
+    },
+    {
+      "symbol": "u",
+      "spoken": "u serré",
+      "ipa": [
+        "y"
+      ],
+      "description": "High front rounded vowel",
+      "example": "lune",
+      "notes": [
+        "Keep lips rounded while tongue stays front"
+      ]
+    },
+    {
+      "symbol": "r",
+      "spoken": "r uvulaire",
+      "ipa": [
+        "ʁ"
+      ],
+      "description": "Uvular fricative",
+      "example": "rue",
+      "notes": [
+        "Softer in syllable-final position"
+      ]
+    },
+    {
+      "symbol": "É",
+      "spoken": "é capital",
+      "ipa": [
+        "e"
+      ],
+      "description": "Uppercase accented e",
+      "example": "État",
+      "notes": []
+    },
+    {
+      "symbol": "È",
+      "spoken": "è capital",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Uppercase è",
+      "example": "Ève",
+      "notes": []
+    },
+    {
+      "symbol": "Ê",
+      "spoken": "ê capital",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Uppercase ê",
+      "example": "Être",
+      "notes": []
+    },
+    {
+      "symbol": "Ç",
+      "spoken": "c cédille capitale",
+      "ipa": [
+        "s"
+      ],
+      "description": "Uppercase ç",
+      "example": "Ça",
+      "notes": []
+    },
+    {
+      "symbol": "Œ",
+      "spoken": "eu ligature capitale",
+      "ipa": [
+        "œ"
+      ],
+      "description": "Uppercase œ",
+      "example": "Œuvre",
+      "notes": []
+    },
+    {
+      "symbol": "Ù",
+      "spoken": "u grave",
+      "ipa": [
+        "y"
+      ],
+      "description": "Uppercase ù",
+      "example": "Ùne",
+      "notes": []
+    },
+    {
+      "symbol": "Û",
+      "spoken": "u circonflexe",
+      "ipa": [
+        "y"
+      ],
+      "description": "Uppercase û",
+      "example": "Âge mûr",
+      "notes": []
+    },
+    {
+      "symbol": "û",
+      "spoken": "u circonflexe",
+      "ipa": [
+        "y"
+      ],
+      "description": "Circumflex u",
+      "example": "sûr",
+      "notes": []
+    }
+  ]
+}
