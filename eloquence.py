@@ -50,6 +50,26 @@ else:
     addonHandler.initTranslation()
 
 
+VOICE_PARAMETER_SETTING = DriverSetting(
+ "voiceParameter",
+ _("Voice para&meter"),
+ availableInSettingsRing=True,
+ displayName=_("Voice parameter"),
+)
+
+VOICE_PARAMETER_VALUE_SETTING = NumericDriverSetting(
+ "voiceParameterValue",
+ _("Voice parameter &value"),
+ availableInSettingsRing=True,
+ minVal=0,
+ maxVal=200,
+ minStep=1,
+ normalStep=5,
+ largeStep=10,
+ displayName=_("Voice parameter value"),
+)
+
+
 punctuation = ",.?:;"
 punctuation = [x for x in punctuation]
 from ctypes import *
@@ -60,7 +80,12 @@ from synthDriverHandler import SynthDriver, VoiceInfo, synthIndexReached, synthD
 from synthDriverHandler import SynthDriver,VoiceInfo
 from . import _eloquence
 from .phoneme_catalog import PhonemeDefinition, PhonemeInventory, PhonemeReplacement, load_default_inventory
-from .voice_catalog import VoiceCatalog, VoiceTemplate, load_default_voice_catalog
+from .voice_catalog import (
+ VoiceCatalog,
+ VoiceTemplate,
+ VoiceParameterRange,
+ load_default_voice_catalog,
+)
 from .language_profiles import (
  LanguageProfile,
  LanguageProfileCatalog,
@@ -169,6 +194,8 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    availableInSettingsRing=True,
    displayName=_("Language profile"),
   ),
+  VOICE_PARAMETER_SETTING,
+  VOICE_PARAMETER_VALUE_SETTING,
   DriverSetting(
    "phonemeCategory",
    _("Phoneme &category"),
@@ -216,6 +243,8 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  _activeLanguageProfileId: Optional[str]
  _languageProfileOverrideId: Optional[str]
  _lastVoiceTemplateSelection: Optional[str]
+ _voiceParameterSelection: Optional[str]
+ _lastVoiceParameterSelection: Optional[str]
  _phonemeCategorySelection: Optional[str]
  _phonemeSelection: Optional[str]
  PROSODY_ATTRS = {
@@ -226,6 +255,15 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  _VOICE_TEMPLATE_DEFAULT = "engine-default"
  _LANGUAGE_PROFILE_AUTO = "auto"
  _LANGUAGE_PROFILE_DISABLED = "disabled"
+ _VOICE_PARAMETER_ORDER = (
+  "rate",
+  "pitch",
+  "inflection",
+  "headSize",
+  "roughness",
+  "breathiness",
+  "volume",
+ )
  _VOICE_PARAM_BINDINGS = {
   "pitch": _eloquence.pitch,
   "inflection": _eloquence.fluctuation,
@@ -258,6 +296,9 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  self._voiceCatalog = load_default_voice_catalog()
  self._voiceTemplateId = None
  self._lastVoiceTemplateSelection = None
+ self._voiceParameterSelection = None
+ self._lastVoiceParameterSelection = None
+ self._ensure_voice_parameter_selection()
  self._languageProfiles = load_default_language_profiles()
  self._languageProfileSelection = _LANGUAGE_PROFILE_AUTO
  self._activeLanguageProfileId = None
@@ -602,6 +643,81 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   self._persist_phoneme_replacements()
   self._reset_replacement_cursor()
 
+ def _voice_parameter_options(self) -> "OrderedDict[str, StringParameterInfo]":
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  ranges = self._voiceCatalog.parameter_ranges() if self._voiceCatalog else {}
+
+  def register_option(name: str, range_info: Optional[VoiceParameterRange]):
+   if not range_info:
+    return
+   if name not in _VOICE_PARAM_BINDINGS:
+    return
+   if name in options:
+    return
+   label = range_info.label or name
+   description = range_info.description.strip()
+   if description:
+    label = f"{label} – {description}"
+   options[name] = StringParameterInfo(name, label)
+
+  for parameter_name in _VOICE_PARAMETER_ORDER:
+   register_option(parameter_name, ranges.get(parameter_name))
+  for parameter_name, range_info in sorted(ranges.items()):
+   register_option(parameter_name, range_info)
+  return options
+
+ def _voice_parameter_binding(self) -> Optional[int]:
+  if not self._voiceParameterSelection:
+   return None
+  return _VOICE_PARAM_BINDINGS.get(self._voiceParameterSelection)
+
+ def _current_voice_parameter_range(self) -> Optional[VoiceParameterRange]:
+  if not self._voiceParameterSelection or self._voiceCatalog.is_empty:
+   return None
+  return self._voiceCatalog.parameter_range(self._voiceParameterSelection)
+
+ def _update_voice_parameter_slider(self) -> None:
+  setting = VOICE_PARAMETER_VALUE_SETTING
+  range_info = self._current_voice_parameter_range()
+  if range_info is None:
+   setting.minVal = 0
+   setting.maxVal = 200
+   setting.minStep = 1
+   setting.normalStep = max(setting.minStep, 5)
+   setting.largeStep = max(setting.normalStep, 10)
+   setting.defaultVal = 0
+   return
+  step = max(1, range_info.step)
+  setting.minVal = range_info.minimum
+  setting.maxVal = range_info.maximum
+  setting.minStep = step
+  span = max(range_info.maximum - range_info.minimum, step)
+  normal = span // 10 if span // 10 >= step else step
+  setting.normalStep = max(step, normal)
+  large = span // 4 if span // 4 >= setting.normalStep else setting.normalStep
+  setting.largeStep = max(setting.normalStep, large)
+  setting.defaultVal = range_info.clamp(range_info.default)
+
+ def _ensure_voice_parameter_selection(self) -> None:
+  options = self._voice_parameter_options()
+  if not options:
+   self._voiceParameterSelection = None
+   self._lastVoiceParameterSelection = None
+   self._update_voice_parameter_slider()
+   return
+  if self._voiceParameterSelection in options:
+   self._lastVoiceParameterSelection = self._voiceParameterSelection
+   self._update_voice_parameter_slider()
+   return
+  if self._lastVoiceParameterSelection in options:
+   self._voiceParameterSelection = self._lastVoiceParameterSelection
+   self._update_voice_parameter_slider()
+   return
+  first = next(iter(options))
+  self._voiceParameterSelection = first
+  self._lastVoiceParameterSelection = first
+  self._update_voice_parameter_slider()
+
 def _default_profile_for_template(self, template: Optional[VoiceTemplate]) -> Optional[str]:
  if template is None:
   return None
@@ -703,10 +819,70 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
   if value == _LANGUAGE_PROFILE_AUTO:
    self._refresh_language_profile()
    return
-  if self._languageProfiles.get(value):
-   self._activeLanguageProfileId = value
-  else:
-   self._activeLanguageProfileId = None
+ if self._languageProfiles.get(value):
+  self._activeLanguageProfileId = value
+ else:
+  self._activeLanguageProfileId = None
+
+ def _get_availableVoiceParameters(self):
+  options = self._voice_parameter_options()
+  if not options:
+   raise UnsupportedConfigParameterError()
+  return options
+
+ def _get_voiceParameter(self):
+  options = self._get_availableVoiceParameters()
+  if self._voiceParameterSelection in options:
+   self._lastVoiceParameterSelection = self._voiceParameterSelection
+   return self._voiceParameterSelection
+  if self._lastVoiceParameterSelection in options:
+   self._voiceParameterSelection = self._lastVoiceParameterSelection
+   self._update_voice_parameter_slider()
+   return self._voiceParameterSelection
+  first = next(iter(options))
+  self._voiceParameterSelection = first
+  self._lastVoiceParameterSelection = first
+  self._update_voice_parameter_slider()
+  return first
+
+ def _set_voiceParameter(self, value):
+  options = self._get_availableVoiceParameters()
+  if value not in options:
+   raise ValueError(f"Unknown voice parameter '{value}'")
+  self._voiceParameterSelection = value
+  self._lastVoiceParameterSelection = value
+  self._update_voice_parameter_slider()
+
+ def _get_voiceParameterValue(self):
+  binding = self._voice_parameter_binding()
+  if binding is None:
+   raise UnsupportedConfigParameterError()
+  try:
+   current = int(self.getVParam(binding))
+  except Exception:
+   range_info = self._current_voice_parameter_range()
+   if range_info is None:
+    raise
+   current = range_info.default
+  range_info = self._current_voice_parameter_range()
+  if range_info is not None:
+   current = range_info.clamp(current)
+  return current
+
+ def _set_voiceParameterValue(self, value):
+  binding = self._voice_parameter_binding()
+  if binding is None:
+   raise UnsupportedConfigParameterError()
+  try:
+   numeric = int(value)
+  except (TypeError, ValueError):
+   raise ValueError(f"Invalid voice parameter value '{value}'") from None
+  range_info = self._current_voice_parameter_range()
+  if range_info is not None:
+   numeric = range_info.clamp(numeric)
+  self.setVParam(binding, numeric)
+  if binding == _eloquence.rate:
+   self._rate = numeric
 
  def _get_availablePhonemeCategories(self):
   if self._phonemeInventory.is_empty:
