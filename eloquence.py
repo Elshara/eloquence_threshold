@@ -162,6 +162,18 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    displayName=_("Language profile"),
   ),
   DriverSetting(
+   "phonemeCategory",
+   _("Phoneme &category"),
+   availableInSettingsRing=True,
+   displayName=_("Phoneme category"),
+  ),
+  DriverSetting(
+   "phonemeSymbol",
+   _("Phoneme s&ymbol"),
+   availableInSettingsRing=True,
+   displayName=_("Phoneme symbol"),
+  ),
+  DriverSetting(
    "phonemeReplacement",
    _("Phoneme &replacement"),
    availableInSettingsRing=True,
@@ -188,6 +200,8 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  _languageProfileSelection: str
  _activeLanguageProfileId: Optional[str]
  _lastVoiceTemplateSelection: Optional[str]
+ _phonemeCategorySelection: Optional[str]
+ _phonemeSelection: Optional[str]
  PROSODY_ATTRS = {
   PitchCommand: _eloquence.pitch,
   VolumeCommand: _eloquence.vlm,
@@ -219,6 +233,9 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  self._phonemeInventory = load_default_inventory()
  self._phonemeReplacements = {}
  self._lastReplacementSelection = None
+ self._phonemeCategorySelection = None
+ self._phonemeSelection = None
+ self._ensure_phoneme_selection()
  self._voiceCatalog = load_default_voice_catalog()
  self._voiceTemplateId = None
  self._lastVoiceTemplateSelection = None
@@ -339,6 +356,40 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    outputs.append(fallback_text)
   spoken = " ".join(part.strip() for part in outputs if isinstance(part, str) and part.strip())
   return spoken or fallback
+
+ def _ensure_phoneme_selection(self):
+  if self._phonemeInventory.is_empty:
+   self._phonemeCategorySelection = None
+   self._phonemeSelection = None
+   return
+  categories = list(self._phonemeInventory.categories.keys())
+  if not categories:
+   self._phonemeCategorySelection = None
+   self._phonemeSelection = None
+   return
+  if self._phonemeCategorySelection not in categories:
+   self._phonemeCategorySelection = categories[0]
+  phonemes = self._phonemeInventory.phonemes_for_category(self._phonemeCategorySelection)
+  if not phonemes:
+   for category_id in categories:
+    phonemes = self._phonemeInventory.phonemes_for_category(category_id)
+    if phonemes:
+     self._phonemeCategorySelection = category_id
+     break
+   else:
+    self._phonemeSelection = None
+    return
+  valid_names = [definition.name for definition in phonemes]
+  if self._phonemeSelection not in valid_names:
+   self._phonemeSelection = valid_names[0] if valid_names else None
+
+ def _current_phoneme_definition(self) -> Optional[PhonemeDefinition]:
+  if not self._phonemeSelection:
+   return None
+  return self._phonemeInventory.get(self._phonemeSelection)
+
+ def _reset_replacement_cursor(self):
+  self._lastReplacementSelection = None
 
  def _get_availableVoiceTemplates(self):
   if self._voiceCatalog.is_empty:
@@ -486,28 +537,97 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   else:
    self._activeLanguageProfileId = None
 
+ def _get_availablePhonemeCategories(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  for category_id, label in self._phonemeInventory.categories.items():
+   options[category_id] = StringParameterInfo(category_id, label)
+  if not options:
+   raise UnsupportedConfigParameterError()
+  return options
+
+ def _get_phonemeCategory(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  if not self._phonemeCategorySelection:
+   raise UnsupportedConfigParameterError()
+  return self._phonemeCategorySelection
+
+ def _set_phonemeCategory(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  options = self._get_availablePhonemeCategories()
+  if value not in options:
+   raise ValueError(f"Unknown phoneme category '{value}'")
+  if value == self._phonemeCategorySelection:
+   return
+  self._phonemeCategorySelection = value
+  self._phonemeSelection = None
+  self._ensure_phoneme_selection()
+  self._reset_replacement_cursor()
+
+ def _get_availablePhonemeSymbols(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  if not self._phonemeCategorySelection:
+   raise UnsupportedConfigParameterError()
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  for definition in self._phonemeInventory.phonemes_for_category(self._phonemeCategorySelection):
+   options[definition.name] = StringParameterInfo(
+    definition.name,
+    definition.display_label,
+   )
+  if not options:
+   raise UnsupportedConfigParameterError()
+  return options
+
+ def _get_phonemeSymbol(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  if not self._phonemeSelection:
+   raise UnsupportedConfigParameterError()
+  return self._phonemeSelection
+
+ def _set_phonemeSymbol(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  options = self._get_availablePhonemeSymbols()
+  if value not in options:
+   raise ValueError(f"Unknown phoneme symbol '{value}'")
+  if value == self._phonemeSelection:
+   return
+  self._phonemeSelection = value
+  self._reset_replacement_cursor()
+
  def _get_availablePhonemereplacements(self):
   if self._phonemeInventory.is_empty:
    raise UnsupportedConfigParameterError()
-  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
-  for category_id, _ in self._phonemeInventory.categories.items():
-   for definition in self._phonemeInventory.phonemes_for_category(category_id):
-    replacements = definition.replacement_options()
-    default_choice = definition.get_replacement(None)
-    active_choice = self._phonemeReplacements.get(definition.name)
-    if active_choice is None and default_choice is not None:
-     active_choice = default_choice.id
-    for replacement_id, replacement in replacements.items():
-     entry_id = f"{definition.name}::{replacement_id}"
-     label = self._format_replacement_label(
-      definition,
-      replacement,
-      active_choice == replacement_id,
-      default_choice is not None and replacement_id == default_choice.id,
-     )
-     options[entry_id] = StringParameterInfo(entry_id, label)
-  if not options:
+  self._ensure_phoneme_selection()
+  definition = self._current_phoneme_definition()
+  if not definition:
    raise UnsupportedConfigParameterError()
+  replacements = definition.replacement_options()
+  if not replacements:
+   raise UnsupportedConfigParameterError()
+  default_choice = definition.get_replacement(None)
+  active_choice = self._phonemeReplacements.get(definition.name)
+  if active_choice is None and default_choice is not None:
+   active_choice = default_choice.id
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  for replacement_id, replacement in replacements.items():
+   entry_id = f"{definition.name}::{replacement_id}"
+   label = self._format_replacement_label(
+    definition,
+    replacement,
+    active_choice == replacement_id,
+    default_choice is not None and replacement_id == default_choice.id,
+   )
+   options[entry_id] = StringParameterInfo(entry_id, label)
   return options
 
  def _get_phonemeReplacement(self):
@@ -547,6 +667,10 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   definition = self._phonemeInventory.get(phoneme_id)
   if not definition:
    raise ValueError(f"Unknown phoneme '{phoneme_id}'")
+  category_id = self._phonemeInventory.category_for(phoneme_id)
+  if category_id:
+   self._phonemeCategorySelection = category_id
+  self._phonemeSelection = phoneme_id
   options = definition.replacement_options()
   if replacement_id not in options:
    raise ValueError(f"Unknown replacement '{replacement_id}' for phoneme '{phoneme_id}'")
