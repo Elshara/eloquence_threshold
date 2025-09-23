@@ -11,16 +11,65 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 from collections import OrderedDict
 from dataclasses import dataclass
-from typing import Dict, Iterable, Iterator, List, Optional, Tuple
+from typing import Dict, Iterable, Iterator, List, Optional, Set, Tuple
 
 LOG = logging.getLogger(__name__)
 
-_DATA_FILES = (
-    ("espeak", os.path.join(os.path.dirname(__file__), "eloquence_data", "espeak_voices.json")),
-    ("dectalk", os.path.join(os.path.dirname(__file__), "eloquence_data", "dectalk_voices.json")),
-)
+_VOICE_DATA_ROOT = os.path.join(os.path.dirname(__file__), "eloquence_data")
+_VOICE_SUBDIR = os.path.join(_VOICE_DATA_ROOT, "voices")
+
+
+def _iter_voice_data_files() -> Iterator[Tuple[str, str]]:
+    """Yield ``(source_id, path)`` pairs for bundled voice catalog files."""
+
+    if not os.path.isdir(_VOICE_DATA_ROOT):
+        return
+
+    seen: Set[str] = set()
+
+    def register(path: str) -> Optional[Tuple[str, str]]:
+        absolute = os.path.abspath(path)
+        if absolute in seen:
+            return None
+        seen.add(absolute)
+        source_id = _source_id_from_path(absolute)
+        return source_id, absolute
+
+    # Top-level ``*_voices.json`` files keep backward compatibility with the
+    # original layout.
+    for name in sorted(os.listdir(_VOICE_DATA_ROOT)):
+        if not name.lower().endswith("_voices.json"):
+            continue
+        path = os.path.join(_VOICE_DATA_ROOT, name)
+        if not os.path.isfile(path):
+            continue
+        result = register(path)
+        if result:
+            yield result
+
+    if not os.path.isdir(_VOICE_SUBDIR):
+        return
+
+    for root, _dirs, files in os.walk(_VOICE_SUBDIR):
+        for name in sorted(files):
+            if not name.lower().endswith(".json"):
+                continue
+            path = os.path.join(root, name)
+            if not os.path.isfile(path):
+                continue
+            result = register(path)
+            if result:
+                yield result
+
+
+def _source_id_from_path(path: str) -> str:
+    relative = os.path.relpath(path, _VOICE_DATA_ROOT)
+    stem = os.path.splitext(relative)[0]
+    normalized = re.sub(r"[^0-9a-zA-Z]+", "-", stem).strip("-")
+    return normalized or "voice-data"
 
 
 @dataclass(frozen=True)
@@ -124,13 +173,13 @@ def load_default_voice_catalog() -> VoiceCatalog:
     """Load the bundled voice catalogue shipping with the add-on."""
 
     payloads = []
-    for source_id, path in _DATA_FILES:
+    for source_id, path in _iter_voice_data_files():
         payload = _load_voice_payload(path)
         if payload is None:
             continue
         payloads.append((source_id, path, payload))
     if not payloads:
-        LOG.info("No voice catalogue data found in %s", [path for _, path in _DATA_FILES])
+        LOG.info("No voice catalogue data found under %s", _VOICE_DATA_ROOT)
         return VoiceCatalog({}, [])
 
     parameter_ranges: Dict[str, VoiceParameterRange] = {}
@@ -152,7 +201,7 @@ def load_default_voice_catalog() -> VoiceCatalog:
         if isinstance(raw_metadata, dict):
             meta_entry.update(raw_metadata)
         meta_entry.setdefault("id", source_id)
-        meta_entry.setdefault("file", os.path.basename(path))
+        meta_entry.setdefault("file", os.path.relpath(path, _VOICE_DATA_ROOT))
         source_metadata.append(meta_entry)
 
         defaults = payload.get("defaults", {}) or {}
