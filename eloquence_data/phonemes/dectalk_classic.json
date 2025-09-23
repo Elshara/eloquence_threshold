@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source": "Manually curated from DECtalk 5.1 / FonixTalk community documentation",
+    "generated": "2024-12-05",
+    "notes": [
+      "Examples follow DECtalk sample words so NVDA users hear familiar references",
+      "Descriptions favour concise keyboard-friendly phrasing"
+    ]
+  },
+  "category": "DECtalk core inventory",
+  "phonemes": [
+    {
+      "name": "dt_ax",
+      "ipa": ["ə"],
+      "description": "Neutral mid-central vowel used for unstressed syllables",
+      "examples": ["about", "sofa"],
+      "notes": ["Matches DECtalk token AX"],
+      "attributes": {
+        "sources": ["dt51", "FonixTalk"],
+        "type": "vowel"
+      }
+    },
+    {
+      "name": "dt_ae",
+      "ipa": ["æ"],
+      "description": "Open front vowel found in words like 'cat'",
+      "examples": ["cat", "plasma"],
+      "notes": ["Equivalent to DECtalk token AE"],
+      "attributes": {
+        "type": "vowel"
+      }
+    },
+    {
+      "name": "dt_sh",
+      "ipa": ["ʃ"],
+      "description": "Voiceless postalveolar fricative",
+      "examples": ["shore", "nation"],
+      "notes": ["Maps to DECtalk token SH"],
+      "attributes": {
+        "type": "consonant"
+      }
+    },
+    {
+      "name": "dt_ch",
+      "ipa": ["tʃ"],
+      "description": "Affricate often produced as 'ch'",
+      "examples": ["church", "picture"],
+      "notes": ["Maps to DECtalk token CH"],
+      "attributes": {
+        "type": "consonant"
+      }
+    }
+  ]
+}

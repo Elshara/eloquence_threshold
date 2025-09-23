@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "source": "Community approximations of DECtalk / FonixTalk voice personalities",
+    "generated": "2024-12-05",
+    "notes": "Parameter seeds designed to evoke DECtalk timbres when rendered by Eloquence"
+  },
+  "defaults": {
+    "template": "dectalk-perfect-paul"
+  },
+  "templates": [
+    {
+      "id": "dectalk-perfect-paul",
+      "name": "DECtalk Perfect Paul",
+      "language": "en-US",
+      "description": "Classic baritone profile inspired by DECtalk's default voice",
+      "tags": ["dectalk", "legacy", "english"],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "Perfect Paul",
+      "parameters": {
+        "rate": 112,
+        "pitch": 96,
+        "inflection": 42,
+        "headSize": 126,
+        "roughness": 24,
+        "breathiness": 18,
+        "volume": 90
+      },
+      "extras": {
+        "synthesizer": "dectalk",
+        "reference": "dt51"
+      }
+    },
+    {
+      "id": "dectalk-beautiful-betty",
+      "name": "DECtalk Beautiful Betty",
+      "language": "en-US",
+      "description": "Bright mezzo voice tuned for clarity",
+      "tags": ["dectalk", "legacy", "english"],
+      "baseVoice": "enu",
+      "variant": "6",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "Beautiful Betty",
+      "parameters": {
+        "rate": 108,
+        "pitch": 124,
+        "inflection": 54,
+        "headSize": 110,
+        "roughness": 18,
+        "breathiness": 34,
+        "volume": 92
+      },
+      "extras": {
+        "synthesizer": "dectalk",
+        "reference": "FonixTalk"
+      }
+    },
+    {
+      "id": "dectalk-rough-rita",
+      "name": "DECtalk Rough Rita",
+      "language": "en-US",
+      "description": "Edgy alto voice with extra rasp",
+      "tags": ["dectalk", "legacy", "english"],
+      "baseVoice": "enu",
+      "variant": "4",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "Rough Rita",
+      "parameters": {
+        "rate": 104,
+        "pitch": 92,
+        "inflection": 36,
+        "headSize": 134,
+        "roughness": 46,
+        "breathiness": 26,
+        "volume": 94
+      },
+      "extras": {
+        "synthesizer": "dectalk",
+        "reference": "dt51"
+      }
+    },
+    {
+      "id": "dectalk-whispering-wendy",
+      "name": "DECtalk Whispering Wendy",
+      "language": "en-US",
+      "description": "Soft-spoken profile with intimate breathiness",
+      "tags": ["dectalk", "legacy", "english"],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "Whispering Wendy",
+      "parameters": {
+        "rate": 100,
+        "pitch": 118,
+        "inflection": 48,
+        "headSize": 116,
+        "roughness": 20,
+        "breathiness": 44,
+        "volume": 88
+      },
+      "extras": {
+        "synthesizer": "dectalk",
+        "reference": "FonixTalk"
+      }
+    }
+  ]
+}

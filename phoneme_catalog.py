@@ -1,18 +1,20 @@
 """Utilities for loading and cataloguing phoneme metadata.
 
-This module parses the eSpeak NG ``phsource/phonemes`` definition file so we can
-surface phoneme information inside NVDA's Eloquence driver.  The loader focuses
-on data that helps blind users explore and customise phoneme mappings from the
-keyboard:
+This module parses bundled phoneme sources so we can surface phoneme
+information inside NVDA's Eloquence driver.  The loader focuses on data that
+helps blind users explore and customise phoneme mappings from the keyboard:
 
 * Category labels (for grouping phonemes in the voice settings dialog).
 * IPA symbols declared for each phoneme, to match NVDA ``PhonemeCommand``
   entries.
 * Human readable descriptions and example words, which become replacement
   options when Eloquence can't articulate a requested phoneme directly.
+* Contributed phoneme sets (for example DECtalk/FonixTalk inventories) stored
+  as JSON so the community can extend the catalogue without editing Python.
 """
 from __future__ import annotations
 
+import json
 import logging
 import os
 import re
@@ -212,18 +214,122 @@ class PhonemeInventory:
 
 
 def load_default_inventory() -> PhonemeInventory:
-    """Load the bundled eSpeak NG phoneme catalogue if present."""
+    """Load the bundled eSpeak NG and contributed phoneme catalogues."""
+
+    phonemes: List[PhonemeDefinition] = []
     data_path = os.path.join(os.path.dirname(__file__), "eloquence_data", "espeak_phonemes.txt")
-    if not os.path.exists(data_path):
+    if os.path.exists(data_path):
+        try:
+            with open(data_path, "r", encoding="utf-8") as source:
+                phonemes.extend(parse_espeak_phonemes(source))
+        except OSError:
+            LOG.exception("Unable to read eSpeak phoneme data from %s", data_path)
+    else:
         LOG.debug("Bundled eSpeak phoneme file is missing: %s", data_path)
-        return PhonemeInventory([])
-    try:
-        with open(data_path, "r", encoding="utf-8") as source:
-            phonemes = list(parse_espeak_phonemes(source))
-    except OSError:
-        LOG.exception("Unable to read eSpeak phoneme data from %s", data_path)
+
+    contributed = _load_contributed_phonemes()
+    if contributed:
+        phonemes.extend(contributed)
+
+    if not phonemes:
         return PhonemeInventory([])
     return PhonemeInventory(phonemes)
+
+
+def _load_contributed_phonemes() -> List[PhonemeDefinition]:
+    """Load JSON-based phoneme inventories contributed by the community."""
+
+    data_dir = os.path.join(os.path.dirname(__file__), "eloquence_data", "phonemes")
+    if not os.path.isdir(data_dir):
+        return []
+    definitions: List[PhonemeDefinition] = []
+    for entry in sorted(os.listdir(data_dir)):
+        if not entry.lower().endswith(".json"):
+            continue
+        path = os.path.join(data_dir, entry)
+        try:
+            with open(path, "r", encoding="utf-8") as handle:
+                payload = json.load(handle)
+        except (OSError, json.JSONDecodeError):
+            LOG.exception("Unable to read contributed phoneme data from %s", path)
+            continue
+        definitions.extend(_parse_contributed_phonemes(payload, path))
+    return definitions
+
+
+def _parse_contributed_phonemes(payload: object, source: str) -> List[PhonemeDefinition]:
+    if not isinstance(payload, dict):
+        LOG.warning("Ignoring malformed phoneme payload from %s", source)
+        return []
+    entries = payload.get("phonemes")
+    if not isinstance(entries, list):
+        LOG.warning("No phoneme entries found in %s", source)
+        return []
+    default_category = payload.get("category")
+    metadata = payload.get("metadata") or {}
+    metadata_notes: List[str] = []
+    if isinstance(metadata, dict):
+        for key in ("source", "notes"):
+            value = metadata.get(key)
+            if isinstance(value, str):
+                metadata_notes.append(value)
+            elif isinstance(value, (list, tuple)):
+                metadata_notes.extend(str(item) for item in value if item)
+    definitions: List[PhonemeDefinition] = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        name = entry.get("name") or entry.get("id")
+        if not name:
+            continue
+        category = entry.get("category") or default_category or "Contributed phonemes"
+        examples: List[str] = []
+        raw_examples = entry.get("examples")
+        if isinstance(raw_examples, (list, tuple)):
+            examples = [str(example) for example in raw_examples if str(example)]
+        description = str(entry.get("description", ""))
+        notes: List[str] = []
+        raw_notes = entry.get("notes")
+        if isinstance(raw_notes, (list, tuple)):
+            notes = [str(note) for note in raw_notes if str(note)]
+        elif isinstance(raw_notes, str):
+            notes = [raw_notes]
+        comment_parts: List[str] = []
+        for example in examples:
+            comment_parts.append(f"**{example}**")
+        if description:
+            comment_parts.append(description)
+        comment_parts.extend(metadata_notes)
+        comment_parts.extend(notes)
+        comment = " ".join(part.strip() for part in comment_parts if part).strip()
+        ipa_values: List[str] = []
+        raw_ipa = entry.get("ipa")
+        if isinstance(raw_ipa, (list, tuple)):
+            ipa_values = [str(symbol) for symbol in raw_ipa if str(symbol)]
+        elif isinstance(raw_ipa, str):
+            ipa_values = [raw_ipa]
+        attributes: List[Tuple[str, Tuple[str, ...]]] = []
+        raw_attributes = entry.get("attributes")
+        if isinstance(raw_attributes, dict):
+            for attr_name, attr_values in raw_attributes.items():
+                values: Tuple[str, ...]
+                if isinstance(attr_values, (list, tuple)):
+                    values = tuple(str(value) for value in attr_values if value is not None)
+                elif attr_values is None:
+                    values = ()
+                else:
+                    values = (str(attr_values),)
+                attributes.append((str(attr_name), values))
+        definitions.append(
+            PhonemeDefinition(
+                name=str(name),
+                comment=comment or description,
+                category=str(category),
+                ipa=tuple(ipa_values),
+                attributes=tuple(attributes),
+            )
+        )
+    return definitions
 
 
 def parse_espeak_phonemes(lines: Iterable[str]) -> Iterator[PhonemeDefinition]:
