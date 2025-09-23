@@ -34,6 +34,7 @@ Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-
 - Once a symbol is selected, the **Phoneme replacement** option lists the available fallbacks—example words, descriptive labels, IPA symbols, or the raw engine token. Choose a combination with arrow keys and NVDA will announce whether it is the **current** or **default** mapping.
 - Activating a different replacement immediately updates Eloquence's response when NVDA emits `PhonemeCommand` sequences, so you can tailor pronunciation on the fly without leaving the dialog. Custom choices are stored per phoneme, letting you review or reset mappings at any time.
 - NVDA stores those custom mappings inside its `nvda.ini` configuration (`speech/eloquence/phonemeReplacements`), ensuring your language tweaks persist across sessions. Delete that block if you want to revert every phoneme to the bundled defaults in one go.
+- The new **Default phoneme fallback** setting lets you decide whether Eloquence prefers sample words, descriptive text, IPA, or the engine’s raw symbol whenever you have not chosen a custom replacement. Pick the style that makes the most sense for your workflow and the driver will refresh the default mappings across the whole inventory.
 - If you ever want to refresh the underlying catalogue with a newer upstream snapshot, replace the bundled file before rebuilding the add-on.
 
 ### Build bespoke voices with eSpeak templates

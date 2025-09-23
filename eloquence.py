@@ -112,6 +112,14 @@ variants = {1:"Reed",
 7:"Grandma",
 8:"Grandpa"}
 
+_PHONEME_FALLBACK_POLICIES: "OrderedDict[str, Tuple[str, ...]]" = OrderedDict([
+ ("examplesFirst", ("example", "description", "ipa", "name")),
+ ("descriptionsFirst", ("description", "example", "ipa", "name")),
+ ("ipaFirst", ("ipa", "example", "description", "name")),
+ ("engineSymbolsFirst", ("name", "ipa", "example", "description")),
+])
+_PHONEME_FALLBACK_DEFAULT = "examplesFirst"
+
 def strip_accents(s):
   return ''.join(c for c in unicodedata.normalize('NFD', s)
                   if unicodedata.category(c) != 'Mn')  
@@ -179,6 +187,12 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    availableInSettingsRing=True,
    displayName=_("Phoneme replacement"),
   ),
+  DriverSetting(
+   "phonemeFallback",
+   _("Default phoneme &fallback"),
+   availableInSettingsRing=True,
+   displayName=_("Default phoneme fallback"),
+  ),
  )
  supportedCommands = {
      IndexCommand,
@@ -193,6 +207,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  supportedNotifications = {synthIndexReached, synthDoneSpeaking}
  _phonemeInventory: PhonemeInventory
  _phonemeReplacements: Dict[str, str]
+ _phonemeFallbackPreference: str
  _lastReplacementSelection: Optional[str]
  _voiceCatalog: VoiceCatalog
  _voiceTemplateId: Optional[str]
@@ -232,6 +247,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  self.variant = "1"
  self._phonemeInventory = load_default_inventory()
  self._phonemeReplacements = {}
+ self._phonemeFallbackPreference = _PHONEME_FALLBACK_DEFAULT
  self._load_stored_phoneme_replacements()
  self._lastReplacementSelection = None
  self._phonemeCategorySelection = None
@@ -343,7 +359,10 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   matches, remainder = inventory.match_ipa_sequence(ipa_text)
   outputs: List[str] = []
   for definition in matches:
-   replacement = definition.get_replacement(self._phonemeReplacements.get(definition.name))
+   replacement = definition.get_replacement(
+    self._phonemeReplacements.get(definition.name),
+    self._current_fallback_order(),
+   )
    if replacement and replacement.output:
     outputs.append(replacement.output)
   if remainder:
@@ -391,6 +410,12 @@ class SynthDriver(synthDriverHandler.SynthDriver):
 
  def _reset_replacement_cursor(self):
   self._lastReplacementSelection = None
+
+ def _current_fallback_order(self) -> Tuple[str, ...]:
+  order = _PHONEME_FALLBACK_POLICIES.get(self._phonemeFallbackPreference)
+  if order is None:
+   order = _PHONEME_FALLBACK_POLICIES.get(_PHONEME_FALLBACK_DEFAULT, ("example", "description", "ipa", "name"))
+  return order
 
  def _get_availableVoiceTemplates(self):
   if self._voiceCatalog.is_empty:
@@ -615,7 +640,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   replacements = definition.replacement_options()
   if not replacements:
    raise UnsupportedConfigParameterError()
-  default_choice = definition.get_replacement(None)
+  default_choice = definition.get_replacement(None, self._current_fallback_order())
   active_choice = self._phonemeReplacements.get(definition.name)
   if active_choice is None and default_choice is not None:
    active_choice = default_choice.id
@@ -645,7 +670,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    definition = self._phonemeInventory.get(phoneme_id)
    if not definition:
     continue
-   default_choice = definition.get_replacement(None)
+   default_choice = definition.get_replacement(None, self._current_fallback_order())
    active_choice = self._phonemeReplacements.get(phoneme_id)
    if active_choice is None and default_choice is not None:
     active_choice = default_choice.id
@@ -675,13 +700,51 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   options = definition.replacement_options()
   if replacement_id not in options:
    raise ValueError(f"Unknown replacement '{replacement_id}' for phoneme '{phoneme_id}'")
-  default_choice = definition.get_replacement(None)
+  default_choice = definition.get_replacement(None, self._current_fallback_order())
   if default_choice is not None and replacement_id == default_choice.id:
    self._phonemeReplacements.pop(phoneme_id, None)
   else:
    self._phonemeReplacements[phoneme_id] = replacement_id
   self._persist_phoneme_replacements()
   self._lastReplacementSelection = value
+
+ def _get_availablePhonemeFallbacks(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  for policy_id in _PHONEME_FALLBACK_POLICIES:
+   if policy_id == "examplesFirst":
+    # Translators: choice describing the default fallback order for phoneme replacements.
+    label = _("Prefer sample words")
+   elif policy_id == "descriptionsFirst":
+    # Translators: choice describing the default fallback order for phoneme replacements.
+    label = _("Prefer descriptions")
+   elif policy_id == "ipaFirst":
+    # Translators: choice describing the default fallback order for phoneme replacements.
+    label = _("Prefer IPA symbols")
+   else:
+    # Translators: choice describing the default fallback order for phoneme replacements.
+    label = _("Prefer engine symbols")
+   options[policy_id] = StringParameterInfo(policy_id, label)
+  return options
+
+ def _get_phonemeFallback(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  if self._phonemeFallbackPreference not in _PHONEME_FALLBACK_POLICIES:
+   self._phonemeFallbackPreference = _PHONEME_FALLBACK_DEFAULT
+  return self._phonemeFallbackPreference
+
+ def _set_phonemeFallback(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  if value not in _PHONEME_FALLBACK_POLICIES:
+   raise ValueError(f"Unknown phoneme fallback policy '{value}'")
+  if value == self._phonemeFallbackPreference:
+   return
+  self._phonemeFallbackPreference = value
+  self._reset_replacement_cursor()
+  self._persist_phoneme_replacements()
 
  def _load_stored_phoneme_replacements(self):
   if self._phonemeInventory.is_empty:
@@ -713,8 +776,13 @@ class SynthDriver(synthDriverHandler.SynthDriver):
     changed = True
     continue
    cleaned[phoneme_id] = replacement_id
+  fallback_policy = synth_section.get("phonemeFallback")
+  if isinstance(fallback_policy, str) and fallback_policy in _PHONEME_FALLBACK_POLICIES:
+   self._phonemeFallbackPreference = fallback_policy
+  elif fallback_policy is not None:
+   changed = True
   self._phonemeReplacements = cleaned
-  if changed or len(cleaned) != len(stored):
+  if changed or len(cleaned) != len(stored) or fallback_policy not in (None, self._phonemeFallbackPreference):
    self._persist_phoneme_replacements()
 
  def _persist_phoneme_replacements(self):
@@ -727,6 +795,10 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    synth_section["phonemeReplacements"] = dict(self._phonemeReplacements)
   else:
    synth_section.pop("phonemeReplacements", None)
+  if self._phonemeFallbackPreference != _PHONEME_FALLBACK_DEFAULT:
+   synth_section["phonemeFallback"] = self._phonemeFallbackPreference
+  else:
+   synth_section.pop("phonemeFallback", None)
 
  def _format_replacement_label(
   self,

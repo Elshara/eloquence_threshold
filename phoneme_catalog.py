@@ -119,10 +119,19 @@ class PhonemeDefinition:
             self._replacement_cache = options
         return self._replacement_cache
 
-    def get_replacement(self, replacement_id: Optional[str]) -> Optional[PhonemeReplacement]:
+    def get_replacement(
+        self,
+        replacement_id: Optional[str],
+        preference_order: Optional[Sequence[str]] = None,
+    ) -> Optional[PhonemeReplacement]:
         options = self.replacement_options()
         if replacement_id and replacement_id in options:
             return options[replacement_id]
+        if preference_order:
+            for kind in preference_order:
+                for option in options.values():
+                    if option.kind == kind:
+                        return option
         return next(iter(options.values()), None)
 
 
