@@ -42,9 +42,9 @@ Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-
 - Contributors can add more templates by editing the JSON file. The metadata documents the expected ranges for each parameter so community voices stay within Eloquence's safe operating window.
 
 ### Share language-aware pronunciation profiles
-- Character-level pronunciation hints now load from `eloquence_data/languages/*.json`. Each profile records IPA transcriptions, spoken mnemonics, stress patterns, and grammatical notes for a particular locale.
+- Character-level pronunciation hints now load from `eloquence_data/languages/*.json`. Each profile records IPA transcriptions, spoken mnemonics, stress patterns, and grammatical notes for a particular locale. We now ship starter sets for English (US/UK), Spanish (Castilian/Latin American), French, German, Italian, and Brazilian Portuguese so users can explore diverse alphabets immediately.
 - The new **Language profile** driver setting lets you follow the active voice template automatically, force a specific profile, or turn the hints off entirely. When NVDA sends IPA fallback commands, Eloquence can announce both the unmatched symbol and the language-specific hint so you understand what the command attempted to say.
-- To contribute a new language or extend an existing one, drop a JSON file in the `eloquence_data/languages` folder. Profiles may list default templates so NVDA automatically activates them when users pick the matching voice.
+- To contribute a new language or extend an existing one, drop a JSON file in the `eloquence_data/languages` folder. Profiles may list default templates so NVDA automatically activates them when users pick the matching voice. Multi-character digraphs such as Italian `gli` or Portuguese `nh` are recognised by the driver, so you can document complex sounds without resorting to single-letter approximations.
 
 ### Supplying 64-bit Eloquence binaries
 - This project cannot redistribute proprietary Eloquence libraries. Extract the 64-bit runtime from a licensed product (for example, an updated Eloquence synthesizer package) and drop the DLLs into `eloquence_x64` before packaging, or copy them directly into `synthDrivers/eloquence/x64` after installing the add-on.
