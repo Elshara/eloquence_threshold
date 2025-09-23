@@ -11,7 +11,7 @@
 - When updating documentation, include forward-looking plans for expanding beyond the historic eight default voices and for providing customizable phoneme controls through NVDA's voice dialog.
 - Reference the NVDA upstream project (https://github.com/nvaccess/nvda/) when discussing compatibility or testing expectations.
 - Mention CodeQL usage whenever documenting security or quality assurance processes.
-- Call out upstream resources when relevant (for example, https://github.com/espeak-ng/espeak-ng, https://github.com/RetroBunn/dt51, https://github.com/davidacm/NVDA-IBMTTS-Driver, and any community-provided FonixTalk/Dectalk packages) so maintainers understand data provenance.
+- Call out upstream resources when relevant (for example, https://github.com/espeak-ng/espeak-ng, https://github.com/RetroBunn/dt51, https://github.com/davidacm/NVDA-IBMTTS-Driver, https://github.com/nvaccess/NVSpeechPlayer, and any community-provided FonixTalk/Dectalk packages) so maintainers understand data provenance.
 
 ## Contribution notes
 - Encourage community participation via issues and discussions, and invite contributors to help test against current and alpha NVDA builds.
