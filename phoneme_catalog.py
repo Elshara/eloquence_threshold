@@ -133,6 +133,7 @@ class PhonemeInventory:
         self._by_name: "OrderedDict[str, PhonemeDefinition]" = OrderedDict()
         self._category_labels: "OrderedDict[str, str]" = OrderedDict()
         self._by_category: Dict[str, List[PhonemeDefinition]] = defaultdict(list)
+        self._category_for_name: Dict[str, str] = {}
         self._ipa_index: Dict[str, PhonemeDefinition] = {}
         for definition in phonemes:
             if definition.name in self._by_name:
@@ -141,6 +142,7 @@ class PhonemeInventory:
             category_label = definition.category or "General"
             category_id = _register_category(self._category_labels, category_label)
             self._by_category[category_id].append(definition)
+            self._category_for_name[definition.name] = category_id
             for ipa_value in definition.ipa:
                 if ipa_value and ipa_value not in self._ipa_index:
                     self._ipa_index[ipa_value] = definition
@@ -159,6 +161,9 @@ class PhonemeInventory:
 
     def get(self, name: str) -> Optional[PhonemeDefinition]:
         return self._by_name.get(name)
+
+    def category_for(self, name: str) -> Optional[str]:
+        return self._category_for_name.get(name)
 
     def match_ipa_sequence(self, ipa_text: str) -> Tuple[List[PhonemeDefinition], str]:
         if not ipa_text:
