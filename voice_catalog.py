@@ -20,6 +20,7 @@ LOG = logging.getLogger(__name__)
 
 _VOICE_DATA_ROOT = os.path.join(os.path.dirname(__file__), "eloquence_data")
 _VOICE_SUBDIR = os.path.join(_VOICE_DATA_ROOT, "voices")
+_ESPEAK_VARIANT_DIR = os.path.join(_VOICE_DATA_ROOT, "espeak_variants")
 
 
 def _iter_voice_data_files() -> Iterator[Tuple[str, str]]:
@@ -123,6 +124,113 @@ class VoiceTemplate:
         return self.parameters.items()
 
 
+@dataclass
+class EspeakVariant:
+    """Lightweight representation of an eSpeak NG variant voice file."""
+
+    id: str
+    path: str
+    name: str
+    languages: Tuple[str, ...]
+    gender: Optional[str]
+    numbers: Dict[str, Tuple[float, ...]]
+    comments: Tuple[str, ...]
+
+
+_VARIANT_PARAMETER_ORDER = (
+    "rate",
+    "pitch",
+    "inflection",
+    "headSize",
+    "roughness",
+    "breathiness",
+    "volume",
+)
+
+_DEFAULT_PARAMETER_RANGE_SPECS: Dict[str, Dict[str, object]] = {
+    "rate": {
+        "label": "Speaking rate",
+        "description": "Base speed in words per minute mapped to Eloquence's internal range.",
+        "min": 40,
+        "max": 150,
+        "default": 100,
+        "step": 1,
+        "tags": ("timing",),
+    },
+    "pitch": {
+        "label": "Pitch",
+        "description": "Primary pitch target controlling overall brightness.",
+        "min": 40,
+        "max": 160,
+        "default": 100,
+        "step": 1,
+        "tags": ("tone",),
+    },
+    "inflection": {
+        "label": "Inflection",
+        "description": "Amount of pitch modulation between syllables.",
+        "min": 0,
+        "max": 100,
+        "default": 50,
+        "step": 1,
+        "tags": ("prosody",),
+    },
+    "headSize": {
+        "label": "Head size",
+        "description": "Formant scaling comparable to vocal tract length.",
+        "min": 70,
+        "max": 160,
+        "default": 100,
+        "step": 1,
+        "tags": ("formant",),
+    },
+    "roughness": {
+        "label": "Roughness",
+        "description": "Noise component balancing rasp versus clarity.",
+        "min": 0,
+        "max": 120,
+        "default": 40,
+        "step": 1,
+        "tags": ("texture",),
+    },
+    "breathiness": {
+        "label": "Breathiness",
+        "description": "Adds aspiration to soften consonants.",
+        "min": 0,
+        "max": 120,
+        "default": 32,
+        "step": 1,
+        "tags": ("texture",),
+    },
+    "volume": {
+        "label": "Volume",
+        "description": "Output gain applied before NVDA's volume scaling.",
+        "min": 50,
+        "max": 100,
+        "default": 80,
+        "step": 1,
+        "tags": ("loudness",),
+    },
+}
+
+_LANGUAGE_PROFILE_MAP = {
+    "en": "en-us-basic",
+    "en-us": "en-us-basic",
+    "en-gb": "en-gb-basic",
+    "es": "es-es-basic",
+    "es-es": "es-es-basic",
+    "es-419": "es-419-basic",
+    "fr": "fr-fr-basic",
+    "fr-fr": "fr-fr-basic",
+    "de": "de-de-basic",
+    "de-de": "de-de-basic",
+    "it": "it-it-basic",
+    "it-it": "it-it-basic",
+    "pt": "pt-br-basic",
+    "pt-br": "pt-br-basic",
+}
+
+
 class VoiceCatalog:
     """Collection of :class:`VoiceTemplate` objects."""
 
@@ -130,8 +238,8 @@ class VoiceCatalog:
         self,
         parameter_ranges: Dict[str, VoiceParameterRange],
         templates: Iterable[VoiceTemplate],
-        default_template_id: Optional[str] = None,
-        metadata: Optional[Dict[str, object]] = None,
+    default_template_id: Optional[str] = None,
+    metadata: Optional[Dict[str, object]] = None,
     ) -> None:
         self._parameter_ranges = dict(parameter_ranges)
         self._templates: "OrderedDict[str, VoiceTemplate]" = OrderedDict()
@@ -209,6 +317,12 @@ def load_default_voice_catalog() -> VoiceCatalog:
             candidate = defaults.get("template")
             if candidate:
                 default_template_id = candidate
+
+    variant_templates, variant_metadata = _load_espeak_variants(parameter_ranges)
+    if variant_templates:
+        templates.extend(variant_templates)
+    if variant_metadata:
+        source_metadata.append(variant_metadata)
 
     if source_metadata:
         metadata["sources"] = source_metadata
@@ -330,3 +444,302 @@ def _parse_templates(
         )
         templates.append(template)
     return templates
+
+
+def _load_espeak_variants(
+    parameter_ranges: Dict[str, VoiceParameterRange]
+) -> Tuple[List[VoiceTemplate], Optional[Dict[str, object]]]:
+    if not os.path.isdir(_ESPEAK_VARIANT_DIR):
+        return [], None
+
+    _ensure_default_parameter_ranges(parameter_ranges)
+
+    templates: List[VoiceTemplate] = []
+    failed = 0
+    for variant_id, path in _iter_espeak_variant_files():
+        variant = _parse_espeak_variant(variant_id, path)
+        if variant is None:
+            failed += 1
+            continue
+        template = _build_template_from_variant(variant, parameter_ranges)
+        if template is None:
+            failed += 1
+            continue
+        templates.append(template)
+
+    metadata: Optional[Dict[str, object]] = None
+    if templates or failed:
+        metadata = {
+            "id": "espeak-variants",
+            "file": os.path.relpath(_ESPEAK_VARIANT_DIR, _VOICE_DATA_ROOT),
+            "count": len(templates),
+            "notes": "Imported from eSpeak NG variant voice definitions",
+        }
+        if failed:
+            metadata["failed"] = failed
+    return templates, metadata
+
+
+def _iter_espeak_variant_files() -> Iterator[Tuple[str, str]]:
+    if not os.path.isdir(_ESPEAK_VARIANT_DIR):
+        return
+    seen: Set[str] = set()
+
+    def register(path: str) -> Optional[Tuple[str, str]]:
+        absolute = os.path.abspath(path)
+        if absolute in seen:
+            return None
+        seen.add(absolute)
+        variant_id = _source_id_from_path(absolute)
+        return variant_id, absolute
+
+    for root, _dirs, files in os.walk(_ESPEAK_VARIANT_DIR):
+        for name in sorted(files):
+            if name.startswith("."):
+                continue
+            path = os.path.join(root, name)
+            if not os.path.isfile(path):
+                continue
+            result = register(path)
+            if result:
+                yield result
+
+
+def _parse_espeak_variant(variant_id: str, path: str) -> Optional[EspeakVariant]:
+    try:
+        with open(path, "r", encoding="utf-8") as source:
+            languages: List[str] = []
+            gender: Optional[str] = None
+            numbers: Dict[str, Tuple[float, ...]] = {}
+            comments: List[str] = []
+            name = variant_id
+            for raw_line in source:
+                stripped = raw_line.strip()
+                if not stripped:
+                    continue
+                if stripped.startswith("//"):
+                    comment = stripped.lstrip("/").strip()
+                    if comment:
+                        comments.append(comment)
+                    continue
+                if stripped.startswith("#") or stripped.startswith(";"):
+                    continue
+                parts = stripped.split()
+                if not parts:
+                    continue
+                key = parts[0].lower()
+                values = parts[1:]
+                if key == "name":
+                    if len(parts) > 1:
+                        name = stripped.split(None, 1)[1].strip()
+                    continue
+                if key == "language":
+                    if values:
+                        token = values[0]
+                        if token.lower() != "variant":
+                            normalized = _normalize_language_tag(token)
+                            if normalized and normalized not in languages:
+                                languages.append(normalized)
+                    continue
+                if key == "gender":
+                    gender_value = " ".join(values).strip()
+                    gender = gender_value or gender
+                    continue
+                numeric_values: List[float] = []
+                convertible = True
+                for value in values:
+                    try:
+                        numeric_values.append(float(value))
+                    except ValueError:
+                        convertible = False
+                        break
+                if convertible and numeric_values:
+                    numbers[key] = tuple(numeric_values)
+            return EspeakVariant(
+                id=variant_id,
+                path=path,
+                name=name or variant_id,
+                languages=tuple(languages),
+                gender=gender,
+                numbers=numbers,
+                comments=tuple(comments),
+            )
+    except OSError:
+        LOG.exception("Unable to read eSpeak variant data from %s", path)
+    return None
+
+
+def _build_template_from_variant(
+    variant: EspeakVariant, parameter_ranges: Dict[str, VoiceParameterRange]
+) -> Optional[VoiceTemplate]:
+    parameters: "OrderedDict[str, int]" = OrderedDict()
+    for name in _VARIANT_PARAMETER_ORDER:
+        range_info = parameter_ranges.get(name)
+        default = range_info.default if range_info else 0
+        parameters[name] = default
+
+    rate_range = parameter_ranges.get("rate")
+    speed = _variant_scalar(variant, "speed")
+    if speed is None:
+        words = variant.numbers.get("words")
+        if words:
+            speed = _variant_mean(words)
+    if speed is not None and rate_range is not None:
+        parameters["rate"] = _map_speed_to_rate(speed, rate_range)
+
+    pitch_values = variant.numbers.get("pitch")
+    pitch_base = pitch_values[0] if pitch_values else None
+    pitch_range = pitch_values[1] if pitch_values and len(pitch_values) > 1 else None
+    pitch_range_info = parameter_ranges.get("pitch")
+    if pitch_base is not None and pitch_range_info is not None:
+        parameters["pitch"] = pitch_range_info.clamp(int(round(pitch_base)))
+
+    inflection_target = _map_pitch_range_to_inflection(
+        pitch_range,
+        _variant_scalar(variant, "intonation"),
+    )
+    inflection_range = parameter_ranges.get("inflection")
+    if inflection_target is not None and inflection_range is not None:
+        parameters["inflection"] = inflection_range.clamp(int(round(inflection_target)))
+
+    consonant_values = variant.numbers.get("consonants")
+    head_range = parameter_ranges.get("headSize")
+    if consonant_values and head_range is not None:
+        parameters["headSize"] = head_range.clamp(int(round(_variant_mean(consonant_values))))
+
+    roughness_value = _variant_scalar(variant, "roughness")
+    rough_range = parameter_ranges.get("roughness")
+    if roughness_value is not None and rough_range is not None:
+        parameters["roughness"] = rough_range.clamp(int(round(roughness_value)))
+
+    breath_values = variant.numbers.get("breath") or variant.numbers.get("breathw")
+    breathiness_range = parameter_ranges.get("breathiness")
+    if breath_values and breathiness_range is not None:
+        parameters["breathiness"] = breathiness_range.clamp(
+            int(round(_variant_mean(breath_values)))
+        )
+    else:
+        breath_scalar = _variant_scalar(variant, "breath")
+        if breath_scalar is not None and breathiness_range is not None:
+            parameters["breathiness"] = breathiness_range.clamp(int(round(breath_scalar)))
+
+    volume_range = parameter_ranges.get("volume")
+    volume_value = _variant_scalar(variant, "volume")
+    if volume_value is None:
+        voicing_value = _variant_scalar(variant, "voicing")
+        if voicing_value is not None:
+            volume_value = 40.0 + 0.5 * voicing_value
+    if volume_value is not None and volume_range is not None:
+        parameters["volume"] = volume_range.clamp(int(round(volume_value)))
+
+    language = next(iter(variant.languages), None)
+    normalized_language = language if language is None else _normalize_language_tag(language)
+
+    tags: List[str] = ["espeak", "variant"]
+    for lang in variant.languages:
+        tags.append(f"lang:{lang.lower()}")
+    if variant.gender:
+        tags.append(variant.gender.lower())
+    unique_tags = tuple(dict.fromkeys(tags))
+
+    return VoiceTemplate(
+        id=f"espeak-variant-{variant.id}",
+        name=variant.name or variant.id,
+        language=normalized_language,
+        description=_variant_description(variant),
+        tags=unique_tags,
+        base_voice=None,
+        variant=None,
+        parameters=parameters,
+        default_language_profile=_guess_language_profile(variant.languages),
+        source_voice=variant.name or variant.id,
+        extras={},
+    )
+
+
+def _variant_description(variant: EspeakVariant) -> str:
+    label = variant.name or variant.id
+    pieces: List[str] = [f"Imported from eSpeak NG variant '{label}'"]
+    if variant.languages:
+        pieces.append("Languages: " + ", ".join(variant.languages))
+    if variant.comments:
+        pieces.append("; ".join(comment for comment in variant.comments if comment))
+    return " – ".join(piece for piece in pieces if piece)
+
+
+def _variant_scalar(variant: EspeakVariant, key: str) -> Optional[float]:
+    values = variant.numbers.get(key)
+    if not values:
+        return None
+    return values[0]
+
+
+def _variant_mean(values: Tuple[float, ...]) -> float:
+    if not values:
+        return 0.0
+    return sum(values) / float(len(values))
+
+
+def _map_speed_to_rate(speed: float, range_info: VoiceParameterRange) -> int:
+    default_speed = 170.0
+    default_rate = range_info.default or 100
+    scale = default_speed / default_rate if default_rate else 1.0
+    if scale <= 0:
+        scale = 1.0
+    return range_info.clamp(int(round(speed / scale)))
+
+
+def _map_pitch_range_to_inflection(
+    pitch_range: Optional[float], intonation: Optional[float]
+) -> Optional[float]:
+    if pitch_range is not None:
+        return pitch_range * 0.6
+    if intonation is not None:
+        return 40.0 + (intonation * 10.0)
+    return None
+
+
+def _ensure_default_parameter_ranges(
+    parameter_ranges: Dict[str, VoiceParameterRange]
+) -> None:
+    for name, spec in _DEFAULT_PARAMETER_RANGE_SPECS.items():
+        if name in parameter_ranges:
+            continue
+        parameter_ranges[name] = VoiceParameterRange(
+            name=name,
+            label=str(spec.get("label", name.title())),
+            minimum=int(spec.get("min", 0)),
+            maximum=int(spec.get("max", 0)),
+            default=int(spec.get("default", 0)),
+            step=int(spec.get("step", 1)),
+            description=str(spec.get("description", "")),
+            tags=tuple(spec.get("tags", ())),
+        )
+
+
+def _normalize_language_tag(tag: str) -> str:
+    parts = tag.replace("_", "-").split("-")
+    normalized: List[str] = []
+    for index, part in enumerate(parts):
+        if not part:
+            continue
+        if index == 0:
+            normalized.append(part.lower())
+        elif len(part) == 2:
+            normalized.append(part.upper())
+        elif len(part) == 4:
+            normalized.append(part.title())
+        else:
+            normalized.append(part.lower())
+    return "-".join(normalized)
+
+
+def _guess_language_profile(languages: Tuple[str, ...]) -> Optional[str]:
+    for language in languages:
+        key = language.lower()
+        if key in _LANGUAGE_PROFILE_MAP:
+            return _LANGUAGE_PROFILE_MAP[key]
+        base = key.split("-", 1)[0]
+        if base in _LANGUAGE_PROFILE_MAP:
+            return _LANGUAGE_PROFILE_MAP[base]
+    return None
