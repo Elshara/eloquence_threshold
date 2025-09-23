@@ -124,6 +124,60 @@ class LanguageProfileCatalog:
     def profiles(self) -> List[LanguageProfile]:
         return list(self._profiles.values())
 
+    def find_best_match(self, language_tag: Optional[str]) -> Optional[LanguageProfile]:
+        """Return the profile that best matches *language_tag*.
+
+        Matching first checks the explicit ``language`` field on each profile using
+        BCP-47 case folding rules. If no exact match exists, profiles sharing the
+        same base language (for example ``es`` matching ``es-ES``) are considered.
+        As a final fallback we inspect profile identifiers and tags, including any
+        ``lang:*`` tags contributors might provide, so custom locales can still be
+        discovered.
+        """
+
+        if not language_tag:
+            return None
+        normalized = normalize_language_tag(language_tag)
+        if not normalized:
+            return None
+        normalized_lower = normalized.lower()
+        base = normalized_lower.split("-", 1)[0]
+
+        specific_match: Optional[LanguageProfile] = None
+        generic_match: Optional[LanguageProfile] = None
+        for profile in self._profiles.values():
+            candidate = normalize_language_tag(profile.language or "")
+            if not candidate:
+                continue
+            candidate_lower = candidate.lower()
+            if candidate_lower == normalized_lower:
+                return profile
+            if base:
+                if candidate_lower.startswith(f"{base}-") and specific_match is None:
+                    specific_match = profile
+                elif candidate_lower == base and generic_match is None:
+                    generic_match = profile
+        if specific_match:
+            return specific_match
+        if generic_match:
+            return generic_match
+
+        targets = {normalized_lower}
+        if base:
+            targets.add(base)
+        for profile in self._profiles.values():
+            tokens = {profile.id.lower()}
+            if profile.language:
+                tokens.add(normalize_language_tag(profile.language).lower())
+            for tag in profile.tags:
+                token = str(tag).strip().lower()
+                tokens.add(token)
+                if token.startswith("lang:"):
+                    tokens.add(token.split(":", 1)[1])
+            if targets & tokens:
+                return profile
+        return None
+
 
 def load_default_language_profiles() -> LanguageProfileCatalog:
     if not os.path.isdir(_DATA_DIR):
@@ -215,3 +269,24 @@ def _tuple_from_field(field: object) -> Tuple[str, ...]:
     if isinstance(field, (list, tuple)):
         return tuple(str(item) for item in field if str(item))
     return ()
+
+
+def normalize_language_tag(language_tag: str) -> str:
+    """Normalise a BCP-47 language tag for comparisons."""
+
+    if not language_tag:
+        return ""
+    parts = language_tag.replace("_", "-").split("-")
+    normalised: List[str] = []
+    for index, part in enumerate(parts):
+        if not part:
+            continue
+        if index == 0:
+            normalised.append(part.lower())
+        elif len(part) == 2:
+            normalised.append(part.upper())
+        elif len(part) == 4:
+            normalised.append(part.title())
+        else:
+            normalised.append(part.lower())
+    return "-".join(normalised)

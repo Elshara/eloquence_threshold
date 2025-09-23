@@ -214,6 +214,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  _languageProfiles: LanguageProfileCatalog
  _languageProfileSelection: str
  _activeLanguageProfileId: Optional[str]
+ _languageProfileOverrideId: Optional[str]
  _lastVoiceTemplateSelection: Optional[str]
  _phonemeCategorySelection: Optional[str]
  _phonemeSelection: Optional[str]
@@ -260,6 +261,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  self._languageProfiles = load_default_language_profiles()
  self._languageProfileSelection = _LANGUAGE_PROFILE_AUTO
  self._activeLanguageProfileId = None
+ self._languageProfileOverrideId = None
  self._refresh_language_profile()
 
  def speak(self, speechSequence):
@@ -273,6 +275,9 @@ class SynthDriver(synthDriverHandler.SynthDriver):
     last = s
    elif isinstance(item, IndexCommand):
     outlist.append((_eloquence.index, (item.index,)))
+   elif isinstance(item, LangChangeCommand):
+    self._handle_lang_change(getattr(item, "lang", None))
+    continue
    elif isinstance(item, BreakCommand):
     # Eloquence doesn't respect delay time in milliseconds.
     # Therefor we need to adjust waiting time depending on current speech rate.
@@ -593,45 +598,68 @@ class SynthDriver(synthDriverHandler.SynthDriver):
     continue
    self._phonemeReplacements[phoneme_id] = replacement_id
    changed = True
-  if changed:
-   self._persist_phoneme_replacements()
-   self._reset_replacement_cursor()
+ if changed:
+  self._persist_phoneme_replacements()
+  self._reset_replacement_cursor()
 
- def _default_profile_for_template(self, template: Optional[VoiceTemplate]) -> Optional[str]:
-  if template is None:
-   return None
-  candidate = template.default_language_profile
-  if candidate and self._languageProfiles.get(candidate):
-   return candidate
-  for profile in self._languageProfiles:
-   if template.id in profile.default_voice_templates:
-    return profile.id
+def _default_profile_for_template(self, template: Optional[VoiceTemplate]) -> Optional[str]:
+ if template is None:
   return None
+ candidate = template.default_language_profile
+ if candidate and self._languageProfiles.get(candidate):
+  return candidate
+ for profile in self._languageProfiles:
+  if template.id in profile.default_voice_templates:
+   return profile.id
+ return None
 
- def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
-  if self._languageProfiles.is_empty:
-   self._activeLanguageProfileId = None
-   return
-  if template is None and self._voiceTemplateId:
-   template = self._voiceCatalog.get(self._voiceTemplateId)
-  if self._languageProfileSelection == _LANGUAGE_PROFILE_DISABLED:
-   self._activeLanguageProfileId = None
+def _handle_lang_change(self, language_code: Optional[str]) -> None:
+ if self._languageProfiles.is_empty:
+  return
+ new_override: Optional[str] = None
+ if language_code:
+  profile = self._languageProfiles.find_best_match(language_code)
+  if profile:
+   new_override = profile.id
+ if new_override == self._languageProfileOverrideId:
+  return
+ self._languageProfileOverrideId = new_override
+ self._refresh_language_profile()
+
+def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
+ if self._languageProfiles.is_empty:
+  self._activeLanguageProfileId = None
+  return
+ if template is None and self._voiceTemplateId:
+  template = self._voiceCatalog.get(self._voiceTemplateId)
+ if self._languageProfileSelection == _LANGUAGE_PROFILE_DISABLED:
+  self._activeLanguageProfileId = None
+  return
+ if self._languageProfileOverrideId and self._languageProfileSelection in (
+  _LANGUAGE_PROFILE_AUTO,
+  self._languageProfileOverrideId,
+ ):
+  override_profile = self._languageProfiles.get(self._languageProfileOverrideId)
+  if override_profile:
+   self._activeLanguageProfileId = override_profile.id
    return
   if self._languageProfileSelection == _LANGUAGE_PROFILE_AUTO:
-   profile_id = self._default_profile_for_template(template)
-   if profile_id is None and template is None:
-    # fall back to the catalogue default if nothing is selected
-    default_template = self._voiceCatalog.default_template()
-    profile_id = self._default_profile_for_template(default_template)
-   if profile_id and self._languageProfiles.get(profile_id):
-    self._activeLanguageProfileId = profile_id
-   else:
-    self._activeLanguageProfileId = None
-   return
-  if self._languageProfiles.get(self._languageProfileSelection):
-   self._activeLanguageProfileId = self._languageProfileSelection
+   self._languageProfileOverrideId = None
+ if self._languageProfileSelection == _LANGUAGE_PROFILE_AUTO:
+  profile_id = self._default_profile_for_template(template)
+  if profile_id is None and template is None:
+   # fall back to the catalogue default if nothing is selected
+   default_template = self._voiceCatalog.default_template()
+   profile_id = self._default_profile_for_template(default_template)
+  if profile_id and self._languageProfiles.get(profile_id):
+   self._activeLanguageProfileId = profile_id
   else:
    self._activeLanguageProfileId = None
+  return
+ if self._languageProfiles.get(self._languageProfileSelection):
+  self._activeLanguageProfileId = self._languageProfileSelection
+ else:
+  self._activeLanguageProfileId = None
 
  def _active_language_profile(self) -> Optional[LanguageProfile]:
   return self._languageProfiles.get(self._activeLanguageProfileId)
