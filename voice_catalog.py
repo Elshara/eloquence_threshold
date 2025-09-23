@@ -1,10 +1,10 @@
-"""Voice template catalogue backed by eSpeak NG metadata.
+"""Voice template catalogue backed by community metadata.
 
-This module provides a structured view of community maintained voice
-definitions that help Eloquence mimic some of eSpeak NG's tone and
-language coverage.  Templates map high level descriptors (language,
-variant, gender) to concrete Eloquence parameters so users can build new
-voices directly from NVDA's settings dialog.
+This module provides a structured view of voice definitions that help Eloquence
+mimic eSpeak NG, DECtalk/FonixTalk, and related Klatt synthesizer presets.
+Templates map high level descriptors (language, variant, gender, provenance) to
+concrete Eloquence parameters so users can build new voices directly from
+NVDA's settings dialog.
 """
 from __future__ import annotations
 
@@ -17,7 +17,10 @@ from typing import Dict, Iterable, Iterator, List, Optional, Tuple
 
 LOG = logging.getLogger(__name__)
 
-_DATA_FILE = os.path.join(os.path.dirname(__file__), "eloquence_data", "espeak_voices.json")
+_DATA_FILES = (
+    ("espeak", os.path.join(os.path.dirname(__file__), "eloquence_data", "espeak_voices.json")),
+    ("dectalk", os.path.join(os.path.dirname(__file__), "eloquence_data", "dectalk_voices.json")),
+)
 
 
 @dataclass(frozen=True)
@@ -120,21 +123,64 @@ class VoiceCatalog:
 def load_default_voice_catalog() -> VoiceCatalog:
     """Load the bundled voice catalogue shipping with the add-on."""
 
-    if not os.path.exists(_DATA_FILE):
-        LOG.info("No voice catalogue found at %s", _DATA_FILE)
+    payloads = []
+    for source_id, path in _DATA_FILES:
+        payload = _load_voice_payload(path)
+        if payload is None:
+            continue
+        payloads.append((source_id, path, payload))
+    if not payloads:
+        LOG.info("No voice catalogue data found in %s", [path for _, path in _DATA_FILES])
         return VoiceCatalog({}, [])
+
+    parameter_ranges: Dict[str, VoiceParameterRange] = {}
+    templates: List[VoiceTemplate] = []
+    metadata: Dict[str, object] = {}
+    source_metadata: List[Dict[str, object]] = []
+    default_template_id: Optional[str] = None
+
+    for source_id, path, payload in payloads:
+        ranges = _parse_parameter_ranges(payload.get("parameters", {}))
+        for name, range_info in ranges.items():
+            parameter_ranges.setdefault(name, range_info)
+        combined_ranges = dict(parameter_ranges)
+        combined_ranges.update(ranges)
+        templates.extend(_parse_templates(payload.get("templates", []), combined_ranges))
+
+        meta_entry: Dict[str, object] = {}
+        raw_metadata = payload.get("metadata")
+        if isinstance(raw_metadata, dict):
+            meta_entry.update(raw_metadata)
+        meta_entry.setdefault("id", source_id)
+        meta_entry.setdefault("file", os.path.basename(path))
+        source_metadata.append(meta_entry)
+
+        defaults = payload.get("defaults", {}) or {}
+        if default_template_id is None and isinstance(defaults, dict):
+            candidate = defaults.get("template")
+            if candidate:
+                default_template_id = candidate
+
+    if source_metadata:
+        metadata["sources"] = source_metadata
+
+    return VoiceCatalog(parameter_ranges, templates, default_template_id, metadata=metadata)
+
+
+def _load_voice_payload(path: str) -> Optional[Dict[str, object]]:
+    if not os.path.exists(path):
+        LOG.debug("Voice catalogue file not found: %s", path)
+        return None
     try:
-        with open(_DATA_FILE, "r", encoding="utf-8") as source:
+        with open(path, "r", encoding="utf-8") as source:
             payload = json.load(source)
     except (OSError, json.JSONDecodeError):
-        LOG.exception("Unable to read eSpeak voice data from %s", _DATA_FILE)
-        return VoiceCatalog({}, [])
-    parameter_ranges = _parse_parameter_ranges(payload.get("parameters", {}))
-    templates = _parse_templates(payload.get("templates", []), parameter_ranges)
-    defaults = payload.get("defaults", {}) or {}
-    metadata = payload.get("metadata", {}) or {}
-    default_template_id = defaults.get("template")
-    return VoiceCatalog(parameter_ranges, templates, default_template_id, metadata=metadata)
+        LOG.exception("Unable to read voice data from %s", path)
+        return None
+    if not isinstance(payload, dict):
+        LOG.warning("Voice catalogue payload in %s is not an object", path)
+        return None
+    return payload
 
 
 def _parse_parameter_ranges(raw: Dict[str, object]) -> Dict[str, VoiceParameterRange]:
