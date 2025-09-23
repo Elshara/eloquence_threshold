@@ -27,6 +27,7 @@ Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-
 - Use the new **Phoneme category** and **Phoneme symbol** settings in NVDA's voice dialog to focus on a single phoneme at a time. Categories mirror the groupings defined by eSpeak NG, and each symbol entry announces the phoneme name alongside its descriptive comment so you can explore the inventory from the keyboard.
 - Once a symbol is selected, the **Phoneme replacement** option lists the available fallbacks—example words, descriptive labels, IPA symbols, or the raw engine token. Choose a combination with arrow keys and NVDA will announce whether it is the **current** or **default** mapping.
 - Activating a different replacement immediately updates Eloquence's response when NVDA emits `PhonemeCommand` sequences, so you can tailor pronunciation on the fly without leaving the dialog. Custom choices are stored per phoneme, letting you review or reset mappings at any time.
+- NVDA stores those custom mappings inside its `nvda.ini` configuration (`speech/eloquence/phonemeReplacements`), ensuring your language tweaks persist across sessions. Delete that block if you want to revert every phoneme to the bundled defaults in one go.
 - If you ever want to refresh the underlying catalogue with a newer upstream snapshot, replace the bundled file before rebuilding the add-on.
 
 ### Build bespoke voices with eSpeak templates
