@@ -4,7 +4,8 @@
     "generated": "2025-01-12",
     "notes": [
       "Parameter sets derived from listening tests against the DataJake SAPI voice archives (eloq61.exe, IBM-ViaVoice_TTS-SAPI4.zip, SAPI5_IBMTTS.zip).",
-      "Templates aim to reproduce the smoother Studio variants and brighter ViaVoice timbres inside Eloquence's runtime so users can jump between NVDA and SAPI baselines."
+      "Templates aim to reproduce the smoother Studio variants and brighter ViaVoice timbres inside Eloquence's runtime so users can jump between NVDA and SAPI baselines.",
+      "Includes a capture of Code Factory's Eloquence for Windows SAPI 5 package so users can compare its voicing against the DataJake mirrors."
     ]
   },
   "templates": [
@@ -106,6 +107,40 @@
           "A": "example",
           "N": "description",
           "tS": "ipa"
+        }
+      }
+    },
+    {
+      "id": "eloquence-sapi5-codefactory-balanced",
+      "name": "Eloquence for Windows Balanced (Code Factory)",
+      "language": "en-US",
+      "description": "Code Factory's SAPI 5 port tuned for a smoother Studio timbre with additional sparkle",
+      "tags": ["eloquence", "codefactory", "sapi5", "english"],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "EloquenceForWindows-Setup/Eloquence",
+      "parameters": {
+        "rate": 116,
+        "pitch": 132,
+        "inflection": 60,
+        "headSize": 120,
+        "roughness": 20,
+        "breathiness": 24,
+        "volume": 98
+      },
+      "extras": {
+        "sourceArchive": "https://www.codefactoryglobal.com/downloads/installers/EloquenceForWindows-Setup.exe",
+        "settings": {
+          "phrasePrediction": true,
+          "abbreviationDictionary": true
+        },
+        "phonemeFallback": "examplesFirst",
+        "phonemeReplacements": {
+          "@": "ipa",
+          "3": "description",
+          "dZ": "example",
+          "Z": "ipa"
         }
       }
     }
