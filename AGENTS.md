@@ -34,5 +34,6 @@
 - Whenever you introduce cross-platform guidance (for example, NVDA, Orca, Narrator, VoiceOver, TalkBack, ChromeVox), specify the packaging format, build prerequisites, and how the shared Eloquence data should flow between platforms so future maintainers can publish coordinated releases.
 - Plan for expanded voice parameter sliders: note open questions about mapping additional Eloquence controls into NVDA's dialog and capture any prototype work so it can be resumed quickly.
 - Track the pending automation task to crawl archives like DataJake. The repository needs a script that inventories directories, unpacks archives, and emits JSON/Markdown manifests describing available speech assets—update this file when progress is made so developers know the state of the effort.
+- When running the new archive inventory helper (`python tools/inventory_archives.py --roots <paths> --json docs/archive_inventory.json --markdown docs/archive_inventory.md`), refresh both artefacts and summarise notable payload changes in accompanying documentation so automated checks remain trustworthy.
 
 These guidelines apply to the entire repository.
