@@ -16,6 +16,23 @@ We actively follow the [NVDA source repository](https://github.com/nvaccess/nvda
 
 Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-bit Eloquence runtime. The driver automatically discovers architecture-specific DLLs (for example, `eloquence/x64/eci.dll`) and falls back to the classic 32-bit build when appropriate. If a compatible library is missing the driver logs a clear error instead of silently failing.
 
+### Mapping the NV Access download archive for automation
+To keep Eloquence Threshold validated against every public NVDA milestone we catalogue the layout of [download.nvaccess.org](https://download.nvaccess.org/). Automation scripts can crawl these predictable folders to fetch installers, portable builds, SDKs, and documentation without hand-editing URLs each time NVDA publishes a release:
+
+- **`releases/`** – Versioned directories such as `2025.3/` hold official builds. Inside each folder you will find:
+  - `nvda_<version>.exe` for the interactive installer and `nvda_<version>_portable.zip` for the portable distribution that testers can unzip inside CI jobs.
+  - `nvda_<version>_source.zip` for the full Python source tree and `nvda_<version>_symbols.zip` for debugging symbols. Our pipeline references these archives when regenerating stubs or verifying API shims.
+  - `nvda_<version>_controllerClient.zip` plus the `documentation/` subfolder, which fan out into language-specific manuals (for example, `documentation/en/`, `documentation/pt_BR/`). These are useful when confirming UI wording that our README mirrors or when aligning localisation terminology across phoneme profiles.
+  - Symlinks such as `releases/stable/` and `releases/beta/` always point at the current stable or beta directory; monitor their timestamps to learn when NVDA promotes a build.
+- **`snapshots/`** – Contains rolling builds for development branches. Use these to stress-test upcoming changes without waiting for a public beta:
+  - `snapshots/alpha/` exposes executable installers named `nvda_snapshot_alpha-<build>,<changeset>.exe`. We reference the same naming convention in commit messages and README compatibility tables so testers can correlate crash dumps with upstream revisions.
+  - `snapshots/beta/` and `snapshots/try/` follow the same pattern for release candidates and pull-request validation builds.
+  - Snapshot files occasionally appear as `0.0 B` during mirroring; retry your download logic until a non-zero size is observed before running automated smoke tests.
+- **`symbols/`** – Hosts compressed PDB symbol bundles per release. When diagnosing crashes on Windows, point WinDbg or Visual Studio at this path so stack traces resolve correctly; it matches the metadata referenced in our `build.py` packaging notes.
+- **`documentation/` (symlink)** – Mirrors `releases/stable/documentation` so direct links to manuals remain valid even after a new release ships. Link-checkers in this repository reference the symlink to avoid manual updates when the stable pointer changes.
+
+Because the hierarchy is deterministic, you can parametrize CI jobs to pull the latest installer (`releases/stable/nvda_<tag>.exe`) or the newest alpha build (`snapshots/alpha/nvda_snapshot_alpha-*.exe`) before launching our automated synthesis smoke tests. Recording these locations here keeps the workflow self-documenting and saves future contributors from tracing the index every time NVDA updates its infrastructure.
+
 ## Getting started
 1. Download the latest packaged add-on from the [releases page](https://github.com/pumper42nickel/eloquence_threshold/releases/latest/download/eloquence.nvda-addon), or clone this repository to build locally.
 2. If you are building your own package, gather the proprietary Eloquence binaries: place the classic 32-bit runtime (for example `ECI.DLL` and the `.syn` voice data) inside an `eloquence/` directory, and optionally add a 64-bit runtime under `eloquence_x64/`. You can also reuse an earlier add-on as a template by dropping it next to the build script as `eloquence_original.nvda-addon` or by passing `--template /path/to/addon.nvda-addon` when building.
