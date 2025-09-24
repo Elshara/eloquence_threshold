@@ -85,6 +85,11 @@ Because the hierarchy is deterministic, you can parametrise CI jobs to pull the 
 - The JSON output powers future automation: CI can watch for regressions in the number of phonemes, check that every profile retains at least one linked template, and flag when slider ranges change so we can bump release notes before packaging the add-on.
 - Treat this report as the high-level map for “Eloquence Reloaded.” It shows how far the unified Eloquence/eSpeak/DECtalk/IBM catalogue has progressed towards full multilingual parity and keeps contributions aligned with NVDA’s keyboard-driven customization experience.
 
+#### Voice parameter coverage snapshots
+- Run `python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print` whenever you add or tune voice templates, adjust parameter ranges, or import fresh eSpeak/DECtalk/NV Speech Player presets. The helper consolidates slider metadata, confirms that every template exposes the expected parameters, and records which locales the presets target so NVDA’s Speech dialog always surfaces a complete keyboard-driven experience.
+- The Markdown output summarises the allowed range, default, and description for every slider we surface in Eloquence, then lists each template with its recommended parameter values, heritage tags, and extras. Treat the document as a quick reference when comparing how legacy ports (SAPI 4/5, FonixTalk, Code Factory, etc.) map their timbres into the modern add-on.
+- The JSON payload mirrors the Markdown structure so CodeQL jobs or future automation can diff template additions, watch for accidental parameter removals, and highlight locales that still need bespoke presets before we package cross-platform releases.
+
 #### NVDA compatibility scorecard
 | Channel | Build identifier | Download URL | Severity | Recommended action |
 | --- | --- | --- | --- | --- |
