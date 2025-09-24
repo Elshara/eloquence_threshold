@@ -57,6 +57,42 @@ Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-
 - Segments flagged with language metadata in documents (for example, HTML `lang` attributes) trigger NVDA’s `LangChangeCommand`. When your Speech settings follow the template or match the requested profile, Eloquence now switches to the best language profile automatically so pronunciation hints align with the author’s locale choices.
 - To contribute a new language or extend an existing one, drop a JSON file in the `eloquence_data/languages` folder. Profiles may list default templates so NVDA automatically activates them when users pick the matching voice. Multi-character digraphs such as Italian `gli` or Portuguese `nh` are recognised by the driver, so you can document complex sounds without resorting to single-letter approximations.
 
+### Multilingual coverage snapshot
+- Linguists estimate that more than 7,000 languages are in active use worldwide, and the number continues to evolve as dialects are documented or revitalised. Our long-term plan is to make Eloquence capable of speaking every script and symbol by piggybacking on community data.
+- [eSpeak NG](https://github.com/espeak-ng/espeak-ng) already publishes phoneme inventories and voice rules for over 100 languages and variants, giving us a solid foundation for rapid expansion. As we import these datasets we track the maturity of each locale across phoneme coverage, language profiles, and keyboard-driven voice controls.
+
+| Locale / Dialect | Phoneme dataset status | Language profile status | Voice template status | Keyboard customisation | Notes |
+| --- | --- | --- | --- | --- | --- |
+| English (US) | Bundled – eSpeak NG, NV Speech Player, heritage DECtalk mappings | Bundled – `english_us_basic.json` + `english_us_heritage.json` | Bundled – heritage, SAPI, and NV Speech Player templates | Full phoneme picker and slider controls | Serves as baseline for cross-engine comparisons |
+| English (GB) | Bundled – eSpeak NG phoneme set | Bundled – `english_gb_basic.json` | Shares US/heritage templates until native captures arrive | Full phoneme picker and slider controls | Queueing region-specific heritage templates |
+| Spanish (Castilian) | Bundled – eSpeak NG | Bundled – `spanish_castilian_basic.json` | Bundled – NV Speech Player inspired presets | Full phoneme picker and slider controls | Expanding digraph coverage for regional variants |
+| Spanish (Latin American) | Bundled – eSpeak NG | Bundled – `spanish_latam_basic.json` | Bundled – NV Speech Player inspired presets | Full phoneme picker and slider controls | Targeting Mexican and Caribbean voicing nuances |
+| French (France) | Bundled – eSpeak NG | Bundled – `french_fr_basic.json` | Bundled – eSpeak variant templates | Full phoneme picker and slider controls | Planning nasal-vowel refinement passes |
+| German | Bundled – eSpeak NG | Bundled – `german_basic.json` | Bundled – eSpeak variant templates | Full phoneme picker and slider controls | Evaluating legacy DECtalk “Ursula” style formants |
+| Italian | Bundled – eSpeak NG | Bundled – `italian_basic.json` | Bundled – eSpeak variant templates | Full phoneme picker and slider controls | Adding heritage dictionary sources for comparison |
+| Portuguese (Brazil) | Bundled – eSpeak NG | Bundled – `portuguese_br_basic.json` | Bundled – eSpeak variant templates | Full phoneme picker and slider controls | Planning European Portuguese follow-up |
+| Future locales (all other eSpeak NG voices) | Planned – staged imports via `tools/refresh_espeak_phonemes.py` | Planned – contributors invited to seed `eloquence_data/languages/*.json` | Planned – automatic template generation from `.voice` files | Controls automatically available once data lands | Prioritise high-demand locales (e.g., Hindi, Arabic, Mandarin, Russian) |
+| Symbols, emoji, technical scripts | Bundled – raw Unicode passthrough; curated IPA fallbacks queued | Planned – per-script pronunciation tables | Planned – synthetic template packs for specialised domains | Phoneme picker already handles custom replacements | Encourage domain experts to contribute script- or context-specific datasets |
+
+We tag each locale with the most advanced assets we have shipped so far. When you contribute a new language, please:
+
+1. Import or reference the eSpeak NG phoneme block (or another public dataset) inside `eloquence_data/phonemes/`.
+2. Create a language profile file under `eloquence_data/languages/` that documents characters, digraphs, stress behaviour, and grammatical notes.
+3. Supply at least one voice template—either handcrafted JSON or an auto-converted `.voice` file—so NVDA users can hear the locale immediately.
+4. Outline any remaining gaps (for example, “needs tone marks” or “emoji coverage pending”) so we can keep the roadmap transparent.
+
+Short-term expansion priorities include Hindi, Arabic, Mandarin Chinese, Russian, Japanese, Korean, and the major Indic languages highlighted by Hear2Read. These locales already have mature eSpeak NG voices and large user communities eager for low-latency synthesizers.
+
+### Toward universal script and symbol coverage
+Pronunciation dictionaries alone cannot keep up with the creative ways people mix alphabets, emoji, ASCII art, mathematical notation, or braille patterns in everyday text. Eloquence Threshold therefore centres on a **phoneme, sound, and symbol customiser** that you can drive entirely from NVDA's Speech dialog:
+
+- Every phoneme exposed by Eloquence, DECtalk, or eSpeak NG can be reassigned to words, IPA samples, or raw engine tokens, and those overrides are stored per user so the same keyboard shortcuts work across all contexts.
+- Character-level language profiles describe how scripts sound—covering letters, digraphs, punctuation, and grammatical cues—so future dictionary imports can map text passages (sentences, paragraphs, essays, or book formats) directly onto phoneme sequences.
+- Contributors are encouraged to add corpora-specific dictionaries (for example, math textbooks, programming languages, or lyrical content) as structured JSON so the driver can swap context-aware hints without breaking the underlying phoneme sliders.
+- Because NVDA already passes through arbitrary Unicode code points, you can build replacement tables for historical scripts, emoji ZWJ sequences, or mixed-language hashtags. Share these assets in the repository so others can benefit without waiting for upstream dictionary updates.
+
+Our aim is that any character in the Unicode standard—and any combination that writers invent—can be spoken accurately by selecting the right language profile, tweaking phoneme replacements, or loading a specialised voice template. As we fold in more eSpeak NG, DECtalk, and community archives, we will continue publishing coverage snapshots and inviting specialists to fill the remaining gaps.
+
 ### Preparing DECtalk and IBM TTS assets
 - We are actively researching how to bundle DECtalk 5.1 (see [RetroBunn/dt51](https://github.com/RetroBunn/dt51)) alongside Eloquence. Community FonixTalk packages such as `FonixTalk.nvda-addon` provide compatible voice files; place extracted `.dic` and `.ph` assets under `synthDrivers/dectalk` to experiment.
 - The [NVDA-IBMTTS-Driver](https://github.com/davidacm/NVDA-IBMTTS-Driver) demonstrates how IBM TTS integrates with NVDA. We plan to reuse its 64-bit shims and data layout when we incorporate additional Klatt voices.

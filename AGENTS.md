@@ -12,6 +12,8 @@
 - Reference the NVDA upstream project (https://github.com/nvaccess/nvda/) when discussing compatibility or testing expectations.
 - Mention CodeQL usage whenever documenting security or quality assurance processes.
 - Call out upstream resources when relevant (for example, https://github.com/espeak-ng/espeak-ng, https://github.com/RetroBunn/dt51, https://github.com/davidacm/NVDA-IBMTTS-Driver, https://github.com/nvaccess/NVSpeechPlayer, and any community-provided FonixTalk/Dectalk packages) so maintainers understand data provenance.
+- Track multilingual ambitions explicitly: whenever you touch README or supporting docs, include a snapshot of current language coverage, what stages (phoneme data, language profiles, voice templates, and keyboard-driven customization) each locale has reached, and clearly state expansion priorities.
+- Reinforce that the long-term goal is universal script coverage—explain how phoneme, sound, and symbol customization helps the synthesizer speak any code point, and outline how contributors can import new text corpora or pronunciation data to fill gaps.
 
 ## Contribution notes
 - Encourage community participation via issues and discussions, and invite contributors to help test against current and alpha NVDA builds.
@@ -19,5 +21,6 @@
 - Prefer extensible data formats (JSON, structured text) that let people contribute additional voices, phonemes, or runtime assets without editing core Python unless necessary.
 - Ensure new features keep keyboard-centric workflows in mind so users can customise every phoneme combination directly from NVDA's dialogs.
 - Remember to resolve merge conflicts with awareness of any cached datasets or external archives that collaborators might rely on.
+- When adding language data or phoneme assets, describe the provenance, enumerate dialects/variants included, and document how users can further customise pronunciations beyond legacy dictionary files.
 
 These guidelines apply to the entire repository.
