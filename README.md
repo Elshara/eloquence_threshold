@@ -76,6 +76,8 @@ Because the hierarchy is deterministic, you can parametrise CI jobs to pull the 
 - Run `python tools/report_catalog_status.py --json docs/catalog_status.json --markdown docs/catalog_status.md` after touching phoneme inventories, language profiles, or voice templates. The helper loads the bundled catalogues, verifies that every voice template references a valid language profile, and confirms that profiles point at existing templates.
 - The generated Markdown digest summarises phoneme categories, locale coverage, and the templates exposed through NVDA's Speech dialog. Keep the `docs/catalog_status.md` snapshot in sync so contributors can quickly scan which languages already have keyboard-tunable voices and where new eSpeak NG, DECtalk, or NV Speech Player data is still required.
 - The helper exits with a non-zero status when it detects missing references, making it suitable for automated checks or future CodeQL workflows that validate our multilingual roadmap against the latest NVDA alphas.
+- Follow up with `python tools/validate_language_pronunciations.py --json docs/language_pronunciation_validation.json --markdown docs/language_pronunciation_validation.md` whenever you merge new language datasets. The validator cross-references every character's IPA sequence against the phoneme catalogue, highlighting unmatched fragments so eSpeak NG, DECtalk, NV Speech Player, and forthcoming datasets stay aligned.
+- Commit the Markdown/JSON outputs to document pronunciation coverage by locale and give future CodeQL or CI jobs a machine-readable way to block regressions as we expand into additional scripts.
 
 #### NVDA compatibility scorecard
 | Channel | Build identifier | Download URL | Severity | Recommended action |
