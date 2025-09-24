@@ -100,6 +100,18 @@
         "espeak-fr-velvet"
       ]
     },
+    "hi-IN": {
+      "count": 1,
+      "tags": [
+        "espeak",
+        "hindi",
+        "indic",
+        "lang:hi"
+      ],
+      "templates": [
+        "espeak-hi-dynamic"
+      ]
+    },
     "it-IT": {
       "count": 1,
       "tags": [
@@ -107,6 +119,18 @@
       ],
       "templates": [
         "espeak-it-expressive"
+      ]
+    },
+    "ja-JP": {
+      "count": 1,
+      "tags": [
+        "asia",
+        "espeak",
+        "japanese",
+        "lang:ja"
+      ],
+      "templates": [
+        "espeak-ja-melodic"
       ]
     },
     "pt-BR": {
@@ -188,9 +212,9 @@
         }
       ]
     },
-    "generated": "2025-09-24T20:03:03Z",
-    "languageCount": 9,
-    "templateCount": 26
+    "generated": "2025-09-24T23:51:12Z",
+    "languageCount": 11,
+    "templateCount": 28
   },
   "parameterRanges": {
     "breathiness": {
@@ -202,6 +226,17 @@
       "step": 1,
       "tags": [
         "texture"
+      ]
+    },
+    "gender": {
+      "default": 0,
+      "description": "0 = masculine tract target, 1 = feminine tract target.",
+      "label": "Gender resonance",
+      "maximum": 1,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "timbre"
       ]
     },
     "headSize": {
@@ -273,7 +308,7 @@
   },
   "parameterUsage": {
     "breathiness": {
-      "templateCount": 26,
+      "templateCount": 28,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -293,7 +328,38 @@
         "espeak-es-castilian",
         "espeak-es-latin",
         "espeak-fr-velvet",
+        "espeak-hi-dynamic",
         "espeak-it-expressive",
+        "espeak-ja-melodic",
+        "espeak-pt-br-vibrant",
+        "espeak-variant-espeak-variants-alex",
+        "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "gender": {
+      "templateCount": 24,
+      "templates": [
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi5-codefactory-balanced",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-window-eyes-expressive",
+        "espeak-de-precision",
+        "espeak-en-gb-clarity",
+        "espeak-en-us-bright",
+        "espeak-es-castilian",
+        "espeak-es-latin",
+        "espeak-fr-velvet",
+        "espeak-hi-dynamic",
+        "espeak-it-expressive",
+        "espeak-ja-melodic",
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
@@ -304,7 +370,7 @@
       ]
     },
     "headSize": {
-      "templateCount": 26,
+      "templateCount": 28,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -324,7 +390,9 @@
         "espeak-es-castilian",
         "espeak-es-latin",
         "espeak-fr-velvet",
+        "espeak-hi-dynamic",
         "espeak-it-expressive",
+        "espeak-ja-melodic",
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
@@ -335,7 +403,7 @@
       ]
     },
     "inflection": {
-      "templateCount": 26,
+      "templateCount": 28,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -355,7 +423,9 @@
         "espeak-es-castilian",
         "espeak-es-latin",
         "espeak-fr-velvet",
+        "espeak-hi-dynamic",
         "espeak-it-expressive",
+        "espeak-ja-melodic",
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
@@ -366,7 +436,7 @@
       ]
     },
     "pitch": {
-      "templateCount": 26,
+      "templateCount": 28,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -386,7 +456,9 @@
         "espeak-es-castilian",
         "espeak-es-latin",
         "espeak-fr-velvet",
+        "espeak-hi-dynamic",
         "espeak-it-expressive",
+        "espeak-ja-melodic",
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
@@ -397,7 +469,7 @@
       ]
     },
     "rate": {
-      "templateCount": 26,
+      "templateCount": 28,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -417,7 +489,9 @@
         "espeak-es-castilian",
         "espeak-es-latin",
         "espeak-fr-velvet",
+        "espeak-hi-dynamic",
         "espeak-it-expressive",
+        "espeak-ja-melodic",
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
@@ -428,7 +502,7 @@
       ]
     },
     "roughness": {
-      "templateCount": 26,
+      "templateCount": 28,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -448,7 +522,9 @@
         "espeak-es-castilian",
         "espeak-es-latin",
         "espeak-fr-velvet",
+        "espeak-hi-dynamic",
         "espeak-it-expressive",
+        "espeak-ja-melodic",
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
@@ -459,7 +535,7 @@
       ]
     },
     "volume": {
-      "templateCount": 26,
+      "templateCount": 28,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -479,7 +555,9 @@
         "espeak-es-castilian",
         "espeak-es-latin",
         "espeak-fr-velvet",
+        "espeak-hi-dynamic",
         "espeak-it-expressive",
+        "espeak-ja-melodic",
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
@@ -595,6 +673,7 @@
       "name": "English (US) bright",
       "parameters": {
         "breathiness": 28,
+        "gender": 0,
         "headSize": 128,
         "inflection": 56,
         "pitch": 112,
@@ -616,6 +695,7 @@
       "name": "English (UK) clarity",
       "parameters": {
         "breathiness": 24,
+        "gender": 0,
         "headSize": 122,
         "inflection": 48,
         "pitch": 98,
@@ -637,6 +717,7 @@
       "name": "Spanish (Latin America)",
       "parameters": {
         "breathiness": 26,
+        "gender": 0,
         "headSize": 134,
         "inflection": 64,
         "pitch": 104,
@@ -657,6 +738,7 @@
       "name": "Spanish (Castilian)",
       "parameters": {
         "breathiness": 24,
+        "gender": 0,
         "headSize": 130,
         "inflection": 70,
         "pitch": 102,
@@ -677,6 +759,7 @@
       "name": "French velvety",
       "parameters": {
         "breathiness": 32,
+        "gender": 0,
         "headSize": 140,
         "inflection": 58,
         "pitch": 96,
@@ -696,6 +779,7 @@
       "name": "German precision",
       "parameters": {
         "breathiness": 20,
+        "gender": 0,
         "headSize": 124,
         "inflection": 46,
         "pitch": 94,
@@ -715,6 +799,7 @@
       "name": "Italian expressive",
       "parameters": {
         "breathiness": 34,
+        "gender": 0,
         "headSize": 126,
         "inflection": 66,
         "pitch": 108,
@@ -734,6 +819,7 @@
       "name": "Portuguese (Brazil) vibrant",
       "parameters": {
         "breathiness": 30,
+        "gender": 0,
         "headSize": 132,
         "inflection": 60,
         "pitch": 100,
@@ -744,6 +830,52 @@
       "tags": [
         "portuguese",
         "brazil"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "hi-in-basic",
+      "extras": {},
+      "id": "espeak-hi-dynamic",
+      "language": "hi-IN",
+      "name": "Hindi dynamic clarity",
+      "parameters": {
+        "breathiness": 34,
+        "gender": 0,
+        "headSize": 118,
+        "inflection": 60,
+        "pitch": 112,
+        "rate": 108,
+        "roughness": 24,
+        "volume": 92
+      },
+      "tags": [
+        "hindi",
+        "lang:hi",
+        "indic",
+        "espeak"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ja-jp-basic",
+      "extras": {},
+      "id": "espeak-ja-melodic",
+      "language": "ja-JP",
+      "name": "Japanese melodic",
+      "parameters": {
+        "breathiness": 26,
+        "gender": 0,
+        "headSize": 104,
+        "inflection": 48,
+        "pitch": 126,
+        "rate": 112,
+        "roughness": 20,
+        "volume": 88
+      },
+      "tags": [
+        "japanese",
+        "lang:ja",
+        "espeak",
+        "asia"
       ]
     },
     {
@@ -766,6 +898,7 @@
       "name": "Heritage JAWS (Paul)",
       "parameters": {
         "breathiness": 18,
+        "gender": 0,
         "headSize": 124,
         "inflection": 44,
         "pitch": 102,
@@ -798,6 +931,7 @@
       "name": "Loquence Studio (SAPI-4)",
       "parameters": {
         "breathiness": 30,
+        "gender": 0,
         "headSize": 112,
         "inflection": 52,
         "pitch": 130,
@@ -830,6 +964,7 @@
       "name": "Window-Eyes Expressive",
       "parameters": {
         "breathiness": 22,
+        "gender": 0,
         "headSize": 132,
         "inflection": 38,
         "pitch": 96,
@@ -863,6 +998,7 @@
       "name": "Blind Help Precision",
       "parameters": {
         "breathiness": 20,
+        "gender": 0,
         "headSize": 122,
         "inflection": 45,
         "pitch": 110,
@@ -898,6 +1034,7 @@
       "name": "ViaVoice Paul XL (SAPI 5)",
       "parameters": {
         "breathiness": 14,
+        "gender": 0,
         "headSize": 126,
         "inflection": 52,
         "pitch": 104,
@@ -933,6 +1070,7 @@
       "name": "ViaVoice Tracy (SAPI 4)",
       "parameters": {
         "breathiness": 32,
+        "gender": 1,
         "headSize": 108,
         "inflection": 58,
         "pitch": 136,
@@ -969,6 +1107,7 @@
       "name": "Eloquence 6.1 Studio (SAPI 4)",
       "parameters": {
         "breathiness": 28,
+        "gender": 0,
         "headSize": 114,
         "inflection": 54,
         "pitch": 128,
@@ -1004,6 +1143,7 @@
       "name": "Eloquence for Windows Balanced (Code Factory)",
       "parameters": {
         "breathiness": 24,
+        "gender": 0,
         "headSize": 120,
         "inflection": 60,
         "pitch": 132,
@@ -1038,6 +1178,7 @@
       "name": "NV Speech Player Adam",
       "parameters": {
         "breathiness": 30,
+        "gender": 0,
         "headSize": 112,
         "inflection": 58,
         "pitch": 118,
@@ -1077,6 +1218,7 @@
       "name": "NV Speech Player Benjamin",
       "parameters": {
         "breathiness": 26,
+        "gender": 0,
         "headSize": 118,
         "inflection": 52,
         "pitch": 124,
@@ -1109,6 +1251,7 @@
       "name": "NV Speech Player Caleb",
       "parameters": {
         "breathiness": 40,
+        "gender": 0,
         "headSize": 120,
         "inflection": 44,
         "pitch": 106,
@@ -1144,6 +1287,7 @@
       "name": "NV Speech Player David",
       "parameters": {
         "breathiness": 24,
+        "gender": 0,
         "headSize": 130,
         "inflection": 48,
         "pitch": 90,
@@ -1165,6 +1309,7 @@
       "name": "Alex",
       "parameters": {
         "breathiness": 0,
+        "gender": 0,
         "headSize": 107,
         "inflection": 69,
         "pitch": 105,
@@ -1186,6 +1331,7 @@
       "name": "Storm",
       "parameters": {
         "breathiness": 0,
+        "gender": 0,
         "headSize": 100,
         "inflection": 60,
         "pitch": 60,

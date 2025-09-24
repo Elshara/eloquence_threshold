@@ -120,6 +120,19 @@
         ]
       },
       {
+        "characterCount": 5,
+        "defaultVoiceTemplates": [
+          "espeak-hi-dynamic"
+        ],
+        "display": "Hindi \u2013 retroflex energy \u2013 hi-IN \u2013 Core Devanagari characters tuned against eSpeak hi phonemes",
+        "id": "hi-in-basic",
+        "language": "hi-IN",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-hi-dynamic"
+        ]
+      },
+      {
         "characterCount": 15,
         "defaultVoiceTemplates": [
           "espeak-it-expressive"
@@ -130,6 +143,19 @@
         "missingDefaults": [],
         "referencedBy": [
           "espeak-it-expressive"
+        ]
+      },
+      {
+        "characterCount": 5,
+        "defaultVoiceTemplates": [
+          "espeak-ja-melodic"
+        ],
+        "display": "Japanese \u2013 mora rhythmic \u2013 ja-JP \u2013 Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+        "id": "ja-jp-basic",
+        "language": "ja-JP",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-ja-melodic"
         ]
       },
       {
@@ -146,7 +172,7 @@
         ]
       }
     ],
-    "total": 9
+    "total": 11
   },
   "phonemes": {
     "categories": [
@@ -382,11 +408,25 @@
         "name": "French velvety"
       },
       {
+        "defaultLanguageProfile": "hi-in-basic",
+        "id": "espeak-hi-dynamic",
+        "issues": [],
+        "language": "hi-IN",
+        "name": "Hindi dynamic clarity"
+      },
+      {
         "defaultLanguageProfile": "it-it-basic",
         "id": "espeak-it-expressive",
         "issues": [],
         "language": "it-IT",
         "name": "Italian expressive"
+      },
+      {
+        "defaultLanguageProfile": "ja-jp-basic",
+        "id": "espeak-ja-melodic",
+        "issues": [],
+        "language": "ja-JP",
+        "name": "Japanese melodic"
       },
       {
         "defaultLanguageProfile": "pt-br-basic",
@@ -438,6 +478,6 @@
         "name": "NV Speech Player David"
       }
     ],
-    "total": 26
+    "total": 28
   }
 }

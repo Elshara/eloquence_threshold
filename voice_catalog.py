@@ -138,6 +138,7 @@ class EspeakVariant:
 
 
 _VARIANT_PARAMETER_ORDER = (
+    "gender",
     "rate",
     "pitch",
     "inflection",
@@ -148,6 +149,15 @@ _VARIANT_PARAMETER_ORDER = (
 )
 
 _DEFAULT_PARAMETER_RANGE_SPECS: Dict[str, Dict[str, object]] = {
+    "gender": {
+        "label": "Gender resonance",
+        "description": "0 = masculine tract target, 1 = feminine tract target.",
+        "min": 0,
+        "max": 1,
+        "default": 0,
+        "step": 1,
+        "tags": ("timbre",),
+    },
     "rate": {
         "label": "Speaking rate",
         "description": "Base speed in words per minute mapped to Eloquence's internal range.",
@@ -228,6 +238,10 @@ _LANGUAGE_PROFILE_MAP = {
     "it-it": "it-it-basic",
     "pt": "pt-br-basic",
     "pt-br": "pt-br-basic",
+    "hi": "hi-in-basic",
+    "hi-in": "hi-in-basic",
+    "ja": "ja-jp-basic",
+    "ja-jp": "ja-jp-basic",
 }
 
 
@@ -583,6 +597,15 @@ def _build_template_from_variant(
         range_info = parameter_ranges.get(name)
         default = range_info.default if range_info else 0
         parameters[name] = default
+
+    gender_range = parameter_ranges.get("gender")
+    if gender_range is not None:
+        gender_value = 0
+        if variant.gender:
+            lowered = variant.gender.lower()
+            if "female" in lowered or lowered.startswith("f"):
+                gender_value = 1
+        parameters["gender"] = gender_range.clamp(int(gender_value))
 
     rate_range = parameter_ranges.get("rate")
     speed = _variant_scalar(variant, "speed")

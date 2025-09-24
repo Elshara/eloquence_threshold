@@ -6,8 +6,8 @@ gaps before publishing a new NVDA add-on build.
 
 ## Quick stats
 
-- **Voice templates**: 26 across 9 languages.
-- **Language profiles**: 9 total, 9 with character coverage.
+- **Voice templates**: 28 across 11 languages.
+- **Language profiles**: 11 total, 11 with character coverage.
 - **Phonemes**: 136 entries spanning 20 categories and 51 distinct IPA symbols.
 
 ## Voice templates by language
@@ -28,8 +28,12 @@ gaps before publishing a new NVDA add-on build.
 | ↳ Templates |  |  | `espeak-es-castilian` |
 | fr-FR | fr-FR | 1 | `fr-fr-basic` |
 | ↳ Templates |  |  | `espeak-fr-velvet` |
+| hi-IN | hi-IN | 1 | `hi-in-basic` |
+| ↳ Templates |  |  | `espeak-hi-dynamic` |
 | it-IT | it-IT | 1 | `it-it-basic` |
 | ↳ Templates |  |  | `espeak-it-expressive` |
+| ja-JP | ja-JP | 1 | `ja-jp-basic` |
+| ↳ Templates |  |  | `espeak-ja-melodic` |
 | pt-BR | pt-BR | 1 | `pt-br-basic` |
 | ↳ Templates |  |  | `espeak-pt-br-vibrant` |
 
@@ -40,11 +44,11 @@ gaps before publishing a new NVDA add-on build.
 | `english` | 18 |
 | `eloquence` | 8 |
 | `dectalk` | 4 |
+| `espeak` | 4 |
 | `legacy` | 4 |
 | `nvspeechplayer` | 4 |
 | `sapi4` | 3 |
 | `community` | 2 |
-| `espeak` | 2 |
 | `heritage` | 2 |
 | `ibm` | 2 |
 | `male` | 2 |
@@ -53,6 +57,7 @@ gaps before publishing a new NVDA add-on build.
 | `studio` | 2 |
 | `variant` | 2 |
 | `viavoice` | 2 |
+| `asia` | 1 |
 | `blindhelp` | 1 |
 | `brazil` | 1 |
 | `breathy` | 1 |
@@ -61,9 +66,14 @@ gaps before publishing a new NVDA add-on build.
 | `codefactory` | 1 |
 | `french` | 1 |
 | `german` | 1 |
+| `hindi` | 1 |
+| `indic` | 1 |
 | `italian` | 1 |
+| `japanese` | 1 |
 | `jaws` | 1 |
 | `lang:en-us` | 1 |
+| `lang:hi` | 1 |
+| `lang:ja` | 1 |
 | `latin` | 1 |
 | `low` | 1 |
 | `modern` | 1 |
@@ -84,7 +94,9 @@ gaps before publishing a new NVDA add-on build.
 | es-419-basic (Spanish (LatAm) – sonorous core) | es-419 | 7 | `espeak-es-castilian`<br>`espeak-es-latin` | `spanish`, `latin` |
 | es-es-basic (Spanish (Castilian) – crisp sibilants) | es-ES | 5 | `espeak-es-castilian`<br>`espeak-es-latin` | `spanish`, `castilian` |
 | fr-fr-basic (French – nasal warmth) | fr-FR | 15 | `espeak-fr-velvet` | `french`, `latin` |
+| hi-in-basic (Hindi – retroflex energy) | hi-IN | 5 | `espeak-hi-dynamic` | `hindi`, `indic`, `lang:hi` |
 | it-it-basic (Italian – open vowels) | it-IT | 15 | `espeak-it-expressive` | `italian`, `latin` |
+| ja-jp-basic (Japanese – mora rhythmic) | ja-JP | 5 | `espeak-ja-melodic` | `japanese`, `kana`, `lang:ja` |
 | pt-br-basic (Portuguese (Brazil) – vibrant vowels) | pt-BR | 18 | `espeak-pt-br-vibrant` | `portuguese`, `latin` |
 
 ## Phoneme categories

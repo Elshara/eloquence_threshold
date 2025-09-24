@@ -1,8 +1,8 @@
 # Catalog status report
 
 * Phoneme entries: 136
-* Voice templates: 26
-* Language profiles: 9
+* Voice templates: 28
+* Language profiles: 11
 
 ## Phoneme categories
 
@@ -40,7 +40,9 @@
 | Spanish (LatAm) – sonorous core – es-419 – Latin American Spanish vowels and consonants following eSpeak es-la | es-419 | 7 | espeak-es-latin | espeak-es-latin | – |
 | Spanish (Castilian) – crisp sibilants – es-ES – Castilian defaults matching eSpeak es | es-ES | 5 | espeak-es-castilian | espeak-es-castilian | – |
 | French – nasal warmth – fr-FR – Core French characters tuned against eSpeak fr defaults | fr-FR | 15 | espeak-fr-velvet | espeak-fr-velvet | – |
+| Hindi – retroflex energy – hi-IN – Core Devanagari characters tuned against eSpeak hi phonemes | hi-IN | 5 | espeak-hi-dynamic | espeak-hi-dynamic | – |
 | Italian – open vowels – it-IT – Italian vowel core tied to eSpeak it voice | it-IT | 15 | espeak-it-expressive | espeak-it-expressive | – |
+| Japanese – mora rhythmic – ja-JP – Kana coverage with pitch-accent guidance for NVDA phoneme hints | ja-JP | 5 | espeak-ja-melodic | espeak-ja-melodic | – |
 | Portuguese (Brazil) – vibrant vowels – pt-BR – Brazilian Portuguese nasal set mapped from eSpeak pt-br | pt-BR | 18 | espeak-pt-br-vibrant | espeak-pt-br-vibrant | – |
 
 ## Voice templates
@@ -65,7 +67,9 @@
 | espeak-es-castilian (Spanish (Castilian)) | es-ES | es-es-basic | – |
 | espeak-es-latin (Spanish (Latin America)) | es-419 | es-419-basic | – |
 | espeak-fr-velvet (French velvety) | fr-FR | fr-fr-basic | – |
+| espeak-hi-dynamic (Hindi dynamic clarity) | hi-IN | hi-in-basic | – |
 | espeak-it-expressive (Italian expressive) | it-IT | it-it-basic | – |
+| espeak-ja-melodic (Japanese melodic) | ja-JP | ja-jp-basic | – |
 | espeak-pt-br-vibrant (Portuguese (Brazil) vibrant) | pt-BR | pt-br-basic | – |
 | espeak-variant-espeak-variants-alex (Alex) |  | – | – |
 | espeak-variant-espeak-variants-storm (Storm) | en-US | en-us-basic | – |
