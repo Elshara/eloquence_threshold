@@ -1,0 +1,916 @@
+{
+  "summary": {
+    "voices": {
+      "totalTemplates": 26,
+      "languagesWithTemplates": 9,
+      "tagCounts": {
+        "english": 18,
+        "eloquence": 8,
+        "dectalk": 4,
+        "legacy": 4,
+        "nvspeechplayer": 4,
+        "sapi4": 3,
+        "community": 2,
+        "espeak": 2,
+        "heritage": 2,
+        "ibm": 2,
+        "male": 2,
+        "sapi5": 2,
+        "spanish": 2,
+        "studio": 2,
+        "variant": 2,
+        "viavoice": 2,
+        "blindhelp": 1,
+        "brazil": 1,
+        "breathy": 1,
+        "bright": 1,
+        "classic": 1,
+        "codefactory": 1,
+        "french": 1,
+        "german": 1,
+        "italian": 1,
+        "jaws": 1,
+        "lang:en-us": 1,
+        "latin": 1,
+        "low": 1,
+        "modern": 1,
+        "portuguese": 1,
+        "spain": 1,
+        "uk": 1,
+        "us": 1,
+        "window-eyes": 1
+      },
+      "unmatchedTemplates": [
+        "espeak-variant-espeak-variants-alex"
+      ],
+      "parameterRanges": {
+        "rate": {
+          "label": "Speaking rate",
+          "minimum": 40,
+          "maximum": 150,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "timing"
+          ]
+        },
+        "pitch": {
+          "label": "Pitch",
+          "minimum": 40,
+          "maximum": 160,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "tone"
+          ]
+        },
+        "inflection": {
+          "label": "Inflection",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 50,
+          "step": 1,
+          "tags": [
+            "prosody"
+          ]
+        },
+        "headSize": {
+          "label": "Head size",
+          "minimum": 70,
+          "maximum": 160,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "formant"
+          ]
+        },
+        "roughness": {
+          "label": "Roughness",
+          "minimum": 0,
+          "maximum": 120,
+          "default": 40,
+          "step": 1,
+          "tags": [
+            "texture"
+          ]
+        },
+        "breathiness": {
+          "label": "Breathiness",
+          "minimum": 0,
+          "maximum": 120,
+          "default": 32,
+          "step": 1,
+          "tags": [
+            "texture"
+          ]
+        },
+        "volume": {
+          "label": "Volume",
+          "minimum": 50,
+          "maximum": 100,
+          "default": 80,
+          "step": 1,
+          "tags": [
+            "loudness"
+          ]
+        }
+      }
+    },
+    "languageProfiles": {
+      "total": 9,
+      "withCharacters": 9
+    },
+    "phonemes": {
+      "categories": 20,
+      "total": 136,
+      "distinctIPA": 51,
+      "empty": false
+    }
+  },
+  "voices": [
+    {
+      "language": "en-US",
+      "normalised": "en-US",
+      "templateIds": [
+        "dectalk-beautiful-betty",
+        "dectalk-perfect-paul",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi5-codefactory-balanced",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-window-eyes-expressive",
+        "espeak-en-us-bright",
+        "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ],
+      "defaultProfileTemplates": [
+        "en-us-basic",
+        "en-us-heritage"
+      ]
+    },
+    {
+      "language": "",
+      "normalised": "",
+      "templateIds": [
+        "espeak-variant-espeak-variants-alex"
+      ],
+      "defaultProfileTemplates": []
+    },
+    {
+      "language": "de-DE",
+      "normalised": "de-DE",
+      "templateIds": [
+        "espeak-de-precision"
+      ],
+      "defaultProfileTemplates": [
+        "de-de-basic"
+      ]
+    },
+    {
+      "language": "en-GB",
+      "normalised": "en-GB",
+      "templateIds": [
+        "espeak-en-gb-clarity"
+      ],
+      "defaultProfileTemplates": [
+        "en-gb-basic"
+      ]
+    },
+    {
+      "language": "es-419",
+      "normalised": "es-419",
+      "templateIds": [
+        "espeak-es-latin"
+      ],
+      "defaultProfileTemplates": [
+        "es-419-basic"
+      ]
+    },
+    {
+      "language": "es-ES",
+      "normalised": "es-ES",
+      "templateIds": [
+        "espeak-es-castilian"
+      ],
+      "defaultProfileTemplates": [
+        "es-es-basic"
+      ]
+    },
+    {
+      "language": "fr-FR",
+      "normalised": "fr-FR",
+      "templateIds": [
+        "espeak-fr-velvet"
+      ],
+      "defaultProfileTemplates": [
+        "fr-fr-basic"
+      ]
+    },
+    {
+      "language": "it-IT",
+      "normalised": "it-IT",
+      "templateIds": [
+        "espeak-it-expressive"
+      ],
+      "defaultProfileTemplates": [
+        "it-it-basic"
+      ]
+    },
+    {
+      "language": "pt-BR",
+      "normalised": "pt-BR",
+      "templateIds": [
+        "espeak-pt-br-vibrant"
+      ],
+      "defaultProfileTemplates": [
+        "pt-br-basic"
+      ]
+    }
+  ],
+  "languageProfiles": [
+    {
+      "id": "de-de-basic",
+      "language": "de-DE",
+      "normalisedLanguage": "de-DE",
+      "displayName": "German – precise articulation",
+      "characterCount": 11,
+      "defaultVoiceTemplates": [
+        "espeak-de-precision"
+      ],
+      "linkedVoiceTemplates": [
+        "espeak-de-precision"
+      ],
+      "linkedVoiceLabels": [
+        "German precision – de-DE – Focused articulation for German text"
+      ],
+      "tags": [
+        "german",
+        "latin"
+      ],
+      "stressNotes": [
+        "Primary stress typically on first syllable",
+        "Compound words keep secondary stresses"
+      ],
+      "sentenceStructure": [
+        "Verb-second declaratives",
+        "Verb-final subclauses"
+      ],
+      "grammarNotes": [
+        "Final-obstruent devoicing",
+        "Umlauts mark vowel fronting"
+      ]
+    },
+    {
+      "id": "en-gb-basic",
+      "language": "en-GB",
+      "normalisedLanguage": "en-GB",
+      "displayName": "English (UK) – clipped clarity",
+      "characterCount": 6,
+      "defaultVoiceTemplates": [
+        "espeak-en-gb-clarity"
+      ],
+      "linkedVoiceTemplates": [
+        "dectalk-beautiful-betty",
+        "dectalk-perfect-paul",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi5-codefactory-balanced",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-window-eyes-expressive",
+        "espeak-en-gb-clarity",
+        "espeak-en-us-bright",
+        "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ],
+      "linkedVoiceLabels": [
+        "DECtalk Beautiful Betty – en-US – Bright mezzo voice tuned for clarity",
+        "DECtalk Perfect Paul – en-US – Classic baritone profile inspired by DECtalk's default voice",
+        "DECtalk Rough Rita – en-US – Edgy alto voice with extra rasp",
+        "DECtalk Whispering Wendy – en-US – Soft-spoken profile with intimate breathiness",
+        "Blind Help Precision – en-US – Balanced profile inspired by Blind Help Project extractions for modern NVDA builds",
+        "Heritage JAWS (Paul) – en-US – Classic JAWS preset tuned for crisp midrange articulation and quick key echo",
+        "Loquence Studio (SAPI-4) – en-US – Warm Loquendo-inspired timbre with softened consonants for long-form listening",
+        "Eloquence 6.1 Studio (SAPI 4) – en-US – High fidelity ETI Eloquence 6.1 Studio preset captured from the SAPI-4 port",
+        "ViaVoice Tracy (SAPI 4) – en-US – Softer SAPI 4 ViaVoice female preset with expressive inflection and airy texture",
+        "Eloquence for Windows Balanced (Code Factory) – en-US – Code Factory's SAPI 5 port tuned for a smoother Studio timbre with additional sparkle",
+        "ViaVoice Paul XL (SAPI 5) – en-US – IBM ViaVoice SAPI 5 capture tuned for rich baritone delivery with crisp consonants",
+        "Window-Eyes Expressive – en-US – Grittier profile mirroring Window-Eyes with a forward sibilant edge",
+        "English (UK) clarity – en-GB – Crisp consonants inspired by eSpeak en-gb",
+        "English (US) bright – en-US – Balanced eSpeak en-us timbre with elevated clarity",
+        "Storm – en-US – Imported from eSpeak NG variant 'Storm' – Languages: en-US",
+        "NV Speech Player Adam – en-US – Balanced Adam preset with rounded consonants and warm vowels",
+        "NV Speech Player Benjamin – en-US – Sharper Benjamin preset with brighter resonances and higher breath",
+        "NV Speech Player Caleb – en-US – Breathy Caleb preset for soft speech and whisper-like delivery",
+        "NV Speech Player David – en-US – Lower David preset with relaxed pitch and softened sibilants"
+      ],
+      "tags": [
+        "english",
+        "british"
+      ],
+      "stressNotes": [
+        "Primary stress ˈ, secondary ˌ",
+        "Non-rhotic endings drop /r/ unless followed by vowel"
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object default",
+        "Statements fall in pitch at the end"
+      ],
+      "grammarNotes": [
+        "T-glottalisation optional",
+        "-ise suffix keeps /z/ voicing"
+      ]
+    },
+    {
+      "id": "en-us-heritage",
+      "language": "en-US",
+      "normalisedLanguage": "en-US",
+      "displayName": "English (US) – Heritage Eloquence",
+      "characterCount": 13,
+      "defaultVoiceTemplates": [
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-window-eyes-expressive",
+        "eloquence-bhp-precision"
+      ],
+      "linkedVoiceTemplates": [
+        "dectalk-beautiful-betty",
+        "dectalk-perfect-paul",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi5-codefactory-balanced",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-window-eyes-expressive",
+        "espeak-en-gb-clarity",
+        "espeak-en-us-bright",
+        "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ],
+      "linkedVoiceLabels": [
+        "DECtalk Beautiful Betty – en-US – Bright mezzo voice tuned for clarity",
+        "DECtalk Perfect Paul – en-US – Classic baritone profile inspired by DECtalk's default voice",
+        "DECtalk Rough Rita – en-US – Edgy alto voice with extra rasp",
+        "DECtalk Whispering Wendy – en-US – Soft-spoken profile with intimate breathiness",
+        "Blind Help Precision – en-US – Balanced profile inspired by Blind Help Project extractions for modern NVDA builds",
+        "Heritage JAWS (Paul) – en-US – Classic JAWS preset tuned for crisp midrange articulation and quick key echo",
+        "Loquence Studio (SAPI-4) – en-US – Warm Loquendo-inspired timbre with softened consonants for long-form listening",
+        "Eloquence 6.1 Studio (SAPI 4) – en-US – High fidelity ETI Eloquence 6.1 Studio preset captured from the SAPI-4 port",
+        "ViaVoice Tracy (SAPI 4) – en-US – Softer SAPI 4 ViaVoice female preset with expressive inflection and airy texture",
+        "Eloquence for Windows Balanced (Code Factory) – en-US – Code Factory's SAPI 5 port tuned for a smoother Studio timbre with additional sparkle",
+        "ViaVoice Paul XL (SAPI 5) – en-US – IBM ViaVoice SAPI 5 capture tuned for rich baritone delivery with crisp consonants",
+        "Window-Eyes Expressive – en-US – Grittier profile mirroring Window-Eyes with a forward sibilant edge",
+        "English (UK) clarity – en-GB – Crisp consonants inspired by eSpeak en-gb",
+        "English (US) bright – en-US – Balanced eSpeak en-us timbre with elevated clarity",
+        "Storm – en-US – Imported from eSpeak NG variant 'Storm' – Languages: en-US",
+        "NV Speech Player Adam – en-US – Balanced Adam preset with rounded consonants and warm vowels",
+        "NV Speech Player Benjamin – en-US – Sharper Benjamin preset with brighter resonances and higher breath",
+        "NV Speech Player Caleb – en-US – Breathy Caleb preset for soft speech and whisper-like delivery",
+        "NV Speech Player David – en-US – Lower David preset with relaxed pitch and softened sibilants"
+      ],
+      "tags": [
+        "english",
+        "eloquence",
+        "heritage"
+      ],
+      "stressNotes": [
+        "Primary stress uses Loquence-style lengthening on the vowel nucleus",
+        "Secondary stress keeps the consonant attack sharp as in heritage JAWS"
+      ],
+      "sentenceStructure": [
+        "Declaratives keep a mid-low plateau before dropping on the final syllable",
+        "Questions rise sharply across the last stressed vowel, matching classic Eloquence focus"
+      ],
+      "grammarNotes": [
+        "Heritage voices favour rhotic endings; keep \"r\" audible even after schwa",
+        "Assimilate nasal + stop clusters (nk, mp) for smoother phrase prediction playback",
+        "Diphthongs collapse in unstressed syllables, mirroring the 6.1 dictionary"
+      ]
+    },
+    {
+      "id": "en-us-basic",
+      "language": "en-US",
+      "normalisedLanguage": "en-US",
+      "displayName": "English (US) – tactile vowels",
+      "characterCount": 8,
+      "defaultVoiceTemplates": [
+        "espeak-en-us-bright"
+      ],
+      "linkedVoiceTemplates": [
+        "dectalk-beautiful-betty",
+        "dectalk-perfect-paul",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi5-codefactory-balanced",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-window-eyes-expressive",
+        "espeak-en-gb-clarity",
+        "espeak-en-us-bright",
+        "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ],
+      "linkedVoiceLabels": [
+        "DECtalk Beautiful Betty – en-US – Bright mezzo voice tuned for clarity",
+        "DECtalk Perfect Paul – en-US – Classic baritone profile inspired by DECtalk's default voice",
+        "DECtalk Rough Rita – en-US – Edgy alto voice with extra rasp",
+        "DECtalk Whispering Wendy – en-US – Soft-spoken profile with intimate breathiness",
+        "Blind Help Precision – en-US – Balanced profile inspired by Blind Help Project extractions for modern NVDA builds",
+        "Heritage JAWS (Paul) – en-US – Classic JAWS preset tuned for crisp midrange articulation and quick key echo",
+        "Loquence Studio (SAPI-4) – en-US – Warm Loquendo-inspired timbre with softened consonants for long-form listening",
+        "Eloquence 6.1 Studio (SAPI 4) – en-US – High fidelity ETI Eloquence 6.1 Studio preset captured from the SAPI-4 port",
+        "ViaVoice Tracy (SAPI 4) – en-US – Softer SAPI 4 ViaVoice female preset with expressive inflection and airy texture",
+        "Eloquence for Windows Balanced (Code Factory) – en-US – Code Factory's SAPI 5 port tuned for a smoother Studio timbre with additional sparkle",
+        "ViaVoice Paul XL (SAPI 5) – en-US – IBM ViaVoice SAPI 5 capture tuned for rich baritone delivery with crisp consonants",
+        "Window-Eyes Expressive – en-US – Grittier profile mirroring Window-Eyes with a forward sibilant edge",
+        "English (UK) clarity – en-GB – Crisp consonants inspired by eSpeak en-gb",
+        "English (US) bright – en-US – Balanced eSpeak en-us timbre with elevated clarity",
+        "Storm – en-US – Imported from eSpeak NG variant 'Storm' – Languages: en-US",
+        "NV Speech Player Adam – en-US – Balanced Adam preset with rounded consonants and warm vowels",
+        "NV Speech Player Benjamin – en-US – Sharper Benjamin preset with brighter resonances and higher breath",
+        "NV Speech Player Caleb – en-US – Breathy Caleb preset for soft speech and whisper-like delivery",
+        "NV Speech Player David – en-US – Lower David preset with relaxed pitch and softened sibilants"
+      ],
+      "tags": [
+        "english",
+        "latin",
+        "community"
+      ],
+      "stressNotes": [
+        "Primary stress marked with ˈ before the syllable",
+        "Secondary stress marked with ˌ"
+      ],
+      "sentenceStructure": [
+        "Default Subject–Verb–Object order",
+        "Interrogatives raise pitch near the end"
+      ],
+      "grammarNotes": [
+        "Plural -s softened with breathiness",
+        "Common digraphs ch, sh, th prefer affricate forms"
+      ]
+    },
+    {
+      "id": "es-419-basic",
+      "language": "es-419",
+      "normalisedLanguage": "es-419",
+      "displayName": "Spanish (LatAm) – sonorous core",
+      "characterCount": 7,
+      "defaultVoiceTemplates": [
+        "espeak-es-latin"
+      ],
+      "linkedVoiceTemplates": [
+        "espeak-es-castilian",
+        "espeak-es-latin"
+      ],
+      "linkedVoiceLabels": [
+        "Spanish (Castilian) – es-ES – Peninsular prosody with sharper sibilants",
+        "Spanish (Latin America) – es-419 – Warm cadence following eSpeak es-la"
+      ],
+      "tags": [
+        "spanish",
+        "latin"
+      ],
+      "stressNotes": [
+        "Acute accent carries primary stress",
+        "Default stress on penultimate syllable"
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with flexible pronoun drop",
+        "Questions rise sharply at the end"
+      ],
+      "grammarNotes": [
+        "Yeísmo pronounced /ʝ/",
+        "Syllable-final s kept strong"
+      ]
+    },
+    {
+      "id": "es-es-basic",
+      "language": "es-ES",
+      "normalisedLanguage": "es-ES",
+      "displayName": "Spanish (Castilian) – crisp sibilants",
+      "characterCount": 5,
+      "defaultVoiceTemplates": [
+        "espeak-es-castilian"
+      ],
+      "linkedVoiceTemplates": [
+        "espeak-es-castilian",
+        "espeak-es-latin"
+      ],
+      "linkedVoiceLabels": [
+        "Spanish (Castilian) – es-ES – Peninsular prosody with sharper sibilants",
+        "Spanish (Latin America) – es-419 – Warm cadence following eSpeak es-la"
+      ],
+      "tags": [
+        "spanish",
+        "castilian"
+      ],
+      "stressNotes": [
+        "Penultimate syllable carries stress unless accent marks override",
+        "Interrogatives use rising intonation"
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object standard",
+        "Clitics attach before conjugated verbs"
+      ],
+      "grammarNotes": [
+        "Distinguishes /θ/ and /s/",
+        "ll pronounced /ʎ/"
+      ]
+    },
+    {
+      "id": "fr-fr-basic",
+      "language": "fr-FR",
+      "normalisedLanguage": "fr-FR",
+      "displayName": "French – nasal warmth",
+      "characterCount": 15,
+      "defaultVoiceTemplates": [
+        "espeak-fr-velvet"
+      ],
+      "linkedVoiceTemplates": [
+        "espeak-fr-velvet"
+      ],
+      "linkedVoiceLabels": [
+        "French velvety – fr-FR – Rounded vowels echoing eSpeak fr voice"
+      ],
+      "tags": [
+        "french",
+        "latin"
+      ],
+      "stressNotes": [
+        "Lexical stress falls on the final full syllable",
+        "Function words keep flat intonation"
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with frequent pronoun drop in imperatives",
+        "Intonation rises slightly for yes/no questions"
+      ],
+      "grammarNotes": [
+        "Mute e weakens between consonants",
+        "liaison links final consonants to following vowels"
+      ]
+    },
+    {
+      "id": "it-it-basic",
+      "language": "it-IT",
+      "normalisedLanguage": "it-IT",
+      "displayName": "Italian – open vowels",
+      "characterCount": 15,
+      "defaultVoiceTemplates": [
+        "espeak-it-expressive"
+      ],
+      "linkedVoiceTemplates": [
+        "espeak-it-expressive"
+      ],
+      "linkedVoiceLabels": [
+        "Italian expressive – it-IT – Expressive vowels derived from eSpeak it"
+      ],
+      "tags": [
+        "italian",
+        "latin"
+      ],
+      "stressNotes": [
+        "Stress generally on penultimate syllable",
+        "Accents indicate irregular stress"
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with flexible clitics",
+        "Questions marked by rising phrase-final pitch"
+      ],
+      "grammarNotes": [
+        "Double consonants held longer",
+        "Open/closed e and o contrast meaning"
+      ]
+    },
+    {
+      "id": "pt-br-basic",
+      "language": "pt-BR",
+      "normalisedLanguage": "pt-BR",
+      "displayName": "Portuguese (Brazil) – vibrant vowels",
+      "characterCount": 18,
+      "defaultVoiceTemplates": [
+        "espeak-pt-br-vibrant"
+      ],
+      "linkedVoiceTemplates": [
+        "espeak-pt-br-vibrant"
+      ],
+      "linkedVoiceLabels": [
+        "Portuguese (Brazil) vibrant – pt-BR – Open vowels echoing eSpeak pt-br"
+      ],
+      "tags": [
+        "portuguese",
+        "latin"
+      ],
+      "stressNotes": [
+        "Default stress on penultimate syllable",
+        "Accent marks signal deviations"
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with topicalisation flexibility",
+        "Yes/no questions rely on rising contour"
+      ],
+      "grammarNotes": [
+        "Nasal vowels marked with tilde",
+        "Diphthongs soften before palatal consonants"
+      ]
+    }
+  ],
+  "phonemeCategories": [
+    {
+      "id": "stress-phonemes",
+      "label": "Stress Phonemes",
+      "phonemeCount": 20,
+      "ipaCount": 0,
+      "ipaSymbols": []
+    },
+    {
+      "id": "sonorants",
+      "label": "SONORANTS",
+      "phonemeCount": 19,
+      "ipaCount": 7,
+      "ipaSymbols": [
+        "l̩",
+        "r",
+        "r̩",
+        "ɭ",
+        "ɹ",
+        "ʀ",
+        "ʎ"
+      ]
+    },
+    {
+      "id": "nvspeechplayer-vowels",
+      "label": "NVSpeechPlayer vowels",
+      "phonemeCount": 15,
+      "ipaCount": 15,
+      "ipaSymbols": [
+        "I",
+        "æ",
+        "ɐ",
+        "ɑ",
+        "ɑj",
+        "ɑw",
+        "ɒ",
+        "ɔ",
+        "ɔj",
+        "ə",
+        "ɛ",
+        "ɜ",
+        "ɪ",
+        "ʊ",
+        "ʌ"
+      ]
+    },
+    {
+      "id": "voiced-fricatives",
+      "label": "VOICED fricatives",
+      "phonemeCount": 13,
+      "ipaCount": 5,
+      "ipaSymbols": [
+        "ʁ",
+        "ʋ",
+        "ʐ",
+        "ʑ",
+        "ʝ"
+      ]
+    },
+    {
+      "id": "unvoiced-fricatives",
+      "label": "UNVOICED fricatives",
+      "phonemeCount": 12,
+      "ipaCount": 4,
+      "ipaSymbols": [
+        "h",
+        "ɕ",
+        "ɬ",
+        "ʂ"
+      ]
+    },
+    {
+      "id": "nasal-consonants",
+      "label": "NASAL CONSONANTS",
+      "phonemeCount": 8,
+      "ipaCount": 4,
+      "ipaSymbols": [
+        "r",
+        "ɲ",
+        "ɳ",
+        "ɾ"
+      ]
+    },
+    {
+      "id": "unvoiced-stops",
+      "label": "UNVOICED STOPS",
+      "phonemeCount": 8,
+      "ipaCount": 1,
+      "ipaSymbols": [
+        "tɕ"
+      ]
+    },
+    {
+      "id": "some-default-vowel-definitions",
+      "label": "Some default vowel definitions",
+      "phonemeCount": 7,
+      "ipaCount": 1,
+      "ipaSymbols": [
+        "ə"
+      ]
+    },
+    {
+      "id": "voiced-stops",
+      "label": "VOICED STOPS",
+      "phonemeCount": 7,
+      "ipaCount": 1,
+      "ipaSymbols": [
+        "dʑ"
+      ]
+    },
+    {
+      "id": "these-each-apply-to-a-class-of-vowels",
+      "label": "These each apply to a class of vowels",
+      "phonemeCount": 6,
+      "ipaCount": 0,
+      "ipaSymbols": []
+    },
+    {
+      "id": "dectalk-core-inventory",
+      "label": "DECtalk core inventory",
+      "phonemeCount": 4,
+      "ipaCount": 4,
+      "ipaSymbols": [
+        "tʃ",
+        "æ",
+        "ə",
+        "ʃ"
+      ]
+    },
+    {
+      "id": "nvspeechplayer-voiceless-consonants",
+      "label": "NVSpeechPlayer voiceless consonants",
+      "phonemeCount": 4,
+      "ipaCount": 4,
+      "ipaSymbols": [
+        "t(3",
+        "ʃ",
+        "ʍ",
+        "θ"
+      ]
+    },
+    {
+      "id": "syllablic-consonants",
+      "label": "Syllablic consonants",
+      "phonemeCount": 3,
+      "ipaCount": 3,
+      "ipaSymbols": [
+        "m̩",
+        "n̩",
+        "ŋ̩"
+      ]
+    },
+    {
+      "id": "nvspeechplayer-affricates",
+      "label": "NVSpeechPlayer affricates",
+      "phonemeCount": 2,
+      "ipaCount": 2,
+      "ipaSymbols": [
+        "d͡ʒ",
+        "t͡ʃ"
+      ]
+    },
+    {
+      "id": "nvspeechplayer-voiced-consonants",
+      "label": "NVSpeechPlayer voiced consonants",
+      "phonemeCount": 2,
+      "ipaCount": 2,
+      "ipaSymbols": [
+        "ð",
+        "ʒ"
+      ]
+    },
+    {
+      "id": "nvspeechplayer-voiced-stops",
+      "label": "NVSpeechPlayer voiced stops",
+      "phonemeCount": 2,
+      "ipaCount": 2,
+      "ipaSymbols": [
+        "ɡ",
+        "ɾ"
+      ]
+    },
+    {
+      "id": "nvspeechplayer-liquids",
+      "label": "NVSpeechPlayer liquids",
+      "phonemeCount": 1,
+      "ipaCount": 1,
+      "ipaSymbols": [
+        "ɹ"
+      ]
+    },
+    {
+      "id": "nvspeechplayer-nasals",
+      "label": "NVSpeechPlayer nasals",
+      "phonemeCount": 1,
+      "ipaCount": 1,
+      "ipaSymbols": [
+        "ŋ"
+      ]
+    },
+    {
+      "id": "nvspeechplayer-voiceless-stops",
+      "label": "NVSpeechPlayer voiceless stops",
+      "phonemeCount": 1,
+      "ipaCount": 1,
+      "ipaSymbols": [
+        "ʔ"
+      ]
+    },
+    {
+      "id": "other-sounds",
+      "label": "Other sounds",
+      "phonemeCount": 1,
+      "ipaCount": 0,
+      "ipaSymbols": []
+    }
+  ],
+  "distinctIPASymbols": [
+    "I",
+    "dʑ",
+    "d͡ʒ",
+    "h",
+    "l̩",
+    "m̩",
+    "n̩",
+    "r",
+    "r̩",
+    "t(3",
+    "tɕ",
+    "tʃ",
+    "t͡ʃ",
+    "æ",
+    "ð",
+    "ŋ",
+    "ŋ̩",
+    "ɐ",
+    "ɑ",
+    "ɑj",
+    "ɑw",
+    "ɒ",
+    "ɔ",
+    "ɔj",
+    "ɕ",
+    "ə",
+    "ɛ",
+    "ɜ",
+    "ɡ",
+    "ɪ",
+    "ɬ",
+    "ɭ",
+    "ɲ",
+    "ɳ",
+    "ɹ",
+    "ɾ",
+    "ʀ",
+    "ʁ",
+    "ʂ",
+    "ʃ",
+    "ʊ",
+    "ʋ",
+    "ʌ",
+    "ʍ",
+    "ʎ",
+    "ʐ",
+    "ʑ",
+    "ʒ",
+    "ʔ",
+    "ʝ",
+    "θ"
+  ]
+}
