@@ -56,6 +56,14 @@ FILES_TO_COPY: Tuple[Tuple[str, Path], ...] = (
     ("manifest.ini", Path("manifest.ini")),
 )
 
+ARCH_DIRECTORIES: Tuple[Tuple[str, Path, str], ...] = (
+    ("eloquence_x86", Path("synthDrivers") / "eloquence" / "x86", "Embedded 32-bit runtime from ./eloquence_x86"),
+    ("eloquence_x64", Path("synthDrivers") / "eloquence" / "x64", "Embedded 64-bit runtime from ./eloquence_x64"),
+    ("eloquence_arm32", Path("synthDrivers") / "eloquence" / "arm32", "Embedded 32-bit ARM runtime from ./eloquence_arm32"),
+    ("eloquence_arm64", Path("synthDrivers") / "eloquence" / "arm64", "Embedded 64-bit ARM runtime from ./eloquence_arm64"),
+    ("eloquence_arm", Path("synthDrivers") / "eloquence" / "arm", "Embedded ARM runtime from ./eloquence_arm"),
+)
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build the Eloquence NVDA add-on")
@@ -179,11 +187,15 @@ def main() -> None:
             staging_dir / "synthDrivers" / "eloquence",
             preserve_existing=True,
         )
-        x64_copied = copy_optional_directory(
-            REPO_ROOT / "eloquence_x64",
-            staging_dir / "synthDrivers" / "eloquence" / "x64",
-            preserve_existing=True,
-        )
+
+        copied_architectures = []
+        for directory, destination, message in ARCH_DIRECTORIES:
+            if copy_optional_directory(
+                REPO_ROOT / directory,
+                staging_dir / destination,
+                preserve_existing=True,
+            ):
+                copied_architectures.append(message)
 
         if data_copied:
             print("Bundled eloquence_data directory")
@@ -194,8 +206,8 @@ def main() -> None:
                 "Warning: no Eloquence runtime detected. Copy ECI DLLs and .syn files "
                 "into ./eloquence before installing the add-on."
             )
-        if x64_copied:
-            print("Embedded 64-bit Eloquence payload from ./eloquence_x64")
+        for notice in copied_architectures:
+            print(notice)
 
         write_archive(staging_dir, args.output.expanduser().resolve())
 

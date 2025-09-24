@@ -12,12 +12,16 @@
 - Reference the NVDA upstream project (https://github.com/nvaccess/nvda/) when discussing compatibility or testing expectations.
 - Mention CodeQL usage whenever documenting security or quality assurance processes.
 - Call out upstream resources when relevant (for example, https://github.com/espeak-ng/espeak-ng, https://github.com/RetroBunn/dt51, https://github.com/davidacm/NVDA-IBMTTS-Driver, https://github.com/nvaccess/NVSpeechPlayer, and any community-provided FonixTalk/Dectalk packages) so maintainers understand data provenance.
+- When describing build or packaging steps, mirror the README guidance for architecture-specific payloads: reference `eloquence/` for classic 32-bit binaries and the optional `eloquence_x86`, `eloquence_x64`, `eloquence_arm32`, and `eloquence_arm64` directories for platform-specific assets.
 - When documenting the NV Access download archive, run `python tools/audit_nvaccess_downloads.py --roots releases/stable releases/2024.3 snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs/download_nvaccess_snapshot.json --markdown docs/download_nvaccess_snapshot.md` (adjust the roots as needed). Update `docs/validated_nvda_builds.json` first if a newer snapshot has been validated so severity notes stay accurate.
 - When you need to capture deltas between two cached NV Access snapshots, pair the audit command with `python tools/compare_nvaccess_snapshots.py --old docs/download_nvaccess_snapshot.json --new <fresh_snapshot.json> --markdown docs/download_nvaccess_delta.md` so documentation always reflects incremental additions, removals, and metadata changes.
 - Track multilingual ambitions explicitly: whenever you touch README or supporting docs, include a snapshot of current language coverage, what stages (phoneme data, language profiles, voice templates, keyboard-driven customization, and braille or dictionary exports) each locale has reached, and clearly state expansion priorities.
 - Reinforce that the long-term goal is universal script coverage—explain how phoneme, sound, and symbol customization helps the synthesizer speak any code point, and outline how contributors can import new text corpora or pronunciation data to fill gaps.
 - Document how generative and contextual pronunciation layers interact: note when a language profile includes automatic (AI-driven or algorithmic) phoneme generation, contextual variants for grammar or prosody, and how these map onto NVDA's phoneme picker so keyboard users understand the available levers.
 - Capture build and packaging requirements for every platform you mention. When laying out supported languages, describe expected speech fluency, braille translation/export status, and any dictionary or corpus dependencies that have to ship inside release bundles.
+- Reference the current NVDA validation baseline (alpha-52731 at the time of this update) and note any newer snapshots you test so the compatibility story stays fresh.
+- When cataloguing third-party archives (DataJake, Blind Help Project, Hear2Read, etc.), record extraction steps, archive types, and where you staged the recovered payloads. Mention required tooling (for example, `7z`, `unzip`, `cabextract`) so other contributors can repeat the process.
+- Keep the README and agent guidelines aligned; if you expand the README with new architectural, archival, or customization details, summarize the key points here so future maintainers do not overlook them.
 
 ## Contribution notes
 - Encourage community participation via issues and discussions, and invite contributors to help test against current and alpha NVDA builds.
@@ -27,5 +31,7 @@
 - Remember to resolve merge conflicts with awareness of any cached datasets or external archives that collaborators might rely on.
 - When adding language data or phoneme assets, describe the provenance, enumerate dialects/variants included, and document how users can further customise pronunciations beyond legacy dictionary files.
 - Whenever you introduce cross-platform guidance (for example, NVDA, Orca, Narrator, VoiceOver, TalkBack, ChromeVox), specify the packaging format, build prerequisites, and how the shared Eloquence data should flow between platforms so future maintainers can publish coordinated releases.
+- Plan for expanded voice parameter sliders: note open questions about mapping additional Eloquence controls into NVDA's dialog and capture any prototype work so it can be resumed quickly.
+- Track the pending automation task to crawl archives like DataJake. The repository needs a script that inventories directories, unpacks archives, and emits JSON/Markdown manifests describing available speech assets—update this file when progress is made so developers know the state of the effort.
 
 These guidelines apply to the entire repository.
