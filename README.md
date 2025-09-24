@@ -70,6 +70,11 @@ Because the hierarchy is deterministic, you can parametrise CI jobs to pull the 
 - Severity levels surface how urgently Eloquence must react: **high** means the entry is newer than our validated snapshot, **medium** matches the recorded baseline, **low** is older but still available for downgrades, and **info** indicates a release that remains inside the supported window. Update `docs/validated_nvda_builds.json` whenever you finish testing a new NVDA build so future audits share the same baseline.
 - Use `--insecure` when the environment lacks a full certificate store (as in this development container). Production automation should omit the flag so TLS verification remains intact.
 
+#### Track catalogue integrity automatically
+- Run `python tools/report_catalog_status.py --json docs/catalog_status.json --markdown docs/catalog_status.md` after touching phoneme inventories, language profiles, or voice templates. The helper loads the bundled catalogues, verifies that every voice template references a valid language profile, and confirms that profiles point at existing templates.
+- The generated Markdown digest summarises phoneme categories, locale coverage, and the templates exposed through NVDA's Speech dialog. Keep the `docs/catalog_status.md` snapshot in sync so contributors can quickly scan which languages already have keyboard-tunable voices and where new eSpeak NG, DECtalk, or NV Speech Player data is still required.
+- The helper exits with a non-zero status when it detects missing references, making it suitable for automated checks or future CodeQL workflows that validate our multilingual roadmap against the latest NVDA alphas.
+
 #### NVDA compatibility scorecard
 | Channel | Build identifier | Download URL | Severity | Recommended action |
 | --- | --- | --- | --- | --- |
