@@ -72,16 +72,28 @@ class LanguageProfile:
             pieces.append(self.description)
         return " – ".join(piece for piece in pieces if piece)
 
-    def describe_text(self, text: str) -> str:
-        hints: List[str] = []
+    def describe_characters(
+        self, text: str
+    ) -> List[Tuple[str, Optional[CharacterPronunciation]]]:
+        """Return the pronunciation entries that best match *text*.
+
+        The result preserves the order of the supplied characters and includes
+        unmatched symbols so callers can highlight gaps in the profile. Space
+        characters are returned with a ``None`` entry to keep positional context
+        intact while signalling that no pronunciation hint is required.
+        """
+
+        matches: List[Tuple[str, Optional[CharacterPronunciation]]] = []
         position = 0
         length = len(text)
         while position < length:
             char = text[position]
             if char.isspace():
+                matches.append((char, None))
                 position += 1
                 continue
-            entry: Optional[CharacterPronunciation] = None
+            matched_symbol: Optional[str] = None
+            matched_entry: Optional[CharacterPronunciation] = None
             for size in range(self._max_symbol_length, 0, -1):
                 if position + size > length:
                     continue
@@ -90,11 +102,22 @@ class LanguageProfile:
                 if entry is None:
                     entry = self._lowercase_index.get(fragment.lower())
                 if entry is not None:
+                    matched_symbol = fragment
+                    matched_entry = entry
                     position += size
-                    hints.append(entry.fallback_hint())
                     break
-            if entry is None:
+            if matched_symbol is None:
+                matched_symbol = text[position]
                 position += 1
+            matches.append((matched_symbol, matched_entry))
+        return matches
+
+    def describe_text(self, text: str) -> str:
+        hints: List[str] = []
+        for _symbol, entry in self.describe_characters(text):
+            if entry is None:
+                continue
+            hints.append(entry.fallback_hint())
         return "; ".join(hints)
 
 
