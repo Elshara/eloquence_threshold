@@ -64,6 +64,22 @@ NV Access hosts symbols in a SymSrv-style layout so debuggers can download only 
 
 Because the hierarchy is deterministic, you can parametrise CI jobs to pull the latest installer (`releases/stable/nvda_<tag>.exe`) or the newest alpha build (`snapshots/alpha/nvda_snapshot_alpha-*.exe`) before launching our automated synthesis smoke tests. Recording these locations here keeps the workflow self-documenting and saves future contributors from tracing the index every time NVDA updates its infrastructure.
 
+#### Automated snapshot and severity tracking
+- Run `python tools/audit_nvaccess_downloads.py --roots releases/stable releases/2024.3 snapshots/alpha --max-depth 2 --limit-per-dir 12 --current-nvda alpha-52705 --json docs/download_nvaccess_snapshot.json --markdown docs/download_nvaccess_snapshot.md --insecure` to capture an incremental snapshot of the archive. The helper reads `manifest.ini` and `docs/validated_nvda_builds.json`, then classifies each entry by severity so we can decide whether to update, hold, or downgrade Eloquence.
+- The command writes a machine-readable dataset (`docs/download_nvaccess_snapshot.json`) and a Markdown digest (`docs/download_nvaccess_snapshot.md`) sorted by modification date in descending order. Limiting each directory to a dozen entries keeps the run incremental while still surfacing the freshest installers, manuals, and nightly builds.
+- Severity levels surface how urgently Eloquence must react: **high** means the entry is newer than our validated snapshot, **medium** matches the recorded baseline, **low** is older but still available for downgrades, and **info** indicates a release that remains inside the supported window. Update `docs/validated_nvda_builds.json` whenever you finish testing a new NVDA build so future audits share the same baseline.
+- Use `--insecure` when the environment lacks a full certificate store (as in this development container). Production automation should omit the flag so TLS verification remains intact.
+
+#### NVDA compatibility scorecard
+| Channel | Build identifier | Download URL | Severity | Recommended action |
+| --- | --- | --- | --- | --- |
+| Alpha snapshots | `alpha-52762,91e60c70` | `https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe` | High | Validate against the latest NVDA changeset and refresh Eloquence if incompatibilities appear. |
+| Alpha snapshots | `alpha-52705,dc226976` | `https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52705,dc226976.exe` | Medium | Baseline used by Eloquence 0.20250922; keep regression tests green while preparing for newer alphas. |
+| Stable releases | `2025.3` | `https://download.nvaccess.org/releases/stable/nvda_2025.3.exe` | Info | Supported within the current manifest window. Ship add-on updates once nightly validation passes. |
+| Stable releases | `2024.3` | `https://download.nvaccess.org/releases/2024.3/nvda_2024.3.exe` | Info | Older release still inside the supported range—retain downgrade assets for users stuck on long-term deployments. |
+
+The scorecard mirrors the generated snapshot and highlights which installers or manuals deserve immediate attention. Extend the table whenever you validate additional beta, RC, or try builds so contributors know what to test next.
+
 ## Getting started
 1. Download the latest packaged add-on from the [releases page](https://github.com/pumper42nickel/eloquence_threshold/releases/latest/download/eloquence.nvda-addon), or clone this repository to build locally.
 2. If you are building your own package, gather the proprietary Eloquence binaries: place the classic 32-bit runtime (for example `ECI.DLL` and the `.syn` voice data) inside an `eloquence/` directory, and optionally add a 64-bit runtime under `eloquence_x64/`. You can also reuse an earlier add-on as a template by dropping it next to the build script as `eloquence_original.nvda-addon` or by passing `--template /path/to/addon.nvda-addon` when building.

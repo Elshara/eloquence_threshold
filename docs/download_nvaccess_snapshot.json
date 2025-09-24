@@ -1,0 +1,2133 @@
+{
+  "baseUrl": "https://download.nvaccess.org/",
+  "entries": [
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-24T06:12:51",
+      "name": "nvda_snapshot_alpha-52762,91e60c70.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe",
+      "sizeBytes": 0,
+      "sizeDisplay": "0 B",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-24T04:47:30",
+      "name": "nvda_snapshot_alpha-52755,80144828.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52755,80144828.exe",
+      "sizeBytes": 0,
+      "sizeDisplay": "0 B",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52755,80144828.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-24T01:01:33",
+      "name": "nvda_snapshot_alpha-52748,3f9151fe.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52748,3f9151fe.exe",
+      "sizeBytes": 18874368,
+      "sizeDisplay": "18 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52748,3f9151fe.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-23T05:22:33",
+      "name": "nvda_snapshot_alpha-52731,f294547a.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52731,f294547a.exe",
+      "sizeBytes": 50855936,
+      "sizeDisplay": "48.5 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52731,f294547a.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-22T02:07:34",
+      "name": "nvda_snapshot_alpha-52705,dc226976.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52705,dc226976.exe",
+      "sizeBytes": 50855936,
+      "sizeDisplay": "48.5 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52705,dc226976.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-19T08:20:39",
+      "name": "nvda_snapshot_alpha-52693,5a557d02.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52693,5a557d02.exe",
+      "sizeBytes": 50751078,
+      "sizeDisplay": "48.4 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52693,5a557d02.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-19T02:58:31",
+      "name": "nvda_snapshot_alpha-52681,c75b2de9.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52681,c75b2de9.exe",
+      "sizeBytes": 50855936,
+      "sizeDisplay": "48.5 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52681,c75b2de9.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-18T02:22:01",
+      "name": "nvda_snapshot_alpha-52672,32f645ca.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52672,32f645ca.exe",
+      "sizeBytes": 50855936,
+      "sizeDisplay": "48.5 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52672,32f645ca.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-17T01:25:31",
+      "name": "nvda_snapshot_alpha-52660,db11e28a.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52660,db11e28a.exe",
+      "sizeBytes": 50855936,
+      "sizeDisplay": "48.5 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52660,db11e28a.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-16T02:59:36",
+      "name": "nvda_snapshot_alpha-52630,47e6cf5d.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52630,47e6cf5d.exe",
+      "sizeBytes": 50855936,
+      "sizeDisplay": "48.5 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52630,47e6cf5d.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-15T07:17:10",
+      "name": "nvda_snapshot_alpha-52622,2f8a9df9.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52622,2f8a9df9.exe",
+      "sizeBytes": 50751078,
+      "sizeDisplay": "48.4 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52622,2f8a9df9.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-15T05:33:48",
+      "name": "nvda_snapshot_alpha-52615,4c8a2013.exe",
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52615,4c8a2013.exe",
+      "sizeBytes": 50855936,
+      "sizeDisplay": "48.5 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52615,4c8a2013.exe"
+    },
+    {
+      "depth": 0,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:28",
+      "name": "documentation",
+      "path": "releases/stable/documentation/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "zh_TW",
+      "path": "releases/stable/documentation/zh_TW/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_TW/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "zh_CN",
+      "path": "releases/stable/documentation/zh_CN/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_CN/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "vi",
+      "path": "releases/stable/documentation/vi/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/vi/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "uk",
+      "path": "releases/stable/documentation/uk/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/uk/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "tr",
+      "path": "releases/stable/documentation/tr/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/tr/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "ta",
+      "path": "releases/stable/documentation/ta/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ta/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "sv",
+      "path": "releases/stable/documentation/sv/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sv/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "sr",
+      "path": "releases/stable/documentation/sr/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sr/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "sq",
+      "path": "releases/stable/documentation/sq/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sq/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "sl",
+      "path": "releases/stable/documentation/sl/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sl/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "sk",
+      "path": "releases/stable/documentation/sk/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sk/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2025-09-15T00:08:25",
+      "name": "ru",
+      "path": "releases/stable/documentation/ru/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ru/"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-15T00:08:12",
+      "name": "nvda_2025.3_controllerClient.zip",
+      "path": "releases/stable/nvda_2025.3_controllerClient.zip",
+      "sizeBytes": 3565158,
+      "sizeDisplay": "3.4 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/nvda_2025.3_controllerClient.zip"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2025-09-15T00:08:12",
+      "name": "nvda_2025.3.exe",
+      "path": "releases/stable/nvda_2025.3.exe",
+      "sizeBytes": 51065651,
+      "sizeDisplay": "48.7 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/nvda_2025.3.exe"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:18:02",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/zh_TW/keyCommands.html",
+      "sizeBytes": 109670,
+      "sizeDisplay": "107.1 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_TW/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:18:02",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/zh_TW/userGuide.html",
+      "sizeBytes": 419737,
+      "sizeDisplay": "409.9 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_TW/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:58",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/zh_TW/changes.html",
+      "sizeBytes": 1048576,
+      "sizeDisplay": "1 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_TW/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:50",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/zh_CN/userGuide.html",
+      "sizeBytes": 425062,
+      "sizeDisplay": "415.1 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_CN/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:48",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/zh_CN/keyCommands.html",
+      "sizeBytes": 110694,
+      "sizeDisplay": "108.1 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_CN/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:44",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/zh_CN/changes.html",
+      "sizeBytes": 1048576,
+      "sizeDisplay": "1 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_CN/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:36",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/vi/keyCommands.html",
+      "sizeBytes": 127692,
+      "sizeDisplay": "124.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/vi/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:36",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/vi/userGuide.html",
+      "sizeBytes": 537088,
+      "sizeDisplay": "524.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/vi/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:32",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/vi/changes.html",
+      "sizeBytes": 715571,
+      "sizeDisplay": "698.8 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/vi/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:30",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/uk/keyCommands.html",
+      "sizeBytes": 173772,
+      "sizeDisplay": "169.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/uk/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:30",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/uk/userGuide.html",
+      "sizeBytes": 760320,
+      "sizeDisplay": "742.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/uk/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:26",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/uk/changes.html",
+      "sizeBytes": 1153433,
+      "sizeDisplay": "1.1 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/uk/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:18",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/tr/userGuide.html",
+      "sizeBytes": 501043,
+      "sizeDisplay": "489.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/tr/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:16",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/tr/keyCommands.html",
+      "sizeBytes": 119398,
+      "sizeDisplay": "116.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/tr/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:12",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/tr/changes.html",
+      "sizeBytes": 1153433,
+      "sizeDisplay": "1.1 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/tr/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:04",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/ta/keyCommands.html",
+      "sizeBytes": 245760,
+      "sizeDisplay": "240 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ta/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:17:04",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/ta/userGuide.html",
+      "sizeBytes": 1258291,
+      "sizeDisplay": "1.2 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ta/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:58",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/sv/keyCommands.html",
+      "sizeBytes": 56320,
+      "sizeDisplay": "55 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sv/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:58",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/sv/changes.html",
+      "sizeBytes": 392,
+      "sizeDisplay": "392 B",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sv/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:58",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/sv/userGuide.html",
+      "sizeBytes": 166400,
+      "sizeDisplay": "162.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sv/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:58",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/sr/userGuide.html",
+      "sizeBytes": 481996,
+      "sizeDisplay": "470.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sr/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:56",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/sr/keyCommands.html",
+      "sizeBytes": 121344,
+      "sizeDisplay": "118.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sr/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:52",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/sr/changes.html",
+      "sizeBytes": 1153433,
+      "sizeDisplay": "1.1 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sr/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:44",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/sq/keyCommands.html",
+      "sizeBytes": 31539,
+      "sizeDisplay": "30.8 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sq/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:44",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/sq/userGuide.html",
+      "sizeBytes": 109056,
+      "sizeDisplay": "106.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sq/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:44",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/sl/keyCommands.html",
+      "sizeBytes": 80896,
+      "sizeDisplay": "79 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sl/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:44",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/sl/userGuide.html",
+      "sizeBytes": 296448,
+      "sizeDisplay": "289.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sl/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:44",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/sk/userGuide.html",
+      "sizeBytes": 483020,
+      "sizeDisplay": "471.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sk/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:42",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/sk/keyCommands.html",
+      "sizeBytes": 119296,
+      "sizeDisplay": "116.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sk/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:38",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/sk/changes.html",
+      "sizeBytes": 1153433,
+      "sizeDisplay": "1.1 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sk/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:30",
+      "name": "keyCommands.html",
+      "path": "releases/stable/documentation/ru/keyCommands.html",
+      "sizeBytes": 174080,
+      "sizeDisplay": "170 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ru/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:30",
+      "name": "userGuide.html",
+      "path": "releases/stable/documentation/ru/userGuide.html",
+      "sizeBytes": 786636,
+      "sizeDisplay": "768.2 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ru/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T23:16:24",
+      "name": "changes.html",
+      "path": "releases/stable/documentation/ru/changes.html",
+      "sizeBytes": 1468006,
+      "sizeDisplay": "1.4 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ru/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/zh_TW/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_TW/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/zh_TW/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_TW/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/zh_TW/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_TW/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/zh_CN/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_CN/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/zh_CN/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_CN/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/zh_CN/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_CN/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/vi/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/vi/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/vi/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/vi/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/vi/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/vi/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/uk/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/uk/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/uk/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/uk/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/uk/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/uk/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/tr/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/tr/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/tr/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/tr/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/tr/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/tr/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/ta/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ta/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/ta/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ta/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/ta/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ta/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/sv/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sv/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/sv/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sv/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/sv/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sv/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/sr/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sr/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/sr/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sr/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/sr/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sr/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/sq/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sq/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/sq/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sq/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/sq/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sq/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/sl/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sl/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/sl/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sl/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/sl/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sl/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/sk/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sk/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/sk/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sk/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/sk/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sk/favicon.ico"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "styles.css",
+      "path": "releases/stable/documentation/ru/styles.css",
+      "sizeBytes": 1433,
+      "sizeDisplay": "1.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ru/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "numberedHeadings.css",
+      "path": "releases/stable/documentation/ru/numberedHeadings.css",
+      "sizeBytes": 5836,
+      "sizeDisplay": "5.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ru/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2025-09-14T22:59:44",
+      "name": "favicon.ico",
+      "path": "releases/stable/documentation/ru/favicon.ico",
+      "sizeBytes": 28057,
+      "sizeDisplay": "27.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ru/favicon.ico"
+    },
+    {
+      "depth": 0,
+      "entryType": "dir",
+      "modified": "2025-06-05T00:55:01",
+      "name": "documentation",
+      "path": "releases/2024.3/documentation/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2024-08-19T01:13:37",
+      "name": "nvda_2024.3_controllerClient.zip",
+      "path": "releases/2024.3/nvda_2024.3_controllerClient.zip",
+      "sizeBytes": 3145728,
+      "sizeDisplay": "3 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/nvda_2024.3_controllerClient.zip"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "zh_CN",
+      "path": "releases/2024.3/documentation/zh_CN/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_CN/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "my",
+      "path": "releases/2024.3/documentation/my/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/my/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "pt_PT",
+      "path": "releases/2024.3/documentation/pt_PT/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pt_PT/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "ky",
+      "path": "releases/2024.3/documentation/ky/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ky/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "sq",
+      "path": "releases/2024.3/documentation/sq/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sq/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "ta",
+      "path": "releases/2024.3/documentation/ta/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ta/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "pl",
+      "path": "releases/2024.3/documentation/pl/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pl/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "uk",
+      "path": "releases/2024.3/documentation/uk/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/uk/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "zh_TW",
+      "path": "releases/2024.3/documentation/zh_TW/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_TW/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "nl",
+      "path": "releases/2024.3/documentation/nl/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/nl/"
+    },
+    {
+      "depth": 1,
+      "entryType": "dir",
+      "modified": "2024-08-19T01:13:36",
+      "name": "sv",
+      "path": "releases/2024.3/documentation/sv/",
+      "sizeBytes": null,
+      "sizeDisplay": "",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sv/"
+    },
+    {
+      "depth": 1,
+      "entryType": "file",
+      "modified": "2024-08-19T01:13:36",
+      "name": "developerGuide.html",
+      "path": "releases/2024.3/documentation/developerGuide.html",
+      "sizeBytes": 100044,
+      "sizeDisplay": "97.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/developerGuide.html"
+    },
+    {
+      "depth": 0,
+      "entryType": "file",
+      "modified": "2024-08-19T01:13:34",
+      "name": "nvda_2024.3.exe",
+      "path": "releases/2024.3/nvda_2024.3.exe",
+      "sizeBytes": 36385587,
+      "sizeDisplay": "34.7 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/nvda_2024.3.exe"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:28",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/zh_TW/userGuide.html",
+      "sizeBytes": 380723,
+      "sizeDisplay": "371.8 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_TW/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:26",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/zh_CN/userGuide.html",
+      "sizeBytes": 390963,
+      "sizeDisplay": "381.8 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_CN/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:26",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/zh_TW/keyCommands.html",
+      "sizeBytes": 109568,
+      "sizeDisplay": "107 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_TW/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:26",
+      "name": "changes.html",
+      "path": "releases/2024.3/documentation/zh_TW/changes.html",
+      "sizeBytes": 1048576,
+      "sizeDisplay": "1 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_TW/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:24",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/zh_CN/keyCommands.html",
+      "sizeBytes": 111001,
+      "sizeDisplay": "108.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_CN/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:24",
+      "name": "changes.html",
+      "path": "releases/2024.3/documentation/zh_CN/changes.html",
+      "sizeBytes": 946073,
+      "sizeDisplay": "923.9 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_CN/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:20",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/uk/keyCommands.html",
+      "sizeBytes": 173568,
+      "sizeDisplay": "169.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/uk/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:20",
+      "name": "changes.html",
+      "path": "releases/2024.3/documentation/uk/changes.html",
+      "sizeBytes": 1038540,
+      "sizeDisplay": "1014.2 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/uk/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:20",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/uk/userGuide.html",
+      "sizeBytes": 690790,
+      "sizeDisplay": "674.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/uk/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:14",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/ta/keyCommands.html",
+      "sizeBytes": 245964,
+      "sizeDisplay": "240.2 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ta/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:14",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/ta/userGuide.html",
+      "sizeBytes": 1153433,
+      "sizeDisplay": "1.1 MB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ta/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:14",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/sv/keyCommands.html",
+      "sizeBytes": 56320,
+      "sizeDisplay": "55 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sv/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:14",
+      "name": "changes.html",
+      "path": "releases/2024.3/documentation/sv/changes.html",
+      "sizeBytes": 345,
+      "sizeDisplay": "345 B",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sv/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:14",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/sv/userGuide.html",
+      "sizeBytes": 166400,
+      "sizeDisplay": "162.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sv/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:10",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/sq/keyCommands.html",
+      "sizeBytes": 31539,
+      "sizeDisplay": "30.8 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sq/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:10",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/sq/userGuide.html",
+      "sizeBytes": 109056,
+      "sizeDisplay": "106.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sq/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:02",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/pt_PT/keyCommands.html",
+      "sizeBytes": 123699,
+      "sizeDisplay": "120.8 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pt_PT/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:02",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/pt_PT/userGuide.html",
+      "sizeBytes": 410624,
+      "sizeDisplay": "401 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pt_PT/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:50:00",
+      "name": "changes.html",
+      "path": "releases/2024.3/documentation/pt_PT/changes.html",
+      "sizeBytes": 1017139,
+      "sizeDisplay": "993.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pt_PT/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:56",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/pl/keyCommands.html",
+      "sizeBytes": 124620,
+      "sizeDisplay": "121.7 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pl/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:56",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/pl/userGuide.html",
+      "sizeBytes": 449331,
+      "sizeDisplay": "438.8 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pl/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:54",
+      "name": "changes.html",
+      "path": "releases/2024.3/documentation/pl/changes.html",
+      "sizeBytes": 686489,
+      "sizeDisplay": "670.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pl/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:54",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/nl/userGuide.html",
+      "sizeBytes": 466841,
+      "sizeDisplay": "455.9 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/nl/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:52",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/nl/keyCommands.html",
+      "sizeBytes": 125440,
+      "sizeDisplay": "122.5 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/nl/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:52",
+      "name": "changes.html",
+      "path": "releases/2024.3/documentation/nl/changes.html",
+      "sizeBytes": 474112,
+      "sizeDisplay": "463 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/nl/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:50",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/my/keyCommands.html",
+      "sizeBytes": 78028,
+      "sizeDisplay": "76.2 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/my/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:50",
+      "name": "changes.html",
+      "path": "releases/2024.3/documentation/my/changes.html",
+      "sizeBytes": 44953,
+      "sizeDisplay": "43.9 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/my/changes.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:50",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/my/userGuide.html",
+      "sizeBytes": 263475,
+      "sizeDisplay": "257.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/my/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:48",
+      "name": "keyCommands.html",
+      "path": "releases/2024.3/documentation/ky/keyCommands.html",
+      "sizeBytes": 18841,
+      "sizeDisplay": "18.4 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ky/keyCommands.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:49:48",
+      "name": "userGuide.html",
+      "path": "releases/2024.3/documentation/ky/userGuide.html",
+      "sizeBytes": 72908,
+      "sizeDisplay": "71.2 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ky/userGuide.html"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/zh_CN/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_CN/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/zh_CN/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_CN/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/my/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/my/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/my/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/my/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/pt_PT/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pt_PT/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/pt_PT/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pt_PT/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/ky/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ky/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/ky/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ky/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/sq/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sq/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/sq/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sq/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/ta/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ta/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/ta/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/ta/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/pl/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pl/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/pl/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/pl/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/uk/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/uk/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/uk/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/uk/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/zh_TW/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_TW/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/zh_TW/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/zh_TW/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/nl/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/nl/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/nl/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/nl/numberedHeadings.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "styles.css",
+      "path": "releases/2024.3/documentation/sv/styles.css",
+      "sizeBytes": 1331,
+      "sizeDisplay": "1.3 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sv/styles.css"
+    },
+    {
+      "depth": 2,
+      "entryType": "file",
+      "modified": "2024-08-19T00:34:38",
+      "name": "numberedHeadings.css",
+      "path": "releases/2024.3/documentation/sv/numberedHeadings.css",
+      "sizeBytes": 5734,
+      "sizeDisplay": "5.6 KB",
+      "target": null,
+      "url": "https://download.nvaccess.org/releases/2024.3/documentation/sv/numberedHeadings.css"
+    }
+  ],
+  "generated": "2025-09-24T16:46:31.268509+00:00",
+  "manifest": {
+    "last_tested_nvda": "2026.1.0",
+    "minimum_nvda": "2019.3"
+  },
+  "severities": {
+    "releases/2024.3/documentation/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/developerGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ky/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ky/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ky/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ky/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ky/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/my/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/my/changes.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/my/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/my/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/my/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/my/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/nl/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/nl/changes.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/nl/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/nl/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/nl/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/nl/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pl/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pl/changes.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pl/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pl/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pl/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pl/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pt_PT/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pt_PT/changes.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pt_PT/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pt_PT/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pt_PT/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/pt_PT/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sq/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sq/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sq/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sq/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sq/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sv/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sv/changes.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sv/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sv/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sv/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/sv/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ta/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ta/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ta/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ta/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/ta/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/uk/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/uk/changes.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/uk/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/uk/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/uk/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/uk/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_CN/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_CN/changes.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_CN/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_CN/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_CN/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_CN/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_TW/": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_TW/changes.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_TW/keyCommands.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_TW/numberedHeadings.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_TW/styles.css": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/documentation/zh_TW/userGuide.html": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/nvda_2024.3.exe": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/2024.3/nvda_2024.3_controllerClient.zip": {
+      "level": "info",
+      "reason": "Release 2024.3 is within the tested support window"
+    },
+    "releases/stable/nvda_2025.3.exe": {
+      "level": "info",
+      "reason": "Release 2025.3 is within the tested support window"
+    },
+    "releases/stable/nvda_2025.3_controllerClient.zip": {
+      "level": "info",
+      "reason": "Release 2025.3 is within the tested support window"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52615,4c8a2013.exe": {
+      "level": "low",
+      "reason": "Snapshot alpha-52615 is older than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52622,2f8a9df9.exe": {
+      "level": "low",
+      "reason": "Snapshot alpha-52622 is older than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52630,47e6cf5d.exe": {
+      "level": "low",
+      "reason": "Snapshot alpha-52630 is older than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52660,db11e28a.exe": {
+      "level": "low",
+      "reason": "Snapshot alpha-52660 is older than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52672,32f645ca.exe": {
+      "level": "low",
+      "reason": "Snapshot alpha-52672 is older than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52681,c75b2de9.exe": {
+      "level": "low",
+      "reason": "Snapshot alpha-52681 is older than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52693,5a557d02.exe": {
+      "level": "low",
+      "reason": "Snapshot alpha-52693 is older than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52705,dc226976.exe": {
+      "level": "medium",
+      "reason": "Snapshot alpha-52705 matches the validated build"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52731,f294547a.exe": {
+      "level": "high",
+      "reason": "Snapshot alpha-52731 is newer than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52748,3f9151fe.exe": {
+      "level": "high",
+      "reason": "Snapshot alpha-52748 is newer than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52755,80144828.exe": {
+      "level": "high",
+      "reason": "Snapshot alpha-52755 is newer than validated alpha-52705"
+    },
+    "snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe": {
+      "level": "high",
+      "reason": "Snapshot alpha-52762 is newer than validated alpha-52705"
+    }
+  },
+  "validatedSnapshots": {
+    "alpha": "alpha-52705",
+    "stable": "2024.3"
+  }
+}
