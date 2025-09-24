@@ -1,9 +1,9 @@
 # Voice and language linkage
 
-* Generated: 2025-09-24T21:13:21Z
-* Templates analysed: 26
-* Language profiles analysed: 9
-* Languages observed: 9
+* Generated: 2025-09-24T23:51:17Z
+* Templates analysed: 28
+* Language profiles analysed: 11
+* Languages observed: 11
 
 ## Language matrix
 
@@ -15,6 +15,8 @@
 | es-419 | es-419 | espeak-es-latin | es-419-basic | latin, spanish | latin, spanish | espeak-es-latin → es-419-basic |
 | es-ES | es-ES | espeak-es-castilian | es-es-basic | spain, spanish | castilian, spanish | espeak-es-castilian → es-es-basic |
 | fr-FR | fr-FR | espeak-fr-velvet | fr-fr-basic | french | french, latin | espeak-fr-velvet → fr-fr-basic |
+| hi-IN | hi-IN | espeak-hi-dynamic | hi-in-basic | espeak, hindi, indic, lang:hi | hindi, indic, lang:hi | espeak-hi-dynamic → hi-in-basic |
 | it-IT | it-IT | espeak-it-expressive | it-it-basic | italian | italian, latin | espeak-it-expressive → it-it-basic |
+| ja-JP | ja-JP | espeak-ja-melodic | ja-jp-basic | asia, espeak, japanese, lang:ja | japanese, kana, lang:ja | espeak-ja-melodic → ja-jp-basic |
 | pt-BR | pt-BR | espeak-pt-br-vibrant | pt-br-basic | brazil, portuguese | latin, portuguese | espeak-pt-br-vibrant → pt-br-basic |
 | – | – | espeak-variant-espeak-variants-alex | – | espeak, male, variant | – | – |

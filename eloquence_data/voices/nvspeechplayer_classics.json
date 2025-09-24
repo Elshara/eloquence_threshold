@@ -5,7 +5,7 @@
     "generated": "2025-09-23",
     "notes": [
       "Templates approximate NV Speech Player presets using Eloquence slider ranges.",
-      "Extras record the original frame multipliers from nvSpeechPlayer so contributors can refine the mapping." 
+      "Extras record the original frame multipliers from nvSpeechPlayer so contributors can refine the mapping."
     ]
   },
   "templates": [
@@ -14,7 +14,11 @@
       "name": "NV Speech Player Adam",
       "language": "en-US",
       "description": "Balanced Adam preset with rounded consonants and warm vowels",
-      "tags": ["nvspeechplayer", "english", "classic"],
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "classic"
+      ],
       "baseVoice": "enu",
       "variant": "1",
       "defaultLanguageProfile": "en-us-basic",
@@ -26,7 +30,8 @@
         "headSize": 112,
         "roughness": 18,
         "breathiness": 30,
-        "volume": 90
+        "volume": 90,
+        "gender": 0
       },
       "extras": {
         "phonemeFallback": "examplesFirst",
@@ -47,7 +52,11 @@
       "name": "NV Speech Player Benjamin",
       "language": "en-US",
       "description": "Sharper Benjamin preset with brighter resonances and higher breath",
-      "tags": ["nvspeechplayer", "english", "bright"],
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "bright"
+      ],
       "baseVoice": "enu",
       "variant": "2",
       "defaultLanguageProfile": "en-us-basic",
@@ -59,7 +68,8 @@
         "headSize": 118,
         "roughness": 16,
         "breathiness": 26,
-        "volume": 88
+        "volume": 88,
+        "gender": 0
       },
       "extras": {
         "phonemeFallback": "ipaFirst",
@@ -86,7 +96,11 @@
       "name": "NV Speech Player Caleb",
       "language": "en-US",
       "description": "Breathy Caleb preset for soft speech and whisper-like delivery",
-      "tags": ["nvspeechplayer", "english", "breathy"],
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "breathy"
+      ],
       "baseVoice": "enu",
       "variant": "3",
       "defaultLanguageProfile": "en-us-basic",
@@ -98,7 +112,8 @@
         "headSize": 120,
         "roughness": 28,
         "breathiness": 40,
-        "volume": 85
+        "volume": 85,
+        "gender": 0
       },
       "extras": {
         "phonemeFallback": "descriptionsFirst",
@@ -118,7 +133,11 @@
       "name": "NV Speech Player David",
       "language": "en-US",
       "description": "Lower David preset with relaxed pitch and softened sibilants",
-      "tags": ["nvspeechplayer", "english", "low"],
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "low"
+      ],
       "baseVoice": "enu",
       "variant": "4",
       "defaultLanguageProfile": "en-us-basic",
@@ -130,7 +149,8 @@
         "headSize": 130,
         "roughness": 22,
         "breathiness": 24,
-        "volume": 92
+        "volume": 92,
+        "gender": 0
       },
       "extras": {
         "phonemeFallback": "examplesFirst",

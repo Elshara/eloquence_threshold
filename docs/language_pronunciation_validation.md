@@ -1,9 +1,9 @@
 # Language pronunciation validation
 
-* Profiles checked: 9
-* IPA entries analysed: 98
-* Fully matched IPA entries: 39
-* Unmatched or partial entries: 59
+* Profiles checked: 11
+* IPA entries analysed: 108
+* Fully matched IPA entries: 41
+* Unmatched or partial entries: 67
 
 ## English (UK) – clipped clarity – en-GB – Receives vowels tuned for eSpeak en-gb
 
@@ -95,6 +95,20 @@
 | `Ö` | `ø` | — | IPA 'ø' for symbol 'Ö' in profile 'de-de-basic' does not map to any known phoneme |
 | `Ü` | `y` | — | IPA 'y' for symbol 'Ü' in profile 'de-de-basic' does not map to any known phoneme |
 
+## Hindi – retroflex energy – hi-IN – Core Devanagari characters tuned against eSpeak hi phonemes
+
+* Characters with IPA data: 5 / 5
+* IPA entries: 5
+* Fully matched: 2
+
+### Problematic entries
+
+| Symbol | IPA | Matched phonemes | Notes |
+| --- | --- | --- | --- |
+| `आ` | `aː` | — | IPA 'aː' for symbol 'आ' in profile 'hi-in-basic' does not map to any known phoneme |
+| `क` | `kə` | @- | IPA 'kə' for symbol 'क' in profile 'hi-in-basic' leaves unmatched fragment 'k' |
+| `त्र` | `t̪r̩` | r- | IPA 't̪r̩' for symbol 'त्र' in profile 'hi-in-basic' leaves unmatched fragment 't̪' |
+
 ## Italian – open vowels – it-IT – Italian vowel core tied to eSpeak it voice
 
 * Characters with IPA data: 15 / 15
@@ -113,6 +127,22 @@
 | `É` | `e` | — | IPA 'e' for symbol 'É' in profile 'it-it-basic' does not map to any known phoneme |
 | `Ó` | `o` | — | IPA 'o' for symbol 'Ó' in profile 'it-it-basic' does not map to any known phoneme |
 | `Ù` | `u` | — | IPA 'u' for symbol 'Ù' in profile 'it-it-basic' does not map to any known phoneme |
+
+## Japanese – mora rhythmic – ja-JP – Kana coverage with pitch-accent guidance for NVDA phoneme hints
+
+* Characters with IPA data: 5 / 5
+* IPA entries: 5
+* Fully matched: 0
+
+### Problematic entries
+
+| Symbol | IPA | Matched phonemes | Notes |
+| --- | --- | --- | --- |
+| `あ` | `a` | — | IPA 'a' for symbol 'あ' in profile 'ja-jp-basic' does not map to any known phoneme |
+| `い` | `i` | — | IPA 'i' for symbol 'い' in profile 'ja-jp-basic' does not map to any known phoneme |
+| `か` | `ka` | — | IPA 'ka' for symbol 'か' in profile 'ja-jp-basic' does not map to any known phoneme |
+| `ん` | `ɴ` | — | IPA 'ɴ' for symbol 'ん' in profile 'ja-jp-basic' does not map to any known phoneme |
+| `が` | `ɡa` | ɡ | IPA 'ɡa' for symbol 'が' in profile 'ja-jp-basic' leaves unmatched fragment 'a' |
 
 ## Portuguese (Brazil) – vibrant vowels – pt-BR – Brazilian Portuguese nasal set mapped from eSpeak pt-br
 
@@ -201,6 +231,9 @@
 - IPA 'ts' for symbol 'z' in profile 'de-de-basic' does not map to any known phoneme
 - IPA 'ø' for symbol 'Ö' in profile 'de-de-basic' does not map to any known phoneme
 - IPA 'y' for symbol 'Ü' in profile 'de-de-basic' does not map to any known phoneme
+- IPA 'aː' for symbol 'आ' in profile 'hi-in-basic' does not map to any known phoneme
+- IPA 'kə' for symbol 'क' in profile 'hi-in-basic' leaves unmatched fragment 'k'
+- IPA 't̪r̩' for symbol 'त्र' in profile 'hi-in-basic' leaves unmatched fragment 't̪'
 - IPA 'a' for symbol 'à' in profile 'it-it-basic' does not map to any known phoneme
 - IPA 'e' for symbol 'é' in profile 'it-it-basic' does not map to any known phoneme
 - IPA 'o' for symbol 'ó' in profile 'it-it-basic' does not map to any known phoneme
@@ -209,6 +242,11 @@
 - IPA 'e' for symbol 'É' in profile 'it-it-basic' does not map to any known phoneme
 - IPA 'o' for symbol 'Ó' in profile 'it-it-basic' does not map to any known phoneme
 - IPA 'u' for symbol 'Ù' in profile 'it-it-basic' does not map to any known phoneme
+- IPA 'a' for symbol 'あ' in profile 'ja-jp-basic' does not map to any known phoneme
+- IPA 'i' for symbol 'い' in profile 'ja-jp-basic' does not map to any known phoneme
+- IPA 'ka' for symbol 'か' in profile 'ja-jp-basic' does not map to any known phoneme
+- IPA 'ɴ' for symbol 'ん' in profile 'ja-jp-basic' does not map to any known phoneme
+- IPA 'ɡa' for symbol 'が' in profile 'ja-jp-basic' leaves unmatched fragment 'a'
 - IPA 'a' for symbol 'á' in profile 'pt-br-basic' does not map to any known phoneme
 - IPA 'ɐ̃' for symbol 'ã' in profile 'pt-br-basic' leaves unmatched fragment '̃'
 - IPA 'e' for symbol 'ê' in profile 'pt-br-basic' does not map to any known phoneme

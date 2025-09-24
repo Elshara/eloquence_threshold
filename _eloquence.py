@@ -49,6 +49,7 @@ stopped = threading.Event()
 started = threading.Event()
 param_event = threading.Event()
 Callback = WINFUNCTYPE(c_int, wintypes.HANDLE, wintypes.UINT, wintypes.WPARAM, c_void_p)
+gender=0
 hsz=1
 pitch=2
 fluctuation=3
@@ -241,7 +242,7 @@ class eciThread(threading.Thread):
     param_event.set()
    elif msg.message == WM_COPYVOICE:
     dll.eciCopyVoice(handle, msg.wParam, 0)
-    for i in (rate, pitch, vlm, fluctuation, hsz, rgh, bth):
+    for i in (gender, hsz, pitch, fluctuation, rgh, bth, rate, vlm):
      vparams[i] = dll.eciGetVoiceParam(handle, 0, i)
     param_event.set()
    elif msg.message == WM_KILL:
@@ -298,7 +299,7 @@ def eciNew():
  eci.eciGetAvailableLanguages(byref(avLangs),byref(b))
  if 'eci' in config.conf['speech'] and config.conf['speech']['eci']['voice'] != '': handle=eci.eciNewEx(langs[config.conf['speech']['eci']['voice']][0])
  else: handle=eci.eciNewEx(langs[lang][0])
- for i in (rate, pitch, vlm, fluctuation):
+ for i in (gender, hsz, pitch, fluctuation, rgh, bth, rate, vlm):
   vparams[i] = eci.eciGetVoiceParam(handle, 0, i)
  return eci,handle
 

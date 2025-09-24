@@ -25,6 +25,7 @@
 - Capture build and packaging requirements for every platform you mention. When laying out supported languages, describe expected speech fluency, braille translation/export status, and any dictionary or corpus dependencies that have to ship inside release bundles.
 - Reference the current NVDA validation baseline (alpha-52731 at the time of this update) and note any newer snapshots you test so the compatibility story stays fresh.
 - When cataloguing third-party archives (DataJake, Blind Help Project, Hear2Read, etc.), record extraction steps, archive types, and where you staged the recovered payloads. Mention required tooling (for example, `7z`, `unzip`, `cabextract`) so other contributors can repeat the process.
+- Maintain a rolling roadmap for the DataJake text-to-speech archives: note which synthesizers have been inventoried, which payloads still need extraction, and which automation tasks (inventory scripts, phoneme converters, template generators) remain open so follow-up pull requests can extend coverage without duplicating work.
 - Keep the README and agent guidelines aligned; if you expand the README with new architectural, archival, or customization details, summarize the key points here so future maintainers do not overlook them.
 
 ## Contribution notes

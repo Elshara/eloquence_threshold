@@ -333,6 +333,44 @@
       ]
     },
     {
+      "key": "hi-IN",
+      "languageNames": [
+        "hi-IN"
+      ],
+      "languageTag": "hi-IN",
+      "pairings": [
+        {
+          "profileId": "hi-in-basic",
+          "templateId": "espeak-hi-dynamic"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-hi-dynamic"
+      ],
+      "profileIds": [
+        "hi-in-basic"
+      ],
+      "profileTags": [
+        "hindi",
+        "indic",
+        "lang:hi"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "hi-in-basic"
+      ],
+      "templateIds": [
+        "espeak-hi-dynamic"
+      ],
+      "templateTags": [
+        "espeak",
+        "hindi",
+        "indic",
+        "lang:hi"
+      ]
+    },
+    {
       "key": "it-IT",
       "languageNames": [
         "it-IT"
@@ -364,6 +402,44 @@
       ],
       "templateTags": [
         "italian"
+      ]
+    },
+    {
+      "key": "ja-JP",
+      "languageNames": [
+        "ja-JP"
+      ],
+      "languageTag": "ja-JP",
+      "pairings": [
+        {
+          "profileId": "ja-jp-basic",
+          "templateId": "espeak-ja-melodic"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-ja-melodic"
+      ],
+      "profileIds": [
+        "ja-jp-basic"
+      ],
+      "profileTags": [
+        "japanese",
+        "kana",
+        "lang:ja"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ja-jp-basic"
+      ],
+      "templateIds": [
+        "espeak-ja-melodic"
+      ],
+      "templateTags": [
+        "asia",
+        "espeak",
+        "japanese",
+        "lang:ja"
       ]
     },
     {
@@ -423,10 +499,10 @@
     }
   ],
   "metadata": {
-    "generated": "2025-09-24T21:13:21Z",
-    "languageCount": 9,
-    "profileCount": 9,
-    "templateCount": 26,
+    "generated": "2025-09-24T23:51:17Z",
+    "languageCount": 11,
+    "profileCount": 11,
+    "templateCount": 28,
     "voiceCatalog": {
       "sources": [
         {
@@ -552,6 +628,19 @@
     },
     {
       "defaultVoiceTemplates": [
+        "espeak-hi-dynamic"
+      ],
+      "displayName": "Hindi \u2013 retroflex energy",
+      "id": "hi-in-basic",
+      "language": "hi-IN",
+      "tags": [
+        "hindi",
+        "indic",
+        "lang:hi"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
         "espeak-it-expressive"
       ],
       "displayName": "Italian \u2013 open vowels",
@@ -560,6 +649,19 @@
       "tags": [
         "italian",
         "latin"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "espeak-ja-melodic"
+      ],
+      "displayName": "Japanese \u2013 mora rhythmic",
+      "id": "ja-jp-basic",
+      "language": "ja-JP",
+      "tags": [
+        "japanese",
+        "kana",
+        "lang:ja"
       ]
     },
     {
@@ -721,6 +823,30 @@
       "tags": [
         "portuguese",
         "brazil"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "hi-in-basic",
+      "id": "espeak-hi-dynamic",
+      "language": "hi-IN",
+      "name": "Hindi dynamic clarity",
+      "tags": [
+        "hindi",
+        "lang:hi",
+        "indic",
+        "espeak"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ja-jp-basic",
+      "id": "espeak-ja-melodic",
+      "language": "ja-JP",
+      "name": "Japanese melodic",
+      "tags": [
+        "japanese",
+        "lang:ja",
+        "espeak",
+        "asia"
       ]
     },
     {

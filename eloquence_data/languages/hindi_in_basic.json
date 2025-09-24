@@ -1,0 +1,89 @@
+{
+  "id": "hi-in-basic",
+  "language": "hi-IN",
+  "displayName": "Hindi – retroflex energy",
+  "description": "Core Devanagari characters tuned against eSpeak hi phonemes",
+  "tags": [
+    "hindi",
+    "indic",
+    "lang:hi"
+  ],
+  "stress": [
+    "Primary stress usually falls on the first heavy syllable",
+    "Schwa deletion occurs at word endings when following consonant clusters"
+  ],
+  "sentenceStructure": [
+    "Subject–Object–Verb order with postpositions",
+    "Yes/no questions rise on the final syllable"
+  ],
+  "grammar": [
+    "Retroflex /ɽ/ contrasts with dental /ɾ/",
+    "Aspiration distinguishes minimal pairs such as क /k/ vs ख /kʰ/"
+  ],
+  "defaultVoiceTemplates": [
+    "espeak-hi-dynamic"
+  ],
+  "characters": [
+    {
+      "symbol": "अ",
+      "spoken": "a",
+      "ipa": [
+        "ə"
+      ],
+      "description": "Central short vowel",
+      "example": "अंग",
+      "notes": [
+        "Reduces towards schwa in rapid speech"
+      ]
+    },
+    {
+      "symbol": "आ",
+      "spoken": "aa",
+      "ipa": [
+        "aː"
+      ],
+      "description": "Long open front vowel",
+      "example": "आम",
+      "notes": [
+        "Length marks lexical contrasts with अ"
+      ]
+    },
+    {
+      "symbol": "इ",
+      "spoken": "i",
+      "ipa": [
+        "ɪ"
+      ],
+      "description": "Near-close front vowel",
+      "example": "इकाई",
+      "notes": [
+        "Tends toward /i/ in careful diction"
+      ]
+    },
+    {
+      "symbol": "क",
+      "spoken": "ka",
+      "ipa": [
+        "kə"
+      ],
+      "description": "Voiceless unaspirated velar stop",
+      "example": "कल",
+      "notes": [
+        "Contrasts with ख /kʰ/ for aspiration"
+      ]
+    },
+    {
+      "symbol": "त्र",
+      "spoken": "tra",
+      "ipa": [
+        "t̪r̩"
+      ],
+      "description": "Dental cluster with syllabic /r/",
+      "example": "त्रिवेणी",
+      "stress": "Carries lexical stress in Sanskrit borrowings",
+      "notes": [
+        "Often realised as /trə/ in conversational Hindi"
+      ]
+    }
+  ]
+}

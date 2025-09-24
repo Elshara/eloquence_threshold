@@ -35,6 +35,9 @@
     "IPA 'ts' for symbol 'z' in profile 'de-de-basic' does not map to any known phoneme",
     "IPA '\u00f8' for symbol '\u00d6' in profile 'de-de-basic' does not map to any known phoneme",
     "IPA 'y' for symbol '\u00dc' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA 'a\u02d0' for symbol '\u0906' in profile 'hi-in-basic' does not map to any known phoneme",
+    "IPA 'k\u0259' for symbol '\u0915' in profile 'hi-in-basic' leaves unmatched fragment 'k'",
+    "IPA 't\u032ar\u0329' for symbol '\u0924\u094d\u0930' in profile 'hi-in-basic' leaves unmatched fragment 't\u032a'",
     "IPA 'a' for symbol '\u00e0' in profile 'it-it-basic' does not map to any known phoneme",
     "IPA 'e' for symbol '\u00e9' in profile 'it-it-basic' does not map to any known phoneme",
     "IPA 'o' for symbol '\u00f3' in profile 'it-it-basic' does not map to any known phoneme",
@@ -43,6 +46,11 @@
     "IPA 'e' for symbol '\u00c9' in profile 'it-it-basic' does not map to any known phoneme",
     "IPA 'o' for symbol '\u00d3' in profile 'it-it-basic' does not map to any known phoneme",
     "IPA 'u' for symbol '\u00d9' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'a' for symbol '\u3042' in profile 'ja-jp-basic' does not map to any known phoneme",
+    "IPA 'i' for symbol '\u3044' in profile 'ja-jp-basic' does not map to any known phoneme",
+    "IPA 'ka' for symbol '\u304b' in profile 'ja-jp-basic' does not map to any known phoneme",
+    "IPA '\u0274' for symbol '\u3093' in profile 'ja-jp-basic' does not map to any known phoneme",
+    "IPA '\u0261a' for symbol '\u304c' in profile 'ja-jp-basic' leaves unmatched fragment 'a'",
     "IPA 'a' for symbol '\u00e1' in profile 'pt-br-basic' does not map to any known phoneme",
     "IPA '\u0250\u0303' for symbol '\u00e3' in profile 'pt-br-basic' leaves unmatched fragment '\u0303'",
     "IPA 'e' for symbol '\u00ea' in profile 'pt-br-basic' does not map to any known phoneme",
@@ -526,6 +534,58 @@
       "matchedCount": 3
     },
     {
+      "characterCount": 5,
+      "charactersWithIpa": 5,
+      "display": "Hindi \u2013 retroflex energy \u2013 hi-IN \u2013 Core Devanagari characters tuned against eSpeak hi phonemes",
+      "entries": [
+        {
+          "ipa": "\u0259",
+          "matches": [
+            "@-"
+          ],
+          "symbol": "\u0905"
+        },
+        {
+          "ipa": "a\u02d0",
+          "issue": "IPA 'a\u02d0' for symbol '\u0906' in profile 'hi-in-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0906"
+        },
+        {
+          "ipa": "\u026a",
+          "matches": [
+            "\u026a"
+          ],
+          "symbol": "\u0907"
+        },
+        {
+          "ipa": "k\u0259",
+          "issue": "IPA 'k\u0259' for symbol '\u0915' in profile 'hi-in-basic' leaves unmatched fragment 'k'",
+          "matches": [
+            "@-"
+          ],
+          "symbol": "\u0915"
+        },
+        {
+          "ipa": "t\u032ar\u0329",
+          "issue": "IPA 't\u032ar\u0329' for symbol '\u0924\u094d\u0930' in profile 'hi-in-basic' leaves unmatched fragment 't\u032a'",
+          "matches": [
+            "r-"
+          ],
+          "symbol": "\u0924\u094d\u0930"
+        }
+      ],
+      "id": "hi-in-basic",
+      "ipaCount": 5,
+      "issues": [
+        "IPA 'a\u02d0' for symbol '\u0906' in profile 'hi-in-basic' does not map to any known phoneme",
+        "IPA 'k\u0259' for symbol '\u0915' in profile 'hi-in-basic' leaves unmatched fragment 'k'",
+        "IPA 't\u032ar\u0329' for symbol '\u0924\u094d\u0930' in profile 'hi-in-basic' leaves unmatched fragment 't\u032a'"
+      ],
+      "language": "hi-IN",
+      "matchedCount": 2
+    },
+    {
       "characterCount": 15,
       "charactersWithIpa": 15,
       "display": "Italian \u2013 open vowels \u2013 it-IT \u2013 Italian vowel core tied to eSpeak it voice",
@@ -642,6 +702,56 @@
       ],
       "language": "it-IT",
       "matchedCount": 7
+    },
+    {
+      "characterCount": 5,
+      "charactersWithIpa": 5,
+      "display": "Japanese \u2013 mora rhythmic \u2013 ja-JP \u2013 Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+      "entries": [
+        {
+          "ipa": "a",
+          "issue": "IPA 'a' for symbol '\u3042' in profile 'ja-jp-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u3042"
+        },
+        {
+          "ipa": "i",
+          "issue": "IPA 'i' for symbol '\u3044' in profile 'ja-jp-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u3044"
+        },
+        {
+          "ipa": "ka",
+          "issue": "IPA 'ka' for symbol '\u304b' in profile 'ja-jp-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u304b"
+        },
+        {
+          "ipa": "\u0274",
+          "issue": "IPA '\u0274' for symbol '\u3093' in profile 'ja-jp-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u3093"
+        },
+        {
+          "ipa": "\u0261a",
+          "issue": "IPA '\u0261a' for symbol '\u304c' in profile 'ja-jp-basic' leaves unmatched fragment 'a'",
+          "matches": [
+            "\u0261"
+          ],
+          "symbol": "\u304c"
+        }
+      ],
+      "id": "ja-jp-basic",
+      "ipaCount": 5,
+      "issues": [
+        "IPA 'a' for symbol '\u3042' in profile 'ja-jp-basic' does not map to any known phoneme",
+        "IPA 'i' for symbol '\u3044' in profile 'ja-jp-basic' does not map to any known phoneme",
+        "IPA 'ka' for symbol '\u304b' in profile 'ja-jp-basic' does not map to any known phoneme",
+        "IPA '\u0274' for symbol '\u3093' in profile 'ja-jp-basic' does not map to any known phoneme",
+        "IPA '\u0261a' for symbol '\u304c' in profile 'ja-jp-basic' leaves unmatched fragment 'a'"
+      ],
+      "language": "ja-JP",
+      "matchedCount": 0
     },
     {
       "characterCount": 18,
@@ -898,9 +1008,9 @@
     }
   ],
   "stats": {
-    "ipaCount": 98,
-    "matchedCount": 39,
-    "profileCount": 9,
-    "unmatchedCount": 59
+    "ipaCount": 108,
+    "matchedCount": 41,
+    "profileCount": 11,
+    "unmatchedCount": 67
   }
 }

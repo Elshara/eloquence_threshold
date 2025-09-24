@@ -181,6 +181,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   NumericDriverSetting("hsz", "Head Size"),
   NumericDriverSetting("rgh", "Roughness"),
   NumericDriverSetting("bth", "Breathiness"),
+  NumericDriverSetting("gender", _("Gender")),
   BooleanDriverSetting("backquoteVoiceTags","Enable backquote voice &tags", True),
   BooleanDriverSetting("ABRDICT","Enable &abbreviation dictionary", False),
   BooleanDriverSetting("phrasePrediction","Enable phrase prediction", False),
@@ -258,6 +259,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  _LANGUAGE_PROFILE_AUTO = "auto"
  _LANGUAGE_PROFILE_DISABLED = "disabled"
  _VOICE_PARAMETER_ORDER = (
+  "gender",
   "rate",
   "pitch",
   "inflection",
@@ -267,6 +269,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   "volume",
  )
  _VOICE_PARAM_BINDINGS = {
+  "gender": _eloquence.gender,
   "pitch": _eloquence.pitch,
   "inflection": _eloquence.fluctuation,
   "headSize": _eloquence.hsz,
@@ -1239,6 +1242,13 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
 
  def _get_bth(self):
   return self.getVParam(_eloquence.bth)
+
+ def _set_gender(self, vl):
+  vl = int(vl)
+  self.setVParam(_eloquence.gender, vl)
+
+ def _get_gender(self):
+  return self.getVParam(_eloquence.gender)
 
  def _getAvailableVoices(self):
   o = OrderedDict()

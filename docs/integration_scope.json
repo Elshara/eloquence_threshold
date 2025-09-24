@@ -1,17 +1,17 @@
 {
   "summary": {
     "voices": {
-      "totalTemplates": 26,
-      "languagesWithTemplates": 9,
+      "totalTemplates": 28,
+      "languagesWithTemplates": 11,
       "tagCounts": {
         "english": 18,
         "eloquence": 8,
         "dectalk": 4,
+        "espeak": 4,
         "legacy": 4,
         "nvspeechplayer": 4,
         "sapi4": 3,
         "community": 2,
-        "espeak": 2,
         "heritage": 2,
         "ibm": 2,
         "male": 2,
@@ -20,6 +20,7 @@
         "studio": 2,
         "variant": 2,
         "viavoice": 2,
+        "asia": 1,
         "blindhelp": 1,
         "brazil": 1,
         "breathy": 1,
@@ -28,9 +29,14 @@
         "codefactory": 1,
         "french": 1,
         "german": 1,
+        "hindi": 1,
+        "indic": 1,
         "italian": 1,
+        "japanese": 1,
         "jaws": 1,
         "lang:en-us": 1,
+        "lang:hi": 1,
+        "lang:ja": 1,
         "latin": 1,
         "low": 1,
         "modern": 1,
@@ -113,12 +119,22 @@
           "tags": [
             "loudness"
           ]
+        },
+        "gender": {
+          "label": "Gender resonance",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0,
+          "step": 1,
+          "tags": [
+            "timbre"
+          ]
         }
       }
     },
     "languageProfiles": {
-      "total": 9,
-      "withCharacters": 9
+      "total": 11,
+      "withCharacters": 11
     },
     "phonemes": {
       "categories": 20,
@@ -215,6 +231,16 @@
       ]
     },
     {
+      "language": "hi-IN",
+      "normalised": "hi-IN",
+      "templateIds": [
+        "espeak-hi-dynamic"
+      ],
+      "defaultProfileTemplates": [
+        "hi-in-basic"
+      ]
+    },
+    {
       "language": "it-IT",
       "normalised": "it-IT",
       "templateIds": [
@@ -222,6 +248,16 @@
       ],
       "defaultProfileTemplates": [
         "it-it-basic"
+      ]
+    },
+    {
+      "language": "ja-JP",
+      "normalised": "ja-JP",
+      "templateIds": [
+        "espeak-ja-melodic"
+      ],
+      "defaultProfileTemplates": [
+        "ja-jp-basic"
       ]
     },
     {
@@ -579,6 +615,39 @@
       ]
     },
     {
+      "id": "hi-in-basic",
+      "language": "hi-IN",
+      "normalisedLanguage": "hi-IN",
+      "displayName": "Hindi – retroflex energy",
+      "characterCount": 5,
+      "defaultVoiceTemplates": [
+        "espeak-hi-dynamic"
+      ],
+      "linkedVoiceTemplates": [
+        "espeak-hi-dynamic"
+      ],
+      "linkedVoiceLabels": [
+        "Hindi dynamic clarity – hi-IN – Hindi preset inspired by eSpeak hi voice with energetic intonation and clear retroflex stops"
+      ],
+      "tags": [
+        "hindi",
+        "indic",
+        "lang:hi"
+      ],
+      "stressNotes": [
+        "Primary stress usually falls on the first heavy syllable",
+        "Schwa deletion occurs at word endings when following consonant clusters"
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with postpositions",
+        "Yes/no questions rise on the final syllable"
+      ],
+      "grammarNotes": [
+        "Retroflex /ɽ/ contrasts with dental /ɾ/",
+        "Aspiration distinguishes minimal pairs such as क /k/ vs ख /kʰ/"
+      ]
+    },
+    {
       "id": "it-it-basic",
       "language": "it-IT",
       "normalisedLanguage": "it-IT",
@@ -608,6 +677,39 @@
       "grammarNotes": [
         "Double consonants held longer",
         "Open/closed e and o contrast meaning"
+      ]
+    },
+    {
+      "id": "ja-jp-basic",
+      "language": "ja-JP",
+      "normalisedLanguage": "ja-JP",
+      "displayName": "Japanese – mora rhythmic",
+      "characterCount": 5,
+      "defaultVoiceTemplates": [
+        "espeak-ja-melodic"
+      ],
+      "linkedVoiceTemplates": [
+        "espeak-ja-melodic"
+      ],
+      "linkedVoiceLabels": [
+        "Japanese melodic – ja-JP – Japanese preset shaped from eSpeak ja voice with gentle pitch movement and soft consonants"
+      ],
+      "tags": [
+        "japanese",
+        "kana",
+        "lang:ja"
+      ],
+      "stressNotes": [
+        "Pitch accent typically falls on the second mora of a word",
+        "Unaccented words sustain high pitch until the final mora"
+      ],
+      "sentenceStructure": [
+        "Topic–Comment structure with Subject–Object–Verb order",
+        "Particles anchor grammatical roles and affect intonation"
+      ],
+      "grammarNotes": [
+        "Long vowels and geminated consonants count as separate mora",
+        "The moraic nasal ん assimilates to following consonant place"
       ]
     },
     {

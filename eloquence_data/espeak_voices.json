@@ -81,6 +81,17 @@
       "tags": [
         "loudness"
       ]
+    },
+    "gender": {
+      "label": "Gender resonance",
+      "description": "0 = masculine tract target, 1 = feminine tract target.",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "step": 1,
+      "tags": [
+        "timbre"
+      ]
     }
   },
   "defaults": {
@@ -108,7 +119,8 @@
         "headSize": 128,
         "roughness": 36,
         "breathiness": 28,
-        "volume": 90
+        "volume": 90,
+        "gender": 0
       }
     },
     {
@@ -132,7 +144,8 @@
         "headSize": 122,
         "roughness": 32,
         "breathiness": 24,
-        "volume": 92
+        "volume": 92,
+        "gender": 0
       }
     },
     {
@@ -155,7 +168,8 @@
         "headSize": 134,
         "roughness": 34,
         "breathiness": 26,
-        "volume": 88
+        "volume": 88,
+        "gender": 0
       }
     },
     {
@@ -178,7 +192,8 @@
         "headSize": 130,
         "roughness": 30,
         "breathiness": 24,
-        "volume": 90
+        "volume": 90,
+        "gender": 0
       }
     },
     {
@@ -200,7 +215,8 @@
         "headSize": 140,
         "roughness": 28,
         "breathiness": 32,
-        "volume": 86
+        "volume": 86,
+        "gender": 0
       }
     },
     {
@@ -222,7 +238,8 @@
         "headSize": 124,
         "roughness": 26,
         "breathiness": 20,
-        "volume": 93
+        "volume": 93,
+        "gender": 0
       }
     },
     {
@@ -244,7 +261,8 @@
         "headSize": 126,
         "roughness": 30,
         "breathiness": 34,
-        "volume": 89
+        "volume": 89,
+        "gender": 0
       }
     },
     {
@@ -267,7 +285,60 @@
         "headSize": 132,
         "roughness": 32,
         "breathiness": 30,
-        "volume": 92
+        "volume": 92,
+        "gender": 0
+      }
+    },
+    {
+      "id": "espeak-hi-dynamic",
+      "name": "Hindi dynamic clarity",
+      "language": "hi-IN",
+      "description": "Hindi preset inspired by eSpeak hi voice with energetic intonation and clear retroflex stops",
+      "tags": [
+        "hindi",
+        "lang:hi",
+        "indic",
+        "espeak"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "hi-in-basic",
+      "sourceVoice": "hi",
+      "parameters": {
+        "rate": 108,
+        "pitch": 112,
+        "inflection": 60,
+        "headSize": 118,
+        "roughness": 24,
+        "breathiness": 34,
+        "volume": 92,
+        "gender": 0
+      }
+    },
+    {
+      "id": "espeak-ja-melodic",
+      "name": "Japanese melodic",
+      "language": "ja-JP",
+      "description": "Japanese preset shaped from eSpeak ja voice with gentle pitch movement and soft consonants",
+      "tags": [
+        "japanese",
+        "lang:ja",
+        "espeak",
+        "asia"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "ja-jp-basic",
+      "sourceVoice": "ja",
+      "parameters": {
+        "rate": 112,
+        "pitch": 126,
+        "inflection": 48,
+        "headSize": 104,
+        "roughness": 20,
+        "breathiness": 26,
+        "volume": 88,
+        "gender": 0
       }
     }
   ]
