@@ -17,21 +17,52 @@ We actively follow the [NVDA source repository](https://github.com/nvaccess/nvda
 Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-bit Eloquence runtime. The driver automatically discovers architecture-specific DLLs (for example, `eloquence/x64/eci.dll`) and falls back to the classic 32-bit build when appropriate. If a compatible library is missing the driver logs a clear error instead of silently failing.
 
 ### Mapping the NV Access download archive for automation
-To keep Eloquence Threshold validated against every public NVDA milestone we catalogue the layout of [download.nvaccess.org](https://download.nvaccess.org/). Automation scripts can crawl these predictable folders to fetch installers, portable builds, SDKs, and documentation without hand-editing URLs each time NVDA publishes a release:
+To keep Eloquence Threshold validated against every public NVDA milestone we catalogue the layout of [download.nvaccess.org](https://download.nvaccess.org/). Automation scripts can crawl these predictable folders to fetch installers, controller clients, manuals, and debugging symbols without hand-editing URLs every time NVDA publishes a build.
 
-- **`releases/`** – Versioned directories such as `2025.3/` hold official builds. Inside each folder you will find:
-  - `nvda_<version>.exe` for the interactive installer and `nvda_<version>_portable.zip` for the portable distribution that testers can unzip inside CI jobs.
-  - `nvda_<version>_source.zip` for the full Python source tree and `nvda_<version>_symbols.zip` for debugging symbols. Our pipeline references these archives when regenerating stubs or verifying API shims.
-  - `nvda_<version>_controllerClient.zip` plus the `documentation/` subfolder, which fan out into language-specific manuals (for example, `documentation/en/`, `documentation/pt_BR/`). These are useful when confirming UI wording that our README mirrors or when aligning localisation terminology across phoneme profiles.
-  - Symlinks such as `releases/stable/` and `releases/beta/` always point at the current stable or beta directory; monitor their timestamps to learn when NVDA promotes a build.
-- **`snapshots/`** – Contains rolling builds for development branches. Use these to stress-test upcoming changes without waiting for a public beta:
-  - `snapshots/alpha/` exposes executable installers named `nvda_snapshot_alpha-<build>,<changeset>.exe`. We reference the same naming convention in commit messages and README compatibility tables so testers can correlate crash dumps with upstream revisions.
-  - `snapshots/beta/` and `snapshots/try/` follow the same pattern for release candidates and pull-request validation builds.
-  - Snapshot files occasionally appear as `0.0 B` during mirroring; retry your download logic until a non-zero size is observed before running automated smoke tests.
-- **`symbols/`** – Hosts compressed PDB symbol bundles per release. When diagnosing crashes on Windows, point WinDbg or Visual Studio at this path so stack traces resolve correctly; it matches the metadata referenced in our `build.py` packaging notes.
-- **`documentation/` (symlink)** – Mirrors `releases/stable/documentation` so direct links to manuals remain valid even after a new release ships. Link-checkers in this repository reference the symlink to avoid manual updates when the stable pointer changes.
+#### Root layout
+| Path | Type | Typical entries | Why it matters |
+| --- | --- | --- | --- |
+| `releases/` | Directory | Versioned folders such as `2025.3/` plus symlinks `stable/` and `beta/` that point at the current GA or release-candidate build. | Fetch production installers and manual bundles; watch the symlinks for promotions. |
+| `snapshots/` | Directory | Rolling channels `alpha/`, `beta/`, `rc/`, and `try/` that expose development executables for every merged changeset. | Exercise upcoming NVDA changes and confirm Eloquence keeps working on nightly builds. |
+| `symbols/` | Directory | Symbol stores for releases (`nvdaReleases/`), snapshots (`nvdaSnapshots/`), plus historic `python/` and `wxPython/` debug files. | Feed WinDbg or Visual Studio when diagnosing crashes against specific NVDA binaries. |
+| `documentation/` | Symlink | Points to `releases/stable/documentation`, exposing the same language folders as the stable release. | Link here for manuals so URLs stay valid after each release. |
 
-Because the hierarchy is deterministic, you can parametrize CI jobs to pull the latest installer (`releases/stable/nvda_<tag>.exe`) or the newest alpha build (`snapshots/alpha/nvda_snapshot_alpha-*.exe`) before launching our automated synthesis smoke tests. Recording these locations here keeps the workflow self-documenting and saves future contributors from tracing the index every time NVDA updates its infrastructure.
+#### `releases/` directory map
+Each versioned folder contains the signed installer, the remote-control SDK, and a documentation tree split by locale. Older releases also surface optional archives such as portable or source zips, so automation should probe for those names but treat them as optional.
+
+| Path fragment | What you find | Notes for automation |
+| --- | --- | --- |
+| `releases/<version>/nvda_<version>.exe` | Primary installer for the release. | Download for manual testing or to seed virtual machines. |
+| `releases/<version>/nvda_<version>_controllerClient.zip` | Controller client SDK for remote control or scripting. | Mirror this alongside the installer so integration tests can drive NVDA remotely. |
+| `releases/<version>/documentation/` | Language folders (for example `en/`, `pt_BR/`, `zh_CN/`) with translated manuals. | Iterate through subfolders to keep track of newly translated locales. |
+| `releases/<version>/documentation/<locale>/changes.html` | Release notes describing fixes and new features for that locale. | Parse these pages to understand what changed between builds—ideal for regression test planning. |
+| `releases/<version>/documentation/<locale>/userGuide.html` | Full user guide for the locale. | Scrape terminology when aligning README phrasing or pronunciation hints. |
+| `releases/<version>/documentation/<locale>/keyCommands.html` | Keyboard shortcut reference. | Validate that Eloquence announcements match NVDA’s documented keystrokes. |
+| `releases/<version>/documentation/<locale>/styles.css` and `numberedHeadings.css` | Shared styling for manuals. | Changes here hint at documentation structure updates that could affect scraping. |
+| `releases/<version>/documentation/<locale>/favicon.ico` | Icon bundled with the manual set. | Optional asset—useful when mirroring manuals verbatim. |
+
+Symlinks `releases/stable/` and `releases/beta/` follow the most recent directories; monitor their modification timestamps to detect promotions without diffing the entire listing.
+
+#### `snapshots/` directory map
+The snapshot hierarchy exposes every in-progress build, with filenames that capture both the sequential build number and the Mercurial or Git changeset hash. Pay close attention to file sizes—brand-new uploads often appear as `0.0 B` for a few minutes while the mirror finishes syncing.
+
+| Path | Contents | How we use it |
+| --- | --- | --- |
+| `snapshots/alpha/` | `nvda_snapshot_alpha-<build>,<changeset>.exe` installers for nightly development builds. | Run automated smoke tests against the next NVDA core to catch compatibility issues early. |
+| `snapshots/beta/` | Executables for beta-channel builds that precede release candidates. | Validate features slated for the next minor release before they stabilise. |
+| `snapshots/rc/` | Executables for release-candidate builds (mirrors the `releases/<version>rc*` folders). | Final regression runs before a build becomes `releases/stable`. |
+| `snapshots/try/` | Subdirectories per experimental branch (for example `try-64bit/`, `try-chineseWordSegmentation-staging/`) each holding their own executables. | Track pull-request validation builds or platform experiments; perfect for testing architecture-specific shims. |
+
+#### `symbols/` directory map
+NV Access hosts symbols in a SymSrv-style layout so debuggers can download only the modules they need.
+
+| Path | Contents | Notes |
+| --- | --- | --- |
+| `symbols/nvdaReleases/` | Subdirectories per DLL/EXE (for example `espeak.dll/`, `nvdaHelperRemote.dll/`) containing hashed folders like `68C74B2Fb7000/` with compressed binaries (`espeak.dl_`). | Point WinDbg at this path to symbolicate release crash dumps. |
+| `symbols/nvdaSnapshots/` | Mirrors the release layout for snapshot builds, so nightly symbols remain accessible. | Enables debugging against alpha/beta executables shipped from `snapshots/`. |
+| `symbols/python/` and `symbols/wxPython/` | Historical symbol stores for the Python and wxPython runtimes NVDA shipped with in prior years. | Useful when auditing regressions that span multiple NVDA eras. |
+
+Because the hierarchy is deterministic, you can parametrise CI jobs to pull the latest installer (`releases/stable/nvda_<tag>.exe`) or the newest alpha build (`snapshots/alpha/nvda_snapshot_alpha-*.exe`) before launching our automated synthesis smoke tests. Recording these locations here keeps the workflow self-documenting and saves future contributors from tracing the index every time NVDA updates its infrastructure.
 
 ## Getting started
 1. Download the latest packaged add-on from the [releases page](https://github.com/pumper42nickel/eloquence_threshold/releases/latest/download/eloquence.nvda-addon), or clone this repository to build locally.
