@@ -70,6 +70,29 @@ class CliReportTests(unittest.TestCase):
             self.assertTrue(md_path.read_text(encoding="utf-8").strip())
             self.assertIn("stats", payload)
 
+    def test_check_nvda_updates(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            json_path = Path(tmp, "nvda_updates.json")
+            md_path = Path(tmp, "nvda_updates.md")
+            result = self._run_tool(
+                "tools/check_nvda_updates.py",
+                "--snapshot",
+                "docs/download_nvaccess_snapshot.json",
+                "--validated",
+                "docs/validated_nvda_builds.json",
+                "--manifest",
+                "manifest.ini",
+                "--json",
+                str(json_path),
+                "--markdown",
+                str(md_path),
+            )
+            self.assertEqual(result.returncode, 0, msg=result.stderr)
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            self.assertIn("entries", payload)
+            self.assertTrue(payload["entries"])
+            self.assertTrue(md_path.read_text(encoding="utf-8").strip())
+
 
 if __name__ == "__main__":
     unittest.main()
