@@ -213,11 +213,13 @@ Each release will document which catalogues (phonemes, language profiles, templa
 ### Archival scanning and extraction plan
 Community mirrors like DataJake ship assets as `.exe`, `.zip`, `.7z`, `.cab`, and bespoke installer formats. To make those archives actionable inside the add-on:
 
-1. **Inventory each directory.** The next automation milestone is a crawler that walks the DataJake tree, records filenames, sizes, timestamps, and checksums, and emits JSON/Markdown manifests linked to the original URLs. Until that script lands, log your findings manually in pull requests so we can seed the dataset gradually.
+1. **Inventory each directory.** Use `python tools/inventory_archives.py --roots <paths> --json docs/archive_inventory.json --markdown docs/archive_inventory.md` to crawl DataJake mirrors (or any extracted archive), capture filenames, sizes, timestamps, and previews, and produce JSON/Markdown manifests ready for review. Re-run the helper whenever new payloads are added so provenance reports stay current.
 2. **Standardise extraction tooling.** Install `7z`, `unzip`, and `cabextract` (or the Python equivalents in `py7zr`/`zipfile`) before unpacking any archive. Expand every payload into a deterministic folder such as `build/extracted/<archive-name>/` so follow-up automation can diff contents without downloading the originals again.
 3. **Normalise runtimes.** Move recovered `.dll`, `.syn`, `.ph`, `.dic`, and helper binaries into architecture-aware staging directories: `eloquence/` for legacy 32-bit builds, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, and `eloquence_arm64/` for platform-specific payloads. Language and phoneme data should flow into `eloquence_data/phonemes/ingest/` or a new locale folder under `eloquence_data/languages/` before conversion scripts run.
 4. **Document provenance.** Record archive names, version strings, and source URLs inside the JSON metadata you produce (`extras.sourceArchive`, README tables, or automation notes) so future maintainers can validate licensing and trace changes.
-5. **Automate parsing.** `AGENTS.md` tracks an open task to build a speech-data parser that converts extracted payloads into JSON catalogues, refreshes integration reports, and flags missing metadata. When you work on this script, update both the README and the guidelines with invocation examples and expected outputs.
+5. **Automate parsing.** `AGENTS.md` tracks an open task to build a speech-data parser that converts extracted payloads into JSON catalogues, refreshes integration reports, and flags missing metadata. When you extend the inventory helper or introduce additional parsers, update both the README and the guidelines with invocation examples and expected outputs.
+
+The Markdown table produced by `tools/inventory_archives.py` highlights the most recent additions (sorted by path depth), while the JSON payload can feed future CodeQL or CI comparisons that ensure cached datasets match the manifests developers expect.
 
 This workflow ensures that every legacy synthesizer asset we inspect becomes a reproducible, well-documented contribution to the unified Eloquence dataset.
 
