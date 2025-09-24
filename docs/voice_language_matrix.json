@@ -1,0 +1,892 @@
+{
+  "issues": {
+    "missingDefaultProfiles": [],
+    "missingDefaultTemplates": [],
+    "profilesWithoutLanguage": []
+  },
+  "languages": [
+    {
+      "key": "en-US",
+      "languageNames": [
+        "en-US"
+      ],
+      "languageTag": "en-US",
+      "pairings": [
+        {
+          "profileId": "en-us-basic",
+          "templateId": "dectalk-beautiful-betty"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "dectalk-perfect-paul"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "dectalk-rough-rita"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "dectalk-whispering-wendy"
+        },
+        {
+          "profileId": "en-us-heritage",
+          "templateId": "eloquence-bhp-precision"
+        },
+        {
+          "profileId": "en-us-heritage",
+          "templateId": "eloquence-heritage-jaws-classic"
+        },
+        {
+          "profileId": "en-us-heritage",
+          "templateId": "eloquence-loquence-studio"
+        },
+        {
+          "profileId": "en-us-heritage",
+          "templateId": "eloquence-sapi4-eloq61-studio"
+        },
+        {
+          "profileId": "en-us-heritage",
+          "templateId": "eloquence-sapi4-viavoice-tracy"
+        },
+        {
+          "profileId": "en-us-heritage",
+          "templateId": "eloquence-sapi5-codefactory-balanced"
+        },
+        {
+          "profileId": "en-us-heritage",
+          "templateId": "eloquence-sapi5-viavoice-paul-xl"
+        },
+        {
+          "profileId": "en-us-heritage",
+          "templateId": "eloquence-window-eyes-expressive"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "espeak-en-us-bright"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "espeak-variant-espeak-variants-storm"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "nvspeechplayer-adam"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "nvspeechplayer-benjamin"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "nvspeechplayer-caleb"
+        },
+        {
+          "profileId": "en-us-basic",
+          "templateId": "nvspeechplayer-david"
+        }
+      ],
+      "profileCount": 2,
+      "profileDefaultTemplates": [
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-window-eyes-expressive",
+        "espeak-en-us-bright"
+      ],
+      "profileIds": [
+        "en-us-basic",
+        "en-us-heritage"
+      ],
+      "profileTags": [
+        "community",
+        "eloquence",
+        "english",
+        "heritage",
+        "latin"
+      ],
+      "templateCount": 18,
+      "templateDefaultProfiles": [
+        "en-us-basic",
+        "en-us-heritage"
+      ],
+      "templateIds": [
+        "dectalk-beautiful-betty",
+        "dectalk-perfect-paul",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi5-codefactory-balanced",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-window-eyes-expressive",
+        "espeak-en-us-bright",
+        "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ],
+      "templateTags": [
+        "blindhelp",
+        "breathy",
+        "bright",
+        "classic",
+        "codefactory",
+        "community",
+        "dectalk",
+        "eloquence",
+        "english",
+        "espeak",
+        "heritage",
+        "ibm",
+        "jaws",
+        "lang:en-us",
+        "legacy",
+        "low",
+        "male",
+        "modern",
+        "nvspeechplayer",
+        "sapi4",
+        "sapi5",
+        "studio",
+        "us",
+        "variant",
+        "viavoice",
+        "window-eyes"
+      ]
+    },
+    {
+      "key": "de-DE",
+      "languageNames": [
+        "de-DE"
+      ],
+      "languageTag": "de-DE",
+      "pairings": [
+        {
+          "profileId": "de-de-basic",
+          "templateId": "espeak-de-precision"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-de-precision"
+      ],
+      "profileIds": [
+        "de-de-basic"
+      ],
+      "profileTags": [
+        "german",
+        "latin"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "de-de-basic"
+      ],
+      "templateIds": [
+        "espeak-de-precision"
+      ],
+      "templateTags": [
+        "german"
+      ]
+    },
+    {
+      "key": "en-GB",
+      "languageNames": [
+        "en-GB"
+      ],
+      "languageTag": "en-GB",
+      "pairings": [
+        {
+          "profileId": "en-gb-basic",
+          "templateId": "espeak-en-gb-clarity"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-en-gb-clarity"
+      ],
+      "profileIds": [
+        "en-gb-basic"
+      ],
+      "profileTags": [
+        "british",
+        "english"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "en-gb-basic"
+      ],
+      "templateIds": [
+        "espeak-en-gb-clarity"
+      ],
+      "templateTags": [
+        "community",
+        "english",
+        "uk"
+      ]
+    },
+    {
+      "key": "es-419",
+      "languageNames": [
+        "es-419"
+      ],
+      "languageTag": "es-419",
+      "pairings": [
+        {
+          "profileId": "es-419-basic",
+          "templateId": "espeak-es-latin"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-es-latin"
+      ],
+      "profileIds": [
+        "es-419-basic"
+      ],
+      "profileTags": [
+        "latin",
+        "spanish"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "es-419-basic"
+      ],
+      "templateIds": [
+        "espeak-es-latin"
+      ],
+      "templateTags": [
+        "latin",
+        "spanish"
+      ]
+    },
+    {
+      "key": "es-ES",
+      "languageNames": [
+        "es-ES"
+      ],
+      "languageTag": "es-ES",
+      "pairings": [
+        {
+          "profileId": "es-es-basic",
+          "templateId": "espeak-es-castilian"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-es-castilian"
+      ],
+      "profileIds": [
+        "es-es-basic"
+      ],
+      "profileTags": [
+        "castilian",
+        "spanish"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "es-es-basic"
+      ],
+      "templateIds": [
+        "espeak-es-castilian"
+      ],
+      "templateTags": [
+        "spain",
+        "spanish"
+      ]
+    },
+    {
+      "key": "fr-FR",
+      "languageNames": [
+        "fr-FR"
+      ],
+      "languageTag": "fr-FR",
+      "pairings": [
+        {
+          "profileId": "fr-fr-basic",
+          "templateId": "espeak-fr-velvet"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-fr-velvet"
+      ],
+      "profileIds": [
+        "fr-fr-basic"
+      ],
+      "profileTags": [
+        "french",
+        "latin"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "fr-fr-basic"
+      ],
+      "templateIds": [
+        "espeak-fr-velvet"
+      ],
+      "templateTags": [
+        "french"
+      ]
+    },
+    {
+      "key": "it-IT",
+      "languageNames": [
+        "it-IT"
+      ],
+      "languageTag": "it-IT",
+      "pairings": [
+        {
+          "profileId": "it-it-basic",
+          "templateId": "espeak-it-expressive"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-it-expressive"
+      ],
+      "profileIds": [
+        "it-it-basic"
+      ],
+      "profileTags": [
+        "italian",
+        "latin"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "it-it-basic"
+      ],
+      "templateIds": [
+        "espeak-it-expressive"
+      ],
+      "templateTags": [
+        "italian"
+      ]
+    },
+    {
+      "key": "pt-BR",
+      "languageNames": [
+        "pt-BR"
+      ],
+      "languageTag": "pt-BR",
+      "pairings": [
+        {
+          "profileId": "pt-br-basic",
+          "templateId": "espeak-pt-br-vibrant"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "espeak-pt-br-vibrant"
+      ],
+      "profileIds": [
+        "pt-br-basic"
+      ],
+      "profileTags": [
+        "latin",
+        "portuguese"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "pt-br-basic"
+      ],
+      "templateIds": [
+        "espeak-pt-br-vibrant"
+      ],
+      "templateTags": [
+        "brazil",
+        "portuguese"
+      ]
+    },
+    {
+      "key": "unspecified",
+      "languageNames": [],
+      "languageTag": null,
+      "pairings": [],
+      "profileCount": 0,
+      "profileDefaultTemplates": [],
+      "profileIds": [],
+      "profileTags": [],
+      "templateCount": 1,
+      "templateDefaultProfiles": [],
+      "templateIds": [
+        "espeak-variant-espeak-variants-alex"
+      ],
+      "templateTags": [
+        "espeak",
+        "male",
+        "variant"
+      ]
+    }
+  ],
+  "metadata": {
+    "generated": "2025-09-24T21:13:21Z",
+    "languageCount": 9,
+    "profileCount": 9,
+    "templateCount": 26,
+    "voiceCatalog": {
+      "sources": [
+        {
+          "file": "dectalk_voices.json",
+          "generated": "2024-12-05",
+          "id": "dectalk-voices",
+          "notes": "Parameter seeds designed to evoke DECtalk timbres when rendered by Eloquence",
+          "source": "Community approximations of DECtalk / FonixTalk voice personalities"
+        },
+        {
+          "file": "espeak_voices.json",
+          "generated": "2024-11-27",
+          "id": "espeak-voices",
+          "notes": "Suggested Eloquence parameter starting points for language-aware templates",
+          "source": "Derived from eSpeak NG community voice definitions"
+        },
+        {
+          "file": "voices/eloquence_heritage.json",
+          "generated": "2025-01-11",
+          "id": "voices-eloquence-heritage",
+          "notes": [
+            "Parameter sets approximate flagship voices from historical ETI Eloquence builds and high fidelity Loquendo ports.",
+            "Boolean toggles mimic how classic screen readers bundled abbreviation dictionaries and inline voice tags."
+          ],
+          "source": "Manual captures of heritage Eloquence releases for JAWS, Window-Eyes, and Loquendo SAPI-4"
+        },
+        {
+          "file": "voices/eloquence_sapi.json",
+          "generated": "2025-01-12",
+          "id": "voices-eloquence-sapi",
+          "notes": [
+            "Parameter sets derived from listening tests against the DataJake SAPI voice archives (eloq61.exe, IBM-ViaVoice_TTS-SAPI4.zip, SAPI5_IBMTTS.zip).",
+            "Templates aim to reproduce the smoother Studio variants and brighter ViaVoice timbres inside Eloquence's runtime so users can jump between NVDA and SAPI baselines.",
+            "Includes a capture of Code Factory's Eloquence for Windows SAPI 5 package so users can compare its voicing against the DataJake mirrors."
+          ],
+          "source": "Community SAPI-4 and SAPI-5 Eloquence/ViaVoice archives"
+        },
+        {
+          "file": "voices/nvspeechplayer_classics.json",
+          "generated": "2025-09-23",
+          "id": "voices-nvspeechplayer-classics",
+          "notes": [
+            "Templates approximate NV Speech Player presets using Eloquence slider ranges.",
+            "Extras record the original frame multipliers from nvSpeechPlayer so contributors can refine the mapping."
+          ],
+          "revision": "e51ee50241d88e3d20d4a8d218389d8439deba32",
+          "source": "NV Speech Player NVDA add-on voices"
+        },
+        {
+          "count": 2,
+          "file": "espeak_variants",
+          "id": "espeak-variants",
+          "notes": "Imported from eSpeak NG variant voice definitions"
+        }
+      ]
+    }
+  },
+  "profiles": [
+    {
+      "defaultVoiceTemplates": [
+        "espeak-en-gb-clarity"
+      ],
+      "displayName": "English (UK) \u2013 clipped clarity",
+      "id": "en-gb-basic",
+      "language": "en-GB",
+      "tags": [
+        "english",
+        "british"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "espeak-en-us-bright"
+      ],
+      "displayName": "English (US) \u2013 tactile vowels",
+      "id": "en-us-basic",
+      "language": "en-US",
+      "tags": [
+        "english",
+        "latin",
+        "community"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-window-eyes-expressive",
+        "eloquence-bhp-precision"
+      ],
+      "displayName": "English (US) \u2013 Heritage Eloquence",
+      "id": "en-us-heritage",
+      "language": "en-US",
+      "tags": [
+        "english",
+        "eloquence",
+        "heritage"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "espeak-fr-velvet"
+      ],
+      "displayName": "French \u2013 nasal warmth",
+      "id": "fr-fr-basic",
+      "language": "fr-FR",
+      "tags": [
+        "french",
+        "latin"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "espeak-de-precision"
+      ],
+      "displayName": "German \u2013 precise articulation",
+      "id": "de-de-basic",
+      "language": "de-DE",
+      "tags": [
+        "german",
+        "latin"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "espeak-it-expressive"
+      ],
+      "displayName": "Italian \u2013 open vowels",
+      "id": "it-it-basic",
+      "language": "it-IT",
+      "tags": [
+        "italian",
+        "latin"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "espeak-pt-br-vibrant"
+      ],
+      "displayName": "Portuguese (Brazil) \u2013 vibrant vowels",
+      "id": "pt-br-basic",
+      "language": "pt-BR",
+      "tags": [
+        "portuguese",
+        "latin"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "espeak-es-castilian"
+      ],
+      "displayName": "Spanish (Castilian) \u2013 crisp sibilants",
+      "id": "es-es-basic",
+      "language": "es-ES",
+      "tags": [
+        "spanish",
+        "castilian"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "espeak-es-latin"
+      ],
+      "displayName": "Spanish (LatAm) \u2013 sonorous core",
+      "id": "es-419-basic",
+      "language": "es-419",
+      "tags": [
+        "spanish",
+        "latin"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "dectalk-perfect-paul",
+      "language": "en-US",
+      "name": "DECtalk Perfect Paul",
+      "tags": [
+        "dectalk",
+        "legacy",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "dectalk-beautiful-betty",
+      "language": "en-US",
+      "name": "DECtalk Beautiful Betty",
+      "tags": [
+        "dectalk",
+        "legacy",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "dectalk-rough-rita",
+      "language": "en-US",
+      "name": "DECtalk Rough Rita",
+      "tags": [
+        "dectalk",
+        "legacy",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "dectalk-whispering-wendy",
+      "language": "en-US",
+      "name": "DECtalk Whispering Wendy",
+      "tags": [
+        "dectalk",
+        "legacy",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "espeak-en-us-bright",
+      "language": "en-US",
+      "name": "English (US) bright",
+      "tags": [
+        "english",
+        "us",
+        "community"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-gb-basic",
+      "id": "espeak-en-gb-clarity",
+      "language": "en-GB",
+      "name": "English (UK) clarity",
+      "tags": [
+        "english",
+        "uk",
+        "community"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "es-419-basic",
+      "id": "espeak-es-latin",
+      "language": "es-419",
+      "name": "Spanish (Latin America)",
+      "tags": [
+        "spanish",
+        "latin"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "es-es-basic",
+      "id": "espeak-es-castilian",
+      "language": "es-ES",
+      "name": "Spanish (Castilian)",
+      "tags": [
+        "spanish",
+        "spain"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "fr-fr-basic",
+      "id": "espeak-fr-velvet",
+      "language": "fr-FR",
+      "name": "French velvety",
+      "tags": [
+        "french"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "de-de-basic",
+      "id": "espeak-de-precision",
+      "language": "de-DE",
+      "name": "German precision",
+      "tags": [
+        "german"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "it-it-basic",
+      "id": "espeak-it-expressive",
+      "language": "it-IT",
+      "name": "Italian expressive",
+      "tags": [
+        "italian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "pt-br-basic",
+      "id": "espeak-pt-br-vibrant",
+      "language": "pt-BR",
+      "name": "Portuguese (Brazil) vibrant",
+      "tags": [
+        "portuguese",
+        "brazil"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-heritage",
+      "id": "eloquence-heritage-jaws-classic",
+      "language": "en-US",
+      "name": "Heritage JAWS (Paul)",
+      "tags": [
+        "eloquence",
+        "heritage",
+        "jaws",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-heritage",
+      "id": "eloquence-loquence-studio",
+      "language": "en-US",
+      "name": "Loquence Studio (SAPI-4)",
+      "tags": [
+        "eloquence",
+        "sapi4",
+        "studio",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-heritage",
+      "id": "eloquence-window-eyes-expressive",
+      "language": "en-US",
+      "name": "Window-Eyes Expressive",
+      "tags": [
+        "eloquence",
+        "window-eyes",
+        "heritage",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-heritage",
+      "id": "eloquence-bhp-precision",
+      "language": "en-US",
+      "name": "Blind Help Precision",
+      "tags": [
+        "eloquence",
+        "blindhelp",
+        "modern",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-heritage",
+      "id": "eloquence-sapi5-viavoice-paul-xl",
+      "language": "en-US",
+      "name": "ViaVoice Paul XL (SAPI 5)",
+      "tags": [
+        "eloquence",
+        "ibm",
+        "viavoice",
+        "sapi5",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-heritage",
+      "id": "eloquence-sapi4-viavoice-tracy",
+      "language": "en-US",
+      "name": "ViaVoice Tracy (SAPI 4)",
+      "tags": [
+        "eloquence",
+        "ibm",
+        "viavoice",
+        "sapi4",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-heritage",
+      "id": "eloquence-sapi4-eloq61-studio",
+      "language": "en-US",
+      "name": "Eloquence 6.1 Studio (SAPI 4)",
+      "tags": [
+        "eloquence",
+        "sapi4",
+        "studio",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-heritage",
+      "id": "eloquence-sapi5-codefactory-balanced",
+      "language": "en-US",
+      "name": "Eloquence for Windows Balanced (Code Factory)",
+      "tags": [
+        "eloquence",
+        "codefactory",
+        "sapi5",
+        "english"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "nvspeechplayer-adam",
+      "language": "en-US",
+      "name": "NV Speech Player Adam",
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "classic"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "nvspeechplayer-benjamin",
+      "language": "en-US",
+      "name": "NV Speech Player Benjamin",
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "bright"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "nvspeechplayer-caleb",
+      "language": "en-US",
+      "name": "NV Speech Player Caleb",
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "breathy"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "nvspeechplayer-david",
+      "language": "en-US",
+      "name": "NV Speech Player David",
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "low"
+      ]
+    },
+    {
+      "defaultLanguageProfile": null,
+      "id": "espeak-variant-espeak-variants-alex",
+      "language": null,
+      "name": "Alex",
+      "tags": [
+        "espeak",
+        "variant",
+        "male"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "en-us-basic",
+      "id": "espeak-variant-espeak-variants-storm",
+      "language": "en-US",
+      "name": "Storm",
+      "tags": [
+        "espeak",
+        "variant",
+        "lang:en-us",
+        "male"
+      ]
+    }
+  ]
+}
