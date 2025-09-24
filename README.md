@@ -113,6 +113,11 @@ The scorecard mirrors the generated snapshot and highlights which installers or 
 - `python build.py --template path/to/legacy-addon.nvda-addon` reuses binaries from an existing package instead of copying from `./eloquence/`.
 - `python build.py --no-download --insecure` prevents network access entirely; `--insecure` remains available for environments that must bypass TLS validation when downloading a template from a trusted mirror.
 
+### Automated test suite
+- Run `python -m unittest discover tests` to execute the bundled integrity checks. They validate that voice templates respect their slider ranges, phoneme inventories remain populated, and language profiles still expose character-level descriptions.
+- The same test run also exercises our reporting utilities (`tools/report_voice_parameters.py`, `tools/report_catalog_status.py`, and `tools/validate_language_pronunciations.py`) to guarantee they continue emitting machine-readable snapshots for CI and documentation refreshes.
+- Continue generating the Markdown/JSON artefacts tracked in `docs/` after you change catalogue data so the test suite, README tables, and CodeQL automation stay in sync.
+
 ## Phoneme and voice customization today
 - The add-on ships with the [eSpeak NG](https://github.com/espeak-ng/espeak-ng) `phsource/phonemes` catalogue under `eloquence_data/espeak_phonemes.txt` plus community JSON extensions for DECtalk, IBM TTS, and NV Speech Player phonemes (see `eloquence_data/phonemes/`). These definitions seed NVDA's phoneme controls without requiring a separate download and now expose the frame data that `nvSpeechPlayer` used to render its classic vowels and consonants.
 - Use the **Phoneme category** and **Phoneme symbol** settings in NVDA's voice dialog to focus on a single phoneme at a time. Categories mirror the groupings defined by eSpeak NG and any contributed DECtalk/FonixTalk sets, and each symbol entry announces the phoneme name alongside its descriptive comment so you can explore the inventory from the keyboard.
@@ -122,6 +127,7 @@ The scorecard mirrors the generated snapshot and highlights which installers or 
 - The **Default phoneme fallback** setting lets you decide whether Eloquence prefers sample words, descriptive text, IPA, or the engine’s raw symbol whenever you have not chosen a custom replacement. Pick the style that makes the most sense for your workflow and the driver will refresh the default mappings across the whole inventory.
 - Voice templates can bundle phoneme replacement recommendations. Selecting a heritage preset seeds its preferred fallbacks—without touching any overrides you have already saved—so you immediately hear the nuances that made those classic builds distinct.
 - A new pair of **Voice parameter** and **Voice parameter value** controls in the Speech dialog lets you cycle through Eloquence's core sliders (rate, pitch, inflection, head size, roughness, breathiness, and volume) and adjust them with a single keyboard-driven workflow. The driver pulls range metadata from the bundled voice catalogue so the slider automatically respects each parameter's safe bounds and preferred step size.
+- As you focus the **Voice parameter value** slider, the label now echoes the active parameter name (for example, "Voice parameter value (Pitch – Primary pitch target...)") so NVDA announces which control you are editing in real time. This keeps keyboard-driven workflows oriented as you tab between sliders or switch templates.
 - If you ever want to refresh the underlying catalogue with a newer upstream snapshot, run `python tools/refresh_espeak_phonemes.py /path/to/espeak-ng` to copy the latest `phsource/phonemes` definition into `eloquence_data/espeak_phonemes.txt` before rebuilding the add-on.
 
 ### Build bespoke voices with community templates

@@ -19,6 +19,7 @@
 - Reinforce that the long-term goal is universal script coverage—explain how phoneme, sound, and symbol customization helps the synthesizer speak any code point, and outline how contributors can import new text corpora or pronunciation data to fill gaps.
 - Document how generative and contextual pronunciation layers interact: note when a language profile includes automatic (AI-driven or algorithmic) phoneme generation, contextual variants for grammar or prosody, and how these map onto NVDA's phoneme picker so keyboard users understand the available levers.
 - After altering voice templates, parameter ranges, or preset metadata, run `python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print` and commit the refreshed artefacts so the slider catalogue stays aligned with README guidance.
+- Run `python -m unittest discover tests` after touching catalogue data or driver settings. The suite verifies voice templates respect slider ranges, phoneme inventories remain populated, and documentation helpers still emit JSON/Markdown snapshots.
 - Capture build and packaging requirements for every platform you mention. When laying out supported languages, describe expected speech fluency, braille translation/export status, and any dictionary or corpus dependencies that have to ship inside release bundles.
 - Reference the current NVDA validation baseline (alpha-52731 at the time of this update) and note any newer snapshots you test so the compatibility story stays fresh.
 - When cataloguing third-party archives (DataJake, Blind Help Project, Hear2Read, etc.), record extraction steps, archive types, and where you staged the recovered payloads. Mention required tooling (for example, `7z`, `unzip`, `cabextract`) so other contributors can repeat the process.
@@ -29,6 +30,7 @@
 - Keep instructions actionable for both users and developers, including any planned integration with resources such as eSpeak NG or Dectalk for additional language phonemes.
 - Prefer extensible data formats (JSON, structured text) that let people contribute additional voices, phonemes, or runtime assets without editing core Python unless necessary.
 - Ensure new features keep keyboard-centric workflows in mind so users can customise every phoneme combination directly from NVDA's dialogs.
+- Voice parameter changes should keep the Speech dialog focused: the value slider label must reflect the active parameter so NVDA announces it immediately when users cycle through controls.
 - Remember to resolve merge conflicts with awareness of any cached datasets or external archives that collaborators might rely on.
 - When adding language data or phoneme assets, describe the provenance, enumerate dialects/variants included, and document how users can further customise pronunciations beyond legacy dictionary files.
 - Whenever you introduce cross-platform guidance (for example, NVDA, Orca, Narrator, VoiceOver, TalkBack, ChromeVox), specify the packaging format, build prerequisites, and how the shared Eloquence data should flow between platforms so future maintainers can publish coordinated releases.

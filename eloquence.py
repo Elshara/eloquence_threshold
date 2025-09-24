@@ -69,6 +69,8 @@ VOICE_PARAMETER_VALUE_SETTING = NumericDriverSetting(
  displayName=_("Voice parameter value"),
 )
 
+_VOICE_PARAMETER_VALUE_BASE_LABEL = VOICE_PARAMETER_VALUE_SETTING.displayName
+
 
 punctuation = ",.?:;"
 punctuation = [x for x in punctuation]
@@ -676,27 +678,39 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    return None
   return self._voiceCatalog.parameter_range(self._voiceParameterSelection)
 
- def _update_voice_parameter_slider(self) -> None:
-  setting = VOICE_PARAMETER_VALUE_SETTING
-  range_info = self._current_voice_parameter_range()
-  if range_info is None:
-   setting.minVal = 0
-   setting.maxVal = 200
-   setting.minStep = 1
-   setting.normalStep = max(setting.minStep, 5)
-   setting.largeStep = max(setting.normalStep, 10)
-   setting.defaultVal = 0
-   return
-  step = max(1, range_info.step)
-  setting.minVal = range_info.minimum
-  setting.maxVal = range_info.maximum
-  setting.minStep = step
-  span = max(range_info.maximum - range_info.minimum, step)
-  normal = span // 10 if span // 10 >= step else step
-  setting.normalStep = max(step, normal)
-  large = span // 4 if span // 4 >= setting.normalStep else setting.normalStep
-  setting.largeStep = max(setting.normalStep, large)
-  setting.defaultVal = range_info.clamp(range_info.default)
+def _update_voice_parameter_slider(self) -> None:
+ setting = VOICE_PARAMETER_VALUE_SETTING
+ range_info = self._current_voice_parameter_range()
+ label = _VOICE_PARAMETER_VALUE_BASE_LABEL
+ try:
+  options = self._voice_parameter_options()
+ except UnsupportedConfigParameterError:
+  options = None
+ else:
+  if options and self._voiceParameterSelection in options:
+   selected = options[self._voiceParameterSelection]
+   display = getattr(selected, "displayName", None)
+   if display:
+    label = f"{_VOICE_PARAMETER_VALUE_BASE_LABEL} ({display})"
+ setting.displayName = label
+ if range_info is None:
+  setting.minVal = 0
+  setting.maxVal = 200
+  setting.minStep = 1
+  setting.normalStep = max(setting.minStep, 5)
+  setting.largeStep = max(setting.normalStep, 10)
+  setting.defaultVal = 0
+  return
+ step = max(1, range_info.step)
+ setting.minVal = range_info.minimum
+ setting.maxVal = range_info.maximum
+ setting.minStep = step
+ span = max(range_info.maximum - range_info.minimum, step)
+ normal = span // 10 if span // 10 >= step else step
+ setting.normalStep = max(step, normal)
+ large = span // 4 if span // 4 >= setting.normalStep else setting.normalStep
+ setting.largeStep = max(setting.normalStep, large)
+ setting.defaultVal = range_info.clamp(range_info.default)
 
  def _ensure_voice_parameter_selection(self) -> None:
   options = self._voice_parameter_options()
