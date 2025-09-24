@@ -79,6 +79,12 @@ Because the hierarchy is deterministic, you can parametrise CI jobs to pull the 
 - Follow up with `python tools/validate_language_pronunciations.py --json docs/language_pronunciation_validation.json --markdown docs/language_pronunciation_validation.md` whenever you merge new language datasets. The validator cross-references every character's IPA sequence against the phoneme catalogue, highlighting unmatched fragments so eSpeak NG, DECtalk, NV Speech Player, and forthcoming datasets stay aligned.
 - Commit the Markdown/JSON outputs to document pronunciation coverage by locale and give future CodeQL or CI jobs a machine-readable way to block regressions as we expand into additional scripts.
 
+#### Integration scope parameter reporting
+- Run `python tools/report_integration_scope.py --json docs/integration_scope.json --markdown docs/integration_scope.md --print` after touching any voice template, language profile, or phoneme dataset. The helper cross-references the bundled catalogues and records how many voices target each locale, which language profiles provide character-level hints, and how many phoneme categories feed NVDA’s picker. The command prints a quick summary to the console and refreshes both JSON/Markdown artefacts for review.
+- The Markdown digest makes it easy to spot when a locale gains new templates without an accompanying pronunciation profile (or vice versa). Use it to plan incremental pull requests—for example, seed a profile first, then stage extra phoneme replacements or NVDA Speech dialog parameters in follow-up patches.
+- The JSON output powers future automation: CI can watch for regressions in the number of phonemes, check that every profile retains at least one linked template, and flag when slider ranges change so we can bump release notes before packaging the add-on.
+- Treat this report as the high-level map for “Eloquence Reloaded.” It shows how far the unified Eloquence/eSpeak/DECtalk/IBM catalogue has progressed towards full multilingual parity and keeps contributions aligned with NVDA’s keyboard-driven customization experience.
+
 #### NVDA compatibility scorecard
 | Channel | Build identifier | Download URL | Severity | Recommended action |
 | --- | --- | --- | --- | --- |
