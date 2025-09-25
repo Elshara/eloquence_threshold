@@ -72,6 +72,116 @@ VOICE_PARAMETER_VALUE_SETTING = NumericDriverSetting(
 _VOICE_PARAMETER_VALUE_BASE_LABEL = VOICE_PARAMETER_VALUE_SETTING.displayName
 
 
+_SAMPLE_RATE_MIN, _SAMPLE_RATE_MAX = _eloquence.getSampleRateBounds()
+_SAMPLE_RATE_DEFAULT = _eloquence.getDefaultSampleRate()
+SAMPLE_RATE_SETTING = NumericDriverSetting(
+ "sampleRate",
+ _("Sample &rate (Hz)"),
+ availableInSettingsRing=True,
+ minVal=_SAMPLE_RATE_MIN,
+ maxVal=_SAMPLE_RATE_MAX,
+ minStep=50,
+ normalStep=500,
+ largeStep=2000,
+ displayName=_("Sample rate (Hz)"),
+)
+SAMPLE_RATE_SETTING.defaultVal = _SAMPLE_RATE_DEFAULT
+
+
+_PHONEME_EQ_LAYER_MIN = 1
+_PHONEME_EQ_LAYER_MAX = 32
+_PHONEME_EQ_LOW_MIN = 1
+_PHONEME_EQ_HIGH_MAX = 384000
+_PHONEME_EQ_GAIN_MIN = -24
+_PHONEME_EQ_GAIN_MAX = 12
+
+
+PHONEME_EQ_LAYER_SETTING = NumericDriverSetting(
+ "phonemeEqLayer",
+ _("Phoneme EQ &layer"),
+ availableInSettingsRing=True,
+ minVal=_PHONEME_EQ_LAYER_MIN,
+ maxVal=_PHONEME_EQ_LAYER_MAX,
+ minStep=1,
+ normalStep=1,
+ largeStep=4,
+ displayName=_("Phoneme EQ layer"),
+)
+
+PHONEME_EQ_LOW_SETTING = NumericDriverSetting(
+ "phonemeEqLow",
+ _("Phoneme EQ &low (Hz)"),
+ availableInSettingsRing=True,
+ minVal=_PHONEME_EQ_LOW_MIN,
+ maxVal=_PHONEME_EQ_HIGH_MAX,
+ minStep=10,
+ normalStep=50,
+ largeStep=500,
+ displayName=_("Phoneme EQ low (Hz)"),
+)
+
+PHONEME_EQ_HIGH_SETTING = NumericDriverSetting(
+ "phonemeEqHigh",
+ _("Phoneme EQ hi&gh (Hz)"),
+ availableInSettingsRing=True,
+ minVal=_PHONEME_EQ_LOW_MIN + 1,
+ maxVal=_PHONEME_EQ_HIGH_MAX,
+ minStep=10,
+ normalStep=50,
+ largeStep=500,
+ displayName=_("Phoneme EQ high (Hz)"),
+)
+
+PHONEME_EQ_GAIN_SETTING = NumericDriverSetting(
+ "phonemeEqGain",
+ _("Phoneme EQ g&ain (dB)"),
+ availableInSettingsRing=True,
+ minVal=_PHONEME_EQ_GAIN_MIN,
+ maxVal=_PHONEME_EQ_GAIN_MAX,
+ minStep=1,
+ normalStep=2,
+ largeStep=4,
+ displayName=_("Phoneme EQ gain (dB)"),
+)
+
+
+@dataclass
+class _PhonemeEqBand:
+ low_hz: int = 200
+ high_hz: int = 3400
+ gain_db: float = 0.0
+
+ @classmethod
+ def default(cls) -> "_PhonemeEqBand":
+  return cls()
+
+ @classmethod
+ def from_mapping(cls, mapping: Dict[str, object]) -> Optional["_PhonemeEqBand"]:
+  if not isinstance(mapping, dict):
+   return None
+  try:
+   low = float(mapping.get("lowHz", mapping.get("low_hz", cls.default().low_hz)))
+   high = float(mapping.get("highHz", mapping.get("high_hz", cls.default().high_hz)))
+   gain = float(mapping.get("gainDb", mapping.get("gain_db", cls.default().gain_db)))
+  except (TypeError, ValueError):
+   return None
+  band = cls(int(low), int(high), float(gain))
+  return band.clamped()
+
+ def clamped(self) -> "_PhonemeEqBand":
+  low = max(_PHONEME_EQ_LOW_MIN, min(int(self.low_hz), _PHONEME_EQ_HIGH_MAX - 1))
+  high = max(low + 1, min(int(self.high_hz), _PHONEME_EQ_HIGH_MAX))
+  gain = max(_PHONEME_EQ_GAIN_MIN, min(float(self.gain_db), _PHONEME_EQ_GAIN_MAX))
+  return _PhonemeEqBand(low, high, gain)
+
+ def to_mapping(self) -> Dict[str, object]:
+  return {
+   "lowHz": int(self.low_hz),
+   "highHz": int(self.high_hz),
+   "gainDb": float(self.gain_db),
+  }
+
+
 punctuation = ",.?:;"
 punctuation = [x for x in punctuation]
 from ctypes import *
@@ -94,6 +204,7 @@ from .language_profiles import (
  load_default_language_profiles,
 )
 from collections import OrderedDict
+from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 import unicodedata
 
@@ -197,6 +308,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    availableInSettingsRing=True,
    displayName=_("Language profile"),
   ),
+  SAMPLE_RATE_SETTING,
   VOICE_PARAMETER_SETTING,
   VOICE_PARAMETER_VALUE_SETTING,
   DriverSetting(
@@ -223,7 +335,11 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    availableInSettingsRing=True,
    displayName=_("Default phoneme fallback"),
   ),
- )
+  PHONEME_EQ_LAYER_SETTING,
+  PHONEME_EQ_LOW_SETTING,
+  PHONEME_EQ_HIGH_SETTING,
+  PHONEME_EQ_GAIN_SETTING,
+)
  supportedCommands = {
      IndexCommand,
      CharacterModeCommand,
@@ -250,6 +366,8 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  _lastVoiceParameterSelection: Optional[str]
  _phonemeCategorySelection: Optional[str]
  _phonemeSelection: Optional[str]
+ _phonemeEqProfiles: Dict[str, List[_PhonemeEqBand]]
+ _phonemeEqLayerSelection: int
  PROSODY_ATTRS = {
   PitchCommand: _eloquence.pitch,
   VolumeCommand: _eloquence.vlm,
@@ -285,7 +403,27 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  @classmethod
  def check(cls):
   return _eloquence.eciCheck()
+ def _load_startup_preferences(self):
+  try:
+   speech_section = config.conf.get("speech")
+  except Exception:
+   speech_section = None
+  if not isinstance(speech_section, dict):
+   return
+  synth_section = speech_section.get(self.name)
+  if not isinstance(synth_section, dict):
+   return
+  stored_rate = synth_section.get("sampleRate")
+  if stored_rate is None:
+   return
+  try:
+   _eloquence.setSampleRate(int(stored_rate))
+  except Exception:
+   logging.exception("Unable to restore stored sample rate '%s'", stored_rate)
+  else:
+   self._persist_sample_rate()
  def __init__(self):
+  self._load_startup_preferences()
   _eloquence.initialize(self._onIndexReached)
  self.curvoice="enu"
  self.rate=50
@@ -298,6 +436,11 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  self._phonemeCategorySelection = None
  self._phonemeSelection = None
  self._ensure_phoneme_selection()
+ self._phonemeEqProfiles = {}
+ self._phonemeEqLayerSelection = _PHONEME_EQ_LAYER_MIN
+ self._load_stored_phoneme_eq_profiles()
+ self._ensure_phoneme_eq_defaults()
+ self._update_phoneme_eq_engine()
  self._voiceCatalog = load_default_voice_catalog()
  self._voiceTemplateId = None
  self._lastVoiceTemplateSelection = None
@@ -452,8 +595,96 @@ class SynthDriver(synthDriverHandler.SynthDriver):
     self._phonemeSelection = None
     return
   valid_names = [definition.name for definition in phonemes]
-  if self._phonemeSelection not in valid_names:
-   self._phonemeSelection = valid_names[0] if valid_names else None
+ if self._phonemeSelection not in valid_names:
+  self._phonemeSelection = valid_names[0] if valid_names else None
+ self._ensure_phoneme_eq_defaults()
+
+ def _load_stored_phoneme_eq_profiles(self):
+  try:
+   speech_section = config.conf.get("speech", {})
+  except Exception:
+   speech_section = {}
+  if not isinstance(speech_section, dict):
+   speech_section = {}
+  synth_section = speech_section.get(self.name, {})
+  if not isinstance(synth_section, dict):
+   return
+  stored = synth_section.get("phonemeEqProfiles")
+  if not isinstance(stored, dict):
+   return
+  profiles: Dict[str, List[_PhonemeEqBand]] = {}
+  for phoneme_id, entries in stored.items():
+   if not isinstance(phoneme_id, str) or not isinstance(entries, list):
+    continue
+   bands: List[_PhonemeEqBand] = []
+   for entry in entries:
+    band = _PhonemeEqBand.from_mapping(entry)
+    if band is None:
+     continue
+    bands.append(band)
+   if bands:
+    profiles[phoneme_id] = bands
+  self._phonemeEqProfiles = profiles
+
+ def _ensure_phoneme_eq_defaults(self):
+  if self._phonemeSelection:
+   bands = self._phonemeEqProfiles.get(self._phonemeSelection)
+   total = len(bands) if bands else 1
+   if self._phonemeEqLayerSelection > total:
+    self._phonemeEqLayerSelection = total
+  if self._phonemeEqLayerSelection < _PHONEME_EQ_LAYER_MIN:
+   self._phonemeEqLayerSelection = _PHONEME_EQ_LAYER_MIN
+
+ def _ensure_eq_layers(self, phoneme_id: str, layer: int) -> List[_PhonemeEqBand]:
+  bands = self._phonemeEqProfiles.setdefault(phoneme_id, [_PhonemeEqBand.default()])
+  while len(bands) < layer:
+   bands.append(_PhonemeEqBand.default())
+  return bands
+
+ def _current_eq_band(self, writable: bool = False) -> Optional[_PhonemeEqBand]:
+  phoneme_id = self._phonemeSelection
+  if not phoneme_id:
+   return None
+  index = max(0, self._phonemeEqLayerSelection - 1)
+  bands = self._phonemeEqProfiles.get(phoneme_id)
+  if writable:
+   bands = self._ensure_eq_layers(phoneme_id, index + 1)
+   return bands[index]
+  if bands and index < len(bands):
+   return bands[index]
+  return _PhonemeEqBand.default()
+
+ def _collect_eq_payload(self) -> List[Dict[str, object]]:
+  payload: List[Dict[str, object]] = []
+  for bands in self._phonemeEqProfiles.values():
+   for band in bands:
+    payload.append(
+     {
+      "low_hz": band.low_hz,
+      "high_hz": band.high_hz,
+      "gain_db": band.gain_db,
+     }
+    )
+  return payload
+
+ def _update_phoneme_eq_engine(self):
+  _eloquence.setPhonemeEqBands(self._collect_eq_payload())
+
+ def _persist_phoneme_eq_profiles(self):
+  try:
+   speech_section = config.conf.setdefault("speech", {})
+  except Exception:
+   return
+  synth_section = speech_section.setdefault(self.name, {})
+  serialisable: Dict[str, List[Dict[str, object]]] = {}
+  for phoneme_id, bands in self._phonemeEqProfiles.items():
+   entries = [band.clamped().to_mapping() for band in bands]
+   if entries:
+    serialisable[phoneme_id] = entries
+  if serialisable:
+   synth_section["phonemeEqProfiles"] = serialisable
+  else:
+   synth_section.pop("phonemeEqProfiles", None)
 
  def _current_phoneme_definition(self) -> Optional[PhonemeDefinition]:
   if not self._phonemeSelection:
@@ -520,6 +751,12 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   if template.variant:
    self._set_variant(template.variant)
   for name, value in template.parameter_items():
+   if name == "sampleRate":
+    try:
+     self._set_sampleRate(int(value))
+    except Exception:
+     logging.exception("Unable to apply sample rate '%s' for template '%s'", value, template.id)
+    continue
    binding = _VOICE_PARAM_BINDINGS.get(name)
    if binding is None:
     continue
@@ -810,7 +1047,8 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
    _("Disable language hints"),
   )
   for profile in self._languageProfiles:
-   options[profile.id] = StringParameterInfo(profile.id, profile.display_label())
+   label = self._describe_language_profile_option(profile)
+   options[profile.id] = StringParameterInfo(profile.id, label)
   return options
 
  def _get_languageProfile(self):
@@ -836,10 +1074,68 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
   if value == _LANGUAGE_PROFILE_AUTO:
    self._refresh_language_profile()
    return
- if self._languageProfiles.get(value):
-  self._activeLanguageProfileId = value
- else:
-  self._activeLanguageProfileId = None
+  if self._languageProfiles.get(value):
+   self._activeLanguageProfileId = value
+  else:
+   self._activeLanguageProfileId = None
+
+ def _describe_language_profile_option(self, profile: LanguageProfile) -> str:
+  metrics = profile.metrics(self._phonemeInventory)
+  extras = []
+  coverage = metrics.get("ipaCoveragePercent")
+  if isinstance(coverage, (int, float)):
+   extras.append(f"{coverage:.0f}% IPA")
+  stage = metrics.get("stage")
+  if stage:
+   extras.append(stage.replace("-", " ").title())
+  examples = metrics.get("exampleCount", 0)
+  if isinstance(examples, int) and examples:
+   extras.append(f"{examples} examples")
+  matched_defaults = []
+  for template_id in metrics.get("defaultVoiceTemplates", []):
+   template = self._voiceCatalog.get(template_id)
+   if template is not None:
+    matched_defaults.append(template_id)
+  if matched_defaults:
+   count = len(matched_defaults)
+   suffix = "s" if count != 1 else ""
+   extras.append(f"{count} default template{suffix}")
+  if metrics.get("keyboardOptimised"):
+   extras.append("Keyboard digraphs")
+  if metrics.get("hasGenerativeHints"):
+   extras.append("Generative variants")
+  if metrics.get("hasContextualHints"):
+   extras.append("Contextual pronunciation")
+  if extras:
+   return f"{profile.display_label()} ({'; '.join(extras)})"
+  return profile.display_label()
+
+ def describe_language_progress(self) -> Optional[str]:
+  profile = self._active_language_profile()
+  if not profile:
+   return None
+  metrics = profile.metrics(self._phonemeInventory)
+  pieces = [profile.display_label()]
+  coverage = metrics.get("ipaCoveragePercent")
+  if isinstance(coverage, (int, float)):
+   pieces.append(f"{coverage:.0f}% IPA coverage")
+  stage = metrics.get("stage")
+  if stage:
+   pieces.append(stage.replace("-", " ").title())
+  examples = metrics.get("exampleCount", 0)
+  if isinstance(examples, int) and examples:
+   pieces.append(f"{examples} documented examples")
+  notes_total = (
+   int(metrics.get("stressNoteCount", 0))
+   + int(metrics.get("sentenceStructureNoteCount", 0))
+   + int(metrics.get("grammarNoteCount", 0))
+  )
+  if notes_total:
+   pieces.append(f"{notes_total} structural notes")
+  available = metrics.get("availableTemplateCount")
+  if isinstance(available, int) and available:
+   pieces.append(f"{available} template options")
+  return ", ".join(pieces)
 
  def _get_availableVoiceParameters(self):
   options = self._voice_parameter_options()
@@ -963,10 +1259,12 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
   options = self._get_availablePhonemeSymbols()
   if value not in options:
    raise ValueError(f"Unknown phoneme symbol '{value}'")
-  if value == self._phonemeSelection:
-   return
-  self._phonemeSelection = value
-  self._reset_replacement_cursor()
+ if value == self._phonemeSelection:
+  return
+ self._phonemeSelection = value
+ self._reset_replacement_cursor()
+ self._phonemeEqLayerSelection = _PHONEME_EQ_LAYER_MIN
+ self._ensure_phoneme_eq_defaults()
 
  def _get_availablePhonemeReplacements(self):
   if self._phonemeInventory.is_empty:
@@ -1084,6 +1382,131 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
   self._reset_replacement_cursor()
   self._persist_phoneme_replacements()
 
+ def _current_sample_rate_limit(self) -> int:
+  try:
+   active_rate = int(_eloquence.getSampleRate())
+  except Exception:
+   active_rate = _SAMPLE_RATE_DEFAULT
+  upper = active_rate // 2 if active_rate > 0 else _PHONEME_EQ_HIGH_MAX
+  return max(_PHONEME_EQ_LOW_MIN + 1, min(upper, _PHONEME_EQ_HIGH_MAX))
+
+ def _get_phonemeEqLayer(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  self._ensure_phoneme_eq_defaults()
+  return self._phonemeEqLayerSelection
+
+ def _set_phonemeEqLayer(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  if not self._phonemeSelection:
+   raise UnsupportedConfigParameterError()
+  try:
+   layer = int(value)
+  except (TypeError, ValueError):
+   raise ValueError(f"Invalid phoneme EQ layer '{value}'") from None
+  if layer < _PHONEME_EQ_LAYER_MIN or layer > _PHONEME_EQ_LAYER_MAX:
+   raise ValueError(f"Invalid phoneme EQ layer '{layer}'")
+  if layer == self._phonemeEqLayerSelection:
+   return
+  self._ensure_eq_layers(self._phonemeSelection, layer)
+  self._phonemeEqLayerSelection = layer
+  self._ensure_phoneme_eq_defaults()
+  self._persist_phoneme_eq_profiles()
+  self._update_phoneme_eq_engine()
+
+ def _get_phonemeEqLow(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band()
+  if not band:
+   raise UnsupportedConfigParameterError()
+  return int(band.low_hz)
+
+ def _set_phonemeEqLow(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band(writable=True)
+  if not band:
+   raise UnsupportedConfigParameterError()
+  try:
+   numeric = int(value)
+  except (TypeError, ValueError):
+   raise ValueError(f"Invalid phoneme EQ low frequency '{value}'") from None
+  upper_limit = self._current_sample_rate_limit() - 1
+  numeric = max(_PHONEME_EQ_LOW_MIN, min(numeric, upper_limit))
+  changed = False
+  if numeric != band.low_hz:
+   band.low_hz = numeric
+   changed = True
+  if band.high_hz <= band.low_hz:
+   band.high_hz = min(self._current_sample_rate_limit(), band.low_hz + 1)
+   changed = True
+  if changed:
+   self._phonemeEqProfiles[self._phonemeSelection][self._phonemeEqLayerSelection - 1] = band.clamped()
+   self._persist_phoneme_eq_profiles()
+   self._update_phoneme_eq_engine()
+
+ def _get_phonemeEqHigh(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band()
+  if not band:
+   raise UnsupportedConfigParameterError()
+  return int(band.high_hz)
+
+ def _set_phonemeEqHigh(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band(writable=True)
+  if not band:
+   raise UnsupportedConfigParameterError()
+  try:
+   numeric = int(value)
+  except (TypeError, ValueError):
+   raise ValueError(f"Invalid phoneme EQ high frequency '{value}'") from None
+  upper = self._current_sample_rate_limit()
+  numeric = max(band.low_hz + 1, min(numeric, upper))
+  if numeric != band.high_hz:
+   band.high_hz = numeric
+   self._phonemeEqProfiles[self._phonemeSelection][self._phonemeEqLayerSelection - 1] = band.clamped()
+   self._persist_phoneme_eq_profiles()
+   self._update_phoneme_eq_engine()
+
+ def _get_phonemeEqGain(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band()
+  if not band:
+   raise UnsupportedConfigParameterError()
+  return int(round(band.gain_db))
+
+ def _set_phonemeEqGain(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band(writable=True)
+  if not band:
+   raise UnsupportedConfigParameterError()
+  try:
+   numeric = float(value)
+  except (TypeError, ValueError):
+   raise ValueError(f"Invalid phoneme EQ gain '{value}'") from None
+  numeric = max(_PHONEME_EQ_GAIN_MIN, min(numeric, _PHONEME_EQ_GAIN_MAX))
+  if abs(numeric - band.gain_db) < 1e-6:
+   return
+  band.gain_db = numeric
+  self._phonemeEqProfiles[self._phonemeSelection][self._phonemeEqLayerSelection - 1] = band.clamped()
+  self._persist_phoneme_eq_profiles()
+  self._update_phoneme_eq_engine()
+
  def _load_stored_phoneme_replacements(self):
   if self._phonemeInventory.is_empty:
    return
@@ -1137,6 +1560,18 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
    synth_section["phonemeFallback"] = self._phonemeFallbackPreference
   else:
    synth_section.pop("phonemeFallback", None)
+
+ def _persist_sample_rate(self):
+  try:
+   speech_section = config.conf.setdefault("speech", {})
+  except Exception:
+   return
+  synth_section = speech_section.setdefault(self.name, {})
+  current = _eloquence.getSampleRate()
+  if current == _SAMPLE_RATE_DEFAULT:
+   synth_section.pop("sampleRate", None)
+  else:
+   synth_section["sampleRate"] = int(current)
 
  def _format_replacement_label(
   self,
@@ -1197,6 +1632,18 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
   if enable == self._phrasePrediction:
    return
   self._phrasePrediction = enable
+
+ def _get_sampleRate(self):
+  return int(_eloquence.getSampleRate())
+
+ def _set_sampleRate(self, value):
+  try:
+   numeric = int(value)
+  except (TypeError, ValueError):
+   raise ValueError(f"Invalid sample rate '{value}'") from None
+  _eloquence.setSampleRate(numeric)
+  self._persist_sample_rate()
+
  def _get_rate(self):
   return self._paramToPercent(self.getVParam(_eloquence.rate),minRate,maxRate)
 

@@ -76,9 +76,10 @@ def parse_arguments() -> argparse.Namespace:
 def load_phoneme_data(path: str, source_root: str) -> Mapping[str, Mapping[str, object]]:
     abspath = os.path.abspath(path)
     source_root = os.path.abspath(source_root)
-    # Ensure abspath is under source_root
     if not abspath.startswith(source_root + os.sep):
-        raise SystemExit(f"Refusing to open data file outside of source root: {abspath}")
+        raise SystemExit(
+            f"Refusing to open data file outside of source root: {abspath}"
+        )
     with open(abspath, "r", encoding="utf-8-sig") as handle:
         payload = handle.read()
     try:
@@ -209,16 +210,17 @@ def main() -> None:
     revision = None if args.no_metadata else detect_revision(source_root)
     payload = build_payload(data, revision)
     output_path = os.path.abspath(args.output_path)
-    # Constrain the output path to a safe output directory root
     default_output_dir = os.path.abspath(os.path.join("eloquence_data", "phonemes"))
-    # Use realpath to resolve symlinks and normalize the directory paths
     output_dir = os.path.dirname(output_path)
     output_dir_real = os.path.realpath(output_dir)
     default_output_dir_real = os.path.realpath(default_output_dir)
-    # Ensure that output_dir_real is within the default_output_dir_real
-    if not (output_dir_real.startswith(default_output_dir_real + os.sep) or output_dir_real == default_output_dir_real):
-        raise SystemExit(f"Refusing to write output file outside of allowed directory: {output_path}")
-    # Only create the directory if the path validation check passes
+    if not (
+        output_dir_real.startswith(default_output_dir_real + os.sep)
+        or output_dir_real == default_output_dir_real
+    ):
+        raise SystemExit(
+            f"Refusing to write output file outside of allowed directory: {output_path}"
+        )
     os.makedirs(output_dir_real, exist_ok=True)
     safe_output_path = os.path.join(output_dir_real, os.path.basename(output_path))
     with open(safe_output_path, "w", encoding="utf-8") as handle:

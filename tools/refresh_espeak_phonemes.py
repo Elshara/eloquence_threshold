@@ -59,8 +59,7 @@ def main() -> None:
         )
 
     output_path = Path(args.output).resolve()
-    # Ensure output_path writes only within the repository directory or a predefined safe root
-    safe_base = Path(__file__).parent.parent.resolve()  # Project root
+    safe_base = Path(__file__).parent.parent.resolve()
     if not _is_within_directory(output_path, safe_base):
         parser.error(
             f"The output path {output_path} is not within the allowed base directory {safe_base}."
@@ -106,11 +105,9 @@ def _resolve_phoneme_source(base_path: Path) -> Optional[Path]:
 
 
 def _is_within_directory(target: Path, base: Path) -> bool:
-    # Resolve symbolic links and normalize the path
     target_resolved = target.resolve()
     base_resolved = base.resolve()
     return os.path.commonpath([str(target_resolved), str(base_resolved)]) == str(base_resolved)
-
 def _normalize_newlines(text: str) -> str:
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     if not text.endswith("\n"):
@@ -123,23 +120,21 @@ def _default_output_path() -> str:
     return str(repo_root / "eloquence_data" / "espeak_phonemes.txt")
 
 def _validate_output_path(output_path: Path) -> None:
-    """
-    Ensure the output file is created only within the allowed `eloquence_data` directory.
-    """
+    """Ensure the output file stays within the ``eloquence_data`` directory."""
+
     repo_root = Path(__file__).resolve().parent.parent
     allowed_dir = repo_root / "eloquence_data"
     try:
         resolved_allowed = allowed_dir.resolve(strict=False)
         resolved_output = output_path.resolve(strict=False)
-    except RuntimeError:
-        raise ValueError(f"Failed to resolve output path: {output_path}")
+    except RuntimeError as exc:
+        raise ValueError(f"Failed to resolve output path: {output_path}") from exc
     try:
         resolved_output.relative_to(resolved_allowed)
-    except ValueError:
+    except ValueError as exc:
         raise ValueError(
             f"Refusing to write output file outside {resolved_allowed}: {resolved_output}"
-        )
-
+        ) from exc
 
 if __name__ == "__main__":
     main()
