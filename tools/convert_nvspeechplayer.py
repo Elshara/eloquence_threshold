@@ -73,8 +73,13 @@ def parse_arguments() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_phoneme_data(path: str) -> Mapping[str, Mapping[str, object]]:
-    with open(path, "r", encoding="utf-8-sig") as handle:
+def load_phoneme_data(path: str, source_root: str) -> Mapping[str, Mapping[str, object]]:
+    abspath = os.path.abspath(path)
+    source_root = os.path.abspath(source_root)
+    # Ensure abspath is under source_root
+    if not abspath.startswith(source_root + os.sep):
+        raise SystemExit(f"Refusing to open data file outside of source root: {abspath}")
+    with open(abspath, "r", encoding="utf-8-sig") as handle:
         payload = handle.read()
     try:
         data = ast.literal_eval(payload)
@@ -200,7 +205,7 @@ def main() -> None:
     args = parse_arguments()
     source_root = os.path.abspath(args.source)
     data_path = args.data_path or os.path.join(source_root, "data.py")
-    data = load_phoneme_data(data_path)
+    data = load_phoneme_data(data_path, source_root)
     revision = None if args.no_metadata else detect_revision(source_root)
     payload = build_payload(data, revision)
     output_path = os.path.abspath(args.output_path)
