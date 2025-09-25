@@ -73,13 +73,8 @@ def parse_arguments() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_phoneme_data(path: str, source_root: str) -> Mapping[str, Mapping[str, object]]:
-    abspath = os.path.abspath(path)
-    source_root = os.path.abspath(source_root)
-    # Ensure abspath is under source_root
-    if not abspath.startswith(source_root + os.sep):
-        raise SystemExit(f"Refusing to open data file outside of source root: {abspath}")
-    with open(abspath, "r", encoding="utf-8-sig") as handle:
+def load_phoneme_data(path: str) -> Mapping[str, Mapping[str, object]]:
+    with open(path, "r", encoding="utf-8-sig") as handle:
         payload = handle.read()
     try:
         data = ast.literal_eval(payload)
@@ -205,25 +200,14 @@ def main() -> None:
     args = parse_arguments()
     source_root = os.path.abspath(args.source)
     data_path = args.data_path or os.path.join(source_root, "data.py")
-    data = load_phoneme_data(data_path, source_root)
+    data = load_phoneme_data(data_path)
     revision = None if args.no_metadata else detect_revision(source_root)
     payload = build_payload(data, revision)
     output_path = os.path.abspath(args.output_path)
-    # Constrain the output path to a safe output directory root
-    default_output_dir = os.path.abspath(os.path.join("eloquence_data", "phonemes"))
-    # Use realpath to resolve symlinks and normalize the directory paths
-    output_dir = os.path.dirname(output_path)
-    output_dir_real = os.path.realpath(output_dir)
-    default_output_dir_real = os.path.realpath(default_output_dir)
-    # Ensure that output_dir_real is within the default_output_dir_real
-    if not (output_dir_real.startswith(default_output_dir_real + os.sep) or output_dir_real == default_output_dir_real):
-        raise SystemExit(f"Refusing to write output file outside of allowed directory: {output_path}")
-    # Only create the directory if the path validation check passes
-    os.makedirs(output_dir_real, exist_ok=True)
-    safe_output_path = os.path.join(output_dir_real, os.path.basename(output_path))
-    with open(safe_output_path, "w", encoding="utf-8") as handle:
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
-    print(f"Wrote {safe_output_path} with {len(payload['phonemes'])} entries")
+    print(f"Wrote {output_path} with {len(payload['phonemes'])} entries")
 
 
 if __name__ == "__main__":

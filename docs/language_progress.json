@@ -1,0 +1,638 @@
+{
+  "generatedAt": "2025-09-25T12:34:35.005169+00:00",
+  "totalProfiles": 11,
+  "stats": {
+    "totalProfiles": 11,
+    "stageCounts": {
+      "established": 7,
+      "comprehensive": 3,
+      "developing": 1
+    },
+    "averageIpaCoverage": 0.3628,
+    "medianIpaCoverage": 0.4,
+    "totalCharacters": 108,
+    "profilesWithExamples": 11,
+    "profilesWithTemplates": 11
+  },
+  "entries": [
+    {
+      "id": "es-es-basic",
+      "language": "es-ES",
+      "displayName": "Spanish (Castilian) – crisp sibilants",
+      "description": "Castilian defaults matching eSpeak es",
+      "tags": [
+        "spanish",
+        "castilian"
+      ],
+      "characterCount": 5,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 5,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "a",
+        "j"
+      ],
+      "ipaCoveredCount": 3,
+      "ipaCoverageRatio": 0.6,
+      "ipaCoveragePercent": 60.0,
+      "uniqueIpaCount": 4,
+      "fallbackHintCount": 5,
+      "descriptionCount": 5,
+      "notesTotal": 0,
+      "spokenCount": 5,
+      "exampleCount": 5,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-es-castilian"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "espeak-es-castilian"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-es-castilian"
+      ]
+    },
+    {
+      "id": "en-us-heritage",
+      "language": "en-US",
+      "displayName": "English (US) – Heritage Eloquence",
+      "description": "Pronunciation cues transcribed from JAWS, Window-Eyes, and Loquence studio dictionaries",
+      "tags": [
+        "english",
+        "eloquence",
+        "heritage"
+      ],
+      "characterCount": 13,
+      "multiCharacterCount": 7,
+      "uppercaseCharacterCount": 2,
+      "charactersWithIPA": 13,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "a",
+        "A",
+        "i",
+        "o",
+        "er",
+        "tion"
+      ],
+      "ipaCoveredCount": 7,
+      "ipaCoverageRatio": 0.5385,
+      "ipaCoveragePercent": 53.85,
+      "uniqueIpaCount": 13,
+      "fallbackHintCount": 13,
+      "descriptionCount": 13,
+      "notesTotal": 25,
+      "spokenCount": 13,
+      "exampleCount": 13,
+      "contextualCount": 2,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-window-eyes-expressive",
+        "eloquence-bhp-precision"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.9885,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-window-eyes-expressive",
+        "eloquence-bhp-precision"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 18,
+      "availableTemplates": [
+        "dectalk-beautiful-betty",
+        "dectalk-perfect-paul",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi5-codefactory-balanced",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-window-eyes-expressive",
+        "espeak-en-us-bright",
+        "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    {
+      "id": "it-it-basic",
+      "language": "it-IT",
+      "displayName": "Italian – open vowels",
+      "description": "Italian vowel core tied to eSpeak it voice",
+      "tags": [
+        "italian",
+        "latin"
+      ],
+      "characterCount": 15,
+      "multiCharacterCount": 3,
+      "uppercaseCharacterCount": 7,
+      "charactersWithIPA": 15,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "à",
+        "é",
+        "ó",
+        "ù",
+        "À",
+        "É",
+        "Ó",
+        "Ù"
+      ],
+      "ipaCoveredCount": 7,
+      "ipaCoverageRatio": 0.4667,
+      "ipaCoveragePercent": 46.67,
+      "uniqueIpaCount": 8,
+      "fallbackHintCount": 15,
+      "descriptionCount": 15,
+      "notesTotal": 4,
+      "spokenCount": 15,
+      "exampleCount": 15,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-it-expressive"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.9167,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "espeak-it-expressive"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-it-expressive"
+      ]
+    },
+    {
+      "id": "pt-br-basic",
+      "language": "pt-BR",
+      "displayName": "Portuguese (Brazil) – vibrant vowels",
+      "description": "Brazilian Portuguese nasal set mapped from eSpeak pt-br",
+      "tags": [
+        "portuguese",
+        "latin"
+      ],
+      "characterCount": 18,
+      "multiCharacterCount": 4,
+      "uppercaseCharacterCount": 9,
+      "charactersWithIPA": 18,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "á",
+        "ã",
+        "ê",
+        "õ",
+        "ç",
+        "Á",
+        "Ã",
+        "Ê",
+        "Õ",
+        "Ç"
+      ],
+      "ipaCoveredCount": 8,
+      "ipaCoverageRatio": 0.4444,
+      "ipaCoveragePercent": 44.44,
+      "uniqueIpaCount": 9,
+      "fallbackHintCount": 18,
+      "descriptionCount": 18,
+      "notesTotal": 3,
+      "spokenCount": 18,
+      "exampleCount": 18,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-pt-br-vibrant"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.8944,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "espeak-pt-br-vibrant"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-pt-br-vibrant"
+      ]
+    },
+    {
+      "id": "hi-in-basic",
+      "language": "hi-IN",
+      "displayName": "Hindi – retroflex energy",
+      "description": "Core Devanagari characters tuned against eSpeak hi phonemes",
+      "tags": [
+        "hindi",
+        "indic",
+        "lang:hi"
+      ],
+      "characterCount": 5,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 5,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "आ",
+        "क",
+        "त्र"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.4,
+      "ipaCoveragePercent": 40.0,
+      "uniqueIpaCount": 5,
+      "fallbackHintCount": 5,
+      "descriptionCount": 5,
+      "notesTotal": 5,
+      "spokenCount": 5,
+      "exampleCount": 5,
+      "contextualCount": 1,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-hi-dynamic"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.85,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "espeak-hi-dynamic"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-hi-dynamic"
+      ]
+    },
+    {
+      "id": "en-gb-basic",
+      "language": "en-GB",
+      "displayName": "English (UK) – clipped clarity",
+      "description": "Receives vowels tuned for eSpeak en-gb",
+      "tags": [
+        "english",
+        "british"
+      ],
+      "characterCount": 6,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 5,
+      "charactersWithoutIPA": [
+        "r"
+      ],
+      "charactersWithUnmatchedIPA": [
+        "a",
+        "o",
+        "u"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.4,
+      "ipaCoveragePercent": 40.0,
+      "uniqueIpaCount": 5,
+      "fallbackHintCount": 6,
+      "descriptionCount": 6,
+      "notesTotal": 3,
+      "spokenCount": 6,
+      "exampleCount": 6,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-en-gb-clarity"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.8,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "espeak-en-gb-clarity"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-en-gb-clarity"
+      ]
+    },
+    {
+      "id": "es-419-basic",
+      "language": "es-419",
+      "displayName": "Spanish (LatAm) – sonorous core",
+      "description": "Latin American Spanish vowels and consonants following eSpeak es-la",
+      "tags": [
+        "spanish",
+        "latin"
+      ],
+      "characterCount": 7,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 7,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.2857,
+      "ipaCoveragePercent": 28.57,
+      "uniqueIpaCount": 7,
+      "fallbackHintCount": 7,
+      "descriptionCount": 7,
+      "notesTotal": 2,
+      "spokenCount": 7,
+      "exampleCount": 7,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-es-latin"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7357,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "espeak-es-latin"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-es-latin"
+      ]
+    },
+    {
+      "id": "fr-fr-basic",
+      "language": "fr-FR",
+      "displayName": "French – nasal warmth",
+      "description": "Core French characters tuned against eSpeak fr defaults",
+      "tags": [
+        "french",
+        "latin"
+      ],
+      "characterCount": 15,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 7,
+      "charactersWithIPA": 15,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "é",
+        "ç",
+        "œ",
+        "u",
+        "É",
+        "Ç",
+        "Œ",
+        "Ù",
+        "Û",
+        "û"
+      ],
+      "ipaCoveredCount": 5,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 6,
+      "fallbackHintCount": 15,
+      "descriptionCount": 15,
+      "notesTotal": 7,
+      "spokenCount": 15,
+      "exampleCount": 15,
+      "contextualCount": 1,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-fr-velvet"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "espeak-fr-velvet"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-fr-velvet"
+      ]
+    },
+    {
+      "id": "de-de-basic",
+      "language": "de-DE",
+      "displayName": "German – precise articulation",
+      "description": "Key German letters referencing eSpeak de voice",
+      "tags": [
+        "german",
+        "latin"
+      ],
+      "characterCount": 11,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 4,
+      "charactersWithIPA": 11,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ö",
+        "ü",
+        "ß",
+        "c",
+        "Z",
+        "z",
+        "Ö",
+        "Ü"
+      ],
+      "ipaCoveredCount": 3,
+      "ipaCoverageRatio": 0.2727,
+      "ipaCoveragePercent": 27.27,
+      "uniqueIpaCount": 6,
+      "fallbackHintCount": 11,
+      "descriptionCount": 11,
+      "notesTotal": 6,
+      "spokenCount": 11,
+      "exampleCount": 11,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-de-precision"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.6727,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "espeak-de-precision"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-de-precision"
+      ]
+    },
+    {
+      "id": "en-us-basic",
+      "language": "en-US",
+      "displayName": "English (US) – tactile vowels",
+      "description": "Foundational Latin alphabet mapping derived from eSpeak en-us",
+      "tags": [
+        "english",
+        "latin",
+        "community"
+      ],
+      "characterCount": 8,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 1,
+      "charactersWithIPA": 8,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "a",
+        "A",
+        "i",
+        "o",
+        "u",
+        "t"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.25,
+      "ipaCoveragePercent": 25.0,
+      "uniqueIpaCount": 7,
+      "fallbackHintCount": 8,
+      "descriptionCount": 8,
+      "notesTotal": 4,
+      "spokenCount": 8,
+      "exampleCount": 8,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-en-us-bright"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.65,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "espeak-en-us-bright"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 18,
+      "availableTemplates": [
+        "dectalk-beautiful-betty",
+        "dectalk-perfect-paul",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "eloquence-bhp-precision",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi5-codefactory-balanced",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-window-eyes-expressive",
+        "espeak-en-us-bright",
+        "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    {
+      "id": "ja-jp-basic",
+      "language": "ja-JP",
+      "displayName": "Japanese – mora rhythmic",
+      "description": "Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+      "tags": [
+        "japanese",
+        "kana",
+        "lang:ja"
+      ],
+      "characterCount": 5,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 5,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "あ",
+        "い",
+        "か",
+        "ん",
+        "が"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 5,
+      "fallbackHintCount": 5,
+      "descriptionCount": 5,
+      "notesTotal": 5,
+      "spokenCount": 5,
+      "exampleCount": 5,
+      "contextualCount": 1,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "espeak-ja-melodic"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.4,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "espeak-ja-melodic"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "espeak-ja-melodic"
+      ]
+    }
+  ],
+  "sortKey": "coverage"
+}
