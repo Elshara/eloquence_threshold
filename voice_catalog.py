@@ -221,6 +221,15 @@ _DEFAULT_PARAMETER_RANGE_SPECS: Dict[str, Dict[str, object]] = {
         "step": 1,
         "tags": ("loudness",),
     },
+    "sampleRate": {
+        "label": "Sample rate",
+        "description": "Output rate in Hertz after optional resampling.",
+        "min": 8000,
+        "max": 48000,
+        "default": 22050,
+        "step": 50,
+        "tags": ("output", "quality"),
+    },
 }
 
 _LANGUAGE_PROFILE_MAP = {
