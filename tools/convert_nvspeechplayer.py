@@ -218,10 +218,11 @@ def main() -> None:
     # Ensure that output_dir_real is within the default_output_dir_real
     if not (output_dir_real.startswith(default_output_dir_real + os.sep) or output_dir_real == default_output_dir_real):
         raise SystemExit(f"Refusing to write output file outside of allowed directory: {output_path}")
-    os.makedirs(output_dir, exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as handle:
+    os.makedirs(output_dir_real, exist_ok=True)
+    safe_output_path = os.path.join(output_dir_real, os.path.basename(output_path))
+    with open(safe_output_path, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
-    print(f"Wrote {output_path} with {len(payload['phonemes'])} entries")
+    print(f"Wrote {safe_output_path} with {len(payload['phonemes'])} entries")
 
 
 if __name__ == "__main__":
