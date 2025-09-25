@@ -31,6 +31,9 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
+import urllib.parse
+import socket
+import ipaddress
 import zipfile
 from pathlib import Path
 from typing import Optional, Tuple
@@ -97,25 +100,73 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+ALLOWED_TEMPLATE_HOSTS = {"github.com", "raw.githubusercontent.com"}
+ALLOWED_REPO_PREFIXES = ("nvaccess/", "pumper42nickel/", "Elshara/")
+
+
 def _is_trusted_template_url(url: str) -> bool:
-    """
-    Return True if the template URL points to a trusted source.
-    Only allow download from GitHub's nvaccess repository.
-    """
+    """Return ``True`` when *url* points at an approved template source."""
+
     try:
-        from urllib.parse import urlparse
-        parsed = urlparse(url)
-        if parsed.scheme != "https":
-            return False
-        # Check that host matches exactly or is a subdomain of github.com
-        if parsed.hostname != "github.com":
-            return False
-        # Restrict to 'nvaccess/' path -- you may tighten this if needed
-        if not parsed.path.lstrip("/").startswith("nvaccess/"):
-            return False
-        return True
+        parsed = urllib.parse.urlparse(url)
     except Exception:
         return False
+
+    if parsed.scheme.lower() != "https":
+        return False
+
+    hostname = (parsed.hostname or "").lower()
+    if hostname not in ALLOWED_TEMPLATE_HOSTS:
+        return False
+
+    normalized_path = parsed.path.lstrip("/")
+    if hostname == "github.com":
+        return normalized_path.startswith(ALLOWED_REPO_PREFIXES)
+
+    if hostname == "raw.githubusercontent.com":
+        return bool(normalized_path)
+
+    return False
+
+
+def _validate_template_url(url: str) -> None:
+    try:
+        parsed = urllib.parse.urlparse(url)
+    except Exception as error:
+        raise ValueError(f"Invalid template URL: {error}") from error
+
+    if parsed.scheme.lower() != "https":
+        raise ValueError("Only HTTPS URLs are allowed for template downloads.")
+
+    hostname = parsed.hostname
+    if not hostname:
+        raise ValueError("Invalid URL: missing hostname.")
+
+    if not _is_trusted_template_url(url):
+        raise ValueError(
+            "Only GitHub or raw.githubusercontent.com URLs within approved "
+            "repositories are allowed for --template-url"
+        )
+
+    try:
+        resolved_ip = socket.gethostbyname(hostname)
+    except Exception as dns_exc:
+        raise ValueError(f"Could not resolve hostname '{hostname}': {dns_exc}") from dns_exc
+
+    ip_obj = ipaddress.ip_address(resolved_ip)
+    if any(
+        (
+            ip_obj.is_loopback,
+            ip_obj.is_private,
+            ip_obj.is_link_local,
+            ip_obj.is_reserved,
+            ip_obj.is_multicast,
+        )
+    ):
+        raise ValueError(
+            f"Refusing to download template from restricted network address: {resolved_ip}"
+        )
+
 
 def ensure_template(
     path: Path, *, url: str, allow_download: bool, insecure: bool
@@ -126,11 +177,11 @@ def ensure_template(
         return path
     if not allow_download:
         return None
-    if not _is_trusted_template_url(url):
-        raise ValueError(
-            f"Refusing to download template from untrusted location: {url}\n"
-            "You may only use URLs under https://github.com/nvaccess/"
-        )
+    try:
+        _validate_template_url(url)
+    except ValueError as error:
+        print(f"Warning: {error}")
+        return None
     try:
         print(f"Downloading template from {url}…")
         context = ssl._create_unverified_context() if insecure else None
@@ -139,7 +190,7 @@ def ensure_template(
             with path.open("wb") as handle:
                 shutil.copyfileobj(response, handle)
         return path
-    except (OSError, urllib.error.URLError) as exc:
+    except (OSError, urllib.error.URLError, ValueError) as exc:
         print(f"Warning: unable to download template: {exc}")
     return None
 
@@ -188,6 +239,7 @@ def write_archive(staging_dir: Path, output: Path) -> None:
 
 def main() -> None:
     args = parse_args()
+    _validate_template_url(str(args.template_url))
     template_path = ensure_template(
         args.template.expanduser().resolve(),
         url=args.template_url,

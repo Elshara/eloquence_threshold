@@ -95,6 +95,16 @@ class LanguageProfileTests(unittest.TestCase):
             details = profile.describe_characters(sample_symbol)
             self.assertTrue(details, "Expected describe_characters to return mappings")
 
+    def test_profile_metrics_report_progress(self) -> None:
+        inventory = load_default_inventory()
+        for profile in self.catalog:
+            metrics = profile.metrics(inventory)
+            with self.subTest(profile=profile.id):
+                self.assertIn("progressScore", metrics)
+                self.assertGreaterEqual(metrics["progressScore"], 0.0)
+                self.assertLessEqual(metrics["progressScore"], 1.0)
+                self.assertIn("stage", metrics)
+
 
 if __name__ == "__main__":
     unittest.main()

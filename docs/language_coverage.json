@@ -1,0 +1,768 @@
+{
+  "entries": [
+    {
+      "characterCount": 0,
+      "defaultTemplateIds": [],
+      "ipaAnyMatchRatio": null,
+      "ipaCoverage": null,
+      "ipaSampleTotal": 0,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 0,
+      "languageTag": "",
+      "matchedPhonemes": [],
+      "multiCharacterCount": 0,
+      "normalisedTag": "",
+      "profileId": null,
+      "profileName": null,
+      "profileTags": [],
+      "status": "Templates only",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-variant-espeak-variants-alex"
+      ],
+      "unmatchedSamples": []
+    },
+    {
+      "characterCount": 11,
+      "defaultTemplateIds": [
+        "espeak-de-precision"
+      ],
+      "ipaAnyMatchRatio": 0.2727272727272727,
+      "ipaCoverage": 0.2727272727272727,
+      "ipaSampleTotal": 11,
+      "ipaSamplesFullMatch": 3,
+      "ipaSamplesWithMatch": 3,
+      "languageTag": "de-DE",
+      "matchedPhonemes": [
+        "\u025b",
+        "Q\""
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "de-DE",
+      "profileId": "de-de-basic",
+      "profileName": "German \u2013 precise articulation \u2013 de-DE \u2013 Key German letters referencing eSpeak de voice",
+      "profileTags": [
+        "german",
+        "latin"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-de-precision"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u00f8",
+          "symbol": "\u00f6",
+          "unmatched": "\u00f8"
+        },
+        {
+          "ipa": "y",
+          "symbol": "\u00fc",
+          "unmatched": "y"
+        },
+        {
+          "ipa": "s",
+          "symbol": "\u00df",
+          "unmatched": "s"
+        },
+        {
+          "ipa": "ts",
+          "symbol": "c",
+          "unmatched": "ts"
+        },
+        {
+          "ipa": "ts",
+          "symbol": "Z",
+          "unmatched": "ts"
+        },
+        {
+          "ipa": "ts",
+          "symbol": "z",
+          "unmatched": "ts"
+        },
+        {
+          "ipa": "\u00f8",
+          "symbol": "\u00d6",
+          "unmatched": "\u00f8"
+        },
+        {
+          "ipa": "y",
+          "symbol": "\u00dc",
+          "unmatched": "y"
+        }
+      ]
+    },
+    {
+      "characterCount": 6,
+      "defaultTemplateIds": [
+        "espeak-en-gb-clarity"
+      ],
+      "ipaAnyMatchRatio": 0.8,
+      "ipaCoverage": 0.4,
+      "ipaSampleTotal": 5,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 4,
+      "languageTag": "en-GB",
+      "matchedPhonemes": [
+        "\u0251",
+        "\u025b",
+        "\u026a",
+        "\u0254"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "en-GB",
+      "profileId": "en-gb-basic",
+      "profileName": "English (UK) \u2013 clipped clarity \u2013 en-GB \u2013 Receives vowels tuned for eSpeak en-gb",
+      "profileTags": [
+        "english",
+        "british"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-en-gb-clarity"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0251\u02d0",
+          "symbol": "a",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": "\u0254\u02d0",
+          "symbol": "o",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": "ju\u02d0",
+          "symbol": "u",
+          "unmatched": "ju\u02d0"
+        }
+      ]
+    },
+    {
+      "characterCount": 8,
+      "defaultTemplateIds": [
+        "espeak-en-us-bright"
+      ],
+      "ipaAnyMatchRatio": 0.625,
+      "ipaCoverage": 0.25,
+      "ipaSampleTotal": 8,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 5,
+      "languageTag": "en-US",
+      "matchedPhonemes": [
+        "\u0251",
+        "\u025b",
+        "\u028a",
+        "r"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "en-US",
+      "profileId": "en-us-basic",
+      "profileName": "English (US) \u2013 tactile vowels \u2013 en-US \u2013 Foundational Latin alphabet mapping derived from eSpeak en-us",
+      "profileTags": [
+        "english",
+        "latin",
+        "community"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 18,
+      "templateIds": [
+        "dectalk-perfect-paul",
+        "dectalk-beautiful-betty",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "espeak-en-us-bright",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-window-eyes-expressive",
+        "eloquence-bhp-precision",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi5-codefactory-balanced",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david",
+        "espeak-variant-espeak-variants-storm"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0251\u02d0",
+          "symbol": "a",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": "\u0251\u02d0",
+          "symbol": "A",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": "i",
+          "symbol": "i",
+          "unmatched": "i"
+        },
+        {
+          "ipa": "o\u028a",
+          "symbol": "o",
+          "unmatched": "o"
+        },
+        {
+          "ipa": "u",
+          "symbol": "u",
+          "unmatched": "u"
+        },
+        {
+          "ipa": "t",
+          "symbol": "t",
+          "unmatched": "t"
+        }
+      ]
+    },
+    {
+      "characterCount": 13,
+      "defaultTemplateIds": [
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-window-eyes-expressive",
+        "eloquence-bhp-precision"
+      ],
+      "ipaAnyMatchRatio": 0.7857142857142857,
+      "ipaCoverage": 0.5,
+      "ipaSampleTotal": 14,
+      "ipaSamplesFullMatch": 7,
+      "ipaSamplesWithMatch": 11,
+      "languageTag": "en-US",
+      "matchedPhonemes": [
+        "\u026a",
+        "\u025b",
+        "\u028a",
+        "r",
+        "\u03b8",
+        "\u00f0",
+        "dt_sh",
+        "dt_ch",
+        "\u014b",
+        "@-"
+      ],
+      "multiCharacterCount": 7,
+      "normalisedTag": "en-US",
+      "profileId": "en-us-heritage",
+      "profileName": "English (US) \u2013 Heritage Eloquence \u2013 en-US \u2013 Pronunciation cues transcribed from JAWS, Window-Eyes, and Loquence studio dictionaries",
+      "profileTags": [
+        "english",
+        "eloquence",
+        "heritage"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 18,
+      "templateIds": [
+        "dectalk-perfect-paul",
+        "dectalk-beautiful-betty",
+        "dectalk-rough-rita",
+        "dectalk-whispering-wendy",
+        "espeak-en-us-bright",
+        "eloquence-heritage-jaws-classic",
+        "eloquence-loquence-studio",
+        "eloquence-window-eyes-expressive",
+        "eloquence-bhp-precision",
+        "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-sapi4-viavoice-tracy",
+        "eloquence-sapi4-eloq61-studio",
+        "eloquence-sapi5-codefactory-balanced",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david",
+        "espeak-variant-espeak-variants-storm"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "e\u026a",
+          "symbol": "a",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "e\u026a",
+          "symbol": "A",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "i",
+          "symbol": "i",
+          "unmatched": "i"
+        },
+        {
+          "ipa": "o\u028a",
+          "symbol": "o",
+          "unmatched": "o"
+        },
+        {
+          "ipa": "\u025d",
+          "symbol": "er",
+          "unmatched": "\u025d"
+        },
+        {
+          "ipa": "\u025a",
+          "symbol": "er",
+          "unmatched": "\u025a"
+        },
+        {
+          "ipa": "\u0283\u0259n",
+          "symbol": "tion",
+          "unmatched": "n"
+        }
+      ]
+    },
+    {
+      "characterCount": 7,
+      "defaultTemplateIds": [
+        "espeak-es-latin"
+      ],
+      "ipaAnyMatchRatio": 0.2857142857142857,
+      "ipaCoverage": 0.2857142857142857,
+      "ipaSampleTotal": 7,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "es-419",
+      "matchedPhonemes": [
+        "n^",
+        "J^"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "es-419",
+      "profileId": "es-419-basic",
+      "profileName": "Spanish (LatAm) \u2013 sonorous core \u2013 es-419 \u2013 Latin American Spanish vowels and consonants following eSpeak es-la",
+      "profileTags": [
+        "spanish",
+        "latin"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-es-latin"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "a",
+          "symbol": "a",
+          "unmatched": "a"
+        },
+        {
+          "ipa": "e",
+          "symbol": "e",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "i",
+          "symbol": "i",
+          "unmatched": "i"
+        },
+        {
+          "ipa": "o",
+          "symbol": "o",
+          "unmatched": "o"
+        },
+        {
+          "ipa": "u",
+          "symbol": "u",
+          "unmatched": "u"
+        }
+      ]
+    },
+    {
+      "characterCount": 5,
+      "defaultTemplateIds": [
+        "espeak-es-castilian"
+      ],
+      "ipaAnyMatchRatio": 0.6,
+      "ipaCoverage": 0.6,
+      "ipaSampleTotal": 5,
+      "ipaSamplesFullMatch": 3,
+      "ipaSamplesWithMatch": 3,
+      "languageTag": "es-ES",
+      "matchedPhonemes": [
+        "\u03b8",
+        "l^"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "es-ES",
+      "profileId": "es-es-basic",
+      "profileName": "Spanish (Castilian) \u2013 crisp sibilants \u2013 es-ES \u2013 Castilian defaults matching eSpeak es",
+      "profileTags": [
+        "spanish",
+        "castilian"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-es-castilian"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "a",
+          "symbol": "a",
+          "unmatched": "a"
+        },
+        {
+          "ipa": "x",
+          "symbol": "j",
+          "unmatched": "x"
+        }
+      ]
+    },
+    {
+      "characterCount": 15,
+      "defaultTemplateIds": [
+        "espeak-fr-velvet"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 15,
+      "ipaSamplesFullMatch": 5,
+      "ipaSamplesWithMatch": 5,
+      "languageTag": "fr-FR",
+      "matchedPhonemes": [
+        "\u025b",
+        "Q\""
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "fr-FR",
+      "profileId": "fr-fr-basic",
+      "profileName": "French \u2013 nasal warmth \u2013 fr-FR \u2013 Core French characters tuned against eSpeak fr defaults",
+      "profileTags": [
+        "french",
+        "latin"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-fr-velvet"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "e",
+          "symbol": "\u00e9",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "s",
+          "symbol": "\u00e7",
+          "unmatched": "s"
+        },
+        {
+          "ipa": "\u0153",
+          "symbol": "\u0153",
+          "unmatched": "\u0153"
+        },
+        {
+          "ipa": "y",
+          "symbol": "u",
+          "unmatched": "y"
+        },
+        {
+          "ipa": "e",
+          "symbol": "\u00c9",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "s",
+          "symbol": "\u00c7",
+          "unmatched": "s"
+        },
+        {
+          "ipa": "\u0153",
+          "symbol": "\u0152",
+          "unmatched": "\u0153"
+        },
+        {
+          "ipa": "y",
+          "symbol": "\u00d9",
+          "unmatched": "y"
+        },
+        {
+          "ipa": "y",
+          "symbol": "\u00db",
+          "unmatched": "y"
+        },
+        {
+          "ipa": "y",
+          "symbol": "\u00fb",
+          "unmatched": "y"
+        }
+      ]
+    },
+    {
+      "characterCount": 5,
+      "defaultTemplateIds": [
+        "espeak-hi-dynamic"
+      ],
+      "ipaAnyMatchRatio": 0.8,
+      "ipaCoverage": 0.4,
+      "ipaSampleTotal": 5,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 4,
+      "languageTag": "hi-IN",
+      "matchedPhonemes": [
+        "@-",
+        "\u026a",
+        "r-"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "hi-IN",
+      "profileId": "hi-in-basic",
+      "profileName": "Hindi \u2013 retroflex energy \u2013 hi-IN \u2013 Core Devanagari characters tuned against eSpeak hi phonemes",
+      "profileTags": [
+        "hindi",
+        "indic",
+        "lang:hi"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-hi-dynamic"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "a\u02d0",
+          "symbol": "\u0906",
+          "unmatched": "a\u02d0"
+        },
+        {
+          "ipa": "k\u0259",
+          "symbol": "\u0915",
+          "unmatched": "k"
+        },
+        {
+          "ipa": "t\u032ar\u0329",
+          "symbol": "\u0924\u094d\u0930",
+          "unmatched": "t\u032a"
+        }
+      ]
+    },
+    {
+      "characterCount": 15,
+      "defaultTemplateIds": [
+        "espeak-it-expressive"
+      ],
+      "ipaAnyMatchRatio": 0.4666666666666667,
+      "ipaCoverage": 0.4666666666666667,
+      "ipaSampleTotal": 15,
+      "ipaSamplesFullMatch": 7,
+      "ipaSamplesWithMatch": 7,
+      "languageTag": "it-IT",
+      "matchedPhonemes": [
+        "\u025b",
+        "\u0254",
+        "l^",
+        "dt_sh"
+      ],
+      "multiCharacterCount": 3,
+      "normalisedTag": "it-IT",
+      "profileId": "it-it-basic",
+      "profileName": "Italian \u2013 open vowels \u2013 it-IT \u2013 Italian vowel core tied to eSpeak it voice",
+      "profileTags": [
+        "italian",
+        "latin"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-it-expressive"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "a",
+          "symbol": "\u00e0",
+          "unmatched": "a"
+        },
+        {
+          "ipa": "e",
+          "symbol": "\u00e9",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "o",
+          "symbol": "\u00f3",
+          "unmatched": "o"
+        },
+        {
+          "ipa": "u",
+          "symbol": "\u00f9",
+          "unmatched": "u"
+        },
+        {
+          "ipa": "a",
+          "symbol": "\u00c0",
+          "unmatched": "a"
+        },
+        {
+          "ipa": "e",
+          "symbol": "\u00c9",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "o",
+          "symbol": "\u00d3",
+          "unmatched": "o"
+        },
+        {
+          "ipa": "u",
+          "symbol": "\u00d9",
+          "unmatched": "u"
+        }
+      ]
+    },
+    {
+      "characterCount": 5,
+      "defaultTemplateIds": [
+        "espeak-ja-melodic"
+      ],
+      "ipaAnyMatchRatio": 0.2,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 5,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "ja-JP",
+      "matchedPhonemes": [
+        "\u0261"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "ja-JP",
+      "profileId": "ja-jp-basic",
+      "profileName": "Japanese \u2013 mora rhythmic \u2013 ja-JP \u2013 Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+      "profileTags": [
+        "japanese",
+        "kana",
+        "lang:ja"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-ja-melodic"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "a",
+          "symbol": "\u3042",
+          "unmatched": "a"
+        },
+        {
+          "ipa": "i",
+          "symbol": "\u3044",
+          "unmatched": "i"
+        },
+        {
+          "ipa": "ka",
+          "symbol": "\u304b",
+          "unmatched": "ka"
+        },
+        {
+          "ipa": "\u0274",
+          "symbol": "\u3093",
+          "unmatched": "\u0274"
+        },
+        {
+          "ipa": "\u0261a",
+          "symbol": "\u304c",
+          "unmatched": "a"
+        }
+      ]
+    },
+    {
+      "characterCount": 18,
+      "defaultTemplateIds": [
+        "espeak-pt-br-vibrant"
+      ],
+      "ipaAnyMatchRatio": 0.5555555555555556,
+      "ipaCoverage": 0.4444444444444444,
+      "ipaSampleTotal": 18,
+      "ipaSamplesFullMatch": 8,
+      "ipaSamplesWithMatch": 10,
+      "languageTag": "pt-BR",
+      "matchedPhonemes": [
+        "\u0250",
+        "\u025b",
+        "l^",
+        "n^"
+      ],
+      "multiCharacterCount": 4,
+      "normalisedTag": "pt-BR",
+      "profileId": "pt-br-basic",
+      "profileName": "Portuguese (Brazil) \u2013 vibrant vowels \u2013 pt-BR \u2013 Brazilian Portuguese nasal set mapped from eSpeak pt-br",
+      "profileTags": [
+        "portuguese",
+        "latin"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "espeak-pt-br-vibrant"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "a",
+          "symbol": "\u00e1",
+          "unmatched": "a"
+        },
+        {
+          "ipa": "\u0250\u0303",
+          "symbol": "\u00e3",
+          "unmatched": "\u0303"
+        },
+        {
+          "ipa": "e",
+          "symbol": "\u00ea",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "\u00f5",
+          "symbol": "\u00f5",
+          "unmatched": "\u00f5"
+        },
+        {
+          "ipa": "s",
+          "symbol": "\u00e7",
+          "unmatched": "s"
+        },
+        {
+          "ipa": "a",
+          "symbol": "\u00c1",
+          "unmatched": "a"
+        },
+        {
+          "ipa": "\u0250\u0303",
+          "symbol": "\u00c3",
+          "unmatched": "\u0303"
+        },
+        {
+          "ipa": "e",
+          "symbol": "\u00ca",
+          "unmatched": "e"
+        },
+        {
+          "ipa": "\u00f5",
+          "symbol": "\u00d5",
+          "unmatched": "\u00f5"
+        },
+        {
+          "ipa": "s",
+          "symbol": "\u00c7",
+          "unmatched": "s"
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2025-09-25T01:41:47Z",
+  "phonemeInventorySize": 136,
+  "statusCounts": {
+    "Profile + templates": 11,
+    "Profile only": 0,
+    "Templates only": 1,
+    "Uncovered": 0
+  },
+  "totalEntries": 12
+}
