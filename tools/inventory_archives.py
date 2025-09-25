@@ -373,11 +373,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             return False
     paths = []
     for root in args.roots:
-        candidate = Path(root).expanduser().resolve()
+        # Always interpret roots as relative to SAFE_ROOT
+        candidate = (SAFE_ROOT / root).expanduser().resolve()
         if is_within_safe_root(candidate, SAFE_ROOT):
             paths.append(candidate)
         else:
-            print(f"error: {candidate} is outside the allowed scan root ({SAFE_ROOT})", file=sys.stderr)
+            print(f"error: {root!r} resolves to {candidate}, which is outside the allowed scan root ({SAFE_ROOT})", file=sys.stderr)
     missing = [str(path) for path in paths if not path.exists()]
     if missing:
         for item in missing:
