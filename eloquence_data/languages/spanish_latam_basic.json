@@ -1,0 +1,78 @@
+{
+  "id": "es-419-basic",
+  "language": "es-419",
+  "displayName": "Spanish (LatAm) – sonorous core",
+  "description": "Latin American Spanish vowels and consonants following eSpeak es-la",
+  "tags": ["spanish", "latin"],
+  "stress": [
+    "Acute accent carries primary stress",
+    "Default stress on penultimate syllable"
+  ],
+  "sentenceStructure": [
+    "Subject–Verb–Object with flexible pronoun drop",
+    "Questions rise sharply at the end"
+  ],
+  "grammar": [
+    "Yeísmo pronounced /ʝ/",
+    "Syllable-final s kept strong"
+  ],
+  "defaultVoiceTemplates": ["espeak-es-latin"],
+  "characters": [
+    {
+      "symbol": "a",
+      "spoken": "ah",
+      "ipa": ["a"],
+      "description": "Open front vowel",
+      "example": "casa",
+      "notes": []
+    },
+    {
+      "symbol": "e",
+      "spoken": "eh",
+      "ipa": ["e"],
+      "description": "Close-mid vowel",
+      "example": "peso",
+      "notes": []
+    },
+    {
+      "symbol": "i",
+      "spoken": "ee",
+      "ipa": ["i"],
+      "description": "Close vowel",
+      "example": "vino",
+      "notes": ["Acts as glide in diphthongs"]
+    },
+    {
+      "symbol": "o",
+      "spoken": "oh",
+      "ipa": ["o"],
+      "description": "Close-mid back vowel",
+      "example": "todo",
+      "notes": []
+    },
+    {
+      "symbol": "u",
+      "spoken": "oo",
+      "ipa": ["u"],
+      "description": "Close back rounded",
+      "example": "luz",
+      "notes": []
+    },
+    {
+      "symbol": "ñ",
+      "spoken": "enye",
+      "ipa": ["ɲ"],
+      "description": "Palatal nasal",
+      "example": "niño",
+      "notes": []
+    },
+    {
+      "symbol": "ll",
+      "spoken": "y",
+      "ipa": ["ʝ"],
+      "description": "Yeísmo",
+      "example": "llamar",
+      "notes": ["Alternate /ʎ/ in Andean regions"]
+    }
+  ]
+}

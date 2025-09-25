@@ -1,0 +1,320 @@
+{
+  "generated": "2025-09-24T22:34:50.072126Z",
+  "entries": [
+    {
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe",
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe",
+      "name": "nvda_snapshot_alpha-52762,91e60c70.exe",
+      "entry_type": "file",
+      "size_bytes": 0,
+      "size_display": "0 B",
+      "modified": "2025-09-24T06:12:51",
+      "target": null,
+      "depth": 0,
+      "channel": "snapshot:alpha",
+      "version": "alpha-52762",
+      "recommendedAction": "update",
+      "severity": {
+        "level": "high",
+        "reason": "Snapshot alpha-52762 is newer than validated alpha-52705"
+      }
+    },
+    {
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52755,80144828.exe",
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52755,80144828.exe",
+      "name": "nvda_snapshot_alpha-52755,80144828.exe",
+      "entry_type": "file",
+      "size_bytes": 0,
+      "size_display": "0 B",
+      "modified": "2025-09-24T04:47:30",
+      "target": null,
+      "depth": 0,
+      "channel": "snapshot:alpha",
+      "version": "alpha-52755",
+      "recommendedAction": "update",
+      "severity": {
+        "level": "high",
+        "reason": "Snapshot alpha-52755 is newer than validated alpha-52705"
+      }
+    },
+    {
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52748,3f9151fe.exe",
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52748,3f9151fe.exe",
+      "name": "nvda_snapshot_alpha-52748,3f9151fe.exe",
+      "entry_type": "file",
+      "size_bytes": 18874368,
+      "size_display": "18 MB",
+      "modified": "2025-09-24T01:01:33",
+      "target": null,
+      "depth": 0,
+      "channel": "snapshot:alpha",
+      "version": "alpha-52748",
+      "recommendedAction": "update",
+      "severity": {
+        "level": "high",
+        "reason": "Snapshot alpha-52748 is newer than validated alpha-52705"
+      }
+    },
+    {
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52731,f294547a.exe",
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52731,f294547a.exe",
+      "name": "nvda_snapshot_alpha-52731,f294547a.exe",
+      "entry_type": "file",
+      "size_bytes": 50855936,
+      "size_display": "48.5 MB",
+      "modified": "2025-09-23T05:22:33",
+      "target": null,
+      "depth": 0,
+      "channel": "snapshot:alpha",
+      "version": "alpha-52731",
+      "recommendedAction": "update",
+      "severity": {
+        "level": "high",
+        "reason": "Snapshot alpha-52731 is newer than validated alpha-52705"
+      }
+    },
+    {
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52705,dc226976.exe",
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52705,dc226976.exe",
+      "name": "nvda_snapshot_alpha-52705,dc226976.exe",
+      "entry_type": "file",
+      "size_bytes": 50855936,
+      "size_display": "48.5 MB",
+      "modified": "2025-09-22T02:07:34",
+      "target": null,
+      "depth": 0,
+      "channel": "snapshot:alpha",
+      "version": "alpha-52705",
+      "recommendedAction": "monitor",
+      "severity": {
+        "level": "medium",
+        "reason": "Snapshot alpha-52705 matches the validated build"
+      }
+    },
+    {
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52693,5a557d02.exe",
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52693,5a557d02.exe",
+      "name": "nvda_snapshot_alpha-52693,5a557d02.exe",
+      "entry_type": "file",
+      "size_bytes": 50751078,
+      "size_display": "48.4 MB",
+      "modified": "2025-09-19T08:20:39",
+      "target": null,
+      "depth": 0,
+      "channel": "snapshot:alpha",
+      "version": "alpha-52693",
+      "recommendedAction": "downdate",
+      "severity": {
+        "level": "low",
+        "reason": "Snapshot alpha-52693 is older than validated alpha-52705"
+      }
+    },
+    {
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52681,c75b2de9.exe",
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52681,c75b2de9.exe",
+      "name": "nvda_snapshot_alpha-52681,c75b2de9.exe",
+      "entry_type": "file",
+      "size_bytes": 50855936,
+      "size_display": "48.5 MB",
+      "modified": "2025-09-19T02:58:31",
+      "target": null,
+      "depth": 0,
+      "channel": "snapshot:alpha",
+      "version": "alpha-52681",
+      "recommendedAction": "downdate",
+      "severity": {
+        "level": "low",
+        "reason": "Snapshot alpha-52681 is older than validated alpha-52705"
+      }
+    },
+    {
+      "path": "snapshots/alpha/nvda_snapshot_alpha-52672,32f645ca.exe",
+      "url": "https://download.nvaccess.org/snapshots/alpha/nvda_snapshot_alpha-52672,32f645ca.exe",
+      "name": "nvda_snapshot_alpha-52672,32f645ca.exe",
+      "entry_type": "file",
+      "size_bytes": 50855936,
+      "size_display": "48.5 MB",
+      "modified": "2025-09-18T02:22:01",
+      "target": null,
+      "depth": 0,
+      "channel": "snapshot:alpha",
+      "version": "alpha-52672",
+      "recommendedAction": "downdate",
+      "severity": {
+        "level": "low",
+        "reason": "Snapshot alpha-52672 is older than validated alpha-52705"
+      }
+    },
+    {
+      "path": "releases/stable/documentation/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/",
+      "name": "documentation",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:28",
+      "target": null,
+      "depth": 0,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/documentation/zh_TW/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_TW/",
+      "name": "zh_TW",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:25",
+      "target": null,
+      "depth": 1,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/documentation/zh_CN/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/zh_CN/",
+      "name": "zh_CN",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:25",
+      "target": null,
+      "depth": 1,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/documentation/vi/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/vi/",
+      "name": "vi",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:25",
+      "target": null,
+      "depth": 1,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/documentation/uk/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/uk/",
+      "name": "uk",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:25",
+      "target": null,
+      "depth": 1,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/documentation/tr/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/tr/",
+      "name": "tr",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:25",
+      "target": null,
+      "depth": 1,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/documentation/ta/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/ta/",
+      "name": "ta",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:25",
+      "target": null,
+      "depth": 1,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/documentation/sv/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sv/",
+      "name": "sv",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:25",
+      "target": null,
+      "depth": 1,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/documentation/sr/",
+      "url": "https://download.nvaccess.org/releases/stable/documentation/sr/",
+      "name": "sr",
+      "entry_type": "dir",
+      "size_bytes": null,
+      "size_display": "",
+      "modified": "2025-09-15T00:08:25",
+      "target": null,
+      "depth": 1,
+      "channel": "release",
+      "version": null,
+      "recommendedAction": "ignore",
+      "severity": null
+    },
+    {
+      "path": "releases/stable/nvda_2025.3_controllerClient.zip",
+      "url": "https://download.nvaccess.org/releases/stable/nvda_2025.3_controllerClient.zip",
+      "name": "nvda_2025.3_controllerClient.zip",
+      "entry_type": "file",
+      "size_bytes": 3565158,
+      "size_display": "3.4 MB",
+      "modified": "2025-09-15T00:08:12",
+      "target": null,
+      "depth": 0,
+      "channel": "release",
+      "version": "2025.3",
+      "recommendedAction": "keep",
+      "severity": {
+        "level": "info",
+        "reason": "Release 2025.3 is within the tested support window"
+      }
+    },
+    {
+      "path": "releases/stable/nvda_2025.3.exe",
+      "url": "https://download.nvaccess.org/releases/stable/nvda_2025.3.exe",
+      "name": "nvda_2025.3.exe",
+      "entry_type": "file",
+      "size_bytes": 51065651,
+      "size_display": "48.7 MB",
+      "modified": "2025-09-15T00:08:12",
+      "target": null,
+      "depth": 0,
+      "channel": "release",
+      "version": "2025.3",
+      "recommendedAction": "keep",
+      "severity": {
+        "level": "info",
+        "reason": "Release 2025.3 is within the tested support window"
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "id": "pt-br-basic",
+  "language": "pt-BR",
+  "displayName": "Portuguese (Brazil) – vibrant vowels",
+  "description": "Brazilian Portuguese nasal set mapped from eSpeak pt-br",
+  "tags": [
+    "portuguese",
+    "latin"
+  ],
+  "stress": [
+    "Default stress on penultimate syllable",
+    "Accent marks signal deviations"
+  ],
+  "sentenceStructure": [
+    "Subject–Verb–Object with topicalisation flexibility",
+    "Yes/no questions rely on rising contour"
+  ],
+  "grammar": [
+    "Nasal vowels marked with tilde",
+    "Diphthongs soften before palatal consonants"
+  ],
+  "defaultVoiceTemplates": [
+    "espeak-pt-br-vibrant"
+  ],
+  "characters": [
+    {
+      "symbol": "á",
+      "spoken": "a agudo",
+      "ipa": [
+        "a"
+      ],
+      "description": "Stressed open a",
+      "example": "café",
+      "notes": []
+    },
+    {
+      "symbol": "â",
+      "spoken": "a circunflexo",
+      "ipa": [
+        "ɐ"
+      ],
+      "description": "Centralised a",
+      "example": "âmbar",
+      "notes": [
+        "Often unstressed"
+      ]
+    },
+    {
+      "symbol": "ã",
+      "spoken": "a til",
+      "ipa": [
+        "ɐ̃"
+      ],
+      "description": "Nasalised a",
+      "example": "mão",
+      "notes": [
+        "Keep nasal airflow audible"
+      ]
+    },
+    {
+      "symbol": "é",
+      "spoken": "e agudo",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Stressed open e",
+      "example": "pé",
+      "notes": []
+    },
+    {
+      "symbol": "ê",
+      "spoken": "e circunflexo",
+      "ipa": [
+        "e"
+      ],
+      "description": "Closed e",
+      "example": "você",
+      "notes": []
+    },
+    {
+      "symbol": "õ",
+      "spoken": "o til",
+      "ipa": [
+        "õ"
+      ],
+      "description": "Nasal o",
+      "example": "pão",
+      "notes": []
+    },
+    {
+      "symbol": "ç",
+      "spoken": "c cedilha",
+      "ipa": [
+        "s"
+      ],
+      "description": "Soft c",
+      "example": "coração",
+      "notes": [
+        "Occurs before a, o, u"
+      ]
+    },
+    {
+      "symbol": "lh",
+      "spoken": "lh palatal",
+      "ipa": [
+        "ʎ"
+      ],
+      "description": "Palatal lateral",
+      "example": "filho",
+      "notes": []
+    },
+    {
+      "symbol": "nh",
+      "spoken": "nh nasal",
+      "ipa": [
+        "ɲ"
+      ],
+      "description": "Palatal nasal",
+      "example": "ninho",
+      "notes": []
+    },
+    {
+      "symbol": "Á",
+      "spoken": "A agudo",
+      "ipa": [
+        "a"
+      ],
+      "description": "Uppercase á",
+      "example": "Árvore",
+      "notes": []
+    },
+    {
+      "symbol": "Â",
+      "spoken": "A circunflexo",
+      "ipa": [
+        "ɐ"
+      ],
+      "description": "Uppercase â",
+      "example": "Ângulo",
+      "notes": []
+    },
+    {
+      "symbol": "Ã",
+      "spoken": "A til",
+      "ipa": [
+        "ɐ̃"
+      ],
+      "description": "Uppercase ã",
+      "example": "Ão",
+      "notes": []
+    },
+    {
+      "symbol": "É",
+      "spoken": "E agudo",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Uppercase é",
+      "example": "Época",
+      "notes": []
+    },
+    {
+      "symbol": "Ê",
+      "spoken": "E circunflexo",
+      "ipa": [
+        "e"
+      ],
+      "description": "Uppercase ê",
+      "example": "Ênfase",
+      "notes": []
+    },
+    {
+      "symbol": "Õ",
+      "spoken": "O til",
+      "ipa": [
+        "õ"
+      ],
+      "description": "Uppercase õ",
+      "example": "Õnibus",
+      "notes": []
+    },
+    {
+      "symbol": "Ç",
+      "spoken": "C cedilha",
+      "ipa": [
+        "s"
+      ],
+      "description": "Uppercase ç",
+      "example": "Çar",
+      "notes": []
+    },
+    {
+      "symbol": "Lh",
+      "spoken": "Lh palatal",
+      "ipa": [
+        "ʎ"
+      ],
+      "description": "Capitalised lh digraph",
+      "example": "Lhe",
+      "notes": []
+    },
+    {
+      "symbol": "Nh",
+      "spoken": "Nh palatal",
+      "ipa": [
+        "ɲ"
+      ],
+      "description": "Capitalised nh digraph",
+      "example": "Nhá",
+      "notes": []
+    }
+  ]
+}

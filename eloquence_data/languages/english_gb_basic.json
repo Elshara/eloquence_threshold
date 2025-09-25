@@ -1,0 +1,70 @@
+{
+  "id": "en-gb-basic",
+  "language": "en-GB",
+  "displayName": "English (UK) – clipped clarity",
+  "description": "Receives vowels tuned for eSpeak en-gb",
+  "tags": ["english", "british"],
+  "stress": [
+    "Primary stress ˈ, secondary ˌ",
+    "Non-rhotic endings drop /r/ unless followed by vowel"
+  ],
+  "sentenceStructure": [
+    "Subject–Verb–Object default",
+    "Statements fall in pitch at the end"
+  ],
+  "grammar": [
+    "T-glottalisation optional",
+    "-ise suffix keeps /z/ voicing"
+  ],
+  "defaultVoiceTemplates": ["espeak-en-gb-clarity"],
+  "characters": [
+    {
+      "symbol": "a",
+      "spoken": "ah",
+      "ipa": ["ɑː"],
+      "description": "Broad a",
+      "example": "bath",
+      "notes": ["Lengthens in RP"]
+    },
+    {
+      "symbol": "e",
+      "spoken": "eh",
+      "ipa": ["ɛ"],
+      "description": "Short e",
+      "example": "met",
+      "notes": []
+    },
+    {
+      "symbol": "i",
+      "spoken": "ih",
+      "ipa": ["ɪ"],
+      "description": "Kit vowel",
+      "example": "British",
+      "notes": []
+    },
+    {
+      "symbol": "o",
+      "spoken": "aw",
+      "ipa": ["ɔː"],
+      "description": "Thought vowel",
+      "example": "talk",
+      "notes": []
+    },
+    {
+      "symbol": "u",
+      "spoken": "ew",
+      "ipa": ["juː"],
+      "description": "Juiced u",
+      "example": "tune",
+      "notes": ["Drops j after consonant clusters"]
+    },
+    {
+      "symbol": "r",
+      "spoken": "silent",
+      "ipa": [""],
+      "description": "Non-rhotic",
+      "example": "car",
+      "notes": ["Linking r appears before vowels"]
+    }
+  ]
+}
