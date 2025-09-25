@@ -228,7 +228,7 @@ def _sanitize_for_log(obj):
     if isinstance(obj, str):
         return obj.replace('\n', '').replace('\r', '')
     elif isinstance(obj, dict):
-        return {k: _sanitize_for_log(v) for k, v in obj.items()}
+        return {_sanitize_for_log(k): _sanitize_for_log(v) for k, v in obj.items()}
     elif isinstance(obj, list):
         return [_sanitize_for_log(item) for item in obj]
     elif isinstance(obj, tuple):
