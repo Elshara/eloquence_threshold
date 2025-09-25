@@ -1,6 +1,7 @@
 import time
 import logging
 import ctypes
+import audioop
 from io import StringIO, BytesIO
 from versionInfo import version_year
 
@@ -42,7 +43,7 @@ eci = None
 tid = None
 bgt = None
 samples = 3300
-buffer = create_string_buffer(samples*2)
+buffer = create_string_buffer(samples * 2)
 bgQueue = queue.Queue()
 synth_queue = queue.Queue()
 stopped = threading.Event()
@@ -79,6 +80,19 @@ WM_KILL=1030
 WM_SYNTH=1031
 WM_INDEX=1032
 params = {}
+_SAMPLE_RATE_PARAM = 31
+_SAMPLE_RATE_CODE_TO_HZ = {0: 8000, 1: 11025, 2: 22050}
+_MIN_REQUESTED_SAMPLE_RATE = 8000
+_MAX_REQUESTED_SAMPLE_RATE = 48000
+_DEFAULT_REQUESTED_SAMPLE_RATE = 22050
+_requested_sample_rate_hz = _DEFAULT_REQUESTED_SAMPLE_RATE
+_current_engine_sample_code = min(
+    _SAMPLE_RATE_CODE_TO_HZ,
+    key=lambda code: abs(_SAMPLE_RATE_CODE_TO_HZ[code] - _requested_sample_rate_hz),
+)
+_current_engine_sample_rate_hz = _SAMPLE_RATE_CODE_TO_HZ[_current_engine_sample_code]
+_resample_state = None
+params[_SAMPLE_RATE_PARAM] = _current_engine_sample_code
 vparams = {}
 
 audio_queue = queue.Queue()
@@ -192,6 +206,110 @@ def _post_message(message, wparam=0, lparam=0):
   wintypes.LPARAM(lparam),
  )
 
+
+def _choose_engine_sample_code(target_hz):
+ global _current_engine_sample_code
+ try:
+  desired = int(target_hz)
+ except (TypeError, ValueError):
+  desired = _requested_sample_rate_hz
+ code = min(
+  _SAMPLE_RATE_CODE_TO_HZ,
+  key=lambda candidate: abs(_SAMPLE_RATE_CODE_TO_HZ[candidate] - desired),
+ )
+ return code
+
+
+def _set_engine_sample_code(code):
+ global _current_engine_sample_code, _current_engine_sample_rate_hz, _resample_state
+ if code not in _SAMPLE_RATE_CODE_TO_HZ:
+  raise ValueError(f"Unsupported Eloquence sample rate code: {code}")
+ if code == _current_engine_sample_code:
+  return
+ _current_engine_sample_code = code
+ _current_engine_sample_rate_hz = _SAMPLE_RATE_CODE_TO_HZ[code]
+ _resample_state = None
+ if dll and handle:
+  _post_message(WM_PARAM, code, _SAMPLE_RATE_PARAM)
+  param_event.wait()
+  param_event.clear()
+ else:
+  params[_SAMPLE_RATE_PARAM] = code
+
+
+def _create_wave_player(sample_rate_hz):
+ if version_year >= 2025:
+  device = config.conf["audio"]["outputDevice"]
+  ducking = True if config.conf["audio"]["audioDuckingMode"] else False
+  return nvwave.WavePlayer(1, sample_rate_hz, 16, outputDevice=device, wantDucking=ducking)
+ device = config.conf["speech"]["outputDevice"]
+ nvwave.WavePlayer.MIN_BUFFER_MS = 1500
+ return nvwave.WavePlayer(1, sample_rate_hz, 16, outputDevice=device, buffered=True)
+
+
+def _rebuild_player(sample_rate_hz):
+ global player
+ if player is not None:
+  try:
+   player.stop()
+  except Exception:
+   logging.exception("Unable to stop audio player while changing sample rate")
+  try:
+   player.close()
+  except Exception:
+   logging.exception("Unable to close audio player while changing sample rate")
+ player = _create_wave_player(sample_rate_hz)
+
+
+def _resample_audio(data):
+ global _resample_state
+ if not data:
+  return data
+ if _current_engine_sample_rate_hz == _requested_sample_rate_hz:
+  return data
+ converted, _resample_state = audioop.ratecv(
+  data,
+  2,
+  1,
+  _current_engine_sample_rate_hz,
+  _requested_sample_rate_hz,
+  _resample_state,
+ )
+ return converted
+
+
+def setSampleRate(hz):
+ global _requested_sample_rate_hz, _resample_state
+ try:
+  numeric = int(hz)
+ except (TypeError, ValueError):
+  raise ValueError(f"Invalid sample rate '{hz}'") from None
+ if numeric < _MIN_REQUESTED_SAMPLE_RATE:
+  numeric = _MIN_REQUESTED_SAMPLE_RATE
+ if numeric > _MAX_REQUESTED_SAMPLE_RATE:
+  numeric = _MAX_REQUESTED_SAMPLE_RATE
+ if numeric == _requested_sample_rate_hz:
+  return numeric
+ _requested_sample_rate_hz = numeric
+ _resample_state = None
+ desired_code = _choose_engine_sample_code(numeric)
+ _set_engine_sample_code(desired_code)
+ if player is not None:
+  _rebuild_player(_requested_sample_rate_hz)
+ return _requested_sample_rate_hz
+
+
+def getSampleRate():
+ return _requested_sample_rate_hz
+
+
+def getSampleRateBounds():
+ return _MIN_REQUESTED_SAMPLE_RATE, _MAX_REQUESTED_SAMPLE_RATE
+
+
+def getDefaultSampleRate():
+ return _DEFAULT_REQUESTED_SAMPLE_RATE
+
 class eciThread(threading.Thread):
  def run(self):
   global vparams, params, speaking
@@ -203,6 +321,8 @@ class eciThread(threading.Thread):
   dll.eciRegisterCallback(handle, callback, None)
   dll.eciSetOutputBuffer(handle, samples, pointer(buffer))
   dll.eciSetParam(handle,1, 1)
+  dll.eciSetParam(handle, _SAMPLE_RATE_PARAM, _current_engine_sample_code)
+  params[_SAMPLE_RATE_PARAM] = _current_engine_sample_code
   self.dictionaryHandle = dll.eciNewDict(handle)
   dll.eciSetDict(handle, self.dictionaryHandle)
   #0 = main dictionary
@@ -310,13 +430,14 @@ def setLast(lp):
  #player.idle()
 def bgPlay(stri, onDone=None):
  if len(stri) == 0: return
+ data = _resample_audio(stri)
  # Sometimes player.feed() tries to open the device when it's already open,
  # causing a WindowsError. This code catches and works around this.
  # [DGL, 2012-12-18 with help from Tyler]
  tries = 0
  while tries < 10:
   try:
-   player.feed(stri, onDone=onDone)
+   player.feed(data, onDone=onDone)
    if tries > 0:
     logging.warn("Eloq speech retries: %d" % (tries))
    return
@@ -396,14 +517,7 @@ def initialize(indexCallback=None):
  global eci, player, bgt, dll, handle, onIndexReached
 
  onIndexReached = indexCallback
- if version_year >= 2025:
-  device = config.conf["audio"]["outputDevice"]
-  ducking = True if config.conf["audio"]["audioDuckingMode"] else False
-  player = nvwave.WavePlayer(1, 11025, 16, outputDevice=device, wantDucking=ducking)
- else:
-  device = config.conf["speech"]["outputDevice"]
-  nvwave.WavePlayer.MIN_BUFFER_MS = 1500
-  player = nvwave.WavePlayer(1, 11025, 16, outputDevice=device, buffered=True)
+ _rebuild_player(_requested_sample_rate_hz)
  eci = eciThread()
  eci.start()
  started.wait()

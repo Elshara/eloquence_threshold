@@ -72,6 +72,22 @@ VOICE_PARAMETER_VALUE_SETTING = NumericDriverSetting(
 _VOICE_PARAMETER_VALUE_BASE_LABEL = VOICE_PARAMETER_VALUE_SETTING.displayName
 
 
+_SAMPLE_RATE_MIN, _SAMPLE_RATE_MAX = _eloquence.getSampleRateBounds()
+_SAMPLE_RATE_DEFAULT = _eloquence.getDefaultSampleRate()
+SAMPLE_RATE_SETTING = NumericDriverSetting(
+ "sampleRate",
+ _("Sample &rate (Hz)"),
+ availableInSettingsRing=True,
+ minVal=_SAMPLE_RATE_MIN,
+ maxVal=_SAMPLE_RATE_MAX,
+ minStep=50,
+ normalStep=500,
+ largeStep=2000,
+ displayName=_("Sample rate (Hz)"),
+)
+SAMPLE_RATE_SETTING.defaultVal = _SAMPLE_RATE_DEFAULT
+
+
 punctuation = ",.?:;"
 punctuation = [x for x in punctuation]
 from ctypes import *
@@ -197,6 +213,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
    availableInSettingsRing=True,
    displayName=_("Language profile"),
   ),
+  SAMPLE_RATE_SETTING,
   VOICE_PARAMETER_SETTING,
   VOICE_PARAMETER_VALUE_SETTING,
   DriverSetting(
@@ -285,7 +302,27 @@ class SynthDriver(synthDriverHandler.SynthDriver):
  @classmethod
  def check(cls):
   return _eloquence.eciCheck()
+ def _load_startup_preferences(self):
+  try:
+   speech_section = config.conf.get("speech")
+  except Exception:
+   speech_section = None
+  if not isinstance(speech_section, dict):
+   return
+  synth_section = speech_section.get(self.name)
+  if not isinstance(synth_section, dict):
+   return
+  stored_rate = synth_section.get("sampleRate")
+  if stored_rate is None:
+   return
+  try:
+   _eloquence.setSampleRate(int(stored_rate))
+  except Exception:
+   logging.exception("Unable to restore stored sample rate '%s'", stored_rate)
+  else:
+   self._persist_sample_rate()
  def __init__(self):
+  self._load_startup_preferences()
   _eloquence.initialize(self._onIndexReached)
  self.curvoice="enu"
  self.rate=50
@@ -520,6 +557,12 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   if template.variant:
    self._set_variant(template.variant)
   for name, value in template.parameter_items():
+   if name == "sampleRate":
+    try:
+     self._set_sampleRate(int(value))
+    except Exception:
+     logging.exception("Unable to apply sample rate '%s' for template '%s'", value, template.id)
+    continue
    binding = _VOICE_PARAM_BINDINGS.get(name)
    if binding is None:
     continue
@@ -1197,6 +1240,18 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
   else:
    synth_section.pop("phonemeFallback", None)
 
+ def _persist_sample_rate(self):
+  try:
+   speech_section = config.conf.setdefault("speech", {})
+  except Exception:
+   return
+  synth_section = speech_section.setdefault(self.name, {})
+  current = _eloquence.getSampleRate()
+  if current == _SAMPLE_RATE_DEFAULT:
+   synth_section.pop("sampleRate", None)
+  else:
+   synth_section["sampleRate"] = int(current)
+
  def _format_replacement_label(
   self,
   definition: PhonemeDefinition,
@@ -1256,6 +1311,18 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
   if enable == self._phrasePrediction:
    return
   self._phrasePrediction = enable
+
+ def _get_sampleRate(self):
+  return int(_eloquence.getSampleRate())
+
+ def _set_sampleRate(self, value):
+  try:
+   numeric = int(value)
+  except (TypeError, ValueError):
+   raise ValueError(f"Invalid sample rate '{value}'") from None
+  _eloquence.setSampleRate(numeric)
+  self._persist_sample_rate()
+
  def _get_rate(self):
   return self._paramToPercent(self.getVParam(_eloquence.rate),minRate,maxRate)
 

@@ -31,7 +31,9 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
-from urllib.parse import urlparse
+import urllib.parse
+import socket
+import ipaddress
 import zipfile
 from pathlib import Path
 from typing import Optional, Tuple
@@ -98,20 +100,6 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def is_trusted_url(url: str) -> bool:
-    """Return True if the given URL is a trusted location for template downloads."""
-    allowed_domains = {"github.com", "raw.githubusercontent.com"}
-    try:
-        parsed = urlparse(url)
-        # Only allow https and a specific set of domains
-        if parsed.scheme != "https":
-            return False
-        # Remove port if present
-        netloc = parsed.netloc.split(":")[0]
-        return netloc in allowed_domains
-    except Exception:
-        return False
-
 def ensure_template(
     path: Path, *, url: str, allow_download: bool, insecure: bool
 ) -> Optional[Path]:
@@ -121,11 +109,24 @@ def ensure_template(
         return path
     if not allow_download:
         return None
-
-    if not is_trusted_url(url):
-        print("Warning: Refusing to download template from untrusted URL.")
-        return None
     try:
+        # Validate URL to mitigate SSRF risks
+        parsed = urllib.parse.urlparse(url)
+        if parsed.scheme.lower() != "https":
+            raise ValueError("Only HTTPS URLs are allowed for template downloads.")
+        host = parsed.hostname
+        if not host:
+            raise ValueError("Invalid URL: missing hostname.")
+        # Resolve hostname to IP and check for loopback/private addresses
+        try:
+            # Will fail for IDNA/unicode, but that's very rare here
+            ip = socket.gethostbyname(host)
+            ip_obj = ipaddress.ip_address(ip)
+            if ip_obj.is_loopback or ip_obj.is_private or ip_obj.is_link_local or ip_obj.is_reserved or ip_obj.is_multicast:
+                raise ValueError(f"Refusing to download from private or local network address: {ip}")
+        except Exception as dns_exc:
+            raise ValueError(f"Could not resolve hostname '{host}': {dns_exc}")
+
         print(f"Downloading template from {url}…")
         context = ssl._create_unverified_context() if insecure else None
         with urllib.request.urlopen(url, context=context) as response:
@@ -133,7 +134,7 @@ def ensure_template(
             with path.open("wb") as handle:
                 shutil.copyfileobj(response, handle)
         return path
-    except (OSError, urllib.error.URLError) as exc:
+    except (OSError, urllib.error.URLError, ValueError) as exc:
         print(f"Warning: unable to download template: {exc}")
     return None
 
