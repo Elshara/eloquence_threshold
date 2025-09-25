@@ -110,6 +110,23 @@ class CliReportTests(unittest.TestCase):
             self.assertGreaterEqual(payload["totalEntries"], 1)
             self.assertTrue(md_path.read_text(encoding="utf-8").strip())
 
+    def test_report_phoneme_fallbacks(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            json_path = Path(tmp, "phoneme_fallbacks.json")
+            md_path = Path(tmp, "phoneme_fallbacks.md")
+            result = self._run_tool(
+                "tools/report_phoneme_fallbacks.py",
+                "--json",
+                str(json_path),
+                "--markdown",
+                str(md_path),
+            )
+            self.assertEqual(result.returncode, 0, msg=result.stderr)
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            self.assertIn("profiles", payload)
+            self.assertIn("metadata", payload)
+            self.assertTrue(md_path.read_text(encoding="utf-8").strip())
+
 
 if __name__ == "__main__":
     unittest.main()
