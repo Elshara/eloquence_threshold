@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 from typing import Iterable, Optional
+import os
 
 
 def main() -> None:
@@ -60,9 +61,7 @@ def main() -> None:
     output_path = Path(args.output).resolve()
     # Ensure output_path writes only within the repository directory or a predefined safe root
     safe_base = Path(__file__).parent.parent.resolve()  # Project root
-    try:
-        output_path.relative_to(safe_base)
-    except ValueError:
+    if not _is_within_directory(output_path, safe_base):
         parser.error(
             f"The output path {output_path} is not within the allowed base directory {safe_base}."
         )
@@ -105,6 +104,12 @@ def _resolve_phoneme_source(base_path: Path) -> Optional[Path]:
                 return candidate
     return None
 
+
+def _is_within_directory(target: Path, base: Path) -> bool:
+    # Resolve symbolic links and normalize the path
+    target_resolved = target.resolve()
+    base_resolved = base.resolve()
+    return os.path.commonpath([str(target_resolved), str(base_resolved)]) == str(base_resolved)
 
 def _normalize_newlines(text: str) -> str:
     text = text.replace("\r\n", "\n").replace("\r", "\n")
