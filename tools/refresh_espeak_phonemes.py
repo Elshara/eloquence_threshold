@@ -57,7 +57,15 @@ def main() -> None:
             "Unable to locate an eSpeak NG phoneme file under %s" % source_path
         )
 
-    output_path = Path(args.output)
+    output_path = Path(args.output).resolve()
+    # Ensure output_path writes only within the repository directory or a predefined safe root
+    safe_base = Path(__file__).parent.parent.resolve()  # Project root
+    try:
+        output_path.relative_to(safe_base)
+    except ValueError:
+        parser.error(
+            f"The output path {output_path} is not within the allowed base directory {safe_base}."
+        )
     _validate_output_path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
