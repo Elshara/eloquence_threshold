@@ -218,6 +218,7 @@ def main() -> None:
     # Ensure that output_dir_real is within the default_output_dir_real
     if not (output_dir_real.startswith(default_output_dir_real + os.sep) or output_dir_real == default_output_dir_real):
         raise SystemExit(f"Refusing to write output file outside of allowed directory: {output_path}")
+    # Only create the directory if the path validation check passes
     os.makedirs(output_dir_real, exist_ok=True)
     safe_output_path = os.path.join(output_dir_real, os.path.basename(output_path))
     with open(safe_output_path, "w", encoding="utf-8") as handle:
