@@ -211,9 +211,12 @@ def main() -> None:
     output_path = os.path.abspath(args.output_path)
     # Constrain the output path to a safe output directory root
     default_output_dir = os.path.abspath(os.path.join("eloquence_data", "phonemes"))
+    # Use realpath to resolve symlinks and normalize the directory paths
     output_dir = os.path.dirname(output_path)
-    # Ensure that output_dir is within the default_output_dir
-    if not output_dir.startswith(default_output_dir + os.sep) and output_dir != default_output_dir:
+    output_dir_real = os.path.realpath(output_dir)
+    default_output_dir_real = os.path.realpath(default_output_dir)
+    # Ensure that output_dir_real is within the default_output_dir_real
+    if not (output_dir_real.startswith(default_output_dir_real + os.sep) or output_dir_real == default_output_dir_real):
         raise SystemExit(f"Refusing to write output file outside of allowed directory: {output_path}")
     os.makedirs(output_dir, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as handle:
