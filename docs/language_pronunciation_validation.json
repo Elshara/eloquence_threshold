@@ -1,0 +1,1016 @@
+{
+  "issues": [
+    "IPA '\u0251\u02d0' for symbol 'a' in profile 'en-gb-basic' leaves unmatched fragment '\u02d0'",
+    "IPA '\u0254\u02d0' for symbol 'o' in profile 'en-gb-basic' leaves unmatched fragment '\u02d0'",
+    "IPA 'ju\u02d0' for symbol 'u' in profile 'en-gb-basic' does not map to any known phoneme",
+    "Profile 'en-gb-basic' has no IPA data for symbol 'r'",
+    "IPA '\u0251\u02d0' for symbol 'a' in profile 'en-us-basic' leaves unmatched fragment '\u02d0'",
+    "IPA '\u0251\u02d0' for symbol 'A' in profile 'en-us-basic' leaves unmatched fragment '\u02d0'",
+    "IPA 'i' for symbol 'i' in profile 'en-us-basic' does not map to any known phoneme",
+    "IPA 'o\u028a' for symbol 'o' in profile 'en-us-basic' leaves unmatched fragment 'o'",
+    "IPA 'u' for symbol 'u' in profile 'en-us-basic' does not map to any known phoneme",
+    "IPA 't' for symbol 't' in profile 'en-us-basic' does not map to any known phoneme",
+    "IPA 'e\u026a' for symbol 'a' in profile 'en-us-heritage' leaves unmatched fragment 'e'",
+    "IPA 'e\u026a' for symbol 'A' in profile 'en-us-heritage' leaves unmatched fragment 'e'",
+    "IPA 'i' for symbol 'i' in profile 'en-us-heritage' does not map to any known phoneme",
+    "IPA 'o\u028a' for symbol 'o' in profile 'en-us-heritage' leaves unmatched fragment 'o'",
+    "IPA '\u025d' for symbol 'er' in profile 'en-us-heritage' does not map to any known phoneme",
+    "IPA '\u025a' for symbol 'er' in profile 'en-us-heritage' does not map to any known phoneme",
+    "IPA '\u0283\u0259n' for symbol 'tion' in profile 'en-us-heritage' leaves unmatched fragment 'n'",
+    "IPA 'e' for symbol '\u00e9' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA 's' for symbol '\u00e7' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA '\u0153' for symbol '\u0153' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA 'y' for symbol 'u' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA 'e' for symbol '\u00c9' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA 's' for symbol '\u00c7' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA '\u0153' for symbol '\u0152' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA 'y' for symbol '\u00d9' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA 'y' for symbol '\u00db' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA 'y' for symbol '\u00fb' in profile 'fr-fr-basic' does not map to any known phoneme",
+    "IPA '\u00f8' for symbol '\u00f6' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA 'y' for symbol '\u00fc' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA 's' for symbol '\u00df' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA 'ts' for symbol 'c' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA 'ts' for symbol 'Z' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA 'ts' for symbol 'z' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA '\u00f8' for symbol '\u00d6' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA 'y' for symbol '\u00dc' in profile 'de-de-basic' does not map to any known phoneme",
+    "IPA 'a\u02d0' for symbol '\u0906' in profile 'hi-in-basic' does not map to any known phoneme",
+    "IPA 'k\u0259' for symbol '\u0915' in profile 'hi-in-basic' leaves unmatched fragment 'k'",
+    "IPA 't\u032ar\u0329' for symbol '\u0924\u094d\u0930' in profile 'hi-in-basic' leaves unmatched fragment 't\u032a'",
+    "IPA 'a' for symbol '\u00e0' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'e' for symbol '\u00e9' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'o' for symbol '\u00f3' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'u' for symbol '\u00f9' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'a' for symbol '\u00c0' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'e' for symbol '\u00c9' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'o' for symbol '\u00d3' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'u' for symbol '\u00d9' in profile 'it-it-basic' does not map to any known phoneme",
+    "IPA 'a' for symbol '\u3042' in profile 'ja-jp-basic' does not map to any known phoneme",
+    "IPA 'i' for symbol '\u3044' in profile 'ja-jp-basic' does not map to any known phoneme",
+    "IPA 'ka' for symbol '\u304b' in profile 'ja-jp-basic' does not map to any known phoneme",
+    "IPA '\u0274' for symbol '\u3093' in profile 'ja-jp-basic' does not map to any known phoneme",
+    "IPA '\u0261a' for symbol '\u304c' in profile 'ja-jp-basic' leaves unmatched fragment 'a'",
+    "IPA 'a' for symbol '\u00e1' in profile 'pt-br-basic' does not map to any known phoneme",
+    "IPA '\u0250\u0303' for symbol '\u00e3' in profile 'pt-br-basic' leaves unmatched fragment '\u0303'",
+    "IPA 'e' for symbol '\u00ea' in profile 'pt-br-basic' does not map to any known phoneme",
+    "IPA '\u00f5' for symbol '\u00f5' in profile 'pt-br-basic' does not map to any known phoneme",
+    "IPA 's' for symbol '\u00e7' in profile 'pt-br-basic' does not map to any known phoneme",
+    "IPA 'a' for symbol '\u00c1' in profile 'pt-br-basic' does not map to any known phoneme",
+    "IPA '\u0250\u0303' for symbol '\u00c3' in profile 'pt-br-basic' leaves unmatched fragment '\u0303'",
+    "IPA 'e' for symbol '\u00ca' in profile 'pt-br-basic' does not map to any known phoneme",
+    "IPA '\u00f5' for symbol '\u00d5' in profile 'pt-br-basic' does not map to any known phoneme",
+    "IPA 's' for symbol '\u00c7' in profile 'pt-br-basic' does not map to any known phoneme",
+    "IPA 'a' for symbol 'a' in profile 'es-es-basic' does not map to any known phoneme",
+    "IPA 'x' for symbol 'j' in profile 'es-es-basic' does not map to any known phoneme",
+    "IPA 'a' for symbol 'a' in profile 'es-419-basic' does not map to any known phoneme",
+    "IPA 'e' for symbol 'e' in profile 'es-419-basic' does not map to any known phoneme",
+    "IPA 'i' for symbol 'i' in profile 'es-419-basic' does not map to any known phoneme",
+    "IPA 'o' for symbol 'o' in profile 'es-419-basic' does not map to any known phoneme",
+    "IPA 'u' for symbol 'u' in profile 'es-419-basic' does not map to any known phoneme"
+  ],
+  "profiles": [
+    {
+      "characterCount": 6,
+      "charactersWithIpa": 5,
+      "display": "English (UK) \u2013 clipped clarity \u2013 en-GB \u2013 Receives vowels tuned for eSpeak en-gb",
+      "entries": [
+        {
+          "ipa": "\u0251\u02d0",
+          "issue": "IPA '\u0251\u02d0' for symbol 'a' in profile 'en-gb-basic' leaves unmatched fragment '\u02d0'",
+          "matches": [
+            "\u0251"
+          ],
+          "symbol": "a"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "e"
+        },
+        {
+          "ipa": "\u026a",
+          "matches": [
+            "\u026a"
+          ],
+          "symbol": "i"
+        },
+        {
+          "ipa": "\u0254\u02d0",
+          "issue": "IPA '\u0254\u02d0' for symbol 'o' in profile 'en-gb-basic' leaves unmatched fragment '\u02d0'",
+          "matches": [
+            "\u0254"
+          ],
+          "symbol": "o"
+        },
+        {
+          "ipa": "ju\u02d0",
+          "issue": "IPA 'ju\u02d0' for symbol 'u' in profile 'en-gb-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "u"
+        },
+        {
+          "ipa": null,
+          "issue": "Profile 'en-gb-basic' has no IPA data for symbol 'r'",
+          "matches": [],
+          "symbol": "r"
+        }
+      ],
+      "id": "en-gb-basic",
+      "ipaCount": 5,
+      "issues": [
+        "IPA '\u0251\u02d0' for symbol 'a' in profile 'en-gb-basic' leaves unmatched fragment '\u02d0'",
+        "IPA '\u0254\u02d0' for symbol 'o' in profile 'en-gb-basic' leaves unmatched fragment '\u02d0'",
+        "IPA 'ju\u02d0' for symbol 'u' in profile 'en-gb-basic' does not map to any known phoneme",
+        "Profile 'en-gb-basic' has no IPA data for symbol 'r'"
+      ],
+      "language": "en-GB",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 8,
+      "charactersWithIpa": 8,
+      "display": "English (US) \u2013 tactile vowels \u2013 en-US \u2013 Foundational Latin alphabet mapping derived from eSpeak en-us",
+      "entries": [
+        {
+          "ipa": "\u0251\u02d0",
+          "issue": "IPA '\u0251\u02d0' for symbol 'a' in profile 'en-us-basic' leaves unmatched fragment '\u02d0'",
+          "matches": [
+            "\u0251"
+          ],
+          "symbol": "a"
+        },
+        {
+          "ipa": "\u0251\u02d0",
+          "issue": "IPA '\u0251\u02d0' for symbol 'A' in profile 'en-us-basic' leaves unmatched fragment '\u02d0'",
+          "matches": [
+            "\u0251"
+          ],
+          "symbol": "A"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "e"
+        },
+        {
+          "ipa": "i",
+          "issue": "IPA 'i' for symbol 'i' in profile 'en-us-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "i"
+        },
+        {
+          "ipa": "o\u028a",
+          "issue": "IPA 'o\u028a' for symbol 'o' in profile 'en-us-basic' leaves unmatched fragment 'o'",
+          "matches": [
+            "\u028a"
+          ],
+          "symbol": "o"
+        },
+        {
+          "ipa": "u",
+          "issue": "IPA 'u' for symbol 'u' in profile 'en-us-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "u"
+        },
+        {
+          "ipa": "\u0279",
+          "matches": [
+            "r"
+          ],
+          "symbol": "r"
+        },
+        {
+          "ipa": "t",
+          "issue": "IPA 't' for symbol 't' in profile 'en-us-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "t"
+        }
+      ],
+      "id": "en-us-basic",
+      "ipaCount": 8,
+      "issues": [
+        "IPA '\u0251\u02d0' for symbol 'a' in profile 'en-us-basic' leaves unmatched fragment '\u02d0'",
+        "IPA '\u0251\u02d0' for symbol 'A' in profile 'en-us-basic' leaves unmatched fragment '\u02d0'",
+        "IPA 'i' for symbol 'i' in profile 'en-us-basic' does not map to any known phoneme",
+        "IPA 'o\u028a' for symbol 'o' in profile 'en-us-basic' leaves unmatched fragment 'o'",
+        "IPA 'u' for symbol 'u' in profile 'en-us-basic' does not map to any known phoneme",
+        "IPA 't' for symbol 't' in profile 'en-us-basic' does not map to any known phoneme"
+      ],
+      "language": "en-US",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 13,
+      "charactersWithIpa": 13,
+      "display": "English (US) \u2013 Heritage Eloquence \u2013 en-US \u2013 Pronunciation cues transcribed from JAWS, Window-Eyes, and Loquence studio dictionaries",
+      "entries": [
+        {
+          "ipa": "e\u026a",
+          "issue": "IPA 'e\u026a' for symbol 'a' in profile 'en-us-heritage' leaves unmatched fragment 'e'",
+          "matches": [
+            "\u026a"
+          ],
+          "symbol": "a"
+        },
+        {
+          "ipa": "e\u026a",
+          "issue": "IPA 'e\u026a' for symbol 'A' in profile 'en-us-heritage' leaves unmatched fragment 'e'",
+          "matches": [
+            "\u026a"
+          ],
+          "symbol": "A"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "e"
+        },
+        {
+          "ipa": "i",
+          "issue": "IPA 'i' for symbol 'i' in profile 'en-us-heritage' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "i"
+        },
+        {
+          "ipa": "o\u028a",
+          "issue": "IPA 'o\u028a' for symbol 'o' in profile 'en-us-heritage' leaves unmatched fragment 'o'",
+          "matches": [
+            "\u028a"
+          ],
+          "symbol": "o"
+        },
+        {
+          "ipa": "\u0279",
+          "matches": [
+            "r"
+          ],
+          "symbol": "r"
+        },
+        {
+          "ipa": "\u025d",
+          "issue": "IPA '\u025d' for symbol 'er' in profile 'en-us-heritage' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "er"
+        },
+        {
+          "ipa": "\u025a",
+          "issue": "IPA '\u025a' for symbol 'er' in profile 'en-us-heritage' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "er"
+        },
+        {
+          "ipa": "\u03b8",
+          "matches": [
+            "\u03b8"
+          ],
+          "symbol": "th"
+        },
+        {
+          "ipa": "\u00f0",
+          "matches": [
+            "\u00f0"
+          ],
+          "symbol": "TH"
+        },
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "sh"
+        },
+        {
+          "ipa": "t\u0283",
+          "matches": [
+            "dt_ch"
+          ],
+          "symbol": "ch"
+        },
+        {
+          "ipa": "\u026a\u014b",
+          "matches": [
+            "\u026a",
+            "\u014b"
+          ],
+          "symbol": "ing"
+        },
+        {
+          "ipa": "\u0283\u0259n",
+          "issue": "IPA '\u0283\u0259n' for symbol 'tion' in profile 'en-us-heritage' leaves unmatched fragment 'n'",
+          "matches": [
+            "dt_sh",
+            "@-"
+          ],
+          "symbol": "tion"
+        }
+      ],
+      "id": "en-us-heritage",
+      "ipaCount": 14,
+      "issues": [
+        "IPA 'e\u026a' for symbol 'a' in profile 'en-us-heritage' leaves unmatched fragment 'e'",
+        "IPA 'e\u026a' for symbol 'A' in profile 'en-us-heritage' leaves unmatched fragment 'e'",
+        "IPA 'i' for symbol 'i' in profile 'en-us-heritage' does not map to any known phoneme",
+        "IPA 'o\u028a' for symbol 'o' in profile 'en-us-heritage' leaves unmatched fragment 'o'",
+        "IPA '\u025d' for symbol 'er' in profile 'en-us-heritage' does not map to any known phoneme",
+        "IPA '\u025a' for symbol 'er' in profile 'en-us-heritage' does not map to any known phoneme",
+        "IPA '\u0283\u0259n' for symbol 'tion' in profile 'en-us-heritage' leaves unmatched fragment 'n'"
+      ],
+      "language": "en-US",
+      "matchedCount": 7
+    },
+    {
+      "characterCount": 15,
+      "charactersWithIpa": 15,
+      "display": "French \u2013 nasal warmth \u2013 fr-FR \u2013 Core French characters tuned against eSpeak fr defaults",
+      "entries": [
+        {
+          "ipa": "e",
+          "issue": "IPA 'e' for symbol '\u00e9' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00e9"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00e8"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00ea"
+        },
+        {
+          "ipa": "s",
+          "issue": "IPA 's' for symbol '\u00e7' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00e7"
+        },
+        {
+          "ipa": "\u0153",
+          "issue": "IPA '\u0153' for symbol '\u0153' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0153"
+        },
+        {
+          "ipa": "y",
+          "issue": "IPA 'y' for symbol 'u' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "u"
+        },
+        {
+          "ipa": "\u0281",
+          "matches": [
+            "Q\""
+          ],
+          "symbol": "r"
+        },
+        {
+          "ipa": "e",
+          "issue": "IPA 'e' for symbol '\u00c9' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00c9"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00c8"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00ca"
+        },
+        {
+          "ipa": "s",
+          "issue": "IPA 's' for symbol '\u00c7' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00c7"
+        },
+        {
+          "ipa": "\u0153",
+          "issue": "IPA '\u0153' for symbol '\u0152' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0152"
+        },
+        {
+          "ipa": "y",
+          "issue": "IPA 'y' for symbol '\u00d9' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00d9"
+        },
+        {
+          "ipa": "y",
+          "issue": "IPA 'y' for symbol '\u00db' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00db"
+        },
+        {
+          "ipa": "y",
+          "issue": "IPA 'y' for symbol '\u00fb' in profile 'fr-fr-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00fb"
+        }
+      ],
+      "id": "fr-fr-basic",
+      "ipaCount": 15,
+      "issues": [
+        "IPA 'e' for symbol '\u00e9' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA 's' for symbol '\u00e7' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA '\u0153' for symbol '\u0153' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA 'y' for symbol 'u' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA 'e' for symbol '\u00c9' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA 's' for symbol '\u00c7' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA '\u0153' for symbol '\u0152' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA 'y' for symbol '\u00d9' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA 'y' for symbol '\u00db' in profile 'fr-fr-basic' does not map to any known phoneme",
+        "IPA 'y' for symbol '\u00fb' in profile 'fr-fr-basic' does not map to any known phoneme"
+      ],
+      "language": "fr-FR",
+      "matchedCount": 5
+    },
+    {
+      "characterCount": 11,
+      "charactersWithIpa": 11,
+      "display": "German \u2013 precise articulation \u2013 de-DE \u2013 Key German letters referencing eSpeak de voice",
+      "entries": [
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00e4"
+        },
+        {
+          "ipa": "\u00f8",
+          "issue": "IPA '\u00f8' for symbol '\u00f6' in profile 'de-de-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00f6"
+        },
+        {
+          "ipa": "y",
+          "issue": "IPA 'y' for symbol '\u00fc' in profile 'de-de-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00fc"
+        },
+        {
+          "ipa": "s",
+          "issue": "IPA 's' for symbol '\u00df' in profile 'de-de-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00df"
+        },
+        {
+          "ipa": "ts",
+          "issue": "IPA 'ts' for symbol 'c' in profile 'de-de-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "c"
+        },
+        {
+          "ipa": "\u0281",
+          "matches": [
+            "Q\""
+          ],
+          "symbol": "r"
+        },
+        {
+          "ipa": "ts",
+          "issue": "IPA 'ts' for symbol 'Z' in profile 'de-de-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "Z"
+        },
+        {
+          "ipa": "ts",
+          "issue": "IPA 'ts' for symbol 'z' in profile 'de-de-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "z"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00c4"
+        },
+        {
+          "ipa": "\u00f8",
+          "issue": "IPA '\u00f8' for symbol '\u00d6' in profile 'de-de-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00d6"
+        },
+        {
+          "ipa": "y",
+          "issue": "IPA 'y' for symbol '\u00dc' in profile 'de-de-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00dc"
+        }
+      ],
+      "id": "de-de-basic",
+      "ipaCount": 11,
+      "issues": [
+        "IPA '\u00f8' for symbol '\u00f6' in profile 'de-de-basic' does not map to any known phoneme",
+        "IPA 'y' for symbol '\u00fc' in profile 'de-de-basic' does not map to any known phoneme",
+        "IPA 's' for symbol '\u00df' in profile 'de-de-basic' does not map to any known phoneme",
+        "IPA 'ts' for symbol 'c' in profile 'de-de-basic' does not map to any known phoneme",
+        "IPA 'ts' for symbol 'Z' in profile 'de-de-basic' does not map to any known phoneme",
+        "IPA 'ts' for symbol 'z' in profile 'de-de-basic' does not map to any known phoneme",
+        "IPA '\u00f8' for symbol '\u00d6' in profile 'de-de-basic' does not map to any known phoneme",
+        "IPA 'y' for symbol '\u00dc' in profile 'de-de-basic' does not map to any known phoneme"
+      ],
+      "language": "de-DE",
+      "matchedCount": 3
+    },
+    {
+      "characterCount": 5,
+      "charactersWithIpa": 5,
+      "display": "Hindi \u2013 retroflex energy \u2013 hi-IN \u2013 Core Devanagari characters tuned against eSpeak hi phonemes",
+      "entries": [
+        {
+          "ipa": "\u0259",
+          "matches": [
+            "@-"
+          ],
+          "symbol": "\u0905"
+        },
+        {
+          "ipa": "a\u02d0",
+          "issue": "IPA 'a\u02d0' for symbol '\u0906' in profile 'hi-in-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0906"
+        },
+        {
+          "ipa": "\u026a",
+          "matches": [
+            "\u026a"
+          ],
+          "symbol": "\u0907"
+        },
+        {
+          "ipa": "k\u0259",
+          "issue": "IPA 'k\u0259' for symbol '\u0915' in profile 'hi-in-basic' leaves unmatched fragment 'k'",
+          "matches": [
+            "@-"
+          ],
+          "symbol": "\u0915"
+        },
+        {
+          "ipa": "t\u032ar\u0329",
+          "issue": "IPA 't\u032ar\u0329' for symbol '\u0924\u094d\u0930' in profile 'hi-in-basic' leaves unmatched fragment 't\u032a'",
+          "matches": [
+            "r-"
+          ],
+          "symbol": "\u0924\u094d\u0930"
+        }
+      ],
+      "id": "hi-in-basic",
+      "ipaCount": 5,
+      "issues": [
+        "IPA 'a\u02d0' for symbol '\u0906' in profile 'hi-in-basic' does not map to any known phoneme",
+        "IPA 'k\u0259' for symbol '\u0915' in profile 'hi-in-basic' leaves unmatched fragment 'k'",
+        "IPA 't\u032ar\u0329' for symbol '\u0924\u094d\u0930' in profile 'hi-in-basic' leaves unmatched fragment 't\u032a'"
+      ],
+      "language": "hi-IN",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 15,
+      "charactersWithIpa": 15,
+      "display": "Italian \u2013 open vowels \u2013 it-IT \u2013 Italian vowel core tied to eSpeak it voice",
+      "entries": [
+        {
+          "ipa": "a",
+          "issue": "IPA 'a' for symbol '\u00e0' in profile 'it-it-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00e0"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00e8"
+        },
+        {
+          "ipa": "e",
+          "issue": "IPA 'e' for symbol '\u00e9' in profile 'it-it-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00e9"
+        },
+        {
+          "ipa": "\u0254",
+          "matches": [
+            "\u0254"
+          ],
+          "symbol": "\u00f2"
+        },
+        {
+          "ipa": "o",
+          "issue": "IPA 'o' for symbol '\u00f3' in profile 'it-it-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00f3"
+        },
+        {
+          "ipa": "u",
+          "issue": "IPA 'u' for symbol '\u00f9' in profile 'it-it-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00f9"
+        },
+        {
+          "ipa": "\u028e",
+          "matches": [
+            "l^"
+          ],
+          "symbol": "gli"
+        },
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "sc"
+        },
+        {
+          "ipa": "a",
+          "issue": "IPA 'a' for symbol '\u00c0' in profile 'it-it-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00c0"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00c8"
+        },
+        {
+          "ipa": "e",
+          "issue": "IPA 'e' for symbol '\u00c9' in profile 'it-it-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00c9"
+        },
+        {
+          "ipa": "\u0254",
+          "matches": [
+            "\u0254"
+          ],
+          "symbol": "\u00d2"
+        },
+        {
+          "ipa": "o",
+          "issue": "IPA 'o' for symbol '\u00d3' in profile 'it-it-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00d3"
+        },
+        {
+          "ipa": "u",
+          "issue": "IPA 'u' for symbol '\u00d9' in profile 'it-it-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00d9"
+        },
+        {
+          "ipa": "\u028e",
+          "matches": [
+            "l^"
+          ],
+          "symbol": "Gli"
+        }
+      ],
+      "id": "it-it-basic",
+      "ipaCount": 15,
+      "issues": [
+        "IPA 'a' for symbol '\u00e0' in profile 'it-it-basic' does not map to any known phoneme",
+        "IPA 'e' for symbol '\u00e9' in profile 'it-it-basic' does not map to any known phoneme",
+        "IPA 'o' for symbol '\u00f3' in profile 'it-it-basic' does not map to any known phoneme",
+        "IPA 'u' for symbol '\u00f9' in profile 'it-it-basic' does not map to any known phoneme",
+        "IPA 'a' for symbol '\u00c0' in profile 'it-it-basic' does not map to any known phoneme",
+        "IPA 'e' for symbol '\u00c9' in profile 'it-it-basic' does not map to any known phoneme",
+        "IPA 'o' for symbol '\u00d3' in profile 'it-it-basic' does not map to any known phoneme",
+        "IPA 'u' for symbol '\u00d9' in profile 'it-it-basic' does not map to any known phoneme"
+      ],
+      "language": "it-IT",
+      "matchedCount": 7
+    },
+    {
+      "characterCount": 5,
+      "charactersWithIpa": 5,
+      "display": "Japanese \u2013 mora rhythmic \u2013 ja-JP \u2013 Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+      "entries": [
+        {
+          "ipa": "a",
+          "issue": "IPA 'a' for symbol '\u3042' in profile 'ja-jp-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u3042"
+        },
+        {
+          "ipa": "i",
+          "issue": "IPA 'i' for symbol '\u3044' in profile 'ja-jp-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u3044"
+        },
+        {
+          "ipa": "ka",
+          "issue": "IPA 'ka' for symbol '\u304b' in profile 'ja-jp-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u304b"
+        },
+        {
+          "ipa": "\u0274",
+          "issue": "IPA '\u0274' for symbol '\u3093' in profile 'ja-jp-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u3093"
+        },
+        {
+          "ipa": "\u0261a",
+          "issue": "IPA '\u0261a' for symbol '\u304c' in profile 'ja-jp-basic' leaves unmatched fragment 'a'",
+          "matches": [
+            "\u0261"
+          ],
+          "symbol": "\u304c"
+        }
+      ],
+      "id": "ja-jp-basic",
+      "ipaCount": 5,
+      "issues": [
+        "IPA 'a' for symbol '\u3042' in profile 'ja-jp-basic' does not map to any known phoneme",
+        "IPA 'i' for symbol '\u3044' in profile 'ja-jp-basic' does not map to any known phoneme",
+        "IPA 'ka' for symbol '\u304b' in profile 'ja-jp-basic' does not map to any known phoneme",
+        "IPA '\u0274' for symbol '\u3093' in profile 'ja-jp-basic' does not map to any known phoneme",
+        "IPA '\u0261a' for symbol '\u304c' in profile 'ja-jp-basic' leaves unmatched fragment 'a'"
+      ],
+      "language": "ja-JP",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 18,
+      "charactersWithIpa": 18,
+      "display": "Portuguese (Brazil) \u2013 vibrant vowels \u2013 pt-BR \u2013 Brazilian Portuguese nasal set mapped from eSpeak pt-br",
+      "entries": [
+        {
+          "ipa": "a",
+          "issue": "IPA 'a' for symbol '\u00e1' in profile 'pt-br-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00e1"
+        },
+        {
+          "ipa": "\u0250",
+          "matches": [
+            "\u0250"
+          ],
+          "symbol": "\u00e2"
+        },
+        {
+          "ipa": "\u0250\u0303",
+          "issue": "IPA '\u0250\u0303' for symbol '\u00e3' in profile 'pt-br-basic' leaves unmatched fragment '\u0303'",
+          "matches": [
+            "\u0250"
+          ],
+          "symbol": "\u00e3"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00e9"
+        },
+        {
+          "ipa": "e",
+          "issue": "IPA 'e' for symbol '\u00ea' in profile 'pt-br-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00ea"
+        },
+        {
+          "ipa": "\u00f5",
+          "issue": "IPA '\u00f5' for symbol '\u00f5' in profile 'pt-br-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00f5"
+        },
+        {
+          "ipa": "s",
+          "issue": "IPA 's' for symbol '\u00e7' in profile 'pt-br-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00e7"
+        },
+        {
+          "ipa": "\u028e",
+          "matches": [
+            "l^"
+          ],
+          "symbol": "lh"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "nh"
+        },
+        {
+          "ipa": "a",
+          "issue": "IPA 'a' for symbol '\u00c1' in profile 'pt-br-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00c1"
+        },
+        {
+          "ipa": "\u0250",
+          "matches": [
+            "\u0250"
+          ],
+          "symbol": "\u00c2"
+        },
+        {
+          "ipa": "\u0250\u0303",
+          "issue": "IPA '\u0250\u0303' for symbol '\u00c3' in profile 'pt-br-basic' leaves unmatched fragment '\u0303'",
+          "matches": [
+            "\u0250"
+          ],
+          "symbol": "\u00c3"
+        },
+        {
+          "ipa": "\u025b",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "\u00c9"
+        },
+        {
+          "ipa": "e",
+          "issue": "IPA 'e' for symbol '\u00ca' in profile 'pt-br-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00ca"
+        },
+        {
+          "ipa": "\u00f5",
+          "issue": "IPA '\u00f5' for symbol '\u00d5' in profile 'pt-br-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00d5"
+        },
+        {
+          "ipa": "s",
+          "issue": "IPA 's' for symbol '\u00c7' in profile 'pt-br-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00c7"
+        },
+        {
+          "ipa": "\u028e",
+          "matches": [
+            "l^"
+          ],
+          "symbol": "Lh"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "Nh"
+        }
+      ],
+      "id": "pt-br-basic",
+      "ipaCount": 18,
+      "issues": [
+        "IPA 'a' for symbol '\u00e1' in profile 'pt-br-basic' does not map to any known phoneme",
+        "IPA '\u0250\u0303' for symbol '\u00e3' in profile 'pt-br-basic' leaves unmatched fragment '\u0303'",
+        "IPA 'e' for symbol '\u00ea' in profile 'pt-br-basic' does not map to any known phoneme",
+        "IPA '\u00f5' for symbol '\u00f5' in profile 'pt-br-basic' does not map to any known phoneme",
+        "IPA 's' for symbol '\u00e7' in profile 'pt-br-basic' does not map to any known phoneme",
+        "IPA 'a' for symbol '\u00c1' in profile 'pt-br-basic' does not map to any known phoneme",
+        "IPA '\u0250\u0303' for symbol '\u00c3' in profile 'pt-br-basic' leaves unmatched fragment '\u0303'",
+        "IPA 'e' for symbol '\u00ca' in profile 'pt-br-basic' does not map to any known phoneme",
+        "IPA '\u00f5' for symbol '\u00d5' in profile 'pt-br-basic' does not map to any known phoneme",
+        "IPA 's' for symbol '\u00c7' in profile 'pt-br-basic' does not map to any known phoneme"
+      ],
+      "language": "pt-BR",
+      "matchedCount": 8
+    },
+    {
+      "characterCount": 5,
+      "charactersWithIpa": 5,
+      "display": "Spanish (Castilian) \u2013 crisp sibilants \u2013 es-ES \u2013 Castilian defaults matching eSpeak es",
+      "entries": [
+        {
+          "ipa": "a",
+          "issue": "IPA 'a' for symbol 'a' in profile 'es-es-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "a"
+        },
+        {
+          "ipa": "\u03b8",
+          "matches": [
+            "\u03b8"
+          ],
+          "symbol": "c"
+        },
+        {
+          "ipa": "\u03b8",
+          "matches": [
+            "\u03b8"
+          ],
+          "symbol": "z"
+        },
+        {
+          "ipa": "\u028e",
+          "matches": [
+            "l^"
+          ],
+          "symbol": "ll"
+        },
+        {
+          "ipa": "x",
+          "issue": "IPA 'x' for symbol 'j' in profile 'es-es-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "j"
+        }
+      ],
+      "id": "es-es-basic",
+      "ipaCount": 5,
+      "issues": [
+        "IPA 'a' for symbol 'a' in profile 'es-es-basic' does not map to any known phoneme",
+        "IPA 'x' for symbol 'j' in profile 'es-es-basic' does not map to any known phoneme"
+      ],
+      "language": "es-ES",
+      "matchedCount": 3
+    },
+    {
+      "characterCount": 7,
+      "charactersWithIpa": 7,
+      "display": "Spanish (LatAm) \u2013 sonorous core \u2013 es-419 \u2013 Latin American Spanish vowels and consonants following eSpeak es-la",
+      "entries": [
+        {
+          "ipa": "a",
+          "issue": "IPA 'a' for symbol 'a' in profile 'es-419-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "a"
+        },
+        {
+          "ipa": "e",
+          "issue": "IPA 'e' for symbol 'e' in profile 'es-419-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "e"
+        },
+        {
+          "ipa": "i",
+          "issue": "IPA 'i' for symbol 'i' in profile 'es-419-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "i"
+        },
+        {
+          "ipa": "o",
+          "issue": "IPA 'o' for symbol 'o' in profile 'es-419-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "o"
+        },
+        {
+          "ipa": "u",
+          "issue": "IPA 'u' for symbol 'u' in profile 'es-419-basic' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "u"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "\u00f1"
+        },
+        {
+          "ipa": "\u029d",
+          "matches": [
+            "J^"
+          ],
+          "symbol": "ll"
+        }
+      ],
+      "id": "es-419-basic",
+      "ipaCount": 7,
+      "issues": [
+        "IPA 'a' for symbol 'a' in profile 'es-419-basic' does not map to any known phoneme",
+        "IPA 'e' for symbol 'e' in profile 'es-419-basic' does not map to any known phoneme",
+        "IPA 'i' for symbol 'i' in profile 'es-419-basic' does not map to any known phoneme",
+        "IPA 'o' for symbol 'o' in profile 'es-419-basic' does not map to any known phoneme",
+        "IPA 'u' for symbol 'u' in profile 'es-419-basic' does not map to any known phoneme"
+      ],
+      "language": "es-419",
+      "matchedCount": 2
+    }
+  ],
+  "stats": {
+    "ipaCount": 108,
+    "matchedCount": 41,
+    "profileCount": 11,
+    "unmatchedCount": 67
+  }
+}

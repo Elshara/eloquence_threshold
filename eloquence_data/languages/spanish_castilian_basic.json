@@ -1,0 +1,62 @@
+{
+  "id": "es-es-basic",
+  "language": "es-ES",
+  "displayName": "Spanish (Castilian) – crisp sibilants",
+  "description": "Castilian defaults matching eSpeak es",
+  "tags": ["spanish", "castilian"],
+  "stress": [
+    "Penultimate syllable carries stress unless accent marks override",
+    "Interrogatives use rising intonation"
+  ],
+  "sentenceStructure": [
+    "Subject–Verb–Object standard",
+    "Clitics attach before conjugated verbs"
+  ],
+  "grammar": [
+    "Distinguishes /θ/ and /s/",
+    "ll pronounced /ʎ/"
+  ],
+  "defaultVoiceTemplates": ["espeak-es-castilian"],
+  "characters": [
+    {
+      "symbol": "a",
+      "spoken": "ah",
+      "ipa": ["a"],
+      "description": "Open vowel",
+      "example": "madre",
+      "notes": []
+    },
+    {
+      "symbol": "c",
+      "spoken": "theh",
+      "ipa": ["θ"],
+      "description": "Before e/i",
+      "example": "cena",
+      "notes": []
+    },
+    {
+      "symbol": "z",
+      "spoken": "theh",
+      "ipa": ["θ"],
+      "description": "Voiceless interdental",
+      "example": "zapato",
+      "notes": []
+    },
+    {
+      "symbol": "ll",
+      "spoken": "ly",
+      "ipa": ["ʎ"],
+      "description": "Palatal lateral",
+      "example": "lluvia",
+      "notes": []
+    },
+    {
+      "symbol": "j",
+      "spoken": "kh",
+      "ipa": ["x"],
+      "description": "Voiceless velar fricative",
+      "example": "jardín",
+      "notes": []
+    }
+  ]
+}

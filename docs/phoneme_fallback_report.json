@@ -1,0 +1,2998 @@
+{
+  "metadata": {
+    "generated": "2025-09-25T01:58:52Z",
+    "phonemeCount": 136,
+    "profileCount": 11
+  },
+  "phonemes": [
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "%",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "%%",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "\\,",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "\\,\\,",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "'",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "''",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "'!",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "=",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "base1",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "_",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "_!",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "_|",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "_:",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "_::",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "_;_",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "_^_",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "_X1",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "?",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": ":",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Stress Phonemes",
+      "ipa": [],
+      "name": "-",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "Some default vowel definitions",
+      "ipa": [],
+      "name": "@",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "Some default vowel definitions",
+      "ipa": [
+        "\u0259"
+      ],
+      "name": "@-",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "Some default vowel definitions",
+      "ipa": [],
+      "name": "a",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "Some default vowel definitions",
+      "ipa": [],
+      "name": "e",
+      "replacementCount": 4,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "Some default vowel definitions",
+      "ipa": [],
+      "name": "i",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "Some default vowel definitions",
+      "ipa": [],
+      "name": "o",
+      "replacementCount": 4,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "Some default vowel definitions",
+      "ipa": [],
+      "name": "u",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "Syllablic consonants",
+      "ipa": [
+        "m\u0329"
+      ],
+      "name": "m-",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "Syllablic consonants",
+      "ipa": [
+        "n\u0329"
+      ],
+      "name": "n-",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "Syllablic consonants",
+      "ipa": [
+        "\u014b\u0329"
+      ],
+      "name": "N-",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "Other sounds",
+      "ipa": [],
+      "name": "#X1",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "These each apply to a class of vowels",
+      "ipa": [],
+      "name": "#@",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "These each apply to a class of vowels",
+      "ipa": [],
+      "name": "#a",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "These each apply to a class of vowels",
+      "ipa": [],
+      "name": "#e",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "These each apply to a class of vowels",
+      "ipa": [],
+      "name": "#i",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "These each apply to a class of vowels",
+      "ipa": [],
+      "name": "#o",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "These each apply to a class of vowels",
+      "ipa": [],
+      "name": "#u",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "r\u0329"
+      ],
+      "name": "r-",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "l\u0329"
+      ],
+      "name": "l-",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "\u0279"
+      ],
+      "name": "r",
+      "replacementCount": 4,
+      "replacementKinds": [
+        "description",
+        "example",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "r/",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "r"
+      ],
+      "name": "R",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "r"
+      ],
+      "name": "R2",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "r"
+      ],
+      "name": "R3",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "\u0280"
+      ],
+      "name": "r\"",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "l",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "l/",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "l/2",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "l/3",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "\u028e"
+      ],
+      "name": "l^",
+      "replacementCount": 4,
+      "replacementKinds": [
+        "description",
+        "example",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [
+        "\u026d"
+      ],
+      "name": "l.",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "L/",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "L",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "w",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": "j",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "SONORANTS",
+      "ipa": [],
+      "name": ";",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "NASAL CONSONANTS",
+      "ipa": [],
+      "name": "m",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "NASAL CONSONANTS",
+      "ipa": [],
+      "name": "n",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "NASAL CONSONANTS",
+      "ipa": [
+        "\u0273"
+      ],
+      "name": "n.",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NASAL CONSONANTS",
+      "ipa": [
+        "\u0272"
+      ],
+      "name": "n^",
+      "replacementCount": 4,
+      "replacementKinds": [
+        "description",
+        "example",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NASAL CONSONANTS",
+      "ipa": [],
+      "name": "N",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "NASAL CONSONANTS",
+      "ipa": [
+        "\u027e"
+      ],
+      "name": "**",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NASAL CONSONANTS",
+      "ipa": [
+        "\u027e",
+        "r"
+      ],
+      "name": "*",
+      "replacementCount": 4,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NASAL CONSONANTS",
+      "ipa": [],
+      "name": "r.",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED STOPS",
+      "ipa": [],
+      "name": "b",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED STOPS",
+      "ipa": [],
+      "name": "d",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED STOPS",
+      "ipa": [],
+      "name": "d[",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED STOPS",
+      "ipa": [],
+      "name": "dZ",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED STOPS",
+      "ipa": [
+        "d\u0291"
+      ],
+      "name": "dZ;",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED STOPS",
+      "ipa": [],
+      "name": "J",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED STOPS",
+      "ipa": [],
+      "name": "g",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [],
+      "name": "B",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [],
+      "name": "v",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [
+        "\u028b"
+      ],
+      "name": "v#",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [],
+      "name": "D",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [],
+      "name": "z",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [],
+      "name": "Z",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [
+        "\u0290"
+      ],
+      "name": "z.",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [
+        "\u0291"
+      ],
+      "name": "z;",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [
+        "\u0291"
+      ],
+      "name": "Z;",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [
+        "\u029d"
+      ],
+      "name": "J^",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [],
+      "name": "Q",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [],
+      "name": "Q^",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "VOICED fricatives",
+      "ipa": [
+        "\u0281"
+      ],
+      "name": "Q\"",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED STOPS",
+      "ipa": [],
+      "name": "p",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED STOPS",
+      "ipa": [],
+      "name": "t",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED STOPS",
+      "ipa": [],
+      "name": "t[",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED STOPS",
+      "ipa": [],
+      "name": "tS",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED STOPS",
+      "ipa": [
+        "t\u0255"
+      ],
+      "name": "tS;",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED STOPS",
+      "ipa": [],
+      "name": "c",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED STOPS",
+      "ipa": [],
+      "name": "k",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED STOPS",
+      "ipa": [],
+      "name": "q",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [],
+      "name": "f",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [],
+      "name": "T",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [],
+      "name": "s",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [],
+      "name": "S",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [
+        "\u0282"
+      ],
+      "name": "s.",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [
+        "\u0282"
+      ],
+      "name": "s;",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [
+        "\u0255"
+      ],
+      "name": "S;",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [
+        "\u026c"
+      ],
+      "name": "l#",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [],
+      "name": "C",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [],
+      "name": "x",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "example",
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [],
+      "name": "X",
+      "replacementCount": 1,
+      "replacementKinds": [
+        "name"
+      ]
+    },
+    {
+      "category": "UNVOICED fricatives",
+      "ipa": [
+        "h"
+      ],
+      "name": "h",
+      "replacementCount": 2,
+      "replacementKinds": [
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "DECtalk core inventory",
+      "ipa": [
+        "\u0259"
+      ],
+      "name": "dt_ax",
+      "replacementCount": 5,
+      "replacementKinds": [
+        "description",
+        "example",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "DECtalk core inventory",
+      "ipa": [
+        "\u00e6"
+      ],
+      "name": "dt_ae",
+      "replacementCount": 5,
+      "replacementKinds": [
+        "description",
+        "example",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "DECtalk core inventory",
+      "ipa": [
+        "\u0283"
+      ],
+      "name": "dt_sh",
+      "replacementCount": 5,
+      "replacementKinds": [
+        "description",
+        "example",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "DECtalk core inventory",
+      "ipa": [
+        "t\u0283"
+      ],
+      "name": "dt_ch",
+      "replacementCount": 5,
+      "replacementKinds": [
+        "description",
+        "example",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "I"
+      ],
+      "name": "I",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u00e6"
+      ],
+      "name": "\u00e6",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u0250"
+      ],
+      "name": "\u0250",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u0251"
+      ],
+      "name": "\u0251",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u0251j"
+      ],
+      "name": "\u0251j",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u0251w"
+      ],
+      "name": "\u0251w",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u0252"
+      ],
+      "name": "\u0252",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u0254"
+      ],
+      "name": "\u0254",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u0254j"
+      ],
+      "name": "\u0254j",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u0259"
+      ],
+      "name": "\u0259",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u025b"
+      ],
+      "name": "\u025b",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u025c"
+      ],
+      "name": "\u025c",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u026a"
+      ],
+      "name": "\u026a",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u028a"
+      ],
+      "name": "\u028a",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer vowels",
+      "ipa": [
+        "\u028c"
+      ],
+      "name": "\u028c",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer affricates",
+      "ipa": [
+        "d\u0361\u0292"
+      ],
+      "name": "d\u0361\u0292",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer affricates",
+      "ipa": [
+        "t\u0361\u0283"
+      ],
+      "name": "t\u0361\u0283",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiceless consonants",
+      "ipa": [
+        "t(3"
+      ],
+      "name": "t(3",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiceless consonants",
+      "ipa": [
+        "\u0283"
+      ],
+      "name": "\u0283",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiceless consonants",
+      "ipa": [
+        "\u028d"
+      ],
+      "name": "\u028d",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiceless consonants",
+      "ipa": [
+        "\u03b8"
+      ],
+      "name": "\u03b8",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiced consonants",
+      "ipa": [
+        "\u00f0"
+      ],
+      "name": "\u00f0",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiced consonants",
+      "ipa": [
+        "\u0292"
+      ],
+      "name": "\u0292",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer nasals",
+      "ipa": [
+        "\u014b"
+      ],
+      "name": "\u014b",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiced stops",
+      "ipa": [
+        "\u0261"
+      ],
+      "name": "\u0261",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiced stops",
+      "ipa": [
+        "\u027e"
+      ],
+      "name": "\u027e",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer liquids",
+      "ipa": [
+        "\u0279"
+      ],
+      "name": "\u0279",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    },
+    {
+      "category": "NVSpeechPlayer voiceless stops",
+      "ipa": [
+        "\u0294"
+      ],
+      "name": "\u0294",
+      "replacementCount": 3,
+      "replacementKinds": [
+        "description",
+        "ipa",
+        "name"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "characterCount": 6,
+      "coverage": {
+        "complete": 2,
+        "missing": 2,
+        "partial": 2
+      },
+      "display": "English (UK) \u2013 clipped clarity \u2013 en-GB \u2013 Receives vowels tuned for eSpeak en-gb",
+      "entries": [
+        {
+          "ipa": [
+            "\u0251\u02d0"
+          ],
+          "matchedPhonemes": [
+            "\u0251"
+          ],
+          "spoken": "ah",
+          "status": "partial",
+          "symbol": "a",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "eh",
+          "status": "complete",
+          "symbol": "e",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u026a"
+          ],
+          "matchedPhonemes": [
+            "\u026a"
+          ],
+          "spoken": "ih",
+          "status": "complete",
+          "symbol": "i",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u0254\u02d0"
+          ],
+          "matchedPhonemes": [
+            "\u0254"
+          ],
+          "spoken": "aw",
+          "status": "partial",
+          "symbol": "o",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": [
+            "ju\u02d0"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "ew",
+          "status": "missing",
+          "symbol": "u",
+          "unmatched": "ju\u02d0"
+        },
+        {
+          "ipa": [],
+          "matchedPhonemes": [],
+          "spoken": "silent",
+          "status": "missing",
+          "symbol": "r",
+          "unmatched": ""
+        }
+      ],
+      "grammar": [
+        "T-glottalisation optional",
+        "-ise suffix keeps /z/ voicing"
+      ],
+      "id": "en-gb-basic",
+      "language": "en-GB",
+      "sentenceStructure": [
+        "Subject\u2013Verb\u2013Object default",
+        "Statements fall in pitch at the end"
+      ],
+      "stress": [
+        "Primary stress \u02c8, secondary \u02cc",
+        "Non-rhotic endings drop /r/ unless followed by vowel"
+      ]
+    },
+    {
+      "characterCount": 8,
+      "coverage": {
+        "complete": 2,
+        "missing": 3,
+        "partial": 3
+      },
+      "display": "English (US) \u2013 tactile vowels \u2013 en-US \u2013 Foundational Latin alphabet mapping derived from eSpeak en-us",
+      "entries": [
+        {
+          "ipa": [
+            "\u0251\u02d0"
+          ],
+          "matchedPhonemes": [
+            "\u0251"
+          ],
+          "spoken": "ah",
+          "status": "partial",
+          "symbol": "a",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": [
+            "\u0251\u02d0"
+          ],
+          "matchedPhonemes": [
+            "\u0251"
+          ],
+          "spoken": "ah",
+          "status": "partial",
+          "symbol": "A",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "eh",
+          "status": "complete",
+          "symbol": "e",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "i"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "ee",
+          "status": "missing",
+          "symbol": "i",
+          "unmatched": "i"
+        },
+        {
+          "ipa": [
+            "o\u028a"
+          ],
+          "matchedPhonemes": [
+            "\u028a"
+          ],
+          "spoken": "oh",
+          "status": "partial",
+          "symbol": "o",
+          "unmatched": "o"
+        },
+        {
+          "ipa": [
+            "u"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "oo",
+          "status": "missing",
+          "symbol": "u",
+          "unmatched": "u"
+        },
+        {
+          "ipa": [
+            "\u0279"
+          ],
+          "matchedPhonemes": [
+            "r"
+          ],
+          "spoken": "ar",
+          "status": "complete",
+          "symbol": "r",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "t"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "tee",
+          "status": "missing",
+          "symbol": "t",
+          "unmatched": "t"
+        }
+      ],
+      "grammar": [
+        "Plural -s softened with breathiness",
+        "Common digraphs ch, sh, th prefer affricate forms"
+      ],
+      "id": "en-us-basic",
+      "language": "en-US",
+      "sentenceStructure": [
+        "Default Subject\u2013Verb\u2013Object order",
+        "Interrogatives raise pitch near the end"
+      ],
+      "stress": [
+        "Primary stress marked with \u02c8 before the syllable",
+        "Secondary stress marked with \u02cc"
+      ]
+    },
+    {
+      "characterCount": 13,
+      "coverage": {
+        "complete": 7,
+        "missing": 2,
+        "partial": 4
+      },
+      "display": "English (US) \u2013 Heritage Eloquence \u2013 en-US \u2013 Pronunciation cues transcribed from JAWS, Window-Eyes, and Loquence studio dictionaries",
+      "entries": [
+        {
+          "ipa": [
+            "e\u026a"
+          ],
+          "matchedPhonemes": [
+            "\u026a"
+          ],
+          "spoken": "broad ay",
+          "status": "partial",
+          "symbol": "a",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "e\u026a"
+          ],
+          "matchedPhonemes": [
+            "\u026a"
+          ],
+          "spoken": "broad ay",
+          "status": "partial",
+          "symbol": "A",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "mid eh",
+          "status": "complete",
+          "symbol": "e",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "i"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "high ee",
+          "status": "missing",
+          "symbol": "i",
+          "unmatched": "i"
+        },
+        {
+          "ipa": [
+            "o\u028a"
+          ],
+          "matchedPhonemes": [
+            "\u028a"
+          ],
+          "spoken": "round oh",
+          "status": "partial",
+          "symbol": "o",
+          "unmatched": "o"
+        },
+        {
+          "ipa": [
+            "\u0279"
+          ],
+          "matchedPhonemes": [
+            "r"
+          ],
+          "spoken": "rhotic r",
+          "status": "complete",
+          "symbol": "r",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u025d",
+            "\u025a"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "er",
+          "status": "missing",
+          "symbol": "er",
+          "unmatched": "\u025d \u025a"
+        },
+        {
+          "ipa": [
+            "\u03b8"
+          ],
+          "matchedPhonemes": [
+            "\u03b8"
+          ],
+          "spoken": "voiceless th",
+          "status": "complete",
+          "symbol": "th",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u00f0"
+          ],
+          "matchedPhonemes": [
+            "\u00f0"
+          ],
+          "spoken": "voiced th",
+          "status": "complete",
+          "symbol": "TH",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u0283"
+          ],
+          "matchedPhonemes": [
+            "dt_sh"
+          ],
+          "spoken": "sh",
+          "status": "complete",
+          "symbol": "sh",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "t\u0283"
+          ],
+          "matchedPhonemes": [
+            "dt_ch"
+          ],
+          "spoken": "ch",
+          "status": "complete",
+          "symbol": "ch",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u026a\u014b"
+          ],
+          "matchedPhonemes": [
+            "\u026a",
+            "\u014b"
+          ],
+          "spoken": "eng",
+          "status": "complete",
+          "symbol": "ing",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u0283\u0259n"
+          ],
+          "matchedPhonemes": [
+            "dt_sh",
+            "@-"
+          ],
+          "spoken": "shun",
+          "status": "partial",
+          "symbol": "tion",
+          "unmatched": "n"
+        }
+      ],
+      "grammar": [
+        "Heritage voices favour rhotic endings; keep \"r\" audible even after schwa",
+        "Assimilate nasal + stop clusters (nk, mp) for smoother phrase prediction playback",
+        "Diphthongs collapse in unstressed syllables, mirroring the 6.1 dictionary"
+      ],
+      "id": "en-us-heritage",
+      "language": "en-US",
+      "sentenceStructure": [
+        "Declaratives keep a mid-low plateau before dropping on the final syllable",
+        "Questions rise sharply across the last stressed vowel, matching classic Eloquence focus"
+      ],
+      "stress": [
+        "Primary stress uses Loquence-style lengthening on the vowel nucleus",
+        "Secondary stress keeps the consonant attack sharp as in heritage JAWS"
+      ]
+    },
+    {
+      "characterCount": 15,
+      "coverage": {
+        "complete": 5,
+        "missing": 10,
+        "partial": 0
+      },
+      "display": "French \u2013 nasal warmth \u2013 fr-FR \u2013 Core French characters tuned against eSpeak fr defaults",
+      "entries": [
+        {
+          "ipa": [
+            "e"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "\u00e9 ferm\u00e9",
+          "status": "missing",
+          "symbol": "\u00e9",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "\u00e8 ouvert",
+          "status": "complete",
+          "symbol": "\u00e8",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "\u00ea circonflexe",
+          "status": "complete",
+          "symbol": "\u00ea",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "s"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "c c\u00e9dille",
+          "status": "missing",
+          "symbol": "\u00e7",
+          "unmatched": "s"
+        },
+        {
+          "ipa": [
+            "\u0153"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "eu ligature",
+          "status": "missing",
+          "symbol": "\u0153",
+          "unmatched": "\u0153"
+        },
+        {
+          "ipa": [
+            "y"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "u serr\u00e9",
+          "status": "missing",
+          "symbol": "u",
+          "unmatched": "y"
+        },
+        {
+          "ipa": [
+            "\u0281"
+          ],
+          "matchedPhonemes": [
+            "Q\""
+          ],
+          "spoken": "r uvulaire",
+          "status": "complete",
+          "symbol": "r",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "e"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "\u00e9 capital",
+          "status": "missing",
+          "symbol": "\u00c9",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "\u00e8 capital",
+          "status": "complete",
+          "symbol": "\u00c8",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "\u00ea capital",
+          "status": "complete",
+          "symbol": "\u00ca",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "s"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "c c\u00e9dille capitale",
+          "status": "missing",
+          "symbol": "\u00c7",
+          "unmatched": "s"
+        },
+        {
+          "ipa": [
+            "\u0153"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "eu ligature capitale",
+          "status": "missing",
+          "symbol": "\u0152",
+          "unmatched": "\u0153"
+        },
+        {
+          "ipa": [
+            "y"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "u grave",
+          "status": "missing",
+          "symbol": "\u00d9",
+          "unmatched": "y"
+        },
+        {
+          "ipa": [
+            "y"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "u circonflexe",
+          "status": "missing",
+          "symbol": "\u00db",
+          "unmatched": "y"
+        },
+        {
+          "ipa": [
+            "y"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "u circonflexe",
+          "status": "missing",
+          "symbol": "\u00fb",
+          "unmatched": "y"
+        }
+      ],
+      "grammar": [
+        "Mute e weakens between consonants",
+        "liaison links final consonants to following vowels"
+      ],
+      "id": "fr-fr-basic",
+      "language": "fr-FR",
+      "sentenceStructure": [
+        "Subject\u2013Verb\u2013Object with frequent pronoun drop in imperatives",
+        "Intonation rises slightly for yes/no questions"
+      ],
+      "stress": [
+        "Lexical stress falls on the final full syllable",
+        "Function words keep flat intonation"
+      ]
+    },
+    {
+      "characterCount": 11,
+      "coverage": {
+        "complete": 3,
+        "missing": 8,
+        "partial": 0
+      },
+      "display": "German \u2013 precise articulation \u2013 de-DE \u2013 Key German letters referencing eSpeak de voice",
+      "entries": [
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "\u00e4 umlaut",
+          "status": "complete",
+          "symbol": "\u00e4",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u00f8"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "\u00f6 umlaut",
+          "status": "missing",
+          "symbol": "\u00f6",
+          "unmatched": "\u00f8"
+        },
+        {
+          "ipa": [
+            "y"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "\u00fc umlaut",
+          "status": "missing",
+          "symbol": "\u00fc",
+          "unmatched": "y"
+        },
+        {
+          "ipa": [
+            "s"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "eszett",
+          "status": "missing",
+          "symbol": "\u00df",
+          "unmatched": "s"
+        },
+        {
+          "ipa": [
+            "ts"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "ts/ k",
+          "status": "missing",
+          "symbol": "c",
+          "unmatched": "ts"
+        },
+        {
+          "ipa": [
+            "\u0281"
+          ],
+          "matchedPhonemes": [
+            "Q\""
+          ],
+          "spoken": "r",
+          "status": "complete",
+          "symbol": "r",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "ts"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "zett",
+          "status": "missing",
+          "symbol": "Z",
+          "unmatched": "ts"
+        },
+        {
+          "ipa": [
+            "ts"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "zett",
+          "status": "missing",
+          "symbol": "z",
+          "unmatched": "ts"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "\u00c4 umlaut",
+          "status": "complete",
+          "symbol": "\u00c4",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u00f8"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "\u00d6 umlaut",
+          "status": "missing",
+          "symbol": "\u00d6",
+          "unmatched": "\u00f8"
+        },
+        {
+          "ipa": [
+            "y"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "\u00dc umlaut",
+          "status": "missing",
+          "symbol": "\u00dc",
+          "unmatched": "y"
+        }
+      ],
+      "grammar": [
+        "Final-obstruent devoicing",
+        "Umlauts mark vowel fronting"
+      ],
+      "id": "de-de-basic",
+      "language": "de-DE",
+      "sentenceStructure": [
+        "Verb-second declaratives",
+        "Verb-final subclauses"
+      ],
+      "stress": [
+        "Primary stress typically on first syllable",
+        "Compound words keep secondary stresses"
+      ]
+    },
+    {
+      "characterCount": 5,
+      "coverage": {
+        "complete": 2,
+        "missing": 1,
+        "partial": 2
+      },
+      "display": "Hindi \u2013 retroflex energy \u2013 hi-IN \u2013 Core Devanagari characters tuned against eSpeak hi phonemes",
+      "entries": [
+        {
+          "ipa": [
+            "\u0259"
+          ],
+          "matchedPhonemes": [
+            "@-"
+          ],
+          "spoken": "a",
+          "status": "complete",
+          "symbol": "\u0905",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "a\u02d0"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "aa",
+          "status": "missing",
+          "symbol": "\u0906",
+          "unmatched": "a\u02d0"
+        },
+        {
+          "ipa": [
+            "\u026a"
+          ],
+          "matchedPhonemes": [
+            "\u026a"
+          ],
+          "spoken": "i",
+          "status": "complete",
+          "symbol": "\u0907",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "k\u0259"
+          ],
+          "matchedPhonemes": [
+            "@-"
+          ],
+          "spoken": "ka",
+          "status": "partial",
+          "symbol": "\u0915",
+          "unmatched": "k"
+        },
+        {
+          "ipa": [
+            "t\u032ar\u0329"
+          ],
+          "matchedPhonemes": [
+            "r-"
+          ],
+          "spoken": "tra",
+          "status": "partial",
+          "symbol": "\u0924\u094d\u0930",
+          "unmatched": "t\u032a"
+        }
+      ],
+      "grammar": [
+        "Retroflex /\u027d/ contrasts with dental /\u027e/",
+        "Aspiration distinguishes minimal pairs such as \u0915 /k/ vs \u0916 /k\u02b0/"
+      ],
+      "id": "hi-in-basic",
+      "language": "hi-IN",
+      "sentenceStructure": [
+        "Subject\u2013Object\u2013Verb order with postpositions",
+        "Yes/no questions rise on the final syllable"
+      ],
+      "stress": [
+        "Primary stress usually falls on the first heavy syllable",
+        "Schwa deletion occurs at word endings when following consonant clusters"
+      ]
+    },
+    {
+      "characterCount": 15,
+      "coverage": {
+        "complete": 7,
+        "missing": 8,
+        "partial": 0
+      },
+      "display": "Italian \u2013 open vowels \u2013 it-IT \u2013 Italian vowel core tied to eSpeak it voice",
+      "entries": [
+        {
+          "ipa": [
+            "a"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "a grave",
+          "status": "missing",
+          "symbol": "\u00e0",
+          "unmatched": "a"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "e aperta",
+          "status": "complete",
+          "symbol": "\u00e8",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "e"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "e chiusa",
+          "status": "missing",
+          "symbol": "\u00e9",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "\u0254"
+          ],
+          "matchedPhonemes": [
+            "\u0254"
+          ],
+          "spoken": "o aperta",
+          "status": "complete",
+          "symbol": "\u00f2",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "o"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "o chiusa",
+          "status": "missing",
+          "symbol": "\u00f3",
+          "unmatched": "o"
+        },
+        {
+          "ipa": [
+            "u"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "u grave",
+          "status": "missing",
+          "symbol": "\u00f9",
+          "unmatched": "u"
+        },
+        {
+          "ipa": [
+            "\u028e"
+          ],
+          "matchedPhonemes": [
+            "l^"
+          ],
+          "spoken": "gli palatale",
+          "status": "complete",
+          "symbol": "gli",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u0283"
+          ],
+          "matchedPhonemes": [
+            "dt_sh"
+          ],
+          "spoken": "sc dolce",
+          "status": "complete",
+          "symbol": "sc",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "a"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "A grave",
+          "status": "missing",
+          "symbol": "\u00c0",
+          "unmatched": "a"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "E aperta",
+          "status": "complete",
+          "symbol": "\u00c8",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "e"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "E chiusa",
+          "status": "missing",
+          "symbol": "\u00c9",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "\u0254"
+          ],
+          "matchedPhonemes": [
+            "\u0254"
+          ],
+          "spoken": "O aperta",
+          "status": "complete",
+          "symbol": "\u00d2",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "o"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "O chiusa",
+          "status": "missing",
+          "symbol": "\u00d3",
+          "unmatched": "o"
+        },
+        {
+          "ipa": [
+            "u"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "U grave",
+          "status": "missing",
+          "symbol": "\u00d9",
+          "unmatched": "u"
+        },
+        {
+          "ipa": [
+            "\u028e"
+          ],
+          "matchedPhonemes": [
+            "l^"
+          ],
+          "spoken": "Gli palatale",
+          "status": "complete",
+          "symbol": "Gli",
+          "unmatched": ""
+        }
+      ],
+      "grammar": [
+        "Double consonants held longer",
+        "Open/closed e and o contrast meaning"
+      ],
+      "id": "it-it-basic",
+      "language": "it-IT",
+      "sentenceStructure": [
+        "Subject\u2013Verb\u2013Object with flexible clitics",
+        "Questions marked by rising phrase-final pitch"
+      ],
+      "stress": [
+        "Stress generally on penultimate syllable",
+        "Accents indicate irregular stress"
+      ]
+    },
+    {
+      "characterCount": 5,
+      "coverage": {
+        "complete": 0,
+        "missing": 4,
+        "partial": 1
+      },
+      "display": "Japanese \u2013 mora rhythmic \u2013 ja-JP \u2013 Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+      "entries": [
+        {
+          "ipa": [
+            "a"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "a",
+          "status": "missing",
+          "symbol": "\u3042",
+          "unmatched": "a"
+        },
+        {
+          "ipa": [
+            "i"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "i",
+          "status": "missing",
+          "symbol": "\u3044",
+          "unmatched": "i"
+        },
+        {
+          "ipa": [
+            "ka"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "ka",
+          "status": "missing",
+          "symbol": "\u304b",
+          "unmatched": "ka"
+        },
+        {
+          "ipa": [
+            "\u0274"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "n",
+          "status": "missing",
+          "symbol": "\u3093",
+          "unmatched": "\u0274"
+        },
+        {
+          "ipa": [
+            "\u0261a"
+          ],
+          "matchedPhonemes": [
+            "\u0261"
+          ],
+          "spoken": "ga",
+          "status": "partial",
+          "symbol": "\u304c",
+          "unmatched": "a"
+        }
+      ],
+      "grammar": [
+        "Long vowels and geminated consonants count as separate mora",
+        "The moraic nasal \u3093 assimilates to following consonant place"
+      ],
+      "id": "ja-jp-basic",
+      "language": "ja-JP",
+      "sentenceStructure": [
+        "Topic\u2013Comment structure with Subject\u2013Object\u2013Verb order",
+        "Particles anchor grammatical roles and affect intonation"
+      ],
+      "stress": [
+        "Pitch accent typically falls on the second mora of a word",
+        "Unaccented words sustain high pitch until the final mora"
+      ]
+    },
+    {
+      "characterCount": 18,
+      "coverage": {
+        "complete": 8,
+        "missing": 8,
+        "partial": 2
+      },
+      "display": "Portuguese (Brazil) \u2013 vibrant vowels \u2013 pt-BR \u2013 Brazilian Portuguese nasal set mapped from eSpeak pt-br",
+      "entries": [
+        {
+          "ipa": [
+            "a"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "a agudo",
+          "status": "missing",
+          "symbol": "\u00e1",
+          "unmatched": "a"
+        },
+        {
+          "ipa": [
+            "\u0250"
+          ],
+          "matchedPhonemes": [
+            "\u0250"
+          ],
+          "spoken": "a circunflexo",
+          "status": "complete",
+          "symbol": "\u00e2",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u0250\u0303"
+          ],
+          "matchedPhonemes": [
+            "\u0250"
+          ],
+          "spoken": "a til",
+          "status": "partial",
+          "symbol": "\u00e3",
+          "unmatched": "\u0303"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "e agudo",
+          "status": "complete",
+          "symbol": "\u00e9",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "e"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "e circunflexo",
+          "status": "missing",
+          "symbol": "\u00ea",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "\u00f5"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "o til",
+          "status": "missing",
+          "symbol": "\u00f5",
+          "unmatched": "\u00f5"
+        },
+        {
+          "ipa": [
+            "s"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "c cedilha",
+          "status": "missing",
+          "symbol": "\u00e7",
+          "unmatched": "s"
+        },
+        {
+          "ipa": [
+            "\u028e"
+          ],
+          "matchedPhonemes": [
+            "l^"
+          ],
+          "spoken": "lh palatal",
+          "status": "complete",
+          "symbol": "lh",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u0272"
+          ],
+          "matchedPhonemes": [
+            "n^"
+          ],
+          "spoken": "nh nasal",
+          "status": "complete",
+          "symbol": "nh",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "a"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "A agudo",
+          "status": "missing",
+          "symbol": "\u00c1",
+          "unmatched": "a"
+        },
+        {
+          "ipa": [
+            "\u0250"
+          ],
+          "matchedPhonemes": [
+            "\u0250"
+          ],
+          "spoken": "A circunflexo",
+          "status": "complete",
+          "symbol": "\u00c2",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u0250\u0303"
+          ],
+          "matchedPhonemes": [
+            "\u0250"
+          ],
+          "spoken": "A til",
+          "status": "partial",
+          "symbol": "\u00c3",
+          "unmatched": "\u0303"
+        },
+        {
+          "ipa": [
+            "\u025b"
+          ],
+          "matchedPhonemes": [
+            "\u025b"
+          ],
+          "spoken": "E agudo",
+          "status": "complete",
+          "symbol": "\u00c9",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "e"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "E circunflexo",
+          "status": "missing",
+          "symbol": "\u00ca",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "\u00f5"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "O til",
+          "status": "missing",
+          "symbol": "\u00d5",
+          "unmatched": "\u00f5"
+        },
+        {
+          "ipa": [
+            "s"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "C cedilha",
+          "status": "missing",
+          "symbol": "\u00c7",
+          "unmatched": "s"
+        },
+        {
+          "ipa": [
+            "\u028e"
+          ],
+          "matchedPhonemes": [
+            "l^"
+          ],
+          "spoken": "Lh palatal",
+          "status": "complete",
+          "symbol": "Lh",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u0272"
+          ],
+          "matchedPhonemes": [
+            "n^"
+          ],
+          "spoken": "Nh palatal",
+          "status": "complete",
+          "symbol": "Nh",
+          "unmatched": ""
+        }
+      ],
+      "grammar": [
+        "Nasal vowels marked with tilde",
+        "Diphthongs soften before palatal consonants"
+      ],
+      "id": "pt-br-basic",
+      "language": "pt-BR",
+      "sentenceStructure": [
+        "Subject\u2013Verb\u2013Object with topicalisation flexibility",
+        "Yes/no questions rely on rising contour"
+      ],
+      "stress": [
+        "Default stress on penultimate syllable",
+        "Accent marks signal deviations"
+      ]
+    },
+    {
+      "characterCount": 5,
+      "coverage": {
+        "complete": 3,
+        "missing": 2,
+        "partial": 0
+      },
+      "display": "Spanish (Castilian) \u2013 crisp sibilants \u2013 es-ES \u2013 Castilian defaults matching eSpeak es",
+      "entries": [
+        {
+          "ipa": [
+            "a"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "ah",
+          "status": "missing",
+          "symbol": "a",
+          "unmatched": "a"
+        },
+        {
+          "ipa": [
+            "\u03b8"
+          ],
+          "matchedPhonemes": [
+            "\u03b8"
+          ],
+          "spoken": "theh",
+          "status": "complete",
+          "symbol": "c",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u03b8"
+          ],
+          "matchedPhonemes": [
+            "\u03b8"
+          ],
+          "spoken": "theh",
+          "status": "complete",
+          "symbol": "z",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u028e"
+          ],
+          "matchedPhonemes": [
+            "l^"
+          ],
+          "spoken": "ly",
+          "status": "complete",
+          "symbol": "ll",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "x"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "kh",
+          "status": "missing",
+          "symbol": "j",
+          "unmatched": "x"
+        }
+      ],
+      "grammar": [
+        "Distinguishes /\u03b8/ and /s/",
+        "ll pronounced /\u028e/"
+      ],
+      "id": "es-es-basic",
+      "language": "es-ES",
+      "sentenceStructure": [
+        "Subject\u2013Verb\u2013Object standard",
+        "Clitics attach before conjugated verbs"
+      ],
+      "stress": [
+        "Penultimate syllable carries stress unless accent marks override",
+        "Interrogatives use rising intonation"
+      ]
+    },
+    {
+      "characterCount": 7,
+      "coverage": {
+        "complete": 2,
+        "missing": 5,
+        "partial": 0
+      },
+      "display": "Spanish (LatAm) \u2013 sonorous core \u2013 es-419 \u2013 Latin American Spanish vowels and consonants following eSpeak es-la",
+      "entries": [
+        {
+          "ipa": [
+            "a"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "ah",
+          "status": "missing",
+          "symbol": "a",
+          "unmatched": "a"
+        },
+        {
+          "ipa": [
+            "e"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "eh",
+          "status": "missing",
+          "symbol": "e",
+          "unmatched": "e"
+        },
+        {
+          "ipa": [
+            "i"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "ee",
+          "status": "missing",
+          "symbol": "i",
+          "unmatched": "i"
+        },
+        {
+          "ipa": [
+            "o"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "oh",
+          "status": "missing",
+          "symbol": "o",
+          "unmatched": "o"
+        },
+        {
+          "ipa": [
+            "u"
+          ],
+          "matchedPhonemes": [],
+          "spoken": "oo",
+          "status": "missing",
+          "symbol": "u",
+          "unmatched": "u"
+        },
+        {
+          "ipa": [
+            "\u0272"
+          ],
+          "matchedPhonemes": [
+            "n^"
+          ],
+          "spoken": "enye",
+          "status": "complete",
+          "symbol": "\u00f1",
+          "unmatched": ""
+        },
+        {
+          "ipa": [
+            "\u029d"
+          ],
+          "matchedPhonemes": [
+            "J^"
+          ],
+          "spoken": "y",
+          "status": "complete",
+          "symbol": "ll",
+          "unmatched": ""
+        }
+      ],
+      "grammar": [
+        "Ye\u00edsmo pronounced /\u029d/",
+        "Syllable-final s kept strong"
+      ],
+      "id": "es-419-basic",
+      "language": "es-419",
+      "sentenceStructure": [
+        "Subject\u2013Verb\u2013Object with flexible pronoun drop",
+        "Questions rise sharply at the end"
+      ],
+      "stress": [
+        "Acute accent carries primary stress",
+        "Default stress on penultimate syllable"
+      ]
+    }
+  ]
+}

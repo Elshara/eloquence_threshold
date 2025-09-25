@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "source": "NV Speech Player NVDA add-on voices",
+    "revision": "e51ee50241d88e3d20d4a8d218389d8439deba32",
+    "generated": "2025-09-23",
+    "notes": [
+      "Templates approximate NV Speech Player presets using Eloquence slider ranges.",
+      "Extras record the original frame multipliers from nvSpeechPlayer so contributors can refine the mapping."
+    ]
+  },
+  "templates": [
+    {
+      "id": "nvspeechplayer-adam",
+      "name": "NV Speech Player Adam",
+      "language": "en-US",
+      "description": "Balanced Adam preset with rounded consonants and warm vowels",
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "classic"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "nvSpeechPlayer Adam",
+      "parameters": {
+        "rate": 104,
+        "pitch": 118,
+        "inflection": 58,
+        "headSize": 112,
+        "roughness": 18,
+        "breathiness": 30,
+        "volume": 90,
+        "gender": 0
+      },
+      "extras": {
+        "phonemeFallback": "examplesFirst",
+        "phonemeReplacements": {
+          "S": "example",
+          "Z": "ipa",
+          "tS": "ipa"
+        },
+        "nvspeechPlayer": {
+          "cb1_mul": 1.3,
+          "pa6_mul": 1.3,
+          "fricationAmplitude_mul": 0.85
+        }
+      }
+    },
+    {
+      "id": "nvspeechplayer-benjamin",
+      "name": "NV Speech Player Benjamin",
+      "language": "en-US",
+      "description": "Sharper Benjamin preset with brighter resonances and higher breath",
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "bright"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "nvSpeechPlayer Benjamin",
+      "parameters": {
+        "rate": 108,
+        "pitch": 124,
+        "inflection": 52,
+        "headSize": 118,
+        "roughness": 16,
+        "breathiness": 26,
+        "volume": 88,
+        "gender": 0
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "phonemeReplacements": {
+          "s": "ipa",
+          "z": "description",
+          "N": "example"
+        },
+        "nvspeechPlayer": {
+          "cf1_mul": 1.01,
+          "cf2_mul": 1.02,
+          "cf4": 3770,
+          "cf5": 4100,
+          "cf6": 5000,
+          "cfNP_mul": 0.9,
+          "cb1_mul": 1.3,
+          "fricationAmplitude_mul": 0.7,
+          "pa6_mul": 1.3
+        }
+      }
+    },
+    {
+      "id": "nvspeechplayer-caleb",
+      "name": "NV Speech Player Caleb",
+      "language": "en-US",
+      "description": "Breathy Caleb preset for soft speech and whisper-like delivery",
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "breathy"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "nvSpeechPlayer Caleb",
+      "parameters": {
+        "rate": 92,
+        "pitch": 106,
+        "inflection": 44,
+        "headSize": 120,
+        "roughness": 28,
+        "breathiness": 40,
+        "volume": 85,
+        "gender": 0
+      },
+      "extras": {
+        "phonemeFallback": "descriptionsFirst",
+        "phonemeReplacements": {
+          "h": "description",
+          "f": "example",
+          "T": "ipa"
+        },
+        "nvspeechPlayer": {
+          "aspirationAmplitude": 1,
+          "voiceAmplitude": 0
+        }
+      }
+    },
+    {
+      "id": "nvspeechplayer-david",
+      "name": "NV Speech Player David",
+      "language": "en-US",
+      "description": "Lower David preset with relaxed pitch and softened sibilants",
+      "tags": [
+        "nvspeechplayer",
+        "english",
+        "low"
+      ],
+      "baseVoice": "enu",
+      "variant": "4",
+      "defaultLanguageProfile": "en-us-basic",
+      "sourceVoice": "nvSpeechPlayer David",
+      "parameters": {
+        "rate": 100,
+        "pitch": 90,
+        "inflection": 48,
+        "headSize": 130,
+        "roughness": 22,
+        "breathiness": 24,
+        "volume": 92,
+        "gender": 0
+      },
+      "extras": {
+        "phonemeFallback": "examplesFirst",
+        "phonemeReplacements": {
+          "l": "description",
+          "r": "example",
+          "d": "ipa"
+        },
+        "nvspeechPlayer": {
+          "voicePitch_mul": 0.75,
+          "endVoicePitch_mul": 0.75,
+          "cf1_mul": 0.75,
+          "cf2_mul": 0.85,
+          "cf3_mul": 0.85
+        }
+      }
+    }
+  ]
+}
