@@ -31,6 +31,7 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
+import urllib.parse
 import zipfile
 from pathlib import Path
 from typing import Optional, Tuple
@@ -105,6 +106,14 @@ def ensure_template(
     if path.is_file():
         return path
     if not allow_download:
+        return None
+    # Validate the template URL prevents partial SSRF
+    parsed_url = urllib.parse.urlparse(url)
+    if parsed_url.scheme != "https":
+        print(f"Error: Only HTTPS URLs are allowed for template downloads (got: {url})")
+        return None
+    if not parsed_url.netloc:
+        print(f"Error: Invalid template URL (no network location found): {url}")
         return None
     try:
         print(f"Downloading template from {url}…")
