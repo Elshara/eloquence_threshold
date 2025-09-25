@@ -209,7 +209,13 @@ def main() -> None:
     revision = None if args.no_metadata else detect_revision(source_root)
     payload = build_payload(data, revision)
     output_path = os.path.abspath(args.output_path)
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    # Constrain the output path to a safe output directory root
+    default_output_dir = os.path.abspath(os.path.join("eloquence_data", "phonemes"))
+    output_dir = os.path.dirname(output_path)
+    # Ensure that output_dir is within the default_output_dir
+    if not output_dir.startswith(default_output_dir + os.sep) and output_dir != default_output_dir:
+        raise SystemExit(f"Refusing to write output file outside of allowed directory: {output_path}")
+    os.makedirs(output_dir, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
     print(f"Wrote {output_path} with {len(payload['phonemes'])} entries")
