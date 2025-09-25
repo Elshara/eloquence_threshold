@@ -1,0 +1,86 @@
+{
+  "id": "en-us-basic",
+  "language": "en-US",
+  "displayName": "English (US) – tactile vowels",
+  "description": "Foundational Latin alphabet mapping derived from eSpeak en-us",
+  "tags": ["english", "latin", "community"],
+  "stress": [
+    "Primary stress marked with ˈ before the syllable",
+    "Secondary stress marked with ˌ"
+  ],
+  "sentenceStructure": [
+    "Default Subject–Verb–Object order",
+    "Interrogatives raise pitch near the end"
+  ],
+  "grammar": [
+    "Plural -s softened with breathiness",
+    "Common digraphs ch, sh, th prefer affricate forms"
+  ],
+  "defaultVoiceTemplates": ["espeak-en-us-bright"],
+  "characters": [
+    {
+      "symbol": "a",
+      "spoken": "ah",
+      "ipa": ["ɑː"],
+      "description": "Open back vowel",
+      "example": "father",
+      "notes": ["Lengthens before voiced consonants"]
+    },
+    {
+      "symbol": "A",
+      "spoken": "ah",
+      "ipa": ["ɑː"],
+      "description": "Capital form",
+      "example": "Alabama",
+      "notes": []
+    },
+    {
+      "symbol": "e",
+      "spoken": "eh",
+      "ipa": ["ɛ"],
+      "description": "Mid front vowel",
+      "example": "better",
+      "notes": ["Glides towards i before y"]
+    },
+    {
+      "symbol": "i",
+      "spoken": "ee",
+      "ipa": ["i"],
+      "description": "Close front vowel",
+      "example": "machine",
+      "notes": []
+    },
+    {
+      "symbol": "o",
+      "spoken": "oh",
+      "ipa": ["oʊ"],
+      "description": "Diphthongised vowel",
+      "example": "home",
+      "notes": []
+    },
+    {
+      "symbol": "u",
+      "spoken": "oo",
+      "ipa": ["u"],
+      "description": "Close back rounded vowel",
+      "example": "truth",
+      "notes": []
+    },
+    {
+      "symbol": "r",
+      "spoken": "ar",
+      "ipa": ["ɹ"],
+      "description": "Rhotic consonant",
+      "example": "river",
+      "notes": ["Retains colouring in syllable finals"]
+    },
+    {
+      "symbol": "t",
+      "spoken": "tee",
+      "ipa": ["t"],
+      "description": "Alveolar stop",
+      "example": "time",
+      "notes": ["Flaps between vowels"]
+    }
+  ]
+}
