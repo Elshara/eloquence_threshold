@@ -363,7 +363,21 @@ def parse_args(argv: Sequence[str]) -> argparse.Namespace:
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     args = parse_args(argv or sys.argv[1:])
-    paths = [Path(root).expanduser().resolve() for root in args.roots]
+    # Define a safe base directory for scanning
+    SAFE_ROOT = Path.cwd().resolve()  # Adjust as appropriate
+    def is_within_safe_root(path: Path, safe_root: Path) -> bool:
+        try:
+            path.relative_to(safe_root)
+            return True
+        except ValueError:
+            return False
+    paths = []
+    for root in args.roots:
+        candidate = Path(root).expanduser().resolve()
+        if is_within_safe_root(candidate, SAFE_ROOT):
+            paths.append(candidate)
+        else:
+            print(f"error: {candidate} is outside the allowed scan root ({SAFE_ROOT})", file=sys.stderr)
     missing = [str(path) for path in paths if not path.exists()]
     if missing:
         for item in missing:
