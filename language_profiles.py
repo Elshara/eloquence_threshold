@@ -226,7 +226,7 @@ def load_default_language_profiles() -> LanguageProfileCatalog:
 def _parse_language_profile(data: Dict[str, object]) -> Optional[LanguageProfile]:
     profile_id = data.get("id")
     if not profile_id:
-        LOG.warning("Ignoring language profile without id: %r", data)
+        LOG.warning("Ignoring language profile without id. Keys: %r", list(data.keys()))
         return None
     characters = OrderedDict()
     raw_characters = data.get("characters", [])
