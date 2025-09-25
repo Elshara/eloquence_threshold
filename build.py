@@ -31,6 +31,7 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
+from urllib.parse import urlparse
 import zipfile
 from pathlib import Path
 from typing import Optional, Tuple
@@ -97,23 +98,17 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def _is_trusted_template_url(url: str) -> bool:
-    """
-    Return True if the template URL points to a trusted source.
-    Only allow download from GitHub's nvaccess repository.
-    """
+def is_trusted_url(url: str) -> bool:
+    """Return True if the given URL is a trusted location for template downloads."""
+    allowed_domains = {"github.com", "raw.githubusercontent.com"}
     try:
-        from urllib.parse import urlparse
         parsed = urlparse(url)
+        # Only allow https and a specific set of domains
         if parsed.scheme != "https":
             return False
-        # Check that host matches exactly or is a subdomain of github.com
-        if parsed.hostname != "github.com":
-            return False
-        # Restrict to 'nvaccess/' path -- you may tighten this if needed
-        if not parsed.path.lstrip("/").startswith("nvaccess/"):
-            return False
-        return True
+        # Remove port if present
+        netloc = parsed.netloc.split(":")[0]
+        return netloc in allowed_domains
     except Exception:
         return False
 
@@ -126,11 +121,10 @@ def ensure_template(
         return path
     if not allow_download:
         return None
-    if not _is_trusted_template_url(url):
-        raise ValueError(
-            f"Refusing to download template from untrusted location: {url}\n"
-            "You may only use URLs under https://github.com/nvaccess/"
-        )
+
+    if not is_trusted_url(url):
+        print("Warning: Refusing to download template from untrusted URL.")
+        return None
     try:
         print(f"Downloading template from {url}…")
         context = ssl._create_unverified_context() if insecure else None

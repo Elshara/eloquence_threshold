@@ -4,9 +4,15 @@ from __future__ import annotations
 import json
 import logging
 import os
-from collections import OrderedDict
+from collections import Counter, OrderedDict
 from dataclasses import dataclass, field
-from typing import Dict, Iterable, Iterator, List, Optional, Tuple
+from datetime import datetime, timezone
+from statistics import median
+from typing import TYPE_CHECKING, Dict, Iterable, Iterator, List, Optional, Tuple
+
+if TYPE_CHECKING:
+    from phoneme_catalog import PhonemeInventory
+    from voice_catalog import VoiceCatalog, VoiceTemplate
 
 LOG = logging.getLogger(__name__)
 
@@ -52,6 +58,7 @@ class LanguageProfile:
     default_voice_templates: Tuple[str, ...]
     _lowercase_index: Dict[str, CharacterPronunciation] = field(init=False, repr=False)
     _max_symbol_length: int = field(init=False, repr=False)
+    _progress_cache: Optional[Dict[str, object]] = field(default=None, init=False, repr=False)
 
     def __post_init__(self) -> None:
         self._lowercase_index = {}
@@ -71,6 +78,140 @@ class LanguageProfile:
         if self.description:
             pieces.append(self.description)
         return " – ".join(piece for piece in pieces if piece)
+
+    def metrics(self, inventory: Optional["PhonemeInventory"] = None) -> Dict[str, object]:
+        """Return cached progress metadata for this profile."""
+
+        if self._progress_cache is not None and (
+            inventory is None or self._progress_cache.get("_inventory_id") is inventory
+        ):
+            cached = dict(self._progress_cache)
+            cached.pop("_inventory_id", None)
+            return cached
+
+        total_characters = len(self.characters)
+        multi_character = 0
+        uppercase_count = 0
+        with_ipa = 0
+        ipa_covered = 0
+        ipa_tokens: set[str] = set()
+        fallback_total = 0
+        description_total = 0
+        notes_total = 0
+        spoken_total = 0
+        example_total = 0
+        contextual_total = 0
+        stress_total = len(self.stress_notes)
+        sentence_total = len(self.sentence_structure)
+        grammar_total = len(self.grammar_notes)
+        no_ipa_symbols: List[str] = []
+        unmatched_symbols: List[str] = []
+
+        inventory_ref: Optional["PhonemeInventory"] = inventory
+
+        for symbol, entry in self.characters.items():
+            if len(symbol) > 1:
+                multi_character += 1
+            if symbol != symbol.lower():
+                uppercase_count += 1
+            if entry.description:
+                description_total += 1
+            if entry.notes:
+                notes_total += len(entry.notes)
+            if entry.spoken:
+                spoken_total += 1
+            if entry.example:
+                example_total += 1
+            if entry.stress:
+                contextual_total += 1
+            if entry.fallback_hint():
+                fallback_total += 1
+            ipa_values = tuple(token for token in entry.ipa if token)
+            if not ipa_values:
+                no_ipa_symbols.append(symbol)
+                continue
+            with_ipa += 1
+            ipa_tokens.update(ipa_values)
+            if not inventory_ref:
+                continue
+            sequence = " ".join(ipa_values)
+            matches, remainder = inventory_ref.match_ipa_sequence(sequence)
+            if matches and not remainder:
+                ipa_covered += 1
+            else:
+                unmatched_symbols.append(symbol)
+
+        coverage_ratio = ipa_covered / with_ipa if with_ipa else 0.0
+        example_ratio = example_total / total_characters if total_characters else 0.0
+        structure_bonus = 0.0
+        if stress_total:
+            structure_bonus += 0.05
+        if sentence_total:
+            structure_bonus += 0.05
+        if grammar_total:
+            structure_bonus += 0.05
+        progress_score = min(
+            1.0,
+            coverage_ratio
+            + example_ratio * 0.2
+            + structure_bonus
+            + (0.05 if multi_character else 0.0)
+            + (0.05 if fallback_total >= total_characters else 0.0),
+        )
+
+        if total_characters == 0:
+            stage = "empty"
+        elif progress_score >= 0.9:
+            stage = "comprehensive"
+        elif progress_score >= 0.65:
+            stage = "established"
+        elif progress_score >= 0.4:
+            stage = "developing"
+        else:
+            stage = "seed"
+
+        metrics: Dict[str, object] = {
+            "id": self.id,
+            "language": self.language,
+            "displayName": self.display_name,
+            "description": self.description,
+            "tags": list(self.tags),
+            "characterCount": total_characters,
+            "multiCharacterCount": multi_character,
+            "uppercaseCharacterCount": uppercase_count,
+            "charactersWithIPA": with_ipa,
+            "charactersWithoutIPA": no_ipa_symbols[:25],
+            "charactersWithUnmatchedIPA": unmatched_symbols[:25],
+            "ipaCoveredCount": ipa_covered,
+            "ipaCoverageRatio": round(coverage_ratio, 4),
+            "ipaCoveragePercent": round(coverage_ratio * 100, 2),
+            "uniqueIpaCount": len(ipa_tokens),
+            "fallbackHintCount": fallback_total,
+            "descriptionCount": description_total,
+            "notesTotal": notes_total,
+            "spokenCount": spoken_total,
+            "exampleCount": example_total,
+            "contextualCount": contextual_total,
+            "stressNoteCount": stress_total,
+            "sentenceStructureNoteCount": sentence_total,
+            "grammarNoteCount": grammar_total,
+            "defaultVoiceTemplates": list(self.default_voice_templates),
+            "keyboardOptimised": multi_character > 0,
+            "hasGenerativeHints": any(
+                str(tag).lower().startswith("generative") for tag in self.tags
+            ),
+            "hasContextualHints": any(
+                str(tag).lower().startswith("context") for tag in self.tags
+            ),
+            "progressScore": round(progress_score, 4),
+            "stage": stage,
+        }
+
+        metrics["_inventory_id"] = inventory_ref
+        self._progress_cache = dict(metrics)
+        result = dict(metrics)
+        result.pop("_inventory_id", None)
+        return result
 
     def describe_characters(
         self, text: str
@@ -146,6 +287,67 @@ class LanguageProfileCatalog:
 
     def profiles(self) -> List[LanguageProfile]:
         return list(self._profiles.values())
+
+    def metrics(
+        self,
+        inventory: Optional["PhonemeInventory"] = None,
+        voice_catalog: Optional["VoiceCatalog"] = None,
+    ) -> Dict[str, object]:
+        """Return a repository-wide summary of language profile progress."""
+
+        entries = []
+        for profile in self._profiles.values():
+            entry = profile.metrics(inventory)
+            if voice_catalog is not None:
+                entry.update(
+                    _voice_links_for_profile(
+                        profile,
+                        entry,
+                        voice_catalog,
+                    )
+                )
+            entries.append(entry)
+
+        if not entries:
+            return {
+                "generatedAt": datetime.now(timezone.utc).isoformat(),
+                "totalProfiles": 0,
+                "stats": {},
+                "entries": [],
+            }
+
+        coverage_values = [entry.get("ipaCoverageRatio", 0.0) for entry in entries]
+        stage_counter = Counter(entry.get("stage", "unknown") for entry in entries)
+        total_characters = sum(entry.get("characterCount", 0) for entry in entries)
+        stats = {
+            "totalProfiles": len(entries),
+            "stageCounts": dict(stage_counter),
+            "averageIpaCoverage": round(
+                sum(coverage_values) / len(coverage_values), 4
+            ),
+            "medianIpaCoverage": round(median(coverage_values), 4),
+            "totalCharacters": int(total_characters),
+            "profilesWithExamples": sum(
+                1 for entry in entries if entry.get("exampleCount", 0) > 0
+            ),
+            "profilesWithTemplates": sum(
+                1 for entry in entries if entry.get("matchedDefaultTemplates")
+            ),
+        }
+
+        entries.sort(
+            key=lambda item: (
+                -float(item.get("progressScore", 0.0)),
+                item.get("displayName", ""),
+            )
+        )
+
+        return {
+            "generatedAt": datetime.now(timezone.utc).isoformat(),
+            "totalProfiles": len(entries),
+            "stats": stats,
+            "entries": entries,
+        }
 
     def find_best_match(self, language_tag: Optional[str]) -> Optional[LanguageProfile]:
         """Return the profile that best matches *language_tag*.
@@ -223,24 +425,10 @@ def load_default_language_profiles() -> LanguageProfileCatalog:
     return LanguageProfileCatalog(profiles)
 
 
-def _sanitize_for_log(obj):
-    """Recursively remove newlines/carriage-returns from all strings in obj for safe logging."""
-    if isinstance(obj, str):
-        return obj.replace('\n', '').replace('\r', '')
-    elif isinstance(obj, dict):
-        return {_sanitize_for_log(k): _sanitize_for_log(v) for k, v in obj.items()}
-    elif isinstance(obj, list):
-        return [_sanitize_for_log(item) for item in obj]
-    elif isinstance(obj, tuple):
-        return tuple(_sanitize_for_log(item) for item in obj)
-    else:
-        return obj
-
 def _parse_language_profile(data: Dict[str, object]) -> Optional[LanguageProfile]:
     profile_id = data.get("id")
     if not profile_id:
-        sanitized_data = _sanitize_for_log(data)
-        LOG.warning("Ignoring language profile without id. Data (user-supplied): [%r]", sanitized_data)
+        LOG.warning("Ignoring language profile without id: %r", data)
         return None
     characters = OrderedDict()
     raw_characters = data.get("characters", [])
@@ -327,3 +515,39 @@ def normalize_language_tag(language_tag: str) -> str:
         else:
             normalised.append(part.lower())
     return "-".join(normalised)
+
+
+def _voice_links_for_profile(
+    profile: LanguageProfile,
+    metrics: Dict[str, object],
+    catalog: "VoiceCatalog",
+) -> Dict[str, object]:
+    matched_templates: List[str] = []
+    missing_templates: List[str] = []
+    requested = [str(item) for item in metrics.get("defaultVoiceTemplates", [])]
+    for template_id in requested:
+        template = catalog.get(template_id)
+        if template is None:
+            missing_templates.append(template_id)
+        else:
+            matched_templates.append(template.id)
+
+    language_key = normalize_language_tag(profile.language or "")
+    available_templates: List[str] = []
+    for template in catalog.templates():
+        template_id = getattr(template, "id", None)
+        template_language = normalize_language_tag(getattr(template, "language", "") or "")
+        default_profile = getattr(template, "default_language_profile", None)
+        if default_profile and default_profile == profile.id:
+            available_templates.append(template_id)
+        elif language_key and template_language == language_key:
+            available_templates.append(template_id)
+
+    available_templates = sorted({item for item in available_templates if item})
+
+    return {
+        "matchedDefaultTemplates": matched_templates,
+        "missingDefaultTemplates": missing_templates,
+        "availableTemplateCount": len(available_templates),
+        "availableTemplates": available_templates,
+    }

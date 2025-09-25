@@ -810,7 +810,8 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
    _("Disable language hints"),
   )
   for profile in self._languageProfiles:
-   options[profile.id] = StringParameterInfo(profile.id, profile.display_label())
+   label = self._describe_language_profile_option(profile)
+   options[profile.id] = StringParameterInfo(profile.id, label)
   return options
 
  def _get_languageProfile(self):
@@ -836,10 +837,68 @@ def _refresh_language_profile(self, template: Optional[VoiceTemplate] = None):
   if value == _LANGUAGE_PROFILE_AUTO:
    self._refresh_language_profile()
    return
- if self._languageProfiles.get(value):
-  self._activeLanguageProfileId = value
- else:
-  self._activeLanguageProfileId = None
+  if self._languageProfiles.get(value):
+   self._activeLanguageProfileId = value
+  else:
+   self._activeLanguageProfileId = None
+
+ def _describe_language_profile_option(self, profile: LanguageProfile) -> str:
+  metrics = profile.metrics(self._phonemeInventory)
+  extras = []
+  coverage = metrics.get("ipaCoveragePercent")
+  if isinstance(coverage, (int, float)):
+   extras.append(f"{coverage:.0f}% IPA")
+  stage = metrics.get("stage")
+  if stage:
+   extras.append(stage.replace("-", " ").title())
+  examples = metrics.get("exampleCount", 0)
+  if isinstance(examples, int) and examples:
+   extras.append(f"{examples} examples")
+  matched_defaults = []
+  for template_id in metrics.get("defaultVoiceTemplates", []):
+   template = self._voiceCatalog.get(template_id)
+   if template is not None:
+    matched_defaults.append(template_id)
+  if matched_defaults:
+   count = len(matched_defaults)
+   suffix = "s" if count != 1 else ""
+   extras.append(f"{count} default template{suffix}")
+  if metrics.get("keyboardOptimised"):
+   extras.append("Keyboard digraphs")
+  if metrics.get("hasGenerativeHints"):
+   extras.append("Generative variants")
+  if metrics.get("hasContextualHints"):
+   extras.append("Contextual pronunciation")
+  if extras:
+   return f"{profile.display_label()} ({'; '.join(extras)})"
+  return profile.display_label()
+
+ def describe_language_progress(self) -> Optional[str]:
+  profile = self._active_language_profile()
+  if not profile:
+   return None
+  metrics = profile.metrics(self._phonemeInventory)
+  pieces = [profile.display_label()]
+  coverage = metrics.get("ipaCoveragePercent")
+  if isinstance(coverage, (int, float)):
+   pieces.append(f"{coverage:.0f}% IPA coverage")
+  stage = metrics.get("stage")
+  if stage:
+   pieces.append(stage.replace("-", " ").title())
+  examples = metrics.get("exampleCount", 0)
+  if isinstance(examples, int) and examples:
+   pieces.append(f"{examples} documented examples")
+  notes_total = (
+   int(metrics.get("stressNoteCount", 0))
+   + int(metrics.get("sentenceStructureNoteCount", 0))
+   + int(metrics.get("grammarNoteCount", 0))
+  )
+  if notes_total:
+   pieces.append(f"{notes_total} structural notes")
+  available = metrics.get("availableTemplateCount")
+  if isinstance(available, int) and available:
+   pieces.append(f"{available} template options")
+  return ", ".join(pieces)
 
  def _get_availableVoiceParameters(self):
   options = self._voice_parameter_options()

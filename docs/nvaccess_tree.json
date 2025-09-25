@@ -1,0 +1,412 @@
+{
+  "generated": "2025-09-25T02:25:51.247665+00:00",
+  "directories": [
+    {
+      "path": "snapshots/alpha",
+      "depth": 2,
+      "description": "The rolling alpha channel that tracks NVDA master commits.",
+      "fileCount": 8,
+      "directoryCount": 0,
+      "totalSizeBytes": 273049190,
+      "latestModified": "2025-09-24T06:12:51",
+      "latestEntry": {
+        "path": "snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe",
+        "name": "nvda_snapshot_alpha-52762,91e60c70.exe",
+        "entryType": "file",
+        "sizeBytes": 0,
+        "sizeDisplay": "0 B",
+        "modified": "2025-09-24T06:12:51",
+        "target": null,
+        "recommendedAction": "update",
+        "severity": {
+          "level": "high",
+          "reason": "Snapshot alpha-52762 is newer than validated alpha-52705"
+        }
+      },
+      "recommendedActions": {
+        "update": 4,
+        "monitor": 1,
+        "downdate": 3
+      },
+      "highestSeverity": {
+        "path": "snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe",
+        "name": "nvda_snapshot_alpha-52762,91e60c70.exe",
+        "entryType": "file",
+        "sizeBytes": 0,
+        "sizeDisplay": "0 B",
+        "modified": "2025-09-24T06:12:51",
+        "target": null,
+        "recommendedAction": "update",
+        "severity": {
+          "level": "high",
+          "reason": "Snapshot alpha-52762 is newer than validated alpha-52705"
+        }
+      },
+      "topFiles": [
+        {
+          "path": "snapshots/alpha/nvda_snapshot_alpha-52762,91e60c70.exe",
+          "name": "nvda_snapshot_alpha-52762,91e60c70.exe",
+          "entryType": "file",
+          "sizeBytes": 0,
+          "sizeDisplay": "0 B",
+          "modified": "2025-09-24T06:12:51",
+          "target": null,
+          "recommendedAction": "update",
+          "severity": {
+            "level": "high",
+            "reason": "Snapshot alpha-52762 is newer than validated alpha-52705"
+          }
+        },
+        {
+          "path": "snapshots/alpha/nvda_snapshot_alpha-52755,80144828.exe",
+          "name": "nvda_snapshot_alpha-52755,80144828.exe",
+          "entryType": "file",
+          "sizeBytes": 0,
+          "sizeDisplay": "0 B",
+          "modified": "2025-09-24T04:47:30",
+          "target": null,
+          "recommendedAction": "update",
+          "severity": {
+            "level": "high",
+            "reason": "Snapshot alpha-52755 is newer than validated alpha-52705"
+          }
+        },
+        {
+          "path": "snapshots/alpha/nvda_snapshot_alpha-52748,3f9151fe.exe",
+          "name": "nvda_snapshot_alpha-52748,3f9151fe.exe",
+          "entryType": "file",
+          "sizeBytes": 18874368,
+          "sizeDisplay": "18 MB",
+          "modified": "2025-09-24T01:01:33",
+          "target": null,
+          "recommendedAction": "update",
+          "severity": {
+            "level": "high",
+            "reason": "Snapshot alpha-52748 is newer than validated alpha-52705"
+          }
+        },
+        {
+          "path": "snapshots/alpha/nvda_snapshot_alpha-52731,f294547a.exe",
+          "name": "nvda_snapshot_alpha-52731,f294547a.exe",
+          "entryType": "file",
+          "sizeBytes": 50855936,
+          "sizeDisplay": "48.5 MB",
+          "modified": "2025-09-23T05:22:33",
+          "target": null,
+          "recommendedAction": "update",
+          "severity": {
+            "level": "high",
+            "reason": "Snapshot alpha-52731 is newer than validated alpha-52705"
+          }
+        },
+        {
+          "path": "snapshots/alpha/nvda_snapshot_alpha-52705,dc226976.exe",
+          "name": "nvda_snapshot_alpha-52705,dc226976.exe",
+          "entryType": "file",
+          "sizeBytes": 50855936,
+          "sizeDisplay": "48.5 MB",
+          "modified": "2025-09-22T02:07:34",
+          "target": null,
+          "recommendedAction": "monitor",
+          "severity": {
+            "level": "medium",
+            "reason": "Snapshot alpha-52705 matches the validated build"
+          }
+        }
+      ],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable",
+      "depth": 2,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 2,
+      "directoryCount": 1,
+      "totalSizeBytes": 54630809,
+      "latestModified": "2025-09-15T00:08:28",
+      "latestEntry": {
+        "path": "releases/stable/nvda_2025.3_controllerClient.zip",
+        "name": "nvda_2025.3_controllerClient.zip",
+        "entryType": "file",
+        "sizeBytes": 3565158,
+        "sizeDisplay": "3.4 MB",
+        "modified": "2025-09-15T00:08:12",
+        "target": null,
+        "recommendedAction": "keep",
+        "severity": {
+          "level": "info",
+          "reason": "Release 2025.3 is within the tested support window"
+        }
+      },
+      "recommendedActions": {
+        "ignore": 1,
+        "keep": 2
+      },
+      "highestSeverity": {
+        "path": "releases/stable/nvda_2025.3_controllerClient.zip",
+        "name": "nvda_2025.3_controllerClient.zip",
+        "entryType": "file",
+        "sizeBytes": 3565158,
+        "sizeDisplay": "3.4 MB",
+        "modified": "2025-09-15T00:08:12",
+        "target": null,
+        "recommendedAction": "keep",
+        "severity": {
+          "level": "info",
+          "reason": "Release 2025.3 is within the tested support window"
+        }
+      },
+      "topFiles": [
+        {
+          "path": "releases/stable/nvda_2025.3_controllerClient.zip",
+          "name": "nvda_2025.3_controllerClient.zip",
+          "entryType": "file",
+          "sizeBytes": 3565158,
+          "sizeDisplay": "3.4 MB",
+          "modified": "2025-09-15T00:08:12",
+          "target": null,
+          "recommendedAction": "keep",
+          "severity": {
+            "level": "info",
+            "reason": "Release 2025.3 is within the tested support window"
+          }
+        },
+        {
+          "path": "releases/stable/nvda_2025.3.exe",
+          "name": "nvda_2025.3.exe",
+          "entryType": "file",
+          "sizeBytes": 51065651,
+          "sizeDisplay": "48.7 MB",
+          "modified": "2025-09-15T00:08:12",
+          "target": null,
+          "recommendedAction": "keep",
+          "severity": {
+            "level": "info",
+            "reason": "Release 2025.3 is within the tested support window"
+          }
+        }
+      ],
+      "topDirectories": [
+        {
+          "path": "releases/stable/documentation/",
+          "name": "documentation",
+          "entryType": "dir",
+          "sizeBytes": null,
+          "sizeDisplay": "",
+          "modified": "2025-09-15T00:08:28",
+          "target": null,
+          "recommendedAction": "ignore",
+          "severity": null
+        }
+      ]
+    },
+    {
+      "path": "releases/stable/documentation",
+      "depth": 3,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 8,
+      "totalSizeBytes": 0,
+      "latestModified": "2025-09-15T00:08:25",
+      "latestEntry": {
+        "path": "releases/stable/documentation/zh_TW/",
+        "name": "zh_TW",
+        "entryType": "dir",
+        "sizeBytes": null,
+        "sizeDisplay": "",
+        "modified": "2025-09-15T00:08:25",
+        "target": null,
+        "recommendedAction": "ignore",
+        "severity": null
+      },
+      "recommendedActions": {
+        "ignore": 8
+      },
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": [
+        {
+          "path": "releases/stable/documentation/zh_TW/",
+          "name": "zh_TW",
+          "entryType": "dir",
+          "sizeBytes": null,
+          "sizeDisplay": "",
+          "modified": "2025-09-15T00:08:25",
+          "target": null,
+          "recommendedAction": "ignore",
+          "severity": null
+        },
+        {
+          "path": "releases/stable/documentation/zh_CN/",
+          "name": "zh_CN",
+          "entryType": "dir",
+          "sizeBytes": null,
+          "sizeDisplay": "",
+          "modified": "2025-09-15T00:08:25",
+          "target": null,
+          "recommendedAction": "ignore",
+          "severity": null
+        },
+        {
+          "path": "releases/stable/documentation/vi/",
+          "name": "vi",
+          "entryType": "dir",
+          "sizeBytes": null,
+          "sizeDisplay": "",
+          "modified": "2025-09-15T00:08:25",
+          "target": null,
+          "recommendedAction": "ignore",
+          "severity": null
+        },
+        {
+          "path": "releases/stable/documentation/uk/",
+          "name": "uk",
+          "entryType": "dir",
+          "sizeBytes": null,
+          "sizeDisplay": "",
+          "modified": "2025-09-15T00:08:25",
+          "target": null,
+          "recommendedAction": "ignore",
+          "severity": null
+        },
+        {
+          "path": "releases/stable/documentation/tr/",
+          "name": "tr",
+          "entryType": "dir",
+          "sizeBytes": null,
+          "sizeDisplay": "",
+          "modified": "2025-09-15T00:08:25",
+          "target": null,
+          "recommendedAction": "ignore",
+          "severity": null
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "depth": 0,
+      "description": "Root index for download.nvaccess.org.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable/documentation/zh_TW",
+      "depth": 4,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable/documentation/zh_CN",
+      "depth": 4,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable/documentation/vi",
+      "depth": 4,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable/documentation/uk",
+      "depth": 4,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable/documentation/tr",
+      "depth": 4,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable/documentation/ta",
+      "depth": 4,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable/documentation/sv",
+      "depth": 4,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    },
+    {
+      "path": "releases/stable/documentation/sr",
+      "depth": 4,
+      "description": "Latest stable NVDA installers, portable builds, and manuals.",
+      "fileCount": 0,
+      "directoryCount": 0,
+      "totalSizeBytes": 0,
+      "latestModified": null,
+      "latestEntry": null,
+      "recommendedActions": {},
+      "highestSeverity": null,
+      "topFiles": [],
+      "topDirectories": []
+    }
+  ]
+}
