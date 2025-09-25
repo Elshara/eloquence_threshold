@@ -240,7 +240,7 @@ def _parse_language_profile(data: Dict[str, object]) -> Optional[LanguageProfile
     profile_id = data.get("id")
     if not profile_id:
         sanitized_data = _sanitize_for_log(data)
-        LOG.warning("Ignoring language profile without id: %r", sanitized_data)
+        LOG.warning("Ignoring language profile without id. Data (user-supplied): [%r]", sanitized_data)
         return None
     characters = OrderedDict()
     raw_characters = data.get("characters", [])
