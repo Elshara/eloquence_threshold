@@ -58,6 +58,7 @@ def main() -> None:
         )
 
     output_path = Path(args.output)
+    _validate_output_path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     content = phoneme_file.read_text(encoding="utf-8")
@@ -107,6 +108,24 @@ def _normalize_newlines(text: str) -> str:
 def _default_output_path() -> str:
     repo_root = Path(__file__).resolve().parent.parent
     return str(repo_root / "eloquence_data" / "espeak_phonemes.txt")
+
+def _validate_output_path(output_path: Path) -> None:
+    """
+    Ensure the output file is created only within the allowed `eloquence_data` directory.
+    """
+    repo_root = Path(__file__).resolve().parent.parent
+    allowed_dir = repo_root / "eloquence_data"
+    try:
+        resolved_allowed = allowed_dir.resolve(strict=False)
+        resolved_output = output_path.resolve(strict=False)
+    except RuntimeError:
+        raise ValueError(f"Failed to resolve output path: {output_path}")
+    try:
+        resolved_output.relative_to(resolved_allowed)
+    except ValueError:
+        raise ValueError(
+            f"Refusing to write output file outside {resolved_allowed}: {resolved_output}"
+        )
 
 
 if __name__ == "__main__":
