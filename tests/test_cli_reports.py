@@ -127,6 +127,54 @@ class CliReportTests(unittest.TestCase):
             self.assertIn("metadata", payload)
             self.assertTrue(md_path.read_text(encoding="utf-8").strip())
 
+    def test_run_nvda_release_checks_from_snapshot(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            snapshot_source = Path(tmp, "source_snapshot.json")
+            snapshot_source.write_text(Path("docs/download_nvaccess_snapshot.json").read_text(encoding="utf-8"), encoding="utf-8")
+
+            snapshot_json = Path(tmp, "snapshot.json")
+            snapshot_md = Path(tmp, "snapshot.md")
+            recommendations_json = Path(tmp, "recommendations.json")
+            recommendations_md = Path(tmp, "recommendations.md")
+            delta_json = Path(tmp, "delta.json")
+            delta_md = Path(tmp, "delta.md")
+
+            result = self._run_tool(
+                "tools/run_nvda_release_checks.py",
+                "--snapshot-source",
+                str(snapshot_source),
+                "--manifest",
+                "manifest.ini",
+                "--validated",
+                "docs/validated_nvda_builds.json",
+                "--snapshot-json",
+                str(snapshot_json),
+                "--snapshot-markdown",
+                str(snapshot_md),
+                "--recommendations-json",
+                str(recommendations_json),
+                "--recommendations-markdown",
+                str(recommendations_md),
+                "--previous-snapshot",
+                str(snapshot_source),
+                "--delta-json",
+                str(delta_json),
+                "--delta-markdown",
+                str(delta_md),
+            )
+            self.assertEqual(result.returncode, 0, msg=result.stderr)
+
+            snapshot_payload = json.loads(snapshot_json.read_text(encoding="utf-8"))
+            self.assertIn("entries", snapshot_payload)
+            self.assertTrue(snapshot_payload["entries"])
+
+            recommendations_payload = json.loads(recommendations_json.read_text(encoding="utf-8"))
+            self.assertIn("entries", recommendations_payload)
+            self.assertTrue(recommendations_payload["entries"])
+
+            delta_payload = json.loads(delta_json.read_text(encoding="utf-8"))
+            self.assertIn("differences", delta_payload)
+
 
 if __name__ == "__main__":
     unittest.main()
