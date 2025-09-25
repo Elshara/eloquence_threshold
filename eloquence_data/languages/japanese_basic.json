@@ -1,0 +1,89 @@
+{
+  "id": "ja-jp-basic",
+  "language": "ja-JP",
+  "displayName": "Japanese – mora rhythmic",
+  "description": "Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+  "tags": [
+    "japanese",
+    "kana",
+    "lang:ja"
+  ],
+  "stress": [
+    "Pitch accent typically falls on the second mora of a word",
+    "Unaccented words sustain high pitch until the final mora"
+  ],
+  "sentenceStructure": [
+    "Topic–Comment structure with Subject–Object–Verb order",
+    "Particles anchor grammatical roles and affect intonation"
+  ],
+  "grammar": [
+    "Long vowels and geminated consonants count as separate mora",
+    "The moraic nasal ん assimilates to following consonant place"
+  ],
+  "defaultVoiceTemplates": [
+    "espeak-ja-melodic"
+  ],
+  "characters": [
+    {
+      "symbol": "あ",
+      "spoken": "a",
+      "ipa": [
+        "a"
+      ],
+      "description": "Open front vowel",
+      "example": "あさ",
+      "notes": [
+        "Baseline mora for many pitch accent patterns"
+      ]
+    },
+    {
+      "symbol": "い",
+      "spoken": "i",
+      "ipa": [
+        "i"
+      ],
+      "description": "Close front vowel",
+      "example": "いえ",
+      "notes": [
+        "Consonant palatalisation occurs before い"
+      ]
+    },
+    {
+      "symbol": "か",
+      "spoken": "ka",
+      "ipa": [
+        "ka"
+      ],
+      "description": "Unvoiced velar stop + /a/",
+      "example": "かさ",
+      "notes": [
+        "Voiced counterpart が surfaces via rendaku"
+      ]
+    },
+    {
+      "symbol": "ん",
+      "spoken": "n",
+      "ipa": [
+        "ɴ"
+      ],
+      "description": "Moraic nasal",
+      "example": "ほん",
+      "notes": [
+        "Assimilates to following place of articulation"
+      ]
+    },
+    {
+      "symbol": "が",
+      "spoken": "ga",
+      "ipa": [
+        "ɡa"
+      ],
+      "description": "Voiced velar stop via rendaku",
+      "example": "りんご",
+      "stress": "Often devoices intervocalically in Tokyo dialect",
+      "notes": [
+        "Contrast with unvoiced か"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "id": "en-us-heritage",
+  "language": "en-US",
+  "displayName": "English (US) – Heritage Eloquence",
+  "description": "Pronunciation cues transcribed from JAWS, Window-Eyes, and Loquence studio dictionaries",
+  "tags": ["english", "eloquence", "heritage"],
+  "stress": [
+    "Primary stress uses Loquence-style lengthening on the vowel nucleus",
+    "Secondary stress keeps the consonant attack sharp as in heritage JAWS"
+  ],
+  "sentenceStructure": [
+    "Declaratives keep a mid-low plateau before dropping on the final syllable",
+    "Questions rise sharply across the last stressed vowel, matching classic Eloquence focus"
+  ],
+  "grammar": [
+    "Heritage voices favour rhotic endings; keep \"r\" audible even after schwa",
+    "Assimilate nasal + stop clusters (nk, mp) for smoother phrase prediction playback",
+    "Diphthongs collapse in unstressed syllables, mirroring the 6.1 dictionary"
+  ],
+  "defaultVoiceTemplates": [
+    "eloquence-heritage-jaws-classic",
+    "eloquence-loquence-studio",
+    "eloquence-window-eyes-expressive",
+    "eloquence-bhp-precision"
+  ],
+  "characters": [
+    {
+      "symbol": "a",
+      "spoken": "broad ay",
+      "ipa": ["eɪ"],
+      "description": "Heritage diphthong used for fast spelling",
+      "example": "aim",
+      "stress": "Lengthen when stressed before voiced stops",
+      "notes": [
+        "Matches Loquence Studio smoothing",
+        "Switch to schwa in unstressed prefixes"
+      ]
+    },
+    {
+      "symbol": "A",
+      "spoken": "broad ay",
+      "ipa": ["eɪ"],
+      "description": "Uppercase form announces with firmer attack",
+      "example": "April",
+      "stress": "Clip after the consonant when abbreviating",
+      "notes": ["Used for dictionary headwords in heritage add-ons"]
+    },
+    {
+      "symbol": "e",
+      "spoken": "mid eh",
+      "ipa": ["ɛ"],
+      "description": "Window-Eyes edge with slight nasal colour",
+      "example": "echo",
+      "notes": [
+        "Bleeds into /i/ before silent e endings",
+        "Prefer short duration inside phrase prediction"
+      ]
+    },
+    {
+      "symbol": "i",
+      "spoken": "high ee",
+      "ipa": ["i"],
+      "description": "Bright Loquence glide",
+      "example": "even",
+      "notes": [
+        "Glide toward y consonant between vowels",
+        "Drop to /ɪ/ in unstressed suffixes"
+      ]
+    },
+    {
+      "symbol": "o",
+      "spoken": "round oh",
+      "ipa": ["oʊ"],
+      "description": "JAWS fallback with quick offset",
+      "example": "open",
+      "notes": [
+        "Shorten before voiceless consonants",
+        "Pairs with /w/ onset for expressive templates"
+      ]
+    },
+    {
+      "symbol": "r",
+      "spoken": "rhotic r",
+      "ipa": ["ɹ"],
+      "description": "Keep rhotic tail even after schwa",
+      "example": "river",
+      "notes": [
+        "Use tapped variant between vowels",
+        "Enable for heritage voices to preserve American accent"
+      ]
+    },
+    {
+      "symbol": "er",
+      "spoken": "er",
+      "ipa": ["ɝ", "ɚ"],
+      "description": "Stressed and unstressed rhotic schwa",
+      "example": "worker",
+      "notes": [
+        "Eloquence dictionary marks this as AXR",
+        "Switch to /ɚ/ when suffixing with -er"
+      ]
+    },
+    {
+      "symbol": "th",
+      "spoken": "voiceless th",
+      "ipa": ["θ"],
+      "description": "Classic DECtalk-style fricative",
+      "example": "think",
+      "notes": [
+        "Blend with preceding s for faster articulation",
+        "Voice when surrounded by vowels"
+      ]
+    },
+    {
+      "symbol": "TH",
+      "spoken": "voiced th",
+      "ipa": ["ð"],
+      "description": "Lenited variant for articles",
+      "example": "this",
+      "notes": [
+        "Adopted from FonixTalk dictionaries",
+        "Keep low amplitude to avoid clipping"
+      ]
+    },
+    {
+      "symbol": "sh",
+      "spoken": "sh",
+      "ipa": ["ʃ"],
+      "description": "Soft sibilant used by Loquence Studio",
+      "example": "shine",
+      "notes": [
+        "Allow breathiness for expressive template",
+        "Pairs with /tʃ/ for loanwords"
+      ]
+    },
+    {
+      "symbol": "ch",
+      "spoken": "ch",
+      "ipa": ["tʃ"],
+      "description": "Affricate shared with DECtalk presets",
+      "example": "choice",
+      "notes": [
+        "Heritage JAWS emphasises the stop component",
+        "Switch to /k/ in Greek loans"
+      ]
+    },
+    {
+      "symbol": "ing",
+      "spoken": "eng",
+      "ipa": ["ɪŋ"],
+      "description": "Nasal ending pronounced with trailing g hint",
+      "example": "hearing",
+      "notes": [
+        "Blind Help builds keep a light /g/ for clarity",
+        "Drop the consonant when followed by /d/"
+      ]
+    },
+    {
+      "symbol": "tion",
+      "spoken": "shun",
+      "ipa": ["ʃən"],
+      "description": "Morphological ending for nouns",
+      "example": "station",
+      "notes": [
+        "Raise pitch during spelling sequences",
+        "Loquence compresses vowel to match quick speech"
+      ]
+    }
+  ]
+}

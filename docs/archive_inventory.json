@@ -1,0 +1,210 @@
+{
+  "roots": [
+    {
+      "entries": [
+        {
+          "depth": 0,
+          "mode": "drwxr-xr-x",
+          "modified": "2025-09-24T20:09:08.767840+00:00",
+          "path": ".",
+          "size": 4096,
+          "type": "directory"
+        },
+        {
+          "depth": 1,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.759840+00:00",
+          "path": "dectalk_voices.json",
+          "size": 2928,
+          "type": "file"
+        },
+        {
+          "depth": 1,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.759840+00:00",
+          "path": "espeak_phonemes.txt",
+          "size": 36350,
+          "type": "file"
+        },
+        {
+          "depth": 1,
+          "mode": "drwxr-xr-x",
+          "modified": "2025-09-24T20:09:08.759840+00:00",
+          "path": "espeak_variants",
+          "size": 4096,
+          "type": "directory"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.759840+00:00",
+          "path": "espeak_variants/alex.voice",
+          "size": 175,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.759840+00:00",
+          "path": "espeak_variants/storm.voice",
+          "size": 190,
+          "type": "file"
+        },
+        {
+          "depth": 1,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.759840+00:00",
+          "path": "espeak_voices.json",
+          "size": 6445,
+          "type": "file"
+        },
+        {
+          "depth": 1,
+          "mode": "drwxr-xr-x",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "languages",
+          "size": 4096,
+          "type": "directory"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.759840+00:00",
+          "path": "languages/english_gb_basic.json",
+          "size": 1604,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.759840+00:00",
+          "path": "languages/english_us_basic.json",
+          "size": 2085,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "languages/english_us_heritage.json",
+          "size": 5003,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "languages/french_fr_basic.json",
+          "size": 3889,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "languages/german_basic.json",
+          "size": 2932,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "languages/italian_basic.json",
+          "size": 3599,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "languages/portuguese_br_basic.json",
+          "size": 4067,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "languages/spanish_castilian_basic.json",
+          "size": 1422,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "languages/spanish_latam_basic.json",
+          "size": 1794,
+          "type": "file"
+        },
+        {
+          "depth": 1,
+          "mode": "drwxr-xr-x",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "phonemes",
+          "size": 4096,
+          "type": "directory"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "phonemes/dectalk_classic.json",
+          "size": 1467,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.763840+00:00",
+          "path": "phonemes/nvspeechplayer_core.json",
+          "size": 62374,
+          "type": "file"
+        },
+        {
+          "depth": 1,
+          "mode": "drwxr-xr-x",
+          "modified": "2025-09-24T20:09:08.767840+00:00",
+          "path": "voices",
+          "size": 4096,
+          "type": "directory"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.767840+00:00",
+          "path": "voices/eloquence_heritage.json",
+          "size": 4054,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.767840+00:00",
+          "path": "voices/eloquence_sapi.json",
+          "size": 4903,
+          "type": "file"
+        },
+        {
+          "depth": 2,
+          "mode": "-rw-r--r--",
+          "modified": "2025-09-24T20:09:08.767840+00:00",
+          "path": "voices/nvspeechplayer_classics.json",
+          "size": 4258,
+          "type": "file"
+        }
+      ],
+      "root": "/workspace/eloquence_threshold/eloquence_data",
+      "summary": {
+        "archiveCount": 0,
+        "directoryCount": 5,
+        "fileCount": 19,
+        "notes": [],
+        "totalEntries": 24,
+        "totalSize": 170019
+      }
+    }
+  ],
+  "scannedAt": "2025-09-24T20:11:07.661861+00:00"
+}

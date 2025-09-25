@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "source": "Manual captures of heritage Eloquence releases for JAWS, Window-Eyes, and Loquendo SAPI-4",
+    "generated": "2025-01-11",
+    "notes": [
+      "Parameter sets approximate flagship voices from historical ETI Eloquence builds and high fidelity Loquendo ports.",
+      "Boolean toggles mimic how classic screen readers bundled abbreviation dictionaries and inline voice tags."
+    ]
+  },
+  "templates": [
+    {
+      "id": "eloquence-heritage-jaws-classic",
+      "name": "Heritage JAWS (Paul)",
+      "language": "en-US",
+      "description": "Classic JAWS preset tuned for crisp midrange articulation and quick key echo",
+      "tags": [
+        "eloquence",
+        "heritage",
+        "jaws",
+        "english"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "JAWS 6.1 Paul",
+      "parameters": {
+        "rate": 116,
+        "pitch": 102,
+        "inflection": 44,
+        "headSize": 124,
+        "roughness": 26,
+        "breathiness": 18,
+        "volume": 92,
+        "gender": 0
+      },
+      "extras": {
+        "settings": {
+          "ABRDICT": true,
+          "backquoteVoiceTags": true
+        },
+        "phonemeFallback": "ipaFirst",
+        "phonemeReplacements": {
+          "@": "description",
+          "tS": "example",
+          "dZ": "example",
+          "N": "example"
+        }
+      }
+    },
+    {
+      "id": "eloquence-loquence-studio",
+      "name": "Loquence Studio (SAPI-4)",
+      "language": "en-US",
+      "description": "Warm Loquendo-inspired timbre with softened consonants for long-form listening",
+      "tags": [
+        "eloquence",
+        "sapi4",
+        "studio",
+        "english"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "Loquence SAPI-4 Studio",
+      "parameters": {
+        "rate": 108,
+        "pitch": 130,
+        "inflection": 52,
+        "headSize": 112,
+        "roughness": 18,
+        "breathiness": 30,
+        "volume": 95,
+        "gender": 0
+      },
+      "extras": {
+        "settings": {
+          "phrasePrediction": true
+        },
+        "phonemeFallback": "descriptionsFirst",
+        "phonemeReplacements": {
+          "@": "ipa",
+          "r": "description",
+          "dZ": "ipa"
+        }
+      }
+    },
+    {
+      "id": "eloquence-window-eyes-expressive",
+      "name": "Window-Eyes Expressive",
+      "language": "en-US",
+      "description": "Grittier profile mirroring Window-Eyes with a forward sibilant edge",
+      "tags": [
+        "eloquence",
+        "window-eyes",
+        "heritage",
+        "english"
+      ],
+      "baseVoice": "enu",
+      "variant": "4",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "Window-Eyes Expressive",
+      "parameters": {
+        "rate": 112,
+        "pitch": 96,
+        "inflection": 38,
+        "headSize": 132,
+        "roughness": 34,
+        "breathiness": 22,
+        "volume": 90,
+        "gender": 0
+      },
+      "extras": {
+        "settings": {
+          "ABRDICT": true
+        },
+        "phonemeFallback": "examplesFirst",
+        "phonemeReplacements": {
+          "@": "example",
+          "tS": "ipa",
+          "S": "description"
+        }
+      }
+    },
+    {
+      "id": "eloquence-bhp-precision",
+      "name": "Blind Help Precision",
+      "language": "en-US",
+      "description": "Balanced profile inspired by Blind Help Project extractions for modern NVDA builds",
+      "tags": [
+        "eloquence",
+        "blindhelp",
+        "modern",
+        "english"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "IBMTTS V25.1.1 remix",
+      "parameters": {
+        "rate": 120,
+        "pitch": 110,
+        "inflection": 45,
+        "headSize": 122,
+        "roughness": 24,
+        "breathiness": 20,
+        "volume": 94,
+        "gender": 0
+      },
+      "extras": {
+        "settings": {
+          "ABRDICT": true,
+          "phrasePrediction": true
+        },
+        "phonemeFallback": "examplesFirst",
+        "phonemeReplacements": {
+          "@": "description",
+          "N": "ipa",
+          "r": "example"
+        }
+      }
+    }
+  ]
+}

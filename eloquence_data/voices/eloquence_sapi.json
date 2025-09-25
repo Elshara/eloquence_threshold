@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "source": "Community SAPI-4 and SAPI-5 Eloquence/ViaVoice archives",
+    "generated": "2025-01-12",
+    "notes": [
+      "Parameter sets derived from listening tests against the DataJake SAPI voice archives (eloq61.exe, IBM-ViaVoice_TTS-SAPI4.zip, SAPI5_IBMTTS.zip).",
+      "Templates aim to reproduce the smoother Studio variants and brighter ViaVoice timbres inside Eloquence's runtime so users can jump between NVDA and SAPI baselines.",
+      "Includes a capture of Code Factory's Eloquence for Windows SAPI 5 package so users can compare its voicing against the DataJake mirrors."
+    ]
+  },
+  "templates": [
+    {
+      "id": "eloquence-sapi5-viavoice-paul-xl",
+      "name": "ViaVoice Paul XL (SAPI 5)",
+      "language": "en-US",
+      "description": "IBM ViaVoice SAPI 5 capture tuned for rich baritone delivery with crisp consonants",
+      "tags": [
+        "eloquence",
+        "ibm",
+        "viavoice",
+        "sapi5",
+        "english"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "SAPI5_IBMTTS/Paul XL",
+      "parameters": {
+        "rate": 118,
+        "pitch": 104,
+        "inflection": 52,
+        "headSize": 126,
+        "roughness": 22,
+        "breathiness": 14,
+        "volume": 96,
+        "gender": 0
+      },
+      "extras": {
+        "sourceArchive": "https://datajake.braillescreen.net/tts/sapi_voices/SAPI5_IBMTTS.zip",
+        "settings": {
+          "ABRDICT": true,
+          "phrasePrediction": true
+        },
+        "phonemeFallback": "examplesFirst",
+        "phonemeReplacements": {
+          "@": "description",
+          "r": "example",
+          "T": "ipa",
+          "dZ": "description"
+        }
+      }
+    },
+    {
+      "id": "eloquence-sapi4-viavoice-tracy",
+      "name": "ViaVoice Tracy (SAPI 4)",
+      "language": "en-US",
+      "description": "Softer SAPI 4 ViaVoice female preset with expressive inflection and airy texture",
+      "tags": [
+        "eloquence",
+        "ibm",
+        "viavoice",
+        "sapi4",
+        "english"
+      ],
+      "baseVoice": "enu",
+      "variant": "5",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "IBM-ViaVoice_TTS-SAPI4/Tracy",
+      "parameters": {
+        "rate": 112,
+        "pitch": 136,
+        "inflection": 58,
+        "headSize": 108,
+        "roughness": 16,
+        "breathiness": 32,
+        "volume": 92,
+        "gender": 1
+      },
+      "extras": {
+        "sourceArchive": "https://datajake.braillescreen.net/tts/sapi_voices/IBM-ViaVoice_TTS-SAPI4.zip",
+        "settings": {
+          "phrasePrediction": true
+        },
+        "phonemeFallback": "ipaFirst",
+        "phonemeReplacements": {
+          "@": "ipa",
+          "S": "description",
+          "tS": "example",
+          "Z": "description"
+        }
+      }
+    },
+    {
+      "id": "eloquence-sapi4-eloq61-studio",
+      "name": "Eloquence 6.1 Studio (SAPI 4)",
+      "language": "en-US",
+      "description": "High fidelity ETI Eloquence 6.1 Studio preset captured from the SAPI-4 port",
+      "tags": [
+        "eloquence",
+        "sapi4",
+        "studio",
+        "english"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "eloq61.exe/Studio",
+      "parameters": {
+        "rate": 110,
+        "pitch": 128,
+        "inflection": 54,
+        "headSize": 114,
+        "roughness": 18,
+        "breathiness": 28,
+        "volume": 95,
+        "gender": 0
+      },
+      "extras": {
+        "sourceArchive": "https://datajake.braillescreen.net/tts/sapi_voices/eloq61.exe",
+        "settings": {
+          "phrasePrediction": true,
+          "backquoteVoiceTags": true
+        },
+        "phonemeFallback": "descriptionsFirst",
+        "phonemeReplacements": {
+          "@": "ipa",
+          "A": "example",
+          "N": "description",
+          "tS": "ipa"
+        }
+      }
+    },
+    {
+      "id": "eloquence-sapi5-codefactory-balanced",
+      "name": "Eloquence for Windows Balanced (Code Factory)",
+      "language": "en-US",
+      "description": "Code Factory's SAPI 5 port tuned for a smoother Studio timbre with additional sparkle",
+      "tags": [
+        "eloquence",
+        "codefactory",
+        "sapi5",
+        "english"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "en-us-heritage",
+      "sourceVoice": "EloquenceForWindows-Setup/Eloquence",
+      "parameters": {
+        "rate": 116,
+        "pitch": 132,
+        "inflection": 60,
+        "headSize": 120,
+        "roughness": 20,
+        "breathiness": 24,
+        "volume": 98,
+        "gender": 0
+      },
+      "extras": {
+        "sourceArchive": "https://www.codefactoryglobal.com/downloads/installers/EloquenceForWindows-Setup.exe",
+        "settings": {
+          "phrasePrediction": true,
+          "abbreviationDictionary": true
+        },
+        "phonemeFallback": "examplesFirst",
+        "phonemeReplacements": {
+          "@": "ipa",
+          "3": "description",
+          "dZ": "example",
+          "Z": "ipa"
+        }
+      }
+    }
+  ]
+}

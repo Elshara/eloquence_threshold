@@ -1,0 +1,10 @@
+# Derived from eSpeak NG variant voice 'Alex'
+language variant
+name Alex
+gender male
+pitch 105 115
+voicing 70
+flutter 0
+roughness 12
+breath 0 0 0 0 0 0 0 0
+consonants 104 110

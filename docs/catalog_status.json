@@ -1,0 +1,483 @@
+{
+  "languages": {
+    "profiles": [
+      {
+        "characterCount": 11,
+        "defaultVoiceTemplates": [
+          "espeak-de-precision"
+        ],
+        "display": "German \u2013 precise articulation \u2013 de-DE \u2013 Key German letters referencing eSpeak de voice",
+        "id": "de-de-basic",
+        "language": "de-DE",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-de-precision"
+        ]
+      },
+      {
+        "characterCount": 6,
+        "defaultVoiceTemplates": [
+          "espeak-en-gb-clarity"
+        ],
+        "display": "English (UK) \u2013 clipped clarity \u2013 en-GB \u2013 Receives vowels tuned for eSpeak en-gb",
+        "id": "en-gb-basic",
+        "language": "en-GB",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-en-gb-clarity"
+        ]
+      },
+      {
+        "characterCount": 8,
+        "defaultVoiceTemplates": [
+          "espeak-en-us-bright"
+        ],
+        "display": "English (US) \u2013 tactile vowels \u2013 en-US \u2013 Foundational Latin alphabet mapping derived from eSpeak en-us",
+        "id": "en-us-basic",
+        "language": "en-US",
+        "missingDefaults": [],
+        "referencedBy": [
+          "dectalk-beautiful-betty",
+          "dectalk-perfect-paul",
+          "dectalk-rough-rita",
+          "dectalk-whispering-wendy",
+          "eloquence-bhp-precision",
+          "eloquence-heritage-jaws-classic",
+          "eloquence-loquence-studio",
+          "eloquence-sapi4-eloq61-studio",
+          "eloquence-sapi4-viavoice-tracy",
+          "eloquence-sapi5-codefactory-balanced",
+          "eloquence-sapi5-viavoice-paul-xl",
+          "eloquence-window-eyes-expressive",
+          "espeak-en-us-bright",
+          "espeak-variant-espeak-variants-storm",
+          "nvspeechplayer-adam",
+          "nvspeechplayer-benjamin",
+          "nvspeechplayer-caleb",
+          "nvspeechplayer-david"
+        ]
+      },
+      {
+        "characterCount": 13,
+        "defaultVoiceTemplates": [
+          "eloquence-heritage-jaws-classic",
+          "eloquence-loquence-studio",
+          "eloquence-window-eyes-expressive",
+          "eloquence-bhp-precision"
+        ],
+        "display": "English (US) \u2013 Heritage Eloquence \u2013 en-US \u2013 Pronunciation cues transcribed from JAWS, Window-Eyes, and Loquence studio dictionaries",
+        "id": "en-us-heritage",
+        "language": "en-US",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-bhp-precision",
+          "eloquence-heritage-jaws-classic",
+          "eloquence-loquence-studio",
+          "eloquence-sapi4-eloq61-studio",
+          "eloquence-sapi4-viavoice-tracy",
+          "eloquence-sapi5-codefactory-balanced",
+          "eloquence-sapi5-viavoice-paul-xl",
+          "eloquence-window-eyes-expressive"
+        ]
+      },
+      {
+        "characterCount": 7,
+        "defaultVoiceTemplates": [
+          "espeak-es-latin"
+        ],
+        "display": "Spanish (LatAm) \u2013 sonorous core \u2013 es-419 \u2013 Latin American Spanish vowels and consonants following eSpeak es-la",
+        "id": "es-419-basic",
+        "language": "es-419",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-es-latin"
+        ]
+      },
+      {
+        "characterCount": 5,
+        "defaultVoiceTemplates": [
+          "espeak-es-castilian"
+        ],
+        "display": "Spanish (Castilian) \u2013 crisp sibilants \u2013 es-ES \u2013 Castilian defaults matching eSpeak es",
+        "id": "es-es-basic",
+        "language": "es-ES",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-es-castilian"
+        ]
+      },
+      {
+        "characterCount": 15,
+        "defaultVoiceTemplates": [
+          "espeak-fr-velvet"
+        ],
+        "display": "French \u2013 nasal warmth \u2013 fr-FR \u2013 Core French characters tuned against eSpeak fr defaults",
+        "id": "fr-fr-basic",
+        "language": "fr-FR",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-fr-velvet"
+        ]
+      },
+      {
+        "characterCount": 5,
+        "defaultVoiceTemplates": [
+          "espeak-hi-dynamic"
+        ],
+        "display": "Hindi \u2013 retroflex energy \u2013 hi-IN \u2013 Core Devanagari characters tuned against eSpeak hi phonemes",
+        "id": "hi-in-basic",
+        "language": "hi-IN",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-hi-dynamic"
+        ]
+      },
+      {
+        "characterCount": 15,
+        "defaultVoiceTemplates": [
+          "espeak-it-expressive"
+        ],
+        "display": "Italian \u2013 open vowels \u2013 it-IT \u2013 Italian vowel core tied to eSpeak it voice",
+        "id": "it-it-basic",
+        "language": "it-IT",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-it-expressive"
+        ]
+      },
+      {
+        "characterCount": 5,
+        "defaultVoiceTemplates": [
+          "espeak-ja-melodic"
+        ],
+        "display": "Japanese \u2013 mora rhythmic \u2013 ja-JP \u2013 Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+        "id": "ja-jp-basic",
+        "language": "ja-JP",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-ja-melodic"
+        ]
+      },
+      {
+        "characterCount": 18,
+        "defaultVoiceTemplates": [
+          "espeak-pt-br-vibrant"
+        ],
+        "display": "Portuguese (Brazil) \u2013 vibrant vowels \u2013 pt-BR \u2013 Brazilian Portuguese nasal set mapped from eSpeak pt-br",
+        "id": "pt-br-basic",
+        "language": "pt-BR",
+        "missingDefaults": [],
+        "referencedBy": [
+          "espeak-pt-br-vibrant"
+        ]
+      }
+    ],
+    "total": 11
+  },
+  "phonemes": {
+    "categories": [
+      {
+        "count": 20,
+        "id": "stress-phonemes",
+        "label": "Stress Phonemes"
+      },
+      {
+        "count": 7,
+        "id": "some-default-vowel-definitions",
+        "label": "Some default vowel definitions"
+      },
+      {
+        "count": 3,
+        "id": "syllablic-consonants",
+        "label": "Syllablic consonants"
+      },
+      {
+        "count": 1,
+        "id": "other-sounds",
+        "label": "Other sounds"
+      },
+      {
+        "count": 6,
+        "id": "these-each-apply-to-a-class-of-vowels",
+        "label": "These each apply to a class of vowels"
+      },
+      {
+        "count": 19,
+        "id": "sonorants",
+        "label": "SONORANTS"
+      },
+      {
+        "count": 8,
+        "id": "nasal-consonants",
+        "label": "NASAL CONSONANTS"
+      },
+      {
+        "count": 7,
+        "id": "voiced-stops",
+        "label": "VOICED STOPS"
+      },
+      {
+        "count": 13,
+        "id": "voiced-fricatives",
+        "label": "VOICED fricatives"
+      },
+      {
+        "count": 8,
+        "id": "unvoiced-stops",
+        "label": "UNVOICED STOPS"
+      },
+      {
+        "count": 12,
+        "id": "unvoiced-fricatives",
+        "label": "UNVOICED fricatives"
+      },
+      {
+        "count": 4,
+        "id": "dectalk-core-inventory",
+        "label": "DECtalk core inventory"
+      },
+      {
+        "count": 15,
+        "id": "nvspeechplayer-vowels",
+        "label": "NVSpeechPlayer vowels"
+      },
+      {
+        "count": 2,
+        "id": "nvspeechplayer-affricates",
+        "label": "NVSpeechPlayer affricates"
+      },
+      {
+        "count": 4,
+        "id": "nvspeechplayer-voiceless-consonants",
+        "label": "NVSpeechPlayer voiceless consonants"
+      },
+      {
+        "count": 2,
+        "id": "nvspeechplayer-voiced-consonants",
+        "label": "NVSpeechPlayer voiced consonants"
+      },
+      {
+        "count": 1,
+        "id": "nvspeechplayer-nasals",
+        "label": "NVSpeechPlayer nasals"
+      },
+      {
+        "count": 2,
+        "id": "nvspeechplayer-voiced-stops",
+        "label": "NVSpeechPlayer voiced stops"
+      },
+      {
+        "count": 1,
+        "id": "nvspeechplayer-liquids",
+        "label": "NVSpeechPlayer liquids"
+      },
+      {
+        "count": 1,
+        "id": "nvspeechplayer-voiceless-stops",
+        "label": "NVSpeechPlayer voiceless stops"
+      }
+    ],
+    "total": 136
+  },
+  "voices": {
+    "templates": [
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "dectalk-beautiful-betty",
+        "issues": [],
+        "language": "en-US",
+        "name": "DECtalk Beautiful Betty"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "dectalk-perfect-paul",
+        "issues": [],
+        "language": "en-US",
+        "name": "DECtalk Perfect Paul"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "dectalk-rough-rita",
+        "issues": [],
+        "language": "en-US",
+        "name": "DECtalk Rough Rita"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "dectalk-whispering-wendy",
+        "issues": [],
+        "language": "en-US",
+        "name": "DECtalk Whispering Wendy"
+      },
+      {
+        "defaultLanguageProfile": "en-us-heritage",
+        "id": "eloquence-bhp-precision",
+        "issues": [],
+        "language": "en-US",
+        "name": "Blind Help Precision"
+      },
+      {
+        "defaultLanguageProfile": "en-us-heritage",
+        "id": "eloquence-heritage-jaws-classic",
+        "issues": [],
+        "language": "en-US",
+        "name": "Heritage JAWS (Paul)"
+      },
+      {
+        "defaultLanguageProfile": "en-us-heritage",
+        "id": "eloquence-loquence-studio",
+        "issues": [],
+        "language": "en-US",
+        "name": "Loquence Studio (SAPI-4)"
+      },
+      {
+        "defaultLanguageProfile": "en-us-heritage",
+        "id": "eloquence-sapi4-eloq61-studio",
+        "issues": [],
+        "language": "en-US",
+        "name": "Eloquence 6.1 Studio (SAPI 4)"
+      },
+      {
+        "defaultLanguageProfile": "en-us-heritage",
+        "id": "eloquence-sapi4-viavoice-tracy",
+        "issues": [],
+        "language": "en-US",
+        "name": "ViaVoice Tracy (SAPI 4)"
+      },
+      {
+        "defaultLanguageProfile": "en-us-heritage",
+        "id": "eloquence-sapi5-codefactory-balanced",
+        "issues": [],
+        "language": "en-US",
+        "name": "Eloquence for Windows Balanced (Code Factory)"
+      },
+      {
+        "defaultLanguageProfile": "en-us-heritage",
+        "id": "eloquence-sapi5-viavoice-paul-xl",
+        "issues": [],
+        "language": "en-US",
+        "name": "ViaVoice Paul XL (SAPI 5)"
+      },
+      {
+        "defaultLanguageProfile": "en-us-heritage",
+        "id": "eloquence-window-eyes-expressive",
+        "issues": [],
+        "language": "en-US",
+        "name": "Window-Eyes Expressive"
+      },
+      {
+        "defaultLanguageProfile": "de-de-basic",
+        "id": "espeak-de-precision",
+        "issues": [],
+        "language": "de-DE",
+        "name": "German precision"
+      },
+      {
+        "defaultLanguageProfile": "en-gb-basic",
+        "id": "espeak-en-gb-clarity",
+        "issues": [],
+        "language": "en-GB",
+        "name": "English (UK) clarity"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "espeak-en-us-bright",
+        "issues": [],
+        "language": "en-US",
+        "name": "English (US) bright"
+      },
+      {
+        "defaultLanguageProfile": "es-es-basic",
+        "id": "espeak-es-castilian",
+        "issues": [],
+        "language": "es-ES",
+        "name": "Spanish (Castilian)"
+      },
+      {
+        "defaultLanguageProfile": "es-419-basic",
+        "id": "espeak-es-latin",
+        "issues": [],
+        "language": "es-419",
+        "name": "Spanish (Latin America)"
+      },
+      {
+        "defaultLanguageProfile": "fr-fr-basic",
+        "id": "espeak-fr-velvet",
+        "issues": [],
+        "language": "fr-FR",
+        "name": "French velvety"
+      },
+      {
+        "defaultLanguageProfile": "hi-in-basic",
+        "id": "espeak-hi-dynamic",
+        "issues": [],
+        "language": "hi-IN",
+        "name": "Hindi dynamic clarity"
+      },
+      {
+        "defaultLanguageProfile": "it-it-basic",
+        "id": "espeak-it-expressive",
+        "issues": [],
+        "language": "it-IT",
+        "name": "Italian expressive"
+      },
+      {
+        "defaultLanguageProfile": "ja-jp-basic",
+        "id": "espeak-ja-melodic",
+        "issues": [],
+        "language": "ja-JP",
+        "name": "Japanese melodic"
+      },
+      {
+        "defaultLanguageProfile": "pt-br-basic",
+        "id": "espeak-pt-br-vibrant",
+        "issues": [],
+        "language": "pt-BR",
+        "name": "Portuguese (Brazil) vibrant"
+      },
+      {
+        "defaultLanguageProfile": null,
+        "id": "espeak-variant-espeak-variants-alex",
+        "issues": [],
+        "language": "",
+        "name": "Alex"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "espeak-variant-espeak-variants-storm",
+        "issues": [],
+        "language": "en-US",
+        "name": "Storm"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "nvspeechplayer-adam",
+        "issues": [],
+        "language": "en-US",
+        "name": "NV Speech Player Adam"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "nvspeechplayer-benjamin",
+        "issues": [],
+        "language": "en-US",
+        "name": "NV Speech Player Benjamin"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "nvspeechplayer-caleb",
+        "issues": [],
+        "language": "en-US",
+        "name": "NV Speech Player Caleb"
+      },
+      {
+        "defaultLanguageProfile": "en-us-basic",
+        "id": "nvspeechplayer-david",
+        "issues": [],
+        "language": "en-US",
+        "name": "NV Speech Player David"
+      }
+    ],
+    "total": 28
+  }
+}

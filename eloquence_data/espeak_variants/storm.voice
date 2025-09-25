@@ -1,0 +1,11 @@
+# Derived from eSpeak NG variant voice 'Storm'
+language variant
+language en-us
+name Storm
+gender male
+pitch 60 100
+roughness 0
+voicing 100
+breath 0 0 0 0 0 0 0 0
+consonants 100
+intonation 3

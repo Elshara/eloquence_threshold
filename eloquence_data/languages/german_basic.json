@@ -1,0 +1,149 @@
+{
+  "id": "de-de-basic",
+  "language": "de-DE",
+  "displayName": "German – precise articulation",
+  "description": "Key German letters referencing eSpeak de voice",
+  "tags": [
+    "german",
+    "latin"
+  ],
+  "stress": [
+    "Primary stress typically on first syllable",
+    "Compound words keep secondary stresses"
+  ],
+  "sentenceStructure": [
+    "Verb-second declaratives",
+    "Verb-final subclauses"
+  ],
+  "grammar": [
+    "Final-obstruent devoicing",
+    "Umlauts mark vowel fronting"
+  ],
+  "defaultVoiceTemplates": [
+    "espeak-de-precision"
+  ],
+  "characters": [
+    {
+      "symbol": "ä",
+      "spoken": "ä umlaut",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Fronted a",
+      "example": "Mädchen",
+      "notes": [
+        "Pairs with ae in older texts"
+      ]
+    },
+    {
+      "symbol": "ö",
+      "spoken": "ö umlaut",
+      "ipa": [
+        "ø"
+      ],
+      "description": "Rounded front vowel",
+      "example": "schön",
+      "notes": [
+        "Contrast with o for back vowel"
+      ]
+    },
+    {
+      "symbol": "ü",
+      "spoken": "ü umlaut",
+      "ipa": [
+        "y"
+      ],
+      "description": "High front rounded vowel",
+      "example": "grün",
+      "notes": [
+        "Often spelled ue when diaeresis absent"
+      ]
+    },
+    {
+      "symbol": "ß",
+      "spoken": "eszett",
+      "ipa": [
+        "s"
+      ],
+      "description": "Voiceless alveolar fricative",
+      "example": "Straße",
+      "notes": [
+        "Represents /s/ after long vowel"
+      ]
+    },
+    {
+      "symbol": "c",
+      "spoken": "ts/ k",
+      "ipa": [
+        "ts"
+      ],
+      "description": "Letter c with contextual values",
+      "example": "Cent / Clown",
+      "notes": [
+        "Pronounced [ts] before e,i,ä; [k] elsewhere"
+      ]
+    },
+    {
+      "symbol": "r",
+      "spoken": "r",
+      "ipa": [
+        "ʁ"
+      ],
+      "description": "Uvular fricative",
+      "example": "rot",
+      "notes": [
+        "Vocalises to [ɐ] syllable-final"
+      ]
+    },
+    {
+      "symbol": "Z",
+      "spoken": "zett",
+      "ipa": [
+        "ts"
+      ],
+      "description": "Affricate",
+      "example": "Zeit",
+      "notes": []
+    },
+    {
+      "symbol": "z",
+      "spoken": "zett",
+      "ipa": [
+        "ts"
+      ],
+      "description": "Lowercase z",
+      "example": "Zeit",
+      "notes": []
+    },
+    {
+      "symbol": "Ä",
+      "spoken": "Ä umlaut",
+      "ipa": [
+        "ɛ"
+      ],
+      "description": "Uppercase ä",
+      "example": "Ärger",
+      "notes": []
+    },
+    {
+      "symbol": "Ö",
+      "spoken": "Ö umlaut",
+      "ipa": [
+        "ø"
+      ],
+      "description": "Uppercase ö",
+      "example": "Österreich",
+      "notes": []
+    },
+    {
+      "symbol": "Ü",
+      "spoken": "Ü umlaut",
+      "ipa": [
+        "y"
+      ],
+      "description": "Uppercase ü",
+      "example": "Über",
+      "notes": []
+    }
+  ]
+}
