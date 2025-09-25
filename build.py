@@ -31,6 +31,7 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
+from urllib.parse import urlparse
 import zipfile
 from pathlib import Path
 from typing import Optional, Tuple
@@ -97,6 +98,20 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def is_trusted_url(url: str) -> bool:
+    """Return True if the given URL is a trusted location for template downloads."""
+    allowed_domains = {"github.com", "raw.githubusercontent.com"}
+    try:
+        parsed = urlparse(url)
+        # Only allow https and a specific set of domains
+        if parsed.scheme != "https":
+            return False
+        # Remove port if present
+        netloc = parsed.netloc.split(":")[0]
+        return netloc in allowed_domains
+    except Exception:
+        return False
+
 def ensure_template(
     path: Path, *, url: str, allow_download: bool, insecure: bool
 ) -> Optional[Path]:
@@ -105,6 +120,10 @@ def ensure_template(
     if path.is_file():
         return path
     if not allow_download:
+        return None
+
+    if not is_trusted_url(url):
+        print("Warning: Refusing to download template from untrusted URL.")
         return None
     try:
         print(f"Downloading template from {url}…")
