@@ -16,23 +16,25 @@ full Markdown catalogue (`docs/archive_inventory.md`).
    pulling the binaries into the repository.
 4. **Map viable imports.** Track active porting tasks in `docs/archive_code_targets.md`, which summarises how each synthesizer
    family can expand Eloquence voices, phoneme inventories, or NVDA configuration tooling.
+5. **Review viability tiers.** Use the manifest's `Viability summary` to prioritise new phoneme/lexicon candidates and flag
+   truncated links that require manual repair before mirroring.
 
 ## High-value code collections
 
 | Collection | Items flagged as code/tooling | Key opportunities |
 | --- | ---: | --- |
 | eSpeak releases | 213 | Extract MBROLA/IPA tables to enhance Eloquence's multilingual phoneme coverage and align with NVDA's language picker. |
-| NVDA synthesizer add-ons | 56 | Unpack Python drivers (BeSTspeech, Brailab PC, Festival, JTalk) to compare configuration APIs, WASAPI handling, and phoneme mapping strategies. |
-| SAPI voice kits | 12 | Review SAPI 4/5 bridge layers (IBM ViaVoice, RealSpeak, RHVoice) for reusable lexicon formats and language switching logic. |
-| DECtalk toolchain/source | 11 | Cross-check DECtalk build scripts, ANSI-C phoneme tables, and dictionary tooling against Eloquence presets for retro-compatibility. |
+| NVDA synthesizer add-ons | 55 | Unpack Python drivers (BeSTspeech, Brailab PC, Festival, JTalk) to compare configuration APIs, WASAPI handling, and phoneme mapping strategies. |
+| SAPI voice kits | 11 | Review SAPI 4/5 bridge layers (IBM ViaVoice, RealSpeak, RHVoice) for reusable lexicon formats and language switching logic. |
+| DECtalk toolchain/source | 7 | Cross-check DECtalk build scripts, ANSI-C phoneme tables, and dictionary tooling against Eloquence presets for retro-compatibility. |
 | Legacy Eloquence/Fonix drops | 5 | Locate documentation and runtime DLLs that clarify voice parameter ranges, timbre defaults, and dictionary packaging. |
 
 See `docs/archive_code_targets.md` for synthesizer-specific porting notes and example integration tasks.
 
 ## Extension and dataset index
 
-- `docs/archive_inventory.md` now surfaces `File extension index`, `Sample rate hints`, and `Language hints` sections so we can prioritise IPA dictionaries, lexicons, and other phoneme-friendly payloads before downloading redundant demo audio.
-- `docs/archive_inventory.json` stores the same catalogue plus machine-readable summaries under the top-level `summaries` key. Each record now includes a `metadata` block with decoded filenames, detected sample rates, language hints, and voice names (where present) to accelerate automated importers.
+- `docs/archive_inventory.md` now surfaces `File extension index`, `Sample rate hints`, `Language hints`, and a `Viability summary` so we can prioritise IPA dictionaries, lexicons, and other phoneme-friendly payloads before downloading redundant demo audio. Documentation fragments without extensions are now caught automatically, keeping provenance tidy.
+- `docs/archive_inventory.json` stores the same catalogue plus machine-readable summaries under the top-level `summaries` key. Each record now includes a `metadata` block with decoded filenames, detected sample rates, language hints, voice names (where present), and inferred viability tiers to accelerate automated importers.
 - After updating `docs/datajake_archive_urls.txt`, rerun `python tools/catalog_datajake_archives.py` and scan the extension totals for new `.lex`, `.ipa`, or language-tagged archives that warrant fast-tracked extraction into `phoneme_catalog.py` or `language_profiles.py`.
 
 

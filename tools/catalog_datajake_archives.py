@@ -7,7 +7,7 @@ import pathlib
 import re
 import urllib.parse
 from collections import Counter, defaultdict
-from dataclasses import dataclass, asdict, field
+from dataclasses import asdict, dataclass, field
 
 RAW_URL_PATH = pathlib.Path("docs/datajake_archive_urls.txt")
 DEFAULT_MARKDOWN = pathlib.Path("docs/archive_inventory.md")
@@ -29,7 +29,7 @@ AUDIO_EXTS = {
 DOC_EXTS = {"pdf", "txt", "doc", "docx", "rtf"}
 INDEX_EXTS = {"html", "htm"}
 BINARY_EXTS = {"exe", "msi", "dll", "iso", "img", "bin", "sit", "cab"}
-ARCHIVE_EXTS = {"zip", "7z", "rar", "tar", "gz", "bz2", "xz", "z"}
+ARCHIVE_EXTS = {"zip", "7z", "rar", "tar", "gz", "bz2", "xz", "z", "tar.gz", "tar.bz2", "tar.xz"}
 ADDON_EXTS = {"nvda-addon"}
 
 CODE_KEYWORDS = [
@@ -113,6 +113,24 @@ ASSET_KEYWORDS = [
     "eloq",
 ]
 
+DOC_KEYWORDS = {
+    "readme",
+    "changelog",
+    "license",
+    "licence",
+    "manual",
+    "guide",
+    "notes",
+    "overview",
+    "spec",
+    "specification",
+}
+
+
+def looks_like_document_stub(filename_lower: str) -> bool:
+    tokens = [token for token in re.split(r"[^a-z0-9]+", filename_lower) if token]
+    return any(token in DOC_KEYWORDS for token in tokens)
+
 SCRAP_KEYWORDS = [
     "demo",
     "sample",
@@ -167,9 +185,13 @@ LANGUAGE_REGEXES = [(re.compile(pattern), label) for pattern, label in LANGUAGE_
 
 
 def parse_sample_rate(filename_lower: str) -> int | None:
-    khz_match = re.search(r"(\d{2,3})\s*(?:k(?:hz)?)", filename_lower)
+    khz_match = re.search(r"(\d{2,3}(?:[._]\d)?)\s*[-_]?k(?:hz)?", filename_lower)
     if khz_match:
-        value = int(khz_match.group(1)) * 1000
+        raw = khz_match.group(1).replace("_", ".")
+        if "." in raw:
+            value = int(round(float(raw) * 1000))
+        else:
+            value = int(raw) * 1000
         if 4000 <= value <= 384000:
             return value
     hz_match = re.search(r"(\d{4,6})\s*hz", filename_lower)
@@ -253,7 +275,9 @@ def extract_voice_hint(display_name: str) -> str | None:
     return None
 
 
-def extract_metadata(display_name: str, filename_lower: str, category: str, extension: str) -> dict[str, object]:
+def extract_metadata(
+    display_name: str, filename_lower: str, category: str, extension: str
+) -> dict[str, object]:
     metadata: dict[str, object] = {}
     sample_rate = parse_sample_rate(filename_lower)
     if sample_rate:
@@ -272,10 +296,23 @@ def extract_metadata(display_name: str, filename_lower: str, category: str, exte
 
 def detect_extension(display_name: str) -> str:
     name_lower = display_name.lower().strip()
-    match = re.search(r"\.([a-z0-9][a-z0-9\-]{0,15})$", name_lower)
-    if match:
-        return match.group(1)
-    return ""
+    # ``PurePosixPath`` keeps multi-part suffixes so installers like ``.tar.gz``
+    # round-trip cleanly even when the manifest stores uppercase names.
+    path = pathlib.PurePosixPath(name_lower)
+    suffixes = [suffix.lstrip(".") for suffix in path.suffixes if suffix]
+    if not suffixes:
+        return ""
+    if suffixes[-1] in {"gz", "bz2", "xz", "z"} and len(suffixes) >= 2:
+        if suffixes[-2] == "tar":
+            return f"tar.{suffixes[-1]}"
+    if suffixes[-1] == "tgz":
+        return "tar.gz"
+    if suffixes[-1] == "tbz2":
+        return "tar.bz2"
+    if suffixes[-1] == "txz":
+        return "tar.xz"
+    # ``.nvda-addon`` keeps a hyphenated suffix. ``PurePosixPath`` preserves it.
+    return suffixes[-1]
 
 SYNTH_ALIAS = {
     "CircumReality": "CircumReality",
@@ -391,6 +428,10 @@ def classify(url: str) -> ArchiveRecord:
             category = "Loose source file"
             viability = "High – integrate as needed"
             notes = "Direct code or config artifact."
+        elif looks_like_document_stub(filename_lower):
+            category = "Documentation"
+            viability = "Scrap (reference only)"
+            notes = "Documentation fragment without explicit extension."
         elif extension:
             category = f"Other ({extension})"
             viability = "Review"
@@ -439,6 +480,7 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             sample_rates[sample_rate] += 1
         for language in record.metadata.get("language_hints", []) if record.metadata else []:
             language_counts[language] += 1
+    viability_counts = Counter(record.viability for record in records)
     lines = []
     lines.append("# DataJake Archive Classification")
     lines.append("")
@@ -483,6 +525,14 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         for language, count in sorted(language_counts.items(), key=lambda item: (-item[1], item[0])):
             lines.append(f"| {language} | {count} |")
         lines.append("")
+    if viability_counts:
+        lines.append("## Viability summary")
+        lines.append("")
+        lines.append("| Triage guidance | Archives |")
+        lines.append("| --- | ---: |")
+        for viability, count in sorted(viability_counts.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {viability} | {count} |")
+        lines.append("")
     lines.append("## Detailed inventory")
     lines.append("")
     lines.append("| # | Archive | Collection | Category | Viability | Notes |")
@@ -497,6 +547,8 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     extensions = Counter(record.extension or "(none)" for record in records)
     sample_rates = Counter()
     languages = Counter()
+    categories = Counter(record.category for record in records)
+    viability = Counter(record.viability for record in records)
     for record in records:
         metadata = record.metadata or {}
         sample_rate = metadata.get("sample_rate_hz")
@@ -510,6 +562,8 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             "extensions": dict(extensions),
             "sample_rates": dict(sample_rates),
             "languages": dict(languages),
+            "categories": dict(categories),
+            "viability": dict(viability),
         },
     }
     path.write_text(json.dumps(payload, indent=2) + "\n")

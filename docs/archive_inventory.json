@@ -12488,14 +12488,14 @@
       "url": "https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/Rob%20Donovan/donovan_thesis_speech.tar.Z",
       "filename": "donovan_thesis_speech.tar.Z",
       "display_name": "donovan_thesis_speech.tar.Z",
-      "extension": "z",
+      "extension": "tar.z",
       "family": "Speech%20Synthesis%20Demonstrations",
-      "category": "Generic archive",
-      "viability": "Low \u2013 inspect manually",
-      "notes": "Archive without clear code/data signal.",
+      "category": "Other (tar.z)",
+      "viability": "Review",
+      "notes": "Unhandled file type.",
       "metadata": {
-        "extension": "z",
-        "category": "Generic archive"
+        "extension": "tar.z",
+        "category": "Other (tar.z)"
       }
     },
     {
@@ -12504,11 +12504,11 @@
       "display_name": "README",
       "extension": "",
       "family": "Speech%20Synthesis%20Demonstrations",
-      "category": "Directory",
-      "viability": "Review",
-      "notes": "Potential directory listing.",
+      "category": "Documentation",
+      "viability": "Scrap (reference only)",
+      "notes": "Documentation fragment without explicit extension.",
       "metadata": {
-        "category": "Directory"
+        "category": "Documentation"
       }
     },
     {
@@ -20493,12 +20493,13 @@
       "url": "https://datajake.braillescreen.net/tts/sapi_voices/Scansoft Realspeak Multilangue (Eng-Ger-Fra-Ita..>",
       "filename": "Scansoft Realspeak Multilangue (Eng-Ger-Fra-Ita..>",
       "display_name": "Scansoft Realspeak Multilangue (Eng-Ger-Fra-Ita..>",
-      "extension": "",
+      "extension": ">",
       "family": "sapi_voices",
       "category": "Truncated link",
       "viability": "Fix manifest entry",
       "notes": "Link appears truncated from the HTML index; verify the original filename on the mirror.",
       "metadata": {
+        "extension": ">",
         "category": "Truncated link"
       }
     },
@@ -22432,14 +22433,15 @@
       "au": 110,
       "aiff": 36,
       "mp3": 32,
-      "z": 1,
-      "(none)": 4,
+      "tar.z": 1,
+      "(none)": 3,
       "nist": 64,
       "12-withdrawn": 1,
       "sit": 2,
       "docx": 1,
       "iso": 3,
-      "txt": 2
+      "txt": 2,
+      ">": 1
     },
     "sample_rates": {
       "22000": 100,
@@ -22478,6 +22480,34 @@
       "Czech": 4,
       "Arabic": 4,
       "Romanian": 4
+    },
+    "categories": {
+      "Generic archive": 154,
+      "Source/tooling archive": 250,
+      "Archive index": 2,
+      "Binary installer": 218,
+      "NVDA add-on package": 55,
+      "Audio sample": 868,
+      "Other (tar.z)": 1,
+      "Documentation": 4,
+      "Directory": 2,
+      "Other (12-withdrawn)": 1,
+      "Voice/data archive": 5,
+      "Truncated link": 1
+    },
+    "viability": {
+      "Low \u2013 inspect manually": 153,
+      "High \u2013 inspect for portable code": 250,
+      "Catalog for manual browsing": 2,
+      "Medium \u2013 investigate resources": 218,
+      "High \u2013 unpack for Python code": 55,
+      "Scrap (non-code asset)": 868,
+      "Review": 4,
+      "Scrap (reference only)": 4,
+      "Low \u2013 likely demo/installer": 1,
+      "Medium \u2013 evaluate data reuse": 4,
+      "Fix manifest entry": 1,
+      "High \u2013 prioritise phoneme or lexicon data": 1
     }
   }
 }

@@ -9,13 +9,14 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | Audio sample | 868 |
 | Source/tooling archive | 250 |
 | Binary installer | 218 |
-| Generic archive | 155 |
+| Generic archive | 154 |
 | NVDA add-on package | 55 |
 | Voice/data archive | 5 |
-| Directory | 3 |
-| Documentation | 3 |
+| Documentation | 4 |
 | Archive index | 2 |
+| Directory | 2 |
 | Other (12-withdrawn) | 1 |
+| Other (tar.z) | 1 |
 | Truncated link | 1 |
 
 ## Synthesizer/collection coverage
@@ -59,15 +60,16 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | mp3 | 32 |
 | msi | 11 |
 | flac | 7 |
-| (none) | 4 |
 | rar | 4 |
+| (none) | 3 |
 | iso | 3 |
 | html | 2 |
 | sit | 2 |
 | txt | 2 |
 | 12-withdrawn | 1 |
+| > | 1 |
 | docx | 1 |
-| z | 1 |
+| tar.z | 1 |
 
 ## Sample rate hints
 
@@ -112,6 +114,23 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | Mandarin | 1 |
 | Taiwanese Mandarin | 1 |
 | Turkish | 1 |
+
+## Viability summary
+
+| Triage guidance | Archives |
+| --- | ---: |
+| Scrap (non-code asset) | 868 |
+| High – inspect for portable code | 250 |
+| Medium – investigate resources | 218 |
+| Low – inspect manually | 153 |
+| High – unpack for Python code | 55 |
+| Medium – evaluate data reuse | 4 |
+| Review | 4 |
+| Scrap (reference only) | 4 |
+| Catalog for manual browsing | 2 |
+| Fix manifest entry | 1 |
+| High – prioritise phoneme or lexicon data | 1 |
+| Low – likely demo/installer | 1 |
 
 ## Detailed inventory
 
@@ -972,8 +991,8 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | 853 | [names2.wav](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/ORATOR/names2.wav) | Speech%20Synthesis%20Demonstrations | Audio sample | Scrap (non-code asset) | Audio payload useful only for reference recordings. |
 | 854 | [text1.wav](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/ORATOR/text1.wav) | Speech%20Synthesis%20Demonstrations | Audio sample | Scrap (non-code asset) | Audio payload useful only for reference recordings. |
 | 855 | [text2.wav](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/ORATOR/text2.wav) | Speech%20Synthesis%20Demonstrations | Audio sample | Scrap (non-code asset) | Audio payload useful only for reference recordings. |
-| 856 | [donovan_thesis_speech.tar.Z](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/Rob%20Donovan/donovan_thesis_speech.tar.Z) | Speech%20Synthesis%20Demonstrations | Generic archive | Low – inspect manually | Archive without clear code/data signal. |
-| 857 | [README](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/Rob%20Donovan/donovan_thesis_speech/README) | Speech%20Synthesis%20Demonstrations | Directory | Review | Potential directory listing. |
+| 856 | [donovan_thesis_speech.tar.Z](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/Rob%20Donovan/donovan_thesis_speech.tar.Z) | Speech%20Synthesis%20Demonstrations | Other (tar.z) | Review | Unhandled file type. |
+| 857 | [README](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/Rob%20Donovan/donovan_thesis_speech/README) | Speech%20Synthesis%20Demonstrations | Documentation | Scrap (reference only) | Documentation fragment without explicit extension. |
 | 858 | [track01.NIST](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/Rob%20Donovan/donovan_thesis_speech/track01.NIST) | Speech%20Synthesis%20Demonstrations | Audio sample | Scrap (non-code asset) | Audio payload useful only for reference recordings. |
 | 859 | [track02.NIST](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/Rob%20Donovan/donovan_thesis_speech/track02.NIST) | Speech%20Synthesis%20Demonstrations | Audio sample | Scrap (non-code asset) | Audio payload useful only for reference recordings. |
 | 860 | [track03.NIST](https://datajake.braillescreen.net/tts/Speech%20Synthesis%20Demonstrations/Rob%20Donovan/donovan_thesis_speech/track03.NIST) | Speech%20Synthesis%20Demonstrations | Audio sample | Scrap (non-code asset) | Audio payload useful only for reference recordings. |
