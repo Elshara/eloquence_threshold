@@ -1,20 +1,546 @@
 {
-  "generatedAt": "2025-09-25T12:34:35.005169+00:00",
-  "totalProfiles": 11,
+  "generatedAt": "2025-09-26T13:39:22.474262+00:00",
+  "totalProfiles": 53,
   "stats": {
-    "totalProfiles": 11,
+    "totalProfiles": 53,
     "stageCounts": {
-      "established": 7,
-      "comprehensive": 3,
-      "developing": 1
+      "established": 28,
+      "comprehensive": 16,
+      "developing": 9
     },
-    "averageIpaCoverage": 0.3628,
-    "medianIpaCoverage": 0.4,
-    "totalCharacters": 108,
-    "profilesWithExamples": 11,
-    "profilesWithTemplates": 11
+    "averageIpaCoverage": 0.3898,
+    "medianIpaCoverage": 0.3333,
+    "totalCharacters": 232,
+    "profilesWithExamples": 53,
+    "profilesWithTemplates": 53
   },
   "entries": [
+    {
+      "id": "bn-bd-seed",
+      "language": "bn",
+      "displayName": "Bengali – retroflex melody",
+      "description": "Bengali placeholder emphasising retroflex flaps, palatal fricatives, and nasal vowels.",
+      "tags": [
+        "bengali",
+        "seed",
+        "lang:bn"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ড়"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-bn-bd"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-bn-bd"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-bn-bd"
+      ]
+    },
+    {
+      "id": "fil-ph-seed",
+      "language": "fil",
+      "displayName": "Filipino – Tagalog clarity",
+      "description": "Filipino placeholder addressing velar nasals, Spanish ñ loans, and affricate onsets.",
+      "tags": [
+        "filipino",
+        "tagalog",
+        "seed",
+        "lang:fil"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 2,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ts"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fil-ph"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-fil-ph"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-fil-ph"
+      ]
+    },
+    {
+      "id": "fi-fi-seed",
+      "language": "fi",
+      "displayName": "Finnish – vowel length discipline",
+      "description": "Finnish placeholder covering vowel length contrasts, front rounded vowels, and velar nasals.",
+      "tags": [
+        "finnish",
+        "seed",
+        "lang:fi"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "y"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fi-fi"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-fi-fi"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-fi-fi"
+      ]
+    },
+    {
+      "id": "gu-in-seed",
+      "language": "gu",
+      "displayName": "Gujarati – vocalic resonances",
+      "description": "Gujarati placeholder emphasising retroflex laterals, palatal nasals, and vocalic r vowels.",
+      "tags": [
+        "gujarati",
+        "seed",
+        "lang:gu"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [],
+      "ipaCoveredCount": 3,
+      "ipaCoverageRatio": 1.0,
+      "ipaCoveragePercent": 100.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-gu-in"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-gu-in"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-gu-in"
+      ]
+    },
+    {
+      "id": "id-id-seed",
+      "language": "id",
+      "displayName": "Indonesian – archipelago clarity",
+      "description": "Indonesian placeholder capturing prenasalised onsets and clear loan consonants.",
+      "tags": [
+        "indonesian",
+        "seed",
+        "lang:id"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 3,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [],
+      "ipaCoveredCount": 3,
+      "ipaCoverageRatio": 1.0,
+      "ipaCoveragePercent": 100.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-id-id"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-id-id"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-id-id"
+      ]
+    },
+    {
+      "id": "kn-in-seed",
+      "language": "kn",
+      "displayName": "Kannada – gentle palatals",
+      "description": "Kannada placeholder covering retroflex laterals, palatal nasals, and diphthongs used in literary Kannada.",
+      "tags": [
+        "kannada",
+        "seed",
+        "lang:kn"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ೖ"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-kn-in"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-kn-in"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-kn-in"
+      ]
+    },
+    {
+      "id": "ms-my-seed",
+      "language": "ms",
+      "displayName": "Malay – peninsular warmth",
+      "description": "Malay placeholder aligned with peninsular pronunciation, balancing Arabic loans and Malay vowels.",
+      "tags": [
+        "malay",
+        "seed",
+        "lang:ms"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 3,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "kh"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ms-my"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ms-my"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ms-my"
+      ]
+    },
+    {
+      "id": "mr-in-seed",
+      "language": "mr",
+      "displayName": "Marathi – syllabic liquids",
+      "description": "Marathi placeholder focusing on syllabic /r̩/, retroflex laterals, and complex consonant conjuncts.",
+      "tags": [
+        "marathi",
+        "seed",
+        "lang:mr"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ज्ञ"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 4,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-mr-in"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-mr-in"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-mr-in"
+      ]
+    },
+    {
+      "id": "ne-np-seed",
+      "language": "ne",
+      "displayName": "Nepali – Himalayan cadence",
+      "description": "Nepali placeholder emphasising aspirated affricates, velar nasals, and consonant clusters with /r/.",
+      "tags": [
+        "nepali",
+        "seed",
+        "lang:ne"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "छ"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ne-np"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ne-np"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ne-np"
+      ]
+    },
+    {
+      "id": "fa-ir-seed",
+      "language": "fa",
+      "displayName": "Persian (Farsi) – smooth ezafe",
+      "description": "Seeded Persian profile that foregrounds ezafe liaisons and the soft postalveolar fricatives common in Tehrani speech.",
+      "tags": [
+        "persian",
+        "farsi",
+        "seed",
+        "lang:fa"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "پ"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fa-ir"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-fa-ir"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-fa-ir"
+      ]
+    },
+    {
+      "id": "si-lk-seed",
+      "language": "si",
+      "displayName": "Sinhala – rounded cadence",
+      "description": "Sinhala placeholder emphasising prenasalised stops, palatal nasals, and loan fricatives.",
+      "tags": [
+        "sinhala",
+        "seed",
+        "lang:si"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ෆ"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-si-lk"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-si-lk"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-si-lk"
+      ]
+    },
     {
       "id": "es-es-basic",
       "language": "es-ES",
@@ -61,6 +587,100 @@
       "availableTemplateCount": 1,
       "availableTemplates": [
         "espeak-es-castilian"
+      ]
+    },
+    {
+      "id": "sw-ke-seed",
+      "language": "sw",
+      "displayName": "Swahili – coastal clarity",
+      "description": "Swahili placeholder emphasising prenasalised consonants and open vowels for East African dialects.",
+      "tags": [
+        "swahili",
+        "seed",
+        "lang:sw"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 3,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [],
+      "ipaCoveredCount": 3,
+      "ipaCoverageRatio": 1.0,
+      "ipaCoveragePercent": 100.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-sw-ke"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-sw-ke"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-sw-ke"
+      ]
+    },
+    {
+      "id": "yo-ng-seed",
+      "language": "yo",
+      "displayName": "Yoruba – tonal resonance",
+      "description": "Yoruba placeholder covering three-level tone diacritics and labio-velar stops.",
+      "tags": [
+        "yoruba",
+        "seed",
+        "lang:yo"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "gb"
+      ],
+      "ipaCoveredCount": 2,
+      "ipaCoverageRatio": 0.6667,
+      "ipaCoveragePercent": 66.67,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-yo-ng"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 1.0,
+      "stage": "comprehensive",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-yo-ng"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-yo-ng"
       ]
     },
     {
@@ -351,6 +971,496 @@
       ]
     },
     {
+      "id": "my-mm-seed",
+      "language": "my",
+      "displayName": "Burmese – creaky tone balance",
+      "description": "Burmese placeholder highlighting creaky vs modal tone, aspiration markers, and vowel colouring.",
+      "tags": [
+        "burmese",
+        "seed",
+        "lang:my"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 2,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ှ",
+        "ော"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-my-mm"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-my-mm"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-my-mm"
+      ]
+    },
+    {
+      "id": "cs-cz-seed",
+      "language": "cs",
+      "displayName": "Czech – trill precision",
+      "description": "Czech placeholder emphasising the ř trill, velar fricative ch, and palatal nasals.",
+      "tags": [
+        "czech",
+        "seed",
+        "lang:cs"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ř",
+        "ch"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-cs-cz"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-cs-cz"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-cs-cz"
+      ]
+    },
+    {
+      "id": "da-dk-seed",
+      "language": "da",
+      "displayName": "Danish – stød scaffolding",
+      "description": "Danish placeholder highlighting stød, uvular r, and vowel reductions.",
+      "tags": [
+        "danish",
+        "seed",
+        "lang:da"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "dg",
+        "ø"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-da-dk"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-da-dk"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-da-dk"
+      ]
+    },
+    {
+      "id": "ha-ng-seed",
+      "language": "ha",
+      "displayName": "Hausa – vibrant glottalic stops",
+      "description": "Captures Hausa ejective stops and high/low tone contrasts for the Latin orthography.",
+      "tags": [
+        "hausa",
+        "seed",
+        "lang:ha"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 2,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ƙ",
+        "ts"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ha-ng"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ha-ng"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ha-ng"
+      ]
+    },
+    {
+      "id": "he-il-seed",
+      "language": "he",
+      "displayName": "Hebrew – modern articulation",
+      "description": "Modern Israeli Hebrew placeholder accentuating uvular frication and ejective-like tsadi bursts.",
+      "tags": [
+        "hebrew",
+        "seed",
+        "lang:he"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ח",
+        "צ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-he-il"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-he-il"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-he-il"
+      ]
+    },
+    {
+      "id": "nb-no-seed",
+      "language": "nb",
+      "displayName": "Norwegian (Bokmål) – tonal balance",
+      "description": "Norwegian placeholder capturing palatal kj, retroflex skj, and pitch accent pairs.",
+      "tags": [
+        "norwegian",
+        "seed",
+        "lang:nb"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 3,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "kj",
+        "øy"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-nb-no"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-nb-no"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-nb-no"
+      ]
+    },
+    {
+      "id": "pl-pl-seed",
+      "language": "pl",
+      "displayName": "Polish – sibilant contrast",
+      "description": "Polish placeholder emphasising alveolo-palatal vs retroflex sibilants and dark ł vowels.",
+      "tags": [
+        "polish",
+        "seed",
+        "lang:pl"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ł",
+        "cz"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-pl-pl"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-pl-pl"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-pl-pl"
+      ]
+    },
+    {
+      "id": "sv-se-seed",
+      "language": "sv",
+      "displayName": "Swedish – pitch accent",
+      "description": "Swedish placeholder emphasising sj/tj fricatives and tonal accent pairs.",
+      "tags": [
+        "swedish",
+        "seed",
+        "lang:sv"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 2,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "sj",
+        "å"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-sv-se"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-sv-se"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-sv-se"
+      ]
+    },
+    {
+      "id": "vi-vn-seed",
+      "language": "vi",
+      "displayName": "Vietnamese – six-tone brilliance",
+      "description": "Vietnamese placeholder highlighting tone contours, implosives, and short vowels.",
+      "tags": [
+        "vietnamese",
+        "seed",
+        "lang:vi"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ă",
+        "đ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-vi-vn"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-vi-vn"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-vi-vn"
+      ]
+    },
+    {
+      "id": "zu-za-seed",
+      "language": "zu",
+      "displayName": "Zulu – click-rich texture",
+      "description": "Zulu placeholder mixing click consonants with lateral fricatives to prep the phoneme editor.",
+      "tags": [
+        "zulu",
+        "seed",
+        "lang:zu"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 3,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ngc",
+        "dl"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-zu-za"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7833,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-zu-za"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-zu-za"
+      ]
+    },
+    {
       "id": "es-419-basic",
       "language": "es-419",
       "displayName": "Spanish (LatAm) – sonorous core",
@@ -399,6 +1509,105 @@
       "availableTemplateCount": 1,
       "availableTemplates": [
         "espeak-es-latin"
+      ]
+    },
+    {
+      "id": "am-et-seed",
+      "language": "am",
+      "displayName": "Amharic – ejective cadence",
+      "description": "Placeholder emphasising Amharic ejectives and the seven-syllable abugida patterns.",
+      "tags": [
+        "amharic",
+        "seed",
+        "lang:am"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ቀ",
+        "ጸ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-am-et"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-am-et"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-am-et"
+      ]
+    },
+    {
+      "id": "ar-eg-seed",
+      "language": "ar-EG",
+      "displayName": "Arabic (Egyptian) – colloquial glide",
+      "description": "Captures Cairene consonant shifts (gīm→/g/, qāf→/ʔ/) so phoneme EQ can mimic everyday Egyptian Arabic.",
+      "tags": [
+        "arabic",
+        "egyptian",
+        "seed",
+        "lang:ar"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ج",
+        "ث"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 5,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ar-eg"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ar-eg"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ar-eg"
       ]
     },
     {
@@ -455,6 +1664,447 @@
       "availableTemplateCount": 1,
       "availableTemplates": [
         "espeak-fr-velvet"
+      ]
+    },
+    {
+      "id": "el-gr-seed",
+      "language": "el",
+      "displayName": "Greek – consonant balance",
+      "description": "Greek placeholder emphasising dental fricatives, velar fricatives, and consonant clusters.",
+      "tags": [
+        "greek",
+        "seed",
+        "lang:el"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "γ",
+        "ξ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-el-gr"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-el-gr"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-el-gr"
+      ]
+    },
+    {
+      "id": "km-kh-seed",
+      "language": "km",
+      "displayName": "Khmer – diphthong radiance",
+      "description": "Khmer placeholder capturing palatal nasals, aspirated affricates, and complex vowel nuclei.",
+      "tags": [
+        "khmer",
+        "seed",
+        "lang:km"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ឆ",
+        "ួ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-km-kh"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-km-kh"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-km-kh"
+      ]
+    },
+    {
+      "id": "ko-kr-seed",
+      "language": "ko",
+      "displayName": "Korean – fortis balance",
+      "description": "Korean placeholder balancing tense consonants, aspiration, and vowel harmony cues.",
+      "tags": [
+        "korean",
+        "seed",
+        "lang:ko"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ㄹ",
+        "ㅆ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 4,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ko-kr"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ko-kr"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ko-kr"
+      ]
+    },
+    {
+      "id": "ru-ru-seed",
+      "language": "ru",
+      "displayName": "Russian – palatal richness",
+      "description": "Russian placeholder tuned for palatalised consonants, retroflex fricatives, and reduced vowels.",
+      "tags": [
+        "russian",
+        "seed",
+        "lang:ru"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "щ",
+        "ы"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ru-ru"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ru-ru"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ru-ru"
+      ]
+    },
+    {
+      "id": "ta-in-seed",
+      "language": "ta",
+      "displayName": "Tamil – classical resonance",
+      "description": "Tamil placeholder anchoring retroflex approximants and geminate stops for Sangam-style articulation.",
+      "tags": [
+        "tamil",
+        "seed",
+        "lang:ta"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ழ",
+        "ஐ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ta-in"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ta-in"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ta-in"
+      ]
+    },
+    {
+      "id": "te-in-seed",
+      "language": "te",
+      "displayName": "Telugu – lyrical aspiration",
+      "description": "Telugu placeholder centred on aspirated retroflexes, velar nasals, and diphthong glides.",
+      "tags": [
+        "telugu",
+        "seed",
+        "lang:te"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ఢ",
+        "ౖ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-te-in"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-te-in"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-te-in"
+      ]
+    },
+    {
+      "id": "tr-tr-seed",
+      "language": "tr",
+      "displayName": "Turkish – vowel harmony",
+      "description": "Turkish placeholder emphasising vowel harmony, soft g, and postalveolar fricatives.",
+      "tags": [
+        "turkish",
+        "seed",
+        "lang:tr"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ğ",
+        "ı"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-tr-tr"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-tr-tr"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-tr-tr"
+      ]
+    },
+    {
+      "id": "uk-ua-seed",
+      "language": "uk",
+      "displayName": "Ukrainian – bright palatals",
+      "description": "Ukrainian placeholder focusing on palatalised consonants, /ɦ/ vs /g/, and melodic intonation.",
+      "tags": [
+        "ukrainian",
+        "seed",
+        "lang:uk"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ї",
+        "є"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-uk-ua"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-uk-ua"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-uk-ua"
+      ]
+    },
+    {
+      "id": "ur-pk-seed",
+      "language": "ur",
+      "displayName": "Urdu – poetic glide",
+      "description": "Urdu placeholder capturing retroflex flaps and aspirated stops used in ghazal recitation and newscasts.",
+      "tags": [
+        "urdu",
+        "seed",
+        "lang:ur"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ڑ",
+        "خ"
+      ],
+      "ipaCoveredCount": 1,
+      "ipaCoverageRatio": 0.3333,
+      "ipaCoveragePercent": 33.33,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ur-pk"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.7333,
+      "stage": "established",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ur-pk"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ur-pk"
       ]
     },
     {
@@ -582,6 +2232,355 @@
       ]
     },
     {
+      "id": "ar-msa-seed",
+      "language": "ar",
+      "displayName": "Arabic (Modern Standard) – emphatic backbone",
+      "description": "Seeded MSA profile capturing emphatic coronals and the sun/moon assimilation patterns.",
+      "tags": [
+        "arabic",
+        "msa",
+        "seed",
+        "lang:ar"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ق",
+        "ض",
+        "ال"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ar-msa"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.45,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ar-msa"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ar-msa"
+      ]
+    },
+    {
+      "id": "nl-nl-seed",
+      "language": "nl",
+      "displayName": "Dutch – diphthong clarity",
+      "description": "Dutch placeholder focusing on diphthongs IJ/UI and the sch/gt fricative cluster.",
+      "tags": [
+        "dutch",
+        "seed",
+        "lang:nl"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 3,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ij",
+        "sch",
+        "ui"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-nl-nl"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.45,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-nl-nl"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-nl-nl"
+      ]
+    },
+    {
+      "id": "lo-la-seed",
+      "language": "lo",
+      "displayName": "Lao – tone class guidance",
+      "description": "Lao placeholder emphasising silent-h tone class markers, diphthongs, and vowel carriers.",
+      "tags": [
+        "lao",
+        "seed",
+        "lang:lo"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ຫນ",
+        "ໄ",
+        "ອ"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-lo-la"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.45,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-lo-la"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-lo-la"
+      ]
+    },
+    {
+      "id": "ml-in-seed",
+      "language": "ml",
+      "displayName": "Malayalam – retroflex waves",
+      "description": "Malayalam placeholder tuned for retroflex approximants, nasal clusters, and geminated stops.",
+      "tags": [
+        "malayalam",
+        "seed",
+        "lang:ml"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 2,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ഴ",
+        "ങ്ക",
+        "റ്റ"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ml-in"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.45,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-ml-in"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-ml-in"
+      ]
+    },
+    {
+      "id": "pa-in-seed",
+      "language": "pa",
+      "displayName": "Punjabi – tonal Gurmukhi",
+      "description": "Punjabi placeholder aligning retroflex flaps, nasalisation, and tonal contrasts in Gurmukhi.",
+      "tags": [
+        "punjabi",
+        "seed",
+        "lang:pa"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 1,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ੜ",
+        "ਂ",
+        "ੱਧ"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-pa-in"
+      ],
+      "keyboardOptimised": true,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.45,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-pa-in"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-pa-in"
+      ]
+    },
+    {
+      "id": "yue-hk-seed",
+      "language": "yue-Hant-HK",
+      "displayName": "Chinese (Cantonese) – six-tone contour",
+      "description": "Cantonese placeholder covering high level, low falling, and nasal-only syllables.",
+      "tags": [
+        "cantonese",
+        "seed",
+        "lang:yue"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "的",
+        "咗",
+        "唔"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-yue-hk"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.4,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-yue-hk"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-yue-hk"
+      ]
+    },
+    {
+      "id": "zh-cn-seed",
+      "language": "zh-CN",
+      "displayName": "Chinese (Mandarin) – tonal baseline",
+      "description": "Mandarin placeholder emphasising neutral tones, retroflex affricates, and aspect particles.",
+      "tags": [
+        "mandarin",
+        "seed",
+        "lang:zh"
+      ],
+      "characterCount": 1,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 1,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "的"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 1,
+      "fallbackHintCount": 1,
+      "descriptionCount": 1,
+      "notesTotal": 1,
+      "spokenCount": 1,
+      "exampleCount": 1,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-zh-cn"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.4,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-zh-cn"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-zh-cn"
+      ]
+    },
+    {
       "id": "ja-jp-basic",
       "language": "ja-JP",
       "displayName": "Japanese – mora rhythmic",
@@ -631,6 +2630,56 @@
       "availableTemplateCount": 1,
       "availableTemplates": [
         "espeak-ja-melodic"
+      ]
+    },
+    {
+      "id": "th-th-seed",
+      "language": "th",
+      "displayName": "Thai – tonal glide",
+      "description": "Thai placeholder featuring high-class consonants, long vowels, and diphthongs.",
+      "tags": [
+        "thai",
+        "seed",
+        "lang:th"
+      ],
+      "characterCount": 3,
+      "multiCharacterCount": 0,
+      "uppercaseCharacterCount": 0,
+      "charactersWithIPA": 3,
+      "charactersWithoutIPA": [],
+      "charactersWithUnmatchedIPA": [
+        "ข",
+        "า",
+        "ไ"
+      ],
+      "ipaCoveredCount": 0,
+      "ipaCoverageRatio": 0.0,
+      "ipaCoveragePercent": 0.0,
+      "uniqueIpaCount": 3,
+      "fallbackHintCount": 3,
+      "descriptionCount": 3,
+      "notesTotal": 3,
+      "spokenCount": 3,
+      "exampleCount": 3,
+      "contextualCount": 0,
+      "stressNoteCount": 2,
+      "sentenceStructureNoteCount": 2,
+      "grammarNoteCount": 2,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-th-th"
+      ],
+      "keyboardOptimised": false,
+      "hasGenerativeHints": false,
+      "hasContextualHints": false,
+      "progressScore": 0.4,
+      "stage": "developing",
+      "matchedDefaultTemplates": [
+        "eloquence-seed-th-th"
+      ],
+      "missingDefaultTemplates": [],
+      "availableTemplateCount": 1,
+      "availableTemplates": [
+        "eloquence-seed-th-th"
       ]
     }
   ],

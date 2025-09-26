@@ -419,9 +419,14 @@ def load_default_language_profiles() -> LanguageProfileCatalog:
         except (OSError, json.JSONDecodeError):
             LOG.exception("Unable to parse language profile %s", path)
             continue
-        profile = _parse_language_profile(data)
-        if profile is not None:
-            profiles.append(profile)
+        if isinstance(data, dict) and "profiles" in data and isinstance(data["profiles"], list):
+            payloads = [entry for entry in data["profiles"] if isinstance(entry, dict)]
+        else:
+            payloads = [data]
+        for payload in payloads:
+            profile = _parse_language_profile(payload)
+            if profile is not None:
+                profiles.append(profile)
     return LanguageProfileCatalog(profiles)
 
 

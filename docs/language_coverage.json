@@ -23,6 +23,254 @@
       "unmatchedSamples": []
     },
     {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-am-et"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "am",
+      "matchedPhonemes": [
+        "h"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "am",
+      "profileId": "am-et-seed",
+      "profileName": "Amharic \u2013 ejective cadence \u2013 am \u2013 Placeholder emphasising Amharic ejectives and the seven-syllable abugida patterns.",
+      "profileTags": [
+        "amharic",
+        "seed",
+        "lang:am"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-am-et"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "k\u02bc",
+          "symbol": "\u1240",
+          "unmatched": "k\u02bc"
+        },
+        {
+          "ipa": "s\u02bc",
+          "symbol": "\u1338",
+          "unmatched": "s\u02bc"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ar-msa"
+      ],
+      "ipaAnyMatchRatio": 0.0,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 0,
+      "languageTag": "ar",
+      "matchedPhonemes": [],
+      "multiCharacterCount": 1,
+      "normalisedTag": "ar",
+      "profileId": "ar-msa-seed",
+      "profileName": "Arabic (Modern Standard) \u2013 emphatic backbone \u2013 ar \u2013 Seeded MSA profile capturing emphatic coronals and the sun/moon assimilation patterns.",
+      "profileTags": [
+        "arabic",
+        "msa",
+        "seed",
+        "lang:ar"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ar-msa"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "q",
+          "symbol": "\u0642",
+          "unmatched": "q"
+        },
+        {
+          "ipa": "d\u02e4",
+          "symbol": "\u0636",
+          "unmatched": "d\u02e4"
+        },
+        {
+          "ipa": "al",
+          "symbol": "\u0627\u0644",
+          "unmatched": "al"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ar-eg"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "ar-EG",
+      "matchedPhonemes": [
+        "\u0294"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "ar-EG",
+      "profileId": "ar-eg-seed",
+      "profileName": "Arabic (Egyptian) \u2013 colloquial glide \u2013 ar-EG \u2013 Captures Cairene consonant shifts (g\u012bm\u2192/g/, q\u0101f\u2192/\u0294/) so phoneme EQ can mimic everyday Egyptian Arabic.",
+      "profileTags": [
+        "arabic",
+        "egyptian",
+        "seed",
+        "lang:ar"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ar-eg"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "g",
+          "symbol": "\u062c",
+          "unmatched": "g"
+        },
+        {
+          "ipa": "s",
+          "symbol": "\u062b",
+          "unmatched": "s"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-bn-bd"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "bn",
+      "matchedPhonemes": [
+        "\u014b",
+        "dt_sh"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "bn",
+      "profileId": "bn-bd-seed",
+      "profileName": "Bengali \u2013 retroflex melody \u2013 bn \u2013 Bengali placeholder emphasising retroflex flaps, palatal fricatives, and nasal vowels.",
+      "profileTags": [
+        "bengali",
+        "seed",
+        "lang:bn"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-bn-bd"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u027d",
+          "symbol": "\u09a1\u09bc",
+          "unmatched": "\u027d"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-cs-cz"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "cs",
+      "matchedPhonemes": [
+        "R",
+        "n^"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "cs",
+      "profileId": "cs-cz-seed",
+      "profileName": "Czech \u2013 trill precision \u2013 cs \u2013 Czech placeholder emphasising the \u0159 trill, velar fricative ch, and palatal nasals.",
+      "profileTags": [
+        "czech",
+        "seed",
+        "lang:cs"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-cs-cz"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "r\u031d",
+          "symbol": "\u0159",
+          "unmatched": "\u031d"
+        },
+        {
+          "ipa": "x",
+          "symbol": "ch",
+          "unmatched": "x"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-da-dk"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "da",
+      "matchedPhonemes": [
+        "Q\""
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "da",
+      "profileId": "da-dk-seed",
+      "profileName": "Danish \u2013 st\u00f8d scaffolding \u2013 da \u2013 Danish placeholder highlighting st\u00f8d, uvular r, and vowel reductions.",
+      "profileTags": [
+        "danish",
+        "seed",
+        "lang:da"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-da-dk"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "t\u02e2",
+          "symbol": "dg",
+          "unmatched": "t\u02e2"
+        },
+        {
+          "ipa": "\u00f8",
+          "symbol": "\u00f8",
+          "unmatched": "\u00f8"
+        }
+      ]
+    },
+    {
       "characterCount": 11,
       "defaultTemplateIds": [
         "espeak-de-precision"
@@ -90,6 +338,47 @@
           "ipa": "y",
           "symbol": "\u00dc",
           "unmatched": "y"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-el-gr"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "el",
+      "matchedPhonemes": [
+        "\u03b8"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "el",
+      "profileId": "el-gr-seed",
+      "profileName": "Greek \u2013 consonant balance \u2013 el \u2013 Greek placeholder emphasising dental fricatives, velar fricatives, and consonant clusters.",
+      "profileTags": [
+        "greek",
+        "seed",
+        "lang:el"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-el-gr"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0263",
+          "symbol": "\u03b3",
+          "unmatched": "\u0263"
+        },
+        {
+          "ipa": "ks",
+          "symbol": "\u03be",
+          "unmatched": "ks"
         }
       ]
     },
@@ -415,6 +704,119 @@
       ]
     },
     {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-fa-ir"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "fa",
+      "matchedPhonemes": [
+        "\u0292",
+        "\u0261"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "fa",
+      "profileId": "fa-ir-seed",
+      "profileName": "Persian (Farsi) \u2013 smooth ezafe \u2013 fa \u2013 Seeded Persian profile that foregrounds ezafe liaisons and the soft postalveolar fricatives common in Tehrani speech.",
+      "profileTags": [
+        "persian",
+        "farsi",
+        "seed",
+        "lang:fa"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-fa-ir"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "p",
+          "symbol": "\u067e",
+          "unmatched": "p"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-fi-fi"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "fi",
+      "matchedPhonemes": [
+        "\u014b",
+        "dt_ae"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "fi",
+      "profileId": "fi-fi-seed",
+      "profileName": "Finnish \u2013 vowel length discipline \u2013 fi \u2013 Finnish placeholder covering vowel length contrasts, front rounded vowels, and velar nasals.",
+      "profileTags": [
+        "finnish",
+        "seed",
+        "lang:fi"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-fi-fi"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "y",
+          "symbol": "y",
+          "unmatched": "y"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-fil-ph"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "fil",
+      "matchedPhonemes": [
+        "\u014b",
+        "n^"
+      ],
+      "multiCharacterCount": 2,
+      "normalisedTag": "fil",
+      "profileId": "fil-ph-seed",
+      "profileName": "Filipino \u2013 Tagalog clarity \u2013 fil \u2013 Filipino placeholder addressing velar nasals, Spanish \u00f1 loans, and affricate onsets.",
+      "profileTags": [
+        "filipino",
+        "tagalog",
+        "seed",
+        "lang:fil"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-fil-ph"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "ts",
+          "symbol": "ts",
+          "unmatched": "ts"
+        }
+      ]
+    },
+    {
       "characterCount": 15,
       "defaultTemplateIds": [
         "espeak-fr-velvet"
@@ -496,6 +898,120 @@
       ]
     },
     {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-gu-in"
+      ],
+      "ipaAnyMatchRatio": 1.0,
+      "ipaCoverage": 1.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 3,
+      "ipaSamplesWithMatch": 3,
+      "languageTag": "gu",
+      "matchedPhonemes": [
+        "l.",
+        "n^",
+        "r-"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "gu",
+      "profileId": "gu-in-seed",
+      "profileName": "Gujarati \u2013 vocalic resonances \u2013 gu \u2013 Gujarati placeholder emphasising retroflex laterals, palatal nasals, and vocalic r vowels.",
+      "profileTags": [
+        "gujarati",
+        "seed",
+        "lang:gu"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-gu-in"
+      ],
+      "unmatchedSamples": []
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ha-ng"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "ha",
+      "matchedPhonemes": [
+        "dt_sh"
+      ],
+      "multiCharacterCount": 2,
+      "normalisedTag": "ha",
+      "profileId": "ha-ng-seed",
+      "profileName": "Hausa \u2013 vibrant glottalic stops \u2013 ha \u2013 Captures Hausa ejective stops and high/low tone contrasts for the Latin orthography.",
+      "profileTags": [
+        "hausa",
+        "seed",
+        "lang:ha"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ha-ng"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "k\u02bc",
+          "symbol": "\u0199",
+          "unmatched": "k\u02bc"
+        },
+        {
+          "ipa": "ts\u02bc",
+          "symbol": "ts",
+          "unmatched": "ts\u02bc"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-he-il"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "he",
+      "matchedPhonemes": [
+        "dt_sh"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "he",
+      "profileId": "he-il-seed",
+      "profileName": "Hebrew \u2013 modern articulation \u2013 he \u2013 Modern Israeli Hebrew placeholder accentuating uvular frication and ejective-like tsadi bursts.",
+      "profileTags": [
+        "hebrew",
+        "seed",
+        "lang:he"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-he-il"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u03c7",
+          "symbol": "\u05d7",
+          "unmatched": "\u03c7"
+        },
+        {
+          "ipa": "ts\u02bc",
+          "symbol": "\u05e6",
+          "unmatched": "ts\u02bc"
+        }
+      ]
+    },
+    {
       "characterCount": 5,
       "defaultTemplateIds": [
         "espeak-hi-dynamic"
@@ -542,6 +1058,38 @@
           "unmatched": "t\u032a"
         }
       ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-id-id"
+      ],
+      "ipaAnyMatchRatio": 1.0,
+      "ipaCoverage": 1.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 3,
+      "ipaSamplesWithMatch": 3,
+      "languageTag": "id",
+      "matchedPhonemes": [
+        "\u014b",
+        "dt_sh",
+        "n^"
+      ],
+      "multiCharacterCount": 3,
+      "normalisedTag": "id",
+      "profileId": "id-id-seed",
+      "profileName": "Indonesian \u2013 archipelago clarity \u2013 id \u2013 Indonesian placeholder capturing prenasalised onsets and clear loan consonants.",
+      "profileTags": [
+        "indonesian",
+        "seed",
+        "lang:id"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-id-id"
+      ],
+      "unmatchedSamples": []
     },
     {
       "characterCount": 15,
@@ -673,6 +1221,558 @@
       ]
     },
     {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-km-kh"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "km",
+      "matchedPhonemes": [
+        "n^",
+        "@-"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "km",
+      "profileId": "km-kh-seed",
+      "profileName": "Khmer \u2013 diphthong radiance \u2013 km \u2013 Khmer placeholder capturing palatal nasals, aspirated affricates, and complex vowel nuclei.",
+      "profileTags": [
+        "khmer",
+        "seed",
+        "lang:km"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-km-kh"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "c\u02b0",
+          "symbol": "\u1786",
+          "unmatched": "c\u02b0"
+        },
+        {
+          "ipa": "u\u0259",
+          "symbol": "\u17bd",
+          "unmatched": "u"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-kn-in"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "kn",
+      "matchedPhonemes": [
+        "l.",
+        "n^"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "kn",
+      "profileId": "kn-in-seed",
+      "profileName": "Kannada \u2013 gentle palatals \u2013 kn \u2013 Kannada placeholder covering retroflex laterals, palatal nasals, and diphthongs used in literary Kannada.",
+      "profileTags": [
+        "kannada",
+        "seed",
+        "lang:kn"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-kn-in"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "ai",
+          "symbol": "\u0cd6",
+          "unmatched": "ai"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ko-kr"
+      ],
+      "ipaAnyMatchRatio": 0.5,
+      "ipaCoverage": 0.5,
+      "ipaSampleTotal": 4,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "ko",
+      "matchedPhonemes": [
+        "h",
+        "**"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "ko",
+      "profileId": "ko-kr-seed",
+      "profileName": "Korean \u2013 fortis balance \u2013 ko \u2013 Korean placeholder balancing tense consonants, aspiration, and vowel harmony cues.",
+      "profileTags": [
+        "korean",
+        "seed",
+        "lang:ko"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ko-kr"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "l",
+          "symbol": "\u3139",
+          "unmatched": "l"
+        },
+        {
+          "ipa": "s\u0348",
+          "symbol": "\u3146",
+          "unmatched": "s\u0348"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-lo-la"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "lo",
+      "matchedPhonemes": [
+        "\u0294",
+        "\u0254"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "lo",
+      "profileId": "lo-la-seed",
+      "profileName": "Lao \u2013 tone class guidance \u2013 lo \u2013 Lao placeholder emphasising silent-h tone class markers, diphthongs, and vowel carriers.",
+      "profileTags": [
+        "lao",
+        "seed",
+        "lang:lo"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-lo-la"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "n",
+          "symbol": "\u0eab\u0e99",
+          "unmatched": "n"
+        },
+        {
+          "ipa": "aj",
+          "symbol": "\u0ec4",
+          "unmatched": "aj"
+        },
+        {
+          "ipa": "\u0294\u0254\u02d0",
+          "symbol": "\u0ead",
+          "unmatched": "\u02d0"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ml-in"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "ml",
+      "matchedPhonemes": [
+        "\u014b",
+        "\u0261"
+      ],
+      "multiCharacterCount": 2,
+      "normalisedTag": "ml",
+      "profileId": "ml-in-seed",
+      "profileName": "Malayalam \u2013 retroflex waves \u2013 ml \u2013 Malayalam placeholder tuned for retroflex approximants, nasal clusters, and geminated stops.",
+      "profileTags": [
+        "malayalam",
+        "seed",
+        "lang:ml"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ml-in"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u027b",
+          "symbol": "\u0d34",
+          "unmatched": "\u027b"
+        },
+        {
+          "ipa": "\u014b\u0261a",
+          "symbol": "\u0d19\u0d4d\u0d15",
+          "unmatched": "a"
+        },
+        {
+          "ipa": "\u0288\u0288a",
+          "symbol": "\u0d31\u0d4d\u0d31",
+          "unmatched": "\u0288\u0288a"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-mr-in"
+      ],
+      "ipaAnyMatchRatio": 1.0,
+      "ipaCoverage": 0.5,
+      "ipaSampleTotal": 4,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 4,
+      "languageTag": "mr",
+      "matchedPhonemes": [
+        "l.",
+        "\u0261",
+        "@-",
+        "\u0292",
+        "n^",
+        "r-"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "mr",
+      "profileId": "mr-in-seed",
+      "profileName": "Marathi \u2013 syllabic liquids \u2013 mr \u2013 Marathi placeholder focusing on syllabic /r\u0329/, retroflex laterals, and complex consonant conjuncts.",
+      "profileTags": [
+        "marathi",
+        "seed",
+        "lang:mr"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-mr-in"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0261j\u0259",
+          "symbol": "\u091c\u094d\u091e",
+          "unmatched": "j"
+        },
+        {
+          "ipa": "d\u0292\u0272a",
+          "symbol": "\u091c\u094d\u091e",
+          "unmatched": "da"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ms-my"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "ms",
+      "matchedPhonemes": [
+        "\u014b",
+        "dt_sh"
+      ],
+      "multiCharacterCount": 3,
+      "normalisedTag": "ms",
+      "profileId": "ms-my-seed",
+      "profileName": "Malay \u2013 peninsular warmth \u2013 ms \u2013 Malay placeholder aligned with peninsular pronunciation, balancing Arabic loans and Malay vowels.",
+      "profileTags": [
+        "malay",
+        "seed",
+        "lang:ms"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ms-my"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "x",
+          "symbol": "kh",
+          "unmatched": "x"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-my-mm"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "my",
+      "matchedPhonemes": [
+        "\u014b",
+        "\u0254"
+      ],
+      "multiCharacterCount": 2,
+      "normalisedTag": "my",
+      "profileId": "my-mm-seed",
+      "profileName": "Burmese \u2013 creaky tone balance \u2013 my \u2013 Burmese placeholder highlighting creaky vs modal tone, aspiration markers, and vowel colouring.",
+      "profileTags": [
+        "burmese",
+        "seed",
+        "lang:my"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-my-mm"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u02b0",
+          "symbol": "\u103e",
+          "unmatched": "\u02b0"
+        },
+        {
+          "ipa": "\u0254\u0301",
+          "symbol": "\u1031\u102c",
+          "unmatched": "\u0301"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-nb-no"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "nb",
+      "matchedPhonemes": [
+        "s."
+      ],
+      "multiCharacterCount": 3,
+      "normalisedTag": "nb",
+      "profileId": "nb-no-seed",
+      "profileName": "Norwegian (Bokm\u00e5l) \u2013 tonal balance \u2013 nb \u2013 Norwegian placeholder capturing palatal kj, retroflex skj, and pitch accent pairs.",
+      "profileTags": [
+        "norwegian",
+        "seed",
+        "lang:nb"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-nb-no"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u00e7",
+          "symbol": "kj",
+          "unmatched": "\u00e7"
+        },
+        {
+          "ipa": "\u00f8\u02d0y",
+          "symbol": "\u00f8y",
+          "unmatched": "\u00f8\u02d0y"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ne-np"
+      ],
+      "ipaAnyMatchRatio": 1.0,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 3,
+      "languageTag": "ne",
+      "matchedPhonemes": [
+        "dt_ch",
+        "\u014b",
+        "dt_sh",
+        "R"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "ne",
+      "profileId": "ne-np-seed",
+      "profileName": "Nepali \u2013 Himalayan cadence \u2013 ne \u2013 Nepali placeholder emphasising aspirated affricates, velar nasals, and consonant clusters with /r/.",
+      "profileTags": [
+        "nepali",
+        "seed",
+        "lang:ne"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ne-np"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "t\u0283\u02b0",
+          "symbol": "\u091b",
+          "unmatched": "\u02b0"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-nl-nl"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "nl",
+      "matchedPhonemes": [
+        "\u025b"
+      ],
+      "multiCharacterCount": 3,
+      "normalisedTag": "nl",
+      "profileId": "nl-nl-seed",
+      "profileName": "Dutch \u2013 diphthong clarity \u2013 nl \u2013 Dutch placeholder focusing on diphthongs IJ/UI and the sch/gt fricative cluster.",
+      "profileTags": [
+        "dutch",
+        "seed",
+        "lang:nl"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-nl-nl"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u025bi",
+          "symbol": "ij",
+          "unmatched": "i"
+        },
+        {
+          "ipa": "sx",
+          "symbol": "sch",
+          "unmatched": "sx"
+        },
+        {
+          "ipa": "\u0153y",
+          "symbol": "ui",
+          "unmatched": "\u0153y"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-pa-in"
+      ],
+      "ipaAnyMatchRatio": 0.0,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 0,
+      "languageTag": "pa",
+      "matchedPhonemes": [],
+      "multiCharacterCount": 1,
+      "normalisedTag": "pa",
+      "profileId": "pa-in-seed",
+      "profileName": "Punjabi \u2013 tonal Gurmukhi \u2013 pa \u2013 Punjabi placeholder aligning retroflex flaps, nasalisation, and tonal contrasts in Gurmukhi.",
+      "profileTags": [
+        "punjabi",
+        "seed",
+        "lang:pa"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-pa-in"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u027d",
+          "symbol": "\u0a5c",
+          "unmatched": "\u027d"
+        },
+        {
+          "ipa": "\u0303",
+          "symbol": "\u0a02",
+          "unmatched": "\u0303"
+        },
+        {
+          "ipa": "d\u032a\u02d0\u02b1",
+          "symbol": "\u0a71\u0a27",
+          "unmatched": "d\u032a\u02d0\u02b1"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-pl-pl"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "pl",
+      "matchedPhonemes": [
+        "S;",
+        "s."
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "pl",
+      "profileId": "pl-pl-seed",
+      "profileName": "Polish \u2013 sibilant contrast \u2013 pl \u2013 Polish placeholder emphasising alveolo-palatal vs retroflex sibilants and dark \u0142 vowels.",
+      "profileTags": [
+        "polish",
+        "seed",
+        "lang:pl"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-pl-pl"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "w",
+          "symbol": "\u0142",
+          "unmatched": "w"
+        },
+        {
+          "ipa": "t\u0282",
+          "symbol": "cz",
+          "unmatched": "t"
+        }
+      ]
+    },
+    {
       "characterCount": 18,
       "defaultTemplateIds": [
         "espeak-pt-br-vibrant"
@@ -754,15 +1854,620 @@
           "unmatched": "s"
         }
       ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ru-ru"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "ru",
+      "matchedPhonemes": [
+        "S;",
+        "z."
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "ru",
+      "profileId": "ru-ru-seed",
+      "profileName": "Russian \u2013 palatal richness \u2013 ru \u2013 Russian placeholder tuned for palatalised consonants, retroflex fricatives, and reduced vowels.",
+      "profileTags": [
+        "russian",
+        "seed",
+        "lang:ru"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ru-ru"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0255\u02d0",
+          "symbol": "\u0449",
+          "unmatched": "\u02d0"
+        },
+        {
+          "ipa": "\u0268",
+          "symbol": "\u044b",
+          "unmatched": "\u0268"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-si-lk"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "si",
+      "matchedPhonemes": [
+        "\u014b",
+        "\u0261",
+        "n^"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "si",
+      "profileId": "si-lk-seed",
+      "profileName": "Sinhala \u2013 rounded cadence \u2013 si \u2013 Sinhala placeholder emphasising prenasalised stops, palatal nasals, and loan fricatives.",
+      "profileTags": [
+        "sinhala",
+        "seed",
+        "lang:si"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-si-lk"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "f",
+          "symbol": "\u0dc6",
+          "unmatched": "f"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-sv-se"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "sv",
+      "matchedPhonemes": [
+        "S;"
+      ],
+      "multiCharacterCount": 2,
+      "normalisedTag": "sv",
+      "profileId": "sv-se-seed",
+      "profileName": "Swedish \u2013 pitch accent \u2013 sv \u2013 Swedish placeholder emphasising sj/tj fricatives and tonal accent pairs.",
+      "profileTags": [
+        "swedish",
+        "seed",
+        "lang:sv"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-sv-se"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0267",
+          "symbol": "sj",
+          "unmatched": "\u0267"
+        },
+        {
+          "ipa": "o\u02d0",
+          "symbol": "\u00e5",
+          "unmatched": "o\u02d0"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-sw-ke"
+      ],
+      "ipaAnyMatchRatio": 1.0,
+      "ipaCoverage": 1.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 3,
+      "ipaSamplesWithMatch": 3,
+      "languageTag": "sw",
+      "matchedPhonemes": [
+        "\u014b",
+        "n^",
+        "dt_ch"
+      ],
+      "multiCharacterCount": 3,
+      "normalisedTag": "sw",
+      "profileId": "sw-ke-seed",
+      "profileName": "Swahili \u2013 coastal clarity \u2013 sw \u2013 Swahili placeholder emphasising prenasalised consonants and open vowels for East African dialects.",
+      "profileTags": [
+        "swahili",
+        "seed",
+        "lang:sw"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-sw-ke"
+      ],
+      "unmatchedSamples": []
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ta-in"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "ta",
+      "matchedPhonemes": [
+        "n."
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "ta",
+      "profileId": "ta-in-seed",
+      "profileName": "Tamil \u2013 classical resonance \u2013 ta \u2013 Tamil placeholder anchoring retroflex approximants and geminate stops for Sangam-style articulation.",
+      "profileTags": [
+        "tamil",
+        "seed",
+        "lang:ta"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ta-in"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u027b",
+          "symbol": "\u0bb4",
+          "unmatched": "\u027b"
+        },
+        {
+          "ipa": "ai",
+          "symbol": "\u0b90",
+          "unmatched": "ai"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-te-in"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "te",
+      "matchedPhonemes": [
+        "\u014b"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "te",
+      "profileId": "te-in-seed",
+      "profileName": "Telugu \u2013 lyrical aspiration \u2013 te \u2013 Telugu placeholder centred on aspirated retroflexes, velar nasals, and diphthong glides.",
+      "profileTags": [
+        "telugu",
+        "seed",
+        "lang:te"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-te-in"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0256\u02b1",
+          "symbol": "\u0c22",
+          "unmatched": "\u0256\u02b1"
+        },
+        {
+          "ipa": "ai",
+          "symbol": "\u0c56",
+          "unmatched": "ai"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-th-th"
+      ],
+      "ipaAnyMatchRatio": 0.0,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 0,
+      "languageTag": "th",
+      "matchedPhonemes": [],
+      "multiCharacterCount": 0,
+      "normalisedTag": "th",
+      "profileId": "th-th-seed",
+      "profileName": "Thai \u2013 tonal glide \u2013 th \u2013 Thai placeholder featuring high-class consonants, long vowels, and diphthongs.",
+      "profileTags": [
+        "thai",
+        "seed",
+        "lang:th"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-th-th"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "k\u02b0",
+          "symbol": "\u0e02",
+          "unmatched": "k\u02b0"
+        },
+        {
+          "ipa": "a\u02d0",
+          "symbol": "\u0e32",
+          "unmatched": "a\u02d0"
+        },
+        {
+          "ipa": "aj",
+          "symbol": "\u0e44",
+          "unmatched": "aj"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-tr-tr"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "tr",
+      "matchedPhonemes": [
+        "dt_sh"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "tr",
+      "profileId": "tr-tr-seed",
+      "profileName": "Turkish \u2013 vowel harmony \u2013 tr \u2013 Turkish placeholder emphasising vowel harmony, soft g, and postalveolar fricatives.",
+      "profileTags": [
+        "turkish",
+        "seed",
+        "lang:tr"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-tr-tr"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0270",
+          "symbol": "\u011f",
+          "unmatched": "\u0270"
+        },
+        {
+          "ipa": "\u026f",
+          "symbol": "\u0131",
+          "unmatched": "\u026f"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-uk-ua"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "uk",
+      "matchedPhonemes": [
+        "\u0261"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "uk",
+      "profileId": "uk-ua-seed",
+      "profileName": "Ukrainian \u2013 bright palatals \u2013 uk \u2013 Ukrainian placeholder focusing on palatalised consonants, /\u0266/ vs /g/, and melodic intonation.",
+      "profileTags": [
+        "ukrainian",
+        "seed",
+        "lang:uk"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-uk-ua"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "ji",
+          "symbol": "\u0457",
+          "unmatched": "ji"
+        },
+        {
+          "ipa": "je",
+          "symbol": "\u0454",
+          "unmatched": "je"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-ur-pk"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "ur",
+      "matchedPhonemes": [
+        "\u014b"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "ur",
+      "profileId": "ur-pk-seed",
+      "profileName": "Urdu \u2013 poetic glide \u2013 ur \u2013 Urdu placeholder capturing retroflex flaps and aspirated stops used in ghazal recitation and newscasts.",
+      "profileTags": [
+        "urdu",
+        "seed",
+        "lang:ur"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-ur-pk"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u027d",
+          "symbol": "\u0691",
+          "unmatched": "\u027d"
+        },
+        {
+          "ipa": "x",
+          "symbol": "\u062e",
+          "unmatched": "x"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-vi-vn"
+      ],
+      "ipaAnyMatchRatio": 0.3333333333333333,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 1,
+      "languageTag": "vi",
+      "matchedPhonemes": [
+        "\u014b"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "vi",
+      "profileId": "vi-vn-seed",
+      "profileName": "Vietnamese \u2013 six-tone brilliance \u2013 vi \u2013 Vietnamese placeholder highlighting tone contours, implosives, and short vowels.",
+      "profileTags": [
+        "vietnamese",
+        "seed",
+        "lang:vi"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-vi-vn"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "a\u0306",
+          "symbol": "\u0103",
+          "unmatched": "a\u0306"
+        },
+        {
+          "ipa": "\u0257",
+          "symbol": "\u0111",
+          "unmatched": "\u0257"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-yo-ng"
+      ],
+      "ipaAnyMatchRatio": 1.0,
+      "ipaCoverage": 0.6666666666666666,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 2,
+      "ipaSamplesWithMatch": 3,
+      "languageTag": "yo",
+      "matchedPhonemes": [
+        "dt_sh",
+        "\u0261",
+        "\u0254"
+      ],
+      "multiCharacterCount": 1,
+      "normalisedTag": "yo",
+      "profileId": "yo-ng-seed",
+      "profileName": "Yoruba \u2013 tonal resonance \u2013 yo \u2013 Yoruba placeholder covering three-level tone diacritics and labio-velar stops.",
+      "profileTags": [
+        "yoruba",
+        "seed",
+        "lang:yo"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-yo-ng"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u0261\u0361b",
+          "symbol": "gb",
+          "unmatched": "\u0361b"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-yue-hk"
+      ],
+      "ipaAnyMatchRatio": 1.0,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 3,
+      "languageTag": "yue-Hant-HK",
+      "matchedPhonemes": [
+        "\u026a",
+        "\u0254",
+        "m-"
+      ],
+      "multiCharacterCount": 0,
+      "normalisedTag": "yue-Hant-HK",
+      "profileId": "yue-hk-seed",
+      "profileName": "Chinese (Cantonese) \u2013 six-tone contour \u2013 yue-Hant-HK \u2013 Cantonese placeholder covering high level, low falling, and nasal-only syllables.",
+      "profileTags": [
+        "cantonese",
+        "seed",
+        "lang:yue"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-yue-hk"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "t\u026ak\u031a\u02e5",
+          "symbol": "\u7684",
+          "unmatched": "tk\u031a\u02e5"
+        },
+        {
+          "ipa": "ts\u0254\u02e7\u02e5",
+          "symbol": "\u5497",
+          "unmatched": "ts\u02e7\u02e5"
+        },
+        {
+          "ipa": "m\u0329\u02e8\u02e9",
+          "symbol": "\u5514",
+          "unmatched": "\u02e8\u02e9"
+        }
+      ]
+    },
+    {
+      "characterCount": 1,
+      "defaultTemplateIds": [
+        "eloquence-seed-zh-cn"
+      ],
+      "ipaAnyMatchRatio": 0.0,
+      "ipaCoverage": 0.0,
+      "ipaSampleTotal": 1,
+      "ipaSamplesFullMatch": 0,
+      "ipaSamplesWithMatch": 0,
+      "languageTag": "zh-CN",
+      "matchedPhonemes": [],
+      "multiCharacterCount": 0,
+      "normalisedTag": "zh-CN",
+      "profileId": "zh-cn-seed",
+      "profileName": "Chinese (Mandarin) \u2013 tonal baseline \u2013 zh-CN \u2013 Mandarin placeholder emphasising neutral tones, retroflex affricates, and aspect particles.",
+      "profileTags": [
+        "mandarin",
+        "seed",
+        "lang:zh"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-zh-cn"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "t\u0264\u02d9",
+          "symbol": "\u7684",
+          "unmatched": "t\u0264\u02d9"
+        }
+      ]
+    },
+    {
+      "characterCount": 3,
+      "defaultTemplateIds": [
+        "eloquence-seed-zu-za"
+      ],
+      "ipaAnyMatchRatio": 0.6666666666666666,
+      "ipaCoverage": 0.3333333333333333,
+      "ipaSampleTotal": 3,
+      "ipaSamplesFullMatch": 1,
+      "ipaSamplesWithMatch": 2,
+      "languageTag": "zu",
+      "matchedPhonemes": [
+        "l#",
+        "\u014b"
+      ],
+      "multiCharacterCount": 3,
+      "normalisedTag": "zu",
+      "profileId": "zu-za-seed",
+      "profileName": "Zulu \u2013 click-rich texture \u2013 zu \u2013 Zulu placeholder mixing click consonants with lateral fricatives to prep the phoneme editor.",
+      "profileTags": [
+        "zulu",
+        "seed",
+        "lang:zu"
+      ],
+      "status": "Profile + templates",
+      "templateCount": 1,
+      "templateIds": [
+        "eloquence-seed-zu-za"
+      ],
+      "unmatchedSamples": [
+        {
+          "ipa": "\u014b\u01c3",
+          "symbol": "ngc",
+          "unmatched": "\u01c3"
+        },
+        {
+          "ipa": "\u026e",
+          "symbol": "dl",
+          "unmatched": "\u026e"
+        }
+      ]
     }
   ],
-  "generatedAt": "2025-09-26T13:08:16Z",
+  "generatedAt": "2025-09-26T13:39:17Z",
   "phonemeInventorySize": 136,
   "statusCounts": {
-    "Profile + templates": 11,
+    "Profile + templates": 53,
     "Profile only": 0,
     "Templates only": 1,
     "Uncovered": 0
   },
-  "totalEntries": 12
+  "totalEntries": 54
 }

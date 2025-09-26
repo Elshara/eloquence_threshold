@@ -1,0 +1,2030 @@
+{
+  "metadata": {
+    "source": "Seeded placeholder templates for global language coverage",
+    "generated": "2025-09-26",
+    "notes": [
+      "Templates provide neutral slider baselines so phoneme customizer work can begin immediately.",
+      "Community contributors are encouraged to replace these placeholders with recordings and tuned parameters."
+    ]
+  },
+  "templates": [
+    {
+      "id": "eloquence-seed-ar-msa",
+      "name": "Eloquence seed – Arabic (MSA)",
+      "language": "ar",
+      "description": "Placeholder timbre emphasising emphatic consonants and uvular frication while we gather community recordings.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "arabic",
+        "placeholder"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "ar-msa-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 100,
+        "pitch": 96,
+        "inflection": 60,
+        "headSize": 118,
+        "roughness": 24,
+        "breathiness": 18,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 108,
+        "tone": 96,
+        "vocalLayers": 104,
+        "overtones": 92,
+        "subtones": 110,
+        "vocalRange": 102,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ar-eg",
+      "name": "Eloquence seed – Arabic (Egyptian)",
+      "language": "ar-EG",
+      "description": "Placeholder voice tuned for Cairene consonant mergers and the breezy Egyptian cadence.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "arabic",
+        "egyptian"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "ar-eg-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 106,
+        "pitch": 108,
+        "inflection": 58,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 26,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 112,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 104,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 112,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 108,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-fa-ir",
+      "name": "Eloquence seed – Persian",
+      "language": "fa",
+      "description": "Placeholder tuning that keeps Persian fricatives silky and highlights ezafe vowels for chaining nouns.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "persian"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "fa-ir-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 98,
+        "pitch": 114,
+        "inflection": 60,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 28,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 112,
+        "tone": 110,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 118,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ur-pk",
+      "name": "Eloquence seed – Urdu",
+      "language": "ur",
+      "description": "Placeholder voice balancing poetic softness with the textured consonants of modern Urdu broadcasts.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "urdu"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "ur-pk-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 94,
+        "pitch": 112,
+        "inflection": 64,
+        "headSize": 116,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 116,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 112,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 108,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 108
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-he-il",
+      "name": "Eloquence seed – Hebrew",
+      "language": "he",
+      "description": "Placeholder timbre tuned for uvular consonants and modern Israeli cadence.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "hebrew"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "he-il-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 104,
+        "pitch": 118,
+        "inflection": 56,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 120,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 116,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 104,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-am-et",
+      "name": "Eloquence seed – Amharic",
+      "language": "am",
+      "description": "Placeholder voice projecting Amharic ejectives with balanced nasal vowels.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "amharic"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "am-et-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 92,
+        "pitch": 116,
+        "inflection": 68,
+        "headSize": 110,
+        "roughness": 22,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 126,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 108,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 112
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ha-ng",
+      "name": "Eloquence seed – Hausa",
+      "language": "ha",
+      "description": "Placeholder Hausa tuning to keep ejective bursts crisp and tones balanced.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "hausa"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "ha-ng-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 104,
+        "pitch": 122,
+        "inflection": 70,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 124,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 128,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 110
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-sw-ke",
+      "name": "Eloquence seed – Swahili",
+      "language": "sw",
+      "description": "Placeholder voice blending coastal Swahili openness with crisp consonant clusters.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "swahili"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "sw-ke-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 108,
+        "pitch": 120,
+        "inflection": 54,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 112,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 106,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 120,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-yo-ng",
+      "name": "Eloquence seed – Yoruba",
+      "language": "yo",
+      "description": "Placeholder Yoruba timbre tuned for three-level tone diacritics and labio-velar stops.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "yoruba"
+      ],
+      "baseVoice": "enu",
+      "variant": "4",
+      "defaultLanguageProfile": "yo-ng-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 100,
+        "pitch": 126,
+        "inflection": 78,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 136,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 116,
+        "vocalRange": 118,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 124,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-zu-za",
+      "name": "Eloquence seed – Zulu",
+      "language": "zu",
+      "description": "Placeholder Zulu timbre that keeps click clusters sharp without harsh resonance.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "zulu"
+      ],
+      "baseVoice": "enu",
+      "variant": "4",
+      "defaultLanguageProfile": "zu-za-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 102,
+        "pitch": 116,
+        "inflection": 68,
+        "headSize": 110,
+        "roughness": 26,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 108,
+        "overtones": 128,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 120
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-zh-cn",
+      "name": "Eloquence seed – Mandarin",
+      "language": "zh-CN",
+      "description": "Placeholder Mandarin mapping to keep retroflex affricates crisp and neutral tones audible.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "mandarin"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "zh-cn-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 112,
+        "pitch": 124,
+        "inflection": 80,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 138,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 122,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 110,
+        "toneSize": 126,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-yue-hk",
+      "name": "Eloquence seed – Cantonese",
+      "language": "yue-Hant-HK",
+      "description": "Placeholder Cantonese timbre tuned for level tones and syllabic nasals.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "cantonese"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "yue-hk-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 116,
+        "pitch": 130,
+        "inflection": 88,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 142,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 112,
+        "toneSize": 130,
+        "scopeDepth": 114
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ko-kr",
+      "name": "Eloquence seed – Korean",
+      "language": "ko",
+      "description": "Placeholder Korean tuning for tense consonants and polite sentence endings.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "korean"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "ko-kr-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 108,
+        "pitch": 118,
+        "inflection": 72,
+        "headSize": 114,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 128,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 124,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 116
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-vi-vn",
+      "name": "Eloquence seed – Vietnamese",
+      "language": "vi",
+      "description": "Placeholder Vietnamese timbre emphasising contour tones and implosives.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "vietnamese"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "vi-vn-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 118,
+        "pitch": 134,
+        "inflection": 90,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 144,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 126,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 132,
+        "scopeDepth": 110
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-th-th",
+      "name": "Eloquence seed – Thai",
+      "language": "th",
+      "description": "Placeholder Thai mapping for high-class consonants and long vowels.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "thai"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "th-th-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 112,
+        "pitch": 128,
+        "inflection": 84,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 140,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 112,
+        "toneSize": 128,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-id-id",
+      "name": "Eloquence seed – Indonesian",
+      "language": "id",
+      "description": "Placeholder Indonesian timbre mixing velar nasals with bright loanword fricatives.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "indonesian"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "id-id-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 110,
+        "pitch": 118,
+        "inflection": 60,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 108,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 118,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ms-my",
+      "name": "Eloquence seed – Malay",
+      "language": "ms",
+      "description": "Placeholder Malay timbre mixing Arabic loan consonants with mellow Malay vowels.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "malay"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "ms-my-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 106,
+        "pitch": 116,
+        "inflection": 58,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 116,
+        "whisper": 112,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-fil-ph",
+      "name": "Eloquence seed – Filipino",
+      "language": "fil",
+      "description": "Placeholder Filipino timbre mixing Austronesian vowels with Spanish consonant loans.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "filipino"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "fil-ph-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 108,
+        "pitch": 120,
+        "inflection": 62,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 114,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 108,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 120,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-bn-bd",
+      "name": "Eloquence seed – Bengali",
+      "language": "bn",
+      "description": "Placeholder Bengali timbre tuned for retroflex flaps and palatal fricatives.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "bengali"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "bn-bd-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 100,
+        "pitch": 122,
+        "inflection": 66,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 118,
+        "subtones": 112,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 116
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ta-in",
+      "name": "Eloquence seed – Tamil",
+      "language": "ta",
+      "description": "Placeholder Tamil timbre balancing classical retroflex consonants with smooth syllable timing.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "tamil"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "ta-in-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 94,
+        "pitch": 114,
+        "inflection": 58,
+        "headSize": 118,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 124,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 118,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 120
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-te-in",
+      "name": "Eloquence seed – Telugu",
+      "language": "te",
+      "description": "Placeholder Telugu voice balancing aspirated retroflexes with smooth vowel glides.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "telugu"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "te-in-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 96,
+        "pitch": 118,
+        "inflection": 62,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 114,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 112,
+        "toneSize": 100,
+        "scopeDepth": 116
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ml-in",
+      "name": "Eloquence seed – Malayalam",
+      "language": "ml",
+      "description": "Placeholder Malayalam timbre emphasising retroflex waves and nasal clusters.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "malayalam"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "ml-in-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 92,
+        "pitch": 112,
+        "inflection": 58,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 120,
+        "vocalRange": 100,
+        "smoothness": 120,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 122
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-kn-in",
+      "name": "Eloquence seed – Kannada",
+      "language": "kn",
+      "description": "Placeholder Kannada tuning for palatal nasals and retroflex laterals.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "kannada"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "kn-in-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 100,
+        "pitch": 116,
+        "inflection": 60,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 108,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 114,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 118
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-mr-in",
+      "name": "Eloquence seed – Marathi",
+      "language": "mr",
+      "description": "Placeholder Marathi timbre balancing syllabic liquids and retroflex articulations.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "marathi"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "mr-in-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 100,
+        "pitch": 118,
+        "inflection": 64,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 116,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 118
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-gu-in",
+      "name": "Eloquence seed – Gujarati",
+      "language": "gu",
+      "description": "Placeholder Gujarati timbre focusing on retroflex laterals and vocalic r vowels.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "gujarati"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "gu-in-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 102,
+        "pitch": 120,
+        "inflection": 62,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 116,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 116
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-pa-in",
+      "name": "Eloquence seed – Punjabi",
+      "language": "pa",
+      "description": "Placeholder Punjabi timbre tuned for tonal Gurmukhi and nasal vowels.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "punjabi"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "pa-in-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 104,
+        "pitch": 126,
+        "inflection": 70,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 132,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 118,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 118
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-si-lk",
+      "name": "Eloquence seed – Sinhala",
+      "language": "si",
+      "description": "Placeholder Sinhala timbre balancing prenasalised clusters with borrowed fricatives.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "sinhala"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "si-lk-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 96,
+        "pitch": 118,
+        "inflection": 58,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 116,
+        "subtones": 114,
+        "vocalRange": 100,
+        "smoothness": 118,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-km-kh",
+      "name": "Eloquence seed – Khmer",
+      "language": "km",
+      "description": "Placeholder Khmer timbre tuned for aspirated affricates and glide-heavy vowels.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "khmer"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "km-kh-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 110,
+        "pitch": 120,
+        "inflection": 62,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 112,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 118,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 112,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-my-mm",
+      "name": "Eloquence seed – Burmese",
+      "language": "my",
+      "description": "Placeholder Burmese timbre balancing creaky tones, aspiration, and nasal finals.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "burmese"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "my-mm-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 104,
+        "pitch": 122,
+        "inflection": 76,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 132,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 116,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 120,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-lo-la",
+      "name": "Eloquence seed – Lao",
+      "language": "lo",
+      "description": "Placeholder Lao timbre tuned for tone-class prefixes and vowel carriers.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "lao"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "lo-la-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 110,
+        "pitch": 126,
+        "inflection": 82,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 136,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 110,
+        "toneSize": 122,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ne-np",
+      "name": "Eloquence seed – Nepali",
+      "language": "ne",
+      "description": "Placeholder Nepali timbre tuned for aspirated affricates and consonant clusters.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "nepali"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "ne-np-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 102,
+        "pitch": 120,
+        "inflection": 66,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 120,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 112,
+        "vocalRange": 100,
+        "smoothness": 118,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-ru-ru",
+      "name": "Eloquence seed – Russian",
+      "language": "ru",
+      "description": "Placeholder Russian timbre balancing palatalisation and retroflex frication.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "russian"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "ru-ru-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 104,
+        "pitch": 118,
+        "inflection": 58,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 118,
+        "subtones": 110,
+        "vocalRange": 100,
+        "smoothness": 112,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-uk-ua",
+      "name": "Eloquence seed – Ukrainian",
+      "language": "uk",
+      "description": "Placeholder Ukrainian timbre balancing melodic intonation with palatal consonants.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "ukrainian"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "uk-ua-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 106,
+        "pitch": 122,
+        "inflection": 62,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 112,
+        "vocalLayers": 100,
+        "overtones": 120,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 118,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-pl-pl",
+      "name": "Eloquence seed – Polish",
+      "language": "pl",
+      "description": "Placeholder Polish timbre tuned for soft vs hard sibilants and dark ł.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "polish"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "pl-pl-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 108,
+        "pitch": 118,
+        "inflection": 60,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 118,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 120,
+        "subtones": 108,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-cs-cz",
+      "name": "Eloquence seed – Czech",
+      "language": "cs",
+      "description": "Placeholder Czech timbre balancing ř trills and velar fricatives.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "czech"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "cs-cz-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 106,
+        "pitch": 118,
+        "inflection": 58,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 118,
+        "whisper": 112,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 122
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-tr-tr",
+      "name": "Eloquence seed – Turkish",
+      "language": "tr",
+      "description": "Placeholder Turkish timbre balancing vowel harmony with soft-g vowel lengthening.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "turkish"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "tr-tr-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 108,
+        "pitch": 120,
+        "inflection": 62,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 110,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 120,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 112
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-el-gr",
+      "name": "Eloquence seed – Greek",
+      "language": "el",
+      "description": "Placeholder Greek timbre balancing dental and velar fricatives with smooth clusters.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "greek"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "el-gr-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 104,
+        "pitch": 118,
+        "inflection": 60,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 118,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 108,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 116,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-nl-nl",
+      "name": "Eloquence seed – Dutch",
+      "language": "nl",
+      "description": "Placeholder Dutch timbre balancing bright diphthongs with velar fricatives.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "dutch"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "nl-nl-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 110,
+        "pitch": 116,
+        "inflection": 56,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 100,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 114,
+        "whisper": 110,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 112,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-sv-se",
+      "name": "Eloquence seed – Swedish",
+      "language": "sv",
+      "description": "Placeholder Swedish timbre tuned for sj/tj fricatives and tonal accents.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "swedish"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "sv-se-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 108,
+        "pitch": 124,
+        "inflection": 64,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 128,
+        "vocalLayers": 100,
+        "overtones": 118,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 120,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-nb-no",
+      "name": "Eloquence seed – Norwegian",
+      "language": "nb",
+      "description": "Placeholder Norwegian timbre tuned for kj/skj fricatives and pitch accents.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "norwegian"
+      ],
+      "baseVoice": "enu",
+      "variant": "1",
+      "defaultLanguageProfile": "nb-no-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 104,
+        "pitch": 122,
+        "inflection": 62,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 126,
+        "vocalLayers": 100,
+        "overtones": 116,
+        "subtones": 100,
+        "vocalRange": 100,
+        "smoothness": 118,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-da-dk",
+      "name": "Eloquence seed – Danish",
+      "language": "da",
+      "description": "Placeholder Danish timbre tuned for stød and uvular r.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "danish"
+      ],
+      "baseVoice": "enu",
+      "variant": "2",
+      "defaultLanguageProfile": "da-dk-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 102,
+        "pitch": 118,
+        "inflection": 60,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 1,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 120,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 110,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 112,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    },
+    {
+      "id": "eloquence-seed-fi-fi",
+      "name": "Eloquence seed – Finnish",
+      "language": "fi",
+      "description": "Placeholder Finnish timbre tuned for vowel length and front rounded vowels.",
+      "tags": [
+        "eloquence",
+        "seed",
+        "finnish"
+      ],
+      "baseVoice": "enu",
+      "variant": "3",
+      "defaultLanguageProfile": "fi-fi-seed",
+      "sourceVoice": "Seed placeholder",
+      "parameters": {
+        "rate": 100,
+        "pitch": 118,
+        "inflection": 56,
+        "headSize": 110,
+        "roughness": 20,
+        "breathiness": 22,
+        "volume": 92,
+        "gender": 0,
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 112,
+        "vocalLayers": 100,
+        "overtones": 100,
+        "subtones": 116,
+        "vocalRange": 100,
+        "smoothness": 120,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "extras": {
+        "phonemeFallback": "ipaFirst",
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ]
+      }
+    }
+  ]
+}

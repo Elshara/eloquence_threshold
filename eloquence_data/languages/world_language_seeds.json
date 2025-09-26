@@ -1,0 +1,2676 @@
+{
+  "profiles": [
+    {
+      "id": "ar-msa-seed",
+      "language": "ar",
+      "displayName": "Arabic (Modern Standard) – emphatic backbone",
+      "description": "Seeded MSA profile capturing emphatic coronals and the sun/moon assimilation patterns.",
+      "tags": [
+        "arabic",
+        "msa",
+        "seed",
+        "lang:ar"
+      ],
+      "stress": [
+        "Stress defaults to the final heavy syllable unless vowel length or sukun dictates otherwise.",
+        "Qur'anic recitation keeps long vowels fully articulated even at fast rates."
+      ],
+      "sentenceStructure": [
+        "Verb–Subject–Object remains the neutral order for narrative speech.",
+        "Adjectives typically follow nouns and inherit definiteness from the article."
+      ],
+      "grammar": [
+        "Sun letters assimilate the /l/ in the definite article while moon letters retain it.",
+        "Emphatic consonants back neighbouring vowels and call for darker timbre settings."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ar-msa"
+      ],
+      "characters": [
+        {
+          "symbol": "ق",
+          "spoken": "qaaf",
+          "ipa": [
+            "q"
+          ],
+          "description": "Voiceless uvular stop with emphatic colouring",
+          "example": "قلب",
+          "notes": [
+            "Backs adjacent vowels and lowers upper formants."
+          ]
+        },
+        {
+          "symbol": "ض",
+          "spoken": "daad",
+          "ipa": [
+            "dˤ"
+          ],
+          "description": "Pharyngealised alveolar stop",
+          "example": "ضوء",
+          "notes": [
+            "Triggers pharyngeal harmony in following syllables."
+          ]
+        },
+        {
+          "symbol": "ال",
+          "spoken": "al",
+          "ipa": [
+            "al"
+          ],
+          "description": "Definite article prefix",
+          "example": "الشمس",
+          "notes": [
+            "Assimilates to sun letters creating doubled consonants."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ar-eg-seed",
+      "language": "ar-EG",
+      "displayName": "Arabic (Egyptian) – colloquial glide",
+      "description": "Captures Cairene consonant shifts (gīm→/g/, qāf→/ʔ/) so phoneme EQ can mimic everyday Egyptian Arabic.",
+      "tags": [
+        "arabic",
+        "egyptian",
+        "seed",
+        "lang:ar"
+      ],
+      "stress": [
+        "Colloquial stress leans toward penultimate syllables unless closed final syllables intervene.",
+        "Sentence-final questions rise sharply; tone slider should mirror that cadence."
+      ],
+      "sentenceStructure": [
+        "Verb–Subject–Object dominates conversational speech though topicalisation is common.",
+        "Negation wraps verbs with ما ... ش framing that benefits from macro volume balance."
+      ],
+      "grammar": [
+        "Dental fricatives merge with /s/ and /z/ in casual contexts, so emphasis must recover clarity.",
+        "The glottal realisation of qāf requires extra whisper control to avoid harsh stops."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ar-eg"
+      ],
+      "characters": [
+        {
+          "symbol": "ج",
+          "spoken": "gim",
+          "ipa": [
+            "g"
+          ],
+          "description": "Egyptian g pronounced as hard /g/",
+          "example": "جمل",
+          "notes": [
+            "Contrasts with /ʒ/ in Modern Standard Arabic.",
+            "Carries secondary emphatic colour in stressed syllables."
+          ]
+        },
+        {
+          "symbol": "ق",
+          "spoken": "ʔāf",
+          "ipa": [
+            "ʔ"
+          ],
+          "description": "Glottal stop realisation of qaf",
+          "example": "قهوة",
+          "notes": [
+            "Switches to /ʔ/ except in careful speech.",
+            "Pairs with breathy release on preceding vowels."
+          ]
+        },
+        {
+          "symbol": "ث",
+          "spoken": "sā",
+          "ipa": [
+            "s"
+          ],
+          "description": "Dental fricative shifting to /s/",
+          "example": "ثانية",
+          "notes": [
+            "Maintains /θ/ in formal recitation; everyday speech uses /s/."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-ir-seed",
+      "language": "fa",
+      "displayName": "Persian (Farsi) – smooth ezafe",
+      "description": "Seeded Persian profile that foregrounds ezafe liaisons and the soft postalveolar fricatives common in Tehrani speech.",
+      "tags": [
+        "persian",
+        "farsi",
+        "seed",
+        "lang:fa"
+      ],
+      "stress": [
+        "Stress falls on the final syllable unless enclitics are present.",
+        "Colloquial intonation keeps declaratives falling quickly after the verb."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order pairs with light ezafe vowels between linked nouns.",
+        "Question particles such as آیا cue rising inflection even with falling lexical accents."
+      ],
+      "grammar": [
+        "Voiceless stops often aspirate; emphasis and smoothness should balance that breathiness.",
+        "Distinct letters پ, ژ, and گ need overtone support to avoid collapsing into Arabic neighbours."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fa-ir"
+      ],
+      "characters": [
+        {
+          "symbol": "پ",
+          "spoken": "pe",
+          "ipa": [
+            "p"
+          ],
+          "description": "Voiceless bilabial stop unique to Persian Arabic script",
+          "example": "پدر",
+          "notes": [
+            "Pairs with aspirated burst at high emphasis values."
+          ]
+        },
+        {
+          "symbol": "ژ",
+          "spoken": "zhe",
+          "ipa": [
+            "ʒ"
+          ],
+          "description": "Postalveolar fricative",
+          "example": "ژاله",
+          "notes": [
+            "Carries soft frication ideal for overtone sliders."
+          ]
+        },
+        {
+          "symbol": "گ",
+          "spoken": "gāf",
+          "ipa": [
+            "ɡ"
+          ],
+          "description": "Voiced velar stop",
+          "example": "گل",
+          "notes": [
+            "Balances between hard /g/ and lenited /ɣ/ in casual speech."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ur-pk-seed",
+      "language": "ur",
+      "displayName": "Urdu – poetic glide",
+      "description": "Urdu placeholder capturing retroflex flaps and aspirated stops used in ghazal recitation and newscasts.",
+      "tags": [
+        "urdu",
+        "seed",
+        "lang:ur"
+      ],
+      "stress": [
+        "Stress remains penultimate in native words but shifts with Persian and Arabic loans.",
+        "Poetic couplets prefer even pacing; macro volume should keep nasal vowels audible."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order dominates while subordinate clauses precede the verb.",
+        "Postpositions follow nouns and influence tone contour on trailing vowels."
+      ],
+      "grammar": [
+        "Retroflex consonants and aspiration need scope depth plus whisper to avoid smearing.",
+        "Nasalisation marker نٙ (noon ghunna) calls for subtone boosts to avoid drop-outs."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ur-pk"
+      ],
+      "characters": [
+        {
+          "symbol": "ڑ",
+          "spoken": "ṛe",
+          "ipa": [
+            "ɽ"
+          ],
+          "description": "Retroflex flap",
+          "example": "لڑکا",
+          "notes": [
+            "Requires retroflex EQ emphasis for clarity."
+          ]
+        },
+        {
+          "symbol": "خ",
+          "spoken": "khe",
+          "ipa": [
+            "x"
+          ],
+          "description": "Voiceless velar fricative",
+          "example": "خواب",
+          "notes": [
+            "Blend with whisper slider to emulate breathy releases."
+          ]
+        },
+        {
+          "symbol": "ں",
+          "spoken": "noon ghunna",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Nasalisation marker",
+          "example": "ماں",
+          "notes": [
+            "Signals nasalised vowels and word-final velar nasal."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "he-il-seed",
+      "language": "he",
+      "displayName": "Hebrew – modern articulation",
+      "description": "Modern Israeli Hebrew placeholder accentuating uvular frication and ejective-like tsadi bursts.",
+      "tags": [
+        "hebrew",
+        "seed",
+        "lang:he"
+      ],
+      "stress": [
+        "Lexical stress varies but often falls on the final syllable; the tone slider should highlight last vowels.",
+        "Yes/no questions rise sharply on the final syllable, while wh-questions show wider inflection."
+      ],
+      "sentenceStructure": [
+        "Verb–Subject–Object is common in formal speech, with Subject–Verb alternations in conversation.",
+        "Construct state nouns bind tightly; smoothness keeps these clusters intelligible."
+      ],
+      "grammar": [
+        "Khet /χ/ and tav /t/ assimilation require overtones to preserve contrast against /s/ and /ʃ/.",
+        "Tsere and kamatz vowels change quality with stress; macro volume preserves the shift."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-he-il"
+      ],
+      "characters": [
+        {
+          "symbol": "ח",
+          "spoken": "khet",
+          "ipa": [
+            "χ"
+          ],
+          "description": "Voiceless uvular fricative",
+          "example": "חג",
+          "notes": [
+            "Needs high-frequency boost for clarity."
+          ]
+        },
+        {
+          "symbol": "צ",
+          "spoken": "tsadi",
+          "ipa": [
+            "tsʼ"
+          ],
+          "description": "Ejective affricate in some traditions",
+          "example": "ציון",
+          "notes": [
+            "Stress slider emphasises ejective burst."
+          ]
+        },
+        {
+          "symbol": "שׁ",
+          "spoken": "shin",
+          "ipa": [
+            "ʃ"
+          ],
+          "description": "Shin with dot on the right",
+          "example": "שלום",
+          "notes": [
+            "Pairs with tone slider to avoid harsh hiss."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "am-et-seed",
+      "language": "am",
+      "displayName": "Amharic – ejective cadence",
+      "description": "Placeholder emphasising Amharic ejectives and the seven-syllable abugida patterns.",
+      "tags": [
+        "amharic",
+        "seed",
+        "lang:am"
+      ],
+      "stress": [
+        "Penultimate stress is common, with pitch lowering on final syllables.",
+        "Questions add rising contour that should engage inflection sliders."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with rich verb inflection; subordinate clauses take verb-final participles.",
+        "Relative clauses introduce pronoun markers that alter rhythm and require macro volume balance."
+      ],
+      "grammar": [
+        "Ejectives need strong emphasis but limited overtones to avoid harshness.",
+        "Gemination is phonemic; smoothness must preserve doubled consonants distinctly."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-am-et"
+      ],
+      "characters": [
+        {
+          "symbol": "ሀ",
+          "spoken": "hä",
+          "ipa": [
+            "h"
+          ],
+          "description": "Ethiopic letter ha",
+          "example": "ሀብታም",
+          "notes": [
+            "Switches between [h] and [ħ] depending on emphasis."
+          ]
+        },
+        {
+          "symbol": "ቀ",
+          "spoken": "qä",
+          "ipa": [
+            "kʼ"
+          ],
+          "description": "Ejective velar stop",
+          "example": "ቀልጣፋ",
+          "notes": [
+            "Inflection slider adds burst length to ejectives."
+          ]
+        },
+        {
+          "symbol": "ጸ",
+          "spoken": "ṣä",
+          "ipa": [
+            "sʼ"
+          ],
+          "description": "Ejective alveolar fricative",
+          "example": "ጸሐይ",
+          "notes": [
+            "Needs overtone boost to differentiate from plain s."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ha-ng-seed",
+      "language": "ha",
+      "displayName": "Hausa – vibrant glottalic stops",
+      "description": "Captures Hausa ejective stops and high/low tone contrasts for the Latin orthography.",
+      "tags": [
+        "hausa",
+        "seed",
+        "lang:ha"
+      ],
+      "stress": [
+        "Tone rather than stress carries contrast; tone slider should remain responsive across phrases.",
+        "Emphatic focus raises pitch and loudness on the final syllable."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object order dominates with prepositions preceding noun phrases.",
+        "Relative clauses follow nouns and require smoothness to keep glottalic bursts legible."
+      ],
+      "grammar": [
+        "Ejective consonants need inflection contour to emphasise release.",
+        "Nasal vowels appear before certain consonants; subtone boosts keep them resonant."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ha-ng"
+      ],
+      "characters": [
+        {
+          "symbol": "ƙ",
+          "spoken": "k-alt",
+          "ipa": [
+            "kʼ"
+          ],
+          "description": "Ejective velar stop",
+          "example": "ƙofa",
+          "notes": [
+            "Inflection contour highlights ejective bursts."
+          ]
+        },
+        {
+          "symbol": "sh",
+          "spoken": "sh",
+          "ipa": [
+            "ʃ"
+          ],
+          "description": "Postalveolar fricative",
+          "example": "shiri",
+          "notes": [
+            "Overtones slider brightens fricatives."
+          ]
+        },
+        {
+          "symbol": "ts",
+          "spoken": "ts",
+          "ipa": [
+            "tsʼ"
+          ],
+          "description": "Affricate with glottalic release",
+          "example": "tsuntsu",
+          "notes": [
+            "Needs emphasis for sharp affricate transitions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sw-ke-seed",
+      "language": "sw",
+      "displayName": "Swahili – coastal clarity",
+      "description": "Swahili placeholder emphasising prenasalised consonants and open vowels for East African dialects.",
+      "tags": [
+        "swahili",
+        "seed",
+        "lang:sw"
+      ],
+      "stress": [
+        "Stress is penultimate; macro volume keeps long final vowels audible.",
+        "Questions raise pitch on the final mora and need tone slider support."
+      ],
+      "sentenceStructure": [
+        "Subject markers attach to verbs; maintaining smoothness keeps these prefixes distinct.",
+        "Noun classes drive agreement prefixes across clauses and require consistent rhythm."
+      ],
+      "grammar": [
+        "Prenasalised clusters (ng, ny) need smooth transitions to avoid clicks.",
+        "Loan digraph ch retains affricate quality; emphasis slider should brighten it."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-sw-ke"
+      ],
+      "characters": [
+        {
+          "symbol": "ng",
+          "spoken": "ng",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal before k/g",
+          "example": "ngoma",
+          "notes": [
+            "Smoothness slider keeps nasal transitions fluid."
+          ]
+        },
+        {
+          "symbol": "ny",
+          "spoken": "ny",
+          "ipa": [
+            "ɲ"
+          ],
+          "description": "Palatal nasal sequence",
+          "example": "nyumbani",
+          "notes": [
+            "Tone slider ensures bright palatal resonance."
+          ]
+        },
+        {
+          "symbol": "ch",
+          "spoken": "ch",
+          "ipa": [
+            "tʃ"
+          ],
+          "description": "Affricate pronounced with strong aspiration",
+          "example": "chakula",
+          "notes": [
+            "Pair with emphasis to keep frication crisp."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yo-ng-seed",
+      "language": "yo",
+      "displayName": "Yoruba – tonal resonance",
+      "description": "Yoruba placeholder covering three-level tone diacritics and labio-velar stops.",
+      "tags": [
+        "yoruba",
+        "seed",
+        "lang:yo"
+      ],
+      "stress": [
+        "Tone tiers (high, mid, low) matter more than stress; tone size slider must track diacritics.",
+        "Downstep sequences benefit from macro volume to avoid drop-offs."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with preverbal tense/aspect particles that change tonal melody.",
+        "Relative clauses follow nouns and often drop prenasalisation cues unless emphasis is applied."
+      ],
+      "grammar": [
+        "Labio-velar stop /ɡ͡b/ needs scope depth to maintain separation from plain /b/.",
+        "Rhotacised vowels in loanwords benefit from overtone boosts."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-yo-ng"
+      ],
+      "characters": [
+        {
+          "symbol": "ṣ",
+          "spoken": "sh",
+          "ipa": [
+            "ʃ"
+          ],
+          "description": "Yoruba retroflex-like sh sound",
+          "example": "ṣọ́ọ̀ṣì",
+          "notes": [
+            "Tone slider interacts with diacritics for pitch accents."
+          ]
+        },
+        {
+          "symbol": "gb",
+          "spoken": "gb",
+          "ipa": [
+            "ɡ͡b"
+          ],
+          "description": "Voiced labio-velar stop",
+          "example": "gbogbo",
+          "notes": [
+            "Needs macro volume support to avoid clipping on release."
+          ]
+        },
+        {
+          "symbol": "ọ",
+          "spoken": "aw",
+          "ipa": [
+            "ɔ"
+          ],
+          "description": "Open-mid back rounded vowel",
+          "example": "ọmọ",
+          "notes": [
+            "Subtone slider deepens low formants for contrast."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zu-za-seed",
+      "language": "zu",
+      "displayName": "Zulu – click-rich texture",
+      "description": "Zulu placeholder mixing click consonants with lateral fricatives to prep the phoneme editor.",
+      "tags": [
+        "zulu",
+        "seed",
+        "lang:zu"
+      ],
+      "stress": [
+        "Penultimate stress drives rhythm; macro volume should protect the final syllable.",
+        "Wh-questions trigger rising-falling intonation requiring inflection contour support."
+      ],
+      "sentenceStructure": [
+        "Subject markers prefix verbs, and object markers embed before the stem; smoothness keeps them distinct.",
+        "Relative clauses use concord prefixes; emphasis must highlight click releases in these contexts."
+      ],
+      "grammar": [
+        "Clicks paired with nasals or lateral releases need scope depth and overtones to avoid muddy blending.",
+        "Voiced lateral fricatives prefer higher smoothness values to stay stable."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-zu-za"
+      ],
+      "characters": [
+        {
+          "symbol": "hl",
+          "spoken": "hl",
+          "ipa": [
+            "ɬ"
+          ],
+          "description": "Voiceless lateral fricative",
+          "example": "hlonipha",
+          "notes": [
+            "Overtones slider accentuates lateral hiss."
+          ]
+        },
+        {
+          "symbol": "ngc",
+          "spoken": "ngc",
+          "ipa": [
+            "ŋǃ"
+          ],
+          "description": "Nasal click cluster",
+          "example": "ngcobo",
+          "notes": [
+            "Scope depth emphasises click resonance."
+          ]
+        },
+        {
+          "symbol": "dl",
+          "spoken": "dl",
+          "ipa": [
+            "ɮ"
+          ],
+          "description": "Voiced lateral fricative",
+          "example": "dlamini",
+          "notes": [
+            "Smoothness slider prevents buzziness."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-cn-seed",
+      "language": "zh-CN",
+      "displayName": "Chinese (Mandarin) – tonal baseline",
+      "description": "Mandarin placeholder emphasising neutral tones, retroflex affricates, and aspect particles.",
+      "tags": [
+        "mandarin",
+        "seed",
+        "lang:zh"
+      ],
+      "stress": [
+        "Lexical tone carries primary contrast; neutral tone syllables need macro volume support.",
+        "Sentence-final particles adjust contour; inflection contour should mirror rising/falling shifts."
+      ],
+      "sentenceStructure": [
+        "Topic–comment structures are frequent; smoothness maintains clarity across tonal resets.",
+        "Resultative compounds require emphasis to differentiate successive tone sandhi outcomes."
+      ],
+      "grammar": [
+        "Retroflex initials zh/ch/sh need overtone management to avoid hissing.",
+        "Neutral tone particles such as 的 and 了 demand macro volume to stay audible after full-tone syllables."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-zh-cn"
+      ],
+      "characters": [
+        {
+          "symbol": "的",
+          "spoken": "de",
+          "ipa": [
+            "tɤ˙"
+          ],
+          "description": "Neutral tone particle",
+          "example": "我的",
+          "notes": [
+            "Tone size slider keeps neutral tone subtle."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yue-hk-seed",
+      "language": "yue-Hant-HK",
+      "displayName": "Chinese (Cantonese) – six-tone contour",
+      "description": "Cantonese placeholder covering high level, low falling, and nasal-only syllables.",
+      "tags": [
+        "cantonese",
+        "seed",
+        "lang:yue"
+      ],
+      "stress": [
+        "Tone categories define contrast; the tone slider must stay sensitive across six level and contour tones.",
+        "Sentence particles add attitudinal nuance; inflection contour keeps the rising patterns natural."
+      ],
+      "sentenceStructure": [
+        "Topic-prominent clauses rely on aspect particles like 咗 and 緊; smoothness ensures stacking remains legible.",
+        "Classifiers precede nouns and alter cadence; macro volume should emphasise low-tone classifiers."
+      ],
+      "grammar": [
+        "Entering tone finals (-p/-t/-k) need emphasis for stop closure.",
+        "Syllabic nasals such as 唔 require subtone support to avoid drop-outs."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-yue-hk"
+      ],
+      "characters": [
+        {
+          "symbol": "的",
+          "spoken": "dik1",
+          "ipa": [
+            "tɪk̚˥"
+          ],
+          "description": "High level final /k/ particle",
+          "example": "我的",
+          "notes": [
+            "Tone slider emphasises level tone contrast."
+          ]
+        },
+        {
+          "symbol": "咗",
+          "spoken": "zo2",
+          "ipa": [
+            "tsɔ˧˥"
+          ],
+          "description": "Perfective marker",
+          "example": "食咗",
+          "notes": [
+            "Inflection contour handles rising contour."
+          ]
+        },
+        {
+          "symbol": "唔",
+          "spoken": "m4",
+          "ipa": [
+            "m̩˨˩"
+          ],
+          "description": "Low falling nasal syllabic",
+          "example": "唔好",
+          "notes": [
+            "Subtones slider supports low nasal resonance."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ko-kr-seed",
+      "language": "ko",
+      "displayName": "Korean – fortis balance",
+      "description": "Korean placeholder balancing tense consonants, aspiration, and vowel harmony cues.",
+      "tags": [
+        "korean",
+        "seed",
+        "lang:ko"
+      ],
+      "stress": [
+        "Syllable timing is even; smoothness should prioritise transitions over stress.",
+        "Sentence-final particles modulate politeness levels; inflection sliders reflect rising pitch in questions."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with topic markers 은/는; macro volume keeps particles audible.",
+        "Honorific endings lengthen vowels; scope depth supports contrast between declaratives and questions."
+      ],
+      "grammar": [
+        "Fortis consonants require high emphasis while maintaining controlled overtones.",
+        "ㄹ alternates between flap and lateral; smoothness mediates position-based transitions."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ko-kr"
+      ],
+      "characters": [
+        {
+          "symbol": "ㅎ",
+          "spoken": "hieut",
+          "ipa": [
+            "h"
+          ],
+          "description": "Aspirated glottal fricative",
+          "example": "하늘",
+          "notes": [
+            "Whisper slider adds airy release."
+          ]
+        },
+        {
+          "symbol": "ㄹ",
+          "spoken": "rieul",
+          "ipa": [
+            "ɾ",
+            "l"
+          ],
+          "description": "Flap or lateral depending on position",
+          "example": "노랗다",
+          "notes": [
+            "Scope depth transitions between flap and lateral states."
+          ]
+        },
+        {
+          "symbol": "ㅆ",
+          "spoken": "ssang sieut",
+          "ipa": [
+            "s͈"
+          ],
+          "description": "Fortis alveolar fricative",
+          "example": "쌀",
+          "notes": [
+            "Emphasis slider strengthens tense consonants."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vi-vn-seed",
+      "language": "vi",
+      "displayName": "Vietnamese – six-tone brilliance",
+      "description": "Vietnamese placeholder highlighting tone contours, implosives, and short vowels.",
+      "tags": [
+        "vietnamese",
+        "seed",
+        "lang:vi"
+      ],
+      "stress": [
+        "Tone diacritics encode contour; tone slider must track both acute and dot diacritics.",
+        "Northern rising tones need inflection contour to avoid overshooting."
+      ],
+      "sentenceStructure": [
+        "Topic-comment with classifiers; macro volume emphasises short function words.",
+        "Question particles like không require rising final pitch; tone size balances the contour."
+      ],
+      "grammar": [
+        "Implosive /ɓ/ and /ɗ/ need scope depth plus subtone support.",
+        "ngh onset before front vowels should remain smooth to avoid plosive artefacts."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-vi-vn"
+      ],
+      "characters": [
+        {
+          "symbol": "ă",
+          "spoken": "a-breve",
+          "ipa": [
+            "ă"
+          ],
+          "description": "Short a with diacritic",
+          "example": "ăn",
+          "notes": [
+            "Tone slider interacts with accent marks for contour tones."
+          ]
+        },
+        {
+          "symbol": "đ",
+          "spoken": "dee",
+          "ipa": [
+            "ɗ"
+          ],
+          "description": "Voiced implosive",
+          "example": "đi",
+          "notes": [
+            "Scope depth emphasises implosive quality."
+          ]
+        },
+        {
+          "symbol": "ngh",
+          "spoken": "ngh",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal onset before front vowels",
+          "example": "nghỉ",
+          "notes": [
+            "Smoothness slider keeps nasal onset gentle."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "th-th-seed",
+      "language": "th",
+      "displayName": "Thai – tonal glide",
+      "description": "Thai placeholder featuring high-class consonants, long vowels, and diphthongs.",
+      "tags": [
+        "thai",
+        "seed",
+        "lang:th"
+      ],
+      "stress": [
+        "Tone supersedes stress; tone slider should reflect contour shifts triggered by class markers.",
+        "Sentence-final particles (ครับ, ค่ะ) require subtle rising inflection."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with frequent topic fronting; smoothness keeps topicalised phrases fluid.",
+        "Classifier constructions need macro volume to highlight numeral and classifier pairings."
+      ],
+      "grammar": [
+        "Aspirated stops (ข, ถ, ผ) require emphasis to stay distinct from unaspirated pairs.",
+        "Long vowels mark lexical contrast; macro volume ensures length perception."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-th-th"
+      ],
+      "characters": [
+        {
+          "symbol": "ข",
+          "spoken": "kho khai",
+          "ipa": [
+            "kʰ"
+          ],
+          "description": "Aspirated velar stop high class",
+          "example": "ขาว",
+          "notes": [
+            "Tone slider handles high-rising vs falling contexts."
+          ]
+        },
+        {
+          "symbol": "า",
+          "spoken": "sara aa",
+          "ipa": [
+            "aː"
+          ],
+          "description": "Long open vowel",
+          "example": "บ้าน",
+          "notes": [
+            "Macro volume keeps vowel length audible."
+          ]
+        },
+        {
+          "symbol": "ไ",
+          "spoken": "sara ai mai malai",
+          "ipa": [
+            "aj"
+          ],
+          "description": "Diphthong with tone marker",
+          "example": "ไทย",
+          "notes": [
+            "Inflection contour transitions diphthong pitch smoothly."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-id-seed",
+      "language": "id",
+      "displayName": "Indonesian – archipelago clarity",
+      "description": "Indonesian placeholder capturing prenasalised onsets and clear loan consonants.",
+      "tags": [
+        "indonesian",
+        "seed",
+        "lang:id"
+      ],
+      "stress": [
+        "Stress is generally penultimate but light; macro volume keeps phrase-final vowels audible.",
+        "Questions and focus words rely on pitch height rather than stress; inflection slider should track this."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object order with optional topicalisation; smoothness ensures vowel harmony in reduplication.",
+        "Particles like kok and dong adjust pragmatics and need tone adjustments for nuance."
+      ],
+      "grammar": [
+        "Prenasalised ng-, ny- clusters should remain smooth to avoid pops.",
+        "Loan digraph sy should sparkle via overtone boosts without sounding harsh."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-id-id"
+      ],
+      "characters": [
+        {
+          "symbol": "ng",
+          "spoken": "ng",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal at onset",
+          "example": "ngeri",
+          "notes": [
+            "Smoothness slider avoids popping on onset."
+          ]
+        },
+        {
+          "symbol": "sy",
+          "spoken": "sy",
+          "ipa": [
+            "ʃ"
+          ],
+          "description": "Loanword digraph",
+          "example": "syair",
+          "notes": [
+            "Overtones slider brightens borrowed fricatives."
+          ]
+        },
+        {
+          "symbol": "ny",
+          "spoken": "ny",
+          "ipa": [
+            "ɲ"
+          ],
+          "description": "Palatal nasal",
+          "example": "nyala",
+          "notes": [
+            "Tone slider emphasises nasal resonance in singing contexts."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ms-my-seed",
+      "language": "ms",
+      "displayName": "Malay – peninsular warmth",
+      "description": "Malay placeholder aligned with peninsular pronunciation, balancing Arabic loans and Malay vowels.",
+      "tags": [
+        "malay",
+        "seed",
+        "lang:ms"
+      ],
+      "stress": [
+        "Stress tends to the penultimate syllable; macro volume keeps open finals resonant.",
+        "Tone is not phonemic but rising questioning intonation uses the inflection slider heavily."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with preposed relative clauses; smoothness preserves clarity when pronoun clitics attach.",
+        "Reduplication adds rhythmic pairs; emphasis ensures repeated syllables remain crisp."
+      ],
+      "grammar": [
+        "Arabic loan fricative kh requires whisper plus overtones for airy release.",
+        "Velar nasals appear word-finally; subtone slider keeps them warm."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ms-my"
+      ],
+      "characters": [
+        {
+          "symbol": "ng",
+          "spoken": "ng",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal",
+          "example": "langsung",
+          "notes": [
+            "Macro volume ensures syllabic nasals remain audible."
+          ]
+        },
+        {
+          "symbol": "sy",
+          "spoken": "sy",
+          "ipa": [
+            "ʃ"
+          ],
+          "description": "Malay palatal fricative",
+          "example": "syarat",
+          "notes": [
+            "Emphasis slider sharpens sibilant edges."
+          ]
+        },
+        {
+          "symbol": "kh",
+          "spoken": "kh",
+          "ipa": [
+            "x"
+          ],
+          "description": "Voiceless velar fricative in Arabic loans",
+          "example": "akhir",
+          "notes": [
+            "Whisper slider adds airy release."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fil-ph-seed",
+      "language": "fil",
+      "displayName": "Filipino – Tagalog clarity",
+      "description": "Filipino placeholder addressing velar nasals, Spanish ñ loans, and affricate onsets.",
+      "tags": [
+        "filipino",
+        "tagalog",
+        "seed",
+        "lang:fil"
+      ],
+      "stress": [
+        "Stress alternates between penultimate and ultimate; macro volume should announce the stressed vowel.",
+        "Question particles like ba rely on rising contours; inflection slider should mirror the shift."
+      ],
+      "sentenceStructure": [
+        "Verb–Subject–Object common with focus markers; smoothness ensures enclitic pronouns stay audible.",
+        "Aspect markers (mag-, nag-, -um-) adjust vowel quality; emphasis keeps transitions clear."
+      ],
+      "grammar": [
+        "Velar nasal ng as a standalone syllable needs subtle subtone support.",
+        "Spanish loan ñ requires overtone brightening to avoid blending with ny."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fil-ph"
+      ],
+      "characters": [
+        {
+          "symbol": "ng",
+          "spoken": "eng",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal phoneme",
+          "example": "ngiti",
+          "notes": [
+            "Smoothness slider prevents harsh transitions into vowels."
+          ]
+        },
+        {
+          "symbol": "ñ",
+          "spoken": "enye",
+          "ipa": [
+            "ɲ"
+          ],
+          "description": "Palatal nasal from Spanish loans",
+          "example": "piñata",
+          "notes": [
+            "Tone slider can lighten borrowed words."
+          ]
+        },
+        {
+          "symbol": "ts",
+          "spoken": "ts",
+          "ipa": [
+            "ts"
+          ],
+          "description": "Affricate emphasised in names",
+          "example": "tse",
+          "notes": [
+            "Emphasis slider helps maintain crisp onset."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bn-bd-seed",
+      "language": "bn",
+      "displayName": "Bengali – retroflex melody",
+      "description": "Bengali placeholder emphasising retroflex flaps, palatal fricatives, and nasal vowels.",
+      "tags": [
+        "bengali",
+        "seed",
+        "lang:bn"
+      ],
+      "stress": [
+        "Stress is typically on the penultimate syllable but light; macro volume retains vowel colour.",
+        "Questions rise at the end; tone slider should support the upward glide."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with postpositions; smoothness keeps conjunct letters legible.",
+        "Compound verbs pair light verbs; emphasis ensures the semantic verb remains forward."
+      ],
+      "grammar": [
+        "Retroflex flap ড় requires scope depth to avoid merging with alveolar d.",
+        "Palatal fricatives benefit from overtone boost to stay bright."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-bn-bd"
+      ],
+      "characters": [
+        {
+          "symbol": "ড়",
+          "spoken": "ṛa",
+          "ipa": [
+            "ɽ"
+          ],
+          "description": "Retroflex flap",
+          "example": "পড়া",
+          "notes": [
+            "Scope depth differentiates between flap and trill."
+          ]
+        },
+        {
+          "symbol": "ঙ",
+          "spoken": "nga",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal letter",
+          "example": "বাংলা",
+          "notes": [
+            "Subtones slider supports nasal quality."
+          ]
+        },
+        {
+          "symbol": "শ",
+          "spoken": "sha",
+          "ipa": [
+            "ʃ"
+          ],
+          "description": "Palatal fricative",
+          "example": "শিশু",
+          "notes": [
+            "Overtones slider brightens fricative energy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ta-in-seed",
+      "language": "ta",
+      "displayName": "Tamil – classical resonance",
+      "description": "Tamil placeholder anchoring retroflex approximants and geminate stops for Sangam-style articulation.",
+      "tags": [
+        "tamil",
+        "seed",
+        "lang:ta"
+      ],
+      "stress": [
+        "Stress is weak; rhythm flows from syllable timing so smoothness should stay high.",
+        "Question particles such as ஆ? at the end raise pitch; inflection slider must respond accordingly."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with agglutinative suffixes; macro volume keeps case endings audible.",
+        "Relative participles precede nouns; emphasis keeps retroflex clusters intelligible."
+      ],
+      "grammar": [
+        "Unique retroflex approximant ழ requires scope depth for clarity.",
+        "Geminated retroflex stops need high emphasis without saturating overtones."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ta-in"
+      ],
+      "characters": [
+        {
+          "symbol": "ழ",
+          "spoken": "zha",
+          "ipa": [
+            "ɻ"
+          ],
+          "description": "Retroflex approximant unique to Tamil",
+          "example": "தமிழ்",
+          "notes": [
+            "Scope depth emphasises retroflex curve."
+          ]
+        },
+        {
+          "symbol": "ண",
+          "spoken": "ṇa",
+          "ipa": [
+            "ɳ"
+          ],
+          "description": "Retroflex nasal",
+          "example": "திண்ணை",
+          "notes": [
+            "Subtones slider deepens nasal resonance."
+          ]
+        },
+        {
+          "symbol": "ஐ",
+          "spoken": "ai",
+          "ipa": [
+            "ai"
+          ],
+          "description": "Diphthong vowel",
+          "example": "ஐயம்",
+          "notes": [
+            "Tone size slider can broaden diphthong transitions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "te-in-seed",
+      "language": "te",
+      "displayName": "Telugu – lyrical aspiration",
+      "description": "Telugu placeholder centred on aspirated retroflexes, velar nasals, and diphthong glides.",
+      "tags": [
+        "telugu",
+        "seed",
+        "lang:te"
+      ],
+      "stress": [
+        "Stress remains light; musical metre focuses on mora counts requiring smooth transitions.",
+        "Yes/no questions rise slightly; inflection contour should emphasise the glide."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with extensive participial clauses; smoothness keeps sandhi boundaries intelligible.",
+        "Object markers like -ni shift rhythm; macro volume ensures suffix vowels stay present."
+      ],
+      "grammar": [
+        "Aspirated retroflex stops need macro volume plus emphasis to maintain breathy release.",
+        "Dependent vowel signs (like ఐ) must glide cleanly; tone slider assists the transition."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-te-in"
+      ],
+      "characters": [
+        {
+          "symbol": "ఢ",
+          "spoken": "ḍha",
+          "ipa": [
+            "ɖʱ"
+          ],
+          "description": "Voiced aspirated retroflex stop",
+          "example": "విడిఢి",
+          "notes": [
+            "Macro volume maintains breathy release detail."
+          ]
+        },
+        {
+          "symbol": "ఙ",
+          "spoken": "ṅa",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal",
+          "example": "శంకు",
+          "notes": [
+            "Subtones slider ensures nasal clarity before velars."
+          ]
+        },
+        {
+          "symbol": "ౖ",
+          "spoken": "ai",
+          "ipa": [
+            "ai"
+          ],
+          "description": "Dependent vowel sign",
+          "example": "నైతిక",
+          "notes": [
+            "Tone slider helps articulate diphthong glides."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ml-in-seed",
+      "language": "ml",
+      "displayName": "Malayalam – retroflex waves",
+      "description": "Malayalam placeholder tuned for retroflex approximants, nasal clusters, and geminated stops.",
+      "tags": [
+        "malayalam",
+        "seed",
+        "lang:ml"
+      ],
+      "stress": [
+        "Stress is weak but long vowels extend rhythm; macro volume preserves their length.",
+        "Questions raise pitch softly; inflection slider should keep endings lively."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with extensive agglutination; smoothness ensures morpheme boundaries remain clear.",
+        "Relative clauses use participles; emphasis maintains clarity in consonant clusters."
+      ],
+      "grammar": [
+        "Retroflex approximant ഴ needs scope depth; geminated retroflex stops need strong emphasis.",
+        "Velar nasal clusters demand smoothness to avoid clicks."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ml-in"
+      ],
+      "characters": [
+        {
+          "symbol": "ഴ",
+          "spoken": "zha",
+          "ipa": [
+            "ɻ"
+          ],
+          "description": "Retroflex approximant",
+          "example": "മലയാളം",
+          "notes": [
+            "Scope depth slider enhances retroflex swirl."
+          ]
+        },
+        {
+          "symbol": "ങ്ക",
+          "spoken": "nga",
+          "ipa": [
+            "ŋɡa"
+          ],
+          "description": "Velar nasal cluster",
+          "example": "അങ്കം",
+          "notes": [
+            "Smoothness slider transitions nasal + stop gracefully."
+          ]
+        },
+        {
+          "symbol": "റ്റ",
+          "spoken": "tta",
+          "ipa": [
+            "ʈʈa"
+          ],
+          "description": "Geminated retroflex stop",
+          "example": "റ്റിൽ",
+          "notes": [
+            "Emphasis slider sharpens geminate articulation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kn-in-seed",
+      "language": "kn",
+      "displayName": "Kannada – gentle palatals",
+      "description": "Kannada placeholder covering retroflex laterals, palatal nasals, and diphthongs used in literary Kannada.",
+      "tags": [
+        "kannada",
+        "seed",
+        "lang:kn"
+      ],
+      "stress": [
+        "Stress is syllable-timed; macro volume keeps vowel reductions audible.",
+        "Questions raise intonation on sentence-final vowels; inflection slider ensures clarity."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with extensive postpositions; smoothness avoids merging sandhi outcomes.",
+        "Verb auxiliaries stack at the end; emphasis keeps sequential consonants articulate."
+      ],
+      "grammar": [
+        "Retroflex lateral ಳ and palatal nasal ಞ require scope depth and subtone boost.",
+        "Diphthong sign ೈ needs tone slider assistance for gliding vowels."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-kn-in"
+      ],
+      "characters": [
+        {
+          "symbol": "ಳ",
+          "spoken": "ḷa",
+          "ipa": [
+            "ɭ"
+          ],
+          "description": "Retroflex lateral",
+          "example": "ಕನ್ನಡ",
+          "notes": [
+            "Scope depth slider emphasises retroflex release."
+          ]
+        },
+        {
+          "symbol": "ಞ",
+          "spoken": "ña",
+          "ipa": [
+            "ɲ"
+          ],
+          "description": "Palatal nasal",
+          "example": "ಜ್ಞಾನ",
+          "notes": [
+            "Subtones slider shapes nasal resonance near palatal stops."
+          ]
+        },
+        {
+          "symbol": "ೖ",
+          "spoken": "ai",
+          "ipa": [
+            "ai"
+          ],
+          "description": "Diphthong",
+          "example": "ಹೈದರಾಬಾದ್",
+          "notes": [
+            "Tone slider manages diphthong glides."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mr-in-seed",
+      "language": "mr",
+      "displayName": "Marathi – syllabic liquids",
+      "description": "Marathi placeholder focusing on syllabic /r̩/, retroflex laterals, and complex consonant conjuncts.",
+      "tags": [
+        "marathi",
+        "seed",
+        "lang:mr"
+      ],
+      "stress": [
+        "Stress usually falls on the first syllable; macro volume needs to preserve trailing vowels.",
+        "Questions raise pitch at the end; inflection slider handles the climb."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with enclitic pronouns; smoothness keeps bound forms distinct.",
+        "Participles modify nouns; emphasis ensures conjuncts like ज्ञ remain legible."
+      ],
+      "grammar": [
+        "Retroflex lateral ळ and syllabic ऋ demand scope depth and subtone support.",
+        "Conjunct ज्ञ requires smoothness to avoid merging with ज."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-mr-in"
+      ],
+      "characters": [
+        {
+          "symbol": "ळ",
+          "spoken": "ḷa",
+          "ipa": [
+            "ɭ"
+          ],
+          "description": "Retroflex lateral",
+          "example": "मुळे",
+          "notes": [
+            "Scope depth emphasises retroflex curvature."
+          ]
+        },
+        {
+          "symbol": "ज्ञ",
+          "spoken": "gya",
+          "ipa": [
+            "ɡjə",
+            "dʒɲa"
+          ],
+          "description": "Complex conjunct consonant",
+          "example": "ज्ञान",
+          "notes": [
+            "Smoothness slider blends consonant cluster variations."
+          ]
+        },
+        {
+          "symbol": "ऋ",
+          "spoken": "ri",
+          "ipa": [
+            "r̩"
+          ],
+          "description": "Syllabic r vowel",
+          "example": "ऋषी",
+          "notes": [
+            "Subtones slider adds lower resonance to syllabic liquids."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gu-in-seed",
+      "language": "gu",
+      "displayName": "Gujarati – vocalic resonances",
+      "description": "Gujarati placeholder emphasising retroflex laterals, palatal nasals, and vocalic r vowels.",
+      "tags": [
+        "gujarati",
+        "seed",
+        "lang:gu"
+      ],
+      "stress": [
+        "Stress tends to penultimate syllables; macro volume prevents final vowels from disappearing.",
+        "Questions add rising contour; inflection slider should adapt quickly."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with enclitic particles; smoothness ensures joined vowels remain intelligible.",
+        "Reduplicated adjectives require emphasis to avoid monotony."
+      ],
+      "grammar": [
+        "Vocalic r (ૃ) needs subtones to stay resonant.",
+        "Retroflex lateral ળ requires scope depth to contrast with લ."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-gu-in"
+      ],
+      "characters": [
+        {
+          "symbol": "ળ",
+          "spoken": "ḷa",
+          "ipa": [
+            "ɭ"
+          ],
+          "description": "Retroflex lateral unique to Gujarati",
+          "example": "કાળ",
+          "notes": [
+            "Scope depth highlights retroflex articulation."
+          ]
+        },
+        {
+          "symbol": "ઞ",
+          "spoken": "ña",
+          "ipa": [
+            "ɲ"
+          ],
+          "description": "Palatal nasal",
+          "example": "જ્ઞાન",
+          "notes": [
+            "Smoothness slider helps in conjunct clusters."
+          ]
+        },
+        {
+          "symbol": "ૃ",
+          "spoken": "ru",
+          "ipa": [
+            "r̩"
+          ],
+          "description": "Vowel sign vocalic r",
+          "example": "કૃપા",
+          "notes": [
+            "Subtones slider increases vowel resonance."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa-in-seed",
+      "language": "pa",
+      "displayName": "Punjabi – tonal Gurmukhi",
+      "description": "Punjabi placeholder aligning retroflex flaps, nasalisation, and tonal contrasts in Gurmukhi.",
+      "tags": [
+        "punjabi",
+        "seed",
+        "lang:pa"
+      ],
+      "stress": [
+        "Tone variations (high-falling, low-rising) require responsive tone sliders.",
+        "Boliyan call-and-response uses macro volume to highlight question-response cadence."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with postpositions; smoothness maintains enclitic pronoun clarity.",
+        "Relative clauses often omit copulas; emphasis ensures tonal cues remain."
+      ],
+      "grammar": [
+        "Retroflex flap ੜ needs scope depth to avoid merging with ਡ.",
+        "Bindī nasal marker demands subtone support for vowel nasalisation."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-pa-in"
+      ],
+      "characters": [
+        {
+          "symbol": "ੜ",
+          "spoken": "ṛa",
+          "ipa": [
+            "ɽ"
+          ],
+          "description": "Retroflex flap specific to Punjabi",
+          "example": "ਕੜੀ",
+          "notes": [
+            "Scope depth slider toggles between flap strength."
+          ]
+        },
+        {
+          "symbol": "ਂ",
+          "spoken": "bindī",
+          "ipa": [
+            "̃"
+          ],
+          "description": "Nasalisation marker",
+          "example": "ਮਾਂ",
+          "notes": [
+            "Subtones slider emphasises nasal vowels."
+          ]
+        },
+        {
+          "symbol": "ੱਧ",
+          "spoken": "ddha",
+          "ipa": [
+            "d̪ːʱ"
+          ],
+          "description": "Geminated voiced aspirated stop",
+          "example": "ਅੱਧਾ",
+          "notes": [
+            "Macro volume keeps aspiration audible during gemination."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "si-lk-seed",
+      "language": "si",
+      "displayName": "Sinhala – rounded cadence",
+      "description": "Sinhala placeholder emphasising prenasalised stops, palatal nasals, and loan fricatives.",
+      "tags": [
+        "sinhala",
+        "seed",
+        "lang:si"
+      ],
+      "stress": [
+        "Stress is weak and tends toward the penultimate syllable; macro volume retains vowel resonance.",
+        "Tone is absent but pitch rises on interrogatives; inflection slider handles the rise."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with postpositions; smoothness prevents nasal-stop clusters from clicking.",
+        "Loanword fricatives require overtones to remain distinct."
+      ],
+      "grammar": [
+        "Pranasalised stops (ඟ) need smoothness to keep the nasal lead-in.",
+        "Loan fricative ෆ requires overtone support to stand out."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-si-lk"
+      ],
+      "characters": [
+        {
+          "symbol": "ඟ",
+          "spoken": "nga",
+          "ipa": [
+            "ŋɡ"
+          ],
+          "description": "Pranasalised stop",
+          "example": "කඟ",
+          "notes": [
+            "Smoothness slider preserves nasal-stop transition."
+          ]
+        },
+        {
+          "symbol": "ඤ",
+          "spoken": "nya",
+          "ipa": [
+            "ɲ"
+          ],
+          "description": "Palatal nasal letter",
+          "example": "ඤාණ",
+          "notes": [
+            "Subtones slider accentuates nasal resonance."
+          ]
+        },
+        {
+          "symbol": "ෆ",
+          "spoken": "fa",
+          "ipa": [
+            "f"
+          ],
+          "description": "Voiceless labiodental fricative for loans",
+          "example": "ෆල",
+          "notes": [
+            "Overtones slider brightens borrowed fricatives."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "km-kh-seed",
+      "language": "km",
+      "displayName": "Khmer – diphthong radiance",
+      "description": "Khmer placeholder capturing palatal nasals, aspirated affricates, and complex vowel nuclei.",
+      "tags": [
+        "khmer",
+        "seed",
+        "lang:km"
+      ],
+      "stress": [
+        "Khmer lacks lexical tone; macro volume maintains contrast between reduced and full vowels.",
+        "Sentence-final particles soften pitch; inflection slider assists subtle fall."
+      ],
+      "sentenceStructure": [
+        "Verb serialization and aspect markers change rhythm; smoothness keeps stacked consonants legible.",
+        "Dependent vowels shift quality by context; tone size slider should track glides."
+      ],
+      "grammar": [
+        "Palatal nasal ញ requires smooth onset; aspirated affricate ឆ needs emphasis for aspiration.",
+        "Diphthong sign ើ/ួ demands tone-size control to avoid monotone delivery."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-km-kh"
+      ],
+      "characters": [
+        {
+          "symbol": "ញ",
+          "spoken": "nhô",
+          "ipa": [
+            "ɲ"
+          ],
+          "description": "Palatal nasal",
+          "example": "ញ៉ាំ",
+          "notes": [
+            "Smoothness slider blends nasal onset with vowel."
+          ]
+        },
+        {
+          "symbol": "ឆ",
+          "spoken": "chhâ",
+          "ipa": [
+            "cʰ"
+          ],
+          "description": "Aspirated affricate",
+          "example": "ឆ្លើយ",
+          "notes": [
+            "Emphasis slider keeps aspiration sharp."
+          ]
+        },
+        {
+          "symbol": "ួ",
+          "spoken": "uə",
+          "ipa": [
+            "uə"
+          ],
+          "description": "Diphthong vowel",
+          "example": "កួរ",
+          "notes": [
+            "Tone size slider ensures smooth glide."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "my-mm-seed",
+      "language": "my",
+      "displayName": "Burmese – creaky tone balance",
+      "description": "Burmese placeholder highlighting creaky vs modal tone, aspiration markers, and vowel colouring.",
+      "tags": [
+        "burmese",
+        "seed",
+        "lang:my"
+      ],
+      "stress": [
+        "Tone quality (creaky, high, low) is key; tone slider needs to range across phonation types.",
+        "Particles such as မ require final pitch drop handled by inflection contour."
+      ],
+      "sentenceStructure": [
+        "Verb-final particles express modality; macro volume keeps them audible after long vowels.",
+        "Reduplication and compounding require smoothness to avoid glottal clicks."
+      ],
+      "grammar": [
+        "Nasal finals -င် require subtone boosts; aspiration diacritic needs whisper to add breathiness.",
+        "Diphthong ို needs tone slider management for rising contour."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-my-mm"
+      ],
+      "characters": [
+        {
+          "symbol": "င်",
+          "spoken": "ng",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal final",
+          "example": "မြင်",
+          "notes": [
+            "Subtones slider supports low nasal resonance."
+          ]
+        },
+        {
+          "symbol": "ှ",
+          "spoken": "h modifier",
+          "ipa": [
+            "ʰ"
+          ],
+          "description": "Aspiration diacritic",
+          "example": "ဖွဲ့",
+          "notes": [
+            "Whisper slider shapes breathy onset."
+          ]
+        },
+        {
+          "symbol": "ော",
+          "spoken": "aw",
+          "ipa": [
+            "ɔ́"
+          ],
+          "description": "Diphthong with tone",
+          "example": "တော်",
+          "notes": [
+            "Tone slider maintains rising contour."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lo-la-seed",
+      "language": "lo",
+      "displayName": "Lao – tone class guidance",
+      "description": "Lao placeholder emphasising silent-h tone class markers, diphthongs, and vowel carriers.",
+      "tags": [
+        "lao",
+        "seed",
+        "lang:lo"
+      ],
+      "stress": [
+        "Tone classes dictate contour; tone slider must respond to high/low class shifts.",
+        "Glottal carriers demand macro volume to stay audible at phrase edges."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with topic fronting; smoothness keeps vowel sequences stable.",
+        "Classifier phrases require emphasis to highlight tone patterns."
+      ],
+      "grammar": [
+        "Silent h prefix modifies tone; inflection slider should adapt accordingly.",
+        "Glottal carrier ອ ensures initial vowel; macro volume prevents drop-out."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-lo-la"
+      ],
+      "characters": [
+        {
+          "symbol": "ຫນ",
+          "spoken": "hn",
+          "ipa": [
+            "n"
+          ],
+          "description": "Silent h prefix controlling tone class",
+          "example": "ຫນອງ",
+          "notes": [
+            "Tone slider responds to silent letter class shifts."
+          ]
+        },
+        {
+          "symbol": "ໄ",
+          "spoken": "sara ai",
+          "ipa": [
+            "aj"
+          ],
+          "description": "Diphthong vowel sign",
+          "example": "ໄກ່",
+          "notes": [
+            "Inflection contour smooths tonal movement."
+          ]
+        },
+        {
+          "symbol": "ອ",
+          "spoken": "o",
+          "ipa": [
+            "ʔɔː"
+          ],
+          "description": "Glottal onset vowel carrier",
+          "example": "ເອື້ອ",
+          "notes": [
+            "Macro volume ensures carrier vowel stays audible."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ne-np-seed",
+      "language": "ne",
+      "displayName": "Nepali – Himalayan cadence",
+      "description": "Nepali placeholder emphasising aspirated affricates, velar nasals, and consonant clusters with /r/.",
+      "tags": [
+        "nepali",
+        "seed",
+        "lang:ne"
+      ],
+      "stress": [
+        "Stress falls on the penultimate syllable; macro volume keeps final vowels audible.",
+        "Questions raise contour at the end; inflection slider supports the rise."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with extensive postpositions; smoothness prevents cluster smearing.",
+        "Honorific forms lengthen vowels; scope depth needs to preserve the change."
+      ],
+      "grammar": [
+        "Aspirated affricates छ /tʃʰ/ need emphasis to differentiate from unaspirated pairs.",
+        "Clusters like श्र require smoothness to keep consonants distinct."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ne-np"
+      ],
+      "characters": [
+        {
+          "symbol": "छ",
+          "spoken": "chha",
+          "ipa": [
+            "tʃʰ"
+          ],
+          "description": "Aspirated affricate",
+          "example": "छात्र",
+          "notes": [
+            "Emphasis slider clarifies aspiration in clusters."
+          ]
+        },
+        {
+          "symbol": "ङ",
+          "spoken": "nga",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal",
+          "example": "नेपाली",
+          "notes": [
+            "Subtones slider keeps nasal resonance present."
+          ]
+        },
+        {
+          "symbol": "श्र",
+          "spoken": "shra",
+          "ipa": [
+            "ʃr"
+          ],
+          "description": "Consonant cluster",
+          "example": "श्रद्धा",
+          "notes": [
+            "Smoothness slider merges cluster articulation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ru-ru-seed",
+      "language": "ru",
+      "displayName": "Russian – palatal richness",
+      "description": "Russian placeholder tuned for palatalised consonants, retroflex fricatives, and reduced vowels.",
+      "tags": [
+        "russian",
+        "seed",
+        "lang:ru"
+      ],
+      "stress": [
+        "Stress is contrastive; macro volume keeps unstressed vowels from disappearing.",
+        "Questions raise pitch on the final syllable; inflection slider follows the contour."
+      ],
+      "sentenceStructure": [
+        "Flexible word order with stress-driven focus; smoothness ensures consonant clusters stay distinct.",
+        "Aspect pairs require emphasis on prefixes to mark perfective/imperfective contrasts."
+      ],
+      "grammar": [
+        "Palatalised consonants need overtones to highlight the [j] offglide.",
+        "Retroflex fricative ж benefits from subtone support to avoid muddiness."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ru-ru"
+      ],
+      "characters": [
+        {
+          "symbol": "щ",
+          "spoken": "shcha",
+          "ipa": [
+            "ɕː"
+          ],
+          "description": "Long palatalised fricative",
+          "example": "ещё",
+          "notes": [
+            "Overtones slider refines soft fricative texture."
+          ]
+        },
+        {
+          "symbol": "ы",
+          "spoken": "y",
+          "ipa": [
+            "ɨ"
+          ],
+          "description": "Close central vowel",
+          "example": "сы",
+          "notes": [
+            "Tone slider balances central resonance."
+          ]
+        },
+        {
+          "symbol": "ж",
+          "spoken": "zhe",
+          "ipa": [
+            "ʐ"
+          ],
+          "description": "Voiced retroflex fricative",
+          "example": "жук",
+          "notes": [
+            "Subtones slider prevents muddiness in low register."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uk-ua-seed",
+      "language": "uk",
+      "displayName": "Ukrainian – bright palatals",
+      "description": "Ukrainian placeholder focusing on palatalised consonants, /ɦ/ vs /g/, and melodic intonation.",
+      "tags": [
+        "ukrainian",
+        "seed",
+        "lang:uk"
+      ],
+      "stress": [
+        "Stress varies lexically; macro volume preserves vowel quality across unstressed syllables.",
+        "Questions have rising-falling melody; inflection slider should handle the contour."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object dominates; smoothness preserves vowel sequences in open syllables.",
+        "Aspectual prefixes require emphasis to differentiate motion verbs."
+      ],
+      "grammar": [
+        "Distinct letters ї and є need smooth glides; ґ must remain a true /g/ via emphasis.",
+        "Palatalisation requires overtones without excessive hiss."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-uk-ua"
+      ],
+      "characters": [
+        {
+          "symbol": "ї",
+          "spoken": "yi",
+          "ipa": [
+            "ji"
+          ],
+          "description": "Dotted i with glide",
+          "example": "їжа",
+          "notes": [
+            "Tone slider smooths glide to vowel."
+          ]
+        },
+        {
+          "symbol": "ґ",
+          "spoken": "ghe",
+          "ipa": [
+            "ɡ"
+          ],
+          "description": "Voiced velar stop distinct from /ɦ/",
+          "example": "ґанок",
+          "notes": [
+            "Emphasis slider keeps plosive crisp."
+          ]
+        },
+        {
+          "symbol": "є",
+          "spoken": "ye",
+          "ipa": [
+            "je"
+          ],
+          "description": "Palatalised vowel",
+          "example": "європа",
+          "notes": [
+            "Smoothness slider handles palatal transitions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-pl-seed",
+      "language": "pl",
+      "displayName": "Polish – sibilant contrast",
+      "description": "Polish placeholder emphasising alveolo-palatal vs retroflex sibilants and dark ł vowels.",
+      "tags": [
+        "polish",
+        "seed",
+        "lang:pl"
+      ],
+      "stress": [
+        "Stress typically lands on the penultimate syllable; macro volume must protect final vowels.",
+        "Questions increase pitch near the end; inflection slider handles the lift."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object order; smoothness prevents consonant clusters from blending.",
+        "Perfective/imperfective aspect prefixes require emphasis for clarity."
+      ],
+      "grammar": [
+        "Soft sibilants ś/ź need overtone tweaks to avoid merging with hard counterparts.",
+        "Dark ł (w) requires subtone emphasis to keep timbre warm."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-pl-pl"
+      ],
+      "characters": [
+        {
+          "symbol": "ł",
+          "spoken": "w",
+          "ipa": [
+            "w"
+          ],
+          "description": "Polish dark l",
+          "example": "łuk",
+          "notes": [
+            "Subtones slider darkens vowel transitions."
+          ]
+        },
+        {
+          "symbol": "ś",
+          "spoken": "sh",
+          "ipa": [
+            "ɕ"
+          ],
+          "description": "Soft alveolo-palatal fricative",
+          "example": "świt",
+          "notes": [
+            "Overtones slider adds gentle brightness."
+          ]
+        },
+        {
+          "symbol": "cz",
+          "spoken": "ch",
+          "ipa": [
+            "tʂ"
+          ],
+          "description": "Retroflex affricate",
+          "example": "czemu",
+          "notes": [
+            "Emphasis slider keeps affricate attack defined."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-cz-seed",
+      "language": "cs",
+      "displayName": "Czech – trill precision",
+      "description": "Czech placeholder emphasising the ř trill, velar fricative ch, and palatal nasals.",
+      "tags": [
+        "czech",
+        "seed",
+        "lang:cs"
+      ],
+      "stress": [
+        "Stress falls on the first syllable; macro volume prevents trailing vowels from dropping.",
+        "Questions raise pitch on the final syllable; inflection slider ensures smooth rise."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with frequent clitic stacking; smoothness keeps clitics audible.",
+        "Aspectual pairs rely on prefixes; emphasis should highlight them."
+      ],
+      "grammar": [
+        "Ř trill requires scope depth to avoid harshness.",
+        "Voiceless velar fricative ch needs whisper to stay airy."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-cs-cz"
+      ],
+      "characters": [
+        {
+          "symbol": "ř",
+          "spoken": "rz",
+          "ipa": [
+            "r̝"
+          ],
+          "description": "Raised alveolar trill",
+          "example": "řeka",
+          "notes": [
+            "Scope depth slider manages trill intensity."
+          ]
+        },
+        {
+          "symbol": "ch",
+          "spoken": "kh",
+          "ipa": [
+            "x"
+          ],
+          "description": "Voiceless velar fricative",
+          "example": "chléb",
+          "notes": [
+            "Whisper slider adds airy release."
+          ]
+        },
+        {
+          "symbol": "ň",
+          "spoken": "ny",
+          "ipa": [
+            "ɲ"
+          ],
+          "description": "Palatal nasal",
+          "example": "kůň",
+          "notes": [
+            "Smoothness slider eases nasal transitions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr-tr-seed",
+      "language": "tr",
+      "displayName": "Turkish – vowel harmony",
+      "description": "Turkish placeholder emphasising vowel harmony, soft g, and postalveolar fricatives.",
+      "tags": [
+        "turkish",
+        "seed",
+        "lang:tr"
+      ],
+      "stress": [
+        "Stress usually falls on the final syllable; macro volume keeps suffix vowels clear.",
+        "Yes/no questions add rising intonation; inflection slider should adapt."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with agglutinative suffixes; smoothness maintains harmony across endings.",
+        "Question particle mi requires emphasis to stand out between suffixes."
+      ],
+      "grammar": [
+        "Soft g ğ lengthens vowels; scope depth ensures gentle lengthening.",
+        "Ş and ç need overtone support to stay sharp without harshness."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-tr-tr"
+      ],
+      "characters": [
+        {
+          "symbol": "ş",
+          "spoken": "sh",
+          "ipa": [
+            "ʃ"
+          ],
+          "description": "Voiceless postalveolar fricative",
+          "example": "şarkı",
+          "notes": [
+            "Overtones slider brightens fricative."
+          ]
+        },
+        {
+          "symbol": "ğ",
+          "spoken": "soft g",
+          "ipa": [
+            "ɰ"
+          ],
+          "description": "Voiced velar approximant lengthening vowels",
+          "example": "dağ",
+          "notes": [
+            "Scope depth slider keeps vowel extension natural."
+          ]
+        },
+        {
+          "symbol": "ı",
+          "spoken": "undotted ı",
+          "ipa": [
+            "ɯ"
+          ],
+          "description": "Close back unrounded vowel",
+          "example": "ışık",
+          "notes": [
+            "Subtones slider ensures warm timbre."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "el-gr-seed",
+      "language": "el",
+      "displayName": "Greek – consonant balance",
+      "description": "Greek placeholder emphasising dental fricatives, velar fricatives, and consonant clusters.",
+      "tags": [
+        "greek",
+        "seed",
+        "lang:el"
+      ],
+      "stress": [
+        "Stress is contrastive and indicated orthographically; macro volume protects unstressed vowels.",
+        "Questions raise pitch mid-word; inflection slider supports the rise."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object common; smoothness ensures consonant clusters remain intelligible.",
+        "Clitics attach to verbs; emphasis should keep them audible."
+      ],
+      "grammar": [
+        "Dental fricatives θ/ð require emphasis to maintain clarity.",
+        "Velar fricative γ needs smoothness to avoid roughness."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-el-gr"
+      ],
+      "characters": [
+        {
+          "symbol": "θ",
+          "spoken": "theta",
+          "ipa": [
+            "θ"
+          ],
+          "description": "Voiceless dental fricative",
+          "example": "θέμα",
+          "notes": [
+            "Emphasis slider prevents smearing with /s/."
+          ]
+        },
+        {
+          "symbol": "γ",
+          "spoken": "gamma",
+          "ipa": [
+            "ɣ"
+          ],
+          "description": "Voiced velar fricative",
+          "example": "γάλα",
+          "notes": [
+            "Smoothness slider avoids harsh transitions."
+          ]
+        },
+        {
+          "symbol": "ξ",
+          "spoken": "xi",
+          "ipa": [
+            "ks"
+          ],
+          "description": "Cluster consonant",
+          "example": "ξένος",
+          "notes": [
+            "Tone size slider keeps cluster intelligible."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nl-nl-seed",
+      "language": "nl",
+      "displayName": "Dutch – diphthong clarity",
+      "description": "Dutch placeholder focusing on diphthongs IJ/UI and the sch/gt fricative cluster.",
+      "tags": [
+        "dutch",
+        "seed",
+        "lang:nl"
+      ],
+      "stress": [
+        "Stress often penultimate but lexical; macro volume keeps reduced vowels audible.",
+        "Questions raise pitch on the final diphthong; inflection slider emphasises the glide."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with V2 inversion; smoothness ensures clitic pronouns remain distinct.",
+        "Modal particles like toch adjust tone; emphasis clarifies them."
+      ],
+      "grammar": [
+        "IJ and UI diphthongs need tone-size support to remain bright.",
+        "sch cluster requires whisper plus overtones to avoid harshness."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-nl-nl"
+      ],
+      "characters": [
+        {
+          "symbol": "ij",
+          "spoken": "ij",
+          "ipa": [
+            "ɛi"
+          ],
+          "description": "Diphthong pronounced as /ɛi/",
+          "example": "ijs",
+          "notes": [
+            "Tone slider keeps diphthong bright."
+          ]
+        },
+        {
+          "symbol": "sch",
+          "spoken": "sch",
+          "ipa": [
+            "sx"
+          ],
+          "description": "Sibilant + velar fricative",
+          "example": "school",
+          "notes": [
+            "Whisper slider balances dual frication."
+          ]
+        },
+        {
+          "symbol": "ui",
+          "spoken": "ui",
+          "ipa": [
+            "œy"
+          ],
+          "description": "Rounded diphthong",
+          "example": "huis",
+          "notes": [
+            "Scope depth slider supports rounded glide."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-se-seed",
+      "language": "sv",
+      "displayName": "Swedish – pitch accent",
+      "description": "Swedish placeholder emphasising sj/tj fricatives and tonal accent pairs.",
+      "tags": [
+        "swedish",
+        "seed",
+        "lang:sv"
+      ],
+      "stress": [
+        "Primary stress often on the first syllable with tonal accent 1 vs 2; tone slider handles pitch patterns.",
+        "Questions rise late in the phrase; inflection slider adds the uplift."
+      ],
+      "sentenceStructure": [
+        "Verb-second order; smoothness keeps clitic pronouns audible after verbs.",
+        "Compound nouns require emphasis to highlight primary vs secondary stress."
+      ],
+      "grammar": [
+        "Sj-sound /ɧ/ needs overtone balancing to avoid white noise.",
+        "Tj /ɕ/ should stay bright but not piercing; tone slider helps."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-sv-se"
+      ],
+      "characters": [
+        {
+          "symbol": "sj",
+          "spoken": "sj",
+          "ipa": [
+            "ɧ"
+          ],
+          "description": "Voiceless coarticulated fricative",
+          "example": "sjö",
+          "notes": [
+            "Overtones slider captures diffuse hiss."
+          ]
+        },
+        {
+          "symbol": "tj",
+          "spoken": "tj",
+          "ipa": [
+            "ɕ"
+          ],
+          "description": "Palatal fricative",
+          "example": "tjej",
+          "notes": [
+            "Tone slider brightens soft fricatives."
+          ]
+        },
+        {
+          "symbol": "å",
+          "spoken": "o-ring",
+          "ipa": [
+            "oː"
+          ],
+          "description": "Open-mid back rounded vowel",
+          "example": "båt",
+          "notes": [
+            "Macro volume keeps long vowel resonant."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nb-no-seed",
+      "language": "nb",
+      "displayName": "Norwegian (Bokmål) – tonal balance",
+      "description": "Norwegian placeholder capturing palatal kj, retroflex skj, and pitch accent pairs.",
+      "tags": [
+        "norwegian",
+        "seed",
+        "lang:nb"
+      ],
+      "stress": [
+        "Pitch accents differentiate word pairs; tone slider must follow accent 1 vs 2.",
+        "Questions rise at the end; inflection slider should raise final syllables."
+      ],
+      "sentenceStructure": [
+        "Verb-second word order; smoothness ensures clitics remain audible.",
+        "Modal particles like vel and jo adjust tone; emphasis clarifies them."
+      ],
+      "grammar": [
+        "Palatal kj /ç/ requires tone smoothing to avoid hiss.",
+        "Retroflex skj /ʂ/ needs overtones for clarity."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-nb-no"
+      ],
+      "characters": [
+        {
+          "symbol": "kj",
+          "spoken": "kj",
+          "ipa": [
+            "ç"
+          ],
+          "description": "Palatal fricative",
+          "example": "kjære",
+          "notes": [
+            "Tone slider keeps fricative gentle."
+          ]
+        },
+        {
+          "symbol": "skj",
+          "spoken": "skj",
+          "ipa": [
+            "ʂ"
+          ],
+          "description": "Retroflex fricative",
+          "example": "skjorte",
+          "notes": [
+            "Overtones slider clarifies retroflex energy."
+          ]
+        },
+        {
+          "symbol": "øy",
+          "spoken": "øy",
+          "ipa": [
+            "øːy"
+          ],
+          "description": "Rounded diphthong",
+          "example": "øy",
+          "notes": [
+            "Scope depth slider maintains rounded glide."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "da-dk-seed",
+      "language": "da",
+      "displayName": "Danish – stød scaffolding",
+      "description": "Danish placeholder highlighting stød, uvular r, and vowel reductions.",
+      "tags": [
+        "danish",
+        "seed",
+        "lang:da"
+      ],
+      "stress": [
+        "Stress usually on first syllable but stød adds creaky phonation; tone slider must represent it.",
+        "Questions raise pitch near the end; inflection slider handles the rise."
+      ],
+      "sentenceStructure": [
+        "Verb-second order; smoothness keeps clitic pronouns audible despite reductions.",
+        "Stød-bearing syllables need macro volume to highlight creaky voice."
+      ],
+      "grammar": [
+        "Uvular r /ʁ/ requires subtone support to stay warm.",
+        "Affricate dg in loans should maintain crispness via emphasis."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-da-dk"
+      ],
+      "characters": [
+        {
+          "symbol": "dg",
+          "spoken": "dg",
+          "ipa": [
+            "tˢ"
+          ],
+          "description": "Affricate in loans",
+          "example": "adgang",
+          "notes": [
+            "Emphasis slider keeps affricate crisp."
+          ]
+        },
+        {
+          "symbol": "r",
+          "spoken": "r",
+          "ipa": [
+            "ʁ"
+          ],
+          "description": "Uvular approximant",
+          "example": "rød",
+          "notes": [
+            "Subtones slider keeps uvular resonance warm."
+          ]
+        },
+        {
+          "symbol": "ø",
+          "spoken": "oe",
+          "ipa": [
+            "ø"
+          ],
+          "description": "Front rounded vowel",
+          "example": "sø",
+          "notes": [
+            "Tone slider balances brightness."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fi-fi-seed",
+      "language": "fi",
+      "displayName": "Finnish – vowel length discipline",
+      "description": "Finnish placeholder covering vowel length contrasts, front rounded vowels, and velar nasals.",
+      "tags": [
+        "finnish",
+        "seed",
+        "lang:fi"
+      ],
+      "stress": [
+        "Stress on the first syllable; macro volume ensures length differences stay audible.",
+        "Questions raise pitch at the end; inflection slider adds the lift."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with rich case endings; smoothness keeps suffix vowels crisp.",
+        "Consonant gradation changes stops; emphasis must highlight alternations."
+      ],
+      "grammar": [
+        "Front rounded vowel y needs tone slider to maintain brightness.",
+        "Open front vowel ä requires subtone support to remain warm."
+      ],
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fi-fi"
+      ],
+      "characters": [
+        {
+          "symbol": "ng",
+          "spoken": "ng",
+          "ipa": [
+            "ŋ"
+          ],
+          "description": "Velar nasal",
+          "example": "sängyssä",
+          "notes": [
+            "Smoothness slider connects nasal to following consonant."
+          ]
+        },
+        {
+          "symbol": "y",
+          "spoken": "y",
+          "ipa": [
+            "y"
+          ],
+          "description": "Front rounded vowel",
+          "example": "yö",
+          "notes": [
+            "Tone slider keeps rounded vowel bright."
+          ]
+        },
+        {
+          "symbol": "ä",
+          "spoken": "ä",
+          "ipa": [
+            "æ"
+          ],
+          "description": "Open front vowel",
+          "example": "ääni",
+          "notes": [
+            "Subtones slider supports open vowel warmth."
+          ]
+        }
+      ]
+    }
+  ]
+}

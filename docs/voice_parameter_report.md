@@ -1,8 +1,8 @@
 # Voice parameter coverage
 
-* Generated: 2025-09-26T13:07:51Z
-* Templates analysed: 28
-* Languages represented: 11
+* Generated: 2025-09-26T13:39:35Z
+* Templates analysed: 70
+* Languages represented: 53
 
 ## Parameter ranges
 
@@ -38,47 +38,89 @@
 
 | Parameter | Templates using it | Count |
 | --- | --- | ---: |
-| breathiness | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
-| emphasis | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| gender | eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 24 |
-| headSize | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
-| headSizeContour | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| inflection | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
-| inflectionContour | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| macroVolume | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| overtones | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| pitch | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
-| rate | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
-| roughness | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
-| roughnessControl | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| breathiness | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 70 |
+| emphasis | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| gender | eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 66 |
+| headSize | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 70 |
+| headSizeContour | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| inflection | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 70 |
+| inflectionContour | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| macroVolume | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| overtones | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| pitch | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 70 |
+| rate | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 70 |
+| roughness | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 70 |
+| roughnessControl | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
 | sampleRate | – | 0 |
-| scopeDepth | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| smoothness | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| stress | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| subtones | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| timbre | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| tone | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| toneSize | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| vocalLayers | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| vocalRange | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
-| volume | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
-| whisper | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| scopeDepth | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| smoothness | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| stress | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| subtones | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| timbre | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| tone | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| toneSize | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| vocalLayers | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| vocalRange | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
+| volume | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 70 |
+| whisper | eloquence-seed-am-et, eloquence-seed-ar-eg, eloquence-seed-ar-msa, eloquence-seed-bn-bd, eloquence-seed-cs-cz, eloquence-seed-da-dk, eloquence-seed-el-gr, eloquence-seed-fa-ir, eloquence-seed-fi-fi, eloquence-seed-fil-ph, eloquence-seed-gu-in, eloquence-seed-ha-ng, eloquence-seed-he-il, eloquence-seed-id-id, eloquence-seed-km-kh, eloquence-seed-kn-in, eloquence-seed-ko-kr, eloquence-seed-lo-la, eloquence-seed-ml-in, eloquence-seed-mr-in, eloquence-seed-ms-my, eloquence-seed-my-mm, eloquence-seed-nb-no, eloquence-seed-ne-np, eloquence-seed-nl-nl, eloquence-seed-pa-in, eloquence-seed-pl-pl, eloquence-seed-ru-ru, eloquence-seed-si-lk, eloquence-seed-sv-se, eloquence-seed-sw-ke, eloquence-seed-ta-in, eloquence-seed-te-in, eloquence-seed-th-th, eloquence-seed-tr-tr, eloquence-seed-uk-ua, eloquence-seed-ur-pk, eloquence-seed-vi-vn, eloquence-seed-yo-ng, eloquence-seed-yue-hk, eloquence-seed-zh-cn, eloquence-seed-zu-za, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 46 |
 
 ## Language coverage
 
 | Language | Templates | Count | Tags |
 | --- | --- | ---: | --- |
+| am | eloquence-seed-am-et | 1 | amharic, eloquence, seed |
+| ar | eloquence-seed-ar-msa | 1 | arabic, eloquence, placeholder, seed |
+| ar-EG | eloquence-seed-ar-eg | 1 | arabic, egyptian, eloquence, seed |
+| bn | eloquence-seed-bn-bd | 1 | bengali, eloquence, seed |
+| cs | eloquence-seed-cs-cz | 1 | czech, eloquence, seed |
+| da | eloquence-seed-da-dk | 1 | danish, eloquence, seed |
 | de-DE | espeak-de-precision | 1 | german |
+| el | eloquence-seed-el-gr | 1 | eloquence, greek, seed |
 | en-GB | espeak-en-gb-clarity | 1 | community, english, uk |
 | en-US | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-en-us-bright, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 18 | blindhelp, breathy, bright, classic, codefactory, community, dectalk, eloquence, english, espeak, heritage, ibm, jaws, lang:en-us, legacy, low, male, modern, nvspeechplayer, sapi4, sapi5, studio, us, variant, viavoice, window-eyes |
 | es-419 | espeak-es-latin | 1 | latin, spanish |
 | es-ES | espeak-es-castilian | 1 | spain, spanish |
+| fa | eloquence-seed-fa-ir | 1 | eloquence, persian, seed |
+| fi | eloquence-seed-fi-fi | 1 | eloquence, finnish, seed |
+| fil | eloquence-seed-fil-ph | 1 | eloquence, filipino, seed |
 | fr-FR | espeak-fr-velvet | 1 | french |
+| gu | eloquence-seed-gu-in | 1 | eloquence, gujarati, seed |
+| ha | eloquence-seed-ha-ng | 1 | eloquence, hausa, seed |
+| he | eloquence-seed-he-il | 1 | eloquence, hebrew, seed |
 | hi-IN | espeak-hi-dynamic | 1 | espeak, hindi, indic, lang:hi |
+| id | eloquence-seed-id-id | 1 | eloquence, indonesian, seed |
 | it-IT | espeak-it-expressive | 1 | italian |
 | ja-JP | espeak-ja-melodic | 1 | asia, espeak, japanese, lang:ja |
+| km | eloquence-seed-km-kh | 1 | eloquence, khmer, seed |
+| kn | eloquence-seed-kn-in | 1 | eloquence, kannada, seed |
+| ko | eloquence-seed-ko-kr | 1 | eloquence, korean, seed |
+| lo | eloquence-seed-lo-la | 1 | eloquence, lao, seed |
+| ml | eloquence-seed-ml-in | 1 | eloquence, malayalam, seed |
+| mr | eloquence-seed-mr-in | 1 | eloquence, marathi, seed |
+| ms | eloquence-seed-ms-my | 1 | eloquence, malay, seed |
+| my | eloquence-seed-my-mm | 1 | burmese, eloquence, seed |
+| nb | eloquence-seed-nb-no | 1 | eloquence, norwegian, seed |
+| ne | eloquence-seed-ne-np | 1 | eloquence, nepali, seed |
+| nl | eloquence-seed-nl-nl | 1 | dutch, eloquence, seed |
+| pa | eloquence-seed-pa-in | 1 | eloquence, punjabi, seed |
+| pl | eloquence-seed-pl-pl | 1 | eloquence, polish, seed |
 | pt-BR | espeak-pt-br-vibrant | 1 | brazil, portuguese |
+| ru | eloquence-seed-ru-ru | 1 | eloquence, russian, seed |
+| si | eloquence-seed-si-lk | 1 | eloquence, seed, sinhala |
+| sv | eloquence-seed-sv-se | 1 | eloquence, seed, swedish |
+| sw | eloquence-seed-sw-ke | 1 | eloquence, seed, swahili |
+| ta | eloquence-seed-ta-in | 1 | eloquence, seed, tamil |
+| te | eloquence-seed-te-in | 1 | eloquence, seed, telugu |
+| th | eloquence-seed-th-th | 1 | eloquence, seed, thai |
+| tr | eloquence-seed-tr-tr | 1 | eloquence, seed, turkish |
+| uk | eloquence-seed-uk-ua | 1 | eloquence, seed, ukrainian |
 | unspecified | espeak-variant-espeak-variants-alex | 1 | espeak, male, variant |
+| ur | eloquence-seed-ur-pk | 1 | eloquence, seed, urdu |
+| vi | eloquence-seed-vi-vn | 1 | eloquence, seed, vietnamese |
+| yo | eloquence-seed-yo-ng | 1 | eloquence, seed, yoruba |
+| yue-Hant-HK | eloquence-seed-yue-hk | 1 | cantonese, eloquence, seed |
+| zh-CN | eloquence-seed-zh-cn | 1 | eloquence, mandarin, seed |
+| zu | eloquence-seed-zu-za | 1 | eloquence, seed, zulu |
 
 ## Templates
 
@@ -299,6 +341,1434 @@
   * breathiness: 26
   * volume: 88
   * gender: 0
+
+### eloquence-seed-ar-msa – Eloquence seed – Arabic (MSA)
+
+* Language: ar
+* Default language profile: ar-msa-seed
+* Tags: eloquence, seed, arabic, placeholder
+* Parameters:
+  * rate: 100
+  * pitch: 96
+  * inflection: 60
+  * headSize: 118
+  * roughness: 24
+  * breathiness: 18
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 108
+  * tone: 96
+  * vocalLayers: 104
+  * overtones: 92
+  * subtones: 110
+  * vocalRange: 102
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ar-eg – Eloquence seed – Arabic (Egyptian)
+
+* Language: ar-EG
+* Default language profile: ar-eg-seed
+* Tags: eloquence, seed, arabic, egyptian
+* Parameters:
+  * rate: 106
+  * pitch: 108
+  * inflection: 58
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 26
+  * volume: 92
+  * gender: 1
+  * emphasis: 112
+  * stress: 100
+  * timbre: 100
+  * tone: 104
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 112
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 108
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-fa-ir – Eloquence seed – Persian
+
+* Language: fa
+* Default language profile: fa-ir-seed
+* Tags: eloquence, seed, persian
+* Parameters:
+  * rate: 98
+  * pitch: 114
+  * inflection: 60
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 28
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 112
+  * tone: 110
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 118
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ur-pk – Eloquence seed – Urdu
+
+* Language: ur
+* Default language profile: ur-pk-seed
+* Tags: eloquence, seed, urdu
+* Parameters:
+  * rate: 94
+  * pitch: 112
+  * inflection: 64
+  * headSize: 116
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 116
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 112
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 108
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 108
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-he-il – Eloquence seed – Hebrew
+
+* Language: he
+* Default language profile: he-il-seed
+* Tags: eloquence, seed, hebrew
+* Parameters:
+  * rate: 104
+  * pitch: 118
+  * inflection: 56
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 120
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 116
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 104
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-am-et – Eloquence seed – Amharic
+
+* Language: am
+* Default language profile: am-et-seed
+* Tags: eloquence, seed, amharic
+* Parameters:
+  * rate: 92
+  * pitch: 116
+  * inflection: 68
+  * headSize: 110
+  * roughness: 22
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 126
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 108
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 112
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ha-ng – Eloquence seed – Hausa
+
+* Language: ha
+* Default language profile: ha-ng-seed
+* Tags: eloquence, seed, hausa
+* Parameters:
+  * rate: 104
+  * pitch: 122
+  * inflection: 70
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 124
+  * stress: 100
+  * timbre: 100
+  * tone: 128
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 110
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-sw-ke – Eloquence seed – Swahili
+
+* Language: sw
+* Default language profile: sw-ke-seed
+* Tags: eloquence, seed, swahili
+* Parameters:
+  * rate: 108
+  * pitch: 120
+  * inflection: 54
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 112
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 106
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 120
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-yo-ng – Eloquence seed – Yoruba
+
+* Language: yo
+* Default language profile: yo-ng-seed
+* Tags: eloquence, seed, yoruba
+* Parameters:
+  * rate: 100
+  * pitch: 126
+  * inflection: 78
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 136
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 116
+  * vocalRange: 118
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 124
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-zu-za – Eloquence seed – Zulu
+
+* Language: zu
+* Default language profile: zu-za-seed
+* Tags: eloquence, seed, zulu
+* Parameters:
+  * rate: 102
+  * pitch: 116
+  * inflection: 68
+  * headSize: 110
+  * roughness: 26
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 108
+  * overtones: 128
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 120
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-zh-cn – Eloquence seed – Mandarin
+
+* Language: zh-CN
+* Default language profile: zh-cn-seed
+* Tags: eloquence, seed, mandarin
+* Parameters:
+  * rate: 112
+  * pitch: 124
+  * inflection: 80
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 138
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 122
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 110
+  * toneSize: 126
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-yue-hk – Eloquence seed – Cantonese
+
+* Language: yue-Hant-HK
+* Default language profile: yue-hk-seed
+* Tags: eloquence, seed, cantonese
+* Parameters:
+  * rate: 116
+  * pitch: 130
+  * inflection: 88
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 142
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 112
+  * toneSize: 130
+  * scopeDepth: 114
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ko-kr – Eloquence seed – Korean
+
+* Language: ko
+* Default language profile: ko-kr-seed
+* Tags: eloquence, seed, korean
+* Parameters:
+  * rate: 108
+  * pitch: 118
+  * inflection: 72
+  * headSize: 114
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 128
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 124
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 116
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-vi-vn – Eloquence seed – Vietnamese
+
+* Language: vi
+* Default language profile: vi-vn-seed
+* Tags: eloquence, seed, vietnamese
+* Parameters:
+  * rate: 118
+  * pitch: 134
+  * inflection: 90
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 144
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 126
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 132
+  * scopeDepth: 110
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-th-th – Eloquence seed – Thai
+
+* Language: th
+* Default language profile: th-th-seed
+* Tags: eloquence, seed, thai
+* Parameters:
+  * rate: 112
+  * pitch: 128
+  * inflection: 84
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 140
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 112
+  * toneSize: 128
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-id-id – Eloquence seed – Indonesian
+
+* Language: id
+* Default language profile: id-id-seed
+* Tags: eloquence, seed, indonesian
+* Parameters:
+  * rate: 110
+  * pitch: 118
+  * inflection: 60
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 108
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 118
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ms-my – Eloquence seed – Malay
+
+* Language: ms
+* Default language profile: ms-my-seed
+* Tags: eloquence, seed, malay
+* Parameters:
+  * rate: 106
+  * pitch: 116
+  * inflection: 58
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 116
+  * whisper: 112
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-fil-ph – Eloquence seed – Filipino
+
+* Language: fil
+* Default language profile: fil-ph-seed
+* Tags: eloquence, seed, filipino
+* Parameters:
+  * rate: 108
+  * pitch: 120
+  * inflection: 62
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 114
+  * stress: 100
+  * timbre: 100
+  * tone: 108
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 120
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-bn-bd – Eloquence seed – Bengali
+
+* Language: bn
+* Default language profile: bn-bd-seed
+* Tags: eloquence, seed, bengali
+* Parameters:
+  * rate: 100
+  * pitch: 122
+  * inflection: 66
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 118
+  * subtones: 112
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 116
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ta-in – Eloquence seed – Tamil
+
+* Language: ta
+* Default language profile: ta-in-seed
+* Tags: eloquence, seed, tamil
+* Parameters:
+  * rate: 94
+  * pitch: 114
+  * inflection: 58
+  * headSize: 118
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 124
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 118
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 120
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-te-in – Eloquence seed – Telugu
+
+* Language: te
+* Default language profile: te-in-seed
+* Tags: eloquence, seed, telugu
+* Parameters:
+  * rate: 96
+  * pitch: 118
+  * inflection: 62
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 114
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 112
+  * toneSize: 100
+  * scopeDepth: 116
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ml-in – Eloquence seed – Malayalam
+
+* Language: ml
+* Default language profile: ml-in-seed
+* Tags: eloquence, seed, malayalam
+* Parameters:
+  * rate: 92
+  * pitch: 112
+  * inflection: 58
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 120
+  * vocalRange: 100
+  * smoothness: 120
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 122
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-kn-in – Eloquence seed – Kannada
+
+* Language: kn
+* Default language profile: kn-in-seed
+* Tags: eloquence, seed, kannada
+* Parameters:
+  * rate: 100
+  * pitch: 116
+  * inflection: 60
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 108
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 114
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 118
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-mr-in – Eloquence seed – Marathi
+
+* Language: mr
+* Default language profile: mr-in-seed
+* Tags: eloquence, seed, marathi
+* Parameters:
+  * rate: 100
+  * pitch: 118
+  * inflection: 64
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 116
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 118
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-gu-in – Eloquence seed – Gujarati
+
+* Language: gu
+* Default language profile: gu-in-seed
+* Tags: eloquence, seed, gujarati
+* Parameters:
+  * rate: 102
+  * pitch: 120
+  * inflection: 62
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 116
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 116
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-pa-in – Eloquence seed – Punjabi
+
+* Language: pa
+* Default language profile: pa-in-seed
+* Tags: eloquence, seed, punjabi
+* Parameters:
+  * rate: 104
+  * pitch: 126
+  * inflection: 70
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 132
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 118
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 118
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-si-lk – Eloquence seed – Sinhala
+
+* Language: si
+* Default language profile: si-lk-seed
+* Tags: eloquence, seed, sinhala
+* Parameters:
+  * rate: 96
+  * pitch: 118
+  * inflection: 58
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 116
+  * subtones: 114
+  * vocalRange: 100
+  * smoothness: 118
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-km-kh – Eloquence seed – Khmer
+
+* Language: km
+* Default language profile: km-kh-seed
+* Tags: eloquence, seed, khmer
+* Parameters:
+  * rate: 110
+  * pitch: 120
+  * inflection: 62
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 112
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 118
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 112
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-my-mm – Eloquence seed – Burmese
+
+* Language: my
+* Default language profile: my-mm-seed
+* Tags: eloquence, seed, burmese
+* Parameters:
+  * rate: 104
+  * pitch: 122
+  * inflection: 76
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 132
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 116
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 120
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-lo-la – Eloquence seed – Lao
+
+* Language: lo
+* Default language profile: lo-la-seed
+* Tags: eloquence, seed, lao
+* Parameters:
+  * rate: 110
+  * pitch: 126
+  * inflection: 82
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 136
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 110
+  * toneSize: 122
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ne-np – Eloquence seed – Nepali
+
+* Language: ne
+* Default language profile: ne-np-seed
+* Tags: eloquence, seed, nepali
+* Parameters:
+  * rate: 102
+  * pitch: 120
+  * inflection: 66
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 120
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 112
+  * vocalRange: 100
+  * smoothness: 118
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-ru-ru – Eloquence seed – Russian
+
+* Language: ru
+* Default language profile: ru-ru-seed
+* Tags: eloquence, seed, russian
+* Parameters:
+  * rate: 104
+  * pitch: 118
+  * inflection: 58
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 118
+  * subtones: 110
+  * vocalRange: 100
+  * smoothness: 112
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-uk-ua – Eloquence seed – Ukrainian
+
+* Language: uk
+* Default language profile: uk-ua-seed
+* Tags: eloquence, seed, ukrainian
+* Parameters:
+  * rate: 106
+  * pitch: 122
+  * inflection: 62
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 112
+  * vocalLayers: 100
+  * overtones: 120
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 118
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-pl-pl – Eloquence seed – Polish
+
+* Language: pl
+* Default language profile: pl-pl-seed
+* Tags: eloquence, seed, polish
+* Parameters:
+  * rate: 108
+  * pitch: 118
+  * inflection: 60
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 118
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 120
+  * subtones: 108
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-cs-cz – Eloquence seed – Czech
+
+* Language: cs
+* Default language profile: cs-cz-seed
+* Tags: eloquence, seed, czech
+* Parameters:
+  * rate: 106
+  * pitch: 118
+  * inflection: 58
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 118
+  * whisper: 112
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 122
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-tr-tr – Eloquence seed – Turkish
+
+* Language: tr
+* Default language profile: tr-tr-seed
+* Tags: eloquence, seed, turkish
+* Parameters:
+  * rate: 108
+  * pitch: 120
+  * inflection: 62
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 110
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 120
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 112
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-el-gr – Eloquence seed – Greek
+
+* Language: el
+* Default language profile: el-gr-seed
+* Tags: eloquence, seed, greek
+* Parameters:
+  * rate: 104
+  * pitch: 118
+  * inflection: 60
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 118
+  * stress: 100
+  * timbre: 100
+  * tone: 108
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 116
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-nl-nl – Eloquence seed – Dutch
+
+* Language: nl
+* Default language profile: nl-nl-seed
+* Tags: eloquence, seed, dutch
+* Parameters:
+  * rate: 110
+  * pitch: 116
+  * inflection: 56
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 100
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 114
+  * whisper: 110
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 112
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-sv-se – Eloquence seed – Swedish
+
+* Language: sv
+* Default language profile: sv-se-seed
+* Tags: eloquence, seed, swedish
+* Parameters:
+  * rate: 108
+  * pitch: 124
+  * inflection: 64
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 128
+  * vocalLayers: 100
+  * overtones: 118
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 120
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-nb-no – Eloquence seed – Norwegian
+
+* Language: nb
+* Default language profile: nb-no-seed
+* Tags: eloquence, seed, norwegian
+* Parameters:
+  * rate: 104
+  * pitch: 122
+  * inflection: 62
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 126
+  * vocalLayers: 100
+  * overtones: 116
+  * subtones: 100
+  * vocalRange: 100
+  * smoothness: 118
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-da-dk – Eloquence seed – Danish
+
+* Language: da
+* Default language profile: da-dk-seed
+* Tags: eloquence, seed, danish
+* Parameters:
+  * rate: 102
+  * pitch: 118
+  * inflection: 60
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 1
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 120
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 110
+  * vocalRange: 100
+  * smoothness: 100
+  * whisper: 112
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
+
+### eloquence-seed-fi-fi – Eloquence seed – Finnish
+
+* Language: fi
+* Default language profile: fi-fi-seed
+* Tags: eloquence, seed, finnish
+* Parameters:
+  * rate: 100
+  * pitch: 118
+  * inflection: 56
+  * headSize: 110
+  * roughness: 20
+  * breathiness: 22
+  * volume: 92
+  * gender: 0
+  * emphasis: 100
+  * stress: 100
+  * timbre: 100
+  * tone: 112
+  * vocalLayers: 100
+  * overtones: 100
+  * subtones: 116
+  * vocalRange: 100
+  * smoothness: 120
+  * whisper: 100
+  * inflectionContour: 100
+  * roughnessControl: 100
+  * headSizeContour: 100
+  * macroVolume: 100
+  * toneSize: 100
+  * scopeDepth: 100
+* Extras:
+  * notes: ['Seed template awaiting community tuning for regional authenticity.', 'Advanced sliders stay at documented defaults unless overrides are provided.']
+  * phonemeFallback: ipaFirst
 
 ### eloquence-heritage-jaws-classic – Heritage JAWS (Paul)
 

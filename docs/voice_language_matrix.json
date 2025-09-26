@@ -159,6 +159,232 @@
       ]
     },
     {
+      "key": "am",
+      "languageNames": [
+        "am"
+      ],
+      "languageTag": "am",
+      "pairings": [
+        {
+          "profileId": "am-et-seed",
+          "templateId": "eloquence-seed-am-et"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-am-et"
+      ],
+      "profileIds": [
+        "am-et-seed"
+      ],
+      "profileTags": [
+        "amharic",
+        "lang:am",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "am-et-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-am-et"
+      ],
+      "templateTags": [
+        "amharic",
+        "eloquence",
+        "seed"
+      ]
+    },
+    {
+      "key": "ar",
+      "languageNames": [
+        "ar"
+      ],
+      "languageTag": "ar",
+      "pairings": [
+        {
+          "profileId": "ar-msa-seed",
+          "templateId": "eloquence-seed-ar-msa"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ar-msa"
+      ],
+      "profileIds": [
+        "ar-msa-seed"
+      ],
+      "profileTags": [
+        "arabic",
+        "lang:ar",
+        "msa",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ar-msa-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ar-msa"
+      ],
+      "templateTags": [
+        "arabic",
+        "eloquence",
+        "placeholder",
+        "seed"
+      ]
+    },
+    {
+      "key": "ar-EG",
+      "languageNames": [
+        "ar-EG"
+      ],
+      "languageTag": "ar-EG",
+      "pairings": [
+        {
+          "profileId": "ar-eg-seed",
+          "templateId": "eloquence-seed-ar-eg"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ar-eg"
+      ],
+      "profileIds": [
+        "ar-eg-seed"
+      ],
+      "profileTags": [
+        "arabic",
+        "egyptian",
+        "lang:ar",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ar-eg-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ar-eg"
+      ],
+      "templateTags": [
+        "arabic",
+        "egyptian",
+        "eloquence",
+        "seed"
+      ]
+    },
+    {
+      "key": "bn",
+      "languageNames": [
+        "bn"
+      ],
+      "languageTag": "bn",
+      "pairings": [
+        {
+          "profileId": "bn-bd-seed",
+          "templateId": "eloquence-seed-bn-bd"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-bn-bd"
+      ],
+      "profileIds": [
+        "bn-bd-seed"
+      ],
+      "profileTags": [
+        "bengali",
+        "lang:bn",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "bn-bd-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-bn-bd"
+      ],
+      "templateTags": [
+        "bengali",
+        "eloquence",
+        "seed"
+      ]
+    },
+    {
+      "key": "cs",
+      "languageNames": [
+        "cs"
+      ],
+      "languageTag": "cs",
+      "pairings": [
+        {
+          "profileId": "cs-cz-seed",
+          "templateId": "eloquence-seed-cs-cz"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-cs-cz"
+      ],
+      "profileIds": [
+        "cs-cz-seed"
+      ],
+      "profileTags": [
+        "czech",
+        "lang:cs",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "cs-cz-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-cs-cz"
+      ],
+      "templateTags": [
+        "czech",
+        "eloquence",
+        "seed"
+      ]
+    },
+    {
+      "key": "da",
+      "languageNames": [
+        "da"
+      ],
+      "languageTag": "da",
+      "pairings": [
+        {
+          "profileId": "da-dk-seed",
+          "templateId": "eloquence-seed-da-dk"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-da-dk"
+      ],
+      "profileIds": [
+        "da-dk-seed"
+      ],
+      "profileTags": [
+        "danish",
+        "lang:da",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "da-dk-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-da-dk"
+      ],
+      "templateTags": [
+        "danish",
+        "eloquence",
+        "seed"
+      ]
+    },
+    {
       "key": "de-DE",
       "languageNames": [
         "de-DE"
@@ -190,6 +416,43 @@
       ],
       "templateTags": [
         "german"
+      ]
+    },
+    {
+      "key": "el",
+      "languageNames": [
+        "el"
+      ],
+      "languageTag": "el",
+      "pairings": [
+        {
+          "profileId": "el-gr-seed",
+          "templateId": "eloquence-seed-el-gr"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-el-gr"
+      ],
+      "profileIds": [
+        "el-gr-seed"
+      ],
+      "profileTags": [
+        "greek",
+        "lang:el",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "el-gr-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-el-gr"
+      ],
+      "templateTags": [
+        "eloquence",
+        "greek",
+        "seed"
       ]
     },
     {
@@ -299,6 +562,119 @@
       ]
     },
     {
+      "key": "fa",
+      "languageNames": [
+        "fa"
+      ],
+      "languageTag": "fa",
+      "pairings": [
+        {
+          "profileId": "fa-ir-seed",
+          "templateId": "eloquence-seed-fa-ir"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-fa-ir"
+      ],
+      "profileIds": [
+        "fa-ir-seed"
+      ],
+      "profileTags": [
+        "farsi",
+        "lang:fa",
+        "persian",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "fa-ir-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-fa-ir"
+      ],
+      "templateTags": [
+        "eloquence",
+        "persian",
+        "seed"
+      ]
+    },
+    {
+      "key": "fi",
+      "languageNames": [
+        "fi"
+      ],
+      "languageTag": "fi",
+      "pairings": [
+        {
+          "profileId": "fi-fi-seed",
+          "templateId": "eloquence-seed-fi-fi"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-fi-fi"
+      ],
+      "profileIds": [
+        "fi-fi-seed"
+      ],
+      "profileTags": [
+        "finnish",
+        "lang:fi",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "fi-fi-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-fi-fi"
+      ],
+      "templateTags": [
+        "eloquence",
+        "finnish",
+        "seed"
+      ]
+    },
+    {
+      "key": "fil",
+      "languageNames": [
+        "fil"
+      ],
+      "languageTag": "fil",
+      "pairings": [
+        {
+          "profileId": "fil-ph-seed",
+          "templateId": "eloquence-seed-fil-ph"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-fil-ph"
+      ],
+      "profileIds": [
+        "fil-ph-seed"
+      ],
+      "profileTags": [
+        "filipino",
+        "lang:fil",
+        "seed",
+        "tagalog"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "fil-ph-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-fil-ph"
+      ],
+      "templateTags": [
+        "eloquence",
+        "filipino",
+        "seed"
+      ]
+    },
+    {
       "key": "fr-FR",
       "languageNames": [
         "fr-FR"
@@ -330,6 +706,117 @@
       ],
       "templateTags": [
         "french"
+      ]
+    },
+    {
+      "key": "gu",
+      "languageNames": [
+        "gu"
+      ],
+      "languageTag": "gu",
+      "pairings": [
+        {
+          "profileId": "gu-in-seed",
+          "templateId": "eloquence-seed-gu-in"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-gu-in"
+      ],
+      "profileIds": [
+        "gu-in-seed"
+      ],
+      "profileTags": [
+        "gujarati",
+        "lang:gu",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "gu-in-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-gu-in"
+      ],
+      "templateTags": [
+        "eloquence",
+        "gujarati",
+        "seed"
+      ]
+    },
+    {
+      "key": "ha",
+      "languageNames": [
+        "ha"
+      ],
+      "languageTag": "ha",
+      "pairings": [
+        {
+          "profileId": "ha-ng-seed",
+          "templateId": "eloquence-seed-ha-ng"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ha-ng"
+      ],
+      "profileIds": [
+        "ha-ng-seed"
+      ],
+      "profileTags": [
+        "hausa",
+        "lang:ha",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ha-ng-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ha-ng"
+      ],
+      "templateTags": [
+        "eloquence",
+        "hausa",
+        "seed"
+      ]
+    },
+    {
+      "key": "he",
+      "languageNames": [
+        "he"
+      ],
+      "languageTag": "he",
+      "pairings": [
+        {
+          "profileId": "he-il-seed",
+          "templateId": "eloquence-seed-he-il"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-he-il"
+      ],
+      "profileIds": [
+        "he-il-seed"
+      ],
+      "profileTags": [
+        "hebrew",
+        "lang:he",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "he-il-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-he-il"
+      ],
+      "templateTags": [
+        "eloquence",
+        "hebrew",
+        "seed"
       ]
     },
     {
@@ -368,6 +855,43 @@
         "hindi",
         "indic",
         "lang:hi"
+      ]
+    },
+    {
+      "key": "id",
+      "languageNames": [
+        "id"
+      ],
+      "languageTag": "id",
+      "pairings": [
+        {
+          "profileId": "id-id-seed",
+          "templateId": "eloquence-seed-id-id"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-id-id"
+      ],
+      "profileIds": [
+        "id-id-seed"
+      ],
+      "profileTags": [
+        "indonesian",
+        "lang:id",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "id-id-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-id-id"
+      ],
+      "templateTags": [
+        "eloquence",
+        "indonesian",
+        "seed"
       ]
     },
     {
@@ -443,6 +967,487 @@
       ]
     },
     {
+      "key": "km",
+      "languageNames": [
+        "km"
+      ],
+      "languageTag": "km",
+      "pairings": [
+        {
+          "profileId": "km-kh-seed",
+          "templateId": "eloquence-seed-km-kh"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-km-kh"
+      ],
+      "profileIds": [
+        "km-kh-seed"
+      ],
+      "profileTags": [
+        "khmer",
+        "lang:km",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "km-kh-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-km-kh"
+      ],
+      "templateTags": [
+        "eloquence",
+        "khmer",
+        "seed"
+      ]
+    },
+    {
+      "key": "kn",
+      "languageNames": [
+        "kn"
+      ],
+      "languageTag": "kn",
+      "pairings": [
+        {
+          "profileId": "kn-in-seed",
+          "templateId": "eloquence-seed-kn-in"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-kn-in"
+      ],
+      "profileIds": [
+        "kn-in-seed"
+      ],
+      "profileTags": [
+        "kannada",
+        "lang:kn",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "kn-in-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-kn-in"
+      ],
+      "templateTags": [
+        "eloquence",
+        "kannada",
+        "seed"
+      ]
+    },
+    {
+      "key": "ko",
+      "languageNames": [
+        "ko"
+      ],
+      "languageTag": "ko",
+      "pairings": [
+        {
+          "profileId": "ko-kr-seed",
+          "templateId": "eloquence-seed-ko-kr"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ko-kr"
+      ],
+      "profileIds": [
+        "ko-kr-seed"
+      ],
+      "profileTags": [
+        "korean",
+        "lang:ko",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ko-kr-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ko-kr"
+      ],
+      "templateTags": [
+        "eloquence",
+        "korean",
+        "seed"
+      ]
+    },
+    {
+      "key": "lo",
+      "languageNames": [
+        "lo"
+      ],
+      "languageTag": "lo",
+      "pairings": [
+        {
+          "profileId": "lo-la-seed",
+          "templateId": "eloquence-seed-lo-la"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-lo-la"
+      ],
+      "profileIds": [
+        "lo-la-seed"
+      ],
+      "profileTags": [
+        "lang:lo",
+        "lao",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "lo-la-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-lo-la"
+      ],
+      "templateTags": [
+        "eloquence",
+        "lao",
+        "seed"
+      ]
+    },
+    {
+      "key": "ml",
+      "languageNames": [
+        "ml"
+      ],
+      "languageTag": "ml",
+      "pairings": [
+        {
+          "profileId": "ml-in-seed",
+          "templateId": "eloquence-seed-ml-in"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ml-in"
+      ],
+      "profileIds": [
+        "ml-in-seed"
+      ],
+      "profileTags": [
+        "lang:ml",
+        "malayalam",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ml-in-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ml-in"
+      ],
+      "templateTags": [
+        "eloquence",
+        "malayalam",
+        "seed"
+      ]
+    },
+    {
+      "key": "mr",
+      "languageNames": [
+        "mr"
+      ],
+      "languageTag": "mr",
+      "pairings": [
+        {
+          "profileId": "mr-in-seed",
+          "templateId": "eloquence-seed-mr-in"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-mr-in"
+      ],
+      "profileIds": [
+        "mr-in-seed"
+      ],
+      "profileTags": [
+        "lang:mr",
+        "marathi",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "mr-in-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-mr-in"
+      ],
+      "templateTags": [
+        "eloquence",
+        "marathi",
+        "seed"
+      ]
+    },
+    {
+      "key": "ms",
+      "languageNames": [
+        "ms"
+      ],
+      "languageTag": "ms",
+      "pairings": [
+        {
+          "profileId": "ms-my-seed",
+          "templateId": "eloquence-seed-ms-my"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ms-my"
+      ],
+      "profileIds": [
+        "ms-my-seed"
+      ],
+      "profileTags": [
+        "lang:ms",
+        "malay",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ms-my-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ms-my"
+      ],
+      "templateTags": [
+        "eloquence",
+        "malay",
+        "seed"
+      ]
+    },
+    {
+      "key": "my",
+      "languageNames": [
+        "my"
+      ],
+      "languageTag": "my",
+      "pairings": [
+        {
+          "profileId": "my-mm-seed",
+          "templateId": "eloquence-seed-my-mm"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-my-mm"
+      ],
+      "profileIds": [
+        "my-mm-seed"
+      ],
+      "profileTags": [
+        "burmese",
+        "lang:my",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "my-mm-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-my-mm"
+      ],
+      "templateTags": [
+        "burmese",
+        "eloquence",
+        "seed"
+      ]
+    },
+    {
+      "key": "nb",
+      "languageNames": [
+        "nb"
+      ],
+      "languageTag": "nb",
+      "pairings": [
+        {
+          "profileId": "nb-no-seed",
+          "templateId": "eloquence-seed-nb-no"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-nb-no"
+      ],
+      "profileIds": [
+        "nb-no-seed"
+      ],
+      "profileTags": [
+        "lang:nb",
+        "norwegian",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "nb-no-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-nb-no"
+      ],
+      "templateTags": [
+        "eloquence",
+        "norwegian",
+        "seed"
+      ]
+    },
+    {
+      "key": "ne",
+      "languageNames": [
+        "ne"
+      ],
+      "languageTag": "ne",
+      "pairings": [
+        {
+          "profileId": "ne-np-seed",
+          "templateId": "eloquence-seed-ne-np"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ne-np"
+      ],
+      "profileIds": [
+        "ne-np-seed"
+      ],
+      "profileTags": [
+        "lang:ne",
+        "nepali",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ne-np-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ne-np"
+      ],
+      "templateTags": [
+        "eloquence",
+        "nepali",
+        "seed"
+      ]
+    },
+    {
+      "key": "nl",
+      "languageNames": [
+        "nl"
+      ],
+      "languageTag": "nl",
+      "pairings": [
+        {
+          "profileId": "nl-nl-seed",
+          "templateId": "eloquence-seed-nl-nl"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-nl-nl"
+      ],
+      "profileIds": [
+        "nl-nl-seed"
+      ],
+      "profileTags": [
+        "dutch",
+        "lang:nl",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "nl-nl-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-nl-nl"
+      ],
+      "templateTags": [
+        "dutch",
+        "eloquence",
+        "seed"
+      ]
+    },
+    {
+      "key": "pa",
+      "languageNames": [
+        "pa"
+      ],
+      "languageTag": "pa",
+      "pairings": [
+        {
+          "profileId": "pa-in-seed",
+          "templateId": "eloquence-seed-pa-in"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-pa-in"
+      ],
+      "profileIds": [
+        "pa-in-seed"
+      ],
+      "profileTags": [
+        "lang:pa",
+        "punjabi",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "pa-in-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-pa-in"
+      ],
+      "templateTags": [
+        "eloquence",
+        "punjabi",
+        "seed"
+      ]
+    },
+    {
+      "key": "pl",
+      "languageNames": [
+        "pl"
+      ],
+      "languageTag": "pl",
+      "pairings": [
+        {
+          "profileId": "pl-pl-seed",
+          "templateId": "eloquence-seed-pl-pl"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-pl-pl"
+      ],
+      "profileIds": [
+        "pl-pl-seed"
+      ],
+      "profileTags": [
+        "lang:pl",
+        "polish",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "pl-pl-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-pl-pl"
+      ],
+      "templateTags": [
+        "eloquence",
+        "polish",
+        "seed"
+      ]
+    },
+    {
       "key": "pt-BR",
       "languageNames": [
         "pt-BR"
@@ -478,6 +1483,561 @@
       ]
     },
     {
+      "key": "ru",
+      "languageNames": [
+        "ru"
+      ],
+      "languageTag": "ru",
+      "pairings": [
+        {
+          "profileId": "ru-ru-seed",
+          "templateId": "eloquence-seed-ru-ru"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ru-ru"
+      ],
+      "profileIds": [
+        "ru-ru-seed"
+      ],
+      "profileTags": [
+        "lang:ru",
+        "russian",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ru-ru-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ru-ru"
+      ],
+      "templateTags": [
+        "eloquence",
+        "russian",
+        "seed"
+      ]
+    },
+    {
+      "key": "si",
+      "languageNames": [
+        "si"
+      ],
+      "languageTag": "si",
+      "pairings": [
+        {
+          "profileId": "si-lk-seed",
+          "templateId": "eloquence-seed-si-lk"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-si-lk"
+      ],
+      "profileIds": [
+        "si-lk-seed"
+      ],
+      "profileTags": [
+        "lang:si",
+        "seed",
+        "sinhala"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "si-lk-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-si-lk"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "sinhala"
+      ]
+    },
+    {
+      "key": "sv",
+      "languageNames": [
+        "sv"
+      ],
+      "languageTag": "sv",
+      "pairings": [
+        {
+          "profileId": "sv-se-seed",
+          "templateId": "eloquence-seed-sv-se"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-sv-se"
+      ],
+      "profileIds": [
+        "sv-se-seed"
+      ],
+      "profileTags": [
+        "lang:sv",
+        "seed",
+        "swedish"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "sv-se-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-sv-se"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "swedish"
+      ]
+    },
+    {
+      "key": "sw",
+      "languageNames": [
+        "sw"
+      ],
+      "languageTag": "sw",
+      "pairings": [
+        {
+          "profileId": "sw-ke-seed",
+          "templateId": "eloquence-seed-sw-ke"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-sw-ke"
+      ],
+      "profileIds": [
+        "sw-ke-seed"
+      ],
+      "profileTags": [
+        "lang:sw",
+        "seed",
+        "swahili"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "sw-ke-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-sw-ke"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "swahili"
+      ]
+    },
+    {
+      "key": "ta",
+      "languageNames": [
+        "ta"
+      ],
+      "languageTag": "ta",
+      "pairings": [
+        {
+          "profileId": "ta-in-seed",
+          "templateId": "eloquence-seed-ta-in"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ta-in"
+      ],
+      "profileIds": [
+        "ta-in-seed"
+      ],
+      "profileTags": [
+        "lang:ta",
+        "seed",
+        "tamil"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ta-in-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ta-in"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "tamil"
+      ]
+    },
+    {
+      "key": "te",
+      "languageNames": [
+        "te"
+      ],
+      "languageTag": "te",
+      "pairings": [
+        {
+          "profileId": "te-in-seed",
+          "templateId": "eloquence-seed-te-in"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-te-in"
+      ],
+      "profileIds": [
+        "te-in-seed"
+      ],
+      "profileTags": [
+        "lang:te",
+        "seed",
+        "telugu"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "te-in-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-te-in"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "telugu"
+      ]
+    },
+    {
+      "key": "th",
+      "languageNames": [
+        "th"
+      ],
+      "languageTag": "th",
+      "pairings": [
+        {
+          "profileId": "th-th-seed",
+          "templateId": "eloquence-seed-th-th"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-th-th"
+      ],
+      "profileIds": [
+        "th-th-seed"
+      ],
+      "profileTags": [
+        "lang:th",
+        "seed",
+        "thai"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "th-th-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-th-th"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "thai"
+      ]
+    },
+    {
+      "key": "tr",
+      "languageNames": [
+        "tr"
+      ],
+      "languageTag": "tr",
+      "pairings": [
+        {
+          "profileId": "tr-tr-seed",
+          "templateId": "eloquence-seed-tr-tr"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-tr-tr"
+      ],
+      "profileIds": [
+        "tr-tr-seed"
+      ],
+      "profileTags": [
+        "lang:tr",
+        "seed",
+        "turkish"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "tr-tr-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-tr-tr"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "turkish"
+      ]
+    },
+    {
+      "key": "uk",
+      "languageNames": [
+        "uk"
+      ],
+      "languageTag": "uk",
+      "pairings": [
+        {
+          "profileId": "uk-ua-seed",
+          "templateId": "eloquence-seed-uk-ua"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-uk-ua"
+      ],
+      "profileIds": [
+        "uk-ua-seed"
+      ],
+      "profileTags": [
+        "lang:uk",
+        "seed",
+        "ukrainian"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "uk-ua-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-uk-ua"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "ukrainian"
+      ]
+    },
+    {
+      "key": "ur",
+      "languageNames": [
+        "ur"
+      ],
+      "languageTag": "ur",
+      "pairings": [
+        {
+          "profileId": "ur-pk-seed",
+          "templateId": "eloquence-seed-ur-pk"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-ur-pk"
+      ],
+      "profileIds": [
+        "ur-pk-seed"
+      ],
+      "profileTags": [
+        "lang:ur",
+        "seed",
+        "urdu"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "ur-pk-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-ur-pk"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "urdu"
+      ]
+    },
+    {
+      "key": "vi",
+      "languageNames": [
+        "vi"
+      ],
+      "languageTag": "vi",
+      "pairings": [
+        {
+          "profileId": "vi-vn-seed",
+          "templateId": "eloquence-seed-vi-vn"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-vi-vn"
+      ],
+      "profileIds": [
+        "vi-vn-seed"
+      ],
+      "profileTags": [
+        "lang:vi",
+        "seed",
+        "vietnamese"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "vi-vn-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-vi-vn"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "vietnamese"
+      ]
+    },
+    {
+      "key": "yo",
+      "languageNames": [
+        "yo"
+      ],
+      "languageTag": "yo",
+      "pairings": [
+        {
+          "profileId": "yo-ng-seed",
+          "templateId": "eloquence-seed-yo-ng"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-yo-ng"
+      ],
+      "profileIds": [
+        "yo-ng-seed"
+      ],
+      "profileTags": [
+        "lang:yo",
+        "seed",
+        "yoruba"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "yo-ng-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-yo-ng"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "yoruba"
+      ]
+    },
+    {
+      "key": "yue-Hant-HK",
+      "languageNames": [
+        "yue-Hant-HK"
+      ],
+      "languageTag": "yue-Hant-HK",
+      "pairings": [
+        {
+          "profileId": "yue-hk-seed",
+          "templateId": "eloquence-seed-yue-hk"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-yue-hk"
+      ],
+      "profileIds": [
+        "yue-hk-seed"
+      ],
+      "profileTags": [
+        "cantonese",
+        "lang:yue",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "yue-hk-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-yue-hk"
+      ],
+      "templateTags": [
+        "cantonese",
+        "eloquence",
+        "seed"
+      ]
+    },
+    {
+      "key": "zh-CN",
+      "languageNames": [
+        "zh-CN"
+      ],
+      "languageTag": "zh-CN",
+      "pairings": [
+        {
+          "profileId": "zh-cn-seed",
+          "templateId": "eloquence-seed-zh-cn"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-zh-cn"
+      ],
+      "profileIds": [
+        "zh-cn-seed"
+      ],
+      "profileTags": [
+        "lang:zh",
+        "mandarin",
+        "seed"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "zh-cn-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-zh-cn"
+      ],
+      "templateTags": [
+        "eloquence",
+        "mandarin",
+        "seed"
+      ]
+    },
+    {
+      "key": "zu",
+      "languageNames": [
+        "zu"
+      ],
+      "languageTag": "zu",
+      "pairings": [
+        {
+          "profileId": "zu-za-seed",
+          "templateId": "eloquence-seed-zu-za"
+        }
+      ],
+      "profileCount": 1,
+      "profileDefaultTemplates": [
+        "eloquence-seed-zu-za"
+      ],
+      "profileIds": [
+        "zu-za-seed"
+      ],
+      "profileTags": [
+        "lang:zu",
+        "seed",
+        "zulu"
+      ],
+      "templateCount": 1,
+      "templateDefaultProfiles": [
+        "zu-za-seed"
+      ],
+      "templateIds": [
+        "eloquence-seed-zu-za"
+      ],
+      "templateTags": [
+        "eloquence",
+        "seed",
+        "zulu"
+      ]
+    },
+    {
       "key": "unspecified",
       "languageNames": [],
       "languageTag": null,
@@ -499,10 +2059,10 @@
     }
   ],
   "metadata": {
-    "generated": "2025-09-26T13:08:14Z",
-    "languageCount": 11,
-    "profileCount": 11,
-    "templateCount": 28,
+    "generated": "2025-09-26T13:39:29Z",
+    "languageCount": 53,
+    "profileCount": 53,
+    "templateCount": 70,
     "voiceCatalog": {
       "sources": [
         {
@@ -518,6 +2078,16 @@
           "id": "espeak-voices",
           "notes": "Suggested Eloquence parameter starting points for language-aware templates",
           "source": "Derived from eSpeak NG community voice definitions"
+        },
+        {
+          "file": "voices/eloquence_global_seeds.json",
+          "generated": "2025-09-26",
+          "id": "voices-eloquence-global-seeds",
+          "notes": [
+            "Templates provide neutral slider baselines so phoneme customizer work can begin immediately.",
+            "Community contributors are encouraged to replace these placeholders with recordings and tuned parameters."
+          ],
+          "source": "Seeded placeholder templates for global language coverage"
         },
         {
           "file": "voices/eloquence_heritage.json",
@@ -699,6 +2269,556 @@
         "spanish",
         "latin"
       ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ar-msa"
+      ],
+      "displayName": "Arabic (Modern Standard) \u2013 emphatic backbone",
+      "id": "ar-msa-seed",
+      "language": "ar",
+      "tags": [
+        "arabic",
+        "msa",
+        "seed",
+        "lang:ar"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ar-eg"
+      ],
+      "displayName": "Arabic (Egyptian) \u2013 colloquial glide",
+      "id": "ar-eg-seed",
+      "language": "ar-EG",
+      "tags": [
+        "arabic",
+        "egyptian",
+        "seed",
+        "lang:ar"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fa-ir"
+      ],
+      "displayName": "Persian (Farsi) \u2013 smooth ezafe",
+      "id": "fa-ir-seed",
+      "language": "fa",
+      "tags": [
+        "persian",
+        "farsi",
+        "seed",
+        "lang:fa"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ur-pk"
+      ],
+      "displayName": "Urdu \u2013 poetic glide",
+      "id": "ur-pk-seed",
+      "language": "ur",
+      "tags": [
+        "urdu",
+        "seed",
+        "lang:ur"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-he-il"
+      ],
+      "displayName": "Hebrew \u2013 modern articulation",
+      "id": "he-il-seed",
+      "language": "he",
+      "tags": [
+        "hebrew",
+        "seed",
+        "lang:he"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-am-et"
+      ],
+      "displayName": "Amharic \u2013 ejective cadence",
+      "id": "am-et-seed",
+      "language": "am",
+      "tags": [
+        "amharic",
+        "seed",
+        "lang:am"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ha-ng"
+      ],
+      "displayName": "Hausa \u2013 vibrant glottalic stops",
+      "id": "ha-ng-seed",
+      "language": "ha",
+      "tags": [
+        "hausa",
+        "seed",
+        "lang:ha"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-sw-ke"
+      ],
+      "displayName": "Swahili \u2013 coastal clarity",
+      "id": "sw-ke-seed",
+      "language": "sw",
+      "tags": [
+        "swahili",
+        "seed",
+        "lang:sw"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-yo-ng"
+      ],
+      "displayName": "Yoruba \u2013 tonal resonance",
+      "id": "yo-ng-seed",
+      "language": "yo",
+      "tags": [
+        "yoruba",
+        "seed",
+        "lang:yo"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-zu-za"
+      ],
+      "displayName": "Zulu \u2013 click-rich texture",
+      "id": "zu-za-seed",
+      "language": "zu",
+      "tags": [
+        "zulu",
+        "seed",
+        "lang:zu"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-zh-cn"
+      ],
+      "displayName": "Chinese (Mandarin) \u2013 tonal baseline",
+      "id": "zh-cn-seed",
+      "language": "zh-CN",
+      "tags": [
+        "mandarin",
+        "seed",
+        "lang:zh"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-yue-hk"
+      ],
+      "displayName": "Chinese (Cantonese) \u2013 six-tone contour",
+      "id": "yue-hk-seed",
+      "language": "yue-Hant-HK",
+      "tags": [
+        "cantonese",
+        "seed",
+        "lang:yue"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ko-kr"
+      ],
+      "displayName": "Korean \u2013 fortis balance",
+      "id": "ko-kr-seed",
+      "language": "ko",
+      "tags": [
+        "korean",
+        "seed",
+        "lang:ko"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-vi-vn"
+      ],
+      "displayName": "Vietnamese \u2013 six-tone brilliance",
+      "id": "vi-vn-seed",
+      "language": "vi",
+      "tags": [
+        "vietnamese",
+        "seed",
+        "lang:vi"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-th-th"
+      ],
+      "displayName": "Thai \u2013 tonal glide",
+      "id": "th-th-seed",
+      "language": "th",
+      "tags": [
+        "thai",
+        "seed",
+        "lang:th"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-id-id"
+      ],
+      "displayName": "Indonesian \u2013 archipelago clarity",
+      "id": "id-id-seed",
+      "language": "id",
+      "tags": [
+        "indonesian",
+        "seed",
+        "lang:id"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ms-my"
+      ],
+      "displayName": "Malay \u2013 peninsular warmth",
+      "id": "ms-my-seed",
+      "language": "ms",
+      "tags": [
+        "malay",
+        "seed",
+        "lang:ms"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fil-ph"
+      ],
+      "displayName": "Filipino \u2013 Tagalog clarity",
+      "id": "fil-ph-seed",
+      "language": "fil",
+      "tags": [
+        "filipino",
+        "tagalog",
+        "seed",
+        "lang:fil"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-bn-bd"
+      ],
+      "displayName": "Bengali \u2013 retroflex melody",
+      "id": "bn-bd-seed",
+      "language": "bn",
+      "tags": [
+        "bengali",
+        "seed",
+        "lang:bn"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ta-in"
+      ],
+      "displayName": "Tamil \u2013 classical resonance",
+      "id": "ta-in-seed",
+      "language": "ta",
+      "tags": [
+        "tamil",
+        "seed",
+        "lang:ta"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-te-in"
+      ],
+      "displayName": "Telugu \u2013 lyrical aspiration",
+      "id": "te-in-seed",
+      "language": "te",
+      "tags": [
+        "telugu",
+        "seed",
+        "lang:te"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ml-in"
+      ],
+      "displayName": "Malayalam \u2013 retroflex waves",
+      "id": "ml-in-seed",
+      "language": "ml",
+      "tags": [
+        "malayalam",
+        "seed",
+        "lang:ml"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-kn-in"
+      ],
+      "displayName": "Kannada \u2013 gentle palatals",
+      "id": "kn-in-seed",
+      "language": "kn",
+      "tags": [
+        "kannada",
+        "seed",
+        "lang:kn"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-mr-in"
+      ],
+      "displayName": "Marathi \u2013 syllabic liquids",
+      "id": "mr-in-seed",
+      "language": "mr",
+      "tags": [
+        "marathi",
+        "seed",
+        "lang:mr"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-gu-in"
+      ],
+      "displayName": "Gujarati \u2013 vocalic resonances",
+      "id": "gu-in-seed",
+      "language": "gu",
+      "tags": [
+        "gujarati",
+        "seed",
+        "lang:gu"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-pa-in"
+      ],
+      "displayName": "Punjabi \u2013 tonal Gurmukhi",
+      "id": "pa-in-seed",
+      "language": "pa",
+      "tags": [
+        "punjabi",
+        "seed",
+        "lang:pa"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-si-lk"
+      ],
+      "displayName": "Sinhala \u2013 rounded cadence",
+      "id": "si-lk-seed",
+      "language": "si",
+      "tags": [
+        "sinhala",
+        "seed",
+        "lang:si"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-km-kh"
+      ],
+      "displayName": "Khmer \u2013 diphthong radiance",
+      "id": "km-kh-seed",
+      "language": "km",
+      "tags": [
+        "khmer",
+        "seed",
+        "lang:km"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-my-mm"
+      ],
+      "displayName": "Burmese \u2013 creaky tone balance",
+      "id": "my-mm-seed",
+      "language": "my",
+      "tags": [
+        "burmese",
+        "seed",
+        "lang:my"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-lo-la"
+      ],
+      "displayName": "Lao \u2013 tone class guidance",
+      "id": "lo-la-seed",
+      "language": "lo",
+      "tags": [
+        "lao",
+        "seed",
+        "lang:lo"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ne-np"
+      ],
+      "displayName": "Nepali \u2013 Himalayan cadence",
+      "id": "ne-np-seed",
+      "language": "ne",
+      "tags": [
+        "nepali",
+        "seed",
+        "lang:ne"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ru-ru"
+      ],
+      "displayName": "Russian \u2013 palatal richness",
+      "id": "ru-ru-seed",
+      "language": "ru",
+      "tags": [
+        "russian",
+        "seed",
+        "lang:ru"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-uk-ua"
+      ],
+      "displayName": "Ukrainian \u2013 bright palatals",
+      "id": "uk-ua-seed",
+      "language": "uk",
+      "tags": [
+        "ukrainian",
+        "seed",
+        "lang:uk"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-pl-pl"
+      ],
+      "displayName": "Polish \u2013 sibilant contrast",
+      "id": "pl-pl-seed",
+      "language": "pl",
+      "tags": [
+        "polish",
+        "seed",
+        "lang:pl"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-cs-cz"
+      ],
+      "displayName": "Czech \u2013 trill precision",
+      "id": "cs-cz-seed",
+      "language": "cs",
+      "tags": [
+        "czech",
+        "seed",
+        "lang:cs"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-tr-tr"
+      ],
+      "displayName": "Turkish \u2013 vowel harmony",
+      "id": "tr-tr-seed",
+      "language": "tr",
+      "tags": [
+        "turkish",
+        "seed",
+        "lang:tr"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-el-gr"
+      ],
+      "displayName": "Greek \u2013 consonant balance",
+      "id": "el-gr-seed",
+      "language": "el",
+      "tags": [
+        "greek",
+        "seed",
+        "lang:el"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-nl-nl"
+      ],
+      "displayName": "Dutch \u2013 diphthong clarity",
+      "id": "nl-nl-seed",
+      "language": "nl",
+      "tags": [
+        "dutch",
+        "seed",
+        "lang:nl"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-sv-se"
+      ],
+      "displayName": "Swedish \u2013 pitch accent",
+      "id": "sv-se-seed",
+      "language": "sv",
+      "tags": [
+        "swedish",
+        "seed",
+        "lang:sv"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-nb-no"
+      ],
+      "displayName": "Norwegian (Bokm\u00e5l) \u2013 tonal balance",
+      "id": "nb-no-seed",
+      "language": "nb",
+      "tags": [
+        "norwegian",
+        "seed",
+        "lang:nb"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-da-dk"
+      ],
+      "displayName": "Danish \u2013 st\u00f8d scaffolding",
+      "id": "da-dk-seed",
+      "language": "da",
+      "tags": [
+        "danish",
+        "seed",
+        "lang:da"
+      ]
+    },
+    {
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fi-fi"
+      ],
+      "displayName": "Finnish \u2013 vowel length discipline",
+      "id": "fi-fi-seed",
+      "language": "fi",
+      "tags": [
+        "finnish",
+        "seed",
+        "lang:fi"
+      ]
     }
   ],
   "templates": [
@@ -847,6 +2967,470 @@
         "lang:ja",
         "espeak",
         "asia"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ar-msa-seed",
+      "id": "eloquence-seed-ar-msa",
+      "language": "ar",
+      "name": "Eloquence seed \u2013 Arabic (MSA)",
+      "tags": [
+        "eloquence",
+        "seed",
+        "arabic",
+        "placeholder"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ar-eg-seed",
+      "id": "eloquence-seed-ar-eg",
+      "language": "ar-EG",
+      "name": "Eloquence seed \u2013 Arabic (Egyptian)",
+      "tags": [
+        "eloquence",
+        "seed",
+        "arabic",
+        "egyptian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "fa-ir-seed",
+      "id": "eloquence-seed-fa-ir",
+      "language": "fa",
+      "name": "Eloquence seed \u2013 Persian",
+      "tags": [
+        "eloquence",
+        "seed",
+        "persian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ur-pk-seed",
+      "id": "eloquence-seed-ur-pk",
+      "language": "ur",
+      "name": "Eloquence seed \u2013 Urdu",
+      "tags": [
+        "eloquence",
+        "seed",
+        "urdu"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "he-il-seed",
+      "id": "eloquence-seed-he-il",
+      "language": "he",
+      "name": "Eloquence seed \u2013 Hebrew",
+      "tags": [
+        "eloquence",
+        "seed",
+        "hebrew"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "am-et-seed",
+      "id": "eloquence-seed-am-et",
+      "language": "am",
+      "name": "Eloquence seed \u2013 Amharic",
+      "tags": [
+        "eloquence",
+        "seed",
+        "amharic"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ha-ng-seed",
+      "id": "eloquence-seed-ha-ng",
+      "language": "ha",
+      "name": "Eloquence seed \u2013 Hausa",
+      "tags": [
+        "eloquence",
+        "seed",
+        "hausa"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "sw-ke-seed",
+      "id": "eloquence-seed-sw-ke",
+      "language": "sw",
+      "name": "Eloquence seed \u2013 Swahili",
+      "tags": [
+        "eloquence",
+        "seed",
+        "swahili"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "yo-ng-seed",
+      "id": "eloquence-seed-yo-ng",
+      "language": "yo",
+      "name": "Eloquence seed \u2013 Yoruba",
+      "tags": [
+        "eloquence",
+        "seed",
+        "yoruba"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "zu-za-seed",
+      "id": "eloquence-seed-zu-za",
+      "language": "zu",
+      "name": "Eloquence seed \u2013 Zulu",
+      "tags": [
+        "eloquence",
+        "seed",
+        "zulu"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "zh-cn-seed",
+      "id": "eloquence-seed-zh-cn",
+      "language": "zh-CN",
+      "name": "Eloquence seed \u2013 Mandarin",
+      "tags": [
+        "eloquence",
+        "seed",
+        "mandarin"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "yue-hk-seed",
+      "id": "eloquence-seed-yue-hk",
+      "language": "yue-Hant-HK",
+      "name": "Eloquence seed \u2013 Cantonese",
+      "tags": [
+        "eloquence",
+        "seed",
+        "cantonese"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ko-kr-seed",
+      "id": "eloquence-seed-ko-kr",
+      "language": "ko",
+      "name": "Eloquence seed \u2013 Korean",
+      "tags": [
+        "eloquence",
+        "seed",
+        "korean"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "vi-vn-seed",
+      "id": "eloquence-seed-vi-vn",
+      "language": "vi",
+      "name": "Eloquence seed \u2013 Vietnamese",
+      "tags": [
+        "eloquence",
+        "seed",
+        "vietnamese"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "th-th-seed",
+      "id": "eloquence-seed-th-th",
+      "language": "th",
+      "name": "Eloquence seed \u2013 Thai",
+      "tags": [
+        "eloquence",
+        "seed",
+        "thai"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "id-id-seed",
+      "id": "eloquence-seed-id-id",
+      "language": "id",
+      "name": "Eloquence seed \u2013 Indonesian",
+      "tags": [
+        "eloquence",
+        "seed",
+        "indonesian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ms-my-seed",
+      "id": "eloquence-seed-ms-my",
+      "language": "ms",
+      "name": "Eloquence seed \u2013 Malay",
+      "tags": [
+        "eloquence",
+        "seed",
+        "malay"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "fil-ph-seed",
+      "id": "eloquence-seed-fil-ph",
+      "language": "fil",
+      "name": "Eloquence seed \u2013 Filipino",
+      "tags": [
+        "eloquence",
+        "seed",
+        "filipino"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "bn-bd-seed",
+      "id": "eloquence-seed-bn-bd",
+      "language": "bn",
+      "name": "Eloquence seed \u2013 Bengali",
+      "tags": [
+        "eloquence",
+        "seed",
+        "bengali"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ta-in-seed",
+      "id": "eloquence-seed-ta-in",
+      "language": "ta",
+      "name": "Eloquence seed \u2013 Tamil",
+      "tags": [
+        "eloquence",
+        "seed",
+        "tamil"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "te-in-seed",
+      "id": "eloquence-seed-te-in",
+      "language": "te",
+      "name": "Eloquence seed \u2013 Telugu",
+      "tags": [
+        "eloquence",
+        "seed",
+        "telugu"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ml-in-seed",
+      "id": "eloquence-seed-ml-in",
+      "language": "ml",
+      "name": "Eloquence seed \u2013 Malayalam",
+      "tags": [
+        "eloquence",
+        "seed",
+        "malayalam"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "kn-in-seed",
+      "id": "eloquence-seed-kn-in",
+      "language": "kn",
+      "name": "Eloquence seed \u2013 Kannada",
+      "tags": [
+        "eloquence",
+        "seed",
+        "kannada"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "mr-in-seed",
+      "id": "eloquence-seed-mr-in",
+      "language": "mr",
+      "name": "Eloquence seed \u2013 Marathi",
+      "tags": [
+        "eloquence",
+        "seed",
+        "marathi"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "gu-in-seed",
+      "id": "eloquence-seed-gu-in",
+      "language": "gu",
+      "name": "Eloquence seed \u2013 Gujarati",
+      "tags": [
+        "eloquence",
+        "seed",
+        "gujarati"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "pa-in-seed",
+      "id": "eloquence-seed-pa-in",
+      "language": "pa",
+      "name": "Eloquence seed \u2013 Punjabi",
+      "tags": [
+        "eloquence",
+        "seed",
+        "punjabi"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "si-lk-seed",
+      "id": "eloquence-seed-si-lk",
+      "language": "si",
+      "name": "Eloquence seed \u2013 Sinhala",
+      "tags": [
+        "eloquence",
+        "seed",
+        "sinhala"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "km-kh-seed",
+      "id": "eloquence-seed-km-kh",
+      "language": "km",
+      "name": "Eloquence seed \u2013 Khmer",
+      "tags": [
+        "eloquence",
+        "seed",
+        "khmer"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "my-mm-seed",
+      "id": "eloquence-seed-my-mm",
+      "language": "my",
+      "name": "Eloquence seed \u2013 Burmese",
+      "tags": [
+        "eloquence",
+        "seed",
+        "burmese"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "lo-la-seed",
+      "id": "eloquence-seed-lo-la",
+      "language": "lo",
+      "name": "Eloquence seed \u2013 Lao",
+      "tags": [
+        "eloquence",
+        "seed",
+        "lao"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ne-np-seed",
+      "id": "eloquence-seed-ne-np",
+      "language": "ne",
+      "name": "Eloquence seed \u2013 Nepali",
+      "tags": [
+        "eloquence",
+        "seed",
+        "nepali"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ru-ru-seed",
+      "id": "eloquence-seed-ru-ru",
+      "language": "ru",
+      "name": "Eloquence seed \u2013 Russian",
+      "tags": [
+        "eloquence",
+        "seed",
+        "russian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "uk-ua-seed",
+      "id": "eloquence-seed-uk-ua",
+      "language": "uk",
+      "name": "Eloquence seed \u2013 Ukrainian",
+      "tags": [
+        "eloquence",
+        "seed",
+        "ukrainian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "pl-pl-seed",
+      "id": "eloquence-seed-pl-pl",
+      "language": "pl",
+      "name": "Eloquence seed \u2013 Polish",
+      "tags": [
+        "eloquence",
+        "seed",
+        "polish"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "cs-cz-seed",
+      "id": "eloquence-seed-cs-cz",
+      "language": "cs",
+      "name": "Eloquence seed \u2013 Czech",
+      "tags": [
+        "eloquence",
+        "seed",
+        "czech"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "tr-tr-seed",
+      "id": "eloquence-seed-tr-tr",
+      "language": "tr",
+      "name": "Eloquence seed \u2013 Turkish",
+      "tags": [
+        "eloquence",
+        "seed",
+        "turkish"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "el-gr-seed",
+      "id": "eloquence-seed-el-gr",
+      "language": "el",
+      "name": "Eloquence seed \u2013 Greek",
+      "tags": [
+        "eloquence",
+        "seed",
+        "greek"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "nl-nl-seed",
+      "id": "eloquence-seed-nl-nl",
+      "language": "nl",
+      "name": "Eloquence seed \u2013 Dutch",
+      "tags": [
+        "eloquence",
+        "seed",
+        "dutch"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "sv-se-seed",
+      "id": "eloquence-seed-sv-se",
+      "language": "sv",
+      "name": "Eloquence seed \u2013 Swedish",
+      "tags": [
+        "eloquence",
+        "seed",
+        "swedish"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "nb-no-seed",
+      "id": "eloquence-seed-nb-no",
+      "language": "nb",
+      "name": "Eloquence seed \u2013 Norwegian",
+      "tags": [
+        "eloquence",
+        "seed",
+        "norwegian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "da-dk-seed",
+      "id": "eloquence-seed-da-dk",
+      "language": "da",
+      "name": "Eloquence seed \u2013 Danish",
+      "tags": [
+        "eloquence",
+        "seed",
+        "danish"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "fi-fi-seed",
+      "id": "eloquence-seed-fi-fi",
+      "language": "fi",
+      "name": "Eloquence seed \u2013 Finnish",
+      "tags": [
+        "eloquence",
+        "seed",
+        "finnish"
       ]
     },
     {

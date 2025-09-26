@@ -1,5 +1,73 @@
 {
   "languages": {
+    "am": {
+      "count": 1,
+      "tags": [
+        "amharic",
+        "eloquence",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-am-et"
+      ]
+    },
+    "ar": {
+      "count": 1,
+      "tags": [
+        "arabic",
+        "eloquence",
+        "placeholder",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-ar-msa"
+      ]
+    },
+    "ar-EG": {
+      "count": 1,
+      "tags": [
+        "arabic",
+        "egyptian",
+        "eloquence",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-ar-eg"
+      ]
+    },
+    "bn": {
+      "count": 1,
+      "tags": [
+        "bengali",
+        "eloquence",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-bn-bd"
+      ]
+    },
+    "cs": {
+      "count": 1,
+      "tags": [
+        "czech",
+        "eloquence",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-cs-cz"
+      ]
+    },
+    "da": {
+      "count": 1,
+      "tags": [
+        "danish",
+        "eloquence",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-da-dk"
+      ]
+    },
     "de-DE": {
       "count": 1,
       "tags": [
@@ -7,6 +75,17 @@
       ],
       "templates": [
         "espeak-de-precision"
+      ]
+    },
+    "el": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "greek",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-el-gr"
       ]
     },
     "en-GB": {
@@ -91,6 +170,39 @@
         "espeak-es-castilian"
       ]
     },
+    "fa": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "persian",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-fa-ir"
+      ]
+    },
+    "fi": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "finnish",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-fi-fi"
+      ]
+    },
+    "fil": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "filipino",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-fil-ph"
+      ]
+    },
     "fr-FR": {
       "count": 1,
       "tags": [
@@ -98,6 +210,39 @@
       ],
       "templates": [
         "espeak-fr-velvet"
+      ]
+    },
+    "gu": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "gujarati",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-gu-in"
+      ]
+    },
+    "ha": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "hausa",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-ha-ng"
+      ]
+    },
+    "he": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "hebrew",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-he-il"
       ]
     },
     "hi-IN": {
@@ -110,6 +255,17 @@
       ],
       "templates": [
         "espeak-hi-dynamic"
+      ]
+    },
+    "id": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "indonesian",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-id-id"
       ]
     },
     "it-IT": {
@@ -133,6 +289,149 @@
         "espeak-ja-melodic"
       ]
     },
+    "km": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "khmer",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-km-kh"
+      ]
+    },
+    "kn": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "kannada",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-kn-in"
+      ]
+    },
+    "ko": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "korean",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-ko-kr"
+      ]
+    },
+    "lo": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "lao",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-lo-la"
+      ]
+    },
+    "ml": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "malayalam",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-ml-in"
+      ]
+    },
+    "mr": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "marathi",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-mr-in"
+      ]
+    },
+    "ms": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "malay",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-ms-my"
+      ]
+    },
+    "my": {
+      "count": 1,
+      "tags": [
+        "burmese",
+        "eloquence",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-my-mm"
+      ]
+    },
+    "nb": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "norwegian",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-nb-no"
+      ]
+    },
+    "ne": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "nepali",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-ne-np"
+      ]
+    },
+    "nl": {
+      "count": 1,
+      "tags": [
+        "dutch",
+        "eloquence",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-nl-nl"
+      ]
+    },
+    "pa": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "punjabi",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-pa-in"
+      ]
+    },
+    "pl": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "polish",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-pl-pl"
+      ]
+    },
     "pt-BR": {
       "count": 1,
       "tags": [
@@ -141,6 +440,105 @@
       ],
       "templates": [
         "espeak-pt-br-vibrant"
+      ]
+    },
+    "ru": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "russian",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-ru-ru"
+      ]
+    },
+    "si": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "sinhala"
+      ],
+      "templates": [
+        "eloquence-seed-si-lk"
+      ]
+    },
+    "sv": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "swedish"
+      ],
+      "templates": [
+        "eloquence-seed-sv-se"
+      ]
+    },
+    "sw": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "swahili"
+      ],
+      "templates": [
+        "eloquence-seed-sw-ke"
+      ]
+    },
+    "ta": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "tamil"
+      ],
+      "templates": [
+        "eloquence-seed-ta-in"
+      ]
+    },
+    "te": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "telugu"
+      ],
+      "templates": [
+        "eloquence-seed-te-in"
+      ]
+    },
+    "th": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "thai"
+      ],
+      "templates": [
+        "eloquence-seed-th-th"
+      ]
+    },
+    "tr": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "turkish"
+      ],
+      "templates": [
+        "eloquence-seed-tr-tr"
+      ]
+    },
+    "uk": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "ukrainian"
+      ],
+      "templates": [
+        "eloquence-seed-uk-ua"
       ]
     },
     "unspecified": {
@@ -152,6 +550,72 @@
       ],
       "templates": [
         "espeak-variant-espeak-variants-alex"
+      ]
+    },
+    "ur": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "urdu"
+      ],
+      "templates": [
+        "eloquence-seed-ur-pk"
+      ]
+    },
+    "vi": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "vietnamese"
+      ],
+      "templates": [
+        "eloquence-seed-vi-vn"
+      ]
+    },
+    "yo": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "yoruba"
+      ],
+      "templates": [
+        "eloquence-seed-yo-ng"
+      ]
+    },
+    "yue-Hant-HK": {
+      "count": 1,
+      "tags": [
+        "cantonese",
+        "eloquence",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-yue-hk"
+      ]
+    },
+    "zh-CN": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "mandarin",
+        "seed"
+      ],
+      "templates": [
+        "eloquence-seed-zh-cn"
+      ]
+    },
+    "zu": {
+      "count": 1,
+      "tags": [
+        "eloquence",
+        "seed",
+        "zulu"
+      ],
+      "templates": [
+        "eloquence-seed-zu-za"
       ]
     }
   },
@@ -171,6 +635,16 @@
           "id": "espeak-voices",
           "notes": "Suggested Eloquence parameter starting points for language-aware templates",
           "source": "Derived from eSpeak NG community voice definitions"
+        },
+        {
+          "file": "voices/eloquence_global_seeds.json",
+          "generated": "2025-09-26",
+          "id": "voices-eloquence-global-seeds",
+          "notes": [
+            "Templates provide neutral slider baselines so phoneme customizer work can begin immediately.",
+            "Community contributors are encouraged to replace these placeholders with recordings and tuned parameters."
+          ],
+          "source": "Seeded placeholder templates for global language coverage"
         },
         {
           "file": "voices/eloquence_heritage.json",
@@ -212,9 +686,9 @@
         }
       ]
     },
-    "generated": "2025-09-26T13:07:51Z",
-    "languageCount": 11,
-    "templateCount": 28
+    "generated": "2025-09-26T13:39:35Z",
+    "languageCount": 53,
+    "templateCount": 70
   },
   "parameterRanges": {
     "breathiness": {
@@ -527,7 +1001,7 @@
   },
   "parameterUsage": {
     "breathiness": {
-      "templateCount": 28,
+      "templateCount": 70,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -540,6 +1014,48 @@
         "eloquence-sapi4-viavoice-tracy",
         "eloquence-sapi5-codefactory-balanced",
         "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "eloquence-window-eyes-expressive",
         "espeak-de-precision",
         "espeak-en-gb-clarity",
@@ -560,8 +1076,50 @@
       ]
     },
     "emphasis": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -569,7 +1127,7 @@
       ]
     },
     "gender": {
-      "templateCount": 24,
+      "templateCount": 66,
       "templates": [
         "eloquence-bhp-precision",
         "eloquence-heritage-jaws-classic",
@@ -578,6 +1136,48 @@
         "eloquence-sapi4-viavoice-tracy",
         "eloquence-sapi5-codefactory-balanced",
         "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "eloquence-window-eyes-expressive",
         "espeak-de-precision",
         "espeak-en-gb-clarity",
@@ -598,7 +1198,7 @@
       ]
     },
     "headSize": {
-      "templateCount": 28,
+      "templateCount": 70,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -611,6 +1211,48 @@
         "eloquence-sapi4-viavoice-tracy",
         "eloquence-sapi5-codefactory-balanced",
         "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "eloquence-window-eyes-expressive",
         "espeak-de-precision",
         "espeak-en-gb-clarity",
@@ -631,8 +1273,50 @@
       ]
     },
     "headSizeContour": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -640,7 +1324,7 @@
       ]
     },
     "inflection": {
-      "templateCount": 28,
+      "templateCount": 70,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -653,6 +1337,48 @@
         "eloquence-sapi4-viavoice-tracy",
         "eloquence-sapi5-codefactory-balanced",
         "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "eloquence-window-eyes-expressive",
         "espeak-de-precision",
         "espeak-en-gb-clarity",
@@ -673,8 +1399,50 @@
       ]
     },
     "inflectionContour": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -682,8 +1450,50 @@
       ]
     },
     "macroVolume": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -691,8 +1501,50 @@
       ]
     },
     "overtones": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -700,7 +1552,7 @@
       ]
     },
     "pitch": {
-      "templateCount": 28,
+      "templateCount": 70,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -713,6 +1565,48 @@
         "eloquence-sapi4-viavoice-tracy",
         "eloquence-sapi5-codefactory-balanced",
         "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "eloquence-window-eyes-expressive",
         "espeak-de-precision",
         "espeak-en-gb-clarity",
@@ -733,7 +1627,7 @@
       ]
     },
     "rate": {
-      "templateCount": 28,
+      "templateCount": 70,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -746,6 +1640,48 @@
         "eloquence-sapi4-viavoice-tracy",
         "eloquence-sapi5-codefactory-balanced",
         "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "eloquence-window-eyes-expressive",
         "espeak-de-precision",
         "espeak-en-gb-clarity",
@@ -766,7 +1702,7 @@
       ]
     },
     "roughness": {
-      "templateCount": 28,
+      "templateCount": 70,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -779,6 +1715,48 @@
         "eloquence-sapi4-viavoice-tracy",
         "eloquence-sapi5-codefactory-balanced",
         "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "eloquence-window-eyes-expressive",
         "espeak-de-precision",
         "espeak-en-gb-clarity",
@@ -799,8 +1777,50 @@
       ]
     },
     "roughnessControl": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -812,8 +1832,50 @@
       "templates": []
     },
     "scopeDepth": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -821,8 +1883,50 @@
       ]
     },
     "smoothness": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -830,8 +1934,50 @@
       ]
     },
     "stress": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -839,8 +1985,50 @@
       ]
     },
     "subtones": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -848,8 +2036,50 @@
       ]
     },
     "timbre": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -857,8 +2087,50 @@
       ]
     },
     "tone": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -866,8 +2138,50 @@
       ]
     },
     "toneSize": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -875,8 +2189,50 @@
       ]
     },
     "vocalLayers": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -884,8 +2240,50 @@
       ]
     },
     "vocalRange": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -893,7 +2291,7 @@
       ]
     },
     "volume": {
-      "templateCount": 28,
+      "templateCount": 70,
       "templates": [
         "dectalk-beautiful-betty",
         "dectalk-perfect-paul",
@@ -906,6 +2304,48 @@
         "eloquence-sapi4-viavoice-tracy",
         "eloquence-sapi5-codefactory-balanced",
         "eloquence-sapi5-viavoice-paul-xl",
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "eloquence-window-eyes-expressive",
         "espeak-de-precision",
         "espeak-en-gb-clarity",
@@ -926,8 +2366,50 @@
       ]
     },
     "whisper": {
-      "templateCount": 4,
+      "templateCount": 46,
       "templates": [
+        "eloquence-seed-am-et",
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa",
+        "eloquence-seed-bn-bd",
+        "eloquence-seed-cs-cz",
+        "eloquence-seed-da-dk",
+        "eloquence-seed-el-gr",
+        "eloquence-seed-fa-ir",
+        "eloquence-seed-fi-fi",
+        "eloquence-seed-fil-ph",
+        "eloquence-seed-gu-in",
+        "eloquence-seed-ha-ng",
+        "eloquence-seed-he-il",
+        "eloquence-seed-id-id",
+        "eloquence-seed-km-kh",
+        "eloquence-seed-kn-in",
+        "eloquence-seed-ko-kr",
+        "eloquence-seed-lo-la",
+        "eloquence-seed-ml-in",
+        "eloquence-seed-mr-in",
+        "eloquence-seed-ms-my",
+        "eloquence-seed-my-mm",
+        "eloquence-seed-nb-no",
+        "eloquence-seed-ne-np",
+        "eloquence-seed-nl-nl",
+        "eloquence-seed-pa-in",
+        "eloquence-seed-pl-pl",
+        "eloquence-seed-ru-ru",
+        "eloquence-seed-si-lk",
+        "eloquence-seed-sv-se",
+        "eloquence-seed-sw-ke",
+        "eloquence-seed-ta-in",
+        "eloquence-seed-te-in",
+        "eloquence-seed-th-th",
+        "eloquence-seed-tr-tr",
+        "eloquence-seed-uk-ua",
+        "eloquence-seed-ur-pk",
+        "eloquence-seed-vi-vn",
+        "eloquence-seed-yo-ng",
+        "eloquence-seed-yue-hk",
+        "eloquence-seed-zh-cn",
+        "eloquence-seed-zu-za",
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -1243,6 +2725,1856 @@
         "lang:ja",
         "espeak",
         "asia"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ar-msa-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ar-msa",
+      "language": "ar",
+      "name": "Eloquence seed \u2013 Arabic (MSA)",
+      "parameters": {
+        "breathiness": 18,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 118,
+        "headSizeContour": 100,
+        "inflection": 60,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 92,
+        "pitch": 96,
+        "rate": 100,
+        "roughness": 24,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 110,
+        "timbre": 108,
+        "tone": 96,
+        "toneSize": 100,
+        "vocalLayers": 104,
+        "vocalRange": 102,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "arabic",
+        "placeholder"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ar-eg-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ar-eg",
+      "language": "ar-EG",
+      "name": "Eloquence seed \u2013 Arabic (Egyptian)",
+      "parameters": {
+        "breathiness": 26,
+        "emphasis": 112,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 58,
+        "inflectionContour": 100,
+        "macroVolume": 108,
+        "overtones": 100,
+        "pitch": 108,
+        "rate": 106,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 104,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 112
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "arabic",
+        "egyptian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "fa-ir-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-fa-ir",
+      "language": "fa",
+      "name": "Eloquence seed \u2013 Persian",
+      "parameters": {
+        "breathiness": 28,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 60,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 114,
+        "rate": 98,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 118,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 112,
+        "tone": 110,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "persian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ur-pk-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ur-pk",
+      "language": "ur",
+      "name": "Eloquence seed \u2013 Urdu",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 116,
+        "gender": 0,
+        "headSize": 116,
+        "headSizeContour": 100,
+        "inflection": 64,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 112,
+        "rate": 94,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 108,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 112,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 108
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "urdu"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "he-il-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-he-il",
+      "language": "he",
+      "name": "Eloquence seed \u2013 Hebrew",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 120,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 56,
+        "inflectionContour": 100,
+        "macroVolume": 104,
+        "overtones": 116,
+        "pitch": 118,
+        "rate": 104,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "hebrew"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "am-et-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-am-et",
+      "language": "am",
+      "name": "Eloquence seed \u2013 Amharic",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 126,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 68,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 116,
+        "rate": 92,
+        "roughness": 22,
+        "roughnessControl": 100,
+        "scopeDepth": 112,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 108,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "amharic"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ha-ng-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ha-ng",
+      "language": "ha",
+      "name": "Eloquence seed \u2013 Hausa",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 124,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 70,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 122,
+        "rate": 104,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 110,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 128,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "hausa"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "sw-ke-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-sw-ke",
+      "language": "sw",
+      "name": "Eloquence seed \u2013 Swahili",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 112,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 54,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 120,
+        "rate": 108,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 120,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 106,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "swahili"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "yo-ng-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-yo-ng",
+      "language": "yo",
+      "name": "Eloquence seed \u2013 Yoruba",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 78,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 126,
+        "rate": 100,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 116,
+        "timbre": 100,
+        "tone": 136,
+        "toneSize": 124,
+        "vocalLayers": 100,
+        "vocalRange": 118,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "yoruba"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "zu-za-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-zu-za",
+      "language": "zu",
+      "name": "Eloquence seed \u2013 Zulu",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 68,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 128,
+        "pitch": 116,
+        "rate": 102,
+        "roughness": 26,
+        "roughnessControl": 100,
+        "scopeDepth": 120,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 108,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "zulu"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "zh-cn-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-zh-cn",
+      "language": "zh-CN",
+      "name": "Eloquence seed \u2013 Mandarin",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 80,
+        "inflectionContour": 100,
+        "macroVolume": 110,
+        "overtones": 100,
+        "pitch": 124,
+        "rate": 112,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 138,
+        "toneSize": 126,
+        "vocalLayers": 100,
+        "vocalRange": 122,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "mandarin"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "yue-hk-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-yue-hk",
+      "language": "yue-Hant-HK",
+      "name": "Eloquence seed \u2013 Cantonese",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 88,
+        "inflectionContour": 100,
+        "macroVolume": 112,
+        "overtones": 100,
+        "pitch": 130,
+        "rate": 116,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 114,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 142,
+        "toneSize": 130,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "cantonese"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ko-kr-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ko-kr",
+      "language": "ko",
+      "name": "Eloquence seed \u2013 Korean",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 128,
+        "gender": 0,
+        "headSize": 114,
+        "headSizeContour": 100,
+        "inflection": 72,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 118,
+        "rate": 108,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 116,
+        "smoothness": 124,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "korean"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "vi-vn-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-vi-vn",
+      "language": "vi",
+      "name": "Eloquence seed \u2013 Vietnamese",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 90,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 134,
+        "rate": 118,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 110,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 144,
+        "toneSize": 132,
+        "vocalLayers": 100,
+        "vocalRange": 126,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "vietnamese"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "th-th-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-th-th",
+      "language": "th",
+      "name": "Eloquence seed \u2013 Thai",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 84,
+        "inflectionContour": 100,
+        "macroVolume": 112,
+        "overtones": 100,
+        "pitch": 128,
+        "rate": 112,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 140,
+        "toneSize": 128,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "thai"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "id-id-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-id-id",
+      "language": "id",
+      "name": "Eloquence seed \u2013 Indonesian",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 60,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 118,
+        "rate": 110,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 118,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 108,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "indonesian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ms-my-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ms-my",
+      "language": "ms",
+      "name": "Eloquence seed \u2013 Malay",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 58,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 116,
+        "rate": 106,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 116,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 112
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "malay"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "fil-ph-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-fil-ph",
+      "language": "fil",
+      "name": "Eloquence seed \u2013 Filipino",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 114,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 62,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 120,
+        "rate": 108,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 120,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 108,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "filipino"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "bn-bd-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-bn-bd",
+      "language": "bn",
+      "name": "Eloquence seed \u2013 Bengali",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 66,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 118,
+        "pitch": 122,
+        "rate": 100,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 116,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 112,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "bengali"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ta-in-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ta-in",
+      "language": "ta",
+      "name": "Eloquence seed \u2013 Tamil",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 124,
+        "gender": 0,
+        "headSize": 118,
+        "headSizeContour": 100,
+        "inflection": 58,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 114,
+        "rate": 94,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 120,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 118,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "tamil"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "te-in-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-te-in",
+      "language": "te",
+      "name": "Eloquence seed \u2013 Telugu",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 62,
+        "inflectionContour": 100,
+        "macroVolume": 112,
+        "overtones": 100,
+        "pitch": 118,
+        "rate": 96,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 116,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 114,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "telugu"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ml-in-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ml-in",
+      "language": "ml",
+      "name": "Eloquence seed \u2013 Malayalam",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 58,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 112,
+        "rate": 92,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 122,
+        "smoothness": 120,
+        "stress": 100,
+        "subtones": 120,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "malayalam"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "kn-in-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-kn-in",
+      "language": "kn",
+      "name": "Eloquence seed \u2013 Kannada",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 60,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 116,
+        "rate": 100,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 118,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 114,
+        "timbre": 100,
+        "tone": 108,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "kannada"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "mr-in-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-mr-in",
+      "language": "mr",
+      "name": "Eloquence seed \u2013 Marathi",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 64,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 118,
+        "rate": 100,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 118,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 116,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "marathi"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "gu-in-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-gu-in",
+      "language": "gu",
+      "name": "Eloquence seed \u2013 Gujarati",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 62,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 120,
+        "rate": 102,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 116,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 116,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "gujarati"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "pa-in-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-pa-in",
+      "language": "pa",
+      "name": "Eloquence seed \u2013 Punjabi",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 70,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 126,
+        "rate": 104,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 118,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 118,
+        "timbre": 100,
+        "tone": 132,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "punjabi"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "si-lk-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-si-lk",
+      "language": "si",
+      "name": "Eloquence seed \u2013 Sinhala",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 58,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 116,
+        "pitch": 118,
+        "rate": 96,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 118,
+        "stress": 100,
+        "subtones": 114,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "sinhala"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "km-kh-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-km-kh",
+      "language": "km",
+      "name": "Eloquence seed \u2013 Khmer",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 112,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 62,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 120,
+        "rate": 110,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 118,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 112,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "khmer"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "my-mm-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-my-mm",
+      "language": "my",
+      "name": "Eloquence seed \u2013 Burmese",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 76,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 122,
+        "rate": 104,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 132,
+        "toneSize": 120,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 116
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "burmese"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "lo-la-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-lo-la",
+      "language": "lo",
+      "name": "Eloquence seed \u2013 Lao",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 82,
+        "inflectionContour": 100,
+        "macroVolume": 110,
+        "overtones": 100,
+        "pitch": 126,
+        "rate": 110,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 136,
+        "toneSize": 122,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "lao"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ne-np-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ne-np",
+      "language": "ne",
+      "name": "Eloquence seed \u2013 Nepali",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 120,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 66,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 120,
+        "rate": 102,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 118,
+        "stress": 100,
+        "subtones": 112,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "nepali"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "ru-ru-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-ru-ru",
+      "language": "ru",
+      "name": "Eloquence seed \u2013 Russian",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 58,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 118,
+        "pitch": 118,
+        "rate": 104,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 112,
+        "stress": 100,
+        "subtones": 110,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "russian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "uk-ua-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-uk-ua",
+      "language": "uk",
+      "name": "Eloquence seed \u2013 Ukrainian",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 62,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 120,
+        "pitch": 122,
+        "rate": 106,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 118,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 112,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "ukrainian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "pl-pl-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-pl-pl",
+      "language": "pl",
+      "name": "Eloquence seed \u2013 Polish",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 118,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 60,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 120,
+        "pitch": 118,
+        "rate": 108,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 108,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "polish"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "cs-cz-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-cs-cz",
+      "language": "cs",
+      "name": "Eloquence seed \u2013 Czech",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 58,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 118,
+        "rate": 106,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 122,
+        "smoothness": 118,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 112
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "czech"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "tr-tr-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-tr-tr",
+      "language": "tr",
+      "name": "Eloquence seed \u2013 Turkish",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 62,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 120,
+        "rate": 108,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 112,
+        "smoothness": 120,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 110,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "turkish"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "el-gr-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-el-gr",
+      "language": "el",
+      "name": "Eloquence seed \u2013 Greek",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 118,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 60,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 118,
+        "rate": 104,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 116,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 108,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "greek"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "nl-nl-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-nl-nl",
+      "language": "nl",
+      "name": "Eloquence seed \u2013 Dutch",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 56,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 116,
+        "rate": 110,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 114,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 100,
+        "toneSize": 112,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 110
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "dutch"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "sv-se-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-sv-se",
+      "language": "sv",
+      "name": "Eloquence seed \u2013 Swedish",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 64,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 118,
+        "pitch": 124,
+        "rate": 108,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 128,
+        "toneSize": 120,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "swedish"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "nb-no-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-nb-no",
+      "language": "nb",
+      "name": "Eloquence seed \u2013 Norwegian",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 62,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 116,
+        "pitch": 122,
+        "rate": 104,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 118,
+        "stress": 100,
+        "subtones": 100,
+        "timbre": 100,
+        "tone": 126,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "norwegian"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "da-dk-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-da-dk",
+      "language": "da",
+      "name": "Eloquence seed \u2013 Danish",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 1,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 60,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 118,
+        "rate": 102,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 100,
+        "stress": 100,
+        "subtones": 110,
+        "timbre": 100,
+        "tone": 120,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 112
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "danish"
+      ]
+    },
+    {
+      "defaultLanguageProfile": "fi-fi-seed",
+      "extras": {
+        "notes": [
+          "Seed template awaiting community tuning for regional authenticity.",
+          "Advanced sliders stay at documented defaults unless overrides are provided."
+        ],
+        "phonemeFallback": "ipaFirst"
+      },
+      "id": "eloquence-seed-fi-fi",
+      "language": "fi",
+      "name": "Eloquence seed \u2013 Finnish",
+      "parameters": {
+        "breathiness": 22,
+        "emphasis": 100,
+        "gender": 0,
+        "headSize": 110,
+        "headSizeContour": 100,
+        "inflection": 56,
+        "inflectionContour": 100,
+        "macroVolume": 100,
+        "overtones": 100,
+        "pitch": 118,
+        "rate": 100,
+        "roughness": 20,
+        "roughnessControl": 100,
+        "scopeDepth": 100,
+        "smoothness": 120,
+        "stress": 100,
+        "subtones": 116,
+        "timbre": 100,
+        "tone": 112,
+        "toneSize": 100,
+        "vocalLayers": 100,
+        "vocalRange": 100,
+        "volume": 92,
+        "whisper": 100
+      },
+      "tags": [
+        "eloquence",
+        "seed",
+        "finnish"
       ]
     },
     {
