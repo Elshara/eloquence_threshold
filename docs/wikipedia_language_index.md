@@ -4,63 +4,63 @@ Source: [https://en.wikipedia.org/wiki/Lists_of_languages](https://en.wikipedia.
 
 ## Miscellaneous
 
-- [SIL International's Ethnologue: Languages of the World lists over 7,100 spoken and signed languages.](https://en.wikipedia.org/wiki/Ethnologue) — tags: sign-language
-- [List of ISO 639-1 codes – two-letter codes (184 major languages)](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) — tags: language
-- [List of ISO 639-2 codes – three-letter codes](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) — tags: language
-- [ISO 639 macrolanguage – ISO 639-2 codes used as ISO 639-3 codes](https://en.wikipedia.org/wiki/ISO_639_macrolanguage) — tags: language
-- [List of ISO 639-3 codes – three-letter codes, intended to "cover all known natural languages"](https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes) — tags: language
-- [List of ISO 639-5 codes – three-letter codes for language families and groups](https://en.wikipedia.org/wiki/Language_families) — tags: language
-- [IETF language tag – depends on ISO 639, but provides various expansion mechanisms](https://en.wikipedia.org/wiki/IETF_language_tag) — tags: language
+- [SIL International's Ethnologue: Languages of the World lists over 7,100 spoken and signed languages.](https://en.wikipedia.org/wiki/Ethnologue) — tags: language, sign-language, status-lingua-franca
+- [List of ISO 639-1 codes – two-letter codes (184 major languages)](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) — tags: language, standard
+- [List of ISO 639-2 codes – three-letter codes](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) — tags: language, standard
+- [ISO 639 macrolanguage – ISO 639-2 codes used as ISO 639-3 codes](https://en.wikipedia.org/wiki/ISO_639_macrolanguage) — tags: language, standard
+- [List of ISO 639-3 codes – three-letter codes, intended to "cover all known natural languages"](https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes) — tags: language, standard
+- [List of ISO 639-5 codes – three-letter codes for language families and groups](https://en.wikipedia.org/wiki/Language_families) — tags: language, family, standard
+- [IETF language tag – depends on ISO 639, but provides various expansion mechanisms](https://en.wikipedia.org/wiki/IETF_language_tag) — tags: language, standard
 - [Glottolog](https://en.wikipedia.org/wiki/Glottolog) — tags: language
-- [Linguasphere Observatory (LS-2010, totaling over 32,800 coded entries and over 70,900 linguistic names)](https://en.wikipedia.org/wiki/Linguasphere_Observatory) — tags: language
-- [Index of language articles](https://en.wikipedia.org/wiki/Index_of_language_articles) — tags: language
-- [List of official languages by country and territory](https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory) — tags: language
-- [Number of languages by country](https://en.wikipedia.org/wiki/Number_of_languages_by_country) — tags: language
+- [Linguasphere Observatory (LS-2010, totaling over 32,800 coded entries and over 70,900 linguistic names)](https://en.wikipedia.org/wiki/Linguasphere_Observatory) — tags: language, standard
+- [Index of language articles](https://en.wikipedia.org/wiki/Index_of_language_articles) — tags: language, statistics
+- [List of official languages by country and territory](https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory) — tags: language, statistics, status-official
+- [Number of languages by country](https://en.wikipedia.org/wiki/Number_of_languages_by_country) — tags: language, statistics
 - [by name: List of language names (native names)](https://en.wikipedia.org/wiki/List_of_language_names) — tags: language
-- [by primary language family: List of Afro-Asiatic languages, List of Austronesian languages, List of Indo-European languages, List of Mayan languages, List of Mongolic languages, List of Oto-Manguean languages, List of Tungusic languages, List of Turkic languages, List of Uralic languages.](https://en.wikipedia.org/wiki/List_of_Uralic_languages) — tags: language
+- [by primary language family: List of Afro-Asiatic languages, List of Austronesian languages, List of Indo-European languages, List of Mayan languages, List of Mongolic languages, List of Oto-Manguean languages, List of Tungusic languages, List of Turkic languages, List of Uralic languages.](https://en.wikipedia.org/wiki/List_of_Uralic_languages) — tags: language, family, geography
 - [chronologically: List of languages by first written accounts](https://en.wikipedia.org/wiki/List_of_languages_by_first_written_accounts) — tags: language
-- [List of languages by total number of speakers](https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers) — tags: language
-- [List of languages by number of native speakers](https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers) — tags: language
-- [List of languages by number of words according to authoritative dictionaries](https://en.wikipedia.org/wiki/List_of_dictionaries_by_number_of_words) — tags: language
-- [List of languages by number of phonemes](https://en.wikipedia.org/wiki/List_of_languages_by_number_of_phonemes) — tags: language
-- [Languages of Africa](https://en.wikipedia.org/wiki/Languages_of_Africa) — tags: language
-- [List of Native American languages acquired by children](https://en.wikipedia.org/wiki/List_of_Native_American_languages_acquired_by_children) — tags: language
-- [Languages of North America](https://en.wikipedia.org/wiki/Languages_of_North_America) — tags: language
-- [Languages of South America](https://en.wikipedia.org/wiki/Languages_of_South_America) — tags: language
-- [East Asian languages](https://en.wikipedia.org/wiki/East_Asian_languages) — tags: language
-- [Languages of South Asia](https://en.wikipedia.org/wiki/Languages_of_South_Asia) — tags: language
-- [Languages of Southeast Asia](https://en.wikipedia.org/wiki/Languages_of_Southeast_Asia) — tags: language
+- [List of languages by total number of speakers](https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers) — tags: language, statistics
+- [List of languages by number of native speakers](https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers) — tags: language, statistics
+- [List of languages by number of words according to authoritative dictionaries](https://en.wikipedia.org/wiki/List_of_dictionaries_by_number_of_words) — tags: language, statistics
+- [List of languages by number of phonemes](https://en.wikipedia.org/wiki/List_of_languages_by_number_of_phonemes) — tags: language, phonology, statistics
+- [Languages of Africa](https://en.wikipedia.org/wiki/Languages_of_Africa) — tags: language, geography
+- [List of Native American languages acquired by children](https://en.wikipedia.org/wiki/List_of_Native_American_languages_acquired_by_children) — tags: language, geography
+- [Languages of North America](https://en.wikipedia.org/wiki/Languages_of_North_America) — tags: language, geography
+- [Languages of South America](https://en.wikipedia.org/wiki/Languages_of_South_America) — tags: language, geography
+- [East Asian languages](https://en.wikipedia.org/wiki/East_Asian_languages) — tags: language, geography
+- [Languages of South Asia](https://en.wikipedia.org/wiki/Languages_of_South_Asia) — tags: language, geography
+- [Languages of Southeast Asia](https://en.wikipedia.org/wiki/Languages_of_Southeast_Asia) — tags: language, geography
 - [Languages of Russia](https://en.wikipedia.org/wiki/Languages_of_Russia) — tags: language
-- [Languages of Oceania](https://en.wikipedia.org/wiki/Languages_of_Oceania) — tags: language
-- [List of languages by time of extinction](https://en.wikipedia.org/wiki/List_of_languages_by_time_of_extinction) — tags: language
-- [Lists of endangered languages](https://en.wikipedia.org/wiki/Lists_of_endangered_languages) — tags: language
-- [List of revived languages](https://en.wikipedia.org/wiki/List_of_revived_languages) — tags: language
+- [Languages of Oceania](https://en.wikipedia.org/wiki/Languages_of_Oceania) — tags: language, geography
+- [List of languages by time of extinction](https://en.wikipedia.org/wiki/List_of_languages_by_time_of_extinction) — tags: language, status-extinct
+- [Lists of endangered languages](https://en.wikipedia.org/wiki/Lists_of_endangered_languages) — tags: language, status-endangered
+- [List of revived languages](https://en.wikipedia.org/wiki/List_of_revived_languages) — tags: language, status-revived
 - [Regional language](https://en.wikipedia.org/wiki/Regional_language) — tags: language
-- [List of lingua francas](https://en.wikipedia.org/wiki/List_of_lingua_francas) — tags: language
-- [List of official languages by state](https://en.wikipedia.org/wiki/List_of_official_languages_by_state) — tags: language
-- [List of official languages by institution](https://en.wikipedia.org/wiki/List_of_official_languages_by_institution) — tags: language
+- [List of lingua francas](https://en.wikipedia.org/wiki/List_of_lingua_francas) — tags: language, status-lingua-franca
+- [List of official languages by state](https://en.wikipedia.org/wiki/List_of_official_languages_by_state) — tags: language, status-official
+- [List of official languages by institution](https://en.wikipedia.org/wiki/List_of_official_languages_by_institution) — tags: language, status-official
 - [Languages used on the Internet (includes a list of languages with the most prevalence online)](https://en.wikipedia.org/wiki/Languages_used_on_the_Internet) — tags: language
 - [List of mutually intelligible languages](https://en.wikipedia.org/wiki/Mutual_intelligibility#List_of_mutually_intelligible_languages) — tags: language
-- [List of creole languages](https://en.wikipedia.org/wiki/List_of_creole_languages) — tags: language
-- [List of mixed languages](https://en.wikipedia.org/wiki/Mixed_language#Examples) — tags: language
-- [List of English-based pidgins](https://en.wikipedia.org/wiki/List_of_English-based_pidgins) — tags: language
-- [List of sign languages by number of native signers](https://en.wikipedia.org/wiki/List_of_sign_languages_by_number_of_native_signers) — tags: sign-language
-- [List of constructed languages](https://en.wikipedia.org/wiki/List_of_constructed_languages) — tags: language
+- [List of creole languages](https://en.wikipedia.org/wiki/List_of_creole_languages) — tags: language, contact-language
+- [List of mixed languages](https://en.wikipedia.org/wiki/Mixed_language#Examples) — tags: language, contact-language
+- [List of English-based pidgins](https://en.wikipedia.org/wiki/List_of_English-based_pidgins) — tags: language, contact-language
+- [List of sign languages by number of native signers](https://en.wikipedia.org/wiki/List_of_sign_languages_by_number_of_native_signers) — tags: language, sign-language, statistics
+- [List of constructed languages](https://en.wikipedia.org/wiki/List_of_constructed_languages) — tags: language, constructed
 - [List of language self-study programs](https://en.wikipedia.org/wiki/List_of_language_self-study_programs) — tags: language
 - [List of most commonly learned foreign languages in the United States](https://en.wikipedia.org/wiki/List_of_most_commonly_learned_foreign_languages_in_the_United_States) — tags: language
 - [List of linguists](https://en.wikipedia.org/wiki/List_of_linguists) — tags: language
-- [List of shorthand systems](https://en.wikipedia.org/wiki/List_of_shorthand_systems) — tags: language
-- [List of writing systems](https://en.wikipedia.org/wiki/List_of_writing_systems) — tags: language
-- [Lists of dialects and varieties](https://en.wikipedia.org/wiki/Lists_of_dialects_and_varieties) — tags: dialect
-- [Lists of programming languages](https://en.wikipedia.org/wiki/Lists_of_programming_languages) — tags: language
-- [List of ontology languages](https://en.wikipedia.org/wiki/List_of_ontology_languages) — tags: language
-- [List of modeling languages](https://en.wikipedia.org/wiki/List_of_modeling_languages) — tags: language
-- [List of markup languages](https://en.wikipedia.org/wiki/List_of_markup_languages) — tags: language
+- [List of shorthand systems](https://en.wikipedia.org/wiki/List_of_shorthand_systems) — tags: language, orthography
+- [List of writing systems](https://en.wikipedia.org/wiki/List_of_writing_systems) — tags: language, orthography
+- [Lists of dialects and varieties](https://en.wikipedia.org/wiki/Lists_of_dialects_and_varieties) — tags: language, dialect
+- [Lists of programming languages](https://en.wikipedia.org/wiki/Lists_of_programming_languages) — tags: language, programming-language
+- [List of ontology languages](https://en.wikipedia.org/wiki/List_of_ontology_languages) — tags: language, technical-language
+- [List of modeling languages](https://en.wikipedia.org/wiki/List_of_modeling_languages) — tags: language, technical-language
+- [List of markup languages](https://en.wikipedia.org/wiki/List_of_markup_languages) — tags: language, technical-language
 - [Omniglot](https://en.wikipedia.org/wiki/Omniglot) — tags: language
 - [v](https://en.wikipedia.org/wiki/Template:Countries_and_languages_lists) — tags: language
 - [t](https://en.wikipedia.org/wiki/Template_talk:Countries_and_languages_lists) — tags: language
 - [e](https://en.wikipedia.org/wiki/Special:EditPage/Template:Countries_and_languages_lists) — tags: language
-- [Countries and territories by official language](https://en.wikipedia.org/wiki/Lists_of_countries_and_territories_by_official_language) — tags: language
+- [Countries and territories by official language](https://en.wikipedia.org/wiki/Lists_of_countries_and_territories_by_official_language) — tags: language, status-official
 - [Arabic](https://en.wikipedia.org/wiki/List_of_countries_and_territories_where_Arabic_is_an_official_language) — tags: language
 - [Chinese](https://en.wikipedia.org/wiki/List_of_countries_and_territories_where_Chinese_is_an_official_language) — tags: language
 - [Dutch/Afrikaans](https://en.wikipedia.org/wiki/List_of_countries_and_territories_where_Afrikaans_or_Dutch_are_official_languages) — tags: language
@@ -94,23 +94,23 @@ Source: [https://en.wikipedia.org/wiki/Lists_of_languages](https://en.wikipedia.
 - [Singapore](https://en.wikipedia.org/wiki/Names_of_Singapore) — tags: language
 - [Sri Lanka](https://en.wikipedia.org/wiki/Names_of_Sri_Lanka) — tags: language
 - [Vietnam](https://en.wikipedia.org/wiki/Names_of_Vietnam) — tags: language
-- [Languages of the European Union](https://en.wikipedia.org/wiki/Languages_of_the_European_Union) — tags: language
-- [Africa](https://en.wikipedia.org/wiki/Languages_of_Africa) — tags: language
+- [Languages of the European Union](https://en.wikipedia.org/wiki/Languages_of_the_European_Union) — tags: language, geography
+- [Africa](https://en.wikipedia.org/wiki/Languages_of_Africa) — tags: language, geography
 - [Caribbean](https://en.wikipedia.org/wiki/Languages_of_the_Caribbean) — tags: language
-- [South America](https://en.wikipedia.org/wiki/Languages_of_South_America) — tags: language
-- [East Asia](https://en.wikipedia.org/wiki/Languages_of_East_Asia) — tags: language
-- [South Asia](https://en.wikipedia.org/wiki/Languages_of_South_Asia) — tags: language
-- [Southeast Asia](https://en.wikipedia.org/wiki/Classification_of_Southeast_Asian_languages) — tags: language
-- [Europe](https://en.wikipedia.org/wiki/Languages_of_Europe) — tags: language
+- [South America](https://en.wikipedia.org/wiki/Languages_of_South_America) — tags: language, geography
+- [East Asia](https://en.wikipedia.org/wiki/Languages_of_East_Asia) — tags: language, geography
+- [South Asia](https://en.wikipedia.org/wiki/Languages_of_South_Asia) — tags: language, geography
+- [Southeast Asia](https://en.wikipedia.org/wiki/Classification_of_Southeast_Asian_languages) — tags: language, geography
+- [Europe](https://en.wikipedia.org/wiki/Languages_of_Europe) — tags: language, geography
 - [Melanesia](https://en.wikipedia.org/wiki/Melanesian_languages) — tags: language
 - [Micronesia](https://en.wikipedia.org/wiki/Micronesian_languages) — tags: language
 - [Polynesia](https://en.wikipedia.org/wiki/Polynesian_languages) — tags: language
-- [by country and territory](https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory) — tags: language
-- [Countries and territories by official language](https://en.wikipedia.org/wiki/Lists_of_countries_and_territories_by_official_language) — tags: language
-- [Europe](https://en.wikipedia.org/wiki/List_of_languages_by_number_of_speakers_in_Europe) — tags: language
-- [By number of total speakers](https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers) — tags: language
+- [by country and territory](https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory) — tags: language, statistics
+- [Countries and territories by official language](https://en.wikipedia.org/wiki/Lists_of_countries_and_territories_by_official_language) — tags: language, status-official
+- [Europe](https://en.wikipedia.org/wiki/List_of_languages_by_number_of_speakers_in_Europe) — tags: language, geography
+- [By number of total speakers](https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers) — tags: language, statistics
 - [Languages in censuses](https://en.wikipedia.org/wiki/Languages_in_censuses) — tags: language
-- [List of Indo-European languages](https://en.wikipedia.org/wiki/List_of_Indo-European_languages) — tags: language
+- [List of Indo-European languages](https://en.wikipedia.org/wiki/List_of_Indo-European_languages) — tags: language, geography
 - [List of Mongolic languages](https://en.wikipedia.org/wiki/List_of_Mongolic_languages) — tags: language
 - [List of Turkic languages](https://en.wikipedia.org/wiki/List_of_Turkic_languages) — tags: language
 - [List of Uralic languages](https://en.wikipedia.org/wiki/List_of_Uralic_languages) — tags: language
@@ -121,10 +121,10 @@ Source: [https://en.wikipedia.org/wiki/Lists_of_languages](https://en.wikipedia.
 - [Latin Union (Romance languages)](https://en.wikipedia.org/wiki/Latin_Union) — tags: language
 - [Three Linguistic Spaces](https://en.wikipedia.org/wiki/Three_Linguistic_Spaces) — tags: language
 - [Francophonie (French)](https://en.wikipedia.org/wiki/Organisation_internationale_de_la_Francophonie) — tags: language
-- [Países Africanos de Língua Oficial Portuguesa (Portuguese)](https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries) — tags: language
+- [Países Africanos de Língua Oficial Portuguesa (Portuguese)](https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries) — tags: language, geography
 - [Hispanidad (Spanish)](https://en.wikipedia.org/wiki/Hispanidad) — tags: language
 - [Organization of Turkic States (Turkic languages)](https://en.wikipedia.org/wiki/Organization_of_Turkic_States) — tags: language
-- [International Organization of Turkic Culture (Turkic languages)](https://en.wikipedia.org/wiki/International_Organization_of_Turkic_Culture) — tags: language
+- [International Organization of Turkic Culture (Turkic languages)](https://en.wikipedia.org/wiki/International_Organization_of_Turkic_Culture) — tags: language, status-lingua-franca
 - [Lists of languages](https://en.wikipedia.org/wiki/Category:Lists_of_languages) — tags: language
 - [Category:Languages](https://en.wikipedia.org/wiki/Category:Languages) — tags: language
 - [v](https://en.wikipedia.org/wiki/Template:Language_nouns) — tags: language
@@ -155,7 +155,7 @@ Source: [https://en.wikipedia.org/wiki/Lists_of_languages](https://en.wikipedia.
 - [Prepositions](https://en.wikipedia.org/wiki/Template:Language_prepositions) — tags: language
 - [Pronouns](https://en.wikipedia.org/wiki/Template:Language_pronouns) — tags: language
 - Verbs — tags: language
-- [auxiliary](https://en.wikipedia.org/wiki/English_auxiliary_verbs) — tags: language
+- [auxiliary](https://en.wikipedia.org/wiki/English_auxiliary_verbs) — tags: language, status-lingua-franca
 - [modal](https://en.wikipedia.org/wiki/English_modal_verbs) — tags: language
 - [conjugation](https://en.wikipedia.org/wiki/Dutch_conjugation) — tags: language
 - [conjugation](https://en.wikipedia.org/wiki/German_conjugation) — tags: language
@@ -163,7 +163,7 @@ Source: [https://en.wikipedia.org/wiki/Lists_of_languages](https://en.wikipedia.
 - [conjugation](https://en.wikipedia.org/wiki/Irish_conjugation) — tags: language
 - [conjugation](https://en.wikipedia.org/wiki/Latin_conjugation) — tags: language
 - [tenses](https://en.wikipedia.org/wiki/Latin_tenses) — tags: language
-- [auxiliary verbs](https://en.wikipedia.org/wiki/Conjugation_of_auxiliary_Catalan_verbs) — tags: language
+- [auxiliary verbs](https://en.wikipedia.org/wiki/Conjugation_of_auxiliary_Catalan_verbs) — tags: language, status-lingua-franca
 - [conjugation](https://en.wikipedia.org/wiki/French_conjugation) — tags: language
 - [morphology](https://en.wikipedia.org/wiki/French_verb_morphology) — tags: language
 - [conjugation](https://en.wikipedia.org/wiki/Italian_conjugation) — tags: language
@@ -195,7 +195,7 @@ Source: [https://en.wikipedia.org/wiki/Lists_of_languages](https://en.wikipedia.
 - [Tigrinya](https://en.wikipedia.org/wiki/Tigrinya_verbs) — tags: language
 - [tenses](https://en.wikipedia.org/wiki/Chichewa_tenses) — tags: language
 - [deficient verbs](https://en.wikipedia.org/wiki/Sotho_deficient_verbs) — tags: language
-- [Kagoshima dialect](https://en.wikipedia.org/wiki/Kagoshima_verb_conjugations) — tags: dialect
+- [Kagoshima dialect](https://en.wikipedia.org/wiki/Kagoshima_verb_conjugations) — tags: language, dialect
 - [godan and ichidan](https://en.wikipedia.org/wiki/Japanese_godan_and_ichidan_verbs) — tags: language
 - [irregular verbs](https://en.wikipedia.org/wiki/Japanese_irregular_verbs) — tags: language
 - [Korean](https://en.wikipedia.org/wiki/Korean_verbs) — tags: language
@@ -229,7 +229,7 @@ Source: [https://en.wikipedia.org/wiki/Lists_of_languages](https://en.wikipedia.
 - [personal](https://en.wikipedia.org/wiki/English_personal_pronouns) — tags: language
 - [Colognian](https://en.wikipedia.org/wiki/Colognian_pronouns) — tags: language
 - [German](https://en.wikipedia.org/wiki/German_pronouns) — tags: language
-- [auxiliary verbs](https://en.wikipedia.org/wiki/Conjugation_of_auxiliary_Catalan_verbs) — tags: language
+- [auxiliary verbs](https://en.wikipedia.org/wiki/Conjugation_of_auxiliary_Catalan_verbs) — tags: language, status-lingua-franca
 - [personal](https://en.wikipedia.org/wiki/French_personal_pronouns) — tags: language
 - [personal](https://en.wikipedia.org/wiki/Portuguese_personal_pronouns) — tags: language
 - [object](https://en.wikipedia.org/wiki/Spanish_object_pronouns) — tags: language

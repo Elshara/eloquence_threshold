@@ -592,13 +592,11 @@ def load_wikipedia_language_index(path: Optional[str] = None) -> Dict[str, List[
         payload = json.load(handle)
 
     entries = payload.get("entries", [])
-    grouped: Dict[str, List[Dict[str, object]]] = {
-        "language": [],
-        "dialect": [],
-        "accent": [],
-        "sign-language": [],
-        "orthography": [],
-    }
+    base_tags = ("language", "dialect", "accent", "sign-language", "orthography")
+    grouped: "OrderedDict[str, List[Dict[str, object]]]" = OrderedDict(
+        (tag, []) for tag in base_tags
+    )
+    extras: "OrderedDict[str, List[Dict[str, object]]]" = OrderedDict()
 
     for entry in entries:
         record = {
@@ -610,10 +608,17 @@ def load_wikipedia_language_index(path: Optional[str] = None) -> Dict[str, List[
         tags = record["tags"] or ["language"]
         assigned = False
         for tag in tags:
-            if tag in grouped:
-                grouped[tag].append(record)
+            bucket = grouped.get(tag)
+            if bucket is not None:
+                bucket.append(record)
                 assigned = True
+                continue
+            extras.setdefault(tag, []).append(record)
+            assigned = True
         if not assigned:
             grouped["language"].append(record)
+
+    for tag, records in extras.items():
+        grouped.setdefault(tag, []).extend(records)
 
     return grouped

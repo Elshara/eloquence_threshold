@@ -3,8 +3,9 @@
 This catalogue captures the Wikipedia pages the community highlighted as
 critical for expanding Eloquence's multilingual coverage.  It complements the
 machine-harvested `docs/wikipedia_language_index.*` snapshots by layering
-priority, ingestion progress, and the language/dialect/accent distinctions that
-feed NVDA's voice selector and phoneme customiser.
+priority, ingestion progress, and the language/dialect/accent/family/status
+distinctions that feed NVDA's voice selector, research sidebars, and phoneme
+customiser.
 
 The table below groups each source by research focus.  Use it when planning
 phoneme data imports, NV Speech Player slider mappings, or documentation updates.

@@ -35,6 +35,16 @@ class WikipediaLanguageIndexTestCase(unittest.TestCase):
                 self.assertIn("breadcrumbs", entry)
                 self.assertIn("tags", entry)
 
+    def test_augmented_tags_present(self) -> None:
+        grouped = language_profiles.load_wikipedia_language_index(self.index_path)
+        for tag in ("family", "constructed", "programming-language", "standard"):
+            self.assertIn(tag, grouped)
+            self.assertGreater(
+                len(grouped[tag]),
+                0,
+                f"Expected at least one entry tagged '{tag}'",
+            )
+
 
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()

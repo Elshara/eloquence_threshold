@@ -141,19 +141,60 @@ def _normalise_text(value: str) -> str:
 
 
 def _classify_entry(text: str) -> List[str]:
+    """Return heuristic tags describing a Wikipedia list entry."""
+
     lowered = text.lower()
-    tags: List[str] = []
-    if any(keyword in lowered for keyword in ("dialect", "dialects")):
-        tags.append("dialect")
-    if any(keyword in lowered for keyword in ("accent", "accents")):
-        tags.append("accent")
-    if "script" in lowered or "alphabet" in lowered:
-        tags.append("orthography")
-    if "sign language" in lowered or "signed" in lowered:
-        tags.append("sign-language")
-    if not tags:
-        tags.append("language")
-    return tags
+    tags = {"language"}
+
+    def flag(condition: bool, *values: str) -> None:
+        if condition:
+            tags.update(values)
+
+    flag("dialect" in lowered or "dialects" in lowered, "dialect")
+    flag("accent" in lowered or "accents" in lowered, "accent")
+    flag(
+        "sign language" in lowered
+        or "sign-language" in lowered
+        or "signed" in lowered,
+        "sign-language",
+    )
+    flag(
+        "script" in lowered
+        or "alphabet" in lowered
+        or "writing system" in lowered
+        or "shorthand" in lowered
+        or "unicode" in lowered
+        or "orthography" in lowered,
+        "orthography",
+    )
+    flag("iso" in lowered or "ietf" in lowered or "code" in lowered, "standard")
+    flag("family" in lowered or "families" in lowered, "family")
+    flag("proposed" in lowered and ("family" in lowered or "families" in lowered), "family-proposed")
+    flag("isolate" in lowered, "language-isolate")
+    flag("creole" in lowered or "pidgin" in lowered or "mixed language" in lowered, "contact-language")
+    flag("constructed" in lowered or "conlang" in lowered, "constructed")
+    flag("fiction" in lowered, "constructed-fictional")
+    flag("programming" in lowered or "computer" in lowered, "programming-language")
+    flag("markup" in lowered or "modeling" in lowered or "ontology" in lowered, "technical-language")
+    flag("extinct" in lowered, "status-extinct")
+    flag("endangered" in lowered, "status-endangered")
+    flag("revived" in lowered or "revival" in lowered, "status-revived")
+    flag("official" in lowered, "status-official")
+    flag("lingua franca" in lowered or "auxiliary" in lowered or "international" in lowered, "status-lingua-franca")
+    flag("diversity" in lowered or "index" in lowered, "statistics")
+    flag("number of" in lowered or "by country" in lowered, "statistics")
+    flag("dictionary" in lowered or "lexicon" in lowered, "lexicography")
+    flag("phoneme" in lowered or "phonology" in lowered, "phonology")
+    flag("grammar" in lowered or "sentence" in lowered, "grammar")
+    flag("sample" in lowered or "recordings" in lowered or "speech" in lowered, "samples")
+    flag("america" in lowered or "africa" in lowered or "asia" in lowered or "europe" in lowered or "oceania" in lowered,
+         "geography")
+
+    ordered: List[str] = []
+    if "language" in tags:
+        ordered.append("language")
+    ordered.extend(sorted(tag for tag in tags if tag != "language"))
+    return ordered
 
 
 def _load_html(source: str) -> str:

@@ -6,7 +6,9 @@
       "url": "https://en.wikipedia.org/wiki/Ethnologue",
       "breadcrumbs": [],
       "tags": [
-        "sign-language"
+        "language",
+        "sign-language",
+        "status-lingua-franca"
       ]
     },
     {
@@ -14,7 +16,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "standard"
       ]
     },
     {
@@ -22,7 +25,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "standard"
       ]
     },
     {
@@ -30,7 +34,8 @@
       "url": "https://en.wikipedia.org/wiki/ISO_639_macrolanguage",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "standard"
       ]
     },
     {
@@ -38,7 +43,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "standard"
       ]
     },
     {
@@ -46,7 +52,9 @@
       "url": "https://en.wikipedia.org/wiki/Language_families",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "family",
+        "standard"
       ]
     },
     {
@@ -54,7 +62,8 @@
       "url": "https://en.wikipedia.org/wiki/IETF_language_tag",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "standard"
       ]
     },
     {
@@ -70,7 +79,8 @@
       "url": "https://en.wikipedia.org/wiki/Linguasphere_Observatory",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "standard"
       ]
     },
     {
@@ -78,7 +88,8 @@
       "url": "https://en.wikipedia.org/wiki/Index_of_language_articles",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "statistics"
       ]
     },
     {
@@ -86,7 +97,9 @@
       "url": "https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "statistics",
+        "status-official"
       ]
     },
     {
@@ -94,7 +107,8 @@
       "url": "https://en.wikipedia.org/wiki/Number_of_languages_by_country",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "statistics"
       ]
     },
     {
@@ -110,7 +124,9 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Uralic_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "family",
+        "geography"
       ]
     },
     {
@@ -126,7 +142,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "statistics"
       ]
     },
     {
@@ -134,7 +151,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "statistics"
       ]
     },
     {
@@ -142,7 +160,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_dictionaries_by_number_of_words",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "statistics"
       ]
     },
     {
@@ -150,7 +169,9 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_number_of_phonemes",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "phonology",
+        "statistics"
       ]
     },
     {
@@ -158,7 +179,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Africa",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -166,7 +188,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Native_American_languages_acquired_by_children",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -174,7 +197,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_North_America",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -182,7 +206,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_South_America",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -190,7 +215,8 @@
       "url": "https://en.wikipedia.org/wiki/East_Asian_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -198,7 +224,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_South_Asia",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -206,7 +233,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Southeast_Asia",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -222,7 +250,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Oceania",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -230,7 +259,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_time_of_extinction",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-extinct"
       ]
     },
     {
@@ -238,7 +268,8 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_endangered_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-endangered"
       ]
     },
     {
@@ -246,7 +277,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_revived_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-revived"
       ]
     },
     {
@@ -262,7 +294,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_lingua_francas",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-lingua-franca"
       ]
     },
     {
@@ -270,7 +303,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_official_languages_by_state",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-official"
       ]
     },
     {
@@ -278,7 +312,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_official_languages_by_institution",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-official"
       ]
     },
     {
@@ -302,7 +337,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_creole_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "contact-language"
       ]
     },
     {
@@ -310,7 +346,8 @@
       "url": "https://en.wikipedia.org/wiki/Mixed_language#Examples",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "contact-language"
       ]
     },
     {
@@ -318,7 +355,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_English-based_pidgins",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "contact-language"
       ]
     },
     {
@@ -326,7 +364,9 @@
       "url": "https://en.wikipedia.org/wiki/List_of_sign_languages_by_number_of_native_signers",
       "breadcrumbs": [],
       "tags": [
-        "sign-language"
+        "language",
+        "sign-language",
+        "statistics"
       ]
     },
     {
@@ -334,7 +374,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_constructed_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "constructed"
       ]
     },
     {
@@ -366,7 +407,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_shorthand_systems",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "orthography"
       ]
     },
     {
@@ -374,7 +416,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_writing_systems",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "orthography"
       ]
     },
     {
@@ -382,6 +425,7 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_dialects_and_varieties",
       "breadcrumbs": [],
       "tags": [
+        "language",
         "dialect"
       ]
     },
@@ -390,7 +434,8 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_programming_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "programming-language"
       ]
     },
     {
@@ -398,7 +443,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_ontology_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "technical-language"
       ]
     },
     {
@@ -406,7 +452,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_modeling_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "technical-language"
       ]
     },
     {
@@ -414,7 +461,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_markup_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "technical-language"
       ]
     },
     {
@@ -454,7 +502,8 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_countries_and_territories_by_official_language",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-official"
       ]
     },
     {
@@ -726,7 +775,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_the_European_Union",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -734,7 +784,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Africa",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -750,7 +801,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_South_America",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -758,7 +810,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_East_Asia",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -766,7 +819,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_South_Asia",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -774,7 +828,8 @@
       "url": "https://en.wikipedia.org/wiki/Classification_of_Southeast_Asian_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -782,7 +837,8 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Europe",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -814,7 +870,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "statistics"
       ]
     },
     {
@@ -822,7 +879,8 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_countries_and_territories_by_official_language",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-official"
       ]
     },
     {
@@ -830,7 +888,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_number_of_speakers_in_Europe",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -838,7 +897,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "statistics"
       ]
     },
     {
@@ -854,7 +914,8 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Indo-European_languages",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -942,7 +1003,8 @@
       "url": "https://en.wikipedia.org/wiki/Portuguese-speaking_African_countries",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "geography"
       ]
     },
     {
@@ -966,7 +1028,8 @@
       "url": "https://en.wikipedia.org/wiki/International_Organization_of_Turkic_Culture",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-lingua-franca"
       ]
     },
     {
@@ -1214,7 +1277,8 @@
       "url": "https://en.wikipedia.org/wiki/English_auxiliary_verbs",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-lingua-franca"
       ]
     },
     {
@@ -1278,7 +1342,8 @@
       "url": "https://en.wikipedia.org/wiki/Conjugation_of_auxiliary_Catalan_verbs",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-lingua-franca"
       ]
     },
     {
@@ -1534,6 +1599,7 @@
       "url": "https://en.wikipedia.org/wiki/Kagoshima_verb_conjugations",
       "breadcrumbs": [],
       "tags": [
+        "language",
         "dialect"
       ]
     },
@@ -1806,7 +1872,8 @@
       "url": "https://en.wikipedia.org/wiki/Conjugation_of_auxiliary_Catalan_verbs",
       "breadcrumbs": [],
       "tags": [
-        "language"
+        "language",
+        "status-lingua-franca"
       ]
     },
     {
