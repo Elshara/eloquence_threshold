@@ -5,7 +5,7 @@ import math
 from dataclasses import dataclass
 from typing import Dict, Iterable, List, Mapping, Optional
 
-from .voice_parameters import ADVANCED_VOICE_PARAMETER_SPECS, advanced_parameter_defaults
+from voice_parameters import ADVANCED_VOICE_PARAMETER_SPECS, advanced_parameter_defaults
 
 
 _DEFAULT_LOW_HZ = 200
