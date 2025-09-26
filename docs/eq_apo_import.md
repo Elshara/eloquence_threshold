@@ -1,0 +1,713 @@
+# Equalizer APO import summary
+
+## Realtek(R) Audio Tower Speakers
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Realtek(R) Audio Tower Digital Output
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## NVIDIA High Definition Audio Tower HDMI 1
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## NVIDIA High Definition Audio Tower HDMI 2
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 23
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+
+## T2224zD Monitor Speakers
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 22
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+
+## NVIDIA High Definition Audio Monitor HDMI 1
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 23
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+
+## NVIDIA High Definition Audio Monitor HDMI 2
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Sound Blaster AE-9 PCIE Speakers
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 23
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Sound Blaster AE-9s PCIE Digital Output
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Scarlett 2i2 USB Studio Speakers
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## USB-C HEADSET Audio Output
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## VB-Audio Virtual Cable Virtual Output
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Realtek(R) Audio Tower Output
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## T2224zD Monitor Microphone
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 22
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+
+## Sound Blaster AE-9 PCIE Microphone
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 23
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Sound Blaster AE-9s PCIE Input
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Sound Blaster AE-9s PCIE Digital Input
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Sound Blaster AE-9 PCIE Output
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 22
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+
+## Scarlett 2i2 USB Studio Microphone
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB
+
+## Logitech BRIO Webcam Microphone
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 22
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+
+## USB-C HEADSET Audio Input
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 22
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+
+## VB-Audio Virtual Cable Virtual Input
+- **Stage:** pre-mix, post-mix, capture
+- **Channel:** ALL
+- **Copy:** L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+- **Delay:** 0.00 ms
+- **Loudness correction:** State=1.0, ReferenceLevel=0.0, ReferenceOffset=0.0, Attenuation=1.0
+- **Preamp:** -0.00 dB
+- **Active peak filters:** 24
+  - Band 1: 1.00–2.00 Hz @ -0.00 dB
+  - Band 2: 1.00–2.00 Hz @ -0.00 dB
+  - Band 3: 1.00–2.00 Hz @ -0.00 dB
+  - Band 4: 1.00–2.00 Hz @ -0.00 dB
+  - Band 5: 1.00–2.00 Hz @ -0.00 dB
+  - Band 6: 1.00–2.00 Hz @ -0.00 dB
+  - Band 7: 1.00–2.00 Hz @ -0.00 dB
+  - Band 8: 1.00–1.81 Hz @ -0.00 dB
+  - Band 9: 1.81–3.62 Hz @ -0.00 dB
+  - Band 10: 3.62–7.24 Hz @ -0.00 dB
+  - Band 11: 7.24–14.48 Hz @ -0.00 dB
+  - Band 12: 14.48–28.96 Hz @ -0.00 dB
+  - Band 13: 28.96–57.93 Hz @ -0.00 dB
+  - Band 14: 57.93–115.85 Hz @ -0.00 dB
+  - Band 15: 115.85–231.70 Hz @ -0.00 dB
+  - Band 16: 231.70–463.41 Hz @ -0.00 dB
+  - Band 17: 463.41–926.82 Hz @ -0.00 dB
+  - Band 18: 926.82–1853.64 Hz @ -0.00 dB
+  - Band 19: 1853.64–3707.28 Hz @ -0.00 dB
+  - Band 20: 3707.28–7414.55 Hz @ -0.00 dB
+  - Band 21: 7414.55–14829.10 Hz @ -0.00 dB
+  - Band 22: 14829.10–24000.00 Hz @ -0.00 dB
+  - Band 23: 23999.00–24000.00 Hz @ -0.00 dB
+  - Band 24: 23999.00–24000.00 Hz @ -0.00 dB

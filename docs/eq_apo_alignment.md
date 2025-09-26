@@ -42,3 +42,13 @@ extend Eloquence Threshold's phoneme EQ and sample-rate controls:
   live reload them. Pairing this model with NVDA's voice dialog could unlock
   advanced workflows where phoneme EQ edits are synchronised with Equalizer
   APO's engine for critical listening sessions.
+
+## Import tooling
+- `tools/import_eq_apo_config.py` parses Equalizer APO preset files and emits
+  JSON/Markdown summaries that document device metadata, loudness correction
+  states, and every peaking filter we can map onto Eloquence's phoneme EQ bands.
+- The helper approximates each peaking filter's bandwidth using its centre
+  frequency and Q factor, keeping the derived low/high bounds inside the
+  synthesizer's 1 Hz–384 kHz envelope (or the supplied sample-rate hint's
+  Nyquist limit). The resulting data can seed NVDA's per-phoneme editor so
+  advanced APO workflows remain accessible without editing the Windows registry.

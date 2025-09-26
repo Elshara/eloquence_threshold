@@ -1,0 +1,668 @@
+Device: Realtek(R) Audio Tower Speakers
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: Realtek(R) Audio Tower Digital Output
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: NVIDIA High Definition Audio Tower HDMI 1
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: NVIDIA High Definition Audio Tower HDMI 2
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Device: T2224zD Monitor Speakers
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Device: NVIDIA High Definition Audio Monitor HDMI 1
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Device: NVIDIA High Definition Audio Monitor HDMI 2
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: Sound Blaster AE-9 PCIE Speakers
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Device: Sound Blaster AE-9s PCIE Digital Output
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: Scarlett 2i2 USB Studio Speakers
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: USB-C HEADSET Audio Output
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: VB-Audio Virtual Cable Virtual Output
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: Realtek(R) Audio Tower Output
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: T2224zD Monitor Microphone
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Device: Sound Blaster AE-9 PCIE Microphone
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Device: Sound Blaster AE-9s PCIE Input
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: Sound Blaster AE-9s PCIE Digital Input
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: Sound Blaster AE-9 PCIE Output
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Device: Scarlett 2i2 USB Studio Microphone
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1
+Device: Logitech BRIO Webcam Microphone
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Device: USB-C HEADSET Audio Input
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Device: VB-Audio Virtual Cable Virtual Input
+Stage: pre-mix post-mix capture
+Channel: ALL
+Copy: L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR
+Delay: 0.0 ms
+LoudnessCorrection: State 1 ReferenceLevel 0 ReferenceOffset 0 Attenuation 1.0
+Preamp: -0 dB
+Filter: ON PK Fc 0.01 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.02 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.08 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.16 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.32 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 0.64 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1.28 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2.56 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5.12 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10.24 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20.48 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 40.96 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 81.92 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 163.84 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 327.68 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 655.36 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 1310.72 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 2621.44 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 5242.88 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 10485.76 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 20971.52 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 41943.04 Hz Gain -0 dB Q 1
+Filter: ON PK Fc 83886.08 Hz Gain -0 dB Q 1

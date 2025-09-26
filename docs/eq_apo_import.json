@@ -1,0 +1,4040 @@
+[
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Realtek(R) Audio Tower Speakers",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Realtek(R) Audio Tower Digital Output",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "NVIDIA High Definition Audio Tower HDMI 1",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "NVIDIA High Definition Audio Tower HDMI 2",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "T2224zD Monitor Speakers",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "NVIDIA High Definition Audio Monitor HDMI 1",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "NVIDIA High Definition Audio Monitor HDMI 2",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Sound Blaster AE-9 PCIE Speakers",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Sound Blaster AE-9s PCIE Digital Output",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Scarlett 2i2 USB Studio Speakers",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "USB-C HEADSET Audio Output",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "VB-Audio Virtual Cable Virtual Output",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Realtek(R) Audio Tower Output",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "T2224zD Monitor Microphone",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Sound Blaster AE-9 PCIE Microphone",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Sound Blaster AE-9s PCIE Input",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Sound Blaster AE-9s PCIE Digital Input",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Sound Blaster AE-9 PCIE Output",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Scarlett 2i2 USB Studio Microphone",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "Logitech BRIO Webcam Microphone",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "USB-C HEADSET Audio Input",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  },
+  {
+    "channel": "ALL",
+    "copy": "L=L R=R C=C LFE=LFE SUB=SUB SL=SL SR=SR RL=RL RC=RC RR=RR",
+    "delay_ms": 0.0,
+    "device": "VB-Audio Virtual Cable Virtual Input",
+    "filters": [
+      {
+        "Fc": 0.01,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.02,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.16,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.32,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 0.64,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1.28,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2.56,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5.12,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10.24,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20.48,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 40.96,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 81.92,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 163.84,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 327.68,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 655.36,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 1310.72,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 2621.44,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 5242.88,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 10485.76,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 20971.52,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 41943.04,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      },
+      {
+        "Fc": 83886.08,
+        "Gain": -0.0,
+        "Q": 1.0,
+        "state": "ON",
+        "type": "PK"
+      }
+    ],
+    "loudnessCorrection": {
+      "Attenuation": 1.0,
+      "ReferenceLevel": 0.0,
+      "ReferenceOffset": 0.0,
+      "State": 1.0
+    },
+    "preamp_db": -0.0,
+    "stage": [
+      "pre-mix",
+      "post-mix",
+      "capture"
+    ]
+  }
+]

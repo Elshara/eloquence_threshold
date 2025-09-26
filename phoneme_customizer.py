@@ -52,6 +52,43 @@ class PhonemeEqBand:
         return cls()
 
     @classmethod
+    def from_peak_filter(
+        cls,
+        center_hz: float,
+        gain_db: float,
+        q: float,
+        *,
+        sample_rate: Optional[float] = None,
+    ) -> Optional["PhonemeEqBand"]:
+        """Approximate a constant-Q peak filter with symmetric low/high bounds."""
+
+        try:
+            center = float(center_hz)
+            gain = float(gain_db)
+            q_value = float(q)
+        except (TypeError, ValueError):
+            return None
+        if not (math.isfinite(center) and math.isfinite(gain) and math.isfinite(q_value)):
+            return None
+        if center <= 0.0 or q_value <= 0.0:
+            return None
+
+        q_value = max(q_value, 1e-6)
+        ratio = math.pow(2.0, 1.0 / (2.0 * q_value))
+        low = max(1.0, center / ratio)
+        high = center * ratio
+
+        if sample_rate and sample_rate > 0:
+            nyquist = float(sample_rate) / 2.0
+            if nyquist > 1.0:
+                low = min(low, nyquist - 1.0)
+            high = min(high, nyquist)
+        if high <= low:
+            high = low + 1.0
+
+        return cls(low, high, gain)
+
+    @classmethod
     def from_mapping(cls, mapping: Mapping[str, object]) -> Optional["PhonemeEqBand"]:
         if not isinstance(mapping, Mapping):
             return None
