@@ -31,13 +31,14 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
+import urllib.parse
 import zipfile
 from pathlib import Path
 from typing import Optional, Tuple
-from urllib.parse import urlparse
 
 if sys.version_info < (3, 8):
     raise RuntimeError("Python 3.8 or newer is required to build the add-on")
+
 
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_OUTPUT = REPO_ROOT / "eloquence.nvda-addon"
@@ -106,6 +107,14 @@ def ensure_template(
         return path
     if not allow_download:
         return None
+    # Validate the template URL prevents partial SSRF
+    parsed_url = urllib.parse.urlparse(url)
+    if parsed_url.scheme != "https":
+        print(f"Error: Only HTTPS URLs are allowed for template downloads (got: {url})")
+        return None
+    if not parsed_url.netloc:
+        print(f"Error: Invalid template URL (no network location found): {url}")
+        return None
     try:
         print(f"Downloading template from {url}…")
         context = ssl._create_unverified_context() if insecure else None
@@ -159,14 +168,6 @@ def write_archive(staging_dir: Path, output: Path) -> None:
                 continue
             arcname = path.relative_to(staging_dir).as_posix()
             archive.write(path, arcname)
-    # Validate --template-url to avoid SSRF
-    parsed_url = urlparse(args.template_url)
-    # Only allow https URLs to GitHub
-    if not (
-        parsed_url.scheme == "https"
-        and parsed_url.netloc == "github.com"
-    ):
-        raise ValueError("Only https://github.com URLs are allowed for --template-url")
 
 
 def main() -> None:

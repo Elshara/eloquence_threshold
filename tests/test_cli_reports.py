@@ -127,6 +127,25 @@ class CliReportTests(unittest.TestCase):
             self.assertIn("metadata", payload)
             self.assertTrue(md_path.read_text(encoding="utf-8").strip())
 
+    def test_report_language_progress(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            json_path = Path(tmp, "language_progress.json")
+            md_path = Path(tmp, "language_progress.md")
+            result = self._run_tool(
+                "tools/report_language_progress.py",
+                "--json",
+                str(json_path),
+                "--markdown",
+                str(md_path),
+                "--print",
+            )
+            self.assertEqual(result.returncode, 0, msg=result.stderr)
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            self.assertIn("entries", payload)
+            self.assertIn("stats", payload)
+            self.assertGreaterEqual(payload.get("totalProfiles", 0), 0)
+            self.assertTrue(md_path.read_text(encoding="utf-8").strip())
+
     def test_run_nvda_release_checks_from_snapshot(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             snapshot_source = Path(tmp, "source_snapshot.json")
