@@ -16,7 +16,10 @@ if TYPE_CHECKING:
 
 LOG = logging.getLogger(__name__)
 
-_DATA_DIR = os.path.join(os.path.dirname(__file__), "eloquence_data", "languages")
+_REPO_ROOT = os.path.dirname(__file__)
+_DATA_DIR = os.path.join(_REPO_ROOT, "eloquence_data", "languages")
+_DOCS_DIR = os.path.join(_REPO_ROOT, "docs")
+_WIKIPEDIA_INDEX_PATH = os.path.join(_DOCS_DIR, "wikipedia_language_index.json")
 
 
 @dataclass(frozen=True)
@@ -575,3 +578,42 @@ def _voice_links_for_profile(
         "availableTemplateCount": len(available_templates),
         "availableTemplates": available_templates,
     }
+
+
+def load_wikipedia_language_index(path: Optional[str] = None) -> Dict[str, List[Dict[str, object]]]:
+    """Load the cached Wikipedia language index and group entries by tag."""
+
+    file_path = path or _WIKIPEDIA_INDEX_PATH
+    if not os.path.exists(file_path):
+        LOG.warning("Wikipedia language index not found at %s", file_path)
+        return {tag: [] for tag in ("language", "dialect", "accent", "sign-language", "orthography")}
+
+    with open(file_path, "r", encoding="utf-8") as handle:
+        payload = json.load(handle)
+
+    entries = payload.get("entries", [])
+    grouped: Dict[str, List[Dict[str, object]]] = {
+        "language": [],
+        "dialect": [],
+        "accent": [],
+        "sign-language": [],
+        "orthography": [],
+    }
+
+    for entry in entries:
+        record = {
+            "title": entry.get("title", ""),
+            "url": entry.get("url"),
+            "breadcrumbs": entry.get("breadcrumbs", []),
+            "tags": entry.get("tags", []),
+        }
+        tags = record["tags"] or ["language"]
+        assigned = False
+        for tag in tags:
+            if tag in grouped:
+                grouped[tag].append(record)
+                assigned = True
+        if not assigned:
+            grouped["language"].append(record)
+
+    return grouped
