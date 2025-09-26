@@ -1,0 +1,261 @@
+"""Shared definitions for extended Eloquence voice parameters.
+
+The classic Eloquence engine exposes eight voice parameters.  Modern synths
+such as NV Speech Player, DECtalk, and FonixTalk expose a richer collection of
+controls that let users tune emphasis, consonant clarity, harmonic content, and
+the perceived depth of a voice.  This module centralises metadata for those
+extended parameters so the loader, synthesiser driver, and documentation
+generators stay aligned.
+
+Each entry mirrors the structure consumed by :mod:`voice_catalog`:
+
+``label``
+    Human readable name announced by NVDA.
+``description``
+    Short hint describing how the control affects speech.
+``min`` / ``max`` / ``default`` / ``step``
+    Numeric range surfaced to users.  Values follow the 0–200 convention used
+    by other Eloquence sliders so keyboard workflows remain predictable.
+``tags``
+    Loose descriptors that documentation and reporting tools can use to group
+    related controls.
+
+Additional hints (for example ``profile`` and ``nvspeechExtras``) document how
+the parameter maps to NV Speech Player data.  The synthesiser does not consume
+those fields directly yet, but keeping them alongside the range metadata helps
+tooling reason about provenance and future automation.
+"""
+from __future__ import annotations
+
+from typing import Dict, Mapping
+
+
+def _default_tags(*values: str) -> tuple[str, ...]:
+    return tuple(sorted({value for value in values if value}))
+
+
+ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
+    "emphasis": {
+        "label": "Emphasis shaping",
+        "description": (
+            "Boost or soften consonant attacks and vowel onsets to mirror how "
+            "NV Speech Player emphasises foreground syllables."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("prosody", "nvspeechplayer", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (2200, 5200),
+            "gain": 6.0,
+        },
+        "nvspeechExtras": ("fricationAmplitude_mul", "aspirationAmplitude"),
+    },
+    "stress": {
+        "label": "Stress contour",
+        "description": (
+            "Shapes the mid-high resonances that convey linguistic stress, "
+            "mirroring NV Speech Player's intensity multipliers."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("prosody", "stress", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (1800, 4000),
+            "gain": 6.5,
+        },
+        "nvspeechExtras": ("voicePitch_mul", "endVoicePitch_mul"),
+    },
+    "timbre": {
+        "label": "Timbre focus",
+        "description": (
+            "Balances lower formants against upper harmonics so the voice can "
+            "sound darker or brighter without losing articulation."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("timbre", "formant", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (500, 1900),
+            "gain": 8.0,
+        },
+        "nvspeechExtras": ("cf1_mul", "cf2_mul", "cb1_mul"),
+    },
+    "tone": {
+        "label": "Tone colour",
+        "description": (
+            "Highlights the harmonic band responsible for tone colour, similar "
+            "to NV Speech Player's cascade/parallel formant multipliers."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("tone", "eq", "harmonics"),
+        "profile": {
+            "kind": "band",
+            "range": (1400, 3200),
+            "gain": 7.5,
+        },
+        "nvspeechExtras": ("pf3", "pf4", "parallelBypass"),
+    },
+    "vocalLayers": {
+        "label": "Vocal layering",
+        "description": (
+            "Controls the balance between fundamental energy and higher "
+            "partials to simulate stacked voices or thinner single voices."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("texture", "layering", "eq"),
+        "profile": {
+            "kind": "dual-band",
+            "ranges": ((120, 380), (2400, 5200)),
+            "gain": 5.5,
+        },
+        "nvspeechExtras": ("voiceAmplitude", "parallelBypass"),
+    },
+    "overtones": {
+        "label": "Overtone brilliance",
+        "description": (
+            "Adds sparkle or dampens sibilants by shaping the 6–16 kHz band "
+            "used by NV Speech Player's frication models."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("harmonics", "brightness", "eq"),
+        "profile": {
+            "kind": "shelf-high",
+            "range": (5800, 16000),
+            "gain": 12.0,
+        },
+        "nvspeechExtras": ("fricationAmplitude_mul",),
+    },
+    "subtones": {
+        "label": "Subtone weight",
+        "description": (
+            "Boost or trim the 60–400 Hz band that defines chest resonance and "
+            "NV Speech Player's low frequency shaping."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("harmonics", "warmth", "eq"),
+        "profile": {
+            "kind": "shelf-low",
+            "range": (60, 420),
+            "gain": 12.0,
+        },
+        "nvspeechExtras": ("voiceAmplitude", "cbN0"),
+    },
+    "vocalRange": {
+        "label": "Vocal range spread",
+        "description": (
+            "Expands or narrows the perceived vocal range by shaping both "
+            "fundamentals and upper resonances."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("range", "prosody"),
+        "profile": {
+            "kind": "dual-band",
+            "ranges": ((100, 320), (3600, 7200)),
+            "gain": 6.0,
+        },
+        "nvspeechExtras": ("voicePitch_mul", "endVoicePitch_mul", "cfNP"),
+    },
+    "smoothness": {
+        "label": "Smoothness",
+        "description": (
+            "Controls how much high frequency noise is removed to mimic NV "
+            "Speech Player's aspiration blending."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("texture", "softness", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (4200, 14000),
+            "gain": 8.0,
+        },
+        "nvspeechExtras": ("aspirationAmplitude", "copyAdjacent"),
+    },
+    "whisper": {
+        "label": "Whisper blend",
+        "description": (
+            "Introduces or removes aspiration-style whisper components across "
+            "the band limited by NV Speech Player's breath tables."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("texture", "whisper", "eq"),
+        "profile": {
+            "kind": "dual-band",
+            "ranges": ((300, 900), (3600, 11000)),
+            "gain": 10.0,
+        },
+        "nvspeechExtras": ("aspirationAmplitude",),
+    },
+    "toneSize": {
+        "label": "Tone size",
+        "description": (
+            "Simulates smaller or larger resonant cavities by biasing the "
+            "first three formants—akin to NV Speech Player's head size macro."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("formant", "size", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (700, 2500),
+            "gain": 7.0,
+        },
+        "nvspeechExtras": ("cb1_mul", "cf3_mul"),
+    },
+    "scopeDepth": {
+        "label": "Scope depth",
+        "description": (
+            "Controls how deep or shallow the voice feels by reshaping the "
+            "upper-bass region present in NV Speech Player formants."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("depth", "warmth", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (200, 820),
+            "gain": 6.5,
+        },
+        "nvspeechExtras": ("cbNP", "caNP"),
+    },
+}
+
+
+def advanced_parameter_defaults() -> Dict[str, int]:
+    """Return default values for every extended voice parameter."""
+
+    return {name: int(spec.get("default", 100)) for name, spec in ADVANCED_VOICE_PARAMETER_SPECS.items()}
+

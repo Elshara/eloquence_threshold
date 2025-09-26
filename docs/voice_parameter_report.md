@@ -1,6 +1,6 @@
 # Voice parameter coverage
 
-* Generated: 2025-09-25T12:52:31Z
+* Generated: 2025-09-26T02:07:05Z
 * Templates analysed: 28
 * Languages represented: 11
 
@@ -9,28 +9,52 @@
 | Parameter | Range | Default | Step | Tags | Description |
 | --- | --- | --- | --- | --- | --- |
 | breathiness | 0 – 120 | 32 | 1 | texture | Adds aspiration to soften consonants. |
+| emphasis | 0 – 200 | 100 | 1 | eq, nvspeechplayer, prosody | Boost or soften consonant attacks and vowel onsets to mirror how NV Speech Player emphasises foreground syllables. |
 | gender | 0 – 1 | 0 | 1 | timbre | 0 = masculine tract target, 1 = feminine tract target. |
 | headSize | 70 – 160 | 100 | 1 | formant | Formant scaling comparable to vocal tract length. |
 | inflection | 0 – 100 | 50 | 1 | prosody | Amount of pitch modulation between syllables. |
+| overtones | 0 – 200 | 100 | 1 | brightness, eq, harmonics | Adds sparkle or dampens sibilants by shaping the 6–16 kHz band used by NV Speech Player's frication models. |
 | pitch | 40 – 160 | 100 | 1 | tone | Primary pitch target controlling overall brightness. |
 | rate | 40 – 150 | 100 | 1 | timing | Base speed in words per minute mapped to Eloquence's internal range. |
 | roughness | 0 – 120 | 40 | 1 | texture | Noise component balancing rasp versus clarity. |
 | sampleRate | 8000 – 48000 | 22050 | 50 | output, quality | Output rate in Hertz after optional resampling. |
+| scopeDepth | 0 – 200 | 100 | 1 | depth, eq, warmth | Controls how deep or shallow the voice feels by reshaping the upper-bass region present in NV Speech Player formants. |
+| smoothness | 0 – 200 | 100 | 1 | eq, softness, texture | Controls how much high frequency noise is removed to mimic NV Speech Player's aspiration blending. |
+| stress | 0 – 200 | 100 | 1 | eq, prosody, stress | Shapes the mid-high resonances that convey linguistic stress, mirroring NV Speech Player's intensity multipliers. |
+| subtones | 0 – 200 | 100 | 1 | eq, harmonics, warmth | Boost or trim the 60–400 Hz band that defines chest resonance and NV Speech Player's low frequency shaping. |
+| timbre | 0 – 200 | 100 | 1 | eq, formant, timbre | Balances lower formants against upper harmonics so the voice can sound darker or brighter without losing articulation. |
+| tone | 0 – 200 | 100 | 1 | eq, harmonics, tone | Highlights the harmonic band responsible for tone colour, similar to NV Speech Player's cascade/parallel formant multipliers. |
+| toneSize | 0 – 200 | 100 | 1 | eq, formant, size | Simulates smaller or larger resonant cavities by biasing the first three formants—akin to NV Speech Player's head size macro. |
+| vocalLayers | 0 – 200 | 100 | 1 | eq, layering, texture | Controls the balance between fundamental energy and higher partials to simulate stacked voices or thinner single voices. |
+| vocalRange | 0 – 200 | 100 | 1 | prosody, range | Expands or narrows the perceived vocal range by shaping both fundamentals and upper resonances. |
 | volume | 50 – 100 | 80 | 1 | loudness | Output gain applied before NVDA's volume scaling. |
+| whisper | 0 – 200 | 100 | 1 | eq, texture, whisper | Introduces or removes aspiration-style whisper components across the band limited by NV Speech Player's breath tables. |
 
 ## Parameter usage
 
 | Parameter | Templates using it | Count |
 | --- | --- | ---: |
 | breathiness | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
+| emphasis | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | gender | eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 24 |
 | headSize | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
 | inflection | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
+| overtones | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | pitch | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
 | rate | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
 | roughness | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
 | sampleRate | – | 0 |
+| scopeDepth | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| smoothness | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| stress | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| subtones | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| timbre | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| tone | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| toneSize | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| vocalLayers | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| vocalRange | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | volume | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
+| whisper | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 
 ## Language coverage
 
@@ -438,6 +462,18 @@
   * breathiness: 30
   * volume: 90
   * gender: 0
+  * emphasis: 118
+  * stress: 112
+  * timbre: 116
+  * tone: 122
+  * vocalLayers: 115
+  * overtones: 110
+  * subtones: 108
+  * vocalRange: 114
+  * smoothness: 104
+  * whisper: 96
+  * toneSize: 112
+  * scopeDepth: 110
 * Extras:
   * nvspeechPlayer: {'cb1_mul': 1.3, 'pa6_mul': 1.3, 'fricationAmplitude_mul': 0.85}
   * phonemeFallback: examplesFirst
@@ -457,6 +493,18 @@
   * breathiness: 26
   * volume: 88
   * gender: 0
+  * emphasis: 130
+  * stress: 118
+  * timbre: 124
+  * tone: 136
+  * vocalLayers: 108
+  * overtones: 95
+  * subtones: 96
+  * vocalRange: 120
+  * smoothness: 94
+  * whisper: 90
+  * toneSize: 118
+  * scopeDepth: 102
 * Extras:
   * nvspeechPlayer: {'cf1_mul': 1.01, 'cf2_mul': 1.02, 'cf4': 3770, 'cf5': 4100, 'cf6': 5000, 'cfNP_mul': 0.9, 'cb1_mul': 1.3, 'fricationAmplitude_mul': 0.7, 'pa6_mul': 1.3}
   * phonemeFallback: ipaFirst
@@ -476,6 +524,18 @@
   * breathiness: 40
   * volume: 85
   * gender: 0
+  * emphasis: 96
+  * stress: 88
+  * timbre: 102
+  * tone: 108
+  * vocalLayers: 90
+  * overtones: 82
+  * subtones: 120
+  * vocalRange: 98
+  * smoothness: 140
+  * whisper: 180
+  * toneSize: 108
+  * scopeDepth: 132
 * Extras:
   * nvspeechPlayer: {'aspirationAmplitude': 1, 'voiceAmplitude': 0}
   * phonemeFallback: descriptionsFirst
@@ -495,6 +555,18 @@
   * breathiness: 24
   * volume: 92
   * gender: 0
+  * emphasis: 92
+  * stress: 100
+  * timbre: 105
+  * tone: 98
+  * vocalLayers: 112
+  * overtones: 88
+  * subtones: 138
+  * vocalRange: 104
+  * smoothness: 110
+  * whisper: 102
+  * toneSize: 126
+  * scopeDepth: 140
 * Extras:
   * nvspeechPlayer: {'voicePitch_mul': 0.75, 'endVoicePitch_mul': 0.75, 'cf1_mul': 0.75, 'cf2_mul': 0.85, 'cf3_mul': 0.85}
   * phonemeFallback: examplesFirst

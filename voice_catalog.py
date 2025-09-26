@@ -16,6 +16,8 @@ from collections import OrderedDict
 from dataclasses import dataclass
 from typing import Dict, Iterable, Iterator, List, Optional, Set, Tuple
 
+from voice_parameters import ADVANCED_VOICE_PARAMETER_SPECS
+
 LOG = logging.getLogger(__name__)
 
 _VOICE_DATA_ROOT = os.path.join(os.path.dirname(__file__), "eloquence_data")
@@ -148,7 +150,7 @@ _VARIANT_PARAMETER_ORDER = (
     "volume",
 )
 
-_DEFAULT_PARAMETER_RANGE_SPECS: Dict[str, Dict[str, object]] = {
+_BASE_PARAMETER_RANGE_SPECS: Dict[str, Dict[str, object]] = {
     "gender": {
         "label": "Gender resonance",
         "description": "0 = masculine tract target, 1 = feminine tract target.",
@@ -230,6 +232,11 @@ _DEFAULT_PARAMETER_RANGE_SPECS: Dict[str, Dict[str, object]] = {
         "step": 50,
         "tags": ("output", "quality"),
     },
+}
+
+_DEFAULT_PARAMETER_RANGE_SPECS: Dict[str, Dict[str, object]] = {
+    **_BASE_PARAMETER_RANGE_SPECS,
+    **{name: dict(spec) for name, spec in ADVANCED_VOICE_PARAMETER_SPECS.items()},
 }
 
 _LANGUAGE_PROFILE_MAP = {

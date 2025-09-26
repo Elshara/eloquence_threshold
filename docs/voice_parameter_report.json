@@ -212,7 +212,7 @@
         }
       ]
     },
-    "generated": "2025-09-25T12:52:31Z",
+    "generated": "2025-09-26T02:07:05Z",
     "languageCount": 11,
     "templateCount": 28
   },
@@ -226,6 +226,19 @@
       "step": 1,
       "tags": [
         "texture"
+      ]
+    },
+    "emphasis": {
+      "default": 100,
+      "description": "Boost or soften consonant attacks and vowel onsets to mirror how NV Speech Player emphasises foreground syllables.",
+      "label": "Emphasis shaping",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "nvspeechplayer",
+        "prosody"
       ]
     },
     "gender": {
@@ -259,6 +272,19 @@
       "step": 1,
       "tags": [
         "prosody"
+      ]
+    },
+    "overtones": {
+      "default": 100,
+      "description": "Adds sparkle or dampens sibilants by shaping the 6\u201316 kHz band used by NV Speech Player's frication models.",
+      "label": "Overtone brilliance",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "brightness",
+        "eq",
+        "harmonics"
       ]
     },
     "pitch": {
@@ -306,6 +332,122 @@
         "quality"
       ]
     },
+    "scopeDepth": {
+      "default": 100,
+      "description": "Controls how deep or shallow the voice feels by reshaping the upper-bass region present in NV Speech Player formants.",
+      "label": "Scope depth",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "depth",
+        "eq",
+        "warmth"
+      ]
+    },
+    "smoothness": {
+      "default": 100,
+      "description": "Controls how much high frequency noise is removed to mimic NV Speech Player's aspiration blending.",
+      "label": "Smoothness",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "softness",
+        "texture"
+      ]
+    },
+    "stress": {
+      "default": 100,
+      "description": "Shapes the mid-high resonances that convey linguistic stress, mirroring NV Speech Player's intensity multipliers.",
+      "label": "Stress contour",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "prosody",
+        "stress"
+      ]
+    },
+    "subtones": {
+      "default": 100,
+      "description": "Boost or trim the 60\u2013400 Hz band that defines chest resonance and NV Speech Player's low frequency shaping.",
+      "label": "Subtone weight",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "harmonics",
+        "warmth"
+      ]
+    },
+    "timbre": {
+      "default": 100,
+      "description": "Balances lower formants against upper harmonics so the voice can sound darker or brighter without losing articulation.",
+      "label": "Timbre focus",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "formant",
+        "timbre"
+      ]
+    },
+    "tone": {
+      "default": 100,
+      "description": "Highlights the harmonic band responsible for tone colour, similar to NV Speech Player's cascade/parallel formant multipliers.",
+      "label": "Tone colour",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "harmonics",
+        "tone"
+      ]
+    },
+    "toneSize": {
+      "default": 100,
+      "description": "Simulates smaller or larger resonant cavities by biasing the first three formants\u2014akin to NV Speech Player's head size macro.",
+      "label": "Tone size",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "formant",
+        "size"
+      ]
+    },
+    "vocalLayers": {
+      "default": 100,
+      "description": "Controls the balance between fundamental energy and higher partials to simulate stacked voices or thinner single voices.",
+      "label": "Vocal layering",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "layering",
+        "texture"
+      ]
+    },
+    "vocalRange": {
+      "default": 100,
+      "description": "Expands or narrows the perceived vocal range by shaping both fundamentals and upper resonances.",
+      "label": "Vocal range spread",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "prosody",
+        "range"
+      ]
+    },
     "volume": {
       "default": 80,
       "description": "Output gain applied before NVDA's volume scaling.",
@@ -315,6 +457,19 @@
       "step": 1,
       "tags": [
         "loudness"
+      ]
+    },
+    "whisper": {
+      "default": 100,
+      "description": "Introduces or removes aspiration-style whisper components across the band limited by NV Speech Player's breath tables.",
+      "label": "Whisper blend",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "texture",
+        "whisper"
       ]
     }
   },
@@ -346,6 +501,15 @@
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "emphasis": {
+      "templateCount": 4,
+      "templates": [
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -441,6 +605,15 @@
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "overtones": {
+      "templateCount": 4,
+      "templates": [
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -550,6 +723,87 @@
       "templateCount": 0,
       "templates": []
     },
+    "scopeDepth": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "smoothness": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "stress": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "subtones": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "timbre": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "tone": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "toneSize": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "vocalLayers": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "vocalRange": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
     "volume": {
       "templateCount": 28,
       "templates": [
@@ -577,6 +831,15 @@
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "whisper": {
+      "templateCount": 4,
+      "templates": [
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -1194,13 +1457,25 @@
       "name": "NV Speech Player Adam",
       "parameters": {
         "breathiness": 30,
+        "emphasis": 118,
         "gender": 0,
         "headSize": 112,
         "inflection": 58,
+        "overtones": 110,
         "pitch": 118,
         "rate": 104,
         "roughness": 18,
-        "volume": 90
+        "scopeDepth": 110,
+        "smoothness": 104,
+        "stress": 112,
+        "subtones": 108,
+        "timbre": 116,
+        "tone": 122,
+        "toneSize": 112,
+        "vocalLayers": 115,
+        "vocalRange": 114,
+        "volume": 90,
+        "whisper": 96
       },
       "tags": [
         "nvspeechplayer",
@@ -1234,13 +1509,25 @@
       "name": "NV Speech Player Benjamin",
       "parameters": {
         "breathiness": 26,
+        "emphasis": 130,
         "gender": 0,
         "headSize": 118,
         "inflection": 52,
+        "overtones": 95,
         "pitch": 124,
         "rate": 108,
         "roughness": 16,
-        "volume": 88
+        "scopeDepth": 102,
+        "smoothness": 94,
+        "stress": 118,
+        "subtones": 96,
+        "timbre": 124,
+        "tone": 136,
+        "toneSize": 118,
+        "vocalLayers": 108,
+        "vocalRange": 120,
+        "volume": 88,
+        "whisper": 90
       },
       "tags": [
         "nvspeechplayer",
@@ -1267,13 +1554,25 @@
       "name": "NV Speech Player Caleb",
       "parameters": {
         "breathiness": 40,
+        "emphasis": 96,
         "gender": 0,
         "headSize": 120,
         "inflection": 44,
+        "overtones": 82,
         "pitch": 106,
         "rate": 92,
         "roughness": 28,
-        "volume": 85
+        "scopeDepth": 132,
+        "smoothness": 140,
+        "stress": 88,
+        "subtones": 120,
+        "timbre": 102,
+        "tone": 108,
+        "toneSize": 108,
+        "vocalLayers": 90,
+        "vocalRange": 98,
+        "volume": 85,
+        "whisper": 180
       },
       "tags": [
         "nvspeechplayer",
@@ -1303,13 +1602,25 @@
       "name": "NV Speech Player David",
       "parameters": {
         "breathiness": 24,
+        "emphasis": 92,
         "gender": 0,
         "headSize": 130,
         "inflection": 48,
+        "overtones": 88,
         "pitch": 90,
         "rate": 100,
         "roughness": 22,
-        "volume": 92
+        "scopeDepth": 140,
+        "smoothness": 110,
+        "stress": 100,
+        "subtones": 138,
+        "timbre": 105,
+        "tone": 98,
+        "toneSize": 126,
+        "vocalLayers": 112,
+        "vocalRange": 104,
+        "volume": 92,
+        "whisper": 102
       },
       "tags": [
         "nvspeechplayer",

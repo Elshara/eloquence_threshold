@@ -31,7 +31,19 @@
         "roughness": 18,
         "breathiness": 30,
         "volume": 90,
-        "gender": 0
+        "gender": 0,
+        "emphasis": 118,
+        "stress": 112,
+        "timbre": 116,
+        "tone": 122,
+        "vocalLayers": 115,
+        "overtones": 110,
+        "subtones": 108,
+        "vocalRange": 114,
+        "smoothness": 104,
+        "whisper": 96,
+        "toneSize": 112,
+        "scopeDepth": 110
       },
       "extras": {
         "phonemeFallback": "examplesFirst",
@@ -69,7 +81,19 @@
         "roughness": 16,
         "breathiness": 26,
         "volume": 88,
-        "gender": 0
+        "gender": 0,
+        "emphasis": 130,
+        "stress": 118,
+        "timbre": 124,
+        "tone": 136,
+        "vocalLayers": 108,
+        "overtones": 95,
+        "subtones": 96,
+        "vocalRange": 120,
+        "smoothness": 94,
+        "whisper": 90,
+        "toneSize": 118,
+        "scopeDepth": 102
       },
       "extras": {
         "phonemeFallback": "ipaFirst",
@@ -113,7 +137,19 @@
         "roughness": 28,
         "breathiness": 40,
         "volume": 85,
-        "gender": 0
+        "gender": 0,
+        "emphasis": 96,
+        "stress": 88,
+        "timbre": 102,
+        "tone": 108,
+        "vocalLayers": 90,
+        "overtones": 82,
+        "subtones": 120,
+        "vocalRange": 98,
+        "smoothness": 140,
+        "whisper": 180,
+        "toneSize": 108,
+        "scopeDepth": 132
       },
       "extras": {
         "phonemeFallback": "descriptionsFirst",
@@ -150,7 +186,19 @@
         "roughness": 22,
         "breathiness": 24,
         "volume": 92,
-        "gender": 0
+        "gender": 0,
+        "emphasis": 92,
+        "stress": 100,
+        "timbre": 105,
+        "tone": 98,
+        "vocalLayers": 112,
+        "overtones": 88,
+        "subtones": 138,
+        "vocalRange": 104,
+        "smoothness": 110,
+        "whisper": 102,
+        "toneSize": 126,
+        "scopeDepth": 140
       },
       "extras": {
         "phonemeFallback": "examplesFirst",
