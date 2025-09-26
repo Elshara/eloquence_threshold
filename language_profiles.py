@@ -425,13 +425,13 @@ def load_default_language_profiles() -> LanguageProfileCatalog:
     return LanguageProfileCatalog(profiles)
 
 
-def _sanitize_for_log(obj):
-    """Recursively remove newlines/carriage-returns from strings for safe logging."""
+def _sanitize_for_log(obj: object) -> object:
+    """Recursively strip control characters from log payloads."""
 
     if isinstance(obj, str):
         return obj.replace("\n", "").replace("\r", "")
     if isinstance(obj, dict):
-        return {_sanitize_for_log(k): _sanitize_for_log(v) for k, v in obj.items()}
+        return {str(_sanitize_for_log(key)): _sanitize_for_log(value) for key, value in obj.items()}
     if isinstance(obj, list):
         return [_sanitize_for_log(item) for item in obj]
     if isinstance(obj, tuple):
@@ -442,8 +442,12 @@ def _sanitize_for_log(obj):
 def _parse_language_profile(data: Dict[str, object]) -> Optional[LanguageProfile]:
     profile_id = data.get("id")
     if not profile_id:
-        sanitized_keys = _sanitize_for_log(list(data.keys()))
-        LOG.warning("Ignoring language profile without id. Keys: %r", sanitized_keys)
+        sanitized_data = _sanitize_for_log(data)
+        LOG.warning(
+            "Ignoring language profile without id. Keys: %r Payload: %r",
+            sorted(data.keys()),
+            sanitized_data,
+        )
         return None
     characters = OrderedDict()
     raw_characters = data.get("characters", [])

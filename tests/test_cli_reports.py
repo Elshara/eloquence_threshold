@@ -149,12 +149,7 @@ class CliReportTests(unittest.TestCase):
     def test_run_nvda_release_checks_from_snapshot(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             snapshot_source = Path(tmp, "source_snapshot.json")
-            snapshot_source.write_text(
-                Path("docs/download_nvaccess_snapshot.json").read_text(
-                    encoding="utf-8"
-                ),
-                encoding="utf-8",
-            )
+            snapshot_source.write_text(Path("docs/download_nvaccess_snapshot.json").read_text(encoding="utf-8"), encoding="utf-8")
 
             snapshot_json = Path(tmp, "snapshot.json")
             snapshot_md = Path(tmp, "snapshot.md")
@@ -192,9 +187,7 @@ class CliReportTests(unittest.TestCase):
             self.assertIn("entries", snapshot_payload)
             self.assertTrue(snapshot_payload["entries"])
 
-            recommendations_payload = json.loads(
-                recommendations_json.read_text(encoding="utf-8")
-            )
+            recommendations_payload = json.loads(recommendations_json.read_text(encoding="utf-8"))
             self.assertIn("entries", recommendations_payload)
             self.assertTrue(recommendations_payload["entries"])
 

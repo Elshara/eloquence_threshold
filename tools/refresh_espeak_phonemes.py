@@ -23,7 +23,6 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 from typing import Iterable, Optional
-import os
 
 
 def main() -> None:
@@ -58,13 +57,7 @@ def main() -> None:
             "Unable to locate an eSpeak NG phoneme file under %s" % source_path
         )
 
-    output_path = Path(args.output).resolve()
-    safe_base = Path(__file__).parent.parent.resolve()
-    if not _is_within_directory(output_path, safe_base):
-        parser.error(
-            f"The output path {output_path} is not within the allowed base directory {safe_base}."
-        )
-    _validate_output_path(output_path)
+    output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     content = phoneme_file.read_text(encoding="utf-8")
@@ -104,10 +97,6 @@ def _resolve_phoneme_source(base_path: Path) -> Optional[Path]:
     return None
 
 
-def _is_within_directory(target: Path, base: Path) -> bool:
-    target_resolved = target.resolve()
-    base_resolved = base.resolve()
-    return os.path.commonpath([str(target_resolved), str(base_resolved)]) == str(base_resolved)
 def _normalize_newlines(text: str) -> str:
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     if not text.endswith("\n"):
@@ -119,22 +108,6 @@ def _default_output_path() -> str:
     repo_root = Path(__file__).resolve().parent.parent
     return str(repo_root / "eloquence_data" / "espeak_phonemes.txt")
 
-def _validate_output_path(output_path: Path) -> None:
-    """Ensure the output file stays within the ``eloquence_data`` directory."""
-
-    repo_root = Path(__file__).resolve().parent.parent
-    allowed_dir = repo_root / "eloquence_data"
-    try:
-        resolved_allowed = allowed_dir.resolve(strict=False)
-        resolved_output = output_path.resolve(strict=False)
-    except RuntimeError as exc:
-        raise ValueError(f"Failed to resolve output path: {output_path}") from exc
-    try:
-        resolved_output.relative_to(resolved_allowed)
-    except ValueError as exc:
-        raise ValueError(
-            f"Refusing to write output file outside {resolved_allowed}: {resolved_output}"
-        ) from exc
 
 if __name__ == "__main__":
     main()
