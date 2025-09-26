@@ -50,6 +50,30 @@ class PhonemeCustomizerTests(unittest.TestCase):
         self.assertGreater(high_band["gain_db"], 0.0)
         self.assertLess(low_band["gain_db"], 0.0)
 
+    def test_pitch_height_boosts_fundamental_band(self) -> None:
+        self.customizer.set_global_parameter("pitchHeight", 150)
+        payload = self.customizer.build_engine_payload()
+        fundamental = next(entry for entry in payload if entry["low_hz"] == 70.0)
+        self.assertGreater(fundamental["gain_db"], 0.0)
+
+    def test_plosive_impact_targets_transient_region(self) -> None:
+        self.customizer.set_global_parameter("plosiveImpact", 150)
+        payload = self.customizer.build_engine_payload()
+        burst_band = next(entry for entry in payload if entry["low_hz"] == 900.0)
+        self.assertGreater(burst_band["gain_db"], 0.0)
+
+    def test_sibilant_clarity_shapes_high_noise_band(self) -> None:
+        self.customizer.set_global_parameter("sibilantClarity", 160)
+        payload = self.customizer.build_engine_payload()
+        sibilant_band = next(entry for entry in payload if entry["low_hz"] == 5200.0)
+        self.assertGreater(sibilant_band["gain_db"], 0.0)
+
+    def test_nasal_balance_biases_upper_formant_slot(self) -> None:
+        self.customizer.set_global_parameter("nasalBalance", 140)
+        payload = self.customizer.build_engine_payload()
+        nasal_band = next(entry for entry in payload if entry["low_hz"] == 980.0)
+        self.assertGreater(nasal_band["gain_db"], 0.0)
+
     def test_inflection_contour_shapes_low_and_high_regions(self) -> None:
         self.customizer.set_global_parameter("inflectionContour", 160)
         payload = self.customizer.build_engine_payload()

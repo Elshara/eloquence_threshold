@@ -125,6 +125,28 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
         },
         "nvspeechExtras": ("pf3", "pf4", "parallelBypass"),
     },
+    "pitchHeight": {
+        "label": "Pitch height",
+        "description": (
+            "Raises or lowers the perceived pitch centre by reshaping the "
+            "fundamental energy band without affecting speaking rate."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("pitch", "prosody", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (70, 260),
+            "gain": 9.0,
+            "bands": (
+                {"range": (70, 140), "gainMultiplier": 1.1},
+                {"range": (140, 260)},
+            ),
+        },
+        "nvspeechExtras": ("voicePitch", "voicePitch_mul", "startPitch"),
+    },
     "vocalLayers": {
         "label": "Vocal layering",
         "description": (
@@ -147,6 +169,28 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
         },
         "nvspeechExtras": ("voiceAmplitude", "parallelBypass"),
     },
+    "plosiveImpact": {
+        "label": "Plosive impact",
+        "description": (
+            "Accentuates consonant bursts (P, T, K, CH) by boosting the "
+            "1–4 kHz transient band where plosive energy peaks."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("consonant", "attack", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (900, 3600),
+            "gain": 7.2,
+            "bands": (
+                {"range": (900, 2200), "gainMultiplier": 1.1},
+                {"range": (2200, 3600)},
+            ),
+        },
+        "nvspeechExtras": ("consonantAttack", "transientEmphasis"),
+    },
     "overtones": {
         "label": "Overtone brilliance",
         "description": (
@@ -168,6 +212,28 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
         },
         "nvspeechExtras": ("fricationAmplitude_mul",),
     },
+    "sibilantClarity": {
+        "label": "Sibilant clarity",
+        "description": (
+            "Clarifies S/SH/CH/J style phonemes by shaping the 5–14 kHz "
+            "sibilant noise band referenced by NV Speech Player."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("consonant", "sibilant", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (5200, 14000),
+            "gain": 8.2,
+            "bands": (
+                {"range": (5200, 9000)},
+                {"range": (9000, 14000), "gainMultiplier": 0.7},
+            ),
+        },
+        "nvspeechExtras": ("fricationBandwidth", "fricationAmplitude_mul"),
+    },
     "subtones": {
         "label": "Subtone weight",
         "description": (
@@ -188,6 +254,28 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             ),
         },
         "nvspeechExtras": ("voiceAmplitude", "cbN0"),
+    },
+    "nasalBalance": {
+        "label": "Nasal balance",
+        "description": (
+            "Controls nasal resonance cues so voices can favour open or "
+            "pinched pronunciations without muting clarity."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("nasal", "resonance", "eq"),
+        "profile": {
+            "kind": "dual-band",
+            "ranges": ((260, 520), (980, 1600)),
+            "gain": 6.8,
+            "bands": (
+                {"range": (260, 520)},
+                {"range": (980, 1600), "gainMultiplier": 0.8},
+            ),
+        },
+        "nvspeechExtras": ("nasalPole", "nasalZero"),
     },
     "vocalRange": {
         "label": "Vocal range spread",
