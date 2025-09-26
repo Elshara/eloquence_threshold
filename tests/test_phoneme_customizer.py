@@ -26,7 +26,10 @@ class PhonemeCustomizerTests(unittest.TestCase):
         self.customizer.set_band("AH", 0, PhonemeEqBand(low_hz=300, high_hz=900, gain_db=2.5))
         payload = self.customizer.build_engine_payload()
         self.assertTrue(any(entry["high_hz"] == 5200.0 for entry in payload))
-        self.assertIn({"low_hz": 300.0, "high_hz": 900.0, "gain_db": 2.5}, payload)
+        band = next(entry for entry in payload if entry["low_hz"] == 300.0 and entry["high_hz"] == 900.0)
+        self.assertAlmostEqual(band["gain_db"], 2.5)
+        self.assertEqual(band.get("filter_type"), "peaking")
+        self.assertGreater(band.get("q", 0.0), 0.0)
 
     def test_profile_band_metadata_shapes_gain(self) -> None:
         self.customizer.set_global_parameter("vocalLayers", 140)
@@ -121,7 +124,8 @@ class PhonemeCustomizerTests(unittest.TestCase):
         self.assertLessEqual(band.high_hz, 8000.0)
 
     def test_serialise_and_load_round_trip(self) -> None:
-        original = PhonemeEqBand(low_hz=150, high_hz=4800, gain_db=6.0)
+        original = PhonemeEqBand(low_hz=150, high_hz=4800, gain_db=6.0, filter_type="bandPass", q=2.4)
+        original = original.apply_q(original.q, 1.0, 384000.0)
         self.customizer.set_band("SH", 0, original)
         payload = self.customizer.serialise_per_phoneme()
         other = PhonemeCustomizer()
@@ -130,6 +134,16 @@ class PhonemeCustomizerTests(unittest.TestCase):
         self.assertAlmostEqual(restored.low_hz, original.low_hz)
         self.assertAlmostEqual(restored.high_hz, original.high_hz)
         self.assertAlmostEqual(restored.gain_db, original.gain_db)
+        self.assertEqual(restored.filter_type, "bandPass")
+        self.assertAlmostEqual(restored.q, original.q, places=3)
+
+    def test_serialised_payload_includes_filter_and_q(self) -> None:
+        band = PhonemeEqBand(low_hz=500, high_hz=1500, gain_db=3.0, filter_type="notch", q=1.5)
+        self.customizer.set_band("S", 0, band)
+        payload = self.customizer.serialise_per_phoneme()
+        stored = payload["S"][0]
+        self.assertEqual(stored["filterType"], "notch")
+        self.assertAlmostEqual(stored["q"], band.q, places=3)
 
 
 if __name__ == "__main__":

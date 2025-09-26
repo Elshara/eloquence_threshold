@@ -38,6 +38,8 @@ def test_filter_to_phoneme_band_respects_sample_rate() -> None:
     assert 600.0 < first_band.low_hz < 1000.0
     assert first_band.high_hz <= 24000.0
     assert first_band.gain_db == 6.0
+    assert first_band.filter_type == "peaking"
+    assert first_band.q > 0.0
 
     second_band = block.filters[1].to_phoneme_band(sample_rate=16000.0)
     assert second_band is not None

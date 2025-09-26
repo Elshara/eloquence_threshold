@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import math
 from dataclasses import dataclass
-from typing import Dict, Iterable, List, Mapping, Optional
+from typing import Dict, Iterable, List, Mapping, Optional, Tuple
 
 from voice_parameters import ADVANCED_VOICE_PARAMETER_SPECS, advanced_parameter_defaults
 
@@ -11,6 +11,73 @@ from voice_parameters import ADVANCED_VOICE_PARAMETER_SPECS, advanced_parameter_
 _DEFAULT_LOW_HZ = 200
 _DEFAULT_HIGH_HZ = 3400
 _DEFAULT_GAIN_DB = 0.0
+_DEFAULT_FILTER_TYPE = "peaking"
+_DEFAULT_Q = 1.0
+_MIN_Q = 0.05
+_MAX_Q = 50.0
+
+PHONEME_EQ_DEFAULT_FILTER = _DEFAULT_FILTER_TYPE
+PHONEME_EQ_MIN_Q = _MIN_Q
+PHONEME_EQ_MAX_Q = _MAX_Q
+
+
+# The synthesizer currently implements bell-style parametric filters but we
+# record the broader taxonomy so future APO integrations can map the stored
+# metadata directly onto Windows' pre-mix/post-mix stages.
+VALID_FILTER_TYPES: Tuple[str, ...] = (
+    "peaking",
+    "lowShelf",
+    "highShelf",
+    "lowPass",
+    "highPass",
+    "bandPass",
+    "notch",
+    "allPass",
+)
+
+
+def _normalise_filter_type(value: object) -> str:
+    if isinstance(value, str):
+        lowered = value.strip()
+        if lowered:
+            canonical = lowered[0].lower() + lowered[1:]
+            if canonical in VALID_FILTER_TYPES:
+                return canonical
+    return _DEFAULT_FILTER_TYPE
+
+
+def _coerce_q(value: object) -> float:
+    try:
+        numeric = float(value)
+    except (TypeError, ValueError):
+        return _DEFAULT_Q
+    if not math.isfinite(numeric):
+        return _DEFAULT_Q
+    if numeric < _MIN_Q:
+        return _MIN_Q
+    if numeric > _MAX_Q:
+        return _MAX_Q
+    return numeric
+
+
+def _derive_q(low_hz: float, high_hz: float, fallback: float) -> float:
+    try:
+        low = float(low_hz)
+        high = float(high_hz)
+    except (TypeError, ValueError):
+        return _coerce_q(fallback)
+    if low <= 0 or high <= 0 or not math.isfinite(low) or not math.isfinite(high):
+        return _coerce_q(fallback)
+    if high <= low:
+        return _coerce_q(fallback)
+    ratio = high / low
+    if ratio <= 1.0:
+        return _coerce_q(fallback)
+    try:
+        q_value = 1.0 / (2.0 * math.log(ratio, 2.0))
+    except (ValueError, ZeroDivisionError):
+        return _coerce_q(fallback)
+    return _coerce_q(q_value)
 
 
 @dataclass
@@ -20,6 +87,8 @@ class PhonemeEqBand:
     low_hz: float = _DEFAULT_LOW_HZ
     high_hz: float = _DEFAULT_HIGH_HZ
     gain_db: float = _DEFAULT_GAIN_DB
+    filter_type: str = _DEFAULT_FILTER_TYPE
+    q: float = _DEFAULT_Q
 
     def clamp(
         self,
@@ -31,13 +100,20 @@ class PhonemeEqBand:
         low = max(low_min, min(float(self.low_hz), high_max - 1.0))
         high = max(low + 1.0, min(float(self.high_hz), high_max))
         gain = max(gain_min, min(float(self.gain_db), gain_max))
-        return PhonemeEqBand(low, high, gain)
+        filter_type = _normalise_filter_type(self.filter_type)
+        q_value = _coerce_q(self.q)
+        band = PhonemeEqBand(low, high, gain, filter_type, q_value)
+        if filter_type == "peaking":
+            band = band.with_derived_q()
+        return band
 
     def to_storage_mapping(self) -> Dict[str, float]:
         return {
             "lowHz": float(self.low_hz),
             "highHz": float(self.high_hz),
             "gainDb": float(self.gain_db),
+            "filterType": self.filter_type,
+            "q": float(self.q),
         }
 
     def to_engine_mapping(self) -> Dict[str, float]:
@@ -45,6 +121,8 @@ class PhonemeEqBand:
             "low_hz": float(self.low_hz),
             "high_hz": float(self.high_hz),
             "gain_db": float(self.gain_db),
+            "filter_type": self.filter_type,
+            "q": float(self.q),
         }
 
     @classmethod
@@ -86,7 +164,7 @@ class PhonemeEqBand:
         if high <= low:
             high = low + 1.0
 
-        return cls(low, high, gain)
+        return cls(low, high, gain, _DEFAULT_FILTER_TYPE, max(_MIN_Q, min(q_value, _MAX_Q))).with_derived_q()
 
     @classmethod
     def from_mapping(cls, mapping: Mapping[str, object]) -> Optional["PhonemeEqBand"]:
@@ -95,13 +173,48 @@ class PhonemeEqBand:
         low = mapping.get("lowHz", mapping.get("low_hz", _DEFAULT_LOW_HZ))
         high = mapping.get("highHz", mapping.get("high_hz", _DEFAULT_HIGH_HZ))
         gain = mapping.get("gainDb", mapping.get("gain_db", _DEFAULT_GAIN_DB))
+        filter_type = mapping.get("filterType", mapping.get("filter_type", _DEFAULT_FILTER_TYPE))
+        q_value = mapping.get("q", mapping.get("quality", _DEFAULT_Q))
         try:
             low_val = float(low)
             high_val = float(high)
             gain_val = float(gain)
         except (TypeError, ValueError):
             return None
-        return cls(low_val, high_val, gain_val)
+        filter_kind = _normalise_filter_type(filter_type)
+        try:
+            q_val = float(q_value)
+        except (TypeError, ValueError):
+            q_val = _DEFAULT_Q
+        band = cls(low_val, high_val, gain_val, filter_kind, _coerce_q(q_val))
+        if filter_kind == "peaking":
+            return band.with_derived_q()
+        return band
+
+    # ------------------------------------------------------------------
+    # Convenience helpers
+    # ------------------------------------------------------------------
+    def with_derived_q(self) -> "PhonemeEqBand":
+        return PhonemeEqBand(
+            self.low_hz,
+            self.high_hz,
+            self.gain_db,
+            self.filter_type,
+            _derive_q(self.low_hz, self.high_hz, self.q),
+        )
+
+    def apply_q(self, q_value: float, low_min: float, high_max: float) -> "PhonemeEqBand":
+        q_clamped = _coerce_q(q_value)
+        center = self.center_frequency()
+        if center <= 0.0:
+            center = max(low_min, min(self.high_hz, self.low_hz + 1.0))
+        ratio = math.pow(2.0, 1.0 / (2.0 * max(q_clamped, 1e-6)))
+        low = max(low_min, min(center / ratio, high_max - 1.0))
+        high = min(high_max, max(low + 1.0, center * ratio))
+        return PhonemeEqBand(low, high, self.gain_db, self.filter_type, q_clamped)
+
+    def center_frequency(self) -> float:
+        return math.sqrt(max(1.0, self.low_hz) * max(1.0, self.high_hz))
 
 
 class PhonemeCustomizer:
@@ -168,14 +281,6 @@ class PhonemeCustomizer:
     def _rebuild_global_bands(self) -> None:
         bands: List[PhonemeEqBand] = []
 
-        def add_band(low: float, high: float, gain: float) -> None:
-            if not math.isfinite(gain) or abs(gain) < 0.05:
-                return
-            candidate = PhonemeEqBand(low, high, gain).clamp(
-                self._low_min, self._high_max, self._gain_min, self._gain_max
-            )
-            bands.append(candidate)
-
         for name, value in self._global_parameters.items():
             scale = _scale(value)
             if not scale:
@@ -185,6 +290,8 @@ class PhonemeCustomizer:
                 continue
             profile = spec.get("profile", {})
             base_gain = float(profile.get("gain", 6.0)) * scale
+            default_filter_type = _normalise_filter_type(profile.get("filterType", _DEFAULT_FILTER_TYPE))
+            default_q = _coerce_q(profile.get("q", _DEFAULT_Q))
 
             band_entries = profile.get("bands")
             if band_entries:
@@ -203,7 +310,21 @@ class PhonemeCustomizer:
                         multiplier = float(gain_multiplier)
                     except (TypeError, ValueError):
                         multiplier = 1.0
-                    add_band(low, high, base_gain * multiplier)
+                    gain_value = base_gain * multiplier
+                    if not math.isfinite(gain_value) or abs(gain_value) < 0.05:
+                        continue
+                    candidate = PhonemeEqBand(
+                        low,
+                        high,
+                        gain_value,
+                        _normalise_filter_type(entry.get("filterType", default_filter_type)),
+                        _coerce_q(entry.get("q", default_q)),
+                    ).clamp(self._low_min, self._high_max, self._gain_min, self._gain_max)
+                    if "q" in entry:
+                        candidate = candidate.apply_q(
+                            _coerce_q(entry.get("q", default_q)), self._low_min, self._high_max
+                        )
+                    bands.append(candidate)
                 continue
 
             ranges = profile.get("ranges")
@@ -218,7 +339,18 @@ class PhonemeCustomizer:
                     low, high = float(range_value[0]), float(range_value[1])
                 except (TypeError, ValueError):
                     continue
-                add_band(low, high, base_gain)
+                if not math.isfinite(base_gain) or abs(base_gain) < 0.05:
+                    continue
+                candidate = PhonemeEqBand(
+                    low,
+                    high,
+                    base_gain,
+                    default_filter_type,
+                    default_q,
+                ).clamp(self._low_min, self._high_max, self._gain_min, self._gain_max)
+                if "q" in profile:
+                    candidate = candidate.apply_q(default_q, self._low_min, self._high_max)
+                bands.append(candidate)
         self._global_bands = bands
 
     # ------------------------------------------------------------------

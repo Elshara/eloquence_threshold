@@ -120,6 +120,20 @@ _PHONEME_EQ_LOW_MIN = 1
 _PHONEME_EQ_HIGH_MAX = 384000
 _PHONEME_EQ_GAIN_MIN = -24
 _PHONEME_EQ_GAIN_MAX = 12
+_PHONEME_EQ_Q_SCALE = 100
+_PHONEME_EQ_Q_MIN = int(round(PHONEME_EQ_MIN_Q * _PHONEME_EQ_Q_SCALE))
+_PHONEME_EQ_Q_MAX = int(round(PHONEME_EQ_MAX_Q * _PHONEME_EQ_Q_SCALE))
+
+_PHONEME_EQ_FILTER_LABELS = {
+    "peaking": _("Peaking / bell"),
+    "lowShelf": _("Low shelf"),
+    "highShelf": _("High shelf"),
+    "lowPass": _("Low-pass"),
+    "highPass": _("High-pass"),
+    "bandPass": _("Band-pass"),
+    "notch": _("Notch"),
+    "allPass": _("All-pass"),
+}
 
 
 PHONEME_EQ_LAYER_SETTING = NumericDriverSetting(
@@ -170,6 +184,25 @@ PHONEME_EQ_GAIN_SETTING = NumericDriverSetting(
  displayName=_("Phoneme EQ gain (dB)"),
 )
 
+PHONEME_EQ_FILTER_SETTING = DriverSetting(
+ "phonemeEqFilter",
+ _("Phoneme EQ &filter"),
+ availableInSettingsRing=True,
+ displayName=_("Phoneme EQ filter"),
+)
+
+PHONEME_EQ_Q_SETTING = NumericDriverSetting(
+ "phonemeEqQ",
+ _("Phoneme EQ &Q (×100)"),
+ availableInSettingsRing=True,
+ minVal=_PHONEME_EQ_Q_MIN,
+ maxVal=_PHONEME_EQ_Q_MAX,
+ minStep=1,
+ normalStep=10,
+ largeStep=100,
+ displayName=_("Phoneme EQ Q (×100)"),
+)
+
 
 punctuation = ",.?:;"
 punctuation = [x for x in punctuation]
@@ -181,7 +214,14 @@ from synthDriverHandler import SynthDriver, VoiceInfo, synthIndexReached, synthD
 from synthDriverHandler import SynthDriver,VoiceInfo
 from . import _eloquence
 from .phoneme_catalog import PhonemeDefinition, PhonemeInventory, PhonemeReplacement, load_default_inventory
-from .phoneme_customizer import PhonemeCustomizer, PhonemeEqBand
+from .phoneme_customizer import (
+    PHONEME_EQ_DEFAULT_FILTER,
+    PHONEME_EQ_MAX_Q,
+    PHONEME_EQ_MIN_Q,
+    PhonemeCustomizer,
+    PhonemeEqBand,
+    VALID_FILTER_TYPES,
+)
 from .voice_catalog import (
  VoiceCatalog,
  VoiceTemplate,
@@ -330,6 +370,8 @@ class SynthDriver(synthDriverHandler.SynthDriver):
   PHONEME_EQ_LOW_SETTING,
   PHONEME_EQ_HIGH_SETTING,
   PHONEME_EQ_GAIN_SETTING,
+  PHONEME_EQ_FILTER_SETTING,
+  PHONEME_EQ_Q_SETTING,
 )
  supportedCommands = {
      IndexCommand,
@@ -1503,11 +1545,11 @@ def _set_voiceParameterValue(self, value):
    raise UnsupportedConfigParameterError()
   return int(round(band.gain_db))
 
- def _set_phonemeEqGain(self, value):
-  if self._phonemeInventory.is_empty:
-   raise UnsupportedConfigParameterError()
-  self._ensure_phoneme_selection()
-  band = self._current_eq_band(writable=True)
+def _set_phonemeEqGain(self, value):
+ if self._phonemeInventory.is_empty:
+  raise UnsupportedConfigParameterError()
+ self._ensure_phoneme_selection()
+ band = self._current_eq_band(writable=True)
   if not band:
    raise UnsupportedConfigParameterError()
   try:
@@ -1517,16 +1559,83 @@ def _set_voiceParameterValue(self, value):
   numeric = max(_PHONEME_EQ_GAIN_MIN, min(numeric, _PHONEME_EQ_GAIN_MAX))
   if abs(numeric - band.gain_db) < 1e-6:
    return
-  band.gain_db = numeric
+ band.gain_db = numeric
+ self._phonemeCustomizer.set_band(self._phonemeSelection, self._phonemeEqLayerSelection - 1, band)
+ self._persist_phoneme_eq_profiles()
+ self._update_phoneme_eq_engine()
+
+ def _get_availablePhonemeEqFilters(self):
+  options: "OrderedDict[str, StringParameterInfo]" = OrderedDict()
+  for filter_type in VALID_FILTER_TYPES:
+   label = _PHONEME_EQ_FILTER_LABELS.get(filter_type, filter_type)
+   options[filter_type] = StringParameterInfo(filter_type, label)
+  if not options:
+   raise UnsupportedConfigParameterError()
+  return options
+
+ def _get_phonemeEqFilter(self):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band()
+  if not band:
+   raise UnsupportedConfigParameterError()
+  if band.filter_type in VALID_FILTER_TYPES:
+   return band.filter_type
+  return PHONEME_EQ_DEFAULT_FILTER
+
+ def _set_phonemeEqFilter(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  options = self._get_availablePhonemeEqFilters()
+  if value not in options:
+   raise ValueError(f"Unknown phoneme EQ filter '{value}'")
+  band = self._current_eq_band(writable=True)
+  if not band:
+   raise UnsupportedConfigParameterError()
+  if band.filter_type == value:
+   return
+  band.filter_type = value
   self._phonemeCustomizer.set_band(self._phonemeSelection, self._phonemeEqLayerSelection - 1, band)
   self._persist_phoneme_eq_profiles()
   self._update_phoneme_eq_engine()
 
- def _load_stored_phoneme_replacements(self):
+ def _get_phonemeEqQ(self):
   if self._phonemeInventory.is_empty:
-   return
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band()
+  if not band:
+   raise UnsupportedConfigParameterError()
+  return int(round(float(band.q) * _PHONEME_EQ_Q_SCALE))
+
+ def _set_phonemeEqQ(self, value):
+  if self._phonemeInventory.is_empty:
+   raise UnsupportedConfigParameterError()
+  self._ensure_phoneme_selection()
+  band = self._current_eq_band(writable=True)
+  if not band:
+   raise UnsupportedConfigParameterError()
   try:
-   speech_section = config.conf.get("speech")
+   numeric = int(value)
+  except (TypeError, ValueError):
+   raise ValueError(f"Invalid phoneme EQ Q '{value}'") from None
+  numeric = max(_PHONEME_EQ_Q_MIN, min(numeric, _PHONEME_EQ_Q_MAX))
+  current = int(round(float(band.q) * _PHONEME_EQ_Q_SCALE))
+  if numeric == current:
+   return
+  q_value = numeric / _PHONEME_EQ_Q_SCALE
+  updated = band.apply_q(q_value, _PHONEME_EQ_LOW_MIN, self._current_sample_rate_limit())
+  updated.filter_type = band.filter_type
+  self._phonemeCustomizer.set_band(self._phonemeSelection, self._phonemeEqLayerSelection - 1, updated)
+  self._persist_phoneme_eq_profiles()
+  self._update_phoneme_eq_engine()
+
+def _load_stored_phoneme_replacements(self):
+ if self._phonemeInventory.is_empty:
+  return
+ try:
+  speech_section = config.conf.get("speech")
   except Exception:
    speech_section = None
   if not isinstance(speech_section, dict):
