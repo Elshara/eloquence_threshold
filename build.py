@@ -32,14 +32,15 @@ import tempfile
 import urllib.error
 import urllib.request
 import urllib.parse
+import socket
+import ipaddress
+from urllib.parse import urlparse
 import zipfile
 from pathlib import Path
 from typing import Optional, Tuple
 
 if sys.version_info < (3, 8):
     raise RuntimeError("Python 3.8 or newer is required to build the add-on")
-
-
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_OUTPUT = REPO_ROOT / "eloquence.nvda-addon"
 DEFAULT_TEMPLATE = REPO_ROOT / "eloquence_original.nvda-addon"
@@ -98,6 +99,26 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def _is_trusted_template_url(url: str) -> bool:
+    """Return ``True`` if *url* points to an approved download source."""
+
+    try:
+        parsed = urlparse(url)
+        if parsed.scheme != "https":
+            return False
+        allowed_hosts = {"github.com", "raw.githubusercontent.com"}
+        if parsed.hostname not in allowed_hosts:
+            return False
+        normalized_path = parsed.path.lstrip("/")
+        if parsed.hostname == "github.com":
+            if not normalized_path.startswith("nvaccess/"):
+                return False
+        else:  # raw.githubusercontent.com
+            if not normalized_path.startswith("nvaccess/"):
+                return False
+        return True
+    except Exception:
+        return False
 def ensure_template(
     path: Path, *, url: str, allow_download: bool, insecure: bool
 ) -> Optional[Path]:
@@ -109,13 +130,33 @@ def ensure_template(
         return None
     # Validate the template URL prevents partial SSRF
     parsed_url = urllib.parse.urlparse(url)
-    if parsed_url.scheme != "https":
+    if parsed_url.scheme.lower() != "https":
         print(f"Error: Only HTTPS URLs are allowed for template downloads (got: {url})")
         return None
     if not parsed_url.netloc:
         print(f"Error: Invalid template URL (no network location found): {url}")
         return None
+    if not _is_trusted_template_url(url):
+        raise ValueError(
+            f"Refusing to download template from untrusted location: {url}\n"
+            "You may only use URLs under https://github.com/nvaccess/ or "
+            "https://raw.githubusercontent.com/nvaccess/"
+        )
     try:
+        # Validate URL to mitigate SSRF risks
+        host = parsed_url.hostname
+        if not host:
+            raise ValueError("Invalid URL: missing hostname.")
+        # Resolve hostname to IP and check for loopback/private addresses
+        try:
+            # Will fail for IDNA/unicode, but that's very rare here
+            ip = socket.gethostbyname(host)
+            ip_obj = ipaddress.ip_address(ip)
+            if ip_obj.is_loopback or ip_obj.is_private or ip_obj.is_link_local or ip_obj.is_reserved or ip_obj.is_multicast:
+                raise ValueError(f"Refusing to download from private or local network address: {ip}")
+        except Exception as dns_exc:
+            raise ValueError(f"Could not resolve hostname '{host}': {dns_exc}")
+
         print(f"Downloading template from {url}…")
         context = ssl._create_unverified_context() if insecure else None
         with urllib.request.urlopen(url, context=context) as response:
@@ -123,7 +164,7 @@ def ensure_template(
             with path.open("wb") as handle:
                 shutil.copyfileobj(response, handle)
         return path
-    except (OSError, urllib.error.URLError) as exc:
+    except (OSError, urllib.error.URLError, ValueError) as exc:
         print(f"Warning: unable to download template: {exc}")
     return None
 
@@ -172,6 +213,20 @@ def write_archive(staging_dir: Path, output: Path) -> None:
 
 def main() -> None:
     args = parse_args()
+
+    # Validate --template-url to avoid SSRF or untrusted downloads even when cached.
+    parsed_url = urlparse(args.template_url)
+    host = parsed_url.netloc.split(":")[0]
+    allowed_hosts = {"github.com", "raw.githubusercontent.com"}
+    if parsed_url.scheme != "https" or host not in allowed_hosts:
+        raise ValueError(
+            "Only https://github.com or https://raw.githubusercontent.com URLs are allowed for --template-url"
+        )
+    if not _is_trusted_template_url(args.template_url):
+        raise ValueError(
+            "Only URLs under https://github.com/nvaccess/ or https://raw.githubusercontent.com/nvaccess/ are allowed"
+        )
+
     template_path = ensure_template(
         args.template.expanduser().resolve(),
         url=args.template_url,

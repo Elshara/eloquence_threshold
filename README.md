@@ -156,7 +156,6 @@ The scorecard mirrors the generated snapshot and highlights which installers or 
 - Eloquence’s engine remains limited to three native modes (8 kHz, 11.025 kHz, and 22.05 kHz). After learning the device rate we choose the closest engine mode, resample in software, and rebuild NVDA’s `WavePlayer` so buffers stay aligned with the hardware clock.
 - The resampler keeps continuity across buffers, meaning long Say All sessions remain smooth even while you experiment with on-the-fly rate changes. Switching outputs or devices simply triggers another device query and player rebuild.
 - Ultra-low or ultra-high hardware rates are clamped to the 8 kHz–384 kHz window so Eloquence never feeds a value that the engine or NVDA’s audio stack cannot honour. If clamping occurs we log a debug note and continue with the nearest safe value.
-
 ### Build bespoke voices with community templates
 - Voice templates derived from eSpeak NG live in `eloquence_data/espeak_voices.json`. Each template maps a language label (for example `en-US` or `es-419`) to Eloquence parameters such as pitch, head size, breathiness, and speaking rate.
 - New NV Speech Player inspired presets ship in `eloquence_data/voices/nvspeechplayer_classics.json`. They approximate Adam, Benjamin, Caleb, and David using Eloquence's slider ranges while preserving the original frame multipliers inside the template metadata so you can iterate on the mapping.

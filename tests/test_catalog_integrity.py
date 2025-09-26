@@ -104,7 +104,5 @@ class LanguageProfileTests(unittest.TestCase):
                 self.assertGreaterEqual(metrics["progressScore"], 0.0)
                 self.assertLessEqual(metrics["progressScore"], 1.0)
                 self.assertIn("stage", metrics)
-
-
 if __name__ == "__main__":
     unittest.main()

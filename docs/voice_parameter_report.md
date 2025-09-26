@@ -1,6 +1,6 @@
 # Voice parameter coverage
 
-* Generated: 2025-09-25T12:52:31Z
+* Generated: 2025-09-25T16:26:05Z
 * Templates analysed: 28
 * Languages represented: 11
 
