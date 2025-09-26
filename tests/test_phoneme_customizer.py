@@ -104,6 +104,22 @@ class PhonemeCustomizerTests(unittest.TestCase):
         band = next(entry for entry in payload if entry["low_hz"] == 2600.0)
         self.assertGreater(band["gain_db"], 0.0)
 
+    def test_sample_rate_clamp_limits_global_and_per_phoneme_bands(self) -> None:
+        self.customizer.set_global_parameter("sibilantClarity", 170)
+        # Store a per-phoneme band with an intentionally high frequency to ensure
+        # the clamping logic tightens it once the sample rate drops.
+        self.customizer.set_band(
+            "S",
+            0,
+            PhonemeEqBand(low_hz=1800, high_hz=20000, gain_db=6.0),
+        )
+        nyquist = self.customizer.set_sample_rate(16000)
+        self.assertLessEqual(nyquist, 8000.0)
+        payload = self.customizer.build_engine_payload()
+        self.assertTrue(all(entry["high_hz"] <= 8000.0 for entry in payload))
+        band = self.customizer.band_for_layer("S", 0)
+        self.assertLessEqual(band.high_hz, 8000.0)
+
     def test_serialise_and_load_round_trip(self) -> None:
         original = PhonemeEqBand(low_hz=150, high_hz=4800, gain_db=6.0)
         self.customizer.set_band("SH", 0, original)

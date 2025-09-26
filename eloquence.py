@@ -430,17 +430,22 @@ _VOICE_PARAM_BINDINGS: Dict[str, VoiceParameterBinding] = {}
  self._phonemeCategorySelection = None
  self._phonemeSelection = None
  self._ensure_phoneme_selection()
- self._phonemeCustomizer = PhonemeCustomizer(
-  low_min=_PHONEME_EQ_LOW_MIN,
-  high_max=_PHONEME_EQ_HIGH_MAX,
-  gain_min=_PHONEME_EQ_GAIN_MIN,
-  gain_max=_PHONEME_EQ_GAIN_MAX,
- )
- self._phonemeEqLayerSelection = _PHONEME_EQ_LAYER_MIN
- self._load_advanced_voice_parameters()
- self._load_stored_phoneme_eq_profiles()
- self._ensure_phoneme_eq_defaults()
- self._update_phoneme_eq_engine()
+        self._phonemeCustomizer = PhonemeCustomizer(
+            low_min=_PHONEME_EQ_LOW_MIN,
+            high_max=_PHONEME_EQ_HIGH_MAX,
+            gain_min=_PHONEME_EQ_GAIN_MIN,
+            gain_max=_PHONEME_EQ_GAIN_MAX,
+        )
+        try:
+            active_rate = self._get_sampleRate()
+        except Exception:
+            active_rate = _SAMPLE_RATE_DEFAULT
+        self._phonemeCustomizer.set_sample_rate(active_rate)
+        self._phonemeEqLayerSelection = _PHONEME_EQ_LAYER_MIN
+        self._load_advanced_voice_parameters()
+        self._load_stored_phoneme_eq_profiles()
+        self._ensure_phoneme_eq_defaults()
+        self._update_phoneme_eq_engine()
  self._voiceCatalog = load_default_voice_catalog()
  self._voiceTemplateId = None
  self._lastVoiceTemplateSelection = None
@@ -1646,13 +1651,17 @@ def _set_voiceParameterValue(self, value):
  def _get_sampleRate(self):
   return int(_eloquence.getSampleRate())
 
- def _set_sampleRate(self, value):
-  try:
-   numeric = int(value)
-  except (TypeError, ValueError):
-   raise ValueError(f"Invalid sample rate '{value}'") from None
-  _eloquence.setSampleRate(numeric)
-  self._persist_sample_rate()
+    def _set_sampleRate(self, value):
+        try:
+            numeric = int(value)
+        except (TypeError, ValueError):
+            raise ValueError(f"Invalid sample rate '{value}'") from None
+        _eloquence.setSampleRate(numeric)
+        if hasattr(self, "_phonemeCustomizer"):
+            self._phonemeCustomizer.set_sample_rate(numeric)
+            self._persist_phoneme_eq_profiles()
+            self._update_phoneme_eq_engine()
+        self._persist_sample_rate()
 
  def _get_rate(self):
   return self._paramToPercent(self.getVParam(_eloquence.rate),minRate,maxRate)

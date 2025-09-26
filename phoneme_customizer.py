@@ -77,8 +77,9 @@ class PhonemeCustomizer:
         gain_min: float = -24.0,
         gain_max: float = 12.0,
     ) -> None:
-        self._low_min = low_min
-        self._high_max = high_max
+        self._low_min = float(low_min)
+        self._absolute_high_max = float(high_max)
+        self._high_max = float(high_max)
         self._gain_min = gain_min
         self._gain_max = gain_max
         self._phoneme_bands: Dict[str, List[PhonemeEqBand]] = {}
@@ -198,6 +199,32 @@ class PhonemeCustomizer:
         if not phoneme_id:
             return 0
         return len(self._phoneme_bands.get(phoneme_id, []))
+
+    def set_sample_rate(self, sample_rate_hz: float) -> float:
+        """Clamp EQ bands so they remain valid for the active sample rate."""
+
+        try:
+            numeric = float(sample_rate_hz)
+        except (TypeError, ValueError):
+            numeric = 0.0
+        if numeric <= 0:
+            limit = self._absolute_high_max
+        else:
+            limit = min(self._absolute_high_max, numeric / 2.0)
+        limit = max(self._low_min + 1.0, limit)
+        if math.isclose(limit, self._high_max, rel_tol=1e-6, abs_tol=1e-6):
+            return self._high_max
+        self._high_max = limit
+        # Rebuild global bands so they honour the tighter headroom.
+        self._rebuild_global_bands()
+        # Clamp per-phoneme bands in place so persisted values remain valid.
+        for phoneme_id, bands in list(self._phoneme_bands.items()):
+            clamped = [
+                band.clamp(self._low_min, self._high_max, self._gain_min, self._gain_max)
+                for band in bands
+            ]
+            self._phoneme_bands[phoneme_id] = clamped
+        return self._high_max
 
     def band_for_layer(self, phoneme_id: str, index: int) -> PhonemeEqBand:
         bands = self.ensure_layers(phoneme_id, index + 1)
