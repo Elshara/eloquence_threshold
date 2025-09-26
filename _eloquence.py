@@ -4,6 +4,7 @@ import ctypes
 import audioop
 import logging
 import math
+import platform
 from array import array
 from io import StringIO, BytesIO
 from versionInfo import version_year
@@ -252,17 +253,17 @@ class ParametricEQBand:
  def __init__(self, sample_rate, low_hz, high_hz, gain_db):
   self._sample_rate = max(sample_rate, _MIN_REQUESTED_SAMPLE_RATE)
   self._low_hz = max(1.0, float(low_hz))
- self._high_hz = max(self._low_hz + 1.0, float(high_hz))
- nyquist = self._sample_rate / 2.0
- if self._high_hz > nyquist:
-  self._high_hz = nyquist
- if self._low_hz >= self._high_hz:
-  self._low_hz = max(1.0, self._high_hz - 1.0)
- self._gain_db = float(gain_db)
- self.gain_db = self._gain_db
- self._z1 = 0.0
- self._z2 = 0.0
- self._configure()
+  self._high_hz = max(self._low_hz + 1.0, float(high_hz))
+  nyquist = self._sample_rate / 2.0
+  if self._high_hz > nyquist:
+   self._high_hz = nyquist
+  if self._low_hz >= self._high_hz:
+   self._low_hz = max(1.0, self._high_hz - 1.0)
+  self._gain_db = float(gain_db)
+  self.gain_db = self._gain_db
+  self._z1 = 0.0
+  self._z2 = 0.0
+  self._configure()
 
  def _configure(self):
   fc = math.sqrt(self._low_hz * self._high_hz)
@@ -533,8 +534,86 @@ def refresh_sample_rate_from_device(rebuild_player=True):
   return _apply_sample_rate(_requested_sample_rate_hz, rebuild_player=rebuild_player)
  return _apply_sample_rate(device_rate, rebuild_player=rebuild_player)
 
-_SUPPORTED_64BIT_MACHINES = {0x8664, 0xAA64}
-_SUPPORTED_32BIT_MACHINES = {0x14C}
+_SUPPORTED_MACHINE_CODES = {
+    "x64": {0x8664},
+    "arm64": {0xAA64, 0xA641},
+    "x86": {0x14C},
+    "arm32": {0x01C0, 0x01C2, 0x01C4},
+}
+
+_ARCH_FAMILY_ROOTS = {
+    "x64": ("eloquence_x64", "eloquence_amd64"),
+    "arm64": ("eloquence_arm64",),
+    "x86": ("eloquence_x86",),
+    "arm32": ("eloquence_arm32",),
+}
+
+_ARCH_FALLBACK_ROOTS = (
+    "eloquence_arm64",
+    "eloquence_x64",
+    "eloquence_arm32",
+    "eloquence_x86",
+)
+
+_ARCH_SUBDIRECTORIES = {
+    "x64": ("x64", "amd64"),
+    "arm64": ("arm64", "arm64ec"),
+    "x86": ("x86", "win32"),
+    "arm32": ("arm", "arm32"),
+    "common": ("x64", "amd64", "arm64", "arm64ec", "x86", "win32", "arm", "arm32"),
+}
+
+_LIBRARY_FILENAMES = {
+    "x64": ("eci64.dll", "ECI64.DLL", "eci_x64.dll", "ECI_X64.DLL", "eci.dll", "ECI.DLL"),
+    "arm64": (
+        "eci_arm64.dll",
+        "ECI_ARM64.DLL",
+        "eci64.dll",
+        "ECI64.DLL",
+        "eci.dll",
+        "ECI.DLL",
+    ),
+    "x86": ("eci.dll", "ECI.DLL", "eci32.dll", "ECI32.DLL", "eci_x86.dll", "ECI_X86.DLL"),
+    "arm32": (
+        "eci_arm.dll",
+        "ECI_ARM.DLL",
+        "eci_arm32.dll",
+        "ECI_ARM32.DLL",
+        "eci.dll",
+        "ECI.DLL",
+    ),
+    "common": (
+        "eci.dll",
+        "ECI.DLL",
+        "eci64.dll",
+        "ECI64.DLL",
+        "eci_x64.dll",
+        "ECI_X64.DLL",
+        "eci_arm64.dll",
+        "ECI_ARM64.DLL",
+        "eci_arm.dll",
+        "ECI_ARM.DLL",
+        "eci_arm32.dll",
+        "ECI_ARM32.DLL",
+        "eci32.dll",
+        "ECI32.DLL",
+        "eci_x86.dll",
+        "ECI_X86.DLL",
+    ),
+}
+
+
+def _current_architecture_family():
+    machine = platform.machine().lower()
+    if IS_64BIT:
+        if "arm" in machine and "64" in machine:
+            return "arm64"
+        if machine in {"aarch64", "arm64"}:
+            return "arm64"
+        return "x64"
+    if "arm" in machine and "64" not in machine:
+        return "arm32"
+    return "x86"
 
 
 def _machine_type_for(path):
@@ -562,26 +641,64 @@ def _library_matches_current_arch(path):
  machine = _machine_type_for(path)
  if machine is None:
   return True
- if IS_64BIT:
-  return machine in _SUPPORTED_64BIT_MACHINES
- return machine in _SUPPORTED_32BIT_MACHINES
+ family = _current_architecture_family()
+ allowed = _SUPPORTED_MACHINE_CODES.get(family)
+ if not allowed:
+  allowed = _SUPPORTED_MACHINE_CODES["x64"] if IS_64BIT else _SUPPORTED_MACHINE_CODES["x86"]
+ return machine in allowed
 
 
 def _candidate_library_paths():
  base_dir = VOICE_DIR
+ repo_root = os.path.dirname(base_dir)
+ family = _current_architecture_family()
+ search_roots = []
+ seen_roots = set()
+
+ def add_root(path):
+  normalized = os.path.normpath(path)
+  if normalized in seen_roots:
+   return
+  search_roots.append(path)
+  seen_roots.add(normalized)
+
+ for root_name in _ARCH_FAMILY_ROOTS.get(family, ()):  # Prefer explicit architecture roots
+  add_root(os.path.join(repo_root, root_name))
+ add_root(base_dir)
+ for fallback in _ARCH_FALLBACK_ROOTS:
+  add_root(os.path.join(repo_root, fallback))
+
+ subdirs = list(_ARCH_SUBDIRECTORIES.get(family, ())) + list(_ARCH_SUBDIRECTORIES.get("common", ()))
+ seen_subdirs = set()
+ ordered_subdirs = []
+ for entry in subdirs:
+  if entry in seen_subdirs:
+   continue
+  seen_subdirs.add(entry)
+  ordered_subdirs.append(entry)
+
+ file_names = list(_LIBRARY_FILENAMES.get(family, ()))
+ for fallback in _LIBRARY_FILENAMES.get("common", ()):  # Ensure we always include standard names
+  if fallback not in file_names:
+   file_names.append(fallback)
+
  candidates = []
- if IS_64BIT:
-  arch_dirs = ("x64", "amd64", "arm64", "arm64ec")
-  file_names = ("eci.dll", "ECI.DLL", "eci64.dll", "ECI64.DLL", "eci_x64.dll", "ECI_X64.DLL")
-  for arch_dir in arch_dirs:
-   arch_root = os.path.join(base_dir, arch_dir)
-   for name in file_names:
-    candidates.append(os.path.join(arch_root, name))
+ seen_paths = set()
+ for root in search_roots:
   for name in file_names:
-   candidates.append(os.path.join(base_dir, name))
- else:
-  for name in ("eci.dll", "ECI.DLL"):
-   candidates.append(os.path.join(base_dir, name))
+   candidate = os.path.join(root, name)
+   normalized = os.path.normpath(candidate)
+   if normalized not in seen_paths:
+    candidates.append(candidate)
+    seen_paths.add(normalized)
+  for subdir in ordered_subdirs:
+   sub_root = os.path.join(root, subdir)
+   for name in file_names:
+    candidate = os.path.join(sub_root, name)
+    normalized = os.path.normpath(candidate)
+    if normalized not in seen_paths:
+     candidates.append(candidate)
+     seen_paths.add(normalized)
  return candidates
 
 
