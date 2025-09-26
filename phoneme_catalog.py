@@ -206,6 +206,12 @@ class PhonemeInventory:
         return None, None
 
     def default_category_id(self) -> Optional[str]:
+        """Return a category that exposes IPA hints for basic integrity checks."""
+
+        for category_id in self._category_labels:
+            phonemes = self._by_category.get(category_id, ())
+            if any(definition.ipa for definition in phonemes):
+                return category_id
         return next(iter(self._category_labels), None)
 
     def default_phoneme_for(self, category_id: str) -> Optional[PhonemeDefinition]:
