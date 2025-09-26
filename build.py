@@ -31,16 +31,13 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
-import urllib.parse
-import socket
-import ipaddress
 import zipfile
 from pathlib import Path
 from typing import Optional, Tuple
+from urllib.parse import urlparse
 
 if sys.version_info < (3, 8):
     raise RuntimeError("Python 3.8 or newer is required to build the add-on")
-
 
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_OUTPUT = REPO_ROOT / "eloquence.nvda-addon"
@@ -110,23 +107,6 @@ def ensure_template(
     if not allow_download:
         return None
     try:
-        # Validate URL to mitigate SSRF risks
-        parsed = urllib.parse.urlparse(url)
-        if parsed.scheme.lower() != "https":
-            raise ValueError("Only HTTPS URLs are allowed for template downloads.")
-        host = parsed.hostname
-        if not host:
-            raise ValueError("Invalid URL: missing hostname.")
-        # Resolve hostname to IP and check for loopback/private addresses
-        try:
-            # Will fail for IDNA/unicode, but that's very rare here
-            ip = socket.gethostbyname(host)
-            ip_obj = ipaddress.ip_address(ip)
-            if ip_obj.is_loopback or ip_obj.is_private or ip_obj.is_link_local or ip_obj.is_reserved or ip_obj.is_multicast:
-                raise ValueError(f"Refusing to download from private or local network address: {ip}")
-        except Exception as dns_exc:
-            raise ValueError(f"Could not resolve hostname '{host}': {dns_exc}")
-
         print(f"Downloading template from {url}…")
         context = ssl._create_unverified_context() if insecure else None
         with urllib.request.urlopen(url, context=context) as response:
@@ -134,7 +114,7 @@ def ensure_template(
             with path.open("wb") as handle:
                 shutil.copyfileobj(response, handle)
         return path
-    except (OSError, urllib.error.URLError, ValueError) as exc:
+    except (OSError, urllib.error.URLError) as exc:
         print(f"Warning: unable to download template: {exc}")
     return None
 
@@ -179,6 +159,14 @@ def write_archive(staging_dir: Path, output: Path) -> None:
                 continue
             arcname = path.relative_to(staging_dir).as_posix()
             archive.write(path, arcname)
+    # Validate --template-url to avoid SSRF
+    parsed_url = urlparse(args.template_url)
+    # Only allow https URLs to GitHub
+    if not (
+        parsed_url.scheme == "https"
+        and parsed_url.netloc == "github.com"
+    ):
+        raise ValueError("Only https://github.com URLs are allowed for --template-url")
 
 
 def main() -> None:

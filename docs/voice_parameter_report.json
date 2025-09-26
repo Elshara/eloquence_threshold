@@ -212,7 +212,7 @@
         }
       ]
     },
-    "generated": "2025-09-25T12:52:31Z",
+    "generated": "2025-09-24T23:51:12Z",
     "languageCount": 11,
     "templateCount": 28
   },
@@ -292,18 +292,6 @@
       "step": 1,
       "tags": [
         "texture"
-      ]
-    },
-    "sampleRate": {
-      "default": 22050,
-      "description": "Output rate in Hertz after optional resampling.",
-      "label": "Sample rate",
-      "maximum": 48000,
-      "minimum": 8000,
-      "step": 50,
-      "tags": [
-        "output",
-        "quality"
       ]
     },
     "volume": {
@@ -545,10 +533,6 @@
         "nvspeechplayer-caleb",
         "nvspeechplayer-david"
       ]
-    },
-    "sampleRate": {
-      "templateCount": 0,
-      "templates": []
     },
     "volume": {
       "templateCount": 28,
