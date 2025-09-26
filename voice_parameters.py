@@ -254,6 +254,95 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
         },
         "nvspeechExtras": ("aspirationAmplitude",),
     },
+    "inflectionContour": {
+        "label": "Inflection contour",
+        "description": (
+            "Emphasises rising and falling transitions by shaping low-mid "
+            "fundamentals and the 2–4 kHz glide band NV Speech Player uses "
+            "for syllable inflection cues."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("prosody", "inflection", "eq"),
+        "profile": {
+            "kind": "dual-band",
+            "ranges": ((110, 320), (2200, 4200)),
+            "gain": 5.0,
+            "bands": (
+                {"range": (110, 320), "gainMultiplier": 0.55},
+                {"range": (2200, 4200)},
+            ),
+        },
+        "nvspeechExtras": ("voicePitch_mul", "endVoicePitch_mul", "inflection"),
+    },
+    "roughnessControl": {
+        "label": "Roughness",
+        "description": (
+            "Adds rasp or polishes brightness by boosting or cutting the "
+            "2.6–8.2 kHz band tied to NV Speech Player's roughness tables."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("texture", "roughness", "eq"),
+        "profile": {
+            "kind": "band",
+            "range": (2600, 8200),
+            "gain": 7.0,
+            "bands": (
+                {"range": (2600, 8200)},
+            ),
+        },
+        "nvspeechExtras": ("roughness", "fricationAmplitude_mul"),
+    },
+    "headSizeContour": {
+        "label": "Head size contour",
+        "description": (
+            "Simulates shorter or longer vocal tracts by biasing the first "
+            "three formants, mirroring NV Speech Player's head size macro."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("formant", "size", "eq"),
+        "profile": {
+            "kind": "triple-band",
+            "ranges": ((260, 520), (820, 1500), (2200, 3200)),
+            "gain": 6.5,
+            "bands": (
+                {"range": (260, 520), "gainMultiplier": 0.65},
+                {"range": (820, 1500)},
+                {"range": (2200, 3200), "gainMultiplier": -0.4},
+            ),
+        },
+        "nvspeechExtras": ("headSize", "cb1_mul", "cf2_mul", "cf3_mul"),
+    },
+    "macroVolume": {
+        "label": "Macro volume envelope",
+        "description": (
+            "Blends pre-mix gain with broadband EQ so the voice can swell or "
+            "sit back without clipping, echoing NV Speech Player's volume "
+            "macros."
+        ),
+        "min": 0,
+        "max": 200,
+        "default": 100,
+        "step": 1,
+        "tags": _default_tags("loudness", "mix", "eq"),
+        "profile": {
+            "kind": "shelf-wide",
+            "range": (90, 12000),
+            "gain": 4.5,
+            "bands": (
+                {"range": (90, 12000)},
+            ),
+        },
+        "nvspeechExtras": ("volume", "voiceAmplitude"),
+    },
     "toneSize": {
         "label": "Tone size",
         "description": (

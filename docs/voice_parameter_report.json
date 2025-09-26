@@ -212,7 +212,7 @@
         }
       ]
     },
-    "generated": "2025-09-26T03:13:51Z",
+    "generated": "2025-09-26T13:07:51Z",
     "languageCount": 11,
     "templateCount": 28
   },
@@ -263,6 +263,19 @@
         "formant"
       ]
     },
+    "headSizeContour": {
+      "default": 100,
+      "description": "Simulates shorter or longer vocal tracts by biasing the first three formants, mirroring NV Speech Player's head size macro.",
+      "label": "Head size contour",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "formant",
+        "size"
+      ]
+    },
     "inflection": {
       "default": 50,
       "description": "Amount of pitch modulation between syllables.",
@@ -272,6 +285,32 @@
       "step": 1,
       "tags": [
         "prosody"
+      ]
+    },
+    "inflectionContour": {
+      "default": 100,
+      "description": "Emphasises rising and falling transitions by shaping low-mid fundamentals and the 2\u20134 kHz glide band NV Speech Player uses for syllable inflection cues.",
+      "label": "Inflection contour",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "inflection",
+        "prosody"
+      ]
+    },
+    "macroVolume": {
+      "default": 100,
+      "description": "Blends pre-mix gain with broadband EQ so the voice can swell or sit back without clipping, echoing NV Speech Player's volume macros.",
+      "label": "Macro volume envelope",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "loudness",
+        "mix"
       ]
     },
     "overtones": {
@@ -317,6 +356,19 @@
       "minimum": 0,
       "step": 1,
       "tags": [
+        "texture"
+      ]
+    },
+    "roughnessControl": {
+      "default": 100,
+      "description": "Adds rasp or polishes brightness by boosting or cutting the 2.6\u20138.2 kHz band tied to NV Speech Player's roughness tables.",
+      "label": "Roughness",
+      "maximum": 200,
+      "minimum": 0,
+      "step": 1,
+      "tags": [
+        "eq",
+        "roughness",
         "texture"
       ]
     },
@@ -578,6 +630,15 @@
         "nvspeechplayer-david"
       ]
     },
+    "headSizeContour": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
     "inflection": {
       "templateCount": 28,
       "templates": [
@@ -605,6 +666,24 @@
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "inflectionContour": {
+      "templateCount": 4,
+      "templates": [
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "macroVolume": {
+      "templateCount": 4,
+      "templates": [
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -713,6 +792,15 @@
         "espeak-pt-br-vibrant",
         "espeak-variant-espeak-variants-alex",
         "espeak-variant-espeak-variants-storm",
+        "nvspeechplayer-adam",
+        "nvspeechplayer-benjamin",
+        "nvspeechplayer-caleb",
+        "nvspeechplayer-david"
+      ]
+    },
+    "roughnessControl": {
+      "templateCount": 4,
+      "templates": [
         "nvspeechplayer-adam",
         "nvspeechplayer-benjamin",
         "nvspeechplayer-caleb",
@@ -1460,11 +1548,15 @@
         "emphasis": 118,
         "gender": 0,
         "headSize": 112,
+        "headSizeContour": 114,
         "inflection": 58,
+        "inflectionContour": 118,
+        "macroVolume": 104,
         "overtones": 110,
         "pitch": 118,
         "rate": 104,
         "roughness": 18,
+        "roughnessControl": 92,
         "scopeDepth": 110,
         "smoothness": 104,
         "stress": 112,
@@ -1512,11 +1604,15 @@
         "emphasis": 130,
         "gender": 0,
         "headSize": 118,
+        "headSizeContour": 116,
         "inflection": 52,
+        "inflectionContour": 126,
+        "macroVolume": 108,
         "overtones": 95,
         "pitch": 124,
         "rate": 108,
         "roughness": 16,
+        "roughnessControl": 128,
         "scopeDepth": 102,
         "smoothness": 94,
         "stress": 118,
@@ -1557,11 +1653,15 @@
         "emphasis": 96,
         "gender": 0,
         "headSize": 120,
+        "headSizeContour": 124,
         "inflection": 44,
+        "inflectionContour": 96,
+        "macroVolume": 90,
         "overtones": 82,
         "pitch": 106,
         "rate": 92,
         "roughness": 28,
+        "roughnessControl": 80,
         "scopeDepth": 132,
         "smoothness": 140,
         "stress": 88,
@@ -1605,11 +1705,15 @@
         "emphasis": 92,
         "gender": 0,
         "headSize": 130,
+        "headSizeContour": 130,
         "inflection": 48,
+        "inflectionContour": 104,
+        "macroVolume": 110,
         "overtones": 88,
         "pitch": 90,
         "rate": 100,
         "roughness": 22,
+        "roughnessControl": 88,
         "scopeDepth": 140,
         "smoothness": 110,
         "stress": 100,

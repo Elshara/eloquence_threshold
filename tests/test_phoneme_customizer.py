@@ -50,6 +50,36 @@ class PhonemeCustomizerTests(unittest.TestCase):
         self.assertGreater(high_band["gain_db"], 0.0)
         self.assertLess(low_band["gain_db"], 0.0)
 
+    def test_inflection_contour_shapes_low_and_high_regions(self) -> None:
+        self.customizer.set_global_parameter("inflectionContour", 160)
+        payload = self.customizer.build_engine_payload()
+        low_band = next(entry for entry in payload if entry["high_hz"] == 320.0)
+        glide_band = next(entry for entry in payload if entry["low_hz"] == 2200.0)
+        self.assertGreater(glide_band["gain_db"], low_band["gain_db"])
+        self.assertGreater(low_band["gain_db"], 0.0)
+
+    def test_head_size_contour_pushes_first_formants(self) -> None:
+        self.customizer.set_global_parameter("headSizeContour", 140)
+        payload = self.customizer.build_engine_payload()
+        low_band = next(entry for entry in payload if entry["low_hz"] == 260.0)
+        mid_band = next(entry for entry in payload if entry["low_hz"] == 820.0)
+        high_band = next(entry for entry in payload if entry["high_hz"] == 3200.0)
+        self.assertGreater(low_band["gain_db"], 0.0)
+        self.assertGreater(mid_band["gain_db"], 0.0)
+        self.assertLess(high_band["gain_db"], 0.0)
+
+    def test_macro_volume_behaves_as_broadband_shelf(self) -> None:
+        self.customizer.set_global_parameter("macroVolume", 160)
+        payload = self.customizer.build_engine_payload()
+        shelf_band = next(entry for entry in payload if entry["low_hz"] == 90.0)
+        self.assertGreater(shelf_band["gain_db"], 0.0)
+
+    def test_roughness_control_boosts_upper_band(self) -> None:
+        self.customizer.set_global_parameter("roughnessControl", 160)
+        payload = self.customizer.build_engine_payload()
+        band = next(entry for entry in payload if entry["low_hz"] == 2600.0)
+        self.assertGreater(band["gain_db"], 0.0)
+
     def test_serialise_and_load_round_trip(self) -> None:
         original = PhonemeEqBand(low_hz=150, high_hz=4800, gain_db=6.0)
         self.customizer.set_band("SH", 0, original)

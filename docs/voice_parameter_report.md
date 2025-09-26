@@ -1,6 +1,6 @@
 # Voice parameter coverage
 
-* Generated: 2025-09-26T03:13:51Z
+* Generated: 2025-09-26T13:07:51Z
 * Templates analysed: 28
 * Languages represented: 11
 
@@ -12,11 +12,15 @@
 | emphasis | 0 – 200 | 100 | 1 | eq, nvspeechplayer, prosody | Boost or soften consonant attacks and vowel onsets to mirror how NV Speech Player emphasises foreground syllables. |
 | gender | 0 – 1 | 0 | 1 | timbre | 0 = masculine tract target, 1 = feminine tract target. |
 | headSize | 70 – 160 | 100 | 1 | formant | Formant scaling comparable to vocal tract length. |
+| headSizeContour | 0 – 200 | 100 | 1 | eq, formant, size | Simulates shorter or longer vocal tracts by biasing the first three formants, mirroring NV Speech Player's head size macro. |
 | inflection | 0 – 100 | 50 | 1 | prosody | Amount of pitch modulation between syllables. |
+| inflectionContour | 0 – 200 | 100 | 1 | eq, inflection, prosody | Emphasises rising and falling transitions by shaping low-mid fundamentals and the 2–4 kHz glide band NV Speech Player uses for syllable inflection cues. |
+| macroVolume | 0 – 200 | 100 | 1 | eq, loudness, mix | Blends pre-mix gain with broadband EQ so the voice can swell or sit back without clipping, echoing NV Speech Player's volume macros. |
 | overtones | 0 – 200 | 100 | 1 | brightness, eq, harmonics | Adds sparkle or dampens sibilants by shaping the 6–16 kHz band used by NV Speech Player's frication models. |
 | pitch | 40 – 160 | 100 | 1 | tone | Primary pitch target controlling overall brightness. |
 | rate | 40 – 150 | 100 | 1 | timing | Base speed in words per minute mapped to Eloquence's internal range. |
 | roughness | 0 – 120 | 40 | 1 | texture | Noise component balancing rasp versus clarity. |
+| roughnessControl | 0 – 200 | 100 | 1 | eq, roughness, texture | Adds rasp or polishes brightness by boosting or cutting the 2.6–8.2 kHz band tied to NV Speech Player's roughness tables. |
 | sampleRate | 8000 – 48000 | 22050 | 50 | output, quality | Output rate in Hertz after optional resampling. |
 | scopeDepth | 0 – 200 | 100 | 1 | depth, eq, warmth | Controls how deep or shallow the voice feels by reshaping the upper-bass region present in NV Speech Player formants. |
 | smoothness | 0 – 200 | 100 | 1 | eq, softness, texture | Controls how much high frequency noise is removed to mimic NV Speech Player's aspiration blending. |
@@ -38,11 +42,15 @@
 | emphasis | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | gender | eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 24 |
 | headSize | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
+| headSizeContour | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | inflection | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
+| inflectionContour | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
+| macroVolume | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | overtones | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | pitch | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
 | rate | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
 | roughness | dectalk-beautiful-betty, dectalk-perfect-paul, dectalk-rough-rita, dectalk-whispering-wendy, eloquence-bhp-precision, eloquence-heritage-jaws-classic, eloquence-loquence-studio, eloquence-sapi4-eloq61-studio, eloquence-sapi4-viavoice-tracy, eloquence-sapi5-codefactory-balanced, eloquence-sapi5-viavoice-paul-xl, eloquence-window-eyes-expressive, espeak-de-precision, espeak-en-gb-clarity, espeak-en-us-bright, espeak-es-castilian, espeak-es-latin, espeak-fr-velvet, espeak-hi-dynamic, espeak-it-expressive, espeak-ja-melodic, espeak-pt-br-vibrant, espeak-variant-espeak-variants-alex, espeak-variant-espeak-variants-storm, nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 28 |
+| roughnessControl | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | sampleRate | – | 0 |
 | scopeDepth | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
 | smoothness | nvspeechplayer-adam, nvspeechplayer-benjamin, nvspeechplayer-caleb, nvspeechplayer-david | 4 |
@@ -474,6 +482,10 @@
   * whisper: 96
   * toneSize: 112
   * scopeDepth: 110
+  * inflectionContour: 118
+  * roughnessControl: 92
+  * headSizeContour: 114
+  * macroVolume: 104
 * Extras:
   * nvspeechPlayer: {'cb1_mul': 1.3, 'pa6_mul': 1.3, 'fricationAmplitude_mul': 0.85}
   * phonemeFallback: examplesFirst
@@ -505,6 +517,10 @@
   * whisper: 90
   * toneSize: 118
   * scopeDepth: 102
+  * inflectionContour: 126
+  * roughnessControl: 128
+  * headSizeContour: 116
+  * macroVolume: 108
 * Extras:
   * nvspeechPlayer: {'cf1_mul': 1.01, 'cf2_mul': 1.02, 'cf4': 3770, 'cf5': 4100, 'cf6': 5000, 'cfNP_mul': 0.9, 'cb1_mul': 1.3, 'fricationAmplitude_mul': 0.7, 'pa6_mul': 1.3}
   * phonemeFallback: ipaFirst
@@ -536,6 +552,10 @@
   * whisper: 180
   * toneSize: 108
   * scopeDepth: 132
+  * inflectionContour: 96
+  * roughnessControl: 80
+  * headSizeContour: 124
+  * macroVolume: 90
 * Extras:
   * nvspeechPlayer: {'aspirationAmplitude': 1, 'voiceAmplitude': 0}
   * phonemeFallback: descriptionsFirst
@@ -567,6 +587,10 @@
   * whisper: 102
   * toneSize: 126
   * scopeDepth: 140
+  * inflectionContour: 104
+  * roughnessControl: 88
+  * headSizeContour: 130
+  * macroVolume: 110
 * Extras:
   * nvspeechPlayer: {'voicePitch_mul': 0.75, 'endVoicePitch_mul': 0.75, 'cf1_mul': 0.75, 'cf2_mul': 0.85, 'cf3_mul': 0.85}
   * phonemeFallback: examplesFirst

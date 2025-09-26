@@ -43,7 +43,11 @@
         "smoothness": 104,
         "whisper": 96,
         "toneSize": 112,
-        "scopeDepth": 110
+        "scopeDepth": 110,
+        "inflectionContour": 118,
+        "roughnessControl": 92,
+        "headSizeContour": 114,
+        "macroVolume": 104
       },
       "extras": {
         "phonemeFallback": "examplesFirst",
@@ -93,7 +97,11 @@
         "smoothness": 94,
         "whisper": 90,
         "toneSize": 118,
-        "scopeDepth": 102
+        "scopeDepth": 102,
+        "inflectionContour": 126,
+        "roughnessControl": 128,
+        "headSizeContour": 116,
+        "macroVolume": 108
       },
       "extras": {
         "phonemeFallback": "ipaFirst",
@@ -149,7 +157,11 @@
         "smoothness": 140,
         "whisper": 180,
         "toneSize": 108,
-        "scopeDepth": 132
+        "scopeDepth": 132,
+        "inflectionContour": 96,
+        "roughnessControl": 80,
+        "headSizeContour": 124,
+        "macroVolume": 90
       },
       "extras": {
         "phonemeFallback": "descriptionsFirst",
@@ -198,7 +210,11 @@
         "smoothness": 110,
         "whisper": 102,
         "toneSize": 126,
-        "scopeDepth": 140
+        "scopeDepth": 140,
+        "inflectionContour": 104,
+        "roughnessControl": 88,
+        "headSizeContour": 130,
+        "macroVolume": 110
       },
       "extras": {
         "phonemeFallback": "examplesFirst",
