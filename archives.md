@@ -29,6 +29,13 @@ full Markdown catalogue (`docs/archive_inventory.md`).
 
 See `docs/archive_code_targets.md` for synthesizer-specific porting notes and example integration tasks.
 
+## Extension and dataset index
+
+- `docs/archive_inventory.md` now surfaces `File extension index`, `Sample rate hints`, and `Language hints` sections so we can prioritise IPA dictionaries, lexicons, and other phoneme-friendly payloads before downloading redundant demo audio.
+- `docs/archive_inventory.json` stores the same catalogue plus machine-readable summaries under the top-level `summaries` key. Each record now includes a `metadata` block with decoded filenames, detected sample rates, language hints, and voice names (where present) to accelerate automated importers.
+- After updating `docs/datajake_archive_urls.txt`, rerun `python tools/catalog_datajake_archives.py` and scan the extension totals for new `.lex`, `.ipa`, or language-tagged archives that warrant fast-tracked extraction into `phoneme_catalog.py` or `language_profiles.py`.
+
+
 ## Scrap categories
 
 The manifest flags 868 audio-only files and 218 binary installers. These are preserved for provenance but are not part of the
@@ -37,9 +44,7 @@ engineering effort on archives labelled as source, tooling, or NVDA add-ons.
 
 ## Updating this guide
 
-- Regenerate the manifest after auditing new mirrors or when additional NVDA add-ons are published. The JSON output makes it
-easy to diff viability changes inside pull requests.
-- When new code paths are imported into the repository, update `docs/archive_code_targets.md` with the implemented outcome and
-link the corresponding manifest rows.
-- Surface major catalogue updates in `README.md` so NVDA community testers understand which external synthesizers now inform
-Eloquence's phoneme engine and configuration workflows.
+- Regenerate the manifest after auditing new mirrors or when additional NVDA add-ons are published. The JSON output makes it easy to diff viability changes inside pull requests.
+- Cross-reference the extension, sample-rate, and language summaries before downloading large payloads so phoneme/lexicon bundles reach the pipeline ahead of demo audio.
+- When new code paths are imported into the repository, update `docs/archive_code_targets.md` with the implemented outcome and link the corresponding manifest rows.
+- Surface major catalogue updates in `README.md` so NVDA community testers understand which external synthesizers now inform Eloquence's phoneme engine and configuration workflows.

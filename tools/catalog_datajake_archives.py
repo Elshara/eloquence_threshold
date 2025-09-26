@@ -5,8 +5,9 @@ import argparse
 import json
 import pathlib
 import re
+import urllib.parse
 from collections import Counter, defaultdict
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 
 RAW_URL_PATH = pathlib.Path("docs/datajake_archive_urls.txt")
 DEFAULT_MARKDOWN = pathlib.Path("docs/archive_inventory.md")
@@ -36,8 +37,6 @@ CODE_KEYWORDS = [
     "src",
     "code",
     "sdk",
-    "sample",
-    "samples",
     "demo",
     "examples",
     "program",
@@ -99,8 +98,11 @@ ASSET_KEYWORDS = [
     "lang",
     "dictionary",
     "lex",
+    "lexicon",
     "phoneme",
     "voice_data",
+    "dataset",
+    "ipa",
     "addon",
     "nvda",
     "mbrola",
@@ -122,6 +124,159 @@ SCRAP_KEYWORDS = [
     "update",
 ]
 
+PRIORITY_ASSET_KEYWORDS = {"phoneme", "phon", "lex", "lexicon", "dictionary", "ipa"}
+
+LANGUAGE_PATTERNS: dict[str, str] = {
+    r"arabic": "Arabic",
+    r"brazilian": "Brazilian Portuguese",
+    r"cantonese": "Cantonese",
+    r"catalan": "Catalan",
+    r"chinese": "Chinese",
+    r"czech": "Czech",
+    r"danish": "Danish",
+    r"dutch": "Dutch",
+    r"english": "English",
+    r"finnish": "Finnish",
+    r"french": "French",
+    r"german": "German",
+    r"greek": "Greek",
+    r"hindi": "Hindi",
+    r"icelandic": "Icelandic",
+    r"indian": "Indian English",
+    r"irish": "Irish",
+    r"italian": "Italian",
+    r"japanese|japan": "Japanese",
+    r"korean": "Korean",
+    r"mandarin": "Mandarin",
+    r"mexican": "Mexican Spanish",
+    r"norwegian": "Norwegian",
+    r"polish": "Polish",
+    r"portuguese": "Portuguese",
+    r"romanian": "Romanian",
+    r"russian": "Russian",
+    r"spanish": "Spanish",
+    r"swedish": "Swedish",
+    r"taiwanese": "Taiwanese Mandarin",
+    r"thai": "Thai",
+    r"turkish": "Turkish",
+    r"ukrainian": "Ukrainian",
+    r"vietnamese": "Vietnamese",
+}
+
+LANGUAGE_REGEXES = [(re.compile(pattern), label) for pattern, label in LANGUAGE_PATTERNS.items()]
+
+
+def parse_sample_rate(filename_lower: str) -> int | None:
+    khz_match = re.search(r"(\d{2,3})\s*(?:k(?:hz)?)", filename_lower)
+    if khz_match:
+        value = int(khz_match.group(1)) * 1000
+        if 4000 <= value <= 384000:
+            return value
+    hz_match = re.search(r"(\d{4,6})\s*hz", filename_lower)
+    if hz_match:
+        value = int(hz_match.group(1))
+        if 4000 <= value <= 384000:
+            return value
+    return None
+
+
+def extract_language_hints(filename_lower: str) -> list[str]:
+    hints = []
+    for regex, label in LANGUAGE_REGEXES:
+        if regex.search(filename_lower):
+            hints.append(label)
+    return sorted(set(hints))
+
+
+def extract_voice_hint(display_name: str) -> str | None:
+    base = display_name.rsplit('.', 1)[0]
+    tokens = re.split(r"[\s_\-]+", base)
+    if not tokens:
+        return None
+    if tokens[0].lower() != "voice":
+        return None
+    skip_tokens = {
+        "voice",
+        "us",
+        "uk",
+        "gb",
+        "au",
+        "male",
+        "female",
+        "english",
+        "spanish",
+        "french",
+        "german",
+        "italian",
+        "portuguese",
+        "dutch",
+        "danish",
+        "norwegian",
+        "swedish",
+        "finnish",
+        "polish",
+        "russian",
+        "czech",
+        "mandarin",
+        "cantonese",
+        "chinese",
+        "korean",
+        "thai",
+        "brazilian",
+        "mexican",
+        "castilian",
+        "irish",
+        "icelandic",
+        "catalan",
+        "22khz",
+        "11khz",
+        "16khz",
+        "8khz",
+        "22",
+        "11",
+        "16",
+        "8",
+        "khz",
+        "hz",
+        "msi",
+        "exe",
+    }
+    for token in tokens[1:]:
+        lower = token.lower()
+        if not token:
+            continue
+        if lower in skip_tokens or lower.endswith("khz") or lower.endswith("hz"):
+            continue
+        if lower.isdigit():
+            continue
+        return token
+    return None
+
+
+def extract_metadata(display_name: str, filename_lower: str, category: str, extension: str) -> dict[str, object]:
+    metadata: dict[str, object] = {}
+    sample_rate = parse_sample_rate(filename_lower)
+    if sample_rate:
+        metadata["sample_rate_hz"] = sample_rate
+    language_hints = extract_language_hints(filename_lower)
+    if language_hints:
+        metadata["language_hints"] = language_hints
+    voice_hint = extract_voice_hint(display_name)
+    if voice_hint:
+        metadata["voice_hint"] = voice_hint
+    if extension:
+        metadata["extension"] = extension
+    metadata["category"] = category
+    return metadata
+
+
+def detect_extension(display_name: str) -> str:
+    name_lower = display_name.lower().strip()
+    match = re.search(r"\.([a-z0-9][a-z0-9\-]{0,15})$", name_lower)
+    if match:
+        return match.group(1)
+    return ""
+
 SYNTH_ALIAS = {
     "CircumReality": "CircumReality",
     "DECtalk": "DECtalk",
@@ -140,14 +295,19 @@ SYNTH_ALIAS = {
 class ArchiveRecord:
     url: str
     filename: str
+    display_name: str
     extension: str
     family: str | None
     category: str
     viability: str
     notes: str
+    metadata: dict[str, object] = field(default_factory=dict)
 
     def to_markdown_row(self, index: int) -> str:
-        return f"| {index} | [{self.filename}]({self.url}) | {self.family or '—'} | {self.category} | {self.viability} | {self.notes} |"
+        return (
+            f"| {index} | [{self.display_name}]({self.url}) | {self.family or '—'} | "
+            f"{self.category} | {self.viability} | {self.notes} |"
+        )
 
 
 def infer_family(url: str) -> str | None:
@@ -165,15 +325,20 @@ def infer_family(url: str) -> str | None:
 
 def classify(url: str) -> ArchiveRecord:
     filename = url.rsplit('/', 1)[-1]
-    filename_lower = filename.lower()
-    extension = filename_lower.split('.')[-1] if '.' in filename_lower else ''
+    display_name = urllib.parse.unquote(filename)
+    filename_lower = display_name.lower()
+    extension = detect_extension(display_name)
     family = infer_family(url)
 
     category = "Unknown"
     viability = "Needs triage"
     notes = ""
 
-    if extension in AUDIO_EXTS:
+    if display_name.endswith("..>"):
+        category = "Truncated link"
+        viability = "Fix manifest entry"
+        notes = "Link appears truncated from the HTML index; verify the original filename on the mirror."
+    elif extension in AUDIO_EXTS:
         category = "Audio sample"
         viability = "Scrap (non-code asset)"
         notes = "Audio payload useful only for reference recordings."
@@ -194,23 +359,35 @@ def classify(url: str) -> ArchiveRecord:
         viability = "Medium – investigate resources"
         notes = "Executable installer – may contain DLLs or lexicon data."
     elif extension in ARCHIVE_EXTS:
+        matched_asset = next((kw for kw in ASSET_KEYWORDS if kw in filename_lower), None)
         matched_keyword = next((kw for kw in CODE_KEYWORDS if kw in filename_lower), None)
-        if matched_keyword:
+        if matched_asset and matched_asset in PRIORITY_ASSET_KEYWORDS:
+            category = "Voice/data archive"
+            viability = "High – prioritise phoneme or lexicon data"
+            notes = f"Contains phoneme or language resources (keyword '{matched_asset}')."
+        elif matched_keyword:
             category = "Source/tooling archive"
             viability = "High – inspect for portable code"
             notes = f"Keyword '{matched_keyword}' indicates embedded source or tooling."
+        elif matched_asset:
+            category = "Voice/data archive"
+            viability = "Medium – evaluate data reuse"
+            notes = f"Contains voice or language assets (keyword '{matched_asset}')."
         else:
-            matched_asset = next((kw for kw in ASSET_KEYWORDS if kw in filename_lower), None)
-            if matched_asset:
-                category = "Voice/data archive"
-                viability = "Medium – evaluate data reuse"
-                notes = f"Contains voice or language assets (keyword '{matched_asset}')."
-            else:
-                category = "Generic archive"
-                viability = "Low – inspect manually"
-                notes = "Archive without clear code/data signal."
+            category = "Generic archive"
+            viability = "Low – inspect manually"
+            notes = "Archive without clear code/data signal."
     else:
-        if any(kw in filename_lower for kw in CODE_KEYWORDS):
+        matched_asset = next((kw for kw in ASSET_KEYWORDS if kw in filename_lower), None)
+        if matched_asset and matched_asset in PRIORITY_ASSET_KEYWORDS:
+            category = "Voice/data archive"
+            viability = "High – prioritise phoneme or lexicon data"
+            notes = f"Contains phoneme or language resources (keyword '{matched_asset}')."
+        elif matched_asset:
+            category = "Voice/data archive"
+            viability = "Medium – evaluate data reuse"
+            notes = f"Contains voice or language assets (keyword '{matched_asset}')."
+        elif any(kw in filename_lower for kw in CODE_KEYWORDS):
             category = "Loose source file"
             viability = "High – integrate as needed"
             notes = "Direct code or config artifact."
@@ -227,14 +404,18 @@ def classify(url: str) -> ArchiveRecord:
         viability = "Low – likely demo/installer"
         notes = "Demo or installer payload; keep only if no alternative."
 
+    metadata = extract_metadata(display_name, filename_lower, category, extension)
+
     return ArchiveRecord(
         url=url,
         filename=filename,
+        display_name=display_name,
         extension=extension,
         family=family,
         category=category,
         viability=viability,
         notes=notes,
+        metadata=metadata,
     )
 
 
@@ -245,9 +426,19 @@ def build_records(urls: list[str]) -> list[ArchiveRecord]:
 def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     counts = Counter(record.category for record in records)
     families = defaultdict(int)
+    extensions = Counter()
+    sample_rates = Counter()
+    language_counts = Counter()
     for record in records:
         if record.family:
             families[record.family] += 1
+        extension = record.extension or "(none)"
+        extensions[extension] += 1
+        sample_rate = record.metadata.get("sample_rate_hz") if record.metadata else None
+        if isinstance(sample_rate, int):
+            sample_rates[sample_rate] += 1
+        for language in record.metadata.get("language_hints", []) if record.metadata else []:
+            language_counts[language] += 1
     lines = []
     lines.append("# DataJake Archive Classification")
     lines.append("")
@@ -269,6 +460,29 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     for family, count in sorted(families.items(), key=lambda item: (-item[1], item[0])):
         lines.append(f"| {family} | {count} |")
     lines.append("")
+    lines.append("## File extension index")
+    lines.append("")
+    lines.append("| Extension | Count |")
+    lines.append("| --- | ---: |")
+    for ext, count in sorted(extensions.items(), key=lambda item: (-item[1], item[0])):
+        lines.append(f"| {ext} | {count} |")
+    lines.append("")
+    if sample_rates:
+        lines.append("## Sample rate hints")
+        lines.append("")
+        lines.append("| Sample rate (Hz) | Archives |")
+        lines.append("| ---: | ---: |")
+        for rate, count in sorted(sample_rates.items(), key=lambda item: (-item[1], -item[0])):
+            lines.append(f"| {rate} | {count} |")
+        lines.append("")
+    if language_counts:
+        lines.append("## Language hints")
+        lines.append("")
+        lines.append("| Language | Archives |")
+        lines.append("| --- | ---: |")
+        for language, count in sorted(language_counts.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {language} | {count} |")
+        lines.append("")
     lines.append("## Detailed inventory")
     lines.append("")
     lines.append("| # | Archive | Collection | Category | Viability | Notes |")
@@ -280,8 +494,25 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
 
 
 def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
-    payload = [asdict(record) for record in records]
-    path.write_text(json.dumps(payload, indent=2))
+    extensions = Counter(record.extension or "(none)" for record in records)
+    sample_rates = Counter()
+    languages = Counter()
+    for record in records:
+        metadata = record.metadata or {}
+        sample_rate = metadata.get("sample_rate_hz")
+        if isinstance(sample_rate, int):
+            sample_rates[sample_rate] += 1
+        for language in metadata.get("language_hints", []):
+            languages[language] += 1
+    payload = {
+        "records": [asdict(record) for record in records],
+        "summaries": {
+            "extensions": dict(extensions),
+            "sample_rates": dict(sample_rates),
+            "languages": dict(languages),
+        },
+    }
+    path.write_text(json.dumps(payload, indent=2) + "\n")
 
 
 def load_urls(path: pathlib.Path) -> list[str]:

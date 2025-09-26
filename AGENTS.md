@@ -41,6 +41,7 @@
 - Reference the current NVDA validation baseline (alpha-52731 at the time of this update) and note any newer snapshots you test so the compatibility story stays fresh.
 - When cataloguing third-party archives (DataJake, Blind Help Project, Hear2Read, etc.), record extraction steps, archive types, and where you staged the recovered payloads. Mention required tooling (for example, `7z`, `unzip`, `cabextract`) so other contributors can repeat the process.
 - Maintain a rolling roadmap for the DataJake text-to-speech archives: note which synthesizers have been inventoried, which payloads still need extraction, and which automation tasks (inventory scripts, phoneme converters, template generators) remain open so follow-up pull requests can extend coverage without duplicating work.
+- Leverage the new extension/sample-rate/language summaries emitted by `python tools/catalog_datajake_archives.py`; call out high-value `.lex`, `.ipa`, or language-tagged datasets when proposing imports so reviewers can see how phoneme coverage expands beyond classic English voices.
 - Keep the README and agent guidelines aligned; if you expand the README with new architectural, archival, or customization details, summarize the key points here so future maintainers do not overlook them.
 
 ## Contribution notes
@@ -54,6 +55,7 @@
 - Whenever you introduce cross-platform guidance (for example, NVDA, Orca, Narrator, VoiceOver, TalkBack, ChromeVox), specify the packaging format, build prerequisites, and how the shared Eloquence data should flow between platforms so future maintainers can publish coordinated releases.
 - Plan for expanded voice parameter sliders: note open questions about mapping additional Eloquence controls into NVDA's dialog and capture any prototype work so it can be resumed quickly.
 - Track the pending automation task to crawl archives like DataJake. The repository needs a script that inventories directories, unpacks archives, and emits JSON/Markdown manifests describing available speech assets—update this file when progress is made so developers know the state of the effort. The first iteration lives at `tools/catalog_datajake_archives.py` and outputs `docs/archive_inventory.json` plus the Markdown companion; keep those artefacts fresh whenever you adjust `docs/datajake_archive_urls.txt` or import new source code.
+- `docs/archive_inventory.json` now ships with `summaries.extensions`, `summaries.sample_rates`, and `summaries.languages` maps plus per-record metadata. Reference those when triaging archives so automation can fast-track phoneme datasets or language packs.
 - When running the new archive inventory helper (`python tools/inventory_archives.py --roots <paths> --json docs/archive_inventory.json --markdown docs/archive_inventory.md`), refresh both artefacts and summarise notable payload changes in accompanying documentation so automated checks remain trustworthy.
 
 These guidelines apply to the entire repository.
