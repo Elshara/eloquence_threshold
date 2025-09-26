@@ -19,6 +19,12 @@ Each entry mirrors the structure consumed by :mod:`voice_catalog`:
 ``tags``
     Loose descriptors that documentation and reporting tools can use to group
     related controls.
+``profile``
+    Optional hints describing how the slider maps onto the global parametric
+    EQ managed by :mod:`phoneme_customizer`.  Profiles may expose ``bands`` – a
+    sequence of ``{"range": (low, high), "gainMultiplier": float}`` mappings –
+    so helpers can scale multiple frequency regions from a single slider.  When
+    omitted the helpers fall back to the legacy ``range``/``ranges`` metadata.
 
 Additional hints (for example ``profile`` and ``nvspeechExtras``) document how
 the parameter maps to NV Speech Player data.  The synthesiser does not consume
@@ -50,6 +56,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "band",
             "range": (2200, 5200),
             "gain": 6.0,
+            "bands": (
+                {"range": (2200, 5200)},
+            ),
         },
         "nvspeechExtras": ("fricationAmplitude_mul", "aspirationAmplitude"),
     },
@@ -68,6 +77,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "band",
             "range": (1800, 4000),
             "gain": 6.5,
+            "bands": (
+                {"range": (1800, 4000)},
+            ),
         },
         "nvspeechExtras": ("voicePitch_mul", "endVoicePitch_mul"),
     },
@@ -86,6 +98,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "band",
             "range": (500, 1900),
             "gain": 8.0,
+            "bands": (
+                {"range": (500, 1900)},
+            ),
         },
         "nvspeechExtras": ("cf1_mul", "cf2_mul", "cb1_mul"),
     },
@@ -104,6 +119,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "band",
             "range": (1400, 3200),
             "gain": 7.5,
+            "bands": (
+                {"range": (1400, 3200)},
+            ),
         },
         "nvspeechExtras": ("pf3", "pf4", "parallelBypass"),
     },
@@ -122,6 +140,10 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "dual-band",
             "ranges": ((120, 380), (2400, 5200)),
             "gain": 5.5,
+            "bands": (
+                {"range": (120, 380), "gainMultiplier": 0.7},
+                {"range": (2400, 5200)},
+            ),
         },
         "nvspeechExtras": ("voiceAmplitude", "parallelBypass"),
     },
@@ -140,6 +162,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "shelf-high",
             "range": (5800, 16000),
             "gain": 12.0,
+            "bands": (
+                {"range": (5800, 16000)},
+            ),
         },
         "nvspeechExtras": ("fricationAmplitude_mul",),
     },
@@ -158,6 +183,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "shelf-low",
             "range": (60, 420),
             "gain": 12.0,
+            "bands": (
+                {"range": (60, 420)},
+            ),
         },
         "nvspeechExtras": ("voiceAmplitude", "cbN0"),
     },
@@ -176,6 +204,10 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "dual-band",
             "ranges": ((100, 320), (3600, 7200)),
             "gain": 6.0,
+            "bands": (
+                {"range": (100, 320), "gainMultiplier": 0.6},
+                {"range": (3600, 7200)},
+            ),
         },
         "nvspeechExtras": ("voicePitch_mul", "endVoicePitch_mul", "cfNP"),
     },
@@ -194,6 +226,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "band",
             "range": (4200, 14000),
             "gain": 8.0,
+            "bands": (
+                {"range": (4200, 14000), "gainMultiplier": -1.0},
+            ),
         },
         "nvspeechExtras": ("aspirationAmplitude", "copyAdjacent"),
     },
@@ -212,6 +247,10 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "dual-band",
             "ranges": ((300, 900), (3600, 11000)),
             "gain": 10.0,
+            "bands": (
+                {"range": (3600, 11000)},
+                {"range": (300, 900), "gainMultiplier": -0.4},
+            ),
         },
         "nvspeechExtras": ("aspirationAmplitude",),
     },
@@ -230,6 +269,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "band",
             "range": (700, 2500),
             "gain": 7.0,
+            "bands": (
+                {"range": (700, 2500)},
+            ),
         },
         "nvspeechExtras": ("cb1_mul", "cf3_mul"),
     },
@@ -248,6 +290,9 @@ ADVANCED_VOICE_PARAMETER_SPECS: Dict[str, Mapping[str, object]] = {
             "kind": "band",
             "range": (200, 820),
             "gain": 6.5,
+            "bands": (
+                {"range": (200, 820)},
+            ),
         },
         "nvspeechExtras": ("cbNP", "caNP"),
     },

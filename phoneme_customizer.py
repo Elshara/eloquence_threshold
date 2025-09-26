@@ -138,47 +138,49 @@ class PhonemeCustomizer:
             )
             bands.append(candidate)
 
-        def scaled_gain(name: str, scale: float) -> float:
-            spec = ADVANCED_VOICE_PARAMETER_SPECS.get(name, {})
-            profile = spec.get("profile", {})
-            max_gain = float(profile.get("gain", 6.0))
-            return max_gain * scale
-
         for name, value in self._global_parameters.items():
             scale = _scale(value)
             if not scale:
                 continue
-            if name == "emphasis":
-                add_band(2200, 5200, scaled_gain(name, scale))
-            elif name == "stress":
-                add_band(1800, 4000, scaled_gain(name, scale))
-            elif name == "timbre":
-                add_band(500, 1900, scaled_gain(name, scale))
-            elif name == "tone":
-                add_band(1400, 3200, scaled_gain(name, scale))
-            elif name == "vocalLayers":
-                gain = scaled_gain(name, scale)
-                add_band(120, 380, gain * 0.7)
-                add_band(2400, 5200, gain)
-            elif name == "overtones":
-                add_band(5800, 16000, scaled_gain(name, scale))
-            elif name == "subtones":
-                add_band(60, 420, scaled_gain(name, scale))
-            elif name == "vocalRange":
-                gain = scaled_gain(name, scale)
-                add_band(100, 320, gain * 0.6)
-                add_band(3600, 7200, gain)
-            elif name == "smoothness":
-                # Positive smoothness lowers high frequencies (so invert scale)
-                add_band(4200, 14000, -scaled_gain(name, scale))
-            elif name == "whisper":
-                gain = scaled_gain(name, scale)
-                add_band(3600, 11000, gain)
-                add_band(300, 900, -gain * 0.4)
-            elif name == "toneSize":
-                add_band(700, 2500, scaled_gain(name, scale))
-            elif name == "scopeDepth":
-                add_band(200, 820, scaled_gain(name, scale))
+            spec = ADVANCED_VOICE_PARAMETER_SPECS.get(name)
+            if not spec:
+                continue
+            profile = spec.get("profile", {})
+            base_gain = float(profile.get("gain", 6.0)) * scale
+
+            band_entries = profile.get("bands")
+            if band_entries:
+                for entry in band_entries:
+                    if not isinstance(entry, Mapping):
+                        continue
+                    range_value = entry.get("range")
+                    if not isinstance(range_value, (tuple, list)) or len(range_value) != 2:
+                        continue
+                    try:
+                        low, high = float(range_value[0]), float(range_value[1])
+                    except (TypeError, ValueError):
+                        continue
+                    gain_multiplier = entry.get("gainMultiplier", 1.0)
+                    try:
+                        multiplier = float(gain_multiplier)
+                    except (TypeError, ValueError):
+                        multiplier = 1.0
+                    add_band(low, high, base_gain * multiplier)
+                continue
+
+            ranges = profile.get("ranges")
+            if not ranges and "range" in profile:
+                ranges = (profile.get("range"),)
+            if not ranges:
+                continue
+            for range_value in ranges:
+                if not isinstance(range_value, (tuple, list)) or len(range_value) != 2:
+                    continue
+                try:
+                    low, high = float(range_value[0]), float(range_value[1])
+                except (TypeError, ValueError):
+                    continue
+                add_band(low, high, base_gain)
         self._global_bands = bands
 
     # ------------------------------------------------------------------

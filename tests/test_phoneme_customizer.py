@@ -28,6 +28,28 @@ class PhonemeCustomizerTests(unittest.TestCase):
         self.assertTrue(any(entry["high_hz"] == 5200.0 for entry in payload))
         self.assertIn({"low_hz": 300.0, "high_hz": 900.0, "gain_db": 2.5}, payload)
 
+    def test_profile_band_metadata_shapes_gain(self) -> None:
+        self.customizer.set_global_parameter("vocalLayers", 140)
+        payload = self.customizer.build_engine_payload()
+        low_band = next(entry for entry in payload if entry["high_hz"] == 380.0)
+        high_band = next(entry for entry in payload if entry["low_hz"] == 2400.0)
+        self.assertAlmostEqual(high_band["gain_db"], 2.2, places=1)
+        self.assertAlmostEqual(low_band["gain_db"], 1.5, places=1)
+
+    def test_smoothness_positive_reduces_high_band(self) -> None:
+        self.customizer.set_global_parameter("smoothness", 140)
+        payload = self.customizer.build_engine_payload()
+        band = next(entry for entry in payload if entry["low_hz"] == 4200.0)
+        self.assertLess(band["gain_db"], 0.0)
+
+    def test_whisper_scales_dual_band_profile(self) -> None:
+        self.customizer.set_global_parameter("whisper", 130)
+        payload = self.customizer.build_engine_payload()
+        high_band = next(entry for entry in payload if entry["low_hz"] == 3600.0)
+        low_band = next(entry for entry in payload if entry["high_hz"] == 900.0)
+        self.assertGreater(high_band["gain_db"], 0.0)
+        self.assertLess(low_band["gain_db"], 0.0)
+
     def test_serialise_and_load_round_trip(self) -> None:
         original = PhonemeEqBand(low_hz=150, high_hz=4800, gain_db=6.0)
         self.customizer.set_band("SH", 0, original)
