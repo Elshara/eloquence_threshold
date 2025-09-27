@@ -478,6 +478,90 @@ def parse_channel_mode(filename_lower: str) -> str | None:
     return f"{value}-channel"
 
 
+def derive_audio_fidelity(
+    sample_rate_hz: int | None, bit_depth_bits: int | None, channel_mode: str | None
+) -> str | None:
+    """Infer an audio fidelity tier from the detected parameters.
+
+    We combine sample-rate, bit-depth, and channel layout hints to produce a
+    coarse fidelity classification that helps reviewers prioritise high-quality
+    reference material when mapping phoneme coverage or EQ targets.
+    """
+
+    if sample_rate_hz is None and bit_depth_bits is None and channel_mode is None:
+        return None
+
+    stereo_like = {"Stereo", "Binaural", "Quad"}
+
+    if (
+        sample_rate_hz is not None
+        and sample_rate_hz >= 44100
+        and channel_mode in stereo_like
+        and (bit_depth_bits is None or bit_depth_bits >= 16)
+    ):
+        return "High fidelity source"
+
+    if (
+        sample_rate_hz is not None
+        and sample_rate_hz >= 96000
+        and (bit_depth_bits is None or bit_depth_bits >= 24)
+    ):
+        return "High fidelity source"
+
+    score = 0.0
+    if sample_rate_hz is not None:
+        if sample_rate_hz >= 96000:
+            score += 3
+        elif sample_rate_hz >= 48000:
+            score += 2
+        elif sample_rate_hz >= 32000:
+            score += 1.5
+        elif sample_rate_hz >= 22050:
+            score += 1
+        elif sample_rate_hz >= 16000:
+            score += 0.5
+        else:
+            score += 0.25
+    if bit_depth_bits is not None:
+        if bit_depth_bits >= 24:
+            score += 2
+        elif bit_depth_bits >= 16:
+            score += 1
+        elif bit_depth_bits >= 8:
+            score += 0.5
+    if channel_mode in stereo_like:
+        score += 1
+    elif channel_mode == "Mono":
+        score += 0.5
+    elif channel_mode:
+        score += 0.75
+
+    if score >= 4:
+        return "High fidelity source"
+    if score >= 2:
+        return "Mid fidelity dataset"
+    return "Low fidelity reference"
+
+
+def build_audio_signature(
+    sample_rate_hz: int | None, bit_depth_bits: int | None, channel_mode: str | None
+) -> str | None:
+    parts: list[str] = []
+    if sample_rate_hz is not None:
+        if sample_rate_hz % 1000 == 0:
+            rate_label = f"{sample_rate_hz // 1000} kHz"
+        else:
+            rate_label = f"{sample_rate_hz / 1000:.1f} kHz"
+        parts.append(rate_label)
+    if bit_depth_bits is not None:
+        parts.append(f"{bit_depth_bits}-bit")
+    if channel_mode:
+        parts.append(channel_mode)
+    if not parts:
+        return None
+    return " • ".join(parts)
+
+
 def extract_language_metadata(filename_lower: str) -> tuple[list[str], list[str]]:
     hints: set[str] = set()
     tags: set[str] = set()
@@ -715,6 +799,18 @@ def extract_metadata(
         priority_tags.add("has_age_hint")
     if extension:
         metadata["extension"] = extension
+    audio_signature = build_audio_signature(sample_rate, bit_depth, channel_mode)
+    if audio_signature:
+        metadata["audio_signature"] = audio_signature
+    fidelity_tier = derive_audio_fidelity(sample_rate, bit_depth, channel_mode)
+    if fidelity_tier:
+        metadata["audio_fidelity_tier"] = fidelity_tier
+        if fidelity_tier == "High fidelity source":
+            priority_tags.add("high_fidelity_audio")
+        elif fidelity_tier == "Mid fidelity dataset":
+            priority_tags.add("mid_fidelity_audio")
+        else:
+            priority_tags.add("low_fidelity_audio")
     metadata["category"] = category
     if priority_tags:
         metadata["priority_tags"] = sorted(priority_tags)
@@ -935,6 +1031,7 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     sample_rates = Counter()
     bit_depths = Counter()
     channel_modes = Counter()
+    fidelity_counts = Counter()
     language_counts = Counter()
     language_tag_counts = Counter()
     priority_counts = Counter()
@@ -999,6 +1096,12 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         if isinstance(age_hint, str):
             age_counts[age_hint] += 1
             metadata_flags["age_hint"] += 1
+        fidelity_tier = (
+            record.metadata.get("audio_fidelity_tier") if record.metadata else None
+        )
+        if isinstance(fidelity_tier, str):
+            fidelity_counts[fidelity_tier] += 1
+            metadata_flags["audio_fidelity_tier"] += 1
     viability_counts = Counter(record.viability for record in records)
     lines = []
     lines.append("# DataJake Archive Classification")
@@ -1052,6 +1155,14 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         for layout, count in sorted(channel_modes.items(), key=lambda item: (-item[1], item[0])):
             lines.append(f"| {layout} | {count} |")
         lines.append("")
+    if fidelity_counts:
+        lines.append("## Audio fidelity tiers")
+        lines.append("")
+        lines.append("| Fidelity tier | Archives |")
+        lines.append("| --- | ---: |")
+        for tier, count in sorted(fidelity_counts.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {tier} | {count} |")
+        lines.append("")
     if language_counts:
         lines.append("## Language hints")
         lines.append("")
@@ -1091,6 +1202,7 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             "version_hint": "Version strings",
             "gender_hint": "Voice gender hints",
             "age_hint": "Voice age hints",
+            "audio_fidelity_tier": "Audio fidelity tiers",
         }
         lines.append("## Metadata coverage summary")
         lines.append("")
@@ -1172,6 +1284,7 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     sample_rates = Counter()
     bit_depths = Counter()
     channel_modes = Counter()
+    fidelity_counts = Counter()
     languages = Counter()
     language_tags = Counter()
     categories = Counter(record.category for record in records)
@@ -1235,6 +1348,10 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         if isinstance(age_hint, str):
             age_counts[age_hint] += 1
             metadata_flags["age_hint"] += 1
+        fidelity_tier = metadata.get("audio_fidelity_tier")
+        if isinstance(fidelity_tier, str):
+            fidelity_counts[fidelity_tier] += 1
+            metadata_flags["audio_fidelity_tier"] += 1
     payload = {
         "records": [asdict(record) for record in records],
         "summaries": {
@@ -1242,6 +1359,7 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             "sample_rates": dict(sample_rates),
             "bit_depths": dict(bit_depths),
             "channel_modes": dict(channel_modes),
+            "audio_fidelity": dict(fidelity_counts),
             "languages": dict(languages),
             "language_tags": dict(language_tags),
             "categories": dict(categories),

@@ -74,6 +74,15 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
             "has_channel_hint", record.metadata.get("priority_tags", [])
         )
 
+    def test_audio_fidelity_signature_is_recorded(self) -> None:
+        record = archive_catalog.classify(
+            "https://mirror/tts/espeak/voice_elite_24bit_stereo_96khz.zip"
+        )
+        metadata = record.metadata
+        self.assertEqual(metadata.get("audio_signature"), "96 kHz • 24-bit • Stereo")
+        self.assertEqual(metadata.get("audio_fidelity_tier"), "High fidelity source")
+        self.assertIn("high_fidelity_audio", metadata.get("priority_tags", []))
+
     def test_platform_and_version_hints_are_extracted(self) -> None:
         record = archive_catalog.classify(
             "https://mirror/tts/espeak/espeak_toolkit_win64_v1_2_x64.zip"
@@ -100,6 +109,23 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
         self.assertEqual(payload["summaries"]["bit_depths"].get("8"), 1)
         self.assertEqual(payload["summaries"]["channel_modes"].get("Stereo"), 1)
         self.assertEqual(payload["summaries"]["channel_modes"].get("Mono"), 1)
+
+    def test_json_summary_includes_audio_fidelity_counts(self) -> None:
+        urls = [
+            "https://mirror/tts/espeak/voice_elite_24bit_stereo_96khz.zip",
+            "https://mirror/tts/dectalk/voice_story_mono_16khz.zip",
+        ]
+        records = archive_catalog.build_records(urls)
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = pathlib.Path(tmp) / "inventory.json"
+            archive_catalog.write_json(records, output_path)
+            payload = json.loads(output_path.read_text())
+        fidelity = payload["summaries"]["audio_fidelity"]
+        self.assertEqual(fidelity.get("High fidelity source"), 1)
+        self.assertEqual(fidelity.get("Low fidelity reference"), 1)
+        self.assertEqual(
+            payload["summaries"]["metadata_flags"].get("audio_fidelity_tier"), 2
+        )
 
     def test_language_tags_are_recorded(self) -> None:
         record = archive_catalog.classify(

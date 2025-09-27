@@ -85,6 +85,12 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | --- | ---: |
 | Mono | 7 |
 
+## Audio fidelity tiers
+
+| Fidelity tier | Archives |
+| --- | ---: |
+| Low fidelity reference | 129 |
+
 ## Language hints
 
 | Language | Archives |
@@ -183,6 +189,7 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | Synthesizer hints | 307 |
 | Language hints | 153 |
 | BCP-47 language tags | 153 |
+| Audio fidelity tiers | 129 |
 | Platform/architecture hints | 123 |
 | Sample rate hints | 123 |
 | Voice name hints | 54 |
@@ -202,6 +209,7 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | voice_or_language_pack | 186 |
 | has_language_hint | 153 |
 | has_language_tag | 153 |
+| low_fidelity_audio | 129 |
 | has_platform_hint | 123 |
 | has_sample_rate_hint | 123 |
 | nvda_addon_bundle | 55 |
