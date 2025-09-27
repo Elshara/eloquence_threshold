@@ -2331,10 +2331,12 @@
         "language_tags": [
           "en"
         ],
+        "gender_hint": "Male",
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
+          "has_gender_hint",
           "has_language_hint",
           "has_language_tag"
         ]
@@ -17146,10 +17148,12 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "age_hint": "Child",
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_age_hint"
         ]
       }
     },
@@ -17180,10 +17184,12 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "gender_hint": "Female",
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_gender_hint"
         ]
       }
     },
@@ -17282,10 +17288,12 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "gender_hint": "Male",
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_gender_hint"
         ]
       }
     },
@@ -28801,9 +28809,11 @@
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
         "synth_hint": "Eloquence",
+        "age_hint": "Senior",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_age_hint",
           "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
@@ -29187,7 +29197,9 @@
       "has_language_tag": 153,
       "has_sample_rate_hint": 123,
       "audio_demo": 868,
+      "has_gender_hint": 3,
       "documentation": 4,
+      "has_age_hint": 2,
       "has_version_hint": 6,
       "has_channel_hint": 7,
       "phoneme_or_lexicon": 1
@@ -29296,6 +29308,26 @@
       "4.6.0": 1,
       "1.1": 1,
       "1.3": 1
+    },
+    "gender_hints": {
+      "Male": 2,
+      "Female": 1
+    },
+    "age_hints": {
+      "Child": 1,
+      "Senior": 1
+    },
+    "metadata_flags": {
+      "synth_hint": 307,
+      "platform_hints": 123,
+      "sample_rate_hz": 123,
+      "language_hints": 153,
+      "language_tags": 153,
+      "voice_hint": 54,
+      "gender_hint": 3,
+      "age_hint": 2,
+      "version_hint": 6,
+      "channel_mode": 7
     }
   }
 }

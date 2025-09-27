@@ -32,6 +32,38 @@ BINARY_EXTS = {"exe", "msi", "dll", "iso", "img", "bin", "sit", "cab"}
 ARCHIVE_EXTS = {"zip", "7z", "rar", "tar", "gz", "bz2", "xz", "z", "tar.gz", "tar.bz2", "tar.xz"}
 ADDON_EXTS = {"nvda-addon"}
 
+VOICE_GENDER_TOKENS = {
+    "female": "Female",
+    "woman": "Female",
+    "women": "Female",
+    "girl": "Female",
+    "male": "Male",
+    "man": "Male",
+    "men": "Male",
+    "boy": "Male",
+}
+
+VOICE_AGE_TOKENS = {
+    "child": "Child",
+    "children": "Child",
+    "kid": "Child",
+    "boy": "Child",
+    "girl": "Child",
+    "teen": "Teen",
+    "teenager": "Teen",
+    "youth": "Teen",
+    "young": "Teen",
+    "adult": "Adult",
+    "adults": "Adult",
+    "mature": "Adult",
+    "senior": "Senior",
+    "seniors": "Senior",
+    "elder": "Senior",
+    "elderly": "Senior",
+    "older": "Senior",
+    "old": "Senior",
+}
+
 
 @dataclass(frozen=True)
 class DatasetRule:
@@ -552,6 +584,22 @@ def extract_synth_hint(filename_lower: str) -> str | None:
     return None
 
 
+def extract_voice_characteristics(filename_lower: str) -> tuple[str | None, str | None]:
+    tokens = [token for token in re.split(r"[^a-z0-9]+", filename_lower) if token]
+    gender_hint: str | None = None
+    age_hint: str | None = None
+    for raw_token in tokens:
+        token = raw_token.lower()
+        singular = token[:-1] if token.endswith("s") and len(token) > 3 else token
+        if not gender_hint:
+            gender_hint = VOICE_GENDER_TOKENS.get(token) or VOICE_GENDER_TOKENS.get(singular)
+        if not age_hint:
+            age_hint = VOICE_AGE_TOKENS.get(token) or VOICE_AGE_TOKENS.get(singular)
+        if gender_hint and age_hint:
+            break
+    return gender_hint, age_hint
+
+
 ARCHITECTURE_PATTERNS: dict[re.Pattern[str], str] = {
     re.compile(r"(?<![a-z0-9])x86(?![a-z0-9])"): "Architecture: x86",
     re.compile(r"(?<![a-z0-9])i[3-6]86(?![a-z0-9])"): "Architecture: x86",
@@ -658,6 +706,13 @@ def extract_metadata(
     if synth_hint:
         metadata["synth_hint"] = synth_hint
         priority_tags.add("has_synth_hint")
+    gender_hint, age_hint = extract_voice_characteristics(filename_lower)
+    if gender_hint:
+        metadata["gender_hint"] = gender_hint
+        priority_tags.add("has_gender_hint")
+    if age_hint:
+        metadata["age_hint"] = age_hint
+        priority_tags.add("has_age_hint")
     if extension:
         metadata["extension"] = extension
     metadata["category"] = category
@@ -887,6 +942,9 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     synth_counts = Counter()
     platform_counts = Counter()
     version_counts = Counter()
+    gender_counts = Counter()
+    age_counts = Counter()
+    metadata_flags = Counter()
     for record in records:
         if record.family:
             families[record.family] += 1
@@ -895,29 +953,52 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         sample_rate = record.metadata.get("sample_rate_hz") if record.metadata else None
         if isinstance(sample_rate, int):
             sample_rates[sample_rate] += 1
+            metadata_flags["sample_rate_hz"] += 1
         bit_depth = record.metadata.get("bit_depth_bits") if record.metadata else None
         if isinstance(bit_depth, int):
             bit_depths[bit_depth] += 1
+            metadata_flags["bit_depth_bits"] += 1
         channel_mode = record.metadata.get("channel_mode") if record.metadata else None
         if isinstance(channel_mode, str):
             channel_modes[channel_mode] += 1
-        for language in record.metadata.get("language_hints", []) if record.metadata else []:
-            language_counts[language] += 1
-        for language_tag in record.metadata.get("language_tags", []) if record.metadata else []:
-            language_tag_counts[language_tag] += 1
+            metadata_flags["channel_mode"] += 1
+        language_hints = record.metadata.get("language_hints") if record.metadata else []
+        if language_hints:
+            metadata_flags["language_hints"] += 1
+            for language in language_hints:
+                language_counts[language] += 1
+        language_tags = record.metadata.get("language_tags") if record.metadata else []
+        if language_tags:
+            metadata_flags["language_tags"] += 1
+            for language_tag in language_tags:
+                language_tag_counts[language_tag] += 1
         for tag in record.metadata.get("priority_tags", []) if record.metadata else []:
             priority_counts[tag] += 1
         voice_hint = record.metadata.get("voice_hint") if record.metadata else None
         if isinstance(voice_hint, str):
             voice_hints[voice_hint] += 1
+            metadata_flags["voice_hint"] += 1
         synth_hint = record.metadata.get("synth_hint") if record.metadata else None
         if isinstance(synth_hint, str):
             synth_counts[synth_hint] += 1
-        for platform in record.metadata.get("platform_hints", []) if record.metadata else []:
-            platform_counts[platform] += 1
+            metadata_flags["synth_hint"] += 1
+        platform_hints = record.metadata.get("platform_hints") if record.metadata else []
+        if platform_hints:
+            metadata_flags["platform_hints"] += 1
+            for platform in platform_hints:
+                platform_counts[platform] += 1
         version_hint = record.metadata.get("version_hint") if record.metadata else None
         if isinstance(version_hint, str):
             version_counts[version_hint] += 1
+            metadata_flags["version_hint"] += 1
+        gender_hint = record.metadata.get("gender_hint") if record.metadata else None
+        if isinstance(gender_hint, str):
+            gender_counts[gender_hint] += 1
+            metadata_flags["gender_hint"] += 1
+        age_hint = record.metadata.get("age_hint") if record.metadata else None
+        if isinstance(age_hint, str):
+            age_counts[age_hint] += 1
+            metadata_flags["age_hint"] += 1
     viability_counts = Counter(record.viability for record in records)
     lines = []
     lines.append("# DataJake Archive Classification")
@@ -997,6 +1078,28 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         for viability, count in sorted(viability_counts.items(), key=lambda item: (-item[1], item[0])):
             lines.append(f"| {viability} | {count} |")
         lines.append("")
+    if metadata_flags:
+        flag_labels = {
+            "sample_rate_hz": "Sample rate hints",
+            "bit_depth_bits": "Bit depth hints",
+            "channel_mode": "Channel layout hints",
+            "language_hints": "Language hints",
+            "language_tags": "BCP-47 language tags",
+            "voice_hint": "Voice name hints",
+            "synth_hint": "Synthesizer hints",
+            "platform_hints": "Platform/architecture hints",
+            "version_hint": "Version strings",
+            "gender_hint": "Voice gender hints",
+            "age_hint": "Voice age hints",
+        }
+        lines.append("## Metadata coverage summary")
+        lines.append("")
+        lines.append("| Metadata hint | Archives |")
+        lines.append("| --- | ---: |")
+        for key, count in sorted(metadata_flags.items(), key=lambda item: (-item[1], item[0])):
+            label = flag_labels.get(key, key)
+            lines.append(f"| {label} | {count} |")
+        lines.append("")
     if priority_counts:
         lines.append("## Priority tag summary")
         lines.append("")
@@ -1037,6 +1140,22 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         for version, count in sorted(version_counts.items(), key=lambda item: (-item[1], item[0])):
             lines.append(f"| {version} | {count} |")
         lines.append("")
+    if gender_counts:
+        lines.append("## Voice gender hints")
+        lines.append("")
+        lines.append("| Gender | Archives |")
+        lines.append("| --- | ---: |")
+        for gender, count in sorted(gender_counts.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {gender} | {count} |")
+        lines.append("")
+    if age_counts:
+        lines.append("## Voice age hints")
+        lines.append("")
+        lines.append("| Age | Archives |")
+        lines.append("| --- | ---: |")
+        for age, count in sorted(age_counts.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {age} | {count} |")
+        lines.append("")
     lines.append("## Detailed inventory")
     lines.append("")
     lines.append("| # | Archive | Collection | Category | Viability | Notes |")
@@ -1062,34 +1181,60 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     synth_counts = Counter()
     platform_counts = Counter()
     version_counts = Counter()
+    gender_counts = Counter()
+    age_counts = Counter()
+    metadata_flags = Counter()
     for record in records:
         metadata = record.metadata or {}
         sample_rate = metadata.get("sample_rate_hz")
         if isinstance(sample_rate, int):
             sample_rates[sample_rate] += 1
+            metadata_flags["sample_rate_hz"] += 1
         bit_depth = metadata.get("bit_depth_bits")
         if isinstance(bit_depth, int):
             bit_depths[bit_depth] += 1
+            metadata_flags["bit_depth_bits"] += 1
         channel_mode = metadata.get("channel_mode")
         if isinstance(channel_mode, str):
             channel_modes[channel_mode] += 1
-        for language in metadata.get("language_hints", []):
-            languages[language] += 1
-        for language_tag in metadata.get("language_tags", []):
-            language_tags[language_tag] += 1
+            metadata_flags["channel_mode"] += 1
+        language_hints = metadata.get("language_hints", [])
+        if language_hints:
+            metadata_flags["language_hints"] += 1
+            for language in language_hints:
+                languages[language] += 1
+        language_tags_list = metadata.get("language_tags", [])
+        if language_tags_list:
+            metadata_flags["language_tags"] += 1
+            for language_tag in language_tags_list:
+                language_tags[language_tag] += 1
         for tag in metadata.get("priority_tags", []):
             priority[tag] += 1
         voice_hint = metadata.get("voice_hint")
         if isinstance(voice_hint, str):
             voice_hints[voice_hint] += 1
+            metadata_flags["voice_hint"] += 1
         synth_hint = metadata.get("synth_hint")
         if isinstance(synth_hint, str):
             synth_counts[synth_hint] += 1
-        for platform in metadata.get("platform_hints", []):
-            platform_counts[platform] += 1
+            metadata_flags["synth_hint"] += 1
+        platform_hints = metadata.get("platform_hints", [])
+        if platform_hints:
+            metadata_flags["platform_hints"] += 1
+            for platform in platform_hints:
+                platform_counts[platform] += 1
         version_hint = metadata.get("version_hint")
         if isinstance(version_hint, str):
             version_counts[version_hint] += 1
+            metadata_flags["version_hint"] += 1
+        gender_hint = metadata.get("gender_hint")
+        if isinstance(gender_hint, str):
+            gender_counts[gender_hint] += 1
+            metadata_flags["gender_hint"] += 1
+        age_hint = metadata.get("age_hint")
+        if isinstance(age_hint, str):
+            age_counts[age_hint] += 1
+            metadata_flags["age_hint"] += 1
     payload = {
         "records": [asdict(record) for record in records],
         "summaries": {
@@ -1107,6 +1252,9 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             "families": dict(families),
             "platforms": dict(platform_counts),
             "versions": dict(version_counts),
+            "gender_hints": dict(gender_counts),
+            "age_hints": dict(age_counts),
+            "metadata_flags": dict(metadata_flags),
         },
     }
     path.write_text(json.dumps(payload, indent=2) + "\n")

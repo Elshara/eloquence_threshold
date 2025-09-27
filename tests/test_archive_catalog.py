@@ -118,6 +118,16 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
         self.assertEqual(metadata.get("synth_hint"), "eSpeak NG")
         self.assertIn("has_synth_hint", metadata.get("priority_tags", []))
 
+    def test_voice_gender_and_age_hints_detected(self) -> None:
+        record = archive_catalog.classify(
+            "https://mirror/tts/espeak/voice_female_child_story_22khz.zip"
+        )
+        metadata = record.metadata
+        self.assertEqual(metadata.get("gender_hint"), "Female")
+        self.assertEqual(metadata.get("age_hint"), "Child")
+        self.assertIn("has_gender_hint", metadata.get("priority_tags", []))
+        self.assertIn("has_age_hint", metadata.get("priority_tags", []))
+
     def test_json_summary_includes_voice_platform_and_version_counts(self) -> None:
         urls = [
             "https://mirror/tts/espeak/Voice_Eloquence_Toolkit_win64_v1_2.tar.gz",
@@ -151,6 +161,26 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
         self.assertGreaterEqual(summaries["families"].get("espeak", 0), 1)
         self.assertGreaterEqual(summaries["families"].get("dectalk", 0), 1)
         self.assertGreaterEqual(summaries["language_tags"].get("fr", 0), 1)
+
+    def test_metadata_flag_summary_counts_hints(self) -> None:
+        urls = [
+            "https://mirror/tts/espeak/voice_female_child_story_22khz.zip",
+            "https://mirror/tts/dectalk/voice_male_adult_44khz.zip",
+        ]
+        records = archive_catalog.build_records(urls)
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = pathlib.Path(tmp) / "inventory.json"
+            archive_catalog.write_json(records, output_path)
+            payload = json.loads(output_path.read_text())
+        summaries = payload["summaries"]
+        metadata_flags = summaries["metadata_flags"]
+        self.assertEqual(metadata_flags.get("sample_rate_hz"), 2)
+        self.assertEqual(metadata_flags.get("gender_hint"), 2)
+        self.assertEqual(metadata_flags.get("age_hint"), 2)
+        self.assertEqual(summaries["gender_hints"].get("Female"), 1)
+        self.assertEqual(summaries["gender_hints"].get("Male"), 1)
+        self.assertEqual(summaries["age_hints"].get("Child"), 1)
+        self.assertEqual(summaries["age_hints"].get("Adult"), 1)
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest CLI entry

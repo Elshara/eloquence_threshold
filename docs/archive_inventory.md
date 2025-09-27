@@ -176,6 +176,21 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | High – prioritise phoneme or lexicon data | 1 |
 | Low – likely demo/installer | 1 |
 
+## Metadata coverage summary
+
+| Metadata hint | Archives |
+| --- | ---: |
+| Synthesizer hints | 307 |
+| Language hints | 153 |
+| BCP-47 language tags | 153 |
+| Platform/architecture hints | 123 |
+| Sample rate hints | 123 |
+| Voice name hints | 54 |
+| Channel layout hints | 7 |
+| Version strings | 6 |
+| Voice gender hints | 3 |
+| Voice age hints | 2 |
+
 ## Priority tag summary
 
 | Priority signal | Archives |
@@ -194,6 +209,8 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | has_version_hint | 6 |
 | index_listing | 5 |
 | documentation | 4 |
+| has_gender_hint | 3 |
+| has_age_hint | 2 |
 | phoneme_or_lexicon | 1 |
 
 ## Voice hint index
@@ -289,6 +306,20 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | 2.01 | 1 |
 | 4.6 | 1 |
 | 4.6.0 | 1 |
+
+## Voice gender hints
+
+| Gender | Archives |
+| --- | ---: |
+| Male | 2 |
+| Female | 1 |
+
+## Voice age hints
+
+| Age | Archives |
+| --- | ---: |
+| Child | 1 |
+| Senior | 1 |
 
 ## Detailed inventory
 
