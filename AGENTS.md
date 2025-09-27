@@ -61,3 +61,7 @@
 - When running the new archive inventory helper (`python tools/inventory_archives.py --roots <paths> --json docs/archive_inventory.json --markdown docs/archive_inventory.md`), refresh both artefacts and summarise notable payload changes in accompanying documentation so automated checks remain trustworthy.
 
 These guidelines apply to the entire repository.
+
+## Build progress log
+- 2025-09-27: Rebuilt `eloquence.nvda-addon` using `python build.py --insecure` and wired the unit test package to invoke the
+  build helper on import so every future `python -m unittest discover tests` run verifies the packaging pipeline automatically.
