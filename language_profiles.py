@@ -500,7 +500,14 @@ def _parse_character_entry(entry: object) -> Optional[CharacterPronunciation]:
     if isinstance(raw_ipa, str):
         ipa = tuple(part.strip() for part in raw_ipa.split(" ") if part.strip())
     elif isinstance(raw_ipa, (list, tuple)):
-        ipa = tuple(str(part) for part in raw_ipa if str(part))
+        cleaned: List[str] = []
+        for part in raw_ipa:
+            if part is None:
+                continue
+            value = str(part).strip()
+            if value:
+                cleaned.append(value)
+        ipa = tuple(cleaned)
     else:
         ipa = ()
     notes = _tuple_from_field(entry.get("notes", ()))
@@ -517,9 +524,17 @@ def _parse_character_entry(entry: object) -> Optional[CharacterPronunciation]:
 
 def _tuple_from_field(field: object) -> Tuple[str, ...]:
     if isinstance(field, str):
-        return (field,) if field else ()
+        value = field.strip()
+        return (value,) if value else ()
     if isinstance(field, (list, tuple)):
-        return tuple(str(item) for item in field if str(item))
+        values: List[str] = []
+        for item in field:
+            if item is None:
+                continue
+            value = str(item).strip()
+            if value:
+                values.append(value)
+        return tuple(values)
     return ()
 
 
