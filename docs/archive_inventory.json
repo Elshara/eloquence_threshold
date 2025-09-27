@@ -22898,9 +22898,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "channel_mode": "Mono",
         "extension": "iso",
         "category": "Binary installer",
         "priority_tags": [
+          "has_channel_hint",
           "installer_payload"
         ]
       }
@@ -22915,8 +22917,12 @@
       "viability": "Low \u2013 likely demo/installer",
       "notes": "Demo or installer payload; keep only if no alternative.",
       "metadata": {
+        "channel_mode": "Mono",
         "extension": "zip",
-        "category": "Generic archive"
+        "category": "Generic archive",
+        "priority_tags": [
+          "has_channel_hint"
+        ]
       }
     },
     {
@@ -23361,9 +23367,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "channel_mode": "Mono",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_channel_hint",
           "installer_payload"
         ]
       }
@@ -23379,9 +23387,11 @@
       "notes": "Keyword 'voice' indicates embedded source or tooling.",
       "metadata": {
         "sample_rate_hz": 22000,
+        "channel_mode": "Mono",
         "extension": "7z",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_channel_hint",
           "has_sample_rate_hint",
           "tooling_candidate",
           "voice_or_language_pack"
@@ -23398,9 +23408,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "channel_mode": "Mono",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_channel_hint",
           "installer_payload"
         ]
       }
@@ -23415,9 +23427,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "channel_mode": "Mono",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_channel_hint",
           "installer_payload"
         ]
       }
@@ -23432,9 +23446,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "channel_mode": "Mono",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_channel_hint",
           "installer_payload"
         ]
       }
@@ -27144,6 +27160,10 @@
       "16000": 18,
       "11000": 5
     },
+    "bit_depths": {},
+    "channel_modes": {
+      "Mono": 7
+    },
     "languages": {
       "Polish": 2,
       "Greek": 6,
@@ -27215,6 +27235,7 @@
       "has_sample_rate_hint": 123,
       "audio_demo": 868,
       "documentation": 4,
+      "has_channel_hint": 7,
       "phoneme_or_lexicon": 1
     }
   }

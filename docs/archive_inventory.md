@@ -79,6 +79,12 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | 16000 | 18 |
 | 11000 | 5 |
 
+## Channel layout hints
+
+| Channel layout | Archives |
+| --- | ---: |
+| Mono | 7 |
+
 ## Language hints
 
 | Language | Archives |
@@ -143,6 +149,7 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | has_sample_rate_hint | 123 |
 | has_language_hint | 121 |
 | nvda_addon_bundle | 55 |
+| has_channel_hint | 7 |
 | index_listing | 5 |
 | documentation | 4 |
 | phoneme_or_lexicon | 1 |

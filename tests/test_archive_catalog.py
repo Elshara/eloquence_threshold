@@ -1,3 +1,6 @@
+import json
+import pathlib
+import tempfile
 import unittest
 
 from tools import catalog_datajake_archives as archive_catalog
@@ -57,6 +60,34 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
         self.assertIn(
             "tooling_candidate", record.metadata.get("priority_tags", [])
         )
+
+    def test_bit_depth_and_channel_hints_are_extracted(self) -> None:
+        record = archive_catalog.classify(
+            "https://mirror/tts/espeak/voice_spanish_16bit_stereo_44khz.zip"
+        )
+        self.assertEqual(record.metadata.get("bit_depth_bits"), 16)
+        self.assertEqual(record.metadata.get("channel_mode"), "Stereo")
+        self.assertIn(
+            "has_bit_depth_hint", record.metadata.get("priority_tags", [])
+        )
+        self.assertIn(
+            "has_channel_hint", record.metadata.get("priority_tags", [])
+        )
+
+    def test_json_summary_includes_bit_depth_and_channel_counts(self) -> None:
+        urls = [
+            "https://mirror/tts/espeak/voice_spanish_16bit_stereo_44khz.zip",
+            "https://mirror/tts/dectalk/voice_japanese_8bit_mono_11khz.zip",
+        ]
+        records = archive_catalog.build_records(urls)
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = pathlib.Path(tmp) / "inventory.json"
+            archive_catalog.write_json(records, output_path)
+            payload = json.loads(output_path.read_text())
+        self.assertEqual(payload["summaries"]["bit_depths"].get("16"), 1)
+        self.assertEqual(payload["summaries"]["bit_depths"].get("8"), 1)
+        self.assertEqual(payload["summaries"]["channel_modes"].get("Stereo"), 1)
+        self.assertEqual(payload["summaries"]["channel_modes"].get("Mono"), 1)
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest CLI entry

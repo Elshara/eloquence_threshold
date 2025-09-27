@@ -297,6 +297,45 @@ def parse_sample_rate(filename_lower: str) -> int | None:
     return None
 
 
+BIT_DEPTH_PATTERN = re.compile(r"(?<!\d)(\d{1,2})(?:\s*|[-_])?(?:bit|bits)(?![a-z])", re.IGNORECASE)
+
+
+def parse_bit_depth(filename_lower: str) -> int | None:
+    match = BIT_DEPTH_PATTERN.search(filename_lower)
+    if not match:
+        return None
+    value = int(match.group(1))
+    if 4 <= value <= 64:
+        return value
+    return None
+
+
+CHANNEL_KEYWORDS = {
+    "mono": "Mono",
+    "stereo": "Stereo",
+    "binaural": "Binaural",
+}
+
+CHANNEL_PATTERN = re.compile(r"(?<!\d)([124])\s*(?:ch|channel|channels)(?![a-z])")
+
+
+def parse_channel_mode(filename_lower: str) -> str | None:
+    for token, label in CHANNEL_KEYWORDS.items():
+        if token in filename_lower:
+            return label
+    match = CHANNEL_PATTERN.search(filename_lower)
+    if not match:
+        return None
+    value = match.group(1)
+    if value == "1":
+        return "Mono"
+    if value == "2":
+        return "Stereo"
+    if value == "4":
+        return "Quad"
+    return f"{value}-channel"
+
+
 def extract_language_hints(filename_lower: str) -> list[str]:
     hints = []
     for regex, label in LANGUAGE_REGEXES:
@@ -382,6 +421,14 @@ def extract_metadata(
     if sample_rate:
         metadata["sample_rate_hz"] = sample_rate
         priority_tags.add("has_sample_rate_hint")
+    bit_depth = parse_bit_depth(filename_lower)
+    if bit_depth:
+        metadata["bit_depth_bits"] = bit_depth
+        priority_tags.add("has_bit_depth_hint")
+    channel_mode = parse_channel_mode(filename_lower)
+    if channel_mode:
+        metadata["channel_mode"] = channel_mode
+        priority_tags.add("has_channel_hint")
     language_hints = extract_language_hints(filename_lower)
     if language_hints:
         metadata["language_hints"] = language_hints
@@ -609,6 +656,8 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     families = defaultdict(int)
     extensions = Counter()
     sample_rates = Counter()
+    bit_depths = Counter()
+    channel_modes = Counter()
     language_counts = Counter()
     priority_counts = Counter()
     for record in records:
@@ -619,6 +668,12 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         sample_rate = record.metadata.get("sample_rate_hz") if record.metadata else None
         if isinstance(sample_rate, int):
             sample_rates[sample_rate] += 1
+        bit_depth = record.metadata.get("bit_depth_bits") if record.metadata else None
+        if isinstance(bit_depth, int):
+            bit_depths[bit_depth] += 1
+        channel_mode = record.metadata.get("channel_mode") if record.metadata else None
+        if isinstance(channel_mode, str):
+            channel_modes[channel_mode] += 1
         for language in record.metadata.get("language_hints", []) if record.metadata else []:
             language_counts[language] += 1
         for tag in record.metadata.get("priority_tags", []) if record.metadata else []:
@@ -660,6 +715,22 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         for rate, count in sorted(sample_rates.items(), key=lambda item: (-item[1], -item[0])):
             lines.append(f"| {rate} | {count} |")
         lines.append("")
+    if bit_depths:
+        lines.append("## Bit depth hints")
+        lines.append("")
+        lines.append("| Bit depth (bits) | Archives |")
+        lines.append("| ---: | ---: |")
+        for depth, count in sorted(bit_depths.items(), key=lambda item: (-item[1], -item[0])):
+            lines.append(f"| {depth} | {count} |")
+        lines.append("")
+    if channel_modes:
+        lines.append("## Channel layout hints")
+        lines.append("")
+        lines.append("| Channel layout | Archives |")
+        lines.append("| --- | ---: |")
+        for layout, count in sorted(channel_modes.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {layout} | {count} |")
+        lines.append("")
     if language_counts:
         lines.append("## Language hints")
         lines.append("")
@@ -697,6 +768,8 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
 def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     extensions = Counter(record.extension or "(none)" for record in records)
     sample_rates = Counter()
+    bit_depths = Counter()
+    channel_modes = Counter()
     languages = Counter()
     categories = Counter(record.category for record in records)
     viability = Counter(record.viability for record in records)
@@ -706,6 +779,12 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         sample_rate = metadata.get("sample_rate_hz")
         if isinstance(sample_rate, int):
             sample_rates[sample_rate] += 1
+        bit_depth = metadata.get("bit_depth_bits")
+        if isinstance(bit_depth, int):
+            bit_depths[bit_depth] += 1
+        channel_mode = metadata.get("channel_mode")
+        if isinstance(channel_mode, str):
+            channel_modes[channel_mode] += 1
         for language in metadata.get("language_hints", []):
             languages[language] += 1
         for tag in metadata.get("priority_tags", []):
@@ -715,6 +794,8 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         "summaries": {
             "extensions": dict(extensions),
             "sample_rates": dict(sample_rates),
+            "bit_depths": dict(bit_depths),
+            "channel_modes": dict(channel_modes),
             "languages": dict(languages),
             "categories": dict(categories),
             "viability": dict(viability),
