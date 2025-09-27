@@ -65,4 +65,4 @@ exact download links, viability tiers, and the new documentation stubs flagged b
 2. Port reusable code into `eloquence_data` or the NVDA add-on once licensing is confirmed, updating CodeQL configuration as we
    introduce new modules.
 3. Note integration progress in `docs/archive_inventory.md` and reference the relevant NVDA issues so testers can follow along.
-4. Use the new metadata summaries (`summaries.extensions`, `summaries.sample_rates`, `summaries.languages`, `summaries.categories`, and `summaries.viability`) in `docs/archive_inventory.json` to queue phoneme imports and language template work before mirroring lower-priority demo audio.
+4. Use the new metadata summaries (`summaries.extensions`, `summaries.sample_rates`, `summaries.languages`, `summaries.voice_hints`, `summaries.platforms`, `summaries.versions`, `summaries.categories`, and `summaries.viability`) in `docs/archive_inventory.json` to queue phoneme imports, language template work, and cross-platform tooling audits before mirroring lower-priority demo audio.

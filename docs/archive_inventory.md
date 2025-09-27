@@ -146,13 +146,94 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | tooling_candidate | 305 |
 | installer_payload | 218 |
 | voice_or_language_pack | 186 |
+| has_platform_hint | 123 |
 | has_sample_rate_hint | 123 |
 | has_language_hint | 121 |
 | nvda_addon_bundle | 55 |
 | has_channel_hint | 7 |
+| has_version_hint | 6 |
 | index_listing | 5 |
 | documentation | 4 |
 | phoneme_or_lexicon | 1 |
+
+## Voice hint index
+
+| Voice token | Archives |
+| --- | ---: |
+| ASSIST | 1 |
+| Agata | 1 |
+| Alexandros | 1 |
+| Alva | 1 |
+| Arantxa | 1 |
+| Aylin | 1 |
+| Claire | 1 |
+| Daniel | 1 |
+| Duardo | 1 |
+| Ellen | 1 |
+| Emily | 1 |
+| Felix | 1 |
+| Fiona | 1 |
+| Ida | 1 |
+| Ingrid | 1 |
+| Isabel | 1 |
+| Javier | 1 |
+| Jennifer | 1 |
+| Jill | 1 |
+| Julie | 1 |
+| Karen | 1 |
+| Katerina | 1 |
+| Kyoko | 1 |
+| Laura | 1 |
+| Lee | 1 |
+| Lekha | 1 |
+| Madalena | 1 |
+| Mei | 1 |
+| Mikko | 1 |
+| Milena | 1 |
+| Moira | 1 |
+| Monica | 1 |
+| Nanna | 1 |
+| Narae | 1 |
+| Nora | 1 |
+| Nuria | 1 |
+| Paolo | 1 |
+| Paulina | 1 |
+| Ragga | 1 |
+| Raquel | 1 |
+| Samantha | 1 |
+| Sangeeta | 1 |
+| Sebastien | 1 |
+| Serena | 1 |
+| Silvia | 1 |
+| Sin | 1 |
+| Steffi | 1 |
+| Stine | 1 |
+| Tom | 1 |
+| Virginie | 1 |
+| Xander | 1 |
+| Ya | 1 |
+| Yannick | 1 |
+| Zuzana | 1 |
+
+## Platform and architecture hints
+
+| Platform hint | Archives |
+| --- | ---: |
+| Platform: Windows | 80 |
+| Platform: Linux | 40 |
+| Platform: macOS | 2 |
+| Architecture: x64 | 1 |
+
+## Version hints
+
+| Version | Archives |
+| --- | ---: |
+| 1.1 | 1 |
+| 1.3 | 1 |
+| 1.7 | 1 |
+| 2.01 | 1 |
+| 4.6 | 1 |
+| 4.6.0 | 1 |
 
 ## Detailed inventory
 

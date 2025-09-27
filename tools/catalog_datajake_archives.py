@@ -409,6 +409,70 @@ def extract_voice_hint(display_name: str) -> str | None:
     return None
 
 
+ARCHITECTURE_PATTERNS: dict[re.Pattern[str], str] = {
+    re.compile(r"(?<![a-z0-9])x86(?![a-z0-9])"): "Architecture: x86",
+    re.compile(r"(?<![a-z0-9])i[3-6]86(?![a-z0-9])"): "Architecture: x86",
+    re.compile(r"(?<![a-z0-9])x64(?![a-z0-9])"): "Architecture: x64",
+    re.compile(r"(?<![a-z0-9])amd64(?![a-z0-9])"): "Architecture: x64",
+    re.compile(r"(?<![a-z0-9])win32(?![a-z0-9])"): "Architecture: x86",
+    re.compile(r"(?<![a-z0-9])win64(?![a-z0-9])"): "Architecture: x64",
+    re.compile(r"(?<![a-z0-9])winx64(?![a-z0-9])"): "Architecture: x64",
+    re.compile(r"(?<![a-z0-9])64bit(?![a-z0-9])"): "Architecture: x64",
+    re.compile(r"(?<![a-z0-9])arm64(?![a-z0-9])"): "Architecture: ARM64",
+    re.compile(r"(?<![a-z0-9])aarch64(?![a-z0-9])"): "Architecture: ARM64",
+    re.compile(r"(?<![a-z0-9])armv7(?![a-z0-9])"): "Architecture: ARMv7",
+    re.compile(r"(?<![a-z0-9])arm32(?![a-z0-9])"): "Architecture: ARMv7",
+    re.compile(r"(?<![a-z0-9])armv6(?![a-z0-9])"): "Architecture: ARMv6",
+}
+
+PLATFORM_PATTERNS: dict[re.Pattern[str], str] = {
+    re.compile(r"(?<![a-z0-9])win(?:32|xp|7|8|10|11)?(?![a-z0-9])"): "Platform: Windows",
+    re.compile(r"(?<![a-z0-9])win64(?![a-z0-9])"): "Platform: Windows",
+    re.compile(r"(?<![a-z0-9])winx64(?![a-z0-9])"): "Platform: Windows",
+    re.compile(r"(?<![a-z0-9])windows(?![a-z0-9])"): "Platform: Windows",
+    re.compile(r"(?<![a-z0-9])linux(?![a-z0-9])"): "Platform: Linux",
+    re.compile(r"(?<![a-z0-9])ubuntu(?![a-z0-9])"): "Platform: Linux",
+    re.compile(r"(?<![a-z0-9])debian(?![a-z0-9])"): "Platform: Linux",
+    re.compile(r"(?<![a-z0-9])mac(?:os|osx)?(?![a-z0-9])"): "Platform: macOS",
+    re.compile(r"(?<![a-z0-9])darwin(?![a-z0-9])"): "Platform: macOS",
+    re.compile(r"(?<![a-z0-9])android(?![a-z0-9])"): "Platform: Android",
+    re.compile(r"(?<![a-z0-9])ios(?![a-z0-9])"): "Platform: iOS",
+    re.compile(r"(?<![a-z0-9])ipad(?![a-z0-9])"): "Platform: iOS",
+    re.compile(r"(?<![a-z0-9])iphone(?![a-z0-9])"): "Platform: iOS",
+}
+
+
+VERSION_PATTERN = re.compile(
+    r"(?:(?:^|[^a-z0-9])(v(?:er(?:sion)?)?)[-_ ]*(\d{1,4}(?:[._]\d{1,4}){1,3})(?=$|[^a-z0-9]))",
+    re.IGNORECASE,
+)
+VERSION_FALLBACK_PATTERN = re.compile(
+    r"(?:(?:^|[^a-z0-9])(release|rev|build)[-_ ]*(\d{1,4}(?:[._]\d{1,4}){1,3})(?=$|[^a-z0-9]))",
+    re.IGNORECASE,
+)
+
+
+def extract_platform_hints(filename_lower: str) -> list[str]:
+    hints: set[str] = set()
+    for pattern, label in ARCHITECTURE_PATTERNS.items():
+        if pattern.search(filename_lower):
+            hints.add(label)
+    for pattern, label in PLATFORM_PATTERNS.items():
+        if pattern.search(filename_lower):
+            hints.add(label)
+    return sorted(hints)
+
+
+def extract_version_hint(filename_lower: str) -> str | None:
+    match = VERSION_PATTERN.search(filename_lower)
+    if not match:
+        match = VERSION_FALLBACK_PATTERN.search(filename_lower)
+        if not match:
+            return None
+    value = match.group(2).replace("_", ".")
+    return value
+
+
 def extract_metadata(
     display_name: str,
     filename_lower: str,
@@ -436,6 +500,14 @@ def extract_metadata(
     voice_hint = extract_voice_hint(display_name)
     if voice_hint:
         metadata["voice_hint"] = voice_hint
+    platform_hints = extract_platform_hints(filename_lower)
+    if platform_hints:
+        metadata["platform_hints"] = platform_hints
+        priority_tags.add("has_platform_hint")
+    version_hint = extract_version_hint(filename_lower)
+    if version_hint:
+        metadata["version_hint"] = version_hint
+        priority_tags.add("has_version_hint")
     if extension:
         metadata["extension"] = extension
     metadata["category"] = category
@@ -660,6 +732,9 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     channel_modes = Counter()
     language_counts = Counter()
     priority_counts = Counter()
+    voice_hints = Counter()
+    platform_counts = Counter()
+    version_counts = Counter()
     for record in records:
         if record.family:
             families[record.family] += 1
@@ -678,6 +753,14 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             language_counts[language] += 1
         for tag in record.metadata.get("priority_tags", []) if record.metadata else []:
             priority_counts[tag] += 1
+        voice_hint = record.metadata.get("voice_hint") if record.metadata else None
+        if isinstance(voice_hint, str):
+            voice_hints[voice_hint] += 1
+        for platform in record.metadata.get("platform_hints", []) if record.metadata else []:
+            platform_counts[platform] += 1
+        version_hint = record.metadata.get("version_hint") if record.metadata else None
+        if isinstance(version_hint, str):
+            version_counts[version_hint] += 1
     viability_counts = Counter(record.viability for record in records)
     lines = []
     lines.append("# DataJake Archive Classification")
@@ -755,6 +838,30 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         for tag, count in sorted(priority_counts.items(), key=lambda item: (-item[1], item[0])):
             lines.append(f"| {tag} | {count} |")
         lines.append("")
+    if voice_hints:
+        lines.append("## Voice hint index")
+        lines.append("")
+        lines.append("| Voice token | Archives |")
+        lines.append("| --- | ---: |")
+        for hint, count in sorted(voice_hints.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {hint} | {count} |")
+        lines.append("")
+    if platform_counts:
+        lines.append("## Platform and architecture hints")
+        lines.append("")
+        lines.append("| Platform hint | Archives |")
+        lines.append("| --- | ---: |")
+        for platform, count in sorted(platform_counts.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {platform} | {count} |")
+        lines.append("")
+    if version_counts:
+        lines.append("## Version hints")
+        lines.append("")
+        lines.append("| Version | Archives |")
+        lines.append("| --- | ---: |")
+        for version, count in sorted(version_counts.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {version} | {count} |")
+        lines.append("")
     lines.append("## Detailed inventory")
     lines.append("")
     lines.append("| # | Archive | Collection | Category | Viability | Notes |")
@@ -774,6 +881,9 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     categories = Counter(record.category for record in records)
     viability = Counter(record.viability for record in records)
     priority = Counter()
+    voice_hints = Counter()
+    platform_counts = Counter()
+    version_counts = Counter()
     for record in records:
         metadata = record.metadata or {}
         sample_rate = metadata.get("sample_rate_hz")
@@ -789,6 +899,14 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             languages[language] += 1
         for tag in metadata.get("priority_tags", []):
             priority[tag] += 1
+        voice_hint = metadata.get("voice_hint")
+        if isinstance(voice_hint, str):
+            voice_hints[voice_hint] += 1
+        for platform in metadata.get("platform_hints", []):
+            platform_counts[platform] += 1
+        version_hint = metadata.get("version_hint")
+        if isinstance(version_hint, str):
+            version_counts[version_hint] += 1
     payload = {
         "records": [asdict(record) for record in records],
         "summaries": {
@@ -800,6 +918,9 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             "categories": dict(categories),
             "viability": dict(viability),
             "priority_tags": dict(priority),
+            "voice_hints": dict(voice_hints),
+            "platforms": dict(platform_counts),
+            "versions": dict(version_counts),
         },
     }
     path.write_text(json.dumps(payload, indent=2) + "\n")

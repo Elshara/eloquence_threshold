@@ -74,6 +74,18 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
             "has_channel_hint", record.metadata.get("priority_tags", [])
         )
 
+    def test_platform_and_version_hints_are_extracted(self) -> None:
+        record = archive_catalog.classify(
+            "https://mirror/tts/espeak/espeak_toolkit_win64_v1_2_x64.zip"
+        )
+        metadata = record.metadata
+        self.assertIsNotNone(metadata)
+        self.assertIn("Platform: Windows", metadata.get("platform_hints", []))
+        self.assertIn("Architecture: x64", metadata.get("platform_hints", []))
+        self.assertEqual(metadata.get("version_hint"), "1.2")
+        self.assertIn("has_platform_hint", metadata.get("priority_tags", []))
+        self.assertIn("has_version_hint", metadata.get("priority_tags", []))
+
     def test_json_summary_includes_bit_depth_and_channel_counts(self) -> None:
         urls = [
             "https://mirror/tts/espeak/voice_spanish_16bit_stereo_44khz.zip",
@@ -88,6 +100,25 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
         self.assertEqual(payload["summaries"]["bit_depths"].get("8"), 1)
         self.assertEqual(payload["summaries"]["channel_modes"].get("Stereo"), 1)
         self.assertEqual(payload["summaries"]["channel_modes"].get("Mono"), 1)
+
+    def test_json_summary_includes_voice_platform_and_version_counts(self) -> None:
+        urls = [
+            "https://mirror/tts/espeak/Voice_Eloquence_Toolkit_win64_v1_2.tar.gz",
+            "https://mirror/tts/dectalk/voice_spanish_linux_x86_release-2_1.zip",
+        ]
+        records = archive_catalog.build_records(urls)
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = pathlib.Path(tmp) / "inventory.json"
+            archive_catalog.write_json(records, output_path)
+            payload = json.loads(output_path.read_text())
+        summaries = payload["summaries"]
+        self.assertGreaterEqual(summaries["voice_hints"].get("Eloquence", 0), 1)
+        self.assertGreaterEqual(summaries["platforms"].get("Platform: Windows", 0), 1)
+        self.assertGreaterEqual(summaries["platforms"].get("Platform: Linux", 0), 1)
+        self.assertGreaterEqual(summaries["platforms"].get("Architecture: x86", 0), 1)
+        self.assertGreaterEqual(summaries["platforms"].get("Architecture: x64", 0), 1)
+        self.assertGreaterEqual(summaries["versions"].get("1.2", 0), 1)
+        self.assertGreaterEqual(summaries["versions"].get("2.1", 0), 1)
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest CLI entry
