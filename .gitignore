@@ -1,1 +1,11 @@
-# Empty
+# Python caches and virtual environments
+__pycache__/
+*.pyc
+.venv/
+
+# NVDA add-on build artifacts
+*.nvda-addon
+eloquence_original.nvda-addon
+
+# Tool caches
+*.log

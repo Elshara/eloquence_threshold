@@ -56,6 +56,8 @@ FILES_TO_COPY: Tuple[Tuple[str, Path], ...] = (
     ("phoneme_catalog.py", Path("synthDrivers") / "phoneme_catalog.py"),
     ("voice_catalog.py", Path("synthDrivers") / "voice_catalog.py"),
     ("language_profiles.py", Path("synthDrivers") / "language_profiles.py"),
+    ("phoneme_customizer.py", Path("synthDrivers") / "phoneme_customizer.py"),
+    ("voice_parameters.py", Path("synthDrivers") / "voice_parameters.py"),
     ("manifest.ini", Path("manifest.ini")),
 )
 
