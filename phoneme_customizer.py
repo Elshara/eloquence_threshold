@@ -1,9 +1,9 @@
-"""Helpers for managing phoneme-focused EQ and extended voice controls."""
+"""Helpers for managing phoneme-focused EQ, voice scenes, and configuration exports."""
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass
-from typing import Dict, Iterable, List, Mapping, Optional, Tuple
+from dataclasses import dataclass, field
+from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
 from voice_parameters import ADVANCED_VOICE_PARAMETER_SPECS, advanced_parameter_defaults
 
@@ -217,6 +217,74 @@ class PhonemeEqBand:
         return math.sqrt(max(1.0, self.low_hz) * max(1.0, self.high_hz))
 
 
+@dataclass(frozen=True)
+class VoiceScene:
+    """Declarative description of a reusable phoneme/parameter scene."""
+
+    name: str
+    description: str
+    sample_rate_hz: Optional[float] = None
+    global_parameters: Mapping[str, object] = field(default_factory=dict)
+    phoneme_overrides: Mapping[str, Iterable[Mapping[str, object]]] = field(default_factory=dict)
+    tags: Sequence[str] = field(default_factory=tuple)
+    archive_sources: Sequence[str] = field(default_factory=tuple)
+    language_focus: Sequence[str] = field(default_factory=tuple)
+
+    def __post_init__(self) -> None:
+        sample_rate: Optional[float]
+        try:
+            sample_rate = float(self.sample_rate_hz) if self.sample_rate_hz is not None else None
+        except (TypeError, ValueError):
+            sample_rate = None
+        if sample_rate is not None and (not math.isfinite(sample_rate) or sample_rate <= 0.0):
+            sample_rate = None
+        object.__setattr__(self, "sample_rate_hz", sample_rate)
+
+        object.__setattr__(self, "tags", _normalise_string_iterable(self.tags))
+        object.__setattr__(self, "archive_sources", _normalise_string_iterable(self.archive_sources))
+        object.__setattr__(self, "language_focus", _normalise_string_iterable(self.language_focus))
+
+        global_parameters = {}
+        for key, value in (self.global_parameters or {}).items():
+            if not isinstance(key, str):
+                continue
+            global_parameters[key] = value
+        object.__setattr__(self, "global_parameters", global_parameters)
+
+        overrides: Dict[str, List[Dict[str, Any]]] = {}
+        for phoneme_id, entries in (self.phoneme_overrides or {}).items():
+            if not isinstance(phoneme_id, str):
+                continue
+            parsed_entries: List[Dict[str, Any]] = []
+            iterable: Iterable[Mapping[str, object]]
+            if isinstance(entries, Mapping):
+                iterable = [entries]  # type: ignore[list-item]
+            elif isinstance(entries, Iterable):
+                iterable = entries  # type: ignore[assignment]
+            else:
+                continue
+            for entry in iterable:
+                if not isinstance(entry, Mapping):
+                    continue
+                parsed_entries.append(dict(entry))
+            if parsed_entries:
+                overrides[phoneme_id] = parsed_entries
+        object.__setattr__(self, "phoneme_overrides", overrides)
+
+    # ------------------------------------------------------------------
+    # Metadata helpers
+    # ------------------------------------------------------------------
+    def metadata(self) -> Dict[str, object]:
+        """Return metadata describing provenance and focus."""
+
+        return {
+            "tags": list(self.tags),
+            "archiveSources": list(self.archive_sources),
+            "languageFocus": list(self.language_focus),
+            "sampleRateHz": self.sample_rate_hz,
+        }
+
+
 class PhonemeCustomizer:
     """Maintains global and per-phoneme EQ definitions."""
 
@@ -277,6 +345,29 @@ class PhonemeCustomizer:
 
     def global_parameter_values(self) -> Dict[str, int]:
         return dict(self._global_parameters)
+
+    def clone(self) -> "PhonemeCustomizer":
+        """Return a deep copy preserving limits and state."""
+
+        clone = PhonemeCustomizer(self._low_min, self._absolute_high_max, self._gain_min, self._gain_max)
+        clone._high_max = self._high_max
+        clone._global_parameters = dict(self._global_parameters)
+        clone._rebuild_global_bands()
+        clone._phoneme_bands = {
+            phoneme_id: [
+                PhonemeEqBand(band.low_hz, band.high_hz, band.gain_db, band.filter_type, band.q)
+                for band in bands
+            ]
+            for phoneme_id, bands in self._phoneme_bands.items()
+        }
+        return clone
+
+    def reset_to_defaults(self) -> None:
+        """Clear per-phoneme EQ and restore default slider positions."""
+
+        self._global_parameters = advanced_parameter_defaults()
+        self._phoneme_bands = {}
+        self._rebuild_global_bands()
 
     def _rebuild_global_bands(self) -> None:
         bands: List[PhonemeEqBand] = []
@@ -406,6 +497,11 @@ class PhonemeCustomizer:
     def per_phoneme_bands(self) -> Dict[str, List[PhonemeEqBand]]:
         return self._phoneme_bands
 
+    def headroom_hz(self) -> float:
+        """Return the maximum usable frequency after sample-rate clamping."""
+
+        return self._high_max
+
     # ------------------------------------------------------------------
     # Persistence helpers
     # ------------------------------------------------------------------
@@ -451,6 +547,36 @@ class PhonemeCustomizer:
             payload.extend(band.to_engine_mapping() for band in bands)
         return payload
 
+    def build_configuration_snapshot(self) -> Dict[str, object]:
+        """Summarise the current configuration for NVDA storage."""
+
+        snapshot: Dict[str, object] = {
+            "advancedVoiceParameters": self.global_parameter_values(),
+            "perPhonemeEq": self.serialise_per_phoneme(),
+            "limits": {
+                "lowHzMinimum": self._low_min,
+                "highHzMaximum": self._high_max,
+                "gainDbMinimum": self._gain_min,
+                "gainDbMaximum": self._gain_max,
+            },
+            "enginePayload": self.build_engine_payload(),
+        }
+        snapshot["headroomHz"] = self.headroom_hz()
+        return snapshot
+
+    # ------------------------------------------------------------------
+    # Scene helpers
+    # ------------------------------------------------------------------
+    def apply_scene(self, scene: VoiceScene) -> None:
+        """Apply a :class:`VoiceScene` definition to the customiser."""
+
+        if scene.sample_rate_hz:
+            self.set_sample_rate(scene.sample_rate_hz)
+        if scene.global_parameters:
+            self.apply_global_parameters(scene.global_parameters)
+        if scene.phoneme_overrides:
+            self.load_per_phoneme(scene.phoneme_overrides)
+
 
 def _scale(value: int, neutral: int = 100, span: int = 100) -> float:
     try:
@@ -472,4 +598,49 @@ def _clamp(value: int, minimum: object, maximum: object) -> int:
     if numeric > max_val:
         return max_val
     return numeric
+
+
+def _normalise_string_iterable(values: Sequence[str]) -> Tuple[str, ...]:
+    unique: Dict[str, None] = {}
+    for value in values or ():
+        if not isinstance(value, str):
+            continue
+        trimmed = value.strip()
+        if not trimmed:
+            continue
+        canonical = trimmed[0].lower() + trimmed[1:]
+        unique[canonical] = None
+    return tuple(sorted(unique.keys()))
+
+
+def build_scene_snapshot(
+    scene: VoiceScene,
+    *,
+    base_customizer: Optional[PhonemeCustomizer] = None,
+) -> Dict[str, object]:
+    """Render a :class:`VoiceScene` into a configuration snapshot."""
+
+    working = base_customizer.clone() if base_customizer else PhonemeCustomizer()
+    working.reset_to_defaults()
+    working.apply_scene(scene)
+    configuration = working.build_configuration_snapshot()
+    metadata = scene.metadata()
+    headroom = working.headroom_hz()
+    metadata["headroomHz"] = headroom
+    if metadata.get("sampleRateHz") is None and headroom > 0:
+        metadata["sampleRateHz"] = headroom * 2.0
+    return {
+        "name": scene.name,
+        "description": scene.description,
+        "metadata": metadata,
+        "configuration": configuration,
+    }
+
+
+__all__ = [
+    "PhonemeCustomizer",
+    "PhonemeEqBand",
+    "VoiceScene",
+    "build_scene_snapshot",
+]
 

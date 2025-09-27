@@ -18,6 +18,10 @@ full Markdown catalogue (`docs/archive_inventory.md`).
    family can expand Eloquence voices, phoneme inventories, or NVDA configuration tooling.
 5. **Review viability tiers.** Use the manifest's `Viability summary` to prioritise new phoneme/lexicon candidates and flag
    truncated links that require manual repair before mirroring.
+6. **Link scenes back to provenance.** Refresh `docs/voice_scene_catalog.{json,md}` with
+   `python tools/export_voice_scenes.py --json docs/voice_scene_catalog.json --markdown docs/voice_scene_catalog.md --print` so
+   every curated NVDA voice scene documents which DataJake archives (eSpeak NG bundles, DECtalk installers, NV Speech Player
+   toolkits) informed the phoneme EQ and slider presets.
 
 ## High-value code collections
 
@@ -33,9 +37,11 @@ See `docs/archive_code_targets.md` for synthesizer-specific porting notes and ex
 
 ## Extension and dataset index
 
-- `docs/archive_inventory.md` now surfaces `File extension index`, `Sample rate hints`, `Language hints`, and a `Viability summary` so we can prioritise IPA dictionaries, lexicons, and other phoneme-friendly payloads before downloading redundant demo audio. Documentation fragments without extensions are now caught automatically, keeping provenance tidy.
-- `docs/archive_inventory.json` stores the same catalogue plus machine-readable summaries under the top-level `summaries` key. Each record now includes a `metadata` block with decoded filenames, detected sample rates, language hints, voice names (where present), and inferred viability tiers to accelerate automated importers.
-- After updating `docs/datajake_archive_urls.txt`, rerun `python tools/catalog_datajake_archives.py` and scan the extension totals for new `.lex`, `.ipa`, or language-tagged archives that warrant fast-tracked extraction into `phoneme_catalog.py` or `language_profiles.py`.
+- `docs/archive_inventory.md` now surfaces `File extension index`, `Sample rate hints`, `Bit depth hints` (when detected), `Channel layout hints`, `Audio fidelity tiers`, `Language hints`, `Language tags`, a `Metadata coverage summary`, a `Priority tag summary`, a `Voice hint index`, a `Synthesizer hint index`, `Platform and architecture hints`, `Version hints`, plus new `Voice gender hints` and `Voice age hints` tables so we can prioritise IPA dictionaries, lexicons, and other phoneme-friendly payloads before downloading redundant demo audio. Documentation fragments without extensions are now caught automatically, keeping provenance tidy and NVDA reviewers informed about cross-dialect coverage.
+- `docs/archive_inventory.json` stores the same catalogue plus machine-readable summaries under the top-level `summaries` key. Each record now includes a `metadata` block with decoded filenames, detected sample rates, bit-depth clues, channel layouts, derived audio-fidelity tiers, `audio_signature` strings, language hints, BCP-47 language tags, synthesizer hints, collection families, voice names (where present), platform/architecture hints, version strings, inferred viability tiers, voice gender/age hints, and priority tags so automated importers understand whether an archive contains tooling, NVDA add-on code, or phoneme-ready dictionaries that extend Eloquence.
+- After updating `docs/datajake_archive_urls.txt`, rerun `python tools/catalog_datajake_archives.py` and scan the extension totals for new `.lex`, `.ipa`, language-tagged archives, or synthesizer hints (`has_synth_hint`, `has_language_tag`) that warrant fast-tracked extraction into `phoneme_catalog.py` or `language_profiles.py`. Keep CodeQL coverage aligned with any new Python pulled from NVDA add-ons.
+- When a new archive directly informs a curated scene, capture the impact inside `docs/voice_scene_catalog.md` so NVDA testers
+  can trace how phoneme EQ macros, slider tweaks, and language targets map back to DataJake.
 
 
 ## Scrap categories
@@ -47,6 +53,6 @@ engineering effort on archives labelled as source, tooling, or NVDA add-ons.
 ## Updating this guide
 
 - Regenerate the manifest after auditing new mirrors or when additional NVDA add-ons are published. The JSON output makes it easy to diff viability changes inside pull requests.
-- Cross-reference the extension, sample-rate, and language summaries before downloading large payloads so phoneme/lexicon bundles reach the pipeline ahead of demo audio.
-- When new code paths are imported into the repository, update `docs/archive_code_targets.md` with the implemented outcome and link the corresponding manifest rows.
+- Cross-reference the extension, sample-rate, bit-depth, audio-fidelity, language, voice-token, platform, and version summaries before downloading large payloads so phoneme/lexicon bundles reach the pipeline ahead of demo audio and we prioritise the cleanest reference captures.
+- When new code paths are imported into the repository, update `docs/archive_code_targets.md` with the implemented outcome and link the corresponding manifest rows. Use the manifest priority tags (`tooling_candidate`, `phoneme_or_lexicon`, `voice_or_language_pack`) to describe which payloads powered each import so future contributors can retrace decisions quickly.
 - Surface major catalogue updates in `README.md` so NVDA community testers understand which external synthesizers now inform Eloquence's phoneme engine and configuration workflows.

@@ -79,41 +79,91 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | 16000 | 18 |
 | 11000 | 5 |
 
+## Channel layout hints
+
+| Channel layout | Archives |
+| --- | ---: |
+| Mono | 7 |
+
+## Audio fidelity tiers
+
+| Fidelity tier | Archives |
+| --- | ---: |
+| Low fidelity reference | 129 |
+
 ## Language hints
 
 | Language | Archives |
 | --- | ---: |
-| English | 21 |
-| German | 15 |
-| French | 12 |
-| Spanish | 11 |
+| English | 28 |
+| German | 16 |
+| French | 15 |
+| Spanish | 13 |
+| Swedish | 11 |
+| Dutch | 9 |
+| Italian | 9 |
 | Chinese | 7 |
-| Dutch | 7 |
-| Italian | 7 |
 | Korean | 7 |
 | Greek | 6 |
 | Mexican Spanish | 6 |
-| Swedish | 6 |
+| Romanian | 6 |
+| Arabic | 5 |
 | Japanese | 5 |
+| Portuguese | 5 |
 | Russian | 5 |
-| Arabic | 4 |
 | Czech | 4 |
-| Portuguese | 4 |
-| Romanian | 4 |
+| Hindi | 4 |
+| Catalan | 3 |
+| Polish | 3 |
 | Danish | 2 |
 | Norwegian | 2 |
-| Polish | 2 |
+| Ukrainian | 2 |
 | Brazilian Portuguese | 1 |
 | Cantonese | 1 |
-| Catalan | 1 |
 | Finnish | 1 |
-| Hindi | 1 |
 | Icelandic | 1 |
 | Indian English | 1 |
 | Irish | 1 |
 | Mandarin | 1 |
 | Taiwanese Mandarin | 1 |
 | Turkish | 1 |
+
+## Language tags
+
+| BCP-47 tag | Archives |
+| --- | ---: |
+| en | 28 |
+| de | 16 |
+| fr | 15 |
+| es | 13 |
+| sv | 11 |
+| it | 9 |
+| nl | 9 |
+| ko | 7 |
+| zh | 7 |
+| el | 6 |
+| es-MX | 6 |
+| ro | 6 |
+| ar | 5 |
+| ja | 5 |
+| pt | 5 |
+| ru | 5 |
+| cs | 4 |
+| hi | 4 |
+| ca | 3 |
+| pl | 3 |
+| da | 2 |
+| nb | 2 |
+| uk | 2 |
+| en-IN | 1 |
+| fi | 1 |
+| ga | 1 |
+| is | 1 |
+| pt-BR | 1 |
+| tr | 1 |
+| yue | 1 |
+| zh-CN | 1 |
+| zh-TW | 1 |
 
 ## Viability summary
 
@@ -131,6 +181,153 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | Fix manifest entry | 1 |
 | High – prioritise phoneme or lexicon data | 1 |
 | Low – likely demo/installer | 1 |
+
+## Metadata coverage summary
+
+| Metadata hint | Archives |
+| --- | ---: |
+| Synthesizer hints | 307 |
+| Language hints | 153 |
+| BCP-47 language tags | 153 |
+| Audio fidelity tiers | 129 |
+| Platform/architecture hints | 123 |
+| Sample rate hints | 123 |
+| Voice name hints | 54 |
+| Channel layout hints | 7 |
+| Version strings | 6 |
+| Voice gender hints | 3 |
+| Voice age hints | 2 |
+
+## Priority tag summary
+
+| Priority signal | Archives |
+| --- | ---: |
+| audio_demo | 868 |
+| has_synth_hint | 307 |
+| tooling_candidate | 305 |
+| installer_payload | 218 |
+| voice_or_language_pack | 186 |
+| has_language_hint | 153 |
+| has_language_tag | 153 |
+| low_fidelity_audio | 129 |
+| has_platform_hint | 123 |
+| has_sample_rate_hint | 123 |
+| nvda_addon_bundle | 55 |
+| has_channel_hint | 7 |
+| has_version_hint | 6 |
+| index_listing | 5 |
+| documentation | 4 |
+| has_gender_hint | 3 |
+| has_age_hint | 2 |
+| phoneme_or_lexicon | 1 |
+
+## Voice hint index
+
+| Voice token | Archives |
+| --- | ---: |
+| ASSIST | 1 |
+| Agata | 1 |
+| Alexandros | 1 |
+| Alva | 1 |
+| Arantxa | 1 |
+| Aylin | 1 |
+| Claire | 1 |
+| Daniel | 1 |
+| Duardo | 1 |
+| Ellen | 1 |
+| Emily | 1 |
+| Felix | 1 |
+| Fiona | 1 |
+| Ida | 1 |
+| Ingrid | 1 |
+| Isabel | 1 |
+| Javier | 1 |
+| Jennifer | 1 |
+| Jill | 1 |
+| Julie | 1 |
+| Karen | 1 |
+| Katerina | 1 |
+| Kyoko | 1 |
+| Laura | 1 |
+| Lee | 1 |
+| Lekha | 1 |
+| Madalena | 1 |
+| Mei | 1 |
+| Mikko | 1 |
+| Milena | 1 |
+| Moira | 1 |
+| Monica | 1 |
+| Nanna | 1 |
+| Narae | 1 |
+| Nora | 1 |
+| Nuria | 1 |
+| Paolo | 1 |
+| Paulina | 1 |
+| Ragga | 1 |
+| Raquel | 1 |
+| Samantha | 1 |
+| Sangeeta | 1 |
+| Sebastien | 1 |
+| Serena | 1 |
+| Silvia | 1 |
+| Sin | 1 |
+| Steffi | 1 |
+| Stine | 1 |
+| Tom | 1 |
+| Virginie | 1 |
+| Xander | 1 |
+| Ya | 1 |
+| Yannick | 1 |
+| Zuzana | 1 |
+
+## Synthesizer hint index
+
+| Synthesizer | Archives |
+| --- | ---: |
+| eSpeak NG | 214 |
+| DECtalk | 42 |
+| Eloquence | 18 |
+| Microsoft SAPI 5 | 10 |
+| IBM TTS | 7 |
+| RealSpeak | 5 |
+| MBROLA | 4 |
+| Microsoft SAPI 4 | 3 |
+| NV Speech Player | 3 |
+| FonixTalk | 1 |
+
+## Platform and architecture hints
+
+| Platform hint | Archives |
+| --- | ---: |
+| Platform: Windows | 80 |
+| Platform: Linux | 40 |
+| Platform: macOS | 2 |
+| Architecture: x64 | 1 |
+
+## Version hints
+
+| Version | Archives |
+| --- | ---: |
+| 1.1 | 1 |
+| 1.3 | 1 |
+| 1.7 | 1 |
+| 2.01 | 1 |
+| 4.6 | 1 |
+| 4.6.0 | 1 |
+
+## Voice gender hints
+
+| Gender | Archives |
+| --- | ---: |
+| Male | 2 |
+| Female | 1 |
+
+## Voice age hints
+
+| Age | Archives |
+| --- | ---: |
+| Child | 1 |
+| Senior | 1 |
 
 ## Detailed inventory
 
