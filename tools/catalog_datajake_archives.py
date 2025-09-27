@@ -278,6 +278,116 @@ LANGUAGE_PATTERNS: dict[str, str] = {
 
 LANGUAGE_REGEXES = [(re.compile(pattern), label) for pattern, label in LANGUAGE_PATTERNS.items()]
 
+LANGUAGE_LABEL_TO_BCP47 = {
+    "Arabic": "ar",
+    "Brazilian Portuguese": "pt-BR",
+    "Cantonese": "yue",
+    "Catalan": "ca",
+    "Chinese": "zh",
+    "Czech": "cs",
+    "Danish": "da",
+    "Dutch": "nl",
+    "English": "en",
+    "English (US)": "en-US",
+    "English (UK)": "en-GB",
+    "Finnish": "fi",
+    "French": "fr",
+    "German": "de",
+    "Greek": "el",
+    "Hindi": "hi",
+    "Icelandic": "is",
+    "Indian English": "en-IN",
+    "Irish": "ga",
+    "Italian": "it",
+    "Japanese": "ja",
+    "Korean": "ko",
+    "Mandarin": "zh-CN",
+    "Mexican Spanish": "es-MX",
+    "Norwegian": "nb",
+    "Polish": "pl",
+    "Portuguese": "pt",
+    "Romanian": "ro",
+    "Russian": "ru",
+    "Spanish": "es",
+    "Swedish": "sv",
+    "Taiwanese Mandarin": "zh-TW",
+    "Thai": "th",
+    "Turkish": "tr",
+    "Ukrainian": "uk",
+    "Vietnamese": "vi",
+}
+
+LANGUAGE_CODE_PATTERN = re.compile(r"(?<![a-z0-9])([a-z]{2,3}(?:[-_][a-z]{2})?)(?![a-z0-9])")
+
+LANGUAGE_CODE_MAP: dict[str, tuple[str, str]] = {
+    "ar": ("Arabic", "ar"),
+    "ara": ("Arabic", "ar"),
+    "ca": ("Catalan", "ca"),
+    "cat": ("Catalan", "ca"),
+    "cs": ("Czech", "cs"),
+    "cze": ("Czech", "cs"),
+    "da": ("Danish", "da"),
+    "dan": ("Danish", "da"),
+    "de": ("German", "de"),
+    "deu": ("German", "de"),
+    "el": ("Greek", "el"),
+    "ell": ("Greek", "el"),
+    "en": ("English", "en"),
+    "eng": ("English", "en"),
+    "enus": ("English (US)", "en-US"),
+    "enuk": ("English (UK)", "en-GB"),
+    "enin": ("Indian English", "en-IN"),
+    "es": ("Spanish", "es"),
+    "esp": ("Spanish", "es"),
+    "esmx": ("Mexican Spanish", "es-MX"),
+    "fr": ("French", "fr"),
+    "fra": ("French", "fr"),
+    "fi": ("Finnish", "fi"),
+    "fin": ("Finnish", "fi"),
+    "ga": ("Irish", "ga"),
+    "gle": ("Irish", "ga"),
+    "hi": ("Hindi", "hi"),
+    "hin": ("Hindi", "hi"),
+    "is": ("Icelandic", "is"),
+    "isl": ("Icelandic", "is"),
+    "it": ("Italian", "it"),
+    "ita": ("Italian", "it"),
+    "ja": ("Japanese", "ja"),
+    "jpn": ("Japanese", "ja"),
+    "ko": ("Korean", "ko"),
+    "kor": ("Korean", "ko"),
+    "nb": ("Norwegian", "nb"),
+    "no": ("Norwegian", "nb"),
+    "nob": ("Norwegian", "nb"),
+    "nl": ("Dutch", "nl"),
+    "nld": ("Dutch", "nl"),
+    "pl": ("Polish", "pl"),
+    "pol": ("Polish", "pl"),
+    "pt": ("Portuguese", "pt"),
+    "por": ("Portuguese", "pt"),
+    "ptbr": ("Brazilian Portuguese", "pt-BR"),
+    "ptpt": ("Portuguese", "pt-PT"),
+    "ro": ("Romanian", "ro"),
+    "ron": ("Romanian", "ro"),
+    "ru": ("Russian", "ru"),
+    "rus": ("Russian", "ru"),
+    "sv": ("Swedish", "sv"),
+    "swe": ("Swedish", "sv"),
+    "th": ("Thai", "th"),
+    "tha": ("Thai", "th"),
+    "tr": ("Turkish", "tr"),
+    "tur": ("Turkish", "tr"),
+    "uk": ("Ukrainian", "uk"),
+    "ukr": ("Ukrainian", "uk"),
+    "vi": ("Vietnamese", "vi"),
+    "vie": ("Vietnamese", "vi"),
+    "yue": ("Cantonese", "yue"),
+    "zh": ("Chinese", "zh"),
+    "zhcn": ("Mandarin", "zh-CN"),
+    "zhtw": ("Taiwanese Mandarin", "zh-TW"),
+    "zhhk": ("Cantonese", "yue"),
+}
+
 
 def parse_sample_rate(filename_lower: str) -> int | None:
     khz_match = re.search(r"(\d{2,3}(?:[._]\d)?)\s*[-_]?k(?:hz)?", filename_lower)
@@ -336,12 +446,24 @@ def parse_channel_mode(filename_lower: str) -> str | None:
     return f"{value}-channel"
 
 
-def extract_language_hints(filename_lower: str) -> list[str]:
-    hints = []
+def extract_language_metadata(filename_lower: str) -> tuple[list[str], list[str]]:
+    hints: set[str] = set()
+    tags: set[str] = set()
     for regex, label in LANGUAGE_REGEXES:
         if regex.search(filename_lower):
-            hints.append(label)
-    return sorted(set(hints))
+            hints.add(label)
+    for match in LANGUAGE_CODE_PATTERN.finditer(filename_lower):
+        token = match.group(1).lower().replace("-", "").replace("_", "")
+        mapped = LANGUAGE_CODE_MAP.get(token)
+        if mapped:
+            label, tag = mapped
+            hints.add(label)
+            tags.add(tag)
+    for label in hints:
+        tag = LANGUAGE_LABEL_TO_BCP47.get(label)
+        if tag:
+            tags.add(tag)
+    return sorted(hints), sorted(tags)
 
 
 def extract_voice_hint(display_name: str) -> str | None:
@@ -406,6 +528,27 @@ def extract_voice_hint(display_name: str) -> str | None:
         if lower.isdigit():
             continue
         return token
+    return None
+
+
+SYNTH_HINT_PATTERNS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"eloq", re.IGNORECASE), "Eloquence"),
+    (re.compile(r"dectalk", re.IGNORECASE), "DECtalk"),
+    (re.compile(r"fonix", re.IGNORECASE), "FonixTalk"),
+    (re.compile(r"espeak", re.IGNORECASE), "eSpeak NG"),
+    (re.compile(r"mbrola", re.IGNORECASE), "MBROLA"),
+    (re.compile(r"ibmtts|viavoice", re.IGNORECASE), "IBM TTS"),
+    (re.compile(r"nv[_-]?speech[_-]?player", re.IGNORECASE), "NV Speech Player"),
+    (re.compile(r"realspeak", re.IGNORECASE), "RealSpeak"),
+    (re.compile(r"sapi5", re.IGNORECASE), "Microsoft SAPI 5"),
+    (re.compile(r"sapi4", re.IGNORECASE), "Microsoft SAPI 4"),
+]
+
+
+def extract_synth_hint(filename_lower: str) -> str | None:
+    for pattern, label in SYNTH_HINT_PATTERNS:
+        if pattern.search(filename_lower):
+            return label
     return None
 
 
@@ -493,10 +636,13 @@ def extract_metadata(
     if channel_mode:
         metadata["channel_mode"] = channel_mode
         priority_tags.add("has_channel_hint")
-    language_hints = extract_language_hints(filename_lower)
+    language_hints, language_tags = extract_language_metadata(filename_lower)
     if language_hints:
         metadata["language_hints"] = language_hints
         priority_tags.add("has_language_hint")
+    if language_tags:
+        metadata["language_tags"] = language_tags
+        priority_tags.add("has_language_tag")
     voice_hint = extract_voice_hint(display_name)
     if voice_hint:
         metadata["voice_hint"] = voice_hint
@@ -508,6 +654,10 @@ def extract_metadata(
     if version_hint:
         metadata["version_hint"] = version_hint
         priority_tags.add("has_version_hint")
+    synth_hint = extract_synth_hint(filename_lower)
+    if synth_hint:
+        metadata["synth_hint"] = synth_hint
+        priority_tags.add("has_synth_hint")
     if extension:
         metadata["extension"] = extension
     metadata["category"] = category
@@ -731,8 +881,10 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     bit_depths = Counter()
     channel_modes = Counter()
     language_counts = Counter()
+    language_tag_counts = Counter()
     priority_counts = Counter()
     voice_hints = Counter()
+    synth_counts = Counter()
     platform_counts = Counter()
     version_counts = Counter()
     for record in records:
@@ -751,11 +903,16 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             channel_modes[channel_mode] += 1
         for language in record.metadata.get("language_hints", []) if record.metadata else []:
             language_counts[language] += 1
+        for language_tag in record.metadata.get("language_tags", []) if record.metadata else []:
+            language_tag_counts[language_tag] += 1
         for tag in record.metadata.get("priority_tags", []) if record.metadata else []:
             priority_counts[tag] += 1
         voice_hint = record.metadata.get("voice_hint") if record.metadata else None
         if isinstance(voice_hint, str):
             voice_hints[voice_hint] += 1
+        synth_hint = record.metadata.get("synth_hint") if record.metadata else None
+        if isinstance(synth_hint, str):
+            synth_counts[synth_hint] += 1
         for platform in record.metadata.get("platform_hints", []) if record.metadata else []:
             platform_counts[platform] += 1
         version_hint = record.metadata.get("version_hint") if record.metadata else None
@@ -822,6 +979,16 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         for language, count in sorted(language_counts.items(), key=lambda item: (-item[1], item[0])):
             lines.append(f"| {language} | {count} |")
         lines.append("")
+    if language_tag_counts:
+        lines.append("## Language tags")
+        lines.append("")
+        lines.append("| BCP-47 tag | Archives |")
+        lines.append("| --- | ---: |")
+        for language_tag, count in sorted(
+            language_tag_counts.items(), key=lambda item: (-item[1], item[0])
+        ):
+            lines.append(f"| {language_tag} | {count} |")
+        lines.append("")
     if viability_counts:
         lines.append("## Viability summary")
         lines.append("")
@@ -844,6 +1011,14 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
         lines.append("| Voice token | Archives |")
         lines.append("| --- | ---: |")
         for hint, count in sorted(voice_hints.items(), key=lambda item: (-item[1], item[0])):
+            lines.append(f"| {hint} | {count} |")
+        lines.append("")
+    if synth_counts:
+        lines.append("## Synthesizer hint index")
+        lines.append("")
+        lines.append("| Synthesizer | Archives |")
+        lines.append("| --- | ---: |")
+        for hint, count in sorted(synth_counts.items(), key=lambda item: (-item[1], item[0])):
             lines.append(f"| {hint} | {count} |")
         lines.append("")
     if platform_counts:
@@ -874,14 +1049,17 @@ def write_markdown(records: list[ArchiveRecord], path: pathlib.Path) -> None:
 
 def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
     extensions = Counter(record.extension or "(none)" for record in records)
+    families = Counter(record.family for record in records if record.family)
     sample_rates = Counter()
     bit_depths = Counter()
     channel_modes = Counter()
     languages = Counter()
+    language_tags = Counter()
     categories = Counter(record.category for record in records)
     viability = Counter(record.viability for record in records)
     priority = Counter()
     voice_hints = Counter()
+    synth_counts = Counter()
     platform_counts = Counter()
     version_counts = Counter()
     for record in records:
@@ -897,11 +1075,16 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             channel_modes[channel_mode] += 1
         for language in metadata.get("language_hints", []):
             languages[language] += 1
+        for language_tag in metadata.get("language_tags", []):
+            language_tags[language_tag] += 1
         for tag in metadata.get("priority_tags", []):
             priority[tag] += 1
         voice_hint = metadata.get("voice_hint")
         if isinstance(voice_hint, str):
             voice_hints[voice_hint] += 1
+        synth_hint = metadata.get("synth_hint")
+        if isinstance(synth_hint, str):
+            synth_counts[synth_hint] += 1
         for platform in metadata.get("platform_hints", []):
             platform_counts[platform] += 1
         version_hint = metadata.get("version_hint")
@@ -915,10 +1098,13 @@ def write_json(records: list[ArchiveRecord], path: pathlib.Path) -> None:
             "bit_depths": dict(bit_depths),
             "channel_modes": dict(channel_modes),
             "languages": dict(languages),
+            "language_tags": dict(language_tags),
             "categories": dict(categories),
             "viability": dict(viability),
             "priority_tags": dict(priority),
             "voice_hints": dict(voice_hints),
+            "synth_hints": dict(synth_counts),
+            "families": dict(families),
             "platforms": dict(platform_counts),
             "versions": dict(version_counts),
         },

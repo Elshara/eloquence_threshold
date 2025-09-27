@@ -101,6 +101,23 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
         self.assertEqual(payload["summaries"]["channel_modes"].get("Stereo"), 1)
         self.assertEqual(payload["summaries"]["channel_modes"].get("Mono"), 1)
 
+    def test_language_tags_are_recorded(self) -> None:
+        record = archive_catalog.classify(
+            "https://mirror/tts/espeak/voice_french_fr_fr_22khz.zip"
+        )
+        metadata = record.metadata
+        self.assertIn("French", metadata.get("language_hints", []))
+        self.assertIn("fr", metadata.get("language_tags", []))
+        self.assertIn("has_language_tag", metadata.get("priority_tags", []))
+
+    def test_synth_hint_is_detected(self) -> None:
+        record = archive_catalog.classify(
+            "https://mirror/tts/nvda/BeSTspeech_espeak_toolkit.zip"
+        )
+        metadata = record.metadata
+        self.assertEqual(metadata.get("synth_hint"), "eSpeak NG")
+        self.assertIn("has_synth_hint", metadata.get("priority_tags", []))
+
     def test_json_summary_includes_voice_platform_and_version_counts(self) -> None:
         urls = [
             "https://mirror/tts/espeak/Voice_Eloquence_Toolkit_win64_v1_2.tar.gz",
@@ -119,6 +136,21 @@ class ArchiveCatalogDetectionTests(unittest.TestCase):
         self.assertGreaterEqual(summaries["platforms"].get("Architecture: x64", 0), 1)
         self.assertGreaterEqual(summaries["versions"].get("1.2", 0), 1)
         self.assertGreaterEqual(summaries["versions"].get("2.1", 0), 1)
+
+    def test_json_summary_tracks_families_and_language_tags(self) -> None:
+        urls = [
+            "https://mirror/tts/espeak/voice_french_fr_fr_22khz.zip",
+            "https://mirror/tts/dectalk/voice_spanish_linux_x86_release-2_1.zip",
+        ]
+        records = archive_catalog.build_records(urls)
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = pathlib.Path(tmp) / "inventory.json"
+            archive_catalog.write_json(records, output_path)
+            payload = json.loads(output_path.read_text())
+        summaries = payload["summaries"]
+        self.assertGreaterEqual(summaries["families"].get("espeak", 0), 1)
+        self.assertGreaterEqual(summaries["families"].get("dectalk", 0), 1)
+        self.assertGreaterEqual(summaries["language_tags"].get("fr", 0), 1)
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest CLI entry

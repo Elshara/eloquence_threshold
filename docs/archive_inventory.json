@@ -55,9 +55,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -183,9 +185,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -200,9 +204,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -217,9 +223,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -234,9 +242,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -521,9 +531,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'dectalk' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -588,11 +600,15 @@
         "language_hints": [
           "Polish"
         ],
+        "language_tags": [
+          "pl"
+        ],
         "voice_hint": "Agata",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -612,11 +628,15 @@
         "language_hints": [
           "Greek"
         ],
+        "language_tags": [
+          "el"
+        ],
         "voice_hint": "Alexandros",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -636,11 +656,15 @@
         "language_hints": [
           "Swedish"
         ],
+        "language_tags": [
+          "sv"
+        ],
         "voice_hint": "Alva",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -680,11 +704,15 @@
         "language_hints": [
           "Turkish"
         ],
+        "language_tags": [
+          "tr"
+        ],
         "voice_hint": "Aylin",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -704,11 +732,15 @@
         "language_hints": [
           "Dutch"
         ],
+        "language_tags": [
+          "nl"
+        ],
         "voice_hint": "Claire",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -728,11 +760,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Daniel",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -752,11 +788,15 @@
         "language_hints": [
           "Spanish"
         ],
+        "language_tags": [
+          "es"
+        ],
         "voice_hint": "Duardo",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -776,11 +816,15 @@
         "language_hints": [
           "Dutch"
         ],
+        "language_tags": [
+          "nl"
+        ],
         "voice_hint": "Ellen",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -800,11 +844,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Emily",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -824,11 +872,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "voice_hint": "Felix",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -848,11 +900,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Fiona",
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -872,11 +928,15 @@
         "language_hints": [
           "Danish"
         ],
+        "language_tags": [
+          "da"
+        ],
         "voice_hint": "Ida",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -896,11 +956,15 @@
         "language_hints": [
           "Swedish"
         ],
+        "language_tags": [
+          "sv"
+        ],
         "voice_hint": "Ingrid",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -920,11 +984,15 @@
         "language_hints": [
           "Spanish"
         ],
+        "language_tags": [
+          "es"
+        ],
         "voice_hint": "Isabel",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -945,11 +1013,16 @@
           "Mexican Spanish",
           "Spanish"
         ],
+        "language_tags": [
+          "es",
+          "es-MX"
+        ],
         "voice_hint": "Javier",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -969,11 +1042,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Jennifer",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -993,11 +1070,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Jill",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1017,11 +1098,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "voice_hint": "Julie",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1041,11 +1126,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Karen",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1065,11 +1154,15 @@
         "language_hints": [
           "Russian"
         ],
+        "language_tags": [
+          "ru"
+        ],
         "voice_hint": "Katerina",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1089,11 +1182,15 @@
         "language_hints": [
           "Japanese"
         ],
+        "language_tags": [
+          "ja"
+        ],
         "voice_hint": "Kyoko",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1113,11 +1210,15 @@
         "language_hints": [
           "Dutch"
         ],
+        "language_tags": [
+          "nl"
+        ],
         "voice_hint": "Laura",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1137,11 +1238,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Lee",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1161,11 +1266,15 @@
         "language_hints": [
           "Hindi"
         ],
+        "language_tags": [
+          "hi"
+        ],
         "voice_hint": "Lekha",
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1185,11 +1294,15 @@
         "language_hints": [
           "Portuguese"
         ],
+        "language_tags": [
+          "pt"
+        ],
         "voice_hint": "Madalena",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1210,11 +1323,16 @@
           "Chinese",
           "Mandarin"
         ],
+        "language_tags": [
+          "zh",
+          "zh-CN"
+        ],
         "voice_hint": "Mei",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1234,11 +1352,15 @@
         "language_hints": [
           "Finnish"
         ],
+        "language_tags": [
+          "fi"
+        ],
         "voice_hint": "Mikko",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1258,11 +1380,15 @@
         "language_hints": [
           "Russian"
         ],
+        "language_tags": [
+          "ru"
+        ],
         "voice_hint": "Milena",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1283,11 +1409,16 @@
           "English",
           "Irish"
         ],
+        "language_tags": [
+          "en",
+          "ga"
+        ],
         "voice_hint": "Moira",
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1307,11 +1438,15 @@
         "language_hints": [
           "Spanish"
         ],
+        "language_tags": [
+          "es"
+        ],
         "voice_hint": "Monica",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1331,11 +1466,15 @@
         "language_hints": [
           "Danish"
         ],
+        "language_tags": [
+          "da"
+        ],
         "voice_hint": "Nanna",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1355,11 +1494,15 @@
         "language_hints": [
           "Korean"
         ],
+        "language_tags": [
+          "ko"
+        ],
         "voice_hint": "Narae",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1379,11 +1522,15 @@
         "language_hints": [
           "Norwegian"
         ],
+        "language_tags": [
+          "nb"
+        ],
         "voice_hint": "Nora",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1403,11 +1550,15 @@
         "language_hints": [
           "Catalan"
         ],
+        "language_tags": [
+          "ca"
+        ],
         "voice_hint": "Nuria",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1427,11 +1578,15 @@
         "language_hints": [
           "Italian"
         ],
+        "language_tags": [
+          "it"
+        ],
         "voice_hint": "Paolo",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1452,11 +1607,16 @@
           "Mexican Spanish",
           "Spanish"
         ],
+        "language_tags": [
+          "es",
+          "es-MX"
+        ],
         "voice_hint": "Paulina",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1476,11 +1636,15 @@
         "language_hints": [
           "Icelandic"
         ],
+        "language_tags": [
+          "is"
+        ],
         "voice_hint": "Ragga",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1501,11 +1665,16 @@
           "Brazilian Portuguese",
           "Portuguese"
         ],
+        "language_tags": [
+          "pt",
+          "pt-BR"
+        ],
         "voice_hint": "Raquel",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1525,11 +1694,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Samantha",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1550,11 +1723,16 @@
           "English",
           "Indian English"
         ],
+        "language_tags": [
+          "en",
+          "en-IN"
+        ],
         "voice_hint": "Sangeeta",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1574,11 +1752,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "voice_hint": "Sebastien",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1598,11 +1780,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Serena",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1622,11 +1808,15 @@
         "language_hints": [
           "Italian"
         ],
+        "language_tags": [
+          "it"
+        ],
         "voice_hint": "Silvia",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1647,11 +1837,16 @@
           "Cantonese",
           "Chinese"
         ],
+        "language_tags": [
+          "yue",
+          "zh"
+        ],
         "voice_hint": "Sin",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1671,11 +1866,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "voice_hint": "Steffi",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1695,11 +1894,15 @@
         "language_hints": [
           "Norwegian"
         ],
+        "language_tags": [
+          "nb"
+        ],
         "voice_hint": "Stine",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1719,11 +1922,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "voice_hint": "Tom",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1743,11 +1950,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "voice_hint": "Virginie",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1767,11 +1978,15 @@
         "language_hints": [
           "Dutch"
         ],
+        "language_tags": [
+          "nl"
+        ],
         "voice_hint": "Xander",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1792,11 +2007,16 @@
           "Chinese",
           "Taiwanese Mandarin"
         ],
+        "language_tags": [
+          "zh",
+          "zh-TW"
+        ],
         "voice_hint": "Ya",
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1816,11 +2036,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "voice_hint": "Yannick",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -1840,11 +2064,15 @@
         "language_hints": [
           "Czech"
         ],
+        "language_tags": [
+          "cs"
+        ],
         "voice_hint": "Zuzana",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint",
           "installer_payload"
         ]
@@ -2050,11 +2278,15 @@
         "language_hints": [
           "Dutch"
         ],
+        "language_tags": [
+          "nl"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2068,10 +2300,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "English"
+        ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2085,10 +2325,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "English"
+        ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2122,11 +2370,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2143,11 +2395,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2164,11 +2420,15 @@
         "language_hints": [
           "Italian"
         ],
+        "language_tags": [
+          "it"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2185,11 +2445,15 @@
         "language_hints": [
           "Japanese"
         ],
+        "language_tags": [
+          "ja"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2223,11 +2487,15 @@
         "language_hints": [
           "Spanish"
         ],
+        "language_tags": [
+          "es"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2261,11 +2529,15 @@
         "language_hints": [
           "Chinese"
         ],
+        "language_tags": [
+          "zh"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2282,11 +2554,15 @@
         "language_hints": [
           "Chinese"
         ],
+        "language_tags": [
+          "zh"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2303,11 +2579,15 @@
         "language_hints": [
           "Chinese"
         ],
+        "language_tags": [
+          "zh"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2324,11 +2604,15 @@
         "language_hints": [
           "Chinese"
         ],
+        "language_tags": [
+          "zh"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2413,11 +2697,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2434,11 +2722,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2455,11 +2747,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2476,11 +2772,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2497,11 +2797,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2518,11 +2822,15 @@
         "language_hints": [
           "Italian"
         ],
+        "language_tags": [
+          "it"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2557,11 +2865,16 @@
           "Mexican Spanish",
           "Spanish"
         ],
+        "language_tags": [
+          "es",
+          "es-MX"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2646,11 +2959,15 @@
         "language_hints": [
           "Russian"
         ],
+        "language_tags": [
+          "ru"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2667,11 +2984,15 @@
         "language_hints": [
           "Russian"
         ],
+        "language_tags": [
+          "ru"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -2688,11 +3009,15 @@
         "language_hints": [
           "Russian"
         ],
+        "language_tags": [
+          "ru"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5132,10 +5457,18 @@
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
         "sample_rate_hz": 11000,
+        "language_hints": [
+          "English"
+        ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
+          "has_language_hint",
+          "has_language_tag",
           "has_sample_rate_hint"
         ]
       }
@@ -5150,10 +5483,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "English"
+        ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5204,11 +5545,15 @@
         "language_hints": [
           "Dutch"
         ],
+        "language_tags": [
+          "nl"
+        ],
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5225,11 +5570,15 @@
         "language_hints": [
           "Dutch"
         ],
+        "language_tags": [
+          "nl"
+        ],
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5246,11 +5595,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5267,11 +5620,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5288,11 +5645,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5309,11 +5670,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "au",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5469,10 +5834,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Catalan"
+        ],
+        "language_tags": [
+          "ca"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -5574,11 +5947,15 @@
         "language_hints": [
           "Spanish"
         ],
+        "language_tags": [
+          "es"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -7598,10 +7975,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Hindi"
+        ],
+        "language_tags": [
+          "hi"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -7615,10 +8000,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Hindi"
+        ],
+        "language_tags": [
+          "hi"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -7632,10 +8025,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Hindi"
+        ],
+        "language_tags": [
+          "hi"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -10420,10 +10821,12 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "synth_hint": "RealSpeak",
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_synth_hint"
         ]
       }
     },
@@ -10437,10 +10840,12 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "synth_hint": "RealSpeak",
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_synth_hint"
         ]
       }
     },
@@ -10726,10 +11131,12 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "synth_hint": "MBROLA",
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_synth_hint"
         ]
       }
     },
@@ -10743,10 +11150,12 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "synth_hint": "MBROLA",
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_synth_hint"
         ]
       }
     },
@@ -10797,11 +11206,15 @@
         "language_hints": [
           "Arabic"
         ],
+        "language_tags": [
+          "ar"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -10815,10 +11228,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Arabic"
+        ],
+        "language_tags": [
+          "ar"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -10869,11 +11290,15 @@
         "language_hints": [
           "Arabic"
         ],
+        "language_tags": [
+          "ar"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -10891,11 +11316,16 @@
           "Arabic",
           "Portuguese"
         ],
+        "language_tags": [
+          "ar",
+          "pt"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11028,10 +11458,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Catalan"
+        ],
+        "language_tags": [
+          "ca"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11202,11 +11640,16 @@
           "Czech",
           "Korean"
         ],
+        "language_tags": [
+          "cs",
+          "ko"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11224,11 +11667,16 @@
           "Czech",
           "Swedish"
         ],
+        "language_tags": [
+          "cs",
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11242,10 +11690,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "German"
+        ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11446,10 +11902,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "English"
+        ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11484,11 +11948,16 @@
           "Arabic",
           "English"
         ],
+        "language_tags": [
+          "ar",
+          "en"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11506,11 +11975,16 @@
           "Czech",
           "English"
         ],
+        "language_tags": [
+          "cs",
+          "en"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11528,11 +12002,16 @@
           "English",
           "French"
         ],
+        "language_tags": [
+          "en",
+          "fr"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11546,10 +12025,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Spanish"
+        ],
+        "language_tags": [
+          "es"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11648,10 +12135,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "French"
+        ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11787,11 +12282,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11809,11 +12308,16 @@
           "German",
           "Mexican Spanish"
         ],
+        "language_tags": [
+          "de",
+          "es-MX"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11882,11 +12386,16 @@
           "German",
           "Greek"
         ],
+        "language_tags": [
+          "de",
+          "el"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11904,11 +12413,16 @@
           "Greek",
           "Korean"
         ],
+        "language_tags": [
+          "el",
+          "ko"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11926,11 +12440,16 @@
           "Greek",
           "Korean"
         ],
+        "language_tags": [
+          "el",
+          "ko"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -11948,11 +12467,16 @@
           "Greek",
           "Romanian"
         ],
+        "language_tags": [
+          "el",
+          "ro"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -12020,11 +12544,15 @@
         "language_hints": [
           "Korean"
         ],
+        "language_tags": [
+          "ko"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -12041,11 +12569,15 @@
         "language_hints": [
           "Romanian"
         ],
+        "language_tags": [
+          "ro"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -12263,10 +12795,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Italian"
+        ],
+        "language_tags": [
+          "it"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -12352,11 +12892,16 @@
           "Greek",
           "Japanese"
         ],
+        "language_tags": [
+          "el",
+          "ja"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -12374,11 +12919,16 @@
           "Japanese",
           "Swedish"
         ],
+        "language_tags": [
+          "ja",
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -12464,11 +13014,16 @@
           "Korean",
           "Spanish"
         ],
+        "language_tags": [
+          "es",
+          "ko"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -12486,11 +13041,16 @@
           "Korean",
           "Swedish"
         ],
+        "language_tags": [
+          "ko",
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -13409,11 +13969,16 @@
           "Japanese",
           "Mexican Spanish"
         ],
+        "language_tags": [
+          "es-MX",
+          "ja"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -13431,11 +13996,16 @@
           "Mexican Spanish",
           "Romanian"
         ],
+        "language_tags": [
+          "es-MX",
+          "ro"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -13517,10 +14087,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Dutch"
+        ],
+        "language_tags": [
+          "nl"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -13585,10 +14163,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Polish"
+        ],
+        "language_tags": [
+          "pl"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -13622,11 +14208,15 @@
         "language_hints": [
           "Portuguese"
         ],
+        "language_tags": [
+          "pt"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -13640,10 +14230,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Portuguese"
+        ],
+        "language_tags": [
+          "pt"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -13674,10 +14272,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Romanian"
+        ],
+        "language_tags": [
+          "ro"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -13711,11 +14317,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -14107,11 +14717,16 @@
           "Romanian",
           "Swedish"
         ],
+        "language_tags": [
+          "ro",
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -14431,10 +15046,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Spanish"
+        ],
+        "language_tags": [
+          "es"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -14499,10 +15122,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "French"
+        ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -14635,10 +15266,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Dutch"
+        ],
+        "language_tags": [
+          "nl"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -16365,10 +17004,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Swedish"
+        ],
+        "language_tags": [
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -16382,10 +17029,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Swedish"
+        ],
+        "language_tags": [
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -16399,10 +17054,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Swedish"
+        ],
+        "language_tags": [
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -16416,10 +17079,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Swedish"
+        ],
+        "language_tags": [
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -16433,10 +17104,18 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "language_hints": [
+          "Swedish"
+        ],
+        "language_tags": [
+          "sv"
+        ],
         "extension": "wav",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -16848,9 +17527,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -16865,9 +17546,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -16882,9 +17565,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'dectalk' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -16903,10 +17588,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "DECtalk",
         "extension": "7z",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -16936,9 +17623,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'dectalk' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17013,8 +17702,18 @@
       "viability": "Low \u2013 inspect manually",
       "notes": "Archive without clear code/data signal.",
       "metadata": {
+        "language_hints": [
+          "Romanian"
+        ],
+        "language_tags": [
+          "ro"
+        ],
         "extension": "zip",
-        "category": "Generic archive"
+        "category": "Generic archive",
+        "priority_tags": [
+          "has_language_hint",
+          "has_language_tag"
+        ]
       }
     },
     {
@@ -17027,9 +17726,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'dectalk' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17135,10 +17836,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17154,9 +17857,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17172,9 +17877,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17192,10 +17899,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17211,9 +17920,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17231,10 +17942,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17253,10 +17966,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17272,9 +17987,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17292,10 +18009,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17314,10 +18033,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17333,9 +18054,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17353,10 +18076,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17375,10 +18100,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17394,9 +18121,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17414,10 +18143,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17436,10 +18167,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17455,9 +18188,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17475,10 +18210,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17497,10 +18234,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17516,9 +18255,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17536,10 +18277,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17558,10 +18301,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17577,9 +18322,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17597,10 +18344,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17619,10 +18368,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17638,9 +18389,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17658,10 +18411,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17680,10 +18435,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17699,9 +18456,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17719,10 +18478,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17741,10 +18502,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17760,9 +18523,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17780,10 +18545,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17802,10 +18569,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17821,9 +18590,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17841,10 +18612,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17863,10 +18636,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17882,9 +18657,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17902,10 +18679,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17924,10 +18703,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17943,9 +18724,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -17963,10 +18746,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -17985,10 +18770,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18004,9 +18791,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18024,10 +18813,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18046,10 +18837,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18065,9 +18858,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18085,10 +18880,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18107,10 +18904,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18126,9 +18925,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18146,10 +18947,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18168,10 +18971,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18187,9 +18992,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18207,10 +19014,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18226,9 +19035,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18247,10 +19058,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18266,9 +19079,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18286,10 +19101,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18305,9 +19122,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18326,10 +19145,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18345,9 +19166,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18365,10 +19188,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18387,10 +19212,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18406,9 +19233,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18426,10 +19255,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18448,10 +19279,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18467,9 +19300,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18487,10 +19322,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18506,9 +19343,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18527,10 +19366,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18546,9 +19387,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18566,10 +19409,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18588,10 +19433,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18607,9 +19454,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18627,10 +19476,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18649,10 +19500,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18668,9 +19521,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18688,10 +19543,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18710,10 +19567,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18729,9 +19588,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18749,10 +19610,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18771,10 +19634,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18790,9 +19655,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18810,10 +19677,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18832,10 +19701,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18851,9 +19722,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18871,10 +19744,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18890,9 +19765,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18911,10 +19788,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18930,9 +19809,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -18950,10 +19831,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18969,9 +19852,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -18990,10 +19875,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19009,9 +19896,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19029,10 +19918,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19051,10 +19942,12 @@
         "platform_hints": [
           "Platform: Linux"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19070,9 +19963,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19090,10 +19985,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19109,9 +20006,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19129,10 +20028,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19148,9 +20049,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19168,10 +20071,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19187,9 +20092,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19205,9 +20112,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19225,10 +20134,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19244,9 +20155,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19262,9 +20175,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19282,10 +20197,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19301,9 +20218,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19321,10 +20240,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19340,9 +20261,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19360,10 +20283,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19379,9 +20304,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19399,10 +20326,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19418,9 +20347,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19438,10 +20369,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19457,9 +20390,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19474,9 +20409,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'source' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -19491,9 +20428,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19509,9 +20448,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19527,9 +20468,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19545,9 +20488,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19563,9 +20508,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19581,9 +20528,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19599,9 +20548,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19617,9 +20568,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19635,9 +20588,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19656,10 +20611,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19675,9 +20632,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19696,10 +20655,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19715,9 +20676,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19736,10 +20699,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19755,9 +20720,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19776,10 +20743,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19795,9 +20764,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19816,10 +20787,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19835,9 +20808,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19856,10 +20831,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19875,9 +20852,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19896,10 +20875,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19915,9 +20896,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19936,10 +20919,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19955,9 +20940,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19976,10 +20963,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -19995,9 +20984,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20016,10 +21007,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20035,9 +21028,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20056,10 +21051,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20075,9 +21072,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20096,10 +21095,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20115,9 +21116,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20136,10 +21139,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20155,9 +21160,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20176,10 +21183,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20195,9 +21204,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20216,10 +21227,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20235,9 +21248,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20256,10 +21271,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20275,9 +21292,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20296,10 +21315,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20315,9 +21336,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20336,10 +21359,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20355,9 +21380,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20376,10 +21403,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20395,9 +21424,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20416,10 +21447,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20435,9 +21468,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20456,10 +21491,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20475,9 +21512,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20496,10 +21535,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20515,9 +21556,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20536,10 +21579,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20555,9 +21600,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20576,10 +21623,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20595,9 +21644,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20616,10 +21667,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20635,9 +21688,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20656,10 +21711,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20675,9 +21732,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20696,10 +21755,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20715,9 +21776,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20736,10 +21799,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20755,9 +21820,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20776,10 +21843,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20795,9 +21864,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20816,10 +21887,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20835,9 +21908,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20856,10 +21931,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20875,9 +21952,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20896,10 +21975,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20915,9 +21996,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20936,10 +22019,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20955,9 +22040,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20976,10 +22063,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -20995,9 +22084,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21016,10 +22107,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21035,9 +22128,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21056,10 +22151,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21075,9 +22172,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21096,10 +22195,12 @@
         "platform_hints": [
           "Platform: Windows"
         ],
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_platform_hint",
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21115,9 +22216,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21133,9 +22236,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21151,9 +22256,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'espeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -21169,9 +22276,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -21186,9 +22295,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -21203,9 +22314,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -21220,9 +22333,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -21699,9 +22814,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "MBROLA",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -22794,9 +23911,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'dectalk' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "7z",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -22826,9 +23945,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'eloquence' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "7z",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -22844,9 +23965,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'eloquence' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -22879,10 +24002,12 @@
       "viability": "Scrap (non-code asset)",
       "notes": "Audio payload useful only for reference recordings.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
-          "audio_demo"
+          "audio_demo",
+          "has_synth_hint"
         ]
       }
     },
@@ -22930,11 +24055,15 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -22951,11 +24080,15 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -22972,11 +24105,15 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -22993,11 +24130,15 @@
         "language_hints": [
           "Italian"
         ],
+        "language_tags": [
+          "it"
+        ],
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -23031,11 +24172,15 @@
         "language_hints": [
           "Spanish"
         ],
+        "language_tags": [
+          "es"
+        ],
         "extension": "mp3",
         "category": "Audio sample",
         "priority_tags": [
           "audio_demo",
-          "has_language_hint"
+          "has_language_hint",
+          "has_language_tag"
         ]
       }
     },
@@ -23117,9 +24262,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 4",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -23134,9 +24281,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -23166,9 +24315,11 @@
       "notes": "Keyword 'dectalk' indicates embedded source or tooling.",
       "metadata": {
         "version_hint": "4.6",
+        "synth_hint": "DECtalk",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "has_version_hint",
           "tooling_candidate",
           "voice_or_language_pack"
@@ -23185,9 +24336,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'dectalk' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -23203,9 +24356,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -23220,9 +24375,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -23703,9 +24860,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -23734,9 +24893,11 @@
       "viability": "Medium \u2013 evaluate data reuse",
       "notes": "Contains voice or language assets (keyword 'eloq').",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "zip",
         "category": "Voice/data archive",
         "priority_tags": [
+          "has_synth_hint",
           "voice_or_language_pack"
         ]
       }
@@ -23751,9 +24912,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'eloquence' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "7z",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -23803,9 +24966,11 @@
       "viability": "Medium \u2013 evaluate data reuse",
       "notes": "Contains voice or language assets (keyword 'eloq').",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "zip",
         "category": "Voice/data archive",
         "priority_tags": [
+          "has_synth_hint",
           "voice_or_language_pack"
         ]
       }
@@ -23820,9 +24985,11 @@
       "viability": "Medium \u2013 evaluate data reuse",
       "notes": "Contains voice or language assets (keyword 'eloq').",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "zip",
         "category": "Voice/data archive",
         "priority_tags": [
+          "has_synth_hint",
           "voice_or_language_pack"
         ]
       }
@@ -24255,9 +25422,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'voice' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "IBM TTS",
         "extension": "7z",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -24273,9 +25442,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "IBM TTS",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24491,9 +25662,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24508,9 +25681,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24525,9 +25700,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24542,9 +25719,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24559,9 +25738,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24576,9 +25757,19 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "language_hints": [
+          "Ukrainian"
+        ],
+        "language_tags": [
+          "uk"
+        ],
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_language_hint",
+          "has_language_tag",
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24593,9 +25784,19 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "language_hints": [
+          "Ukrainian"
+        ],
+        "language_tags": [
+          "uk"
+        ],
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_language_hint",
+          "has_language_tag",
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24610,9 +25811,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24627,9 +25830,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24644,9 +25849,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24661,9 +25868,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24678,9 +25887,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24695,9 +25906,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24712,9 +25925,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24729,9 +25944,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24780,9 +25997,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'ibm' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "IBM TTS",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -24881,9 +26100,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -24943,9 +26164,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'voice' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate",
           "voice_or_language_pack"
         ]
@@ -24964,10 +26187,14 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -24985,10 +26212,14 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25006,10 +26237,14 @@
         "language_hints": [
           "Italian"
         ],
+        "language_tags": [
+          "it"
+        ],
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25027,10 +26262,14 @@
         "language_hints": [
           "Spanish"
         ],
+        "language_tags": [
+          "es"
+        ],
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25048,10 +26287,14 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25066,9 +26309,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'realspeak' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "RealSpeak",
         "extension": "7z",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -25100,9 +26345,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 4",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25117,9 +26364,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 4",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25134,9 +26383,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25151,9 +26402,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'ibm' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "IBM TTS",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -25185,9 +26438,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25202,9 +26457,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25222,10 +26479,14 @@
         "language_hints": [
           "Italian"
         ],
+        "language_tags": [
+          "it"
+        ],
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25243,10 +26504,14 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25264,10 +26529,14 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25282,9 +26551,23 @@
       "viability": "Fix manifest entry",
       "notes": "Link appears truncated from the HTML index; verify the original filename on the mirror.",
       "metadata": {
+        "language_hints": [
+          "English",
+          "French",
+          "Italian"
+        ],
+        "language_tags": [
+          "en",
+          "fr",
+          "it"
+        ],
+        "synth_hint": "RealSpeak",
         "extension": ">",
         "category": "Truncated link",
         "priority_tags": [
+          "has_language_hint",
+          "has_language_tag",
+          "has_synth_hint",
           "index_listing"
         ]
       }
@@ -25302,10 +26585,14 @@
         "language_hints": [
           "French"
         ],
+        "language_tags": [
+          "fr"
+        ],
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25323,10 +26610,14 @@
         "language_hints": [
           "German"
         ],
+        "language_tags": [
+          "de"
+        ],
         "extension": "msi",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25494,9 +26785,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25650,9 +26943,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25667,9 +26962,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25684,9 +26981,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25701,9 +27000,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25718,9 +27019,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -25735,9 +27038,17 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "language_hints": [
+          "English"
+        ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25787,10 +27098,14 @@
         "language_hints": [
           "English"
         ],
+        "language_tags": [
+          "en"
+        ],
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
           "installer_payload"
         ]
       }
@@ -25870,9 +27185,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -26302,9 +27619,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -26322,10 +27641,16 @@
         "language_hints": [
           "Polish"
         ],
+        "language_tags": [
+          "pl"
+        ],
+        "synth_hint": "RealSpeak",
         "extension": "7z",
         "category": "Source/tooling archive",
         "priority_tags": [
           "has_language_hint",
+          "has_language_tag",
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -26504,9 +27829,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "IBM TTS",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -26521,9 +27848,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "IBM TTS",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -26538,9 +27867,11 @@
       "viability": "Medium \u2013 investigate resources",
       "notes": "Executable installer \u2013 may contain DLLs or lexicon data.",
       "metadata": {
+        "synth_hint": "IBM TTS",
         "extension": "exe",
         "category": "Binary installer",
         "priority_tags": [
+          "has_synth_hint",
           "installer_payload"
         ]
       }
@@ -26678,9 +28009,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "MBROLA",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -26889,9 +28222,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "Microsoft SAPI 5",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -26943,9 +28278,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -26961,9 +28298,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -26979,9 +28318,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -26997,9 +28338,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "FonixTalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27015,9 +28358,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27033,9 +28378,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27051,9 +28398,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27069,9 +28418,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27105,9 +28456,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27123,9 +28476,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27141,9 +28496,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27159,9 +28516,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27177,9 +28536,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27339,9 +28700,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "DECtalk",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27357,9 +28720,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27375,9 +28740,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27393,9 +28760,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27411,9 +28780,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27429,9 +28800,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "Eloquence",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27465,9 +28838,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27483,9 +28858,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27501,9 +28878,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27519,9 +28898,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "eSpeak NG",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27555,9 +28936,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "NV Speech Player",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27573,9 +28956,11 @@
       "viability": "High \u2013 inspect for portable code",
       "notes": "Keyword 'speechplayer' indicates embedded source or tooling.",
       "metadata": {
+        "synth_hint": "NV Speech Player",
         "extension": "zip",
         "category": "Source/tooling archive",
         "priority_tags": [
+          "has_synth_hint",
           "tooling_candidate"
         ]
       }
@@ -27590,9 +28975,11 @@
       "viability": "High \u2013 unpack for Python code",
       "notes": "NVDA add-on bundle likely contains Python driver code.",
       "metadata": {
+        "synth_hint": "NV Speech Player",
         "extension": "nvda-addon",
         "category": "NVDA add-on package",
         "priority_tags": [
+          "has_synth_hint",
           "nvda_addon_bundle",
           "tooling_candidate"
         ]
@@ -27693,37 +29080,72 @@
       "Mono": 7
     },
     "languages": {
-      "Polish": 2,
+      "Polish": 3,
       "Greek": 6,
-      "Swedish": 6,
+      "Swedish": 11,
       "Turkish": 1,
-      "Dutch": 7,
-      "English": 21,
-      "Spanish": 11,
-      "French": 12,
+      "Dutch": 9,
+      "English": 28,
+      "Spanish": 13,
+      "French": 15,
       "Danish": 2,
       "Mexican Spanish": 6,
       "Russian": 5,
       "Japanese": 5,
-      "Hindi": 1,
-      "Portuguese": 4,
+      "Hindi": 4,
+      "Portuguese": 5,
       "Chinese": 7,
       "Mandarin": 1,
       "Finnish": 1,
       "Irish": 1,
       "Korean": 7,
       "Norwegian": 2,
-      "Catalan": 1,
-      "Italian": 7,
+      "Catalan": 3,
+      "Italian": 9,
       "Icelandic": 1,
       "Brazilian Portuguese": 1,
       "Indian English": 1,
       "Cantonese": 1,
-      "German": 15,
+      "German": 16,
       "Taiwanese Mandarin": 1,
       "Czech": 4,
-      "Arabic": 4,
-      "Romanian": 4
+      "Arabic": 5,
+      "Romanian": 6,
+      "Ukrainian": 2
+    },
+    "language_tags": {
+      "pl": 3,
+      "el": 6,
+      "sv": 11,
+      "tr": 1,
+      "nl": 9,
+      "en": 28,
+      "es": 13,
+      "fr": 15,
+      "da": 2,
+      "es-MX": 6,
+      "ru": 5,
+      "ja": 5,
+      "hi": 4,
+      "pt": 5,
+      "zh": 7,
+      "zh-CN": 1,
+      "fi": 1,
+      "ga": 1,
+      "ko": 7,
+      "nb": 2,
+      "ca": 3,
+      "it": 9,
+      "is": 1,
+      "pt-BR": 1,
+      "en-IN": 1,
+      "yue": 1,
+      "de": 16,
+      "zh-TW": 1,
+      "cs": 4,
+      "ar": 5,
+      "ro": 6,
+      "uk": 2
     },
     "categories": {
       "Generic archive": 154,
@@ -27755,12 +29177,14 @@
     },
     "priority_tags": {
       "tooling_candidate": 305,
+      "has_synth_hint": 307,
       "voice_or_language_pack": 186,
       "index_listing": 5,
       "installer_payload": 218,
       "nvda_addon_bundle": 55,
       "has_platform_hint": 123,
-      "has_language_hint": 121,
+      "has_language_hint": 153,
+      "has_language_tag": 153,
       "has_sample_rate_hint": 123,
       "audio_demo": 868,
       "documentation": 4,
@@ -27823,6 +29247,41 @@
       "Yannick": 1,
       "Zuzana": 1,
       "ASSIST": 1
+    },
+    "synth_hints": {
+      "eSpeak NG": 214,
+      "DECtalk": 42,
+      "RealSpeak": 5,
+      "MBROLA": 4,
+      "Eloquence": 18,
+      "Microsoft SAPI 4": 3,
+      "Microsoft SAPI 5": 10,
+      "IBM TTS": 7,
+      "FonixTalk": 1,
+      "NV Speech Player": 3
+    },
+    "families": {
+      "CircumReality": 2,
+      "DECtalk%204.99": 4,
+      "DECtalk%20Build%20Tools": 10,
+      "DECtalk%20source%20code%20archive": 11,
+      "RealSpeak": 53,
+      "Speech%20Synthesis%20Demonstrations": 857,
+      "SpeechCD": 1,
+      "dectalk%20software%20and%20manual": 21,
+      "espeak": 234,
+      "mbrola": 76,
+      "microsoft%20speech%20platform": 1,
+      "misc": 19,
+      "narrator": 2,
+      "old_software_synths": 72,
+      "pwwebspeak": 2,
+      "sapi_voices": 124,
+      "speechPlayer%20in%20espeak": 1,
+      "ssil": 1,
+      "synthesizers%20for%20nvda": 58,
+      "tts%20preschool": 1,
+      "ttsbox": 2
     },
     "platforms": {
       "Platform: Windows": 80,

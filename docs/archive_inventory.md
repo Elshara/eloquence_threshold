@@ -89,37 +89,75 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 
 | Language | Archives |
 | --- | ---: |
-| English | 21 |
-| German | 15 |
-| French | 12 |
-| Spanish | 11 |
+| English | 28 |
+| German | 16 |
+| French | 15 |
+| Spanish | 13 |
+| Swedish | 11 |
+| Dutch | 9 |
+| Italian | 9 |
 | Chinese | 7 |
-| Dutch | 7 |
-| Italian | 7 |
 | Korean | 7 |
 | Greek | 6 |
 | Mexican Spanish | 6 |
-| Swedish | 6 |
+| Romanian | 6 |
+| Arabic | 5 |
 | Japanese | 5 |
+| Portuguese | 5 |
 | Russian | 5 |
-| Arabic | 4 |
 | Czech | 4 |
-| Portuguese | 4 |
-| Romanian | 4 |
+| Hindi | 4 |
+| Catalan | 3 |
+| Polish | 3 |
 | Danish | 2 |
 | Norwegian | 2 |
-| Polish | 2 |
+| Ukrainian | 2 |
 | Brazilian Portuguese | 1 |
 | Cantonese | 1 |
-| Catalan | 1 |
 | Finnish | 1 |
-| Hindi | 1 |
 | Icelandic | 1 |
 | Indian English | 1 |
 | Irish | 1 |
 | Mandarin | 1 |
 | Taiwanese Mandarin | 1 |
 | Turkish | 1 |
+
+## Language tags
+
+| BCP-47 tag | Archives |
+| --- | ---: |
+| en | 28 |
+| de | 16 |
+| fr | 15 |
+| es | 13 |
+| sv | 11 |
+| it | 9 |
+| nl | 9 |
+| ko | 7 |
+| zh | 7 |
+| el | 6 |
+| es-MX | 6 |
+| ro | 6 |
+| ar | 5 |
+| ja | 5 |
+| pt | 5 |
+| ru | 5 |
+| cs | 4 |
+| hi | 4 |
+| ca | 3 |
+| pl | 3 |
+| da | 2 |
+| nb | 2 |
+| uk | 2 |
+| en-IN | 1 |
+| fi | 1 |
+| ga | 1 |
+| is | 1 |
+| pt-BR | 1 |
+| tr | 1 |
+| yue | 1 |
+| zh-CN | 1 |
+| zh-TW | 1 |
 
 ## Viability summary
 
@@ -143,12 +181,14 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | Priority signal | Archives |
 | --- | ---: |
 | audio_demo | 868 |
+| has_synth_hint | 307 |
 | tooling_candidate | 305 |
 | installer_payload | 218 |
 | voice_or_language_pack | 186 |
+| has_language_hint | 153 |
+| has_language_tag | 153 |
 | has_platform_hint | 123 |
 | has_sample_rate_hint | 123 |
-| has_language_hint | 121 |
 | nvda_addon_bundle | 55 |
 | has_channel_hint | 7 |
 | has_version_hint | 6 |
@@ -214,6 +254,21 @@ This inventory classifies each DataJake TTS archive so Eloquence contributors ca
 | Ya | 1 |
 | Yannick | 1 |
 | Zuzana | 1 |
+
+## Synthesizer hint index
+
+| Synthesizer | Archives |
+| --- | ---: |
+| eSpeak NG | 214 |
+| DECtalk | 42 |
+| Eloquence | 18 |
+| Microsoft SAPI 5 | 10 |
+| IBM TTS | 7 |
+| RealSpeak | 5 |
+| MBROLA | 4 |
+| Microsoft SAPI 4 | 3 |
+| NV Speech Player | 3 |
+| FonixTalk | 1 |
 
 ## Platform and architecture hints
 
