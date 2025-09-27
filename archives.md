@@ -18,6 +18,10 @@ full Markdown catalogue (`docs/archive_inventory.md`).
    family can expand Eloquence voices, phoneme inventories, or NVDA configuration tooling.
 5. **Review viability tiers.** Use the manifest's `Viability summary` to prioritise new phoneme/lexicon candidates and flag
    truncated links that require manual repair before mirroring.
+6. **Link scenes back to provenance.** Refresh `docs/voice_scene_catalog.{json,md}` with
+   `python tools/export_voice_scenes.py --json docs/voice_scene_catalog.json --markdown docs/voice_scene_catalog.md --print` so
+   every curated NVDA voice scene documents which DataJake archives (eSpeak NG bundles, DECtalk installers, NV Speech Player
+   toolkits) informed the phoneme EQ and slider presets.
 
 ## High-value code collections
 
@@ -36,6 +40,8 @@ See `docs/archive_code_targets.md` for synthesizer-specific porting notes and ex
 - `docs/archive_inventory.md` now surfaces `File extension index`, `Sample rate hints`, `Language hints`, a `Viability summary`, and a new `Priority tag summary` so we can prioritise IPA dictionaries, lexicons, and other phoneme-friendly payloads before downloading redundant demo audio. Documentation fragments without extensions are now caught automatically, keeping provenance tidy.
 - `docs/archive_inventory.json` stores the same catalogue plus machine-readable summaries under the top-level `summaries` key. Each record now includes a `metadata` block with decoded filenames, detected sample rates, language hints, voice names (where present), inferred viability tiers, and priority tags so automated importers understand whether an archive contains tooling, NVDA add-on code, or phoneme-ready dictionaries.
 - After updating `docs/datajake_archive_urls.txt`, rerun `python tools/catalog_datajake_archives.py` and scan the extension totals for new `.lex`, `.ipa`, or language-tagged archives that warrant fast-tracked extraction into `phoneme_catalog.py` or `language_profiles.py`.
+- When a new archive directly informs a curated scene, capture the impact inside `docs/voice_scene_catalog.md` so NVDA testers
+  can trace how phoneme EQ macros, slider tweaks, and language targets map back to DataJake.
 
 
 ## Scrap categories

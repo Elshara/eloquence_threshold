@@ -240,6 +240,15 @@ Pronunciation dictionaries alone cannot keep up with the creative ways people mi
 
 Our aim is that any character in the Unicode standard—and any combination that writers invent—can be spoken accurately by selecting the right language profile, tweaking phoneme replacements, or loading a specialised voice template. As we fold in more eSpeak NG, DECtalk, and community archives, we will continue publishing coverage snapshots and inviting specialists to fill the remaining gaps.
 
+### Curated voice scenes from DataJake archives
+The new **voice scene catalog** bridges our phoneme customiser with the highest-value tooling mirrored on DataJake. Run
+`python tools/export_voice_scenes.py --json docs/voice_scene_catalog.json --markdown docs/voice_scene_catalog.md --print`
+after adjusting any curated scene to regenerate the Markdown/JSON bundle. Each scene pairs NVDA’s extended sliders with
+phoneme EQ templates inspired by eSpeak NG clarity packs, DECtalk/Fonix warmth, or NV Speech Player hybrids so keyboard users
+can audition radically different textures without leaving the Speech dialog. The catalog highlights which DataJake archives
+(for example, eSpeak NG release zips, DECtalk installers, and NV Speech Player SDK snapshots) inform every preset, making it
+easy to trace provenance when porting IPA tables, `.dic` lexicons, or `.syn` voices back into Eloquence.
+
 ### Cross-platform packaging roadmap
 Eloquence Threshold remains focused on NVDA today, but the shared data catalogue is being curated so other screen readers can reuse it without redundant reverse engineering. Our packaging goals are:
 

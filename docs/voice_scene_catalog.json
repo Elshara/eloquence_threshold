@@ -1,0 +1,664 @@
+[
+  {
+    "name": "DataJake eSpeak NG clarity bridge",
+    "description": "Blend the eSpeak NG articulation stacks mirrored in DataJake's mirrors with Eloquence's smoother formants so NVDA users can toggle between classic and hybrid fricatives.",
+    "metadata": {
+      "tags": [
+        "clarity",
+        "espeak-ng",
+        "nvda",
+        "phoneme"
+      ],
+      "archiveSources": [
+        "docs/archive_inventory.json#eSpeak Portible With speechPlayer.zip",
+        "docs/archive_inventory.json#espeak-ng-1.52.0.zip"
+      ],
+      "languageFocus": [
+        "en",
+        "multi"
+      ],
+      "sampleRateHz": 48000.0,
+      "headroomHz": 24000.0
+    },
+    "configuration": {
+      "advancedVoiceParameters": {
+        "emphasis": 132,
+        "stress": 120,
+        "timbre": 112,
+        "tone": 100,
+        "pitchHeight": 100,
+        "vocalLayers": 118,
+        "plosiveImpact": 122,
+        "overtones": 100,
+        "sibilantClarity": 148,
+        "subtones": 100,
+        "nasalBalance": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 100,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "perPhonemeEq": {
+        "S": [
+          {
+            "lowHz": 4200.0,
+            "highHz": 8800.0,
+            "gainDb": 3.5,
+            "filterType": "peaking",
+            "q": 0.46855341437729586
+          },
+          {
+            "lowHz": 8800.0,
+            "highHz": 16000.0,
+            "gainDb": 2.0,
+            "filterType": "highShelf",
+            "q": 0.7
+          }
+        ],
+        "Z": [
+          {
+            "lowHz": 3600.0,
+            "highHz": 7800.0,
+            "gainDb": 2.4,
+            "filterType": "peaking",
+            "q": 0.4482386481693319
+          },
+          {
+            "lowHz": 7800.0,
+            "highHz": 15000.0,
+            "gainDb": 1.8,
+            "filterType": "highShelf",
+            "q": 0.7
+          }
+        ],
+        "T": [
+          {
+            "lowHz": 1500.0,
+            "highHz": 4800.0,
+            "gainDb": 2.8,
+            "filterType": "bandPass",
+            "q": 1.8
+          }
+        ],
+        "AH": [
+          {
+            "lowHz": 520.0,
+            "highHz": 1300.0,
+            "gainDb": 1.6,
+            "filterType": "peaking",
+            "q": 0.378235398683015
+          }
+        ],
+        "IY": [
+          {
+            "lowHz": 260.0,
+            "highHz": 2200.0,
+            "gainDb": 1.4,
+            "filterType": "peaking",
+            "q": 0.16228918659010852
+          }
+        ]
+      },
+      "limits": {
+        "lowHzMinimum": 1.0,
+        "highHzMaximum": 24000.0,
+        "gainDbMinimum": -24.0,
+        "gainDbMaximum": 12.0
+      },
+      "enginePayload": [
+        {
+          "low_hz": 2200.0,
+          "high_hz": 5200.0,
+          "gain_db": 1.92,
+          "filter_type": "peaking",
+          "q": 0.4028982568283963
+        },
+        {
+          "low_hz": 1800.0,
+          "high_hz": 4000.0,
+          "gain_db": 1.3,
+          "filter_type": "peaking",
+          "q": 0.4340266122938582
+        },
+        {
+          "low_hz": 500.0,
+          "high_hz": 1900.0,
+          "gain_db": 0.96,
+          "filter_type": "peaking",
+          "q": 0.2596054781651037
+        },
+        {
+          "low_hz": 120.0,
+          "high_hz": 380.0,
+          "gain_db": 0.693,
+          "filter_type": "peaking",
+          "q": 0.3006677808461245
+        },
+        {
+          "low_hz": 2400.0,
+          "high_hz": 5200.0,
+          "gain_db": 0.99,
+          "filter_type": "peaking",
+          "q": 0.4482386481693319
+        },
+        {
+          "low_hz": 900.0,
+          "high_hz": 2200.0,
+          "gain_db": 1.7424000000000002,
+          "filter_type": "peaking",
+          "q": 0.38774519908058414
+        },
+        {
+          "low_hz": 2200.0,
+          "high_hz": 3600.0,
+          "gain_db": 1.584,
+          "filter_type": "peaking",
+          "q": 0.7037363219710913
+        },
+        {
+          "low_hz": 5200.0,
+          "high_hz": 9000.0,
+          "gain_db": 3.9359999999999995,
+          "filter_type": "peaking",
+          "q": 0.631781081518257
+        },
+        {
+          "low_hz": 9000.0,
+          "high_hz": 14000.0,
+          "gain_db": 2.7551999999999994,
+          "filter_type": "peaking",
+          "q": 0.7843999533585828
+        },
+        {
+          "low_hz": 4200.0,
+          "high_hz": 8800.0,
+          "gain_db": 3.5,
+          "filter_type": "peaking",
+          "q": 0.46855341437729586
+        },
+        {
+          "low_hz": 8800.0,
+          "high_hz": 16000.0,
+          "gain_db": 2.0,
+          "filter_type": "highShelf",
+          "q": 0.7
+        },
+        {
+          "low_hz": 3600.0,
+          "high_hz": 7800.0,
+          "gain_db": 2.4,
+          "filter_type": "peaking",
+          "q": 0.4482386481693319
+        },
+        {
+          "low_hz": 7800.0,
+          "high_hz": 15000.0,
+          "gain_db": 1.8,
+          "filter_type": "highShelf",
+          "q": 0.7
+        },
+        {
+          "low_hz": 1500.0,
+          "high_hz": 4800.0,
+          "gain_db": 2.8,
+          "filter_type": "bandPass",
+          "q": 1.8
+        },
+        {
+          "low_hz": 520.0,
+          "high_hz": 1300.0,
+          "gain_db": 1.6,
+          "filter_type": "peaking",
+          "q": 0.378235398683015
+        },
+        {
+          "low_hz": 260.0,
+          "high_hz": 2200.0,
+          "gain_db": 1.4,
+          "filter_type": "peaking",
+          "q": 0.16228918659010852
+        }
+      ],
+      "headroomHz": 24000.0
+    }
+  },
+  {
+    "name": "DataJake DECtalk heritage warmth",
+    "description": "Project the warm DECtalk/Fonix formant emphasis captured in DataJake's installers onto Eloquence so NVDA readers chasing Perfect Paul or Rich Paul textures retain mellow vowels.",
+    "metadata": {
+      "tags": [
+        "dectalk",
+        "fonix",
+        "nvda",
+        "warmth"
+      ],
+      "archiveSources": [
+        "docs/archive_inventory.json#DECtalk English 4.61.exe",
+        "docs/archive_inventory.json#DECtalk v4.61 SDK.iso",
+        "docs/archive_inventory.json#FonixTalk-1.0.0.zip"
+      ],
+      "languageFocus": [
+        "en",
+        "es",
+        "pt"
+      ],
+      "sampleRateHz": 44100.0,
+      "headroomHz": 22050.0
+    },
+    "configuration": {
+      "advancedVoiceParameters": {
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 94,
+        "pitchHeight": 100,
+        "vocalLayers": 100,
+        "plosiveImpact": 100,
+        "overtones": 100,
+        "sibilantClarity": 100,
+        "subtones": 100,
+        "nasalBalance": 100,
+        "vocalRange": 100,
+        "smoothness": 128,
+        "whisper": 100,
+        "inflectionContour": 100,
+        "roughnessControl": 86,
+        "headSizeContour": 118,
+        "macroVolume": 112,
+        "toneSize": 100,
+        "scopeDepth": 136
+      },
+      "perPhonemeEq": {
+        "AA": [
+          {
+            "lowHz": 360.0,
+            "highHz": 980.0,
+            "gainDb": 2.6,
+            "filterType": "peaking",
+            "q": 0.34607229064985534
+          },
+          {
+            "lowHz": 980.0,
+            "highHz": 2200.0,
+            "gainDb": -1.2,
+            "filterType": "peaking",
+            "q": 0.4285775990812873
+          }
+        ],
+        "AO": [
+          {
+            "lowHz": 320.0,
+            "highHz": 880.0,
+            "gainDb": 2.2,
+            "filterType": "peaking",
+            "q": 0.3425991280542906
+          },
+          {
+            "lowHz": 880.0,
+            "highHz": 2100.0,
+            "gainDb": -1.0,
+            "filterType": "peaking",
+            "q": 0.3984654619995679
+          }
+        ],
+        "UW": [
+          {
+            "lowHz": 260.0,
+            "highHz": 720.0,
+            "gainDb": 2.0,
+            "filterType": "peaking",
+            "q": 0.3402551938980584
+          },
+          {
+            "lowHz": 720.0,
+            "highHz": 1800.0,
+            "gainDb": -1.4,
+            "filterType": "peaking",
+            "q": 0.378235398683015
+          }
+        ],
+        "R": [
+          {
+            "lowHz": 320.0,
+            "highHz": 1600.0,
+            "gainDb": 1.2,
+            "filterType": "bandPass",
+            "q": 1.6
+          }
+        ]
+      },
+      "limits": {
+        "lowHzMinimum": 1.0,
+        "highHzMaximum": 22050.0,
+        "gainDbMinimum": -24.0,
+        "gainDbMaximum": 12.0
+      },
+      "enginePayload": [
+        {
+          "low_hz": 1400.0,
+          "high_hz": 3200.0,
+          "gain_db": -0.44999999999999996,
+          "filter_type": "peaking",
+          "q": 0.41923620802814376
+        },
+        {
+          "low_hz": 4200.0,
+          "high_hz": 14000.0,
+          "gain_db": -2.24,
+          "filter_type": "peaking",
+          "q": 0.28785832124672245
+        },
+        {
+          "low_hz": 2600.0,
+          "high_hz": 8200.0,
+          "gain_db": -0.9800000000000001,
+          "filter_type": "peaking",
+          "q": 0.30172970418498096
+        },
+        {
+          "low_hz": 260.0,
+          "high_hz": 520.0,
+          "gain_db": 0.7605,
+          "filter_type": "peaking",
+          "q": 0.5
+        },
+        {
+          "low_hz": 820.0,
+          "high_hz": 1500.0,
+          "gain_db": 1.17,
+          "filter_type": "peaking",
+          "q": 0.5738771011269095
+        },
+        {
+          "low_hz": 2200.0,
+          "high_hz": 3200.0,
+          "gain_db": -0.46799999999999997,
+          "filter_type": "peaking",
+          "q": 0.9249523598468058
+        },
+        {
+          "low_hz": 90.0,
+          "high_hz": 12000.0,
+          "gain_db": 0.54,
+          "filter_type": "peaking",
+          "q": 0.07083262930781413
+        },
+        {
+          "low_hz": 200.0,
+          "high_hz": 820.0,
+          "gain_db": 2.34,
+          "filter_type": "peaking",
+          "q": 0.2456249396609522
+        },
+        {
+          "low_hz": 360.0,
+          "high_hz": 980.0,
+          "gain_db": 2.6,
+          "filter_type": "peaking",
+          "q": 0.34607229064985534
+        },
+        {
+          "low_hz": 980.0,
+          "high_hz": 2200.0,
+          "gain_db": -1.2,
+          "filter_type": "peaking",
+          "q": 0.4285775990812873
+        },
+        {
+          "low_hz": 320.0,
+          "high_hz": 880.0,
+          "gain_db": 2.2,
+          "filter_type": "peaking",
+          "q": 0.3425991280542906
+        },
+        {
+          "low_hz": 880.0,
+          "high_hz": 2100.0,
+          "gain_db": -1.0,
+          "filter_type": "peaking",
+          "q": 0.3984654619995679
+        },
+        {
+          "low_hz": 260.0,
+          "high_hz": 720.0,
+          "gain_db": 2.0,
+          "filter_type": "peaking",
+          "q": 0.3402551938980584
+        },
+        {
+          "low_hz": 720.0,
+          "high_hz": 1800.0,
+          "gain_db": -1.4,
+          "filter_type": "peaking",
+          "q": 0.378235398683015
+        },
+        {
+          "low_hz": 320.0,
+          "high_hz": 1600.0,
+          "gain_db": 1.2,
+          "filter_type": "bandPass",
+          "q": 1.6
+        }
+      ],
+      "headroomHz": 22050.0
+    }
+  },
+  {
+    "name": "NV Speech Player hybrid expressiveness",
+    "description": "Fuse NV Speech Player's layered plosive and overtone curves with Eloquence so NVDA's expressiveness sliders mirror Microsoft's hybrid talker energy without abandoning Eloquence's speed.",
+    "metadata": {
+      "tags": [
+        "expressive",
+        "hybrid",
+        "nvda",
+        "nvspeechplayer"
+      ],
+      "archiveSources": [
+        "docs/archive_inventory.json#NV Speech Player SDK.zip",
+        "docs/archive_inventory.json#NVDA Speech Player tooling.tar.gz"
+      ],
+      "languageFocus": [
+        "en",
+        "hi",
+        "zh"
+      ],
+      "sampleRateHz": 48000.0,
+      "headroomHz": 24000.0
+    },
+    "configuration": {
+      "advancedVoiceParameters": {
+        "emphasis": 100,
+        "stress": 100,
+        "timbre": 100,
+        "tone": 124,
+        "pitchHeight": 100,
+        "vocalLayers": 142,
+        "plosiveImpact": 128,
+        "overtones": 138,
+        "sibilantClarity": 100,
+        "subtones": 100,
+        "nasalBalance": 100,
+        "vocalRange": 100,
+        "smoothness": 100,
+        "whisper": 100,
+        "inflectionContour": 134,
+        "roughnessControl": 100,
+        "headSizeContour": 100,
+        "macroVolume": 120,
+        "toneSize": 100,
+        "scopeDepth": 100
+      },
+      "perPhonemeEq": {
+        "K": [
+          {
+            "lowHz": 1800.0,
+            "highHz": 5200.0,
+            "gainDb": 3.0,
+            "filterType": "bandPass",
+            "q": 1.7
+          }
+        ],
+        "CH": [
+          {
+            "lowHz": 2200.0,
+            "highHz": 6800.0,
+            "gainDb": 3.4,
+            "filterType": "bandPass",
+            "q": 1.6
+          }
+        ],
+        "L": [
+          {
+            "lowHz": 180.0,
+            "highHz": 820.0,
+            "gainDb": 1.8,
+            "filterType": "peaking",
+            "q": 0.2285581588059352
+          },
+          {
+            "lowHz": 1800.0,
+            "highHz": 3600.0,
+            "gainDb": 1.4,
+            "filterType": "peaking",
+            "q": 0.5
+          }
+        ],
+        "ER": [
+          {
+            "lowHz": 360.0,
+            "highHz": 1600.0,
+            "gainDb": 1.6,
+            "filterType": "peaking",
+            "q": 0.23234167344972134
+          },
+          {
+            "lowHz": 2600.0,
+            "highHz": 4200.0,
+            "gainDb": 2.0,
+            "filterType": "peaking",
+            "q": 0.7226710683817261
+          }
+        ]
+      },
+      "limits": {
+        "lowHzMinimum": 1.0,
+        "highHzMaximum": 24000.0,
+        "gainDbMinimum": -24.0,
+        "gainDbMaximum": 12.0
+      },
+      "enginePayload": [
+        {
+          "low_hz": 1400.0,
+          "high_hz": 3200.0,
+          "gain_db": 1.7999999999999998,
+          "filter_type": "peaking",
+          "q": 0.41923620802814376
+        },
+        {
+          "low_hz": 120.0,
+          "high_hz": 380.0,
+          "gain_db": 1.617,
+          "filter_type": "peaking",
+          "q": 0.3006677808461245
+        },
+        {
+          "low_hz": 2400.0,
+          "high_hz": 5200.0,
+          "gain_db": 2.31,
+          "filter_type": "peaking",
+          "q": 0.4482386481693319
+        },
+        {
+          "low_hz": 900.0,
+          "high_hz": 2200.0,
+          "gain_db": 2.217600000000001,
+          "filter_type": "peaking",
+          "q": 0.38774519908058414
+        },
+        {
+          "low_hz": 2200.0,
+          "high_hz": 3600.0,
+          "gain_db": 2.0160000000000005,
+          "filter_type": "peaking",
+          "q": 0.7037363219710913
+        },
+        {
+          "low_hz": 5800.0,
+          "high_hz": 16000.0,
+          "gain_db": 4.5600000000000005,
+          "filter_type": "peaking",
+          "q": 0.3415423959527238
+        },
+        {
+          "low_hz": 110.0,
+          "high_hz": 320.0,
+          "gain_db": 0.9350000000000002,
+          "filter_type": "peaking",
+          "q": 0.3245555381045321
+        },
+        {
+          "low_hz": 2200.0,
+          "high_hz": 4200.0,
+          "gain_db": 1.7000000000000002,
+          "filter_type": "peaking",
+          "q": 0.5359712815655407
+        },
+        {
+          "low_hz": 90.0,
+          "high_hz": 12000.0,
+          "gain_db": 0.9,
+          "filter_type": "peaking",
+          "q": 0.07083262930781413
+        },
+        {
+          "low_hz": 1800.0,
+          "high_hz": 5200.0,
+          "gain_db": 3.0,
+          "filter_type": "bandPass",
+          "q": 1.7
+        },
+        {
+          "low_hz": 2200.0,
+          "high_hz": 6800.0,
+          "gain_db": 3.4,
+          "filter_type": "bandPass",
+          "q": 1.6
+        },
+        {
+          "low_hz": 180.0,
+          "high_hz": 820.0,
+          "gain_db": 1.8,
+          "filter_type": "peaking",
+          "q": 0.2285581588059352
+        },
+        {
+          "low_hz": 1800.0,
+          "high_hz": 3600.0,
+          "gain_db": 1.4,
+          "filter_type": "peaking",
+          "q": 0.5
+        },
+        {
+          "low_hz": 360.0,
+          "high_hz": 1600.0,
+          "gain_db": 1.6,
+          "filter_type": "peaking",
+          "q": 0.23234167344972134
+        },
+        {
+          "low_hz": 2600.0,
+          "high_hz": 4200.0,
+          "gain_db": 2.0,
+          "filter_type": "peaking",
+          "q": 0.7226710683817261
+        }
+      ],
+      "headroomHz": 24000.0
+    }
+  }
+]

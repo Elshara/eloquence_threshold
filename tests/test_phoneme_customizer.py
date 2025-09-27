@@ -8,7 +8,12 @@ from __future__ import annotations
 
 import unittest
 
-from phoneme_customizer import PhonemeCustomizer, PhonemeEqBand
+from phoneme_customizer import (
+    PhonemeCustomizer,
+    PhonemeEqBand,
+    VoiceScene,
+    build_scene_snapshot,
+)
 from voice_parameters import ADVANCED_VOICE_PARAMETER_SPECS
 
 
@@ -144,6 +149,48 @@ class PhonemeCustomizerTests(unittest.TestCase):
         stored = payload["S"][0]
         self.assertEqual(stored["filterType"], "notch")
         self.assertAlmostEqual(stored["q"], band.q, places=3)
+
+    def test_clone_and_reset_restore_independent_state(self) -> None:
+        self.customizer.set_global_parameter("emphasis", 150)
+        clone = self.customizer.clone()
+        clone.set_global_parameter("emphasis", 80)
+        self.assertNotEqual(
+            clone.global_parameter_value("emphasis"), self.customizer.global_parameter_value("emphasis")
+        )
+        clone.reset_to_defaults()
+        self.assertEqual(clone.global_parameter_value("emphasis"), ADVANCED_VOICE_PARAMETER_SPECS["emphasis"]["default"])
+
+    def test_build_configuration_snapshot_reports_limits(self) -> None:
+        self.customizer.set_band("S", 0, PhonemeEqBand(low_hz=600, high_hz=2600, gain_db=3.2))
+        snapshot = self.customizer.build_configuration_snapshot()
+        self.assertIn("advancedVoiceParameters", snapshot)
+        self.assertIn("perPhonemeEq", snapshot)
+        self.assertIn("enginePayload", snapshot)
+        limits = snapshot["limits"]
+        self.assertGreater(limits["highHzMaximum"], limits["lowHzMinimum"])
+
+    def test_build_scene_snapshot_applies_voice_scene(self) -> None:
+        scene = VoiceScene(
+            name="Unit test clarity",
+            description="Exercise the scene renderer",
+            sample_rate_hz=44100.0,
+            global_parameters={"emphasis": 140, "plosiveImpact": 128},
+            phoneme_overrides={
+                "S": [
+                    {"lowHz": 4200.0, "highHz": 8600.0, "gainDb": 3.1, "filterType": "peaking", "q": 1.1},
+                ]
+            },
+            tags=("espeak-ng", "nvda"),
+            archive_sources=("docs/archive_inventory.json#example",),
+            language_focus=("en", "multi"),
+        )
+        snapshot = build_scene_snapshot(scene)
+        config = snapshot["configuration"]
+        self.assertGreater(config["advancedVoiceParameters"]["emphasis"], 100)
+        self.assertIn("S", config["perPhonemeEq"])
+        metadata = snapshot["metadata"]
+        self.assertIn("espeak-ng", metadata["tags"])
+        self.assertEqual(metadata["sampleRateHz"], 44100.0)
 
 
 if __name__ == "__main__":
