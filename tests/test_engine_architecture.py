@@ -2,120 +2,16 @@
 
 from __future__ import annotations
 
-import ctypes
 import os
 import pathlib
 import sys
 import tempfile
-import types
 import unittest
 from unittest import mock
 
-if "audioop" not in sys.modules:
-    audioop_stub = types.ModuleType("audioop")
+from tests.nvda_test_stubs import install_basic_stubs
 
-    def _ratecv(data, width, channels, in_rate, out_rate, state):
-        return data, state
-
-    audioop_stub.ratecv = _ratecv  # type: ignore[attr-defined]
-    sys.modules["audioop"] = audioop_stub
-
-if "versionInfo" not in sys.modules:
-    version_info_stub = types.ModuleType("versionInfo")
-    version_info_stub.version_year = 2025
-    sys.modules["versionInfo"] = version_info_stub
-
-if "config" not in sys.modules:
-    config_stub = types.ModuleType("config")
-    config_stub.conf = {
-        "audio": {},
-        "speech": {"outputDevice": None, "eci": {"voice": ""}},
-    }
-    sys.modules["config"] = config_stub
-
-if not hasattr(ctypes, "WinDLL"):
-    class _StubFunction:
-        def __call__(self, *args, **kwargs):  # pragma: no cover - stub
-            return 0
-
-    class _StubLibrary:
-        def __getattr__(self, _attr):  # pragma: no cover - stub
-            return _StubFunction()
-
-    ctypes.WinDLL = lambda *args, **kwargs: _StubLibrary()  # type: ignore[attr-defined]
-
-if not hasattr(ctypes, "GUID"):
-    class _StubGUID(ctypes.Structure):
-        _fields_ = [
-            ("Data1", ctypes.c_ulong),
-            ("Data2", ctypes.c_ushort),
-            ("Data3", ctypes.c_ushort),
-            ("Data4", ctypes.c_ubyte * 8),
-        ]
-
-    ctypes.GUID = _StubGUID  # type: ignore[attr-defined]
-
-if not hasattr(ctypes, "WINFUNCTYPE"):
-    ctypes.WINFUNCTYPE = ctypes.CFUNCTYPE  # type: ignore[attr-defined]
-
-if not hasattr(ctypes, "wintypes"):
-    ctypes.wintypes = types.ModuleType("wintypes")  # type: ignore[attr-defined]
-
-wintypes = ctypes.wintypes
-_wintype_defaults = {
-    "LRESULT": ctypes.c_long,
-    "HWND": ctypes.c_void_p,
-    "UINT": ctypes.c_uint,
-    "WPARAM": ctypes.c_ulong,
-    "LPARAM": ctypes.c_long,
-    "DWORD": ctypes.c_ulong,
-    "WORD": ctypes.c_ushort,
-    "BOOL": ctypes.c_int,
-    "HANDLE": ctypes.c_void_p,
-    "LPCWSTR": ctypes.c_wchar_p,
-    "LPWSTR": ctypes.c_wchar_p,
-}
-for _name, _ctype in _wintype_defaults.items():
-    if not hasattr(wintypes, _name):
-        setattr(wintypes, _name, _ctype)
-
-if not hasattr(wintypes, "MSG"):
-    class _MSG(ctypes.Structure):  # pragma: no cover - stub
-        _fields_ = [
-            ("hwnd", ctypes.c_void_p),
-            ("message", ctypes.c_uint),
-            ("wParam", ctypes.c_ulong),
-            ("lParam", ctypes.c_long),
-            ("time", ctypes.c_ulong),
-            ("pt_x", ctypes.c_long),
-            ("pt_y", ctypes.c_long),
-        ]
-
-    wintypes.MSG = _MSG  # type: ignore[attr-defined]
-
-if "nvwave" not in sys.modules:
-    nvwave_stub = types.ModuleType("nvwave")
-
-    class _StubWavePlayer:
-        MIN_BUFFER_MS = 0
-
-        def __init__(self, *args, **kwargs) -> None:
-            pass
-
-        def stop(self) -> None:  # pragma: no cover - stub
-            pass
-
-        def close(self) -> None:  # pragma: no cover - stub
-            pass
-
-        def idle(self) -> None:  # pragma: no cover - stub
-            pass
-
-        def feed(self, *_args, **_kwargs) -> None:  # pragma: no cover - stub
-            pass
-
-    nvwave_stub.WavePlayer = _StubWavePlayer  # type: ignore[attr-defined]
-    sys.modules["nvwave"] = nvwave_stub
+install_basic_stubs()
 
 import _eloquence
 
