@@ -100,6 +100,7 @@ python tools/report_language_progress.py --json docs/language_progress.json --ma
 python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print
 python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print
 python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print
+python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print
 python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print
 python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print
 ```

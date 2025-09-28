@@ -50,6 +50,8 @@ package new locales.
        --markdown docs/voice_language_matrix.md --print
    python tools/report_voice_parameters.py --json docs/voice_parameter_report.json \
        --markdown docs/voice_parameter_report.md --print
+   python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json \
+       --markdown docs/voice_frequency_matrix.md --print
    ```
 3. Asset summary dashboards for provenance tracking:
    ```bash
