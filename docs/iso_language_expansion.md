@@ -152,3 +152,34 @@ Additional locales tracked in [`docs/language_progress.md`](language_progress.md
 - Build conversion helpers that map NVDA manual punctuation notes into per-language symbol tables, unlocking faster seeding for over 120 ISO codes captured in the Wikipedia index.
 
 Contributors can reference this roadmap when proposing pull requests so reviews focus on data provenance, ISO/script accuracy, and how the change improves Eloquence for blind and low-vision NVDA users.
+
+## Eastern Europe and Caucasus integration sprint (October 2025)
+
+| ISO / tag | Script focus | Status | Notes |
+| --- | --- | --- | --- |
+| bg | Cyrillic (Bulgarian) | Developing | Cached *Bulgarian phonology* Wikipedia stress/voicing notes merged with DataJake MBROLA payloads; NVDA manual punctuation cues align with the loader’s Cyrillic handling. |
+| mk | Cyrillic (Macedonian) | Researching | Wikipedia vowel reduction datasets staged; GitHub transliteration scripts under CodeQL review before importing DataJake lexicon fragments. |
+| ka | Georgian (Mkhedruli) | Researching | Mkhedruli inventory catalogued; NVDA manual hyphenation tables queued to validate syllable segmentation prior to braille export support. |
+| hy | Armenian (Mesropian) | Researching | Leveraging Wikipedia digraph tables and DataJake `.dic` payloads; voice templates will mirror NV Speech Player **Tone size** defaults for pitch accent cues. |
+| az | Latin / Cyrillic / Arabic (Azerbaijani) | Planned | Tri-script transliteration utilities from GitHub staged; DataJake lexicons flagged for vowel harmony checks across script variants. |
+| kk | Cyrillic / Latin (Kazakh) | Planned | Wikipedia vowel harmony and ejective consonant data paired with NVDA documentation; DataJake archives under review for new `.dic` payloads. |
+| lt | Latin (Lithuanian) | Researching | Pitch accent metadata from Wikipedia combined with DataJake `.dic` payloads; NV Speech Player **Subtones** slider earmarked for calibration. |
+| lv | Latin (Latvian) | Researching | Tone/length tables from Wikipedia and NVDA punctuation exports staged; DataJake lexicons flagged for palatalisation heuristics. |
+
+### Frequency, phoneme, and speech parameter backlog
+
+- Harvest DataJake MBROLA captures for Bulgarian and Macedonian to calibrate NV Speech Player **Stress**, **Vocal layers**, and **Plosive impact** slider defaults; document comparisons in `docs/voice_parameter_report.md` after regenerating the report.
+- Feed Armenian and Georgian vowel/consonant length metadata into `phoneme_customizer.py` presets, ensuring 8–384 kHz frequency clamps align with the WASAPI-aware EQ handling recorded in [`docs/voice_parameter_report.md`](docs/voice_parameter_report.md).
+- Build pitch-accent validation scripts for Lithuanian and Latvian that leverage GitHub morphological corpora while exposing the derived bands to CodeQL so automation can detect missing slider annotations.
+
+### Dictionary and corpus integration tasks
+
+- Expand `docs/language_research_index.md` with the cached Wikipedia bibliographies used above and link each to the relevant DataJake `.dic` payload once extracted; refresh the index via `tools/summarize_language_assets.py` so provenance stays aligned.
+- Stage Azerbaijani and Kazakh lexicons from DataJake archives under `eloquence_data/` and run `python tools/report_language_maturity.py` to surface script-specific coverage gaps before packaging.
+- Coordinate NVDA manual updates for Mkhedruli, Armenian, and Cyrillic punctuation tables so the offline packaging playbook can reference consistent braille/hyphenation guidance.
+
+### Testing and packaging checkpoints
+
+- Validate the new locales against NVDA alpha-52762 nightly builds and `2025.3` stable installers using the cached audit reports.
+- Update `AGENTS.md` after each sprint to log the NVDA build numbers, CodeQL findings, and DataJake/GitHub/Wikipedia artefacts referenced when refreshing the Eastern Europe and Caucasus roadmap entries.
+
