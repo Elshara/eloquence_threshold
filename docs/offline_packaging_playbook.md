@@ -100,11 +100,16 @@ python tools/report_language_progress.py --json docs/language_progress.json --ma
 python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print
 python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print
 python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print
+python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print
+python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print
 ```
 
 The generated Markdown/JSON files power the README scorecards and provide a
 baseline for CodeQL checks that validate phoneme metadata, slider coverage, and
-EQ ranges across every locale.
+EQ ranges across every locale. The asset summary pairs with the maturity report
+to highlight locales that still lack coverage snapshots or voice templates, so
+offline packaging drills surface the remaining DataJake, Wikipedia, GitHub, and
+NVDA follow-ups before you archive a new `eloquence.nvda-addon` build.
 
 ## 5. Run quality gates
 
