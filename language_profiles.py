@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 from collections import Counter, OrderedDict
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -490,6 +491,47 @@ def _parse_language_profile(data: Dict[str, object]) -> Optional[LanguageProfile
     )
 
 
+def _normalize_text(value: str) -> str:
+    """Collapse internal whitespace and trim surrounding space."""
+
+    collapsed = re.sub(r"\s+", " ", value.strip())
+    return collapsed
+
+
+def _optional_text(entry: Dict[str, object], key: str) -> Optional[str]:
+    if key not in entry or entry[key] is None:
+        return None
+    text = _normalize_text(str(entry[key]))
+    return text or None
+
+
+def _iter_ipa_tokens(raw_ipa: object) -> Iterator[str]:
+    if isinstance(raw_ipa, str):
+        for token in raw_ipa.split():
+            cleaned = _normalize_text(token)
+            if cleaned:
+                yield cleaned
+        return
+    if isinstance(raw_ipa, (list, tuple)):
+        for part in raw_ipa:
+            if part is None:
+                continue
+            if isinstance(part, str):
+                for token in part.split():
+                    cleaned = _normalize_text(token)
+                    if cleaned:
+                        yield cleaned
+            else:
+                cleaned = _normalize_text(str(part))
+                if cleaned:
+                    yield cleaned
+        return
+    if raw_ipa is not None:
+        cleaned = _normalize_text(str(raw_ipa))
+        if cleaned:
+            yield cleaned
+
+
 def _parse_character_entry(entry: object) -> Optional[CharacterPronunciation]:
     if not isinstance(entry, dict):
         return None
@@ -497,41 +539,29 @@ def _parse_character_entry(entry: object) -> Optional[CharacterPronunciation]:
     if not symbol:
         return None
     raw_ipa = entry.get("ipa", ())
-    if isinstance(raw_ipa, str):
-        ipa = tuple(part.strip() for part in raw_ipa.split() if part.strip())
-    elif isinstance(raw_ipa, (list, tuple)):
-        cleaned: List[str] = []
-        for part in raw_ipa:
-            if part is None:
-                continue
-            value = str(part).strip()
-            if value:
-                cleaned.append(value)
-        ipa = tuple(cleaned)
-    else:
-        ipa = ()
+    ipa = tuple(_iter_ipa_tokens(raw_ipa))
     notes = _tuple_from_field(entry.get("notes", ()))
     return CharacterPronunciation(
         symbol=str(symbol),
-        spoken=str(entry["spoken"]) if "spoken" in entry and entry["spoken"] is not None else None,
+        spoken=_optional_text(entry, "spoken"),
         ipa=ipa,
-        description=str(entry.get("description", "")),
-        example=str(entry["example"]) if "example" in entry and entry["example"] is not None else None,
-        stress=str(entry["stress"]) if "stress" in entry and entry["stress"] is not None else None,
+        description=_normalize_text(str(entry.get("description", ""))),
+        example=_optional_text(entry, "example"),
+        stress=_optional_text(entry, "stress"),
         notes=notes,
     )
 
 
 def _tuple_from_field(field: object) -> Tuple[str, ...]:
     if isinstance(field, str):
-        value = field.strip()
+        value = _normalize_text(field)
         return (value,) if value else ()
     if isinstance(field, (list, tuple)):
         values: List[str] = []
         for item in field:
             if item is None:
                 continue
-            value = str(item).strip()
+            value = _normalize_text(str(item))
             if value:
                 values.append(value)
         return tuple(values)
