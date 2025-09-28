@@ -118,6 +118,14 @@ regional presets (hard/soft consonants, tonal contours, vowel harmony).
 | Medium | [Punjabi language](https://en.wikipedia.org/wiki/Punjabi_language) | language | Pending structured ingestion | Differentiates Gurmukhi vs. Shahmukhi scripts for ISO `pa` coverage. |
 | Medium | [Tibetan language](https://en.wikipedia.org/wiki/Tibetan_language) | language | Pending structured ingestion | Supplies stacked consonant tables and tonal contour references for ISO `bo`. |
 | Medium | [Uyghur language](https://en.wikipedia.org/wiki/Uyghur_language) | language | Requires summary integration | Highlights Arabic-script vowels and Latin transliteration for ISO `ug`. |
+| Medium | [Uzbek language](https://en.wikipedia.org/wiki/Uzbek_language) | language | Pending structured ingestion | Documents Cyrillic/Latin dual-script policy and vowel harmony cues for ISO `uz`. |
+| Medium | [Pashto language](https://en.wikipedia.org/wiki/Pashto_language) | language | Requires phoneme summary | Captures retroflex, aspirated, and fricative inventories to drive ISO `ps` pronunciation presets. |
+| Medium | [Sindhi language](https://en.wikipedia.org/wiki/Sindhi_language) | language | Pending structured ingestion | Provides implosive consonant coverage and braille mappings for ISO `sd`. |
+| Medium | [Somali language](https://en.wikipedia.org/wiki/Somali_language) | language | Pending structured ingestion | Supplies ATR vowel harmony references and tone plateau examples for ISO `so`. |
+| Medium | [Fula language](https://en.wikipedia.org/wiki/Fula_language) | language | Pending structured ingestion | Records Pulaar/Fulfulde dialect tone splits and prenasalised stop cues for ISO `ff`. |
+| Medium | [Sinhala language](https://en.wikipedia.org/wiki/Sinhala_language) | language | Pending structured ingestion | Details murmur, retroflex, and consonant length contrasts for ISO `si`. |
+| Medium | [Nepali language](https://en.wikipedia.org/wiki/Nepali_language) | language | Pending structured ingestion | Documents schwa deletion, retroflex series, and tone neutralisation heuristics for ISO `ne`. |
+| Medium | [Kashmiri language](https://en.wikipedia.org/wiki/Kashmiri_language) | language | Pending structured ingestion | Tracks Perso-Arabic and Sharada orthography details to align ISO `ks` dual-script packaging. |
 | Medium | [Wolof language](https://en.wikipedia.org/wiki/Wolof_language) | language | Pending structured ingestion | Tone and nasal cluster references for ISO `wo` roadmaps. |
 | Medium | [Igbo language](https://en.wikipedia.org/wiki/Igbo_language) | language | Pending structured ingestion | Nasal harmony, tone ladder, and syllabic nasal planning for ISO `ig`. |
 | Medium | [Irish language](https://en.wikipedia.org/wiki/Irish_language) | language | Pending structured ingestion | Lenition/eclipsis scheduling to calibrate consonant hardness sliders for `ga-IE`. |

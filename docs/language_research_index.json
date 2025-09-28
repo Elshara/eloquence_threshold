@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-03",
+  "updated": "2025-10-04",
   "sources": [
     {
       "title": "Lists of languages",
@@ -873,6 +873,87 @@
       "classification": ["language"],
       "sample_assets": ["tone descriptions", "orthography notes"],
       "notes": "Supports ISO gwi slider planning with tone marker metadata for NVDA braille and phoneme EQ exports."
+    },
+    {
+      "title": "Uyghur language",
+      "url": "https://en.wikipedia.org/wiki/Uyghur_language",
+      "usefulness": "medium",
+      "progress": "requires summary integration",
+      "classification": ["language"],
+      "sample_assets": ["Arabic script vowels", "Latin transliteration"],
+      "notes": "Highlights Arabic-script vowels and Latin transliteration tables for ISO ug dual-script packaging."
+    },
+    {
+      "title": "Uzbek language",
+      "url": "https://en.wikipedia.org/wiki/Uzbek_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": ["language"],
+      "sample_assets": ["Cyrillic/Latin policy", "vowel harmony notes"],
+      "notes": "Documents dual-script policy and vowel harmony cues that feed ISO uz roadmap updates."
+    },
+    {
+      "title": "Pashto language",
+      "url": "https://en.wikipedia.org/wiki/Pashto_language",
+      "usefulness": "medium",
+      "progress": "requires phoneme summary",
+      "classification": ["language"],
+      "sample_assets": ["retroflex inventories", "aspirated consonants", "fricative sets"],
+      "notes": "Captures retroflex, aspirated, and fricative inventories for ISO ps pronunciation presets."
+    },
+    {
+      "title": "Sindhi language",
+      "url": "https://en.wikipedia.org/wiki/Sindhi_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": ["language"],
+      "sample_assets": ["implosive consonants", "braille mappings"],
+      "notes": "Provides implosive consonant coverage and braille mappings to support ISO sd roadmap work."
+    },
+    {
+      "title": "Somali language",
+      "url": "https://en.wikipedia.org/wiki/Somali_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": ["language"],
+      "sample_assets": ["ATR harmony", "tone plateau examples"],
+      "notes": "Supplies ATR vowel harmony references and tone plateau examples for ISO so voice planning."
+    },
+    {
+      "title": "Fula language",
+      "url": "https://en.wikipedia.org/wiki/Fula_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": ["language"],
+      "sample_assets": ["Pulaar/Fulfulde tone splits", "prenasalised stops"],
+      "notes": "Records Pulaar/Fulfulde dialect tone splits and prenasalised stop cues to guide ISO ff slider presets."
+    },
+    {
+      "title": "Sinhala language",
+      "url": "https://en.wikipedia.org/wiki/Sinhala_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": ["language"],
+      "sample_assets": ["murmur consonants", "retroflex contrasts", "consonant length"],
+      "notes": "Details murmur, retroflex, and consonant length contrasts for ISO si phoneme datasets."
+    },
+    {
+      "title": "Nepali language",
+      "url": "https://en.wikipedia.org/wiki/Nepali_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": ["language"],
+      "sample_assets": ["schwa deletion rules", "retroflex series", "tone neutralisation"],
+      "notes": "Documents schwa deletion, retroflex series, and tone neutralisation heuristics for ISO ne roadmap entries."
+    },
+    {
+      "title": "Kashmiri language",
+      "url": "https://en.wikipedia.org/wiki/Kashmiri_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": ["language"],
+      "sample_assets": ["Perso-Arabic orthography", "Sharada orthography"],
+      "notes": "Tracks Perso-Arabic and Sharada orthography details to align ISO ks dual-script packaging."
     },
     {
       "title": "Omniglot",

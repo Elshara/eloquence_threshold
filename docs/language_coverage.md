@@ -1,6 +1,6 @@
 # Language coverage report
 
-Generated at: 2025-09-28T19:00:55Z
+Generated at: 2025-09-28T19:09:51Z
 Phoneme inventory size: 136
 Total locales tracked: 54
 

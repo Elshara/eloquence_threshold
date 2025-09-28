@@ -26,6 +26,10 @@ To keep Eloquence's phoneme, lexicon, and tooling pipeline fresh we now version 
 - **Tone-rich coverage** – Hausa, Yoruba, Thai, Vietnamese, Cantonese, and Mandarin now reference cached tone diagrams, lexical tone recordings, and NV Speech Player slider defaults so testers can validate contour changes while packaging.
 - **Expanded morphology tooling** – GitHub-hosted finite-state transducers for Turkish, Finnish, and Hungarian are logged against the same roadmap, aligning contextual pronunciation generators with `language_profiles.py` descriptors.
 - **Voice metric calibration** – Every locale snapshot references `docs/voice_parameter_report.md` so contributors can correlate NV Speech Player slider presets, EQ band groupings, and DataJake spectral captures before publishing new ISO profiles.
+- **South Asian + Himalayan sprint** – Newly tracked Nepali (`ne`), Sinhala (`si`), Sindhi (`sd`), and Kashmiri (`ks`) pull vowel length, inherent schwa, and retroflex cues from cached Wikipedia grammar tables; DataJake `.lex` payloads and GitHub corpora are queued for CodeQL-audited imports while NVDA manuals confirm braille contractions.
+- **Central and West Asian bridge** – Uzbek (`uz`), Uyghur (`ug`), and Pashto (`ps`) roadmap entries now cite dual Arabic/Latin script coverage with NVDA punctuation exports, while GitHub transliteration utilities back the switchable phoneme presets described in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md).
+- **Pan-African reinforcement** – Fula/Pulaar (`ff`), Somali (`so`), and Wolof (`wo`) dossiers log tone plateau, ATR harmony, and emphatic consonant references from DataJake lexicons; pairing them with NV Speech Player **Tone**, **Vocal range**, and **Sibilant clarity** defaults keeps the roadmap aligned with NVDA’s slider set.
+- **Heritage dictionary sweep** – Newly catalogued Wikipedia sources (see [`docs/language_research_index.md`](docs/language_research_index.md)) document high-value lexicographic corpora for Sinhala, Nepali, Somali, and Uzbek so `tools/catalog_datajake_archives.py` can flag matching `.dic`/`.lex` downloads before the next build.
 
 After each documentation or profile change, regenerate the cached coverage artefacts so pull requests reflect the current dataset without hammering upstream mirrors:
 
@@ -202,6 +206,20 @@ new phoneme presets.
 8. **Validate the output** – open the generated `.nvda-addon` (it is a ZIP archive) to confirm the `manifest.ini`, voice catalogues, and `/eloquence*/` runtime folders are present. Cross-check the `docs/` excerpts packaged inside if you enabled documentation bundling.
 9. **Install in NVDA** – on Windows 10 or Windows 11, run NVDA 2019.3 or newer (alpha-52731 or later is our validation baseline), choose **Tools → Add-ons → Install**, and select your freshly built package.
 10. **Explore and customise** – visit **Preferences → Speech** to pick Eloquence, adjust the expanded slider set (Emphasis, Stress, Timbre, Tone, Pitch height, Vocal layers, Plosive impact, Overtones, Sibilant clarity, Subtones, Nasal balance, Vocal range, Inflection contour, Roughness, Smoothness, Whisper, Head size contour, Macro volume, Tone size, Scope depth, Sample rate, and Phoneme EQ bands), and inspect the language profile picker for the ISO/script/vocal metrics you just updated.
+
+#### Offline build quickstart (no-release scenario, October 2025 update)
+
+| Step | Command(s) | Purpose |
+| --- | --- | --- |
+| 1. Clone | `git clone https://github.com/pumper42nickel/eloquence_threshold.git`<br>`cd eloquence_threshold` | Pull the current `work` branch when no release ZIP exists. |
+| 2. Restore caches | `cp -r /path/to/snapshots/docs/* docs/` *(or rerun the reporting helpers listed above)* | Keep Markdown/JSON provenance artefacts in sync so the builder packages language coverage without hitting external mirrors. |
+| 3. Stage binaries | Populate `eloquence/`, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, and/or `eloquence_arm64/` with the appropriate `eci*.dll` plus `.syn` voices. | Provide architecture-matched runtimes; the builder validates PE headers and fails fast on mismatches. |
+| 4. Seed dictionaries | Drop `.dic`/`.lex` assets into `eloquence_data/` and rerun `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md`. | Catalogues imported dictionaries for CodeQL review and packaging. |
+| 5. Verify metadata | `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print` *(repeat for coverage + voice/language matrix)* | Refresh ISO/script dashboards after editing profiles or dictionaries. |
+| 6. Run tests | `python -m unittest discover tests` | Ensure catalogues, phoneme inventories, and documentation parsers still pass integrity checks. |
+| 7. Package | `python build.py --insecure --output dist/eloquence.nvda-addon` | Produce the add-on offline, embedding refreshed docs and cached datasets. |
+| 8. Install | Use NVDA’s **Tools → Add-ons → Install** dialog and select `dist/eloquence.nvda-addon`. | Deploy the build on Windows 10/11 for validation against NVDA alpha/stable releases. |
+| 9. Log run | Document the commands you executed in your pull request and append notable observations to `AGENTS.md`. | Keeps the progress log reproducible for future offline packaging drills. |
 
 ### No-release packaging drill (step-by-step)
 

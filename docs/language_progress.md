@@ -1,6 +1,6 @@
 # Language profile progress
 
-- Generated: 2025-09-28T19:00:53.586420+00:00
+- Generated: 2025-09-28T19:09:44.343418+00:00
 - Sort key: coverage
 - Profiles analysed: 53
 - Average IPA coverage: 39.0%
