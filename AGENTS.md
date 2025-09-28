@@ -65,3 +65,4 @@ These guidelines apply to the entire repository.
 ## Build progress log
 - 2025-09-27: Rebuilt `eloquence.nvda-addon` using `python build.py --insecure` and wired the unit test package to invoke the
   build helper on import so every future `python -m unittest discover tests` run verifies the packaging pipeline automatically.
+- 2025-09-28: Documented the ISO/script expansion roadmap, refreshed README build instructions for no-release scenarios, and reaffirmed the `python -m unittest discover tests` plus `python build.py --insecure` workflow for validating expanded language assets before packaging.
