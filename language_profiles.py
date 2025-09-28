@@ -498,7 +498,7 @@ def _parse_character_entry(entry: object) -> Optional[CharacterPronunciation]:
         return None
     raw_ipa = entry.get("ipa", ())
     if isinstance(raw_ipa, str):
-        ipa = tuple(part.strip() for part in raw_ipa.split(" ") if part.strip())
+        ipa = tuple(part.strip() for part in raw_ipa.split() if part.strip())
     elif isinstance(raw_ipa, (list, tuple)):
         cleaned: List[str] = []
         for part in raw_ipa:
