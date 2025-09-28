@@ -22,6 +22,8 @@ _DATA_DIR = os.path.join(_REPO_ROOT, "eloquence_data", "languages")
 _DOCS_DIR = os.path.join(_REPO_ROOT, "docs")
 _WIKIPEDIA_INDEX_PATH = os.path.join(_DOCS_DIR, "wikipedia_language_index.json")
 
+_WHITESPACE_RE = re.compile(r"\s+")
+
 
 @dataclass(frozen=True)
 class CharacterPronunciation:
@@ -449,7 +451,7 @@ def _sanitize_for_log(obj: object) -> object:
 
 
 def _parse_language_profile(data: Dict[str, object]) -> Optional[LanguageProfile]:
-    profile_id = data.get("id")
+    profile_id = _coerce_text(data.get("id"))
     if not profile_id:
         sanitized_data = _sanitize_for_log(data)
         LOG.warning(
@@ -465,23 +467,16 @@ def _parse_language_profile(data: Dict[str, object]) -> Optional[LanguageProfile
             parsed = _parse_character_entry(entry)
             if parsed is not None and parsed.symbol not in characters:
                 characters[parsed.symbol] = parsed
-    tags: Tuple[str, ...]
-    raw_tags = data.get("tags", ())
-    if isinstance(raw_tags, (list, tuple)):
-        tags = tuple(str(tag) for tag in raw_tags)
-    elif isinstance(raw_tags, str):
-        tags = (raw_tags,)
-    else:
-        tags = ()
+    tags = _tuple_from_field(data.get("tags", ()))
     stress_notes = _tuple_from_field(data.get("stress", ()))
     sentence_structure = _tuple_from_field(data.get("sentenceStructure", ()))
     grammar_notes = _tuple_from_field(data.get("grammar", ()))
     defaults = _tuple_from_field(data.get("defaultVoiceTemplates", ()))
     return LanguageProfile(
-        id=str(profile_id),
-        language=str(data.get("language", "")),
-        display_name=str(data.get("displayName", profile_id)),
-        description=str(data.get("description", "")),
+        id=profile_id,
+        language=_coerce_text(data.get("language", "")),
+        display_name=_coerce_text(data.get("displayName", profile_id), default=profile_id),
+        description=_coerce_text(data.get("description", "")),
         tags=tags,
         characters=characters,
         stress_notes=stress_notes,
@@ -494,8 +489,15 @@ def _parse_language_profile(data: Dict[str, object]) -> Optional[LanguageProfile
 def _normalize_text(value: str) -> str:
     """Collapse internal whitespace and trim surrounding space."""
 
-    collapsed = re.sub(r"\s+", " ", value.strip())
+    collapsed = _WHITESPACE_RE.sub(" ", value.strip())
     return collapsed
+
+
+def _coerce_text(value: object, *, default: str = "") -> str:
+    if value is None:
+        return default
+    text = _normalize_text(str(value))
+    return text or default
 
 
 def _optional_text(entry: Dict[str, object], key: str) -> Optional[str]:
@@ -506,46 +508,37 @@ def _optional_text(entry: Dict[str, object], key: str) -> Optional[str]:
 
 
 def _iter_ipa_tokens(raw_ipa: object) -> Iterator[str]:
+    if raw_ipa is None:
+        return
     if isinstance(raw_ipa, str):
         for token in raw_ipa.split():
             cleaned = _normalize_text(token)
             if cleaned:
                 yield cleaned
         return
-    if isinstance(raw_ipa, (list, tuple)):
+    if isinstance(raw_ipa, (list, tuple, set)):
         for part in raw_ipa:
-            if part is None:
-                continue
-            if isinstance(part, str):
-                for token in part.split():
-                    cleaned = _normalize_text(token)
-                    if cleaned:
-                        yield cleaned
-            else:
-                cleaned = _normalize_text(str(part))
-                if cleaned:
-                    yield cleaned
+            yield from _iter_ipa_tokens(part)
         return
-    if raw_ipa is not None:
-        cleaned = _normalize_text(str(raw_ipa))
-        if cleaned:
-            yield cleaned
+    cleaned = _normalize_text(str(raw_ipa))
+    if cleaned:
+        yield cleaned
 
 
 def _parse_character_entry(entry: object) -> Optional[CharacterPronunciation]:
     if not isinstance(entry, dict):
         return None
-    symbol = entry.get("symbol")
+    symbol = _coerce_text(entry.get("symbol"))
     if not symbol:
         return None
     raw_ipa = entry.get("ipa", ())
     ipa = tuple(_iter_ipa_tokens(raw_ipa))
     notes = _tuple_from_field(entry.get("notes", ()))
     return CharacterPronunciation(
-        symbol=str(symbol),
+        symbol=symbol,
         spoken=_optional_text(entry, "spoken"),
         ipa=ipa,
-        description=_normalize_text(str(entry.get("description", ""))),
+        description=_coerce_text(entry.get("description", "")),
         example=_optional_text(entry, "example"),
         stress=_optional_text(entry, "stress"),
         notes=notes,
@@ -553,19 +546,26 @@ def _parse_character_entry(entry: object) -> Optional[CharacterPronunciation]:
 
 
 def _tuple_from_field(field: object) -> Tuple[str, ...]:
-    if isinstance(field, str):
-        value = _normalize_text(field)
-        return (value,) if value else ()
-    if isinstance(field, (list, tuple)):
-        values: List[str] = []
-        for item in field:
-            if item is None:
-                continue
-            value = _normalize_text(str(item))
-            if value:
-                values.append(value)
-        return tuple(values)
-    return ()
+    values: List[str] = []
+
+    def _append(item: object) -> None:
+        if item is None:
+            return
+        if isinstance(item, str):
+            cleaned = _normalize_text(item)
+            if cleaned:
+                values.append(cleaned)
+            return
+        if isinstance(item, (list, tuple, set)):
+            for sub in item:
+                _append(sub)
+            return
+        cleaned = _normalize_text(str(item))
+        if cleaned:
+            values.append(cleaned)
+
+    _append(field)
+    return tuple(values)
 
 
 def normalize_language_tag(language_tag: str) -> str:
