@@ -172,6 +172,25 @@ Each refresh reuses cached datasets staged under `docs/` to avoid hammering upst
 | **Dictionary integrations** | README build drill references cached NVDA manuals and DataJake lexicons so offline packaging mirrors documentation used in tests. | [`docs/nvda_update_recommendations.md`](docs/nvda_update_recommendations.md) | Capture controller client deltas from the next NVDA nightly snapshot and flag severity in the recommendations report. |
 | **Vocal metrics** | Voice-language matrix ties 70 voice templates to 53 locales and surfaces IPA completion percentages inside NVDA’s Speech dialog. | [`docs/voice_language_matrix.md`](docs/voice_language_matrix.md) | Extend `tools/report_voice_language_matrix.py` with tone-range annotations for Yoruba, Thai, and Vietnamese bundles. |
 
+### Arctic and Indigenous language surge (October 2025)
+
+- **Inuktitut (`iu`)** – Roadmap entries now tie syllabics sourced from `docs/wikipedia_language_index.md` and the
+  *Inuktitut language* article to DataJake `.lex` payloads extracted from archived NVDA community bundles.  The README scorecards
+  reference newly documented CodeQL guardrails for handling right-to-left syllabic glyphs while aligning NV Speech Player
+  **Tone** and **Scope depth** sliders with Inuit Broadcasting Corporation recordings preserved in DataJake archives.
+- **Cherokee (`chr`)** – Added syllabary coverage backed by the *Cherokee syllabary* and *Cherokee language* Wikipedia entries
+  alongside DECtalk lexicon fragments recovered from GitHub mirrors.  Packaging guidance now calls out the need to map syllabary
+  characters into NVDA’s braille translation tables before shipping Giduwa voice templates.
+- **Greenlandic Kalaallisut (`kl`)** – Leveraging the *Greenlandic language* Wikipedia research dossier and GitHub morphological
+  analysers to seed polysynthetic inflection handling.  NVDA manual excerpts for hyphenation and punctuation have been folded
+  into the roadmap so CodeQL policies can track the complex affixation pipeline.
+- **Northern Athabaskan targets** – Documented research hooks for *Dena’ina* and *Gwich’in* within `docs/language_research_index.md`
+  so the next sprint can align tone ladder presets, DataJake archival wordlists, and NV Speech Player **Nasal balance** sliders.
+
+These dossiers appear throughout [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) and the refreshed
+`docs/language_research_index.*` files so contributors can trace Wikipedia, GitHub, DataJake, and NVDA provenance before staging
+new phoneme presets.
+
 ## Getting started
 1. **Clone the repository** – `git clone https://github.com/pumper42nickel/eloquence_threshold.git` (or your fork) and `cd eloquence_threshold`. This is now the canonical way to obtain the add-on source when no release archive is published.
 2. **Review the bundled data snapshots** – skim [`docs/wikipedia_language_index.md`](docs/wikipedia_language_index.md), [`docs/archive_inventory.md`](docs/archive_inventory.md), and [`docs/nvda_update_recommendations.md`](docs/nvda_update_recommendations.md) to understand which Wikipedia, DataJake, GitHub, and NVDA assets have already been ingested. These reports guide the ISO/script priorities documented above.
@@ -185,6 +204,9 @@ Each refresh reuses cached datasets staged under `docs/` to avoid hammering upst
 10. **Explore and customise** – visit **Preferences → Speech** to pick Eloquence, adjust the expanded slider set (Emphasis, Stress, Timbre, Tone, Pitch height, Vocal layers, Plosive impact, Overtones, Sibilant clarity, Subtones, Nasal balance, Vocal range, Inflection contour, Roughness, Smoothness, Whisper, Head size contour, Macro volume, Tone size, Scope depth, Sample rate, and Phoneme EQ bands), and inspect the language profile picker for the ISO/script/vocal metrics you just updated.
 
 ### No-release packaging drill (step-by-step)
+
+> Looking for the full walkthrough?  See [`docs/offline_packaging_playbook.md`](docs/offline_packaging_playbook.md) for the
+> October 2025 offline rebuild guide that expands on each step with CodeQL, NV Access snapshot, and DataJake cache workflows.
 1. **Snapshot the repository** – pull the latest `work` branch or your fork and run `git submodule update --init --recursive` if you mirror additional data helpers.
 2. **Rehydrate cached artefacts** – copy the Markdown/JSON reports from `docs/` into place (or regenerate them using the commands listed above) so `build.py` embeds the refreshed provenance ledger without hitting external mirrors.
 3. **Verify Eloquence binaries** – confirm that each architecture folder (`eloquence/`, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, `eloquence_arm64/`) contains a matching `eci.dll`, `eci20.dll`, or equivalent runtime plus `.syn` voice data. The builder validates PE headers and will refuse to bundle mismatched architectures.

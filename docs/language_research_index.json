@@ -1,5 +1,5 @@
 {
-  "updated": "2025-03-17",
+  "updated": "2025-10-03",
   "sources": [
     {
       "title": "Lists of languages",
@@ -819,6 +819,60 @@
       "classification": ["technical", "language"],
       "sample_assets": ["markup catalog"],
       "notes": "Captures HTML/XML variants for developer voice presets."
+    },
+    {
+      "title": "Inuktitut language",
+      "url": "https://en.wikipedia.org/wiki/Inuktitut_language",
+      "usefulness": "high",
+      "progress": "researching syllabics integration",
+      "classification": ["language"],
+      "sample_assets": ["syllabics inventory", "mora timing", "orthography notes"],
+      "notes": "Feeds ISO iu roadmap work with syllabics charts, mora timing research, and punctuation guidance for right-to-left syllable clusters."
+    },
+    {
+      "title": "Cherokee language",
+      "url": "https://en.wikipedia.org/wiki/Cherokee_language",
+      "usefulness": "high",
+      "progress": "researching syllabary phoneme mapping",
+      "classification": ["language"],
+      "sample_assets": ["phonology overview", "tone references", "orthography alignment"],
+      "notes": "Supports ISO chr pronunciation templates and DECtalk lexicon comparisons prior to NVDA braille export updates."
+    },
+    {
+      "title": "Cherokee syllabary",
+      "url": "https://en.wikipedia.org/wiki/Cherokee_syllabary",
+      "usefulness": "high",
+      "progress": "researching glyph metadata",
+      "classification": ["orthography"],
+      "sample_assets": ["syllabic code chart", "Unicode mappings"],
+      "notes": "Documents syllable blocks for CodeQL validation and NVDA braille table integration when packaging Cherokee presets."
+    },
+    {
+      "title": "Greenlandic language",
+      "url": "https://en.wikipedia.org/wiki/Greenlandic_language",
+      "usefulness": "medium",
+      "progress": "researching polysynthetic morphology",
+      "classification": ["language"],
+      "sample_assets": ["affix catalog", "phonotactics", "example paradigms"],
+      "notes": "Guides ISO kl (Kalaallisut) tone curves, affix stacking, and NVDA punctuation defaults sourced from NV Access manuals."
+    },
+    {
+      "title": "Denaʼina language",
+      "url": "https://en.wikipedia.org/wiki/Dena%27ina_language",
+      "usefulness": "medium",
+      "progress": "researching tone plateau cues",
+      "classification": ["language"],
+      "sample_assets": ["Athabaskan consonant clusters", "tone ladder", "lexical datasets"],
+      "notes": "Aligns ISO tfn Athabaskan presets with DataJake lexical archives and NV Speech Player nasal balance sliders."
+    },
+    {
+      "title": "Gwich'in language",
+      "url": "https://en.wikipedia.org/wiki/Gwich%27in_language",
+      "usefulness": "medium",
+      "progress": "researching apostrophe tone markers",
+      "classification": ["language"],
+      "sample_assets": ["tone descriptions", "orthography notes"],
+      "notes": "Supports ISO gwi slider planning with tone marker metadata for NVDA braille and phoneme EQ exports."
     },
     {
       "title": "Omniglot",

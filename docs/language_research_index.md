@@ -124,6 +124,12 @@ regional presets (hard/soft consonants, tonal contours, vowel harmony).
 | Medium | [Georgian language](https://en.wikipedia.org/wiki/Georgian_language) | language | Pending structured ingestion | Ejective consonant frequencies and vowel harmony metadata for ISO `ka`. |
 | Medium | [Mongolian language](https://en.wikipedia.org/wiki/Mongolian_language) | language | Pending structured ingestion | Captures vowel harmony and syllable timing data for ISO `mn`. |
 | Medium | [Kinyarwanda](https://en.wikipedia.org/wiki/Kinyarwanda) | language | Requires phoneme summary | Plateau tone modelling and nasal prefix phonotactics for ISO `rw`. |
+| High | [Inuktitut language](https://en.wikipedia.org/wiki/Inuktitut_language) | language | Researching syllabics integration | Supplies syllabics inventory, mora timing, and right-to-left punctuation cues for ISO `iu` roadmap entries. |
+| High | [Cherokee language](https://en.wikipedia.org/wiki/Cherokee_language) | language | Researching syllabary phoneme mapping | Backs DECtalk-derived pronunciation seeds and NVDA braille alignment for ISO `chr`. |
+| High | [Cherokee syllabary](https://en.wikipedia.org/wiki/Cherokee_syllabary) | orthography | Researching glyph metadata | Enumerates syllabic code points for NVDA braille export and phoneme EQ mapping. |
+| Medium | [Greenlandic language](https://en.wikipedia.org/wiki/Greenlandic_language) | language | Researching polysynthetic morphology | Guides Kalaallisut affix stacking, tone contours, and punctuation defaults for ISO `kl`. |
+| Medium | [Denaʼina language](https://en.wikipedia.org/wiki/Dena%27ina_language) | language | Researching tone plateau cues | Captures Athabaskan consonant clusters, nasalisation hints, and DataJake lexical provenance for ISO `tfn`. |
+| Medium | [Gwich'in language](https://en.wikipedia.org/wiki/Gwich%27in_language) | language | Researching apostrophe tone markers | Aligns NV Speech Player nasal and scope sliders with Athabaskan tone ladders for ISO `gwi`. |
 
 ## Policy, usage, and priority metrics
 
