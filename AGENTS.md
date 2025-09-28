@@ -66,3 +66,4 @@ These guidelines apply to the entire repository.
 - 2025-09-27: Rebuilt `eloquence.nvda-addon` using `python build.py --insecure` and wired the unit test package to invoke the
   build helper on import so every future `python -m unittest discover tests` run verifies the packaging pipeline automatically.
 - 2025-09-28: Documented the ISO/script expansion roadmap, refreshed README build instructions for no-release scenarios, and reaffirmed the `python -m unittest discover tests` plus `python build.py --insecure` workflow for validating expanded language assets before packaging.
+- 2025-09-29: Refreshed ISO/script coverage snapshots (including `docs/language_progress.md`, `docs/language_coverage.md`, and `docs/voice_language_matrix.md`), expanded README build steps with cached dataset staging guidance, and documented generative pronunciation metadata so contributors align CodeQL policies and cached NV Access datasets while packaging new locales.
