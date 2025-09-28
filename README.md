@@ -20,6 +20,13 @@ Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-
 To keep Eloquence's phoneme, lexicon, and tooling pipeline fresh we now version the entire DataJake archive manifest inside this repository. Run `python tools/catalog_datajake_archives.py` to regenerate `docs/archive_inventory.json` and the Markdown companion after updating `docs/datajake_archive_urls.txt`. The refreshed script adds extension, sample-rate, bit-depth (when detected), channel-layout, audio-fidelity tiers, `audio_signature` strings, language, BCP-47 language tags, synthesizer hints, collection families, voice-token, platform/architecture, version, category, viability, voice gender/age hints, and priority-tag summaries (plus per-entry metadata blocks and a metadata coverage rollup) so automation can spot IPA dictionaries, lexicon bundles, documentation stubs, NVDA add-ons, and direct `.dic`/`.lex` payloads without manually scanning 1,500 URLs. Cross-reference `docs/archive_code_targets.md` for examples of how these imports expand MBROLA coverage, inform CodeQL policies, and ensure our NVDA add-on ships with reusable pronunciation data across Eloquence, DECtalk/FonixTalk, IBM TTS, and RHVoice collections.
 
 ### Language expansion scorecard (refreshed)
+### Global ISO/script onboarding sprint (Q4 2025 refresh)
+- **New Latin clusters** – Afrikaans, Catalan, Danish, Estonian, Filipino, French, Galician, Irish, Italian, Lithuanian, Latvian, Polish, Romanian, Slovak, Slovene, and Vietnamese now carry roadmap entries in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) with cross-links to their DataJake, Wikipedia, and NVDA provenance notes.
+- **Dual-script locales** – Serbian (Cyrillic/Latin), Kazakh (Cyrillic/Latin), and Cantonese (Jyutping + Han) are tracked with mirrored tone and digraph planning, ensuring CodeQL policies surface both alphabets when regenerating lexicon payloads.
+- **Tone-rich coverage** – Hausa, Yoruba, Thai, Vietnamese, Cantonese, and Mandarin now reference cached tone diagrams, lexical tone recordings, and NV Speech Player slider defaults so testers can validate contour changes while packaging.
+- **Expanded morphology tooling** – GitHub-hosted finite-state transducers for Turkish, Finnish, and Hungarian are logged against the same roadmap, aligning contextual pronunciation generators with `language_profiles.py` descriptors.
+- **Voice metric calibration** – Every locale snapshot references `docs/voice_parameter_report.md` so contributors can correlate NV Speech Player slider presets, EQ band groupings, and DataJake spectral captures before publishing new ISO profiles.
+
 After each documentation or profile change, regenerate the cached coverage artefacts so pull requests reflect the current dataset without hammering upstream mirrors:
 
 - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
@@ -167,6 +174,17 @@ Each refresh reuses cached datasets staged under `docs/` to avoid hammering upst
 8. **Validate the output** – open the generated `.nvda-addon` (it is a ZIP archive) to confirm the `manifest.ini`, voice catalogues, and `/eloquence*/` runtime folders are present. Cross-check the `docs/` excerpts packaged inside if you enabled documentation bundling.
 9. **Install in NVDA** – on Windows 10 or Windows 11, run NVDA 2019.3 or newer (alpha-52731 or later is our validation baseline), choose **Tools → Add-ons → Install**, and select your freshly built package.
 10. **Explore and customise** – visit **Preferences → Speech** to pick Eloquence, adjust the expanded slider set (Emphasis, Stress, Timbre, Tone, Pitch height, Vocal layers, Plosive impact, Overtones, Sibilant clarity, Subtones, Nasal balance, Vocal range, Inflection contour, Roughness, Smoothness, Whisper, Head size contour, Macro volume, Tone size, Scope depth, Sample rate, and Phoneme EQ bands), and inspect the language profile picker for the ISO/script/vocal metrics you just updated.
+
+### No-release packaging drill (step-by-step)
+1. **Snapshot the repository** – pull the latest `work` branch or your fork and run `git submodule update --init --recursive` if you mirror additional data helpers.
+2. **Rehydrate cached artefacts** – copy the Markdown/JSON reports from `docs/` into place (or regenerate them using the commands listed above) so `build.py` embeds the refreshed provenance ledger without hitting external mirrors.
+3. **Verify Eloquence binaries** – confirm that each architecture folder (`eloquence/`, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, `eloquence_arm64/`) contains a matching `eci.dll`, `eci20.dll`, or equivalent runtime plus `.syn` voice data. The builder validates PE headers and will refuse to bundle mismatched architectures.
+4. **Prime phoneme dictionaries** – ensure any `.dic`/`.lex` files you want packaged live under `eloquence_data/` and are referenced in `docs/archive_inventory.json`. If you add new archives, rerun `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` to refresh metadata before building.
+5. **Run unit tests** – execute `python -m unittest discover tests` to confirm voice sliders, phoneme inventories, and documentation parsers still pass integrity checks.
+6. **Build the add-on** – run `python build.py --insecure --output dist/eloquence.nvda-addon` (add `--template` if you want to reuse a prior package). The script stitches together binaries, documentation, and cached datasets without requiring an internet connection.
+7. **Inspect the package** – unzip `dist/eloquence.nvda-addon` and verify that `manifest.ini`, `globalPlugins/eloquenceThreshold/` assets, the `/eloquence*/` runtimes, and any refreshed docs are present.
+8. **Install into NVDA** – use NVDA's add-on manager to install the build, then confirm new language profiles or voice parameters appear and announce their coverage metrics.
+9. **Document the run** – capture the commands you executed and note any regenerated artefacts in your pull request summary so future contributors can follow the same offline workflow.
 
 ### Build script reference
 - `python build.py --output dist/eloquence.nvda-addon` writes the package to a custom path.
