@@ -163,6 +163,15 @@ The document tracks progress milestones so contributors can focus on underrepres
 
 Each refresh reuses cached datasets staged under `docs/` to avoid hammering upstream mirrors. When proposing ISO expansions, cite the relevant row(s) above so reviewers know which cached report informed the change and which helper command must be re-run after merge.
 
+### Q4 coverage progress checkpoints
+| Track | Highlights | Latest artefacts | Next action |
+| --- | --- | --- | --- |
+| **ISO + scripts** | Expanded roadmap now tracks 68 ISO codes with dual-script notes for Kazakh, Serbian, and Cantonese alongside new Afroasiatic (Tigrinya/Oromo) and Indo-Aryan (Odia/Punjabi) targets. | [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) | Validate sample wordlists for Tigrinya and Odia using cached Wikipedia inventories before seeding phoneme presets. |
+| **Speech parameters** | Voice slider catalogue mirrors NV Speech Player metadata and now lists frequency scaffolds (8 kHz → 384 kHz) plus harmonic/noise band pairings for tone-heavy locales. | [`docs/voice_parameter_report.md`](docs/voice_parameter_report.md) | Import DataJake spectral captures for Hausa, Vietnamese, and Cantonese to calibrate tone and plosive presets. |
+| **Phoneme datasets** | DataJake manifest audit highlights `.dic`/`.lex` payloads for Maltese, Cree, and Yupik; GitHub FST projects queued for Turkish/Hungarian contextual inflection. | [`docs/archive_inventory.md`](docs/archive_inventory.md) | Refresh `docs/archive_inventory.json` after triaging Cree/Yupik payloads so CodeQL checks inherit provenance metadata. |
+| **Dictionary integrations** | README build drill references cached NVDA manuals and DataJake lexicons so offline packaging mirrors documentation used in tests. | [`docs/nvda_update_recommendations.md`](docs/nvda_update_recommendations.md) | Capture controller client deltas from the next NVDA nightly snapshot and flag severity in the recommendations report. |
+| **Vocal metrics** | Voice-language matrix ties 70 voice templates to 53 locales and surfaces IPA completion percentages inside NVDA’s Speech dialog. | [`docs/voice_language_matrix.md`](docs/voice_language_matrix.md) | Extend `tools/report_voice_language_matrix.py` with tone-range annotations for Yoruba, Thai, and Vietnamese bundles. |
+
 ## Getting started
 1. **Clone the repository** – `git clone https://github.com/pumper42nickel/eloquence_threshold.git` (or your fork) and `cd eloquence_threshold`. This is now the canonical way to obtain the add-on source when no release archive is published.
 2. **Review the bundled data snapshots** – skim [`docs/wikipedia_language_index.md`](docs/wikipedia_language_index.md), [`docs/archive_inventory.md`](docs/archive_inventory.md), and [`docs/nvda_update_recommendations.md`](docs/nvda_update_recommendations.md) to understand which Wikipedia, DataJake, GitHub, and NVDA assets have already been ingested. These reports guide the ISO/script priorities documented above.

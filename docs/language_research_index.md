@@ -108,6 +108,23 @@ regional presets (hard/soft consonants, tonal contours, vowel harmony).
 | Medium | [Languages of Russia](https://en.wikipedia.org/wiki/Languages_of_Russia) | Highlights Russia's multilingual landscape for script coverage. |
 | Medium | [Languages of Oceania](https://en.wikipedia.org/wiki/Languages_of_Oceania) | Combines Austronesian and Papuan planning for Pacific seeds. |
 
+## Language-specific expansion dossiers (Q4 2025 refresh)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Tigrinya language](https://en.wikipedia.org/wiki/Tigrinya_language) | language | Pending structured ingestion | Supplies gemination rules and tone plateaus for ISO `ti` roadmap entries. |
+| High | [Oromo language](https://en.wikipedia.org/wiki/Oromo_language) | language | Pending structured ingestion | Captures Latin/Ethiopic orthography mapping and Gadaa dialect notes for Oromo packaging. |
+| High | [Odia language](https://en.wikipedia.org/wiki/Odia_language) | language | Requires phoneme summary | Provides consonant ligatures and inherent vowel suppression cues. |
+| Medium | [Punjabi language](https://en.wikipedia.org/wiki/Punjabi_language) | language | Pending structured ingestion | Differentiates Gurmukhi vs. Shahmukhi scripts for ISO `pa` coverage. |
+| Medium | [Tibetan language](https://en.wikipedia.org/wiki/Tibetan_language) | language | Pending structured ingestion | Supplies stacked consonant tables and tonal contour references for ISO `bo`. |
+| Medium | [Uyghur language](https://en.wikipedia.org/wiki/Uyghur_language) | language | Requires summary integration | Highlights Arabic-script vowels and Latin transliteration for ISO `ug`. |
+| Medium | [Wolof language](https://en.wikipedia.org/wiki/Wolof_language) | language | Pending structured ingestion | Tone and nasal cluster references for ISO `wo` roadmaps. |
+| Medium | [Igbo language](https://en.wikipedia.org/wiki/Igbo_language) | language | Pending structured ingestion | Nasal harmony, tone ladder, and syllabic nasal planning for ISO `ig`. |
+| Medium | [Irish language](https://en.wikipedia.org/wiki/Irish_language) | language | Pending structured ingestion | Lenition/eclipsis scheduling to calibrate consonant hardness sliders for `ga-IE`. |
+| Medium | [Georgian language](https://en.wikipedia.org/wiki/Georgian_language) | language | Pending structured ingestion | Ejective consonant frequencies and vowel harmony metadata for ISO `ka`. |
+| Medium | [Mongolian language](https://en.wikipedia.org/wiki/Mongolian_language) | language | Pending structured ingestion | Captures vowel harmony and syllable timing data for ISO `mn`. |
+| Medium | [Kinyarwanda](https://en.wikipedia.org/wiki/Kinyarwanda) | language | Requires phoneme summary | Plateau tone modelling and nasal prefix phonotactics for ISO `rw`. |
+
 ## Policy, usage, and priority metrics
 
 | Usefulness | Source | Classification | Progress | NVDA planning hook |
