@@ -183,3 +183,34 @@ Contributors can reference this roadmap when proposing pull requests so reviews 
 - Validate the new locales against NVDA alpha-52762 nightly builds and `2025.3` stable installers using the cached audit reports.
 - Update `AGENTS.md` after each sprint to log the NVDA build numbers, CodeQL findings, and DataJake/GitHub/Wikipedia artefacts referenced when refreshing the Eastern Europe and Caucasus roadmap entries.
 
+## Andean and Amazonian integration sprint (October 2025 follow-up)
+
+| ISO / tag | Script focus | Status | Notes |
+| --- | --- | --- | --- |
+| qu / quz / quy | Latin (Quechuan macrolanguage) | Researching | Cached Wikipedia corpora covering Cusco and Ayacucho Quechua supply vowel harmony and ejective stops; DataJake `.dic` payloads mapped via GitHub’s `qupobox` analyser power contextual suffix selection for `language_profiles.py`. |
+| ay | Latin (Aymara) | Researching | NV Speech Player recordings document uvular–velar contrasts, while NVDA documentation caches provide braille hyphenation cues; DataJake lexicons under CodeQL review to confirm glottal stop markers. |
+| gn | Latin (Guaraní) | Developing | Nasal harmony inventories (Wikipedia + DataJake) align with NV Speech Player **Nasal balance** defaults; GitHub morphological generators inform dictionary segmentation before packaging. |
+| arn | Latin (Mapudungun) | Planned | GitHub morphological corpora and NV Access manual exports guide agglutinative suffix handling; DataJake archives flagged for aspirated affricate recordings feeding EQ presets. |
+| shp | Latin (Shipibo-Conibo) | Planned | Fieldwork tone contour datasets (Wikipedia citations + DataJake audio) stage NV Speech Player **Inflection contour** defaults; NVDA punctuation exports pending for braille validation. |
+| nah | Latin (Nahuatl macro-language) | Researching | GitHub orthography normalisers paired with DataJake recordings capture vowel length/glottal stops; NV Access documentation caches highlight punctuation conventions for future dictionary imports. |
+
+### Frequency, phoneme, and speech parameter backlog
+
+- Merge Shipibo-Conibo contour archives into `docs/voice_parameter_report.md` after regenerating the report so **Inflection contour**, **Tone size**, and **Subtones** sliders mirror recorded tone ladders.
+- Stage Aymara uvular consonant EQ presets in `phoneme_customizer.py`, clamping boosts to the 1–3 kHz band while validating 8–384 kHz safety via the WASAPI-aware resampler described in `AGENTS.md`.
+- Add Quechuan ejective/plosive comparisons to the DataJake utilisation dashboard by rerunning `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`.
+- Regenerate `docs/voice_language_matrix.md` and `docs/language_maturity.md` after seeding each locale so CodeQL jobs can track the maturity delta and ensure slider presets reference existing profiles.
+
+### Dictionary and corpus integration tasks
+
+- Inventory Guaraní `.dic`/`.lex` assets via `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` and link them to the roadmap entries once CodeQL checks confirm consistent nasal harmony markers.
+- Update `docs/language_research_index.md` / `.json` with the Wikipedia sources cited above (tone contour archives, orthography guides, and corpus references) so future contributors can follow the provenance trail.
+- Coordinate with NVDA documentation maintainers to capture Mapudungun, Quechua, and Nahuatl punctuation tables in `docs/nvda_update_recommendations.md` after refreshing the NV Access audit snapshot.
+- Extend `tests/test_cli_reports.py` with fixtures representing nasal harmony and ejective consonant metadata once the dictionaries land, ensuring the reporting helpers summarise the new fields correctly.
+
+### Testing and packaging checkpoints
+
+- Validate the Andean/Amazonian locales against NVDA alpha-52762 and `2025.3` installers mirrored via `python tools/audit_nvaccess_downloads.py` before staging a release candidate.
+- Capture unit test and build logs in the pull request body (see the offline build rehearsal checklist) so blind/low-vision reviewers can replay the commands without leaving the terminal.
+- Refresh the README sprint summary and `AGENTS.md` after each iteration to highlight the cross-source artefacts consumed during the expansion.
+

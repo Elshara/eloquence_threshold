@@ -31,6 +31,16 @@ To keep Eloquence's phoneme, lexicon, and tooling pipeline fresh we now version 
 - **Pan-African reinforcement** – Fula/Pulaar (`ff`), Somali (`so`), and Wolof (`wo`) dossiers log tone plateau, ATR harmony, and emphatic consonant references from DataJake lexicons; pairing them with NV Speech Player **Tone**, **Vocal range**, and **Sibilant clarity** defaults keeps the roadmap aligned with NVDA’s slider set.
 - **Heritage dictionary sweep** – Newly catalogued Wikipedia sources (see [`docs/language_research_index.md`](docs/language_research_index.md)) document high-value lexicographic corpora for Sinhala, Nepali, Somali, and Uzbek so `tools/catalog_datajake_archives.py` can flag matching `.dic`/`.lex` downloads before the next build.
 
+### Andean and Amazonian sprint (October 2025 follow-up)
+
+- **Quechuan macrolanguage** – Quechua (`qu`, `quz`, `quy`) staging pulls vowel harmony and ejective consonant cues from cached Wikipedia grammar tables and DataJake `.dic` payloads. GitHub finite-state analyzers such as *qupobox* back the contextual pronunciation rules slated for `language_profiles.py`.
+- **Aymara highland coverage** – Aymara (`ay`) entries prioritise uvular/velar contrasts recorded in NV Speech Player captures while NVDA punctuation exports guide braille hyphenation. CodeQL rules focus on validating glottal stop markers throughout dictionary imports.
+- **Guaraní nasal harmony** – Guaraní (`gn`) roadmap updates align nasal harmony metadata from Wikipedia with DataJake lexicon inventories so NV Speech Player **Nasal balance**, **Subtones**, and **Tone size** sliders default to community expectations.
+- **Mapudungun morphology** – Mapuche/Mapudungun (`arn`) datasets sourced from GitHub corpora pair with NV Access documentation caches to ensure braille exports honour rich agglutinative suffix chains. `phoneme_customizer.py` presets flag aspirated alveolar affricates for EQ calibration.
+- **Shipibo-Conibo contouring** – Shipibo-Conibo (`shp`) planning references recorded tone contour research (Wikipedia + DataJake fieldwork archives) and seeds NV Speech Player **Inflection contour** defaults to keep rising/falling sequences intelligible at NVDA’s default rate.
+- **Nahuatl revitalisation** – Nahuatl (`nah`) documentation cross-links DataJake audio captures, GitHub orthography normalisers, and NVDA manual punctuation tables to stage glottal stop, vowel length, and macro-morpheme cues for future pronunciation generators.
+- **Cross-source provenance** – Each locale references the regenerated dashboards in [`docs/language_progress.md`](docs/language_progress.md), [`docs/language_coverage.md`](docs/language_coverage.md), [`docs/language_maturity.md`](docs/language_maturity.md), and [`docs/voice_language_matrix.md`](docs/voice_language_matrix.md) to keep ISO coverage, speech parameters, and dictionary ingestion in sync with the README roadmap.
+
 After each documentation or profile change, regenerate the cached coverage artefacts so pull requests reflect the current dataset without hammering upstream mirrors:
 
 - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
@@ -247,6 +257,11 @@ Wikipedia/DataJake/GitHub/NVDA provenance synchronised with CodeQL guardrails.
 10. **Explore and customise** – visit **Preferences → Speech** to pick Eloquence, adjust the expanded slider set (Emphasis, Stress, Timbre, Tone, Pitch height, Vocal layers, Plosive impact, Overtones, Sibilant clarity, Subtones, Nasal balance, Vocal range, Inflection contour, Roughness, Smoothness, Whisper, Head size contour, Macro volume, Tone size, Scope depth, Sample rate, and Phoneme EQ bands), and inspect the language profile picker for the ISO/script/vocal metrics you just updated.
 
 #### Offline build quickstart (no-release scenario, October 2025 update)
+
+> Need the narrated drill-by-drill version?  Pair this table with the new
+> [`docs/offline_build_rehearsal.md`](docs/offline_build_rehearsal.md) checklist
+> for a narrated walkthrough that ties every command to cached Wikipedia,
+> DataJake, GitHub, and NV Access artefacts plus CodeQL follow-ups.
 
 | Step | Command(s) | Purpose |
 | --- | --- | --- |
