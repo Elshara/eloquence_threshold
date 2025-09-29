@@ -197,6 +197,18 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | Medium | [Breton language](https://en.wikipedia.org/wiki/Breton_language) | language | Pending structured ingestion | Stress placement and nasalisation cues inform NV Speech Player **Nasal balance** and **Inflection contour** sliders for ISO `br`. |
 | Medium | [Nuer language](https://en.wikipedia.org/wiki/Nuer_language) | language | Researching tone ladder export | ATR harmony, breathy vowels, and apostrophe tone markers connect DataJake scripture corpora with NVDA punctuation snapshots for ISO `nus`. |
 
+## Saharan-to-Pacific bridging research sprint (October 2025 continuation)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| Medium | [Kabyle language](https://en.wikipedia.org/wiki/Kabyle_language) | language / phonology | Pending structured ingestion | Captures emphatic consonants, vowel harmony, and Tifinagh ⇄ Latin transliteration cues needed to seed Kabyle (`kab`) profiles and NV Speech Player **Plosive impact** presets. |
+| Medium | [Central Atlas Tamazight](https://en.wikipedia.org/wiki/Central_Atlas_Tamazight_language) | language / orthography | Pending structured ingestion | Documents Tifinagh consonant inventories and vowel neutralisation; guides CodeQL-audited dual-script packaging for ISO `tzm`. |
+| Medium | [Bambara language](https://en.wikipedia.org/wiki/Bambara_language) | language / tone | Researching ATR harmony export | Provides ATR harmony, nasal vowel, and tonal contour notes that map to DataJake scripture recordings and NV Speech Player **Nasal balance**/**Macro volume** sliders for ISO `bm`. |
+| Medium | [Tok Pisin](https://en.wikipedia.org/wiki/Tok_Pisin) | language / creole | Pending structured ingestion | Lays out creole phonology, English/Fijian lexifier blending, and punctuation conventions used to align Tok Pisin (`tpi`) dictionaries with NVDA manuals. |
+| Medium | [Fijian language](https://en.wikipedia.org/wiki/Fijian_language) | language / phonology | Requires summary integration | Supplies vowel length contrasts and prenasalised stop behaviour that inform EQ envelopes and NV Speech Player **Inflection contour** defaults for ISO `fj`. |
+| Medium | [Marshallese language](https://en.wikipedia.org/wiki/Marshallese_language) | language / phonology | Pending structured ingestion | Captures voiceless vowel series and consonant allophones; ties into DataJake hymn recordings to stage Marshallese (`mh`) frequency presets. |
+| Medium | [Lule Sami](https://en.wikipedia.org/wiki/Lule_Sami_language) | language / phonology | Researching consonant gradation export | Details consonant gradation, vowel harmony, and orthography used to seed Lule Sámi (`smj`) dictionaries with GitHub finite-state analysers and NVDA braille exports. |
+
 ## Technical, programming, and modelling languages
 
 These resources ensure Eloquence can speak developer-centric content with the

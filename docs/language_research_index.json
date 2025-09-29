@@ -1719,6 +1719,111 @@
         "apostrophe tone markers"
       ],
       "notes": "ATR harmony, breathy vowels, and apostrophe tone markers connect DataJake scripture corpora with NVDA punctuation snapshots and NV Speech Player tone presets for ISO nus."
+    },
+    {
+      "title": "Kabyle language",
+      "url": "https://en.wikipedia.org/wiki/Kabyle_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "emphatic consonants",
+        "Tifinagh transliteration"
+      ],
+      "notes": "Kabyle consonant emphasis, vowel harmony, and Tifinagh ⇄ Latin transliteration cues steer ISO kab phoneme presets, NV Speech Player Plosive impact sliders, and NVDA braille exports."
+    },
+    {
+      "title": "Central Atlas Tamazight",
+      "url": "https://en.wikipedia.org/wiki/Central_Atlas_Tamazight_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Tifinagh consonant inventory",
+        "vowel neutralisation"
+      ],
+      "notes": "Central Atlas Tamazight orthography notes feed ISO tzm dual-script packaging, guiding CodeQL-audited profile seeding and NV Speech Player Tone/Plosive defaults."
+    },
+    {
+      "title": "Bambara language",
+      "url": "https://en.wikipedia.org/wiki/Bambara_language",
+      "usefulness": "medium",
+      "progress": "researching ATR harmony export",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "ATR harmony",
+        "nasal vowel inventory"
+      ],
+      "notes": "Bambara ATR harmony, nasal vowel, and tonal contour datasets align DataJake scripture recordings with NV Speech Player Nasal balance and Macro volume presets for ISO bm."
+    },
+    {
+      "title": "Tok Pisin",
+      "url": "https://en.wikipedia.org/wiki/Tok_Pisin",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "creole"
+      ],
+      "sample_assets": [
+        "creole phonology",
+        "punctuation conventions"
+      ],
+      "notes": "Tok Pisin creole phonology and punctuation conventions inform DataJake/GitHub dictionary imports, NVDA manual alignment, and tone-neutral slider presets for ISO tpi."
+    },
+    {
+      "title": "Fijian language",
+      "url": "https://en.wikipedia.org/wiki/Fijian_language",
+      "usefulness": "medium",
+      "progress": "requires summary integration",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "vowel length contrasts",
+        "prenasalised stops"
+      ],
+      "notes": "Fijian vowel length and prenasalised stop behaviour shape EQ envelopes and NV Speech Player Inflection contour presets for ISO fj using DataJake hymn recordings."
+    },
+    {
+      "title": "Marshallese language",
+      "url": "https://en.wikipedia.org/wiki/Marshallese_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "voiceless vowels",
+        "consonant allophones"
+      ],
+      "notes": "Marshallese voiceless vowel series and consonant allophones guide frequency presets and DataJake hymn ingestion for ISO mh."
+    },
+    {
+      "title": "Lule Sami",
+      "url": "https://en.wikipedia.org/wiki/Lule_Sami_language",
+      "usefulness": "medium",
+      "progress": "researching consonant gradation export",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "consonant gradation",
+        "vowel harmony"
+      ],
+      "notes": "Lule Sámi consonant gradation and vowel harmony references align GitHub finite-state analysers, DataJake lexical payloads, and NVDA braille exports for ISO smj."
     }
   ]
 }

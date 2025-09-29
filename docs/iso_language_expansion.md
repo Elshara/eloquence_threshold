@@ -287,3 +287,33 @@ Contributors can reference this roadmap when proposing pull requests so reviews 
 - Run `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` to verify the add-on bundles right-to-left Thaana data and tone contour presets without internet access.
 - Document each offline drill in `AGENTS.md`, including the refreshed Wikipedia/DataJake/GitHub/NVDA artefacts and regenerated Markdown/JSON reports.
 
+## Saharan-to-Pacific bridging sprint (October 2025 continuation)
+
+| ISO / tag | Script focus | Status | Notes |
+| --- | --- | --- | --- |
+| kab | Tifinagh & Latin (Kabyle) | Researching | Wikipedia consonant emphasis and vowel harmony data align with DataJake `.lex` payloads; GitHub Amazigh morphological analysers staged to map tri-consonantal roots while NVDA braille exports verify mixed-script punctuation. |
+| tzm | Tifinagh & Latin (Central Atlas Tamazight) | Planned | Cached Afroasiatic family dossiers capture emphatic consonants and vowel centralisation; NV Speech Player presets queued to tune **Plosive impact** and **Tone** sliders before CodeQL-audited profile seeding. |
+| bm | Latin (Bambara) | Researching | DataJake scripture recordings and GitHub tonal corpora inform ATR harmony and nasal vowel defaults; cross-reference [`docs/voice_parameter_report.md`](voice_parameter_report.md) for **Nasal balance**/**Macro volume** calibration. |
+| tpi | Latin (Tok Pisin) | Planned | Wikipedia orthography and creole structure notes paired with DataJake sermon corpora; NVDA punctuation exports confirm English-derived digraph handling for tone-neutral presets. |
+| fj | Latin (Fijian) | Researching | GitHub vowel-length datasets and DataJake hymn recordings guide frequency envelopes; NV Speech Player **Inflection contour** defaults validated against NVDA braille manuals. |
+| mh | Latin (Marshallese) | Planned | Cached Wikipedia consonant inventory (including voiceless vowels) merged with GitHub orthography tables; DataJake hymn samples staged to map resonant frequency bands before packaging. |
+| smj | Latin (Lule Sámi) | Researching | Wikipedia consonant gradation tables and GitHub finite-state analysers align with DataJake lexical payloads; NVDA alpha-52762 braille exports confirm diacritic handling. |
+
+### Frequency, phoneme, and speech parameter backlog
+
+- Regenerate [`docs/voice_frequency_matrix.md`](voice_frequency_matrix.md) after staging Fijian and Marshallese spectral captures to keep vowel length and glottal resonance aligned with NV Speech Player harmonics.
+- Extend `phoneme_customizer.py` presets with Kabyle/Tamazight emphatic consonant cues and Bambara nasal harmony, then rerun `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print` to surface the new sliders in the dashboards.
+- Update [`docs/voice_parameter_report.md`](voice_parameter_report.md) to reflect Bambara **Nasal balance**/**Macro volume** defaults and the creole tone-neutral presets queued for Tok Pisin.
+
+### Dictionary and corpus integration tasks
+
+- Append Kabyle, Tamazight, Bambara, Tok Pisin, Fijian, Marshallese, and Lule Sámi bibliographies to [`docs/language_research_index.md`](language_research_index.md) and rerun `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print` to record the provenance delta.
+- Refresh `docs/archive_inventory.json` via `python tools/catalog_datajake_archives.py` after staging the new `.dic`/`.lex` payloads and hymn corpora so CodeQL automation validates sampling metadata and viability tags.
+- Coordinate NV Access manual audits for Kabyle/Tamazight (French/Arabic translations), Bambara, and Tok Pisin by running `python tools/audit_nvaccess_downloads.py` followed by `python tools/check_nvda_updates.py` to keep punctuation and braille expectations synchronised with validated builds.
+
+### Testing and packaging checkpoints
+
+- Execute `python -m unittest discover tests` and `python tools/report_integration_scope.py --json docs/integration_scope.json --markdown docs/integration_scope.md --print` after updating these locales to ensure linkage matrices reflect the new profiles.
+- Build with `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` to confirm Tifinagh ⇄ Latin assets, creole frequency presets, and Sámi consonant gradation data package correctly without live downloads.
+- Record sprint outcomes in `AGENTS.md`, referencing the refreshed Wikipedia/DataJake/GitHub/NVDA artefacts and regenerated dashboards so future offline drills can replay the Saharan/Pacific workflow.
+
