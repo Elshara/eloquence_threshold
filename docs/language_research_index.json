@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-13",
+  "updated": "2025-10-14",
   "sources": [
     {
       "title": "Lists of languages",
@@ -1944,6 +1944,111 @@
         "whistled speech references"
       ],
       "notes": "Feeds Shona (sn) EQ calibration and CodeQL-reviewed dictionary imports using DataJake phonology datasets and NV Speech Player contour presets."
+    },
+    {
+      "title": "Cebuano language",
+      "url": "https://en.wikipedia.org/wiki/Cebuano_language",
+      "usefulness": "high",
+      "progress": "indexed from backlog",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "vowel harmony charts",
+        "glottal stop notation"
+      ],
+      "notes": "Maps Visayan vowel harmony, glottal stops, and reduplication patterns that feed NV Speech Player **Tone size**/**Subtones** presets and CodeQL-audited dictionary imports from DataJake hymn corpora."
+    },
+    {
+      "title": "Hiligaynon language",
+      "url": "https://en.wikipedia.org/wiki/Hiligaynon_language",
+      "usefulness": "high",
+      "progress": "indexed from backlog",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "stress placement notes",
+        "penultimate vowel length references"
+      ],
+      "notes": "Documents stress placement and penultimate vowel length cues; paired with GitHub syllable tokenisers to seed NV Speech Player **Inflection contour** defaults."
+    },
+    {
+      "title": "Ilocano language",
+      "url": "https://en.wikipedia.org/wiki/Ilocano_language",
+      "usefulness": "high",
+      "progress": "indexed from backlog",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "vowel length tables",
+        "enclitic positioning"
+      ],
+      "notes": "Highlights glottal stop notation, vowel length, and enclitic placement for Ilocano; informs NVDA braille exports and tone slider defaults when merging DataJake radio corpora."
+    },
+    {
+      "title": "Kapampangan language",
+      "url": "https://en.wikipedia.org/wiki/Kapampangan_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "stress inversion rules",
+        "Spanish loan orthography"
+      ],
+      "notes": "Provides Austronesian stress inversion rules and Spanish loan orthography to validate Kapampangan `.dic` payloads and NVDA punctuation behaviour."
+    },
+    {
+      "title": "Waray language",
+      "url": "https://en.wikipedia.org/wiki/Waray_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "stress distribution",
+        "enclitic placement"
+      ],
+      "notes": "Covers Eastern Visayan stress, vowel alternations, and enclitic placement for Waray-Waray; used with DataJake scripture archives to calibrate NV Speech Player **Tone**/**Scope depth** sliders."
+    },
+    {
+      "title": "Hmong language",
+      "url": "https://en.wikipedia.org/wiki/Hmong_language",
+      "usefulness": "high",
+      "progress": "indexed from backlog",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "tone matrix diagrams",
+        "orthography comparisons"
+      ],
+      "notes": "Captures eight-level tone matrices and orthography variants (Romanised Popular Alphabet, Pahawh); anchors NV Speech Player **Tone**, **Scope depth**, and **Whisper** presets plus DataJake oral history corpora."
+    },
+    {
+      "title": "Mizo language",
+      "url": "https://en.wikipedia.org/wiki/Mizo_language",
+      "usefulness": "high",
+      "progress": "indexed from backlog",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "tone register tables",
+        "nasalisation notes"
+      ],
+      "notes": "Details Mizo tone registers, nasalisation, and orthography; pairs with GitHub tonal classifiers and DataJake hymn recordings for NV Speech Player **Tone**/**Nasal balance** planning."
     }
   ]
 }

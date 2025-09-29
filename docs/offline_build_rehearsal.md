@@ -59,6 +59,10 @@ package new locales.
        --json docs/language_asset_summary.json \
        --markdown docs/language_asset_summary.md --print
    ```
+4. Philippine/Mainland sprint callout:
+   - Copy the refreshed Cebuano, Hiligaynon, Ilocano, Kapampangan, Waray, Hmong, and Mizo rows from [`docs/language_research_index.md`](docs/language_research_index.md) (or rerun the command above) so offline builds capture their Wikipedia/DataJake provenance.
+   - Stage Visayan and Hmong `.dic`/`.lex` payloads under `eloquence_data/` and rerun `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` to log their source archives.
+   - Regenerate `docs/voice_frequency_matrix.md` and `docs/voice_parameter_report.md` after seeding new tone samples so NV Speech Player slider presets stay in sync with the README sprint summary.
 
 ## 3. Audit NV Access snapshots
 

@@ -222,6 +222,18 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | Medium | [Lingala language](https://en.wikipedia.org/wiki/Lingala_language) | language / tone | Pending structured ingestion | Covers tonal morphology and French-derived punctuation; ensures Lingala (`ln`) lexicons align DataJake scripture corpora with NVDA manual exports. |
 | Medium | [Shona language](https://en.wikipedia.org/wiki/Shona_language) | language / tone | Pending structured ingestion | Downstep, whistled speech, and nasal cluster cues calibrate Shona (`sn`) EQ presets and CodeQL-reviewed `.dic` imports sourced from DataJake phonology datasets. |
 
+## Philippine archipelago and Mainland Southeast Asia sprint (October 2025 extension)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Cebuano language](https://en.wikipedia.org/wiki/Cebuano_language) | language / orthography | Indexed from backlog | Maps Visayan vowel harmony, glottal stops, and reduplication patterns that feed NV Speech Player **Tone size**/**Subtones** presets and CodeQL-audited dictionary imports from DataJake hymn corpora. |
+| High | [Hiligaynon language](https://en.wikipedia.org/wiki/Hiligaynon_language) | language / tone | Indexed from backlog | Documents stress placement and penultimate vowel length cues; paired with GitHub syllable tokenisers to seed NV Speech Player **Inflection contour** defaults. |
+| High | [Ilocano language](https://en.wikipedia.org/wiki/Ilocano_language) | language / orthography | Indexed from backlog | Highlights glottal stop notation, vowel length, and enclitic placement for Ilocano; informs NVDA braille exports and tone slider defaults when merging DataJake radio corpora. |
+| Medium | [Kapampangan language](https://en.wikipedia.org/wiki/Kapampangan_language) | language / orthography | Pending structured ingestion | Provides Austronesian stress inversion rules and Spanish loan orthography to validate Kapampangan `.dic` payloads and NVDA punctuation behaviour. |
+| Medium | [Waray language](https://en.wikipedia.org/wiki/Waray_language) | language / tone | Pending structured ingestion | Covers Eastern Visayan stress, vowel alternations, and enclitic placement for Waray-Waray; used with DataJake scripture archives to calibrate NV Speech Player **Tone**/**Scope depth** sliders. |
+| High | [Hmong language](https://en.wikipedia.org/wiki/Hmong_language) | language / tone | Indexed from backlog | Captures eight-level tone matrices and orthography variants (Romanised Popular Alphabet, Pahawh); anchors NV Speech Player **Tone**, **Scope depth**, and **Whisper** presets plus DataJake oral history corpora. |
+| High | [Mizo language](https://en.wikipedia.org/wiki/Mizo_language) | language / tone | Indexed from backlog | Details Mizo tone registers, nasalisation, and orthography; pairs with GitHub tonal classifiers and DataJake hymn recordings for NV Speech Player **Tone**/**Nasal balance** planning. |
+
 ## Technical, programming, and modelling languages
 
 These resources ensure Eloquence can speak developer-centric content with the

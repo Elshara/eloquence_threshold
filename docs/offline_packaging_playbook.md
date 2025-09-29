@@ -143,6 +143,12 @@ Inspect `dist/eloquence.nvda-addon` (a ZIP archive) to ensure it contains the
 `manifest.ini`, `globalPlugins/` module, `eloquence*/` runtime folders, and any
 documentation or dataset payloads you staged.
 
+### Philippine archipelago and Mainland Southeast Asia sprint focus
+
+- Rehydrate Visayan/Hmong research artefacts before packaging: copy the refreshed [`docs/language_research_index.*`](language_research_index.md) entries for Cebuano, Hiligaynon, Ilocano, Kapampangan, Waray, Hmong, and Mizo or rerun `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print` to pull the sources into place offline.
+- Stage the corresponding DataJake hymn/scripture `.dic` payloads and update `docs/archive_inventory.{json,md}` via `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` so CodeQL reviews log their provenance and audio fidelity.
+- Regenerate the tone-aware dashboards (`python tools/report_voice_frequency_matrix.py`, `python tools/report_voice_parameters.py`, and `python tools/report_language_progress.py`) after adding these locales so NV Speech Player **Tone**, **Scope depth**, **Subtones**, and **Whisper** presets stay aligned with the README roadmap before you run the packaging command above.
+
 ## 7. Validate in NVDA
 
 1. Install the add-on via **Tools → Add-ons → Install** inside NVDA (alpha-52731
