@@ -276,12 +276,29 @@ phoneme completion, or voice template coverage before packaging.  See [`docs/iso
 for the full matrix plus forward-looking tasks, and log follow-up findings in `docs/language_research_index.md` to keep
 Wikipedia/DataJake/GitHub/NVDA provenance synchronised with CodeQL guardrails.
 
+### Caribbean and Central American sprint (October 2025)
+
+- **Haitian Creole (`ht`) + Jamaican Patois (`jam`)** – Built on cached *Haitian Creole* and *Jamaican Patois* Wikipedia
+  phonology portals, cross-linking nasal vowel charts, creole grammar baselines, and diaspora speech corpora.  DataJake
+  hymn and radio lexicons are mapped to NV Speech Player **Inflection contour**, **Nasal balance**, and **Tone** sliders
+  so we can rehearse prosody before importing the dictionaries under CodeQL supervision.  GitHub transliteration scripts
+  help reconcile French-orthography punctuation with NVDA braille exports staged in the packaging playbook.
+- **K'iche' (`quc`) and Garifuna (`cab`)** – Cached Mayan and Arawakan Wikipedia phoneme tables anchor ejective consonant
+  and nasal harmony coverage while GitHub community grammars highlight dialect branches.  DataJake scripture corpora and
+  community storytelling archives underpin planned `.dic` extractions, and NVDA braille snapshots confirm glottal stop and
+  saltillo handling before we ship Central American presets.
+- **Papiamento (`pap`) and Miskito (`miq`)** – Leveraged DataJake call centre, education, and historical speech archives
+  to capture creole vowel mergers and Miskito nasal stress placement.  Wikipedia orthography notes pair with GitHub
+  transliteration utilities, while cached NVDA documentation keeps punctuation and braille expectations aligned across
+  Latin-script variants.  The new roadmap rows track frequency envelope experiments so we can stage NV Speech Player
+  **Overtones**/**Scope depth** presets alongside dictionary ingestion tasks.
+
 ## Getting started
 1. **Clone the repository** – `git clone https://github.com/pumper42nickel/eloquence_threshold.git` (or your fork) and `cd eloquence_threshold`. This is now the canonical way to obtain the add-on source when no release archive is published.
 2. **Review the bundled data snapshots** – skim [`docs/wikipedia_language_index.md`](docs/wikipedia_language_index.md), [`docs/archive_inventory.md`](docs/archive_inventory.md), and [`docs/nvda_update_recommendations.md`](docs/nvda_update_recommendations.md) to understand which Wikipedia, DataJake, GitHub, and NVDA assets have already been ingested. These reports guide the ISO/script priorities documented above.
 3. **Gather proprietary Eloquence binaries** – place the classic 32-bit runtime (`ECI.DLL`, `.syn` voice data, and associated `.ph/ .phs` assets) inside an `eloquence/` directory. Add architecture-specific payloads beside it by creating `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, or `eloquence_arm64/` folders containing the corresponding DLLs and voices. You can also reuse an earlier add-on as a template by dropping it next to the build script as `eloquence_original.nvda-addon` or by passing `--template /path/to/addon.nvda-addon` when building.
 4. **Optional – create an isolated Python environment** – `python -m venv .venv` followed by `.venv\Scripts\activate` (PowerShell) or `source .venv/bin/activate` (WSL/Linux/macOS). Install build helpers with `pip install -r tools/requirements-build.txt` if you maintain a custom dependency set; the repository only relies on the Python standard library by default.
-5. **Stage cached datasets** – copy refreshed Markdown/JSON artefacts from `docs/` (for example `docs/language_progress.md`, `docs/language_coverage.md`, `docs/voice_language_matrix.md`, and `docs/wikipedia_language_index.md`) into your clone so the build script embeds the latest provenance notes without re-downloading public archives. When you add or modify datasets, rerun:
+5. **Stage cached datasets** – copy refreshed Markdown/JSON artefacts from `docs/` (for example `docs/language_progress.md`, `docs/language_coverage.md`, `docs/voice_language_matrix.md`, and `docs/wikipedia_language_index.md`) into your clone so the build script embeds the latest provenance notes without re-downloading public archives. When you add or modify datasets—including the new Haitian Creole, Jamaican Patois, K'iche', Garifuna, Papiamento, and Miskito research packs—rerun:
    - `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`
    - `python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print`
    - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`

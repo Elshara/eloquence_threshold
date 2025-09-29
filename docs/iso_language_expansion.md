@@ -17,6 +17,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | bg | Cyrillic (Bulgarian) | Developing | DataJake MBROLA payloads flagged for vowel reduction heuristics; Wikipedia stress matrices under review. |
 | bn, bn-IN | Bengali | Comprehensive | Builds on DataJake phoneme stubs and NVDA manual terminology to map inherent vowel suppression rules. |
 | ca | Latin (Catalan) | Planned | Language index cross-references DECtalk lexicons for liaison; CodeQL follow-up recorded for 2025-Q4. |
+| cab | Latin (Garifuna) | Researching | Cached Wikipedia Garifuna phonology and orthography charts paired with DataJake community radio `.dic` inventories; GitHub revitalisation grammars and NVDA braille exports confirm apostrophe tone markers prior to EQ tuning. |
 | ceb | Latin (Cebuano) | Researching | DataJake hymn `.dic` payloads catalogued alongside GitHub orthography converters; cached Wikipedia vowel harmony notes guide NV Speech Player **Tone size** and **Subtones** defaults prior to CodeQL-audited profile seeding. |
 | chr | Cherokee syllabary | Researching | Wikipedia syllabary tables mirrored; GitHub DECtalk lexicon fragments staged for syllable-to-phoneme mapping prior to NVDA braille export integration. |
 | cs | Latin (Czech) | Established | Awaiting expanded consonant cluster rules from archived DECtalk dictionaries. |
@@ -64,6 +65,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | lt | Latin (Lithuanian) | Planned | Stress accent reports collated from Wikipedia; DataJake archives triaged for pitch contour metadata. |
 | lus | Latin (Mizo/Lushai) | Researching | Cached Wikipedia tone registers and GitHub tonal classifier notebooks paired with DataJake hymn archives; NV Speech Player **Tone**, **Scope depth**, and **Nasal balance** presets flagged for Mainland Southeast Asia validation. |
 | mg | Latin (Malagasy) | Planned | DataJake news corpora catalogued for tone/stress guidance; Wikipedia phonotactics and NVDA manual punctuation exports cross-referenced to seed NV Speech Player **Inflection contour** defaults. |
+| miq | Latin (Miskito) | Planned | Wikipedia nasal stress notes cross-checked with DataJake scripture corpora; GitHub orthography converters and NVDA braille exports validate accent markers ahead of NV Speech Player **Scope depth** presets. |
 | mi | Latin (Māori) | Planned | Wikipedia vowel length and wh/ng consonant inventories staged; DataJake hymn recordings tagged for nasal resonance to drive **Nasal balance** presets alongside NVDA braille exports. |
 | mn | Cyrillic (Mongolian) | Planned | NVDA manuals document vowel harmony; GitHub morphological analysers tagged for contextual suffixes. |
 | lv | Latin (Latvian) | Planned | Phoneme coverage flagged for tonal accent validation; NVDA manual quotes stored for macron handling. |
@@ -76,9 +78,11 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | or | Odia (Oriya) | Planned | Script-specific ligatures inventoried; DataJake `.lex` search queued for inherent vowel suppression rules. |
 | pa, pa-Arab | Gurmukhi & Shahmukhi (Punjabi) | Planned | Dual-script packaging references NVDA manual samples; DataJake `.dic` payloads tagged for tone and retroflex calibration. |
 | pam | Latin (Kapampangan) | Planned | GitHub orthography converters and Wikipedia phonotactics underpin NVDA braille punctuation tests; DataJake bilingual hymn corpora logged to confirm glottal stop markers before generating Visayan-aligned profiles. |
+| pap | Latin (Papiamento) | Researching | Cached Caribbean creole phonology articles mapped to DataJake tourism and education lexicons; NV Speech Player **Tone size** presets staged while GitHub transliteration utilities and NVDA braille exports reconcile diacritics. |
 | ps | Pashto (Perso-Arabic) | Planned | Wikipedia retroflex/aspirate notes mirrored; GitHub romanisation tools catalogued to align dual-script presets and NVDA punctuation exports. |
 | pl | Latin (Polish) | Developing | Soft consonant palatalisation traces pulled from GitHub; NVDA manuals confirm punctuation spacing. |
 | pt-BR | Latin (Portuguese) | Established | NVDA manuals and GitHub lexicons align sibilant and nasal vowel behaviours. |
+| quc | Latin (K'iche') | Researching | Wikipedia Mayan phoneme tables staged with DataJake scripture lexicons; GitHub community grammars and NVDA braille exports validate ejective consonant markers ahead of CodeQL-audited dictionary imports. |
 | ro | Latin (Romanian) | Planned | DECtalk lexicon ancestry catalogued; Wikipedia sources list vowel centralisation heuristics pending validation. |
 | ru | Cyrillic (Russian) | Developing | Awaiting vowel reduction matrices from Wikipedia stress tables before graduating to "established". |
 | rn | Latin (Kirundi) | Planned | GitHub morphological analyzers catalogued; DataJake `.lex` payloads queued to document Bantu noun-class tones alongside NVDA punctuation exports. |

@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-14",
+  "updated": "2025-10-15",
   "sources": [
     {
       "title": "Lists of languages",
@@ -299,7 +299,7 @@
       "notes": "Provides lexical comparison data for fine-tuning high-frequency consonant bands within Taloid dialect presets."
     },
     {
-      "title": "Talodi\u2013Heiban languages",
+      "title": "Talodi–Heiban languages",
       "url": "https://en.wikipedia.org/wiki/Talodi%E2%80%93Heiban_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
@@ -310,7 +310,7 @@
       "sample_assets": [
         "family classification"
       ],
-      "notes": "Supports inclusion of Niger\u2013Congo branches within African language packs."
+      "notes": "Supports inclusion of Niger–Congo branches within African language packs."
     },
     {
       "title": "Yupik languages",
@@ -356,7 +356,7 @@
       "notes": "Helps define accent/intonation cues for retro computing voices and developer-centric presets."
     },
     {
-      "title": "List of constructed languages \u2013 Languages used in fiction",
+      "title": "List of constructed languages – Languages used in fiction",
       "url": "https://en.wikipedia.org/wiki/List_of_constructed_languages#Languages_used_in_fiction",
       "usefulness": "high",
       "progress": "pending structured ingestion",
@@ -1339,7 +1339,7 @@
       "notes": "Guides ISO kl (Kalaallisut) tone curves, affix stacking, and NVDA punctuation defaults sourced from NV Access manuals."
     },
     {
-      "title": "Dena\u02bcina language",
+      "title": "Denaʼina language",
       "url": "https://en.wikipedia.org/wiki/Dena%27ina_language",
       "usefulness": "medium",
       "progress": "researching tone plateau cues",
@@ -1522,7 +1522,7 @@
         "orthography"
       ],
       "sample_assets": [
-        "Ge\u2019ez syllable tables",
+        "Ge’ez syllable tables",
         "gemination notes",
         "punctuation guides"
       ],
@@ -1646,7 +1646,7 @@
         "Thaana diacritics",
         "dialect tone notes"
       ],
-      "notes": "Thaana right-to-left diacritics guide NVDA braille exports and offline packaging for ISO dv; paired with DataJake Qur\u2019anic pronunciation lexicons and GitHub transliteration tooling."
+      "notes": "Thaana right-to-left diacritics guide NVDA braille exports and offline packaging for ISO dv; paired with DataJake Qur’anic pronunciation lexicons and GitHub transliteration tooling."
     },
     {
       "title": "Thaana",
@@ -1733,7 +1733,7 @@
         "emphatic consonants",
         "Tifinagh transliteration"
       ],
-      "notes": "Kabyle consonant emphasis, vowel harmony, and Tifinagh \u21c4 Latin transliteration cues steer ISO kab phoneme presets, NV Speech Player Plosive impact sliders, and NVDA braille exports."
+      "notes": "Kabyle consonant emphasis, vowel harmony, and Tifinagh ⇄ Latin transliteration cues steer ISO kab phoneme presets, NV Speech Player Plosive impact sliders, and NVDA braille exports."
     },
     {
       "title": "Central Atlas Tamazight",
@@ -1823,7 +1823,7 @@
         "consonant gradation",
         "vowel harmony"
       ],
-      "notes": "Lule S\u00e1mi consonant gradation and vowel harmony references align GitHub finite-state analysers, DataJake lexical payloads, and NVDA braille exports for ISO smj."
+      "notes": "Lule Sámi consonant gradation and vowel harmony references align GitHub finite-state analysers, DataJake lexical payloads, and NVDA braille exports for ISO smj."
     },
     {
       "title": "Yoruba language",
@@ -2049,6 +2049,96 @@
         "nasalisation notes"
       ],
       "notes": "Details Mizo tone registers, nasalisation, and orthography; pairs with GitHub tonal classifiers and DataJake hymn recordings for NV Speech Player **Tone**/**Nasal balance** planning."
+    },
+    {
+      "title": "Haitian Creole",
+      "url": "https://en.wikipedia.org/wiki/Haitian_Creole",
+      "usefulness": "high",
+      "progress": "requires phoneme summary",
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "nasal vowel contour tables",
+        "DataJake hymn and radio lexicons",
+        "NVDA braille export snapshots"
+      ],
+      "notes": "Cached Wikipedia nasal vowel and prosody tables steer ISO `ht` planning; DataJake hymn/radio `.dic` inventories, GitHub creole grammars, and NVDA braille exports align punctuation before CodeQL-reviewed dictionary imports."
+    },
+    {
+      "title": "Jamaican Patois",
+      "url": "https://en.wikipedia.org/wiki/Jamaican_Patois",
+      "usefulness": "medium",
+      "progress": "researching tone metadata",
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "DataJake reggae narration corpora",
+        "GitHub creole transliteration scripts",
+        "NV Speech Player contour presets"
+      ],
+      "notes": "Wikipedia basilect/acrolect references pair with DataJake narration corpora; GitHub transliteration helpers and NV Speech Player **Inflection contour** presets document creole vowel mergers for ISO `jam`."
+    },
+    {
+      "title": "Garifuna language",
+      "url": "https://en.wikipedia.org/wiki/Garifuna_language",
+      "usefulness": "medium",
+      "progress": "researching",
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "DataJake community radio dictionaries",
+        "Arawakan phonology charts",
+        "NVDA braille exports"
+      ],
+      "notes": "Arawakan phonology resources and DataJake community radio lexicons guide ISO `cab` ejective plus nasal harmony coverage; NVDA braille exports confirm apostrophe tone markers before packaging."
+    },
+    {
+      "title": "K'iche' language",
+      "url": "https://en.wikipedia.org/wiki/K%27iche%27_language",
+      "usefulness": "medium",
+      "progress": "researching ejective coverage",
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "Mayan phoneme charts",
+        "DataJake scripture lexicons",
+        "GitHub community grammars"
+      ],
+      "notes": "Mayan phoneme tables connect to DataJake scripture corpora and GitHub grammars; NVDA braille snapshots validate saltillo handling ahead of ISO `quc` dictionary extraction."
+    },
+    {
+      "title": "Papiamento",
+      "url": "https://en.wikipedia.org/wiki/Papiamento",
+      "usefulness": "medium",
+      "progress": "researching",
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "DataJake tourism and education lexicons",
+        "Wikipedia orthography notes",
+        "GitHub transliteration utilities"
+      ],
+      "notes": "Wikipedia orthography and vowel merger notes align with DataJake tourism/training lexicons; GitHub transliteration utilities and NV Speech Player **Tone size** presets support ISO `pap` frequency planning alongside NVDA punctuation audits."
+    },
+    {
+      "title": "Miskito language",
+      "url": "https://en.wikipedia.org/wiki/Miskito_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "DataJake scripture and news corpora",
+        "Wikipedia nasal stress studies",
+        "NVDA braille exports"
+      ],
+      "notes": "Cached nasal stress studies plus DataJake scripture/news corpora inform ISO `miq` vowel timing; NVDA braille exports confirm accent placement before staging NV Speech Player **Scope depth** presets."
     }
   ]
 }

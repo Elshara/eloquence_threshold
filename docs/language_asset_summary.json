@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-29T21:32:41.214270+00:00",
+  "generatedAt": "2025-09-29T22:06:01.036472+00:00",
   "globalStats": {
-    "generatedAt": "2025-09-29T21:32:41.214270+00:00",
+    "generatedAt": "2025-09-29T22:06:01.036472+00:00",
     "languageCount": 53,
     "languagesWithProgress": 52,
     "languagesWithCoverage": 52,
@@ -16,13 +16,13 @@
     }
   },
   "globalResearch": {
-    "sourceCount": 136,
+    "sourceCount": 149,
     "classificationCounts": {
-      "language": 114,
+      "language": 127,
       "dialect": 11,
       "accent": 3,
       "metadata": 14,
-      "orthography": 14,
+      "orthography": 17,
       "constructed": 5,
       "historical": 5,
       "family": 16,
@@ -39,10 +39,10 @@
       "mixed": 3,
       "sign-language": 2,
       "audio": 1,
-      "tone": 14,
+      "tone": 18,
       "morphology": 1
     },
-    "updated": "2025-10-13"
+    "updated": "2025-10-15"
   },
   "languages": [
     {
