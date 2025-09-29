@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-10",
+  "updated": "2025-10-11",
   "sources": [
     {
       "title": "Lists of languages",
@@ -1632,6 +1632,93 @@
         "tone sandhi descriptions"
       ],
       "notes": "Aligns DataJake recordings with NV Speech Player EQ calibration for Tsonga voices."
+    },
+    {
+      "title": "Dhivehi language",
+      "url": "https://en.wikipedia.org/wiki/Dhivehi_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Thaana diacritics",
+        "dialect tone notes"
+      ],
+      "notes": "Thaana right-to-left diacritics guide NVDA braille exports and offline packaging for ISO dv; paired with DataJake Qur’anic pronunciation lexicons and GitHub transliteration tooling."
+    },
+    {
+      "title": "Thaana",
+      "url": "https://en.wikipedia.org/wiki/Thaana",
+      "usefulness": "medium",
+      "progress": "requires summary integration",
+      "classification": [
+        "orthography"
+      ],
+      "sample_assets": [
+        "diacritic chart",
+        "numeral mapping"
+      ],
+      "notes": "Captures Thaana vowel/consonant markers, Arabic borrowings, and numeral handling so dual Thaana/Latin presets stay aligned with CodeQL-audited transliteration helpers."
+    },
+    {
+      "title": "Lao language",
+      "url": "https://en.wikipedia.org/wiki/Lao_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "tone contour diagrams",
+        "vowel length tables"
+      ],
+      "notes": "Tone contour charts and vowel length metadata feed NV Speech Player Tone size/Scope depth presets and DataJake sermon recordings for ISO lo."
+    },
+    {
+      "title": "Welsh phonology",
+      "url": "https://en.wikipedia.org/wiki/Welsh_phonology",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "phonology"
+      ],
+      "sample_assets": [
+        "lenition schedule",
+        "eclipsis patterns"
+      ],
+      "notes": "Lenition and eclipsis schedules align Celtic mutation presets, DECtalk dictionaries, and DataJake .dic inventories for ISO cy."
+    },
+    {
+      "title": "Breton language",
+      "url": "https://en.wikipedia.org/wiki/Breton_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "nasalisation cues",
+        "stress placement"
+      ],
+      "notes": "Stress placement and nasalisation cues inform NV Speech Player Nasal balance and Inflection contour sliders plus DataJake liturgical corpora for ISO br."
+    },
+    {
+      "title": "Nuer language",
+      "url": "https://en.wikipedia.org/wiki/Nuer_language",
+      "usefulness": "medium",
+      "progress": "researching tone ladder export",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "ATR harmony notes",
+        "apostrophe tone markers"
+      ],
+      "notes": "ATR harmony, breathy vowels, and apostrophe tone markers connect DataJake scripture corpora with NVDA punctuation snapshots and NV Speech Player tone presets for ISO nus."
     }
   ]
 }

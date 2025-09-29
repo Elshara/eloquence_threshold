@@ -186,6 +186,16 @@ regional presets (hard/soft consonants, tonal contours, vowel harmony).
 
 This sprint pulls each bibliography into `docs/language_research_index.json` so CodeQL automation can confirm every new ISO entry cites its provenance alongside the cached DataJake, GitHub, and NVDA artefacts referenced in the README and ISO roadmap.
 
+## Pan-Atlantic and Indian Ocean research sprint (October 2025 follow-up)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Dhivehi language](https://en.wikipedia.org/wiki/Dhivehi_language) | language / orthography | Pending structured ingestion | Thaana right-to-left diacritics drive NVDA braille exports and offline packaging of ISO `dv`; paired with DataJake Qur’anic pronunciation lexicons. |
+| Medium | [Thaana](https://en.wikipedia.org/wiki/Thaana) | orthography | Requires summary integration | Captures vowel diacritics, Arabic borrowings, and numeral handling for dual Thaana/Latin presets and CodeQL-audited transliteration tooling. |
+| High | [Lao language](https://en.wikipedia.org/wiki/Lao_language) | language | Pending structured ingestion | Tone contour charts and vowel length notes feed NV Speech Player **Tone size**/**Scope depth** defaults for ISO `lo`. |
+| Medium | [Welsh phonology](https://en.wikipedia.org/wiki/Welsh_phonology) | phonology | Pending structured ingestion | Lenition/eclipsis schedules align Celtic mutation presets and DataJake `.dic` inventories for ISO `cy`. |
+| Medium | [Breton language](https://en.wikipedia.org/wiki/Breton_language) | language | Pending structured ingestion | Stress placement and nasalisation cues inform NV Speech Player **Nasal balance** and **Inflection contour** sliders for ISO `br`. |
+| Medium | [Nuer language](https://en.wikipedia.org/wiki/Nuer_language) | language | Researching tone ladder export | ATR harmony, breathy vowels, and apostrophe tone markers connect DataJake scripture corpora with NVDA punctuation snapshots for ISO `nus`. |
 
 ## Technical, programming, and modelling languages
 
@@ -221,3 +231,4 @@ same clarity controls as natural languages.
   ingested, ensuring blind contributors can locate regional voices, adjust
   phoneme EQ bands, and verify that Eloquence honours the active audio device's
   sample rate (8–384 kHz) when rendering speech.
+* Mirror Pan-Atlantic and Indian Ocean sprint artefacts (Thaana, Lao, Welsh, Breton, Nuer) into `docs/iso_language_expansion.md` and rerun the coverage/maturity/progress dashboards plus `tools/summarize_language_assets.py` so CodeQL and packaging logs capture the provenance delta.

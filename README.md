@@ -51,6 +51,14 @@ To keep Eloquence's phoneme, lexicon, and tooling pipeline fresh we now version 
 - **Cross-source research trail** – [`docs/language_research_index.md`](docs/language_research_index.md) logs the supporting Wikipedia bibliographies for this sprint and mirrors them in the JSON companion so CodeQL automation can verify every new locale cites its provenance across Wikipedia, DataJake, GitHub, and NVDA snapshots.
 - **Offline validation cadence** – The sprint reiterates the `python tools/report_language_progress.py`, `python tools/report_language_coverage.py`, and `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` workflow so contributors regenerate dashboards, run unit tests, and build the add-on without published releases while staging Ethiopic, Latin, and extended Latin scripts.
 
+### Pan-Atlantic and Indian Ocean diaspora sprint (October 2025 follow-up)
+
+- **Thaana + Devanagari bridge** – Dhivehi (`dv`) joins the roadmap with Thaana script baselines from cached Wikipedia typography studies, DataJake Qur’anic recitation lexicons, and NVDA braille tables that confirm right-to-left diacritics render correctly in offline builds. Parallel Maltese (`mt`) and Sinhala (`si`) refreshes reuse these artefacts to align consonant emphatics across the Indian Ocean corridor.
+- **Lower Mekong tonal reinforcement** – Lao (`lo`) planning layers Wikipedia tone contour diagrams with GitHub IPA conversion utilities and DataJake sermon recordings so **Tone size**, **Scope depth**, and **Subtones** sliders inherit empirically tuned defaults. The sprint captures these updates in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) alongside CodeQL notes for validating rising/falling contour generators.
+- **Celtic revitalisation hooks** – Welsh (`cy`) and Breton (`br`) coverage now cite archived DECtalk dictionaries, GitHub finite-state mutation models, and NVDA braille manuals to enforce lenition/eclipsis behaviour. Contributors are pointed at `python tools/report_voice_frequency_matrix.py` so fricative emphasis bands track the consonant mutation rules recorded in the Wikipedia corpus.
+- **Nilotic tone ladders** – Nuer (`nus`) documentation references DataJake scripture corpora, GitHub tone-tracking analyzers, and NV Speech Player recordings to seed nasal harmony and vowel length presets. These cues join the language maturity dashboard so testers can audit tonal accuracy before packaging.
+- **Cross-source delta audit** – Regenerate the provenance suite (`python tools/summarize_language_assets.py`, `python tools/report_language_maturity.py`, and `python tools/report_voice_language_matrix.py`) after updating these locales so README metrics, the ISO roadmap, and CodeQL automation stay aligned with the latest Wikipedia/DataJake/GitHub/NVDA datasets.
+
 After each documentation or profile change, regenerate the cached coverage artefacts so pull requests reflect the current dataset without hammering upstream mirrors:
 
 - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
@@ -314,6 +322,37 @@ python tools/check_nvda_updates.py --snapshot docs/download_nvaccess_snapshot.js
 # Run integrity tests and build the add-on
 python -m unittest discover tests
 python build.py --insecure --no-download --output dist/eloquence.nvda-addon
+```
+
+#### Example offline rebuild script (PowerShell)
+
+```powershell
+git clone https://github.com/pumper42nickel/eloquence_threshold.git
+Set-Location eloquence_threshold
+
+# Optional: restore cached Markdown/JSON artefacts from a trusted snapshot
+robocopy C:\offline\eloquence_docs .\docs /E
+
+# Stage proprietary Eloquence binaries for every architecture slot
+robocopy C:\offline\eloquence_runtime .\ eloquence*.* /E
+
+# Refresh provenance dashboards so CodeQL + NVDA audits stay aligned
+python tools\summarize_language_assets.py --json docs\language_asset_summary.json --markdown docs\language_asset_summary.md --print
+python tools\report_language_maturity.py --json docs\language_maturity.json --markdown docs\language_maturity.md --print
+python tools\report_language_progress.py --json docs\language_progress.json --markdown docs\language_progress.md --print
+python tools\report_language_coverage.py --json docs\language_coverage.json --markdown docs\language_coverage.md --print
+python tools\report_voice_language_matrix.py --json docs\voice_language_matrix.json --markdown docs\voice_language_matrix.md --print
+python tools\report_voice_parameters.py --json docs\voice_parameter_report.json --markdown docs\voice_parameter_report.md --print
+python tools\report_voice_frequency_matrix.py --json docs\voice_frequency_matrix.json --markdown docs\voice_frequency_matrix.md --print
+
+# Audit NV Access mirrors and regenerate compatibility reports
+python tools\audit_nvaccess_downloads.py --roots releases/stable releases/2025.3 snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs\download_nvaccess_snapshot.json --markdown docs\download_nvaccess_snapshot.md
+python tools\check_nvda_updates.py --snapshot docs\download_nvaccess_snapshot.json --validated docs\validated_nvda_builds.json --manifest manifest.ini --markdown docs\nvda_update_recommendations.md --json docs\nvda_update_recommendations.json
+python tools\report_nvaccess_tree.py --snapshot docs\download_nvaccess_snapshot.json --recommendations docs\nvda_update_recommendations.json --json docs\nvaccess_tree.json --markdown docs\nvaccess_tree.md
+
+# Run unit tests and package the add-on without hitting the network
+python -m unittest discover tests
+python build.py --insecure --no-download --output dist\eloquence.nvda-addon
 ```
 
 ### No-release packaging drill (step-by-step)

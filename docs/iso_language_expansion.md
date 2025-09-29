@@ -258,3 +258,32 @@ Contributors can reference this roadmap when proposing pull requests so reviews 
 - Capture unit test (`python -m unittest discover tests`) and offline build (`python build.py --insecure --no-download --output dist/eloquence.nvda-addon`) logs in pull requests to keep reproducibility high for contributors without release archives.
 - Log sprint outcomes in `AGENTS.md`, noting which DataJake, Wikipedia, GitHub, and NVDA assets were consumed so future CodeQL or packaging drills can replay the integration without ambiguity.
 
+## Pan-Atlantic and Indian Ocean diaspora sprint (October 2025 follow-up)
+
+| ISO / tag | Script focus | Status | Notes |
+| --- | --- | --- | --- |
+| dv | Thaana (Dhivehi) | Researching | Wikipedia orthography diagrams, DataJake Qur’anic recitation dictionaries, and NVDA braille tables confirm right-to-left diacritics; GitHub transliteration helpers queued for Thaana ⇄ Latin toggles. |
+| mt | Latin (Maltese) | Planned | Cached NVDA manual punctuation exports and DECtalk lexicons document emphatic consonants; DataJake `.lex` payloads staged to calibrate **Plosive impact** and **Tone size** sliders. |
+| lo | Lao | Researching | Tone contour charts from Wikipedia pair with GitHub IPA converters and DataJake sermon recordings; NV Speech Player presets earmarked for five-level tone bands. |
+| cy | Latin (Welsh) | Planned | Archived DECtalk mutation dictionaries and GitHub finite-state morphers guide lenition/eclipsis scheduling; NVDA braille manuals referenced for contracted forms. |
+| br | Latin (Breton) | Planned | Wikipedia nasalisation notes and DataJake liturgical corpora align with GitHub stress analyzers to seed vowel harmony presets. |
+| nus | Latin (Nuer) | Researching | DataJake scripture corpora, GitHub tone-tracking notebooks, and NV Speech Player captures map ATR harmony and breathy vowels; NVDA punctuation exports confirm apostrophe tone markers. |
+
+### Frequency, phoneme, and speech parameter backlog
+
+- Regenerate [`docs/voice_frequency_matrix.md`](voice_frequency_matrix.md) after staging Dhivehi and Lao spectral captures so Thaana plosives and Lao tone tiers map to WASAPI-clamped frequency bands.
+- Add Celtic consonant mutation emphasis bands to `phoneme_customizer.py`, then rerun `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print` to surface lenition/eclipsis presets in the dashboards.
+- Feed Nuer ATR harmony data into `voice_parameters.py` presets and validate the **Tone size**, **Scope depth**, and **Nasal balance** sliders by regenerating [`docs/voice_parameter_report.md`](voice_parameter_report.md).
+
+### Dictionary and corpus integration tasks
+
+- Update [`docs/language_research_index.md`](language_research_index.md) / `.json` with Dhivehi Thaana studies, Lao tone diagrams, Welsh/Breton mutation references, and Nuer tone research; rerun `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print` afterward.
+- Stage Dhivehi `.dic`, Lao sermon lexicons, and Celtic mutation datasets in `eloquence_data/`, then re-run `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` so CodeQL sees the provenance delta.
+- Coordinate NV Access documentation audits for Thaana, Lao, Welsh, and Maltese manuals via `python tools/audit_nvaccess_downloads.py` followed by `python tools/check_nvda_updates.py` to keep punctuation guidance synchronised with packaging.
+
+### Testing and packaging checkpoints
+
+- Execute `python -m unittest discover tests` after seeding Thaana/Lao/Celtic assets to ensure the CLI reports and phoneme catalogues ingest the new metadata cleanly.
+- Run `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` to verify the add-on bundles right-to-left Thaana data and tone contour presets without internet access.
+- Document each offline drill in `AGENTS.md`, including the refreshed Wikipedia/DataJake/GitHub/NVDA artefacts and regenerated Markdown/JSON reports.
+
