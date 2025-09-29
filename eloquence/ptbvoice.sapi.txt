@@ -1,0 +1,82 @@
+\Vce=Language=Portuguese\
+\Vce=Dialect=Brazilian\
+
+Alô.
+Meu nome é João.
+Sou um computador, caso voce não tenha notado.
+Voce gostaria de conhecer minha irmã?
+
+\Vce=Speaker="Cláudia"\
+Alô.  Meu nome é Cláudia.
+Mais tarde voce conhecerá melhor a nossa família, mas primeiro, deixe-me contar-lhe 
+sobre o nosso trabalho.
+
+Os humanos nos dão um texto e nós o pronunciamos com nossas vozes sintéticas.
+Produzimos nossas vozes com um conjunto de regras.
+Nossos professores humanos continuam a melhorar  nossas regras, então a nossa fala fica 
+cada vez melhor.
+
+\Vce=Speaker="João"\
+Certo.
+
+Todas as sentenças que falamos até agora nos foram dadas como texto comum.
+Nós resolvemos os padrões de intonação sozinhos.
+Mas os usuários  podem mudar a forma como soamos com simples anotações.
+Por exemplo, os usuários podem mandar-nos enfatizar uma palavra específica numa sentença.
+Suponha  que um outro computador diga ser ele o melhor computador falante.
+Eu poderia então responder, não, \Emp\ eu sou o melhor computador falante.
+Ou se alguém me dissesse que eu era o melhor monstro falante, eu poderia dizer, 
+não, eu sou o melhor \Emp\ computador falante.
+Outras anotações simples ajudam-me a expressar minhas emoções.
+Por exemplo, se eu estivesse cansado, poderia dizer, 
+\Spd=149\ \xPfl=36\ \Pit=73\ Estou me sentindo bastante vagaroso hoje.
+\Vce=Speaker="João"\
+Ou se estivesse num foguete espacial poderia dizer, 
+\Pau=200\ \xPfl=37\ \Pit=346\ Que emocionante!
+
+\Vce=Speaker="Cláudia"\
+Nós não somos os únicos tão sabidos.
+O resto da nossa  família é tão expressivo quanto nós.
+Deixe-nos apresentar-lhe a alguns dos outros membros da nossa família.
+
+\Vce=Speaker="João"\
+O nome do nosso irmão caçula é Chico.
+Ele ainda é muito pequeno, mas já fala bastante bem.
+
+\Vce=Speaker="Chico"\
+Onde está a minha mamãe? 
+\xPfl=31\ \Pit=405\ Perdi o meu ursinho de pelúcia.
+
+\Vce=Speaker="João"\
+E a nossa avó está aqui também.
+Oi \xWac=0\ vovó.
+
+\Vce=speaker="Avó"\
+Olá \xWac=0\ João.
+Voce é um neto tão bom e tão eloqüente.
+O seu pai teria muito orgulho de você.
+
+\Vce=Speaker="João"\
+Obrigado \xWac=0\ vovó.
+
+Há também dois outros membros da nossa família.
+Você pode mudar facilmente qualquer um de nós para adaptar nossas vozes às suas necessidades.
+
+\xHsz=100\ \Pit=86\ Por exemplo, você pode fazer-me maior para eu soar como um gigante. 
+\Vce=Speaker="Chico"\
+\xRgh=60\ Ou fazer o Chico soar como se ele tivesse dor de garganta.
+\Vce=Speaker="Avô"\
+\Spd=265\ Este é o vovô Paulo falando bem rápido.
+\Vce=Speaker="Cláudia"\
+\xBth=100\ E esta é a Cláudia sussurando para que ela possa contar-lhe um segredo.
+\Vce=Speaker="João"\
+\Pit=422\ \Vol=7131\ Este é o João fingindo-se de mulher.
+\Vce=Speaker="Chico"\
+\Pit=235\ \xPfl=6\ E este é o Chico quando ele está realmente chateado.
+\Vce=Speaker="João"\
+As possibilidades são infinitas, mas você provavelmente já ouviu o bastante por ora.
+
+Tchau, e obrigado pela escuta.
+
+
+

@@ -1,0 +1,57 @@
+\Vce=Speaker=Daniel\
+Bonjour.  Je m'appelle Daniel.  Je suis un ordinateur -- au cas où vous
+ne l'auriez pas remarqué.  Est-ce que vous voudriez rencontrer ma soeur?
+
+\Vce=Speaker=Nicole\ Bonjour.  Je m'appelle Nicole.  Vous allez rencontrer plus 
+tard les autres membres de notre famille, mais je voudrais d'abord vous expliquer 
+notre travail.
+Les êtres humains nous alimentent de textes, et nous les prononçons avec nos voix
+synthétisées.  Ces voix sont produites  à l'aide d'un ensemble de règles.  Des
+scientifiques travaillent sans relâche au développement de ces règles pour
+assurer l'amélioration continue de notre parole.
+
+\Vce=Speaker=Daniel\ C'est vrai.  Toutes les phrases que nous avons prononcées jusqu'ici 
+nous étaient présentées en texte ordinaire.  Nous avons calculé nous-mêmes les courbes 
+d'intonation.
+Mais vous pouvez changer notre façon de parler  avec des annotations simples.
+Par exemple, on peut nous dire de mettre l'emphase sur un mot particulier dans une
+phrase.  Si une autre machine prétendait parler mieux que moi, je répondrais,
+non, c'est \xWac=3\ moi qui parle le mieux.  Ou si on me disait que j'étais 
+un monstre qui parle bien, je pourrais dire \Pau=250\ \xWac=1\ non,
+je suis  un  \xWac=4\ ordinateur qui parle bien.  D'autres symboles simples me
+permettent d'exprimer mes émotions.  Par exemple, si j'étais fatigué je pourrais
+ dire, \Spd=149\ \xPfl=36\ \Pit=93\  Je suis épuisé aujourd'hui.  
+\Vce=Speaker=Daniel\ Ou si je me trouvais sur une fusée je pourrais dire, 
+\Pau=200\ \xPfl=37\ \Pit=346\ C'est vraiment passionnant.
+
+\Vce=Speaker=Nicole\ Nous ne sommes pas les seuls à être si doués.  
+Tous nos parents s'expriment avec autant d'émotion que nous.  Permettez-moi de vous
+ présenter aux autres membres de la famille.
+
+\Vce=Speaker=Daniel\ Notre jeune frère s'appelle Denis.  Il est encore tout petit, 
+mais il parle déjà très bien.
+
+\Vce=Speaker=Denis\ Où est maman? \xPfl=31\ \Pit=405\ J'ai perdu mon nounours.
+
+\Vce=Speaker=Daniel\ Et voici notre grand-mère.  Bonjour Grand-maman.
+
+\Vce=Speaker="Grand-maman"\ Tiens, bonjour Daniel.  Tu es le meilleur des \xWac=00\ petits-fils 
+et tu es si éloquent.  Je suis très fière de toi.
+
+\Vce=Speaker=Daniel\  Merci \xWac=00\ Grand-maman.
+
+\Vce=Speaker=Daniel\ Il est facile de nous modifier pour nous adapter à vos besoins.
+\xHsz=100\ \Pit=86\  Par exemple, vous pouvez me donner la taille d'un géant, 
+et me faire parler comme un géant.
+\Vce=Speaker=Denis\ \xRgh=60\ Ou vous pouvez faire parler Denis comme s'il avait mal
+à la gorge.
+\Vce=Speaker="Grand-papa"\ \Spd=265\ Ici, c'est grand-père qui parle très vite.
+\Vce=Speaker=Nicole\ \xBth=100\  Là, c'est Nicole qui chuchote pour raconter un secret.
+\Vce=Speaker=Daniel\ \Pit=422\ \Vol=7131\ Là, c'est Daniel qui fait semblant d'être une femme.
+\Vce=Speaker=Denis\ \Pit=235\ \xPfl=6\ Et voici Denis quand il s'ennuie.
+
+\Vce=Speaker=Daniel\ Les possibilités sont innombrables, mais je pense que vous en avez 
+entendu assez.
+Au revoir, et merci de nous avoir écoutés.
+
+

@@ -1,0 +1,57 @@
+`l5
+
+`v1 Ciao.  Mi chiamo Enrico.
+  Sono un computer, in caso non lo sapessi.
+  Ti piacerebbe conoscere mia sorella?
+
+`v2  Ciao.  Mi chiamo Lucia.
+  Più tardi conoscerai gli altri componenti della mia famiglia, ma prima ti 
+  spiegherò un po' il nostro lavoro.  Le persone ci forniscono il testo, e noi lo 
+  pronunciamo con voci sintetiche.  Produciamo le voci con una serie di regole.
+  I nostri maestri continuano a migliorare le regole, e la nostra pronuncia diventa  sempre migliore.  
+
+`v1  E' proprio così.
+  Tutte le frasi che abbiamo pronunciato fino ad ora `0 sono state programmate come testo 
+  ordinario.  Abbiamo calcolato noi stessi l'intonazione.  
+  Ma le persone possono cambiare il nostro tono, con semplici annotazioni.  Per 
+  esempio, `0 puoi dirmi di accentuare una parola specifica in una frase.
+  Immagina che un'altra macchina pretenda di essere il miglior computer parlante.
+  Potrei rispondere, no, sono `3 io il miglior computer parlante.  O se 
+  qualcuno mi dicesse che sono il miglior mostro parlante, potrei dire, no, 
+  sono il miglior `3 computer parlante.  Altri semplici segni mi aiutano a 
+  esprimere le emozioni.  Per esempio, se mi sentissi stanco, potrei dire, `vs40 `vf35 `vb45 
+  mi sento molto stanco oggi. `v1 O, se mi trovassi a bordo di una nave spaziale 
+  potrei dire, `vs53 `vf65 `vb75 Questo è veramente emozionante!
+
+`v1  Non siamo gli unici così bravi.
+  Il resto della famiglia è espressivo come noi.  Permettimi di presentarti gli 
+  altri membri della famiglia.  Il nostro fratellino si chiama Chicco.
+  E' ancora molto piccolo, ma parla molto bene.
+
+`v3 Dov'è la mia mamma? Ho perso l'orsacchiotto.
+
+`v1 Ed ecco la nonna.  Ciao Nonna.
+
+`v7 Ciao Enrico, sei un nipote tanto bravo, e sei così eloquente.
+ `0 Sono molto orgogliosa di te!
+
+`v1 Grazie Nonna.
+ Ci sono altri membri della famiglia.  Puoi facilmente cambiare le voci per 
+  adattarle ai tuoi esigenze.
+
+`vh90 `vb45 Per esempio, mi puoi `0 far grande come un gigante.
+
+`v3 `vr60  O `0 puoi far parlare Chicco come se avesse il mal di gola.
+
+`v8 `vs70 Questo è Nonno che parla molto veloce.
+
+`v2 `vy100  E questa è Lucia che sussurra per dirti un segreto.
+
+`v1 `vb90 `vv85  Questo è Enrico che fa finta di essere una donna.
+
+`v3 `vb90 `vf5  E questo è Chicco quando è molto annoiato.
+
+`v1  Le possibilità sono senza fine, ma probabilmente ora hai udito abbastanza.
+  Ciao, e grazie per aver ascoltato.
+
+

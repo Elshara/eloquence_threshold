@@ -1,0 +1,63 @@
+`l4.0
+`v1
+ Guten Tag.  Ich heiße Max.
+ Ich bin ein Computer, falls das nicht auffällt.
+ Darf ich Ihnen meine Schwester vorstellen? 
+
+`v2
+ Guten Tag.  Ich heiße Gisela.
+ Bald werden Sie auch andere Mitglieder unserer Familie kennenlernen.
+ Doch inzwischen soll ich Sie kurz darüber informieren, was wir machen.
+ Uns werden geschriebene Texte vorgegeben, welche wir dann mit unseren künstlichen 
+Stimmen wiedergeben.
+ Diese Stimmen werden nach gründlich erforschten phonetischen Regeln artikuliert.
+ Unsere menschlichen Mitarbeiter sind kontinuierlich damit beschäftigt, diese Regeln zu 
+verbessern.  
+Deshalb verbessert sich auch ständig unsere Sprache. 
+
+`v1 
+ Ja, das stimmt.  
+ Die Sätze, die wir schon gesprochen haben, wurden uns als ganz normaler Text gegeben.
+ Deren Satzmelodien haben wir selber erzeugt.
+ Die Anwenderin bzw. der Anwender kann jedoch durch einfache Instruktionen unseren 
+Tonklang ganz wesentlich ändern. 
+ So ist es leicht, uns anzuweisen, bestimmte Wörter im Laufe des Satzes zu betonen.
+ Behauptet zum Beispiel eine fremde Maschine, `1 sie sei der bestredende Computer, so 
+würde ich antworten, `p300 nein, `p250 `3 ich bin doch der bestredende Computer. 
+ Sagt mir jemand hingegen, ich sei das bestredende Gespenst, könnte ich darauf antworten, 
+`p250 nein, `p250 ich bin eben der bestredende `3 Computer. 
+ Andere einfache Instruktionen lassen mich auch meine Stimmung ausdrücken. 
+ Wenn ich müde wäre, so könnte ich zum Beispiel sagen, 
+`vs42 `vf36 `vb45 mir läuft heute alles so langsam ab. 
+
+`v1 Oder wenn ich mit einem Sportwagen über die Berge fahre,
+ kann ich ausrufen, `vf37 `vb95  das macht einen `3 riesen `2 Spaß. 
+
+`v2 `1 Wir zwei sind nicht die einzigen, die so kompetent sind.
+ Die anderen Mitglieder unserer Familie sind ebenfalls genauso ausdrucksfähig.
+ Wenn wir sie jetzt vorstellen dürfen. 
+`v1  Unser kleines Brüderchen heißt Matti.
+ Der ist noch sehr jung, doch er spricht schon recht gut. 
+
+`v3 Wo ist meine Mutter? 
+`vf31 `vb98 Ich habe mein Teddybärchen verloren. 
+
+`v1  Unsere Großmutter lebt `2 auch bei uns.
+ Hallo `0 Großmutter. 
+`v7 Ach, der Max.
+ Du bist ein braves Enkelchen, und du `2 redest auch so schön.
+ Dein Vater wäre sehr stolz auf dich gewesen. 
+
+`v1 `2 Danke Großmutter `%. Der Nutzer bzw. die Nutzerin kann unsere Stimmen so anpassen, daß 
+sie jedem gewünschten Zweck dienen. `vh100 `vb55 Mich kann man nämlich so 
+vergrößern, daß ich wie ein alter Riese klinge. 
+`v3 `vr60 So hört sich Matti an, wenn er Halsweh hat. 
+`v8 `vs85  Großvater redet jetzt ganz geschwind. 
+`v2 `vy100 Und hier flüstert die Gisela, um ein Geheimnis weiter zu geben. 
+`v1 `vb100 `vv85  Hier spricht der Max mit Frauenstimme. 
+`v3 `vf6  Und so klingt Matti, wenn ihm ganz langweilig ist. 
+
+`v1  Die Möglichkeiten sind unbegrenzt. 
+ Doch wahrscheinlich `2 genügt das für heute. 
+ Also, vielen Dank für Ihre Aufmerksamkeit, und auf Wiederhören `/. 
+

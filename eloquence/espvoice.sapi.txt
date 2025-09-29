@@ -1,0 +1,93 @@
+\Vce=Speaker=Carlos\ 
+Hola, Me llamo Carlos.  Soy una computadora. Lo menciono por si acaso 
+no lo ha adivinado. 
+Le gustaría conocer a mi hermana?  
+
+\Vce=Speaker=Pilar\  Hola, Me llamo Pilar.  
+
+Más tarde conocerá a los otros miembros de la familia, pero primero 
+permítame contarle algunas cosas sobre nuestro trabajo. 
+
+Los humanos nos dan textos y nosotros los pronunciamos con nuestras 
+voces sintéticas.  
+
+Producimos las voces siguiendo unas reglas.  
+Nuestros profesores humanos siguen mejorando nuestras reglas de tal
+forma, que nuestra manera de hablar mejora constantemente. 
+
+\Vce=Speaker=Carlos\ Así es.  
+
+Todas las oraciones que hemos expresado, hasta ahora, nos llegaron 
+como texto normal.  Nosotros mismos hemos formulado los patrones de 
+entonación.  
+
+Pero los usuarios pueden cambiar nuestra forma de hablar con 
+anotaciones sencillas.  
+Por ejemplo, los usuarios nos pueden decir que debemos enfatizar 
+una palabra en concreto en una oración.
+
+Supongamos que otra máquina presumiera ser la computadora que 
+mejor habla.  Entonces yo podría responder,  no, \Emp\ yo soy 
+la computadora que mejor habla.  
+
+O si alguien me dijera que soy el monstruo que mejor habla, podría 
+decirle, De \xWac=3\ monstruo nada. Yo soy la \Emp\ computadora 
+que mejor habla. 
+
+Otras indicaciones sencillas me ayudan a expresar mis emociones.  
+
+Por ejemplo, si estuviera cansado, podría decir, \Spd=149\ 
+\xPfl=36\ \Pit=73\ hoy me siento sin ganas. 
+
+\Vce=Speaker=Carlos\ O si estuviera en una nave espacial, podría 
+decir:  \xPfl=37\ \Pit=176\ Qué \Emp\ alucinante!
+
+\Vce=Speaker=Pilar\ Y nosotros no somos los únicos seres dotados
+de inteligencia en nuestra familia.    
+Los otros se expresan tan bien como nosotros.  Permítanos 
+presentarle a nuestra familia.  
+
+\Vce=Speaker=Carlos\ Nuestro hermanito se llama Pepe.  
+
+Todavía es pequeño, pero ya habla muy bien.  
+
+\Vce=Speaker=Pepe\ Dónde está mi mami?  
+
+\xPfl=31\ \Pit=405\ Perdí mi osito de peluche.  
+
+\Vce=Speaker=Carlos\ Nuestra abuela está aquí también. 
+
+Hola abuelita.  
+
+\Vce=Speaker=Abuela\ Hola Carlos.  
+
+Eres un nieto tan  bueno, y te expresas con tanta elocuencia!    
+
+Qué orgulloso estaría tu padre!  
+
+\Vce=Speaker=Carlos\ Gracias abuelita.  
+
+
+
+Y todavía hay más personas en la familia. Usted puede cambiar fácilmente 
+a cualquiera de nosotros para adaptar la voz de acuerdo con sus necesidades.  
+
+\xHsz=100\ \Pit=86\ Por ejemplo, me puede hacer sonar como un gigante.  
+
+\Vce=Speaker=Pepe\ \xRgh=60\  O puede hacer que Pepe aparente estar mal de la garganta. 
+
+\Vce=Speaker=Abuelo\ \Spd=265\  Éste es el abuelo hablando rápido. 
+
+\Vce=Speaker=Pilar\ \xBth=100\ Y aquí tiene a Pilar susurrando para contarle un secreto. 
+
+\Vce=Speaker=Carlos\ \Pit=422\  \Vol=7131\  Éste es Carlos hablando como mujer. 
+
+\Vce=Speaker=Pepe\ \xPfl=6\ Aquí tiene a Pepe, cuando está absolutamente aburrido.  
+
+
+
+\Vce=Speaker=Carlos\ Las posibilidades son interminables, pero estoy seguro, 
+que ya le hemos contado lo suficiente.  
+
+Adiós, y gracias por escuchar. 
+

@@ -1,0 +1,65 @@
+`l2.0
+
+`v1
+Hola, me llamo Carlos.  Soy una computadora. Lo menciono por si acaso no lo ha adivinado. 
+Le gustaría conocer a mi hermana?  
+
+`v2 Hola, Me llamo Pilar.   
+Más tarde conocerá a los otros miembros de la familia, pero primero permítame contarle 
+algunas cosas sobre nuestro trabajo.  
+Los humanos nos dan textos y nosotros los pronunciamos con nuestras voces sintéticas.  
+Producimos las voces siguiendo unas reglas.   
+Nuestros profesores humanos siguen mejorando nuestras reglas de tal forma, que nuestra 
+manera de hablar mejora constantemente.  
+ 
+`v1 Así es.  
+Todas las oraciones que hemos expresado, hasta ahora, nos llegaron como texto normal.   
+Nosotros mismos hemos formulado los patrones de entonación.  
+Pero los usuarios pueden cambiar nuestra forma de hablar con anotaciones sencillas.   
+Por ejemplo, los usuarios nos pueden decir que debemos enfatizar una palabra en concreto 
+en una oración.
+Supongamos que otra máquina presumiera ser la computadora que mejor habla.   
+Entonces yo podría responder, no, `3 yo soy la computadora que mejor habla.  
+O si alguien me dijera que soy el monstruo que mejor habla, podría decirle, De `3 monstruo nada. 
+Yo soy la `3 computadora que mejor habla. 
+Otras indicaciones sencillas me ayudan a expresar mis  emociones.  
+Por ejemplo, si estuviera cansado, podría decir, `vs40 `vf15 `vb40 hoy me siento sin ganas. 
+`v1 O si estuviera en una nave espacial, podría decir:  `vf37 `vb75 Qué `3 alucinante! 
+
+`v2 Y nosotros no somos los únicos seres dotados de inteligencia en nuestra familia. 
+Los otros se expresan tan bien como nosotros.  
+Permítanos presentarle a nuestra familia.  
+
+`v1 Nuestro hermanito se llama Pepe.  
+Todavía es pequeño, pero ya habla muy bien. 
+ 
+`v3 Dónde está mi mami?  
+`vf31 `vb98 Perdí mi osito de peluche.  
+
+`v1 Nuestra abuela está aquí también. 
+Hola abuelita.  
+
+`v7 Hola Carlos.  
+Eres un nieto tan bueno, y te expresas con tanta elocuencia!   
+Qué orgulloso estaría tu padre!  
+
+`v1 Gracias abuelita.  
+Y todavía hay más personas en la familia. 
+Usted puede cambiar facilmente a cualquiera de nosotros para adaptar la voz 
+de acuerdo con sus necesidades.
+
+`vh100 `vb55 Por ejemplo, me puede hacer sonar como un gigante.
+  
+`v3 `vr60  O puede hacer que Pepe aparente estar mal de la garganta. 
+ 
+`v8 `vs78  Éste es el abuelo hablando rápido. 
+
+`v2 `vy100 Y aquí tiene a Pilar susurrando para contarle un secreto. 
+
+`v1 `vb100 `vv85  Este es Carlos hablando como mujer. 
+
+`v3 `vf5 Aquí tiene a Pepe, cuando está absolutamente aburrido.  
+
+`v1 Las posibilidades son interminables, pero estoy seguro, que ya le hemos 
+contado lo suficiente.  
+Adiós, y gracias por escuchar.

@@ -1,0 +1,60 @@
+
+\Vce=Speaker=Max\ 
+Guten Tag.  Ich heiße Max.
+ Ich bin ein Computer, falls das nicht auffällt.
+ Darf ich Ihnen meine Schwester vorstellen? 
+
+\Vce=Speaker=Gisela\ 
+Guten Tag.  Ich heiße Gisela.
+ Bald werden Sie auch andere Mitglieder unserer Familie kennenlernen.
+ Doch inzwischen soll ich Sie kurz darüber  informieren, was wir machen.
+ Uns werden geschriebene Texte vorgegeben,
+ welche wir dann mit unseren künstlichen Stimmen wiedergeben.
+ Diese Stimmen werden nach gründlich erforschten phonetischen Regeln artikuliert.
+ Unsere menschlichen Mitarbeiter sind kontinuierlich damit beschäftigt, diese Regeln zu verbessern.
+ Deshalb verbessert sich auch ständig unsere Sprache. 
+
+\Vce=Speaker=Max\  
+Ja, das stimmt.  
+ Die Sätze, die wir schon gesprochen haben, wurden uns als ganz normaler Text gegeben.
+ Deren Satzmelodien haben wir selber erzeugt.
+ Die Anwenderin bzw. der  Anwender kann jedoch durch einfache Instruktionen
+ unseren Tonklang ganz wesentlich ändern. 
+ So ist es leicht, uns anzuweisen, bestimmte Wörter im Laufe des Satzes zu betonen.
+ Behauptet zum Beispiel eine fremde Maschine, \xWac=1\ sie sei der bestredende Computer,
+ so würde ich antworten, nein, \xWac=3\ ich bin doch der bestredende Computer. 
+ Sagt mir jemand hingegen, ich sei das bestredende Gespenst,
+ könnte ich darauf antworten, nein, ich bin eben der bestredende \xWac=3\ Computer. 
+ Andere einfache Instruktionen lassen mich auch meine Stimmung ausdrücken. 
+ Wenn ich müde wäre, so könnte ich zum Beispiel sagen, 
+\Spd=149\ \xPfl=36\ \Pit=73\ mir läuft heute alles so langsam ab. 
+\Vce=Speaker=Max\  Oder wenn ich mit einem Sportwagen über die Berge fahre,
+ kann ich ausrufen, \Pau=250\ \xPfl=37\ \Pit=346\  das macht einen \xWac=3\ riesen \xWac=2\ Spaß. 
+
+\Vce=Speaker=Gisela\ \xWac=1\  Wir zwei sind nicht die einzigen, die so kompetent sind.
+ Die anderen Mitglieder unserer Familie sind ebenfalls genauso ausdrucksfähig.
+ Wenn wir sie jetzt vorstellen dürfen. 
+\Vce=Speaker=Max\  Unser kleines Brüderchen heißt Matti.
+ Der ist noch sehr jung \xPhf=SmallRise\, doch er spricht schon recht gut. 
+\Vce=Speaker=Matti\ Wo ist meine Mutter? 
+\xPfl=31\ \Pit=405\  Ich habe mein Teddybärchen verloren. 
+
+\Vce=Speaker=Max\  Unsere Großmutter lebt \xWac=2\ auch bei uns.
+ Hallo \xWac=0\ Großmutter \xPhf=SmallRise\. 
+\Vce=Speaker=Oma\ Ach, der Max.
+ Du bist ein braves Enkelchen, und du \xWac=2\ redest auch so schön.
+ Dein Vater wäre sehr stolz auf dich gewesen. 
+
+\Vce=Speaker=Max\ \xWac=2\ Danke Großmutter \xPhf=SmallRise\. 
+Der Nutzer bzw. die Nutzerin kann unsere Stimmen so anpassen, daß sie jedem gewünschten Zweck dienen.
+\xHsz=100\ \Pit=86\ Mich kann man nämlich so vergrößern,
+ daß ich wie ein alter Riese klinge. 
+\Vce=Speaker=Matti\ \xRgh=60\ So hört sich Matti an, wenn er Halsweh hat. 
+\Vce=Speaker=Opa\ \Spd=265\  Großvater redet \xWac=0\ jetzt ganz geschwind. 
+\Vce=Speaker=Gisela\ \xBth=100\ Und hier flüstert die Gisela, um ein Geheimnis weiter zu geben. 
+\Vce=Speaker=Max\ \Pit=422\ \Vol=7131\ Hier spricht der Max mit Frauenstimme. 
+\Vce=Speaker=Matti\ \xPfl=6\ Und so klingt Matti, wenn ihm ganz langweilig ist. 
+
+\Vce=Speaker=Max\  Die Möglichkeiten sind unbegrenzt. 
+ Doch wahrscheinlich \xWac=2\ genügt das für heute. 
+ Also, vielen Dank für Ihre Aufmerksamkeit, und auf Wiederhören \xPhf=LargeFall\. 

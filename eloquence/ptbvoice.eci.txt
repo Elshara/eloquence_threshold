@@ -1,0 +1,73 @@
+`l7.0
+`v1
+Alô.
+Meu nome é João.
+Sou um computador, caso voce não tenha notado.
+Voce gostaria de conhecer minha irmã?
+
+`v2 Alô.  Meu nome é Cláudia.
+Mais tarde voce conhecerá melhor a nossa família, mas primeiro, deixe-me contar-lhe 
+sobre o nosso trabalho.
+
+Os humanos nos dão um texto e nós o pronunciamos com nossas vozes sintéticas.
+Produzimos nossas vozes com um conjunto de regras.
+Nossos professores humanos continuam a melhorar  nossas regras, 
+então a nossa fala fica cada vez melhor.
+
+`v1 Certo.
+
+Todas as sentenças que falamos até agora nos foram dadas como texto comum.
+Nós resolvemos os padrões de intonação sozinhos.
+Mas os usuários  podem mudar a forma como soamos com simples anotações.
+Por exemplo, os usuários podem mandar-nos enfatizar uma palavra específica numa sentença.
+Suponha  que um outro computador diga ser ele o melhor computador falante.
+Eu poderia então responder, não, `3 eu sou o melhor computador falante.
+Ou se alguém me dissesse que eu era o melhor monstro falante, eu poderia dizer, 
+não, eu sou o melhor `3 computador falante.
+Outras anotações simples ajudam-me a expressar minhas emoções.
+Por exemplo, se eu estivesse cansado, poderia dizer, 
+`vs40 `vf36 `vb47 Estou me sentindo bastante vagaroso hoje.
+`v1 Ou se estivesse num foguete espacial poderia dizer, 
+`p200 `vf37 `vb95 Que emocionante!
+
+`v2 Nós não somos os únicos tão sabidos.
+O resto da nossa  família é tão expressivo quanto nós.
+Deixe-nos apresentar-lhe a alguns dos outros membros da nossa família.
+
+`v1 O nome do nosso irmão caçula é Chico.
+Ele ainda é muito pequeno, mas já fala bastante bem.
+
+`v3 Onde está a minha mamãe? 
+`vf31 `vb99 Perdi o meu ursinho de pelúcia.
+
+`v1 E a nossa avó está aqui também.
+Oi `0 vovó.
+
+`v7 Olá `0 João.
+Você é um neto tão bom e tão eloqüente.
+O seu pai teria muito orgulho de você.
+
+`v1 Obrigado `0 vovó.
+
+Há também dois outros membros da nossa família.
+`v1 Você pode mudar facilmente qualquer um de nós para adaptar nossas vozes 
+às suas necessidades.
+
+`vh100 `vb54 Por exemplo, você pode fazer-me maior para eu soar como um gigante. 
+
+`v3 `vr60 Ou fazer o Chico soar como se ele tivesse dor de garganta.
+
+`v8 `vs78 Este é o vovô Paulo falando bem rápido.
+
+`v2 `vy100 E esta é a Cláudia sussurando para que ela possa contar-lhe um segredo.
+
+`v1 `vb100 `vv85 Este é o João fingindo-se de mulher.
+
+`v3 `vb85 `vf6 E este é o Chico quando ele está realmente chateado.
+
+`v1 As possibilidades são infinitas, mas você provavelmente já ouviu o bastante por ora.
+
+Tchau, e obrigado pela escuta.
+
+
+

@@ -1,0 +1,64 @@
+\Vce=Speaker="Li3 Jin4"\ 
+您好。我是李进。这是我的太太王燕。
+
+\Vce=Speaker="Wang2 Yan4"\  
+您好。我是王燕。欢迎您的光临。 
+
+\Vce=Speaker="Li3 Jin4"\ 
+先让我介绍一下我们的工作。
+人们给我们提供文字，而我们则按语音规则说话。
+随着计算机和语音技术的不断发展和改进，
+我们越说越自然，越讲越流利。
+
+\Vce=Speaker="Wang2 Yan4"\  
+现在请认识一下我们的家庭成员。这是我们的儿子李东东。 
+
+\Vce=Speaker="Li3 Dong1dong1"\ 
+妈妈，我的游戏机在哪儿呢？
+
+\Vce=Speaker="Li3 Jin4"\ 
+瞧，我们的奶奶也在这儿。奶奶。
+
+\Vce=Speaker="Nai3nai0"\ 
+李进，你真是我的好孙儿。你爸爸一定会替你骄傲的。
+
+\Vce=Speaker="Li3 Jin4"\ 
+谢谢奶奶。爷爷呢？
+
+\Vce=Speaker="Ye2ye0"\ 
+噢，我在园子里打太极拳呢。
+
+\Vce=Speaker="Li3 Jin4"\ 
+爷爷这把年纪了，耳朵还这么灵。
+我们家庭还有其他一些成员，今后有机会我再一一介绍。
+
+\Vce=Speaker="Li3 Jin4"\
+我们刚才说话都是按通常的语音规则发音。 
+但您也能用标记的办法来改变我们的
+语音语调，以达到你想听的效果。
+\Spd=250\“\xWac=3\守门员将球踢到\xWac=3\中场，
+11号紧跟上，将球长传给\xWac=3\前锋。 
+前锋5号与对方后卫拼抢\xWac=3\头球。
+5号虚晃一脚，带球绕过守卫，\Spd=270\ \xWac=4\ 好，
+\xWac=5\ \Pit=140\ 射门！”
+
+\Vce=Speaker="Nai3nai0"\ 
+\Spd=125\“有话慢慢说，\xWac=3\干吗这么着急？”
+
+\Vce=Speaker="Li3 Jin4"\ 
+哎， \xWac=2\ 奶奶，你别瞎打叉！
+我这是在练现场解说 \xWac=3\足球赛呢。
+瞧，王燕又在跟 \xWac=3\儿子说悄悄话了。
+
+\Vce=Speaker="Wang2 Yan4"\ 
+\xBth=100\ \xWac=3\东东， 
+给\xWac=5\叔叔\xWac=3\阿姨们说段\xWac=3\绕口令吧。
+
+\Vce=Speaker="Li3 Dong1dong1"\ 
+好，\Spd=240\ “\xWac=3\吃葡萄不吐\xWac=3\葡萄皮儿，
+\xWac=3\不吃葡萄\xWac=2\倒吐\xWac=3\葡萄皮儿”。
+
+\Vce=Speaker="Li3 Jin4"\ 
+您听，还真有那么点意思吧！我们的声音变化是无穷的。
+但\xWac=3\今天暂且到此为止。谢谢您的宝贵时间。再见。
+

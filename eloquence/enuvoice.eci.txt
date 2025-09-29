@@ -1,0 +1,99 @@
+`l1.0
+`v1
+Hello. My name is Reed.
+I believe we may have met before.
+Have you met my sister Shelley? 
+
+`v2
+Hello.  I'm Shelley.
+Later you'll meet some more of our family,  but first, let me tell you about our jobs.
+Humans feed us text, and we pronounce it with our synthetic voices.
+We produce our voices with a set of rules.
+Our human teachers keep improving our rules, so our speech gets better and better.
+
+`v1
+All of the sentences we've said so far were given to us as ordinary text.
+We figured out the intonation patterns ourselves.  But users can change how we sound,
+with simple annotations.  
+
+For example, users can tell us to emphasize a specific word in a sentence. 
+Suppose another machine claimed to be the best talking computer.
+I could then respond, `p300 no, `p250 `3 I'm the best
+talking computer.
+
+Or if someone told me I was the best talking monster,
+I could say `%%, `p250 no, `p250 I'm the best
+talking `3 computer.  `p400
+
+`2 Other `0 annotations can help me to express my `2 emotions.  
+For example, if I were tired I could `0 say,
+`vs42 `vf36 `vb45  I'm feeling very slow today.
+`v1 Or if I were on a rocketship I could `0 say,
+`p250 `vf37 `vb95 This is really exciting.  `p400
+
+`v1
+The rest of our `0 family is just as `0
+expressive as we are.  Let us introduce you to some of
+our `2 other family members.
+
+Our baby brother's `0 name is Sandy.  He's still very little,
+but he already talks `0 really well.  
+
+`v3
+Where's my mommy?  `vf31 `vb98 I lost my teddy bear.  
+
+`v1
+And our grandmother is here too.  Hello `p10, Grandma.
+
+`v7
+Well `2 hello Reed `%.  You're such a good grandson,
+and you're `1 so eloquent.  
+Your father would've been very proud of you.  
+
+`v1
+Thanks,  Grandma.
+There are other members of our family too.
+
+You can easily change any of us to customize our voices for `2 your needs.
+`vh100 `vb55 For example, you can make me bigger so I'll sound like a giant.
+`v3 `vr60 Or you can make Sandy sound `0 like he has a `0
+sore throat.
+`v8 `vs85 This is Grandpa talking really fast.
+`v2 `vy100 And this is Shelley whispering so she can tell you a secret.
+`v1 `vb100 `vv90 This is Reed pretending to be a woman.
+`v3 `vb85 `vf6 And this is Sandy when he's really bored.
+
+ `v1
+In addition to customizing our voices... you can make us all talk at many
+different speaking `0 rates.  Listen:
+
+`vs10 Peter piper picked a peck of pickled peppers.
+`vs50 Peter piper picked a peck of pickled peppers.
+`vs120 Peter piper picked a peck of pickled peppers. 
+
+`vs50
+`p1000
+So, as you can hear... our system gives you lots of flexibility in
+customizing voices. 
+
+You can even change voice parameters in the
+middle of a sentence.  Listen:
+
+`v1 This is `v7 Grandma  `v1 and this is `v8 Grandpa.
+
+`v1
+Application developers really `2  like this feature.  For example,
+if you were creating a web browser, you could use a special
+voice for `v3 `vb70 `vh65 `vy70 `vv100 hypertext `0 links.
+
+`v1
+Or you `1 might switch voices to tell a story, like this.
+Little red riding hood asked...
+`v3 `vy20 `vf40 "Why do you have such big eyes, grandmother?" 
+`v1  And the wolf answered...
+`v1 `vb60 `vh80 `vv100  `vs40  `vf50 "The better to `2 see you with, my dear."
+
+`v1
+The possibilities are endless, but you've probably heard `2 enough
+for now.  
+Goodbye, and thanks for listening.

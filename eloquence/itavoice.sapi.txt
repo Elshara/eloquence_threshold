@@ -1,0 +1,58 @@
+
+\Vce=Speaker=Enrico\ Ciao.  Mi chiamo Enrico.
+  Sono un computer, in caso non lo sapessi.
+  Ti piacerebbe conoscere mia sorella?
+
+\Vce=Speaker=Lucia\  Ciao.  Mi chiamo Lucia.
+  Più tardi conoscerai gli altri componenti della mia famiglia, ma prima ti 
+  spiegherò un po' il nostro lavoro.  Le persone ci forniscono il testo, e noi lo 
+  pronunciamo con voci sintetiche.  Produciamo le voci con una serie di regole.
+  I nostri maestri continuano a migliorare le regole, e la nostra pronuncia diventa 
+  sempre migliore.  
+
+\Vce=Speaker=Enrico\  E' proprio così.
+  Tutte le frasi che abbiamo pronunciato fino ad ora \xWac=0\ sono state programmate 
+  come testo ordinario.  Abbiamo calcolato noi stessi l'intonazione.  
+  Ma le persone possono cambiare il nostro tono, con semplici annotazioni.  Per 
+  esempio, \xWac=0\ puoi dirmi di accentuare una parola specifica in una frase.
+  Immagina che un'altra macchina pretenda di essere il miglior computer parlante.
+  Potrei rispondere, no, sono \xWac=3\ io il miglior computer parlante.  O se 
+  qualcuno mi dicesse che sono il miglior mostro parlante, potrei dire, no, 
+  sono il miglior \xWac=3\ computer parlante.  Altri semplici segni mi aiutano a 
+  esprimere le emozioni.  Per esempio, se mi sentissi stanco, potrei dire, 
+  \Spd=140\ \xPfl=30\ \Pit=73\ mi sento molto stanco oggi. 
+  \Vce=Speaker=Enrico\ O, se mi trovassi a bordo di una \xWac=0\ nave spaziale 
+  potrei dire,  \Spd=170\ \xPfl=65\ \Pit=165\ Questo è veramente emozionante!
+
+\Vce=Speaker=Enrico\  Non siamo gli unici così bravi.
+  Il resto della famiglia è espressivo come noi.  Permettimi di presentarti gli 
+  altri membri della famiglia.  Il nostro fratellino si chiama Chicco.
+  E' ancora molto piccolo, ma parla molto bene.
+
+\Vce=Speaker=Chicco\ Dov'è la mia mamma?  Ho perso l'orsacchiotto.
+
+\Vce=Speaker=Enrico\ Ed ecco la nonna.  Ciao Nonna.
+
+\Vce=Speaker=Nonna\ Ciao Enrico, sei un nipote tanto bravo, e sei così eloquente.
+  \xWac=0\ Sono molto orgogliosa di te!
+
+\Vce=Speaker=Enrico\ Grazie Nonna.
+ Ci sono altri membri della famiglia.  Puoi facilmente cambiare le voci per 
+  adattarle alle tue esigenze.
+
+\xHsz=90\ \Pit=80\ Ad esempio, mi puoi \xWac=0\ far grande come un gigante.
+
+\Vce=Speaker=Chicco\ \xRgh=60\ O \xWac=0\ puoi far parlare Chicco come se avesse il mal di gola.
+
+\Vce=Speaker=Nonno\ \Spd=220\ Questo è Nonno che parla molto veloce.
+
+\Vce=Speaker=Lucia\ \xBth=100\  E questa è Lucia che sussurra per dirti un segreto.
+
+\Vce=Speaker=Enrico\ \Pit=260\ \Vol=113000\ Questo è Enrico che fa finta di essere una donna.
+
+\Vce=Speaker=Chicco\ \Pit=295\ \xPfl=5\ E questo è Chicco quando è molto annoiato.
+
+\Vce=Speaker=Enrico\ Le possibilità sono senza fine, ma probabilmente ora hai udito 
+  abbastanza.  Ciao, e grazie per aver ascoltato.
+
+

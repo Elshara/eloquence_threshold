@@ -1,0 +1,82 @@
+`l9.0
+
+`v1
+Hei. Nimeni on Antti. 
+Uskoakseni olemme tavanneet aiemmin.
+Haluaisitteko tavata siskoni?
+
+`v2
+Hei. Nimeni on Tarja. 
+Tapaatte myöhemmin muita perheenjäseniämme, mutta antakaapa minun ensin
+kertoa teille työstämme.
+Ihmiset syöttävät meille tekstiä, ja me lausumme sen synteettisillä
+äänillämme.
+Me tuotamme äänemme sääntöjoukon avulla.
+Ihmisopettajamme parantavat sääntöjämme jatkuvasti, joten puheemme `1 paranee
+`1 koko ajan. 
+
+`v1
+Kaikki tähän asti puhumamme lauseet annettiin meille tavallisena tekstinä.
+Me selvitimme intonaatiokuviot `1 omin päin. Mutta käyttäjät voivat
+muuttaa sitä, miltä kuulostamme, yksinkertaisten huomautusten avulla. 
+Käyttäjät voivat esimerkiksi pyytää meitä painottamaan tiettyä sanaa
+lauseessa. Kuvittele, että jokin toinen kone väittäisi olevansa paras
+puhuva tietokone. Minä voisin sitten vastata, `2 ei, `p300 
+`3 minä olen paras puhuva tietokone. 
+Tai jos joku sanoisi minulle, että olen paras puhuva hirviö, minä voisin
+sanoa, `2 ei, `p250 minä olen paras
+puhuva `3 tietokone. 
+Muut yksinkertaiset merkit auttavat minua ilmaisemaan 
+`3 tunteitani. 
+Esimerkiksi jos olisin väsynyt, voisin sanoa,
+`vs40 `vf36 `vb47 Tunnen oloni hyvin voipuneeksi tänään.
+`v1 Tai jos olisin rakettialuksessa, voisin sanoa,
+`vf37 `vb90 todella jännittävää. 
+
+`v2
+Me emme ole ainoita, jotka ovat näin taitavia.
+Loput perheestämme ovat  aivan yhtä ilmeikkäitä kuin
+me. Antakaas meidän esitellä teidät muutamille muille
+perheemme jäsenille. 
+
+`v1
+Pikkuveljemme nimi on Pekka.  Hän on vielä hyvin pieni, mutta hän
+puhuu jo todella hyvin.
+
+`v3
+Missä äiti on? `vf31 `vb99 Minä kadotin nalleni. 
+
+`v1
+Isoäitimmekin on täällä. Hei `p10 `0 mummo.  
+
+`v7
+Kas  hei `0 Antti. Sinä olet oikein hyvä lapsenlapsi
+ja niin kaunopuheinen.
+Isäsi `00 olisi `00 ollut hyvin ylpeä sinusta. 
+
+`v1
+Kiitos `p50 `0 mummo.
+Perheessämme on muitakin jäseniä. 
+Voitte vaivatta muuttaa keitä tahansa meistä muokataksenne ääniämme
+tarpeidenne mukaisiksi.  
+`vh100 `vb54 `vv100 Voitte esimerkiksi suurentaa minua, jotta kuulostaisin
+jättiläiseltä. 
+
+`v3 `vr60 Tai voitte `0 saada Pekan kuulostamaan 
+siltä, että hänen kurkkunsa on kipeä.
+
+`v8 `vs72 Tämä on isoisä hyvin nopeapuheisena. 
+
+`v2 `vy100  Ja tämä on Tarja kuiskaamassa, jotta hän
+voisi kertoa teille salaisuuden. 
+
+`v1 `vb100  `vv85 Tämä on Antti tekeytymässä naiseksi.
+
+`v3 `vb85 `vf6 Ja tämä on Pekka, kun hän on todella
+ikävystynyt.
+
+`v1
+Mahdollisuudet ovat loputtomat, mutta te olette luultavasti jo kuulleet
+tarpeeksi tältä erää. 
+
+Näkemiin, ja kiitos kun kuuntelitte meitä. 

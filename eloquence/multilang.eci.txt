@@ -1,0 +1,46 @@
+`l1.0 `v1
+Hi, my name is Reed.  I'm an American.
+I speak English.
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l1.1 `v1
+I'm from the United Kingdom.  Do you speak English?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l2.0 `v1
+¿Cómo se llama usted?  ¿Cuál es su nacionalidad?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l3.0 `v1
+Bonjour.  Je m'appelle Jacques. 
+Je suis français.  Parlez-vous français?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l4.0 `v1
+Guten Tag.  Ich heiße Max.
+Ich komme aus Deutschland.  Sprechen Sie Deutsch?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l5.0 `v1
+Mi chiamo Enrico.  Abito in Italia, e parlo italiano.
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l2.1 `v1
+Hola.  Me llamo José.  Soy de México.  ¿Habla usted el español? 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l7.0 `v1
+Alô. Meu nome é João. Sou brasileiro.  Fala português?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l3.1 `v1
+Bonjour.  Je m'appelle Daniel. 
+Je suis Canadien et je parle français.
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+`l9.0 `v1
+Hei.  Nimeni on Antti.  Olen suomalainen.  Puhutko suomea?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+
+

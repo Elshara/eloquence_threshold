@@ -1,0 +1,102 @@
+\Vce=Speaker=Justin\
+Hello. My name is Justin.
+I believe we may have met before.
+Have you met my sister Jane? 
+
+\Vce=Speaker=Jane\
+Hello.  I'm Jane.
+Later you'll meet some more of our family,  but first, let me tell 
+you about our jobs.
+Humans feed us text, and we pronounce it with our synthetic voices.
+We produce our voices with a set of rules.
+Our human teachers keep improving our rules, so our speech gets
+better and better.
+
+\Vce=Speaker=Justin\
+All of the sentences we've said so far were given to us as ordinary text.
+We figured out the intonation patterns ourselves.  But users can change 
+how we sound, with simple annotations.  
+
+For example, users can tell us to emphasize a specific word in a sentence. 
+Suppose another machine claimed to be the best talking computer.
+I could then respond, \Pau=300\ no, \Pau=250\ \xWac=3\ I'm the best
+talking computer.
+
+Or if someone told me I was the best talking monster,
+I could say \xPhf=ContinuationRise\, \Pau=250\ no, \Pau=250\ I'm the best
+talking \xWac=3\ computer. \Pau=400\
+
+\xWac=2\ Other \xWac=0\ annotations can help me to express my \xWac=2\ emotions.  
+For example, if I were tired I could \xWac=0\ say,
+\Spd=149\ \xPfl=36\ \Pit=73\ I'm feeling very slow today.
+\Vce=Speaker=Justin\ Or if I were on a rocketship I could \xWac=0\ say,
+\Pau=250\ \xPfl=37\ \Pit=346\ This is really exciting.  \Pau=400\
+
+\Vce=Speaker=Justin\
+The rest of our \xWac=0\ family
+is just as expressive as we are.  
+Let us introduce you to some of our \xWac=2\ other family members.
+
+Our baby brother's \xWac=0\ name is Nicky.  He's still very little,
+but he already talks \xWac=0\ really well.  
+
+\Vce=Speaker=Nicky\
+Where's my mommy?  \xPfl=31\ \Pit=405\ I lost my teddy bear.  
+
+\Vce=Speaker=Justin\
+And our grandmother is here too.  Hello \Pau=10\, \xWac=0\ Nanny \xPhf=SmallRise\.
+\Vce=Speaker=Nanny\
+Well \xWac=2\ hello Justin \xPhf=SmallRise\.  You're such a good grandson,
+and you're \xWac=1\ so eloquent.  
+Your father would've been very proud of you.  
+
+\Vce=Speaker=Justin\
+Thanks, \xWac=0\ Nanny \xPhf=SmallRise\.
+There are other members of our family too.
+
+You can easily change any of us to customize our voices for \xWac=2\ your needs.
+\xHsz=100\ \Pit=86\ For example, you can make me bigger so I'll sound like a giant.
+\Vce=Speaker=Nicky\ \xRgh=60\ Or you can make Nicky sound \xWac=0\ 
+like he has a \xWac=0\ sore throat.
+\Vce=Speaker=Gramps\ \Spd=265\ This is Gramps talking really fast.
+\Vce=Speaker=Jane\ \xBth=100\ And this is Jane whispering so she can tell you a secret.
+\Vce=Speaker=Justin\ \Pit=422\ \Vol=15000\ This is Justin pretending to be a woman.
+\Vce=Speaker=Nicky\ \Pit=235\ \xPfl=6\ And this is Nicky when he's really bored.
+
+\Vce=Speaker=Justin\
+In addition to customizing our voices... you can make us all talk at many
+different speaking \xWac=0\ rates.  Listen:
+
+\Spd=80\  Peter piper picked a peck of pickled peppers.
+\Spd=176\  Peter piper picked a peck of pickled peppers.
+\Spd=450\  Peter piper picked a peck of pickled peppers.
+
+\Spd=176\
+\Pau=1000\
+So, as you can hear... our system gives you lots of flexibility in
+customizing voices. 
+
+You can even change voice parameters in the
+middle of a sentence.  Listen:
+
+This is \Vce=Speaker=Nanny\ Nanny \Vce=Speaker=Justin\  
+and this is \Vce=Speaker=Gramps\ Gramps.
+
+\Vce=Speaker=Justin\
+Application developers really \xWac=2\ like this feature.  For example,
+if you were creating a web browser, you could use a special
+voice for \Vce=Speaker=Nicky\ \Pit=150\ \xHsz=65\ \xBth=70\ \Vol=65000\ 
+hypertext \xWac=0\ links.
+
+\Vce=Speaker=Justin\
+Or you \xWac=1\ might switch voices to tell a story, like this.
+Little red riding hood asked...
+\Vce=Speaker=Nicky\ \xBth=20\ \xPfl=40\ "Why do you have such big eyes, grandmother?" 
+\Vce=Speaker=Justin\ And the wolf answered... 
+\PIT=95\ \xHsz=80\ \xPfl=50\ \Spd=150\ \Vol=65000\ the better 
+to \xWac=2\ see you with, my dear."
+
+\Vce=Speaker=Justin\
+The possibilities are endless, but you've probably heard \xWac=2\ enough
+for now.  
+Goodbye, and thanks for listening.

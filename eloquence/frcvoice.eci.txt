@@ -1,0 +1,54 @@
+`l3.1
+`v1
+Bonjour.  Je m'appelle Daniel.  Je suis un ordinateur -- au cas où vous
+ne l'auriez pas remarqué.  Est-ce que vous voudriez rencontrer ma soeur?
+
+`v2 Bonjour.  Je m'appelle Nicole.  Vous allez rencontrer plus tard les autres
+membres de notre famille, mais je voudrais d'abord vous expliquer notre travail.
+Les êtres humains nous alimentent de textes, et nous les prononçons avec nos voix
+synthétisées.  Ces voix sont produites  à l'aide d'un ensemble de règles.  Des
+scientifiques travaillent sans relâche au développement de ces règles pour
+assurer l'amélioration continue de notre parole.
+
+`v1 C'est vrai.  Toutes les phrases que nous avons prononcées jusqu'ici nous étaient
+présentées en texte ordinaire.  Nous avons calculé nous-mêmes les courbes d'intonation.
+Mais vous pouvez changer notre façon de parler  avec des annotations simples.
+Par exemple, on peut nous dire de mettre l'emphase sur un mot particulier dans une
+phrase.  Si une autre machine prétendait parler mieux que moi, je répondrais,
+non, c'est  `3 moi qui parle le mieux.  Ou si
+on me disait que j'étais un monstre qui parle bien, je pourrais dire `p250 `1 non,
+je suis  un  `4 ordinateur qui parle bien.  D'autres symboles simples me
+permettent d'exprimer mes émotions.  Par exemple, si j'étais fatigué je pourrais
+ dire, `vs40 `vf36 `vb47  Je suis épuisé aujourd'hui.  `v1 Ou si je me
+trouvais sur une fusée je pourrais dire, `p200 `vf37 `vb90 C'est vraiment passionnant.
+
+`v2 Nous ne sommes pas les seuls à être si doués.  
+Tous nos parents s'expriment avec autant d'émotion que nous.  Permettez-moi de vous
+ présenter aux autres membres de la famille.
+
+`v1 Notre jeune frère s'appelle Denis.  Il est encore tout petit, mais il parle
+ déjà très bien.
+
+`v3 Où est maman? `vf31 `vb99 J'ai perdu mon nounours.
+
+`v1 Et voici notre grand-mère.  Bonjour Grand-maman.
+
+`v7 Tiens, bonjour Daniel.  Tu es le meilleur des petits-fils et tu
+es si éloquent.  Je suis très fière de toi.
+
+`v1  Merci `00 Grand-maman.
+
+`v1 Il est facile de nous modifier pour nous adapter à vos besoins.
+`vh100 `vb54  Par exemple, vous pouvez me donner la taille d'un géant, et me faire parler
+comme un géant.
+`v3 `vr60 Ou vous pouvez faire parler Denis comme s'il avait mal
+à la gorge.
+`v8 `vs78 Ici, c'est grand-père qui parle très vite.
+`v2 `vy100  Là, c'est Nicole qui chuchote pour raconter un secret.
+`v1 `vb100 `vv85 Là, c'est Daniel qui fait semblant d'être une femme.
+`v3 `vb85 `vf6 Et voici Denis quand il s'ennuie.
+
+`v1 Les possibilités sont innombrables, mais je pense que vous en avez entendu assez.
+Au revoir, et merci de nous avoir écoutés.
+
+

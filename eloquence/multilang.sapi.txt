@@ -1,0 +1,49 @@
+\Vce=Speaker=Reed\
+Hi, my name is Reed.  I'm an American.
+I speak English.
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Dialect=British\
+I'm from the United Kingdom.  Do you speak English?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Speaker=Carlos\
+¿Cómo se llama usted?  ¿Cuál es su nacionalidad?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Speaker=Jacques\
+Bonjour.  Je m'appelle Jacques. 
+Je suis français.  Parlez-vous français?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Speaker=Max\
+Guten Tag.  Ich heiße Max.
+Ich komme aus Deutschland.  Sprechen Sie Deutsch?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Speaker=Enrico\
+Mi chiamo Enrico.  Abito in Italia, e parlo italiano.
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Speaker=José\
+Hola.  Me llamo José.  Soy de México.  ¿Habla usted el español? 
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Speaker="João"\
+Alô. Meu nome é João. Sou brasileiro.  Fala português?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Speaker=Daniel\
+Bonjour.  Je m'appelle Daniel. 
+Je suis Canadien et je parle français.
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+\Vce=Speaker=Antti\
+Hei.  Nimeni on Antti.  Olen suomalainen.  Puhutko suomea?
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+
+
+
+
+

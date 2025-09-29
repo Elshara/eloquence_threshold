@@ -1,0 +1,80 @@
+\Vce=Speaker=Antti\
+Hei. Nimeni on Antti. 
+Uskoakseni olemme tavanneet aiemmin.
+Haluaisitteko tavata siskoni?
+
+\Vce=Speaker=Tarja\
+Hei. Nimeni on Tarja. 
+Tapaatte myöhemmin muita perheenjäseniämme, mutta antakaapa minun ensin
+kertoa teille työstämme.
+Ihmiset syöttävät meille tekstiä, ja me lausumme sen synteettisillä
+äänillämme.
+Me tuotamme äänemme sääntöjoukon avulla.
+Ihmisopettajamme parantavat sääntöjämme jatkuvasti, joten  puheemme \xWac=1\ paranee
+\xWac=1\ koko ajan. 
+
+\Vce=Speaker=Antti\
+Kaikki tähän asti puhumamme lauseet annettiin meille tavallisena tekstinä.
+Me selvitimme intonaatiokuviot \xWac=1\ omin päin. Mutta käyttäjät voivat
+muuttaa sitä, miltä kuulostamme, yksinkertaisten huomautusten avulla. 
+Käyttäjät voivat esimerkiksi pyytää meitä painottamaan tiettyä sanaa
+lauseessa. Kuvittele, että jokin toinen kone väittäisi olevansa paras
+puhuva tietokone. Minä voisin sitten vastata, \Pau=300\ \xWac=2\ ei, \Pau=250\
+\xWac=3\ minä olen paras puhuva tietokone. 
+Tai jos joku sanoisi minulle, että olen paras puhuva hirviö, minä voisin
+sanoa, \Pau=250\ \xWac=2\ ei, \Pau=250\ minä olen paras
+puhuva \xWac=3\ tietokone. 
+Muut yksinkertaiset merkit auttavat minua ilmaisemaan tunteitani. 
+Esimerkiksi jos olisin väsynyt, voisin sanoa,
+\Spd=149\ \xPfl=36\ \Pit=73\ Tunnen oloni hyvin voipuneeksi tänään.
+\Vce=Speaker=Antti\ Tai jos olisin rakettialuksessa, voisin sanoa,
+\Pau=250\ \xPfl=37\ \Pit=346\ Tämä on todella jännittävää. 
+
+\Vce=Speaker=Tarja\
+Me emme ole ainoita, jotka ovat näin taitavia.
+Loput perheestämme ovat aivan yhtä ilmeikkäitä kuin
+me. Antakaas meidän esitellä teidät muutamille muille
+perheemme jäsenille. 
+
+\Vce=Speaker=Antti\
+Pikkuveljemme nimi on Pekka.  Hän on vielä hyvin pieni, mutta hän
+puhuu jo todella hyvin.
+
+\Vce=Speaker=Pekka\
+Missä äiti on? \xPfl=31\ \Pit=405\ Minä kadotin nalleni. 
+
+\Vce=Speaker=Antti\
+Isoäitimmekin on täällä. Hei \Pau=10\ \xWac=0\ mummo.  
+
+\Vce=Speaker=Isoäiti\
+Kas hei \xWac=0\ Antti. Sinä olet oikein hyvä lapsenlapsi
+ja  niin kaunopuheinen.
+Isäsi \xWac=00\ olisi \xWac=0\ ollut hyvin ylpeä sinusta. 
+
+\Vce=Speaker=Antti\
+Kiitos \Pau=50\ \xWac=0\ mummo.
+Perheessämme on muitakin jäseniä. 
+Voitte vaivatta muuttaa keitä tahansa meistä muokataksenne ääniämme
+tarpeidenne mukaisiksi.  
+\xHsz=100\ \Pit=86\ \Vol=65535\ Voitte esimerkiksi suurentaa minua, jotta kuulostaisin
+jättiläiseltä. 
+
+\Vce=Speaker=Pekka\ \xRgh=60\ Tai voitte \xWac=0\ saada Pekan kuulostamaan 
+siltä, että hänen kurkkunsa on kipeä.
+
+\Vce=Speaker=Isoisä\ \Spd=245\ Tämä on isoisä hyvin nopeapuheisena. 
+
+\Vce=Speaker=Tarja\ \xBth=100\ Ja tämä on Tarja kuiskaamassa, jotta hän
+voisi kertoa teille salaisuuden. 
+
+\Vce=Speaker=Antti\ \Pit=422\ Tämä on Antti tekeytymässä naiseksi.
+
+\Vce=Speaker=Pekka\ \Pit=235\ \xPfl=6\ Ja tämä on Pekka, kun hän on todella
+ikävystynyt.
+
+\Vce=Speaker=Antti\
+Mahdollisuudet ovat loputtomat, mutta te olette luultavasti jo kuulleet 
+tarpeeksi tältä erää. 
+
+Näkemiin, ja kiitos kun kuuntelitte meitä. 
+
