@@ -1,6 +1,6 @@
 # Language maturity overview
 
-- Generated: 2025-09-29T22:06:03.336493+00:00
+- Generated: 2025-09-29T23:35:50.811813+00:00
 - Languages analysed: 53
 - Languages with full asset stack: 52
 

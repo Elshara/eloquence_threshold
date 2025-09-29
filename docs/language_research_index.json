@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-15",
+  "updated": "2025-10-16",
   "sources": [
     {
       "title": "Lists of languages",
@@ -2139,6 +2139,118 @@
         "NVDA braille exports"
       ],
       "notes": "Cached nasal stress studies plus DataJake scripture/news corpora inform ISO `miq` vowel timing; NVDA braille exports confirm accent placement before staging NV Speech Player **Scope depth** presets."
+    },
+    {
+      "title": "Albanian language",
+      "url": "https://en.wikipedia.org/wiki/Albanian_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "DataJake diaspora lexicons",
+        "Wikipedia Gheg/Tosk vowel reduction tables",
+        "GitHub morphological analysers"
+      ],
+      "notes": "Captures Gheg/Tosk stress and vowel reduction contrasts used to tune NV Speech Player **Sibilant clarity** presets before seeding ISO `sq` profiles."
+    },
+    {
+      "title": "Bosnian language",
+      "url": "https://en.wikipedia.org/wiki/Bosnian_language",
+      "usefulness": "high",
+      "progress": "researching IPA extraction",
+      "classification": [
+        "language",
+        "accent"
+      ],
+      "sample_assets": [
+        "DataJake Sarajevo news corpora",
+        "Wikipedia pitch-accent charts",
+        "NVDA braille exports"
+      ],
+      "notes": "Supports č/ć/đ preservation and ijekavian pitch-accent planning for ISO `bs`; feeds NV Speech Player **Inflection contour** tests."
+    },
+    {
+      "title": "Croatian language",
+      "url": "https://en.wikipedia.org/wiki/Croatian_language",
+      "usefulness": "high",
+      "progress": "researching structured ingestion",
+      "classification": [
+        "language",
+        "accent"
+      ],
+      "sample_assets": [
+        "DataJake radio drama dictionaries",
+        "Wikipedia four-accent tables",
+        "GitHub rhyme dictionaries"
+      ],
+      "notes": "Aligns long/short rising/falling accent metadata with NV Speech Player **Inflection contour** defaults for ISO `hr`."
+    },
+    {
+      "title": "Serbian language",
+      "url": "https://en.wikipedia.org/wiki/Serbian_language",
+      "usefulness": "high",
+      "progress": "researching dual-script ingest",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "DataJake `.lex` payloads",
+        "Serbian National Corpus extracts",
+        "NVDA manual exports"
+      ],
+      "notes": "Documents Cyrillic/Latin parity, palatalisation, and ijekavian/ekavian toggles so CodeQL-audited templates can ship dual-script ISO `sr` presets."
+    },
+    {
+      "title": "Montenegrin language",
+      "url": "https://en.wikipedia.org/wiki/Montenegrin_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "GitHub Montenegrin corpora",
+        "Wikipedia orthography reform notes",
+        "DataJake accent samples"
+      ],
+      "notes": "Tracks ś/ź reforms and dual-accent proposals for ISO `cnr`; informs Montenegrin-specific EQ presets before packaging."
+    },
+    {
+      "title": "Slovene language",
+      "url": "https://en.wikipedia.org/wiki/Slovene_language",
+      "usefulness": "medium",
+      "progress": "researching tone extraction",
+      "classification": [
+        "language",
+        "accent"
+      ],
+      "sample_assets": [
+        "Wikipedia tonemic diacritic lists",
+        "DataJake hymn lexicons",
+        "GitHub accent analysers"
+      ],
+      "notes": "Provides circumflex vs. acute mapping for ISO `sl` tone presets and NV Speech Player **Tone size** calibration."
+    },
+    {
+      "title": "Macedonian language",
+      "url": "https://en.wikipedia.org/wiki/Macedonian_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "DataJake broadcast lexicons",
+        "Wikipedia schwa/assimilation notes",
+        "GitHub transliteration utilities"
+      ],
+      "notes": "Highlights schwa behaviour and voicing assimilation used to validate NVDA braille exports and dual-script fallbacks for ISO `mk`."
     }
   ]
 }

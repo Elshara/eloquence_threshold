@@ -240,6 +240,18 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | High | [Hmong language](https://en.wikipedia.org/wiki/Hmong_language) | language / tone | Indexed from backlog | Captures eight-level tone matrices and orthography variants (Romanised Popular Alphabet, Pahawh); anchors NV Speech Player **Tone**, **Scope depth**, and **Whisper** presets plus DataJake oral history corpora. |
 | High | [Mizo language](https://en.wikipedia.org/wiki/Mizo_language) | language / tone | Indexed from backlog | Details Mizo tone registers, nasalisation, and orthography; pairs with GitHub tonal classifiers and DataJake hymn recordings for NV Speech Player **Tone**/**Nasal balance** planning. |
 
+## Adriatic and Balkan research sprint (October 2025 follow-up)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Albanian language](https://en.wikipedia.org/wiki/Albanian_language) | language / phonology | Pending structured ingestion | Documents Gheg/Tosk vowel reduction and stress contrasts; paired with DataJake diaspora lexicons and GitHub morphological analysers to tune NV Speech Player **Sibilant clarity** presets. |
+| High | [Bosnian language](https://en.wikipedia.org/wiki/Bosnian_language) | language / accent | Researching IPA extraction | Captures ijekavian pitch-accent distribution; informs DataJake Sarajevo news corpora processing and NVDA braille exports that preserve č/ć/đ characters. |
+| High | [Croatian language](https://en.wikipedia.org/wiki/Croatian_language) | language / accent | Researching structured ingestion | Provides four-way accent tables and vowel length cues; aligns with DataJake drama recordings and GitHub rhyme dictionaries before regenerating voice frequency envelopes. |
+| High | [Serbian language](https://en.wikipedia.org/wiki/Serbian_language) | language / orthography | Researching dual-script ingest | Covers Cyrillic/Latin parity, palatalisation rules, and ijekavian/ekavian toggles; supports CodeQL-audited template seeding and DataJake `.lex` alignment. |
+| Medium | [Montenegrin language](https://en.wikipedia.org/wiki/Montenegrin_language) | language / orthography | Pending structured ingestion | Tracks ś/ź phoneme reforms and dual-accent proposals; pairs GitHub corpora with DataJake lexicons to test Montenegrin-specific presets before packaging. |
+| Medium | [Slovene language](https://en.wikipedia.org/wiki/Slovene_language) | language / accent | Researching tone extraction | Lists tonemic diacritics and circumflex/acute contrasts; guides Slovene hymn lexicon ingestion and NV Speech Player **Tone size** defaults. |
+| Medium | [Macedonian language](https://en.wikipedia.org/wiki/Macedonian_language) | language / phonology | Pending structured ingestion | Highlights schwa behaviour, voicing assimilation, and stress regularity; underpins GitHub transliteration utilities and NVDA manual audits for Macedonian packaging. |
+
 ## Technical, programming, and modelling languages
 
 These resources ensure Eloquence can speak developer-centric content with the

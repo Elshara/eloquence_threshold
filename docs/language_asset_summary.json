@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-29T22:06:01.036472+00:00",
+  "generatedAt": "2025-09-29T23:35:48.740493+00:00",
   "globalStats": {
-    "generatedAt": "2025-09-29T22:06:01.036472+00:00",
+    "generatedAt": "2025-09-29T23:35:48.740493+00:00",
     "languageCount": 53,
     "languagesWithProgress": 52,
     "languagesWithCoverage": 52,
@@ -16,13 +16,13 @@
     }
   },
   "globalResearch": {
-    "sourceCount": 149,
+    "sourceCount": 156,
     "classificationCounts": {
-      "language": 127,
+      "language": 134,
       "dialect": 11,
-      "accent": 3,
+      "accent": 6,
       "metadata": 14,
-      "orthography": 17,
+      "orthography": 19,
       "constructed": 5,
       "historical": 5,
       "family": 16,
@@ -30,7 +30,7 @@
       "technical": 8,
       "lexicon": 2,
       "isolates": 1,
-      "phonology": 11,
+      "phonology": 13,
       "region": 11,
       "revitalisation": 3,
       "policy": 1,
@@ -42,7 +42,7 @@
       "tone": 18,
       "morphology": 1
     },
-    "updated": "2025-10-15"
+    "updated": "2025-10-16"
   },
   "languages": [
     {

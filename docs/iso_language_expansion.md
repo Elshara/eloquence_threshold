@@ -11,6 +11,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | ak | Latin (Akan/Twi) | Researching | Cached Wikipedia tone ladders combined with DataJake sermon lexicons and GitHub Akan NLP tools; NVDA manual exports confirm apostrophe tone markers before CodeQL-audited `.dic` ingestion. |
 | am | Ethiopic | Developing | Amharic phoneme deck seeded; awaiting Geez punctuation rules from NVDA alpha manuals before marking comprehensive. |
 | bo | Tibetan | Planned | Wikipedia tone contour and stackable consonant charts staged; DataJake archives searched for Wylie transliteration lexicons. |
+| bs | Latin (Bosnian) | Researching | Cached Wikipedia accentuation charts paired with DataJake Sarajevo news lexicons; GitHub Bosnian diacritic normalisers queued so NVDA braille exports keep č/ć/đ distinctions intact. |
 | ar, ar-EG | Arabic | Seeded | Profiles sourced from `eloquence_data/languages/world_language_seeds.json`; leverages Quranic recitation corpora for emphatic consonants. |
 | as | Bengali-Assamese | Planned | Wikipedia-derived consonant inventory staged; awaiting Assamese-specific schwa deletion tests via NVDA nightly builds. |
 | az | Latin (Azeri) | Planned | GitHub transliteration utilities catalogued; NVDA docs scanned for glottal stop punctuation cues. |
@@ -46,7 +47,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | hi-IN | Devanagari | Established | Retroflex and breathy-voiced contrasts sourced from DataJake MBROLA inventories. |
 | hil | Latin (Hiligaynon) | Researching | Cached Wikipedia stress and glottal stop notes combine with DataJake liturgical lexicons; GitHub syllable tokenisers drive NV Speech Player **Inflection contour** presets awaiting profile ingestion. |
 | hmn | Latin & Pahawh (Hmong Daw) | Researching | Wikipedia tone contour charts and GitHub tonal analysis notebooks paired with DataJake oral history recordings; NV Speech Player **Tone**, **Scope depth**, and **Whisper** sliders queued for validation via `docs/voice_frequency_matrix.md`. |
-| hr | Latin (Croatian) | Planned | Wikipedia digraph rules recorded; DECtalk dictionaries referenced for stress alignment. |
+| hr | Latin (Croatian) | Researching | Wikipedia digraph and accent tables mirrored; DataJake radio drama `.dic` payloads staged alongside GitHub prosody corpora so NV Speech Player **Inflection contour** defaults capture rising tone contrasts. |
 | ht | Latin (Haitian Creole) | Planned | Cached Wikipedia nasalisation charts paired with DataJake pronunciation dictionaries; NVDA braille tables referenced for French-derived punctuation cues before seeding lexicons. |
 | id | Latin (Indonesian) | Comprehensive | Wikipedia phonotactic notes merged with GitHub syllabification scripts; 100% IPA coverage confirmed in `docs/language_coverage.md`. |
 | is | Latin (Icelandic) | Planned | NVDA manual punctuation cues archived; GitHub pronunciation datasets queued for vowel length calibration. |
@@ -88,12 +89,14 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | rn | Latin (Kirundi) | Planned | GitHub morphological analyzers catalogued; DataJake `.lex` payloads queued to document Bantu noun-class tones alongside NVDA punctuation exports. |
 | rw | Latin (Kinyarwanda) | Planned | Tone plateau heuristics sourced from Wikipedia; NV Speech Player pitch defaults mapped for nasal prefix handling. |
 | sk | Latin (Slovak) | Planned | Stress-on-first-syllable rules confirmed; DataJake `.dic` payloads awaited for rhythmic length tuning. |
-| sl | Latin (Slovene) | Planned | Dual accent system tracked via Wikipedia; NV Speech Player tone slider mapping drafted. |
+| sl | Latin (Slovene) | Researching | Wikipedia pitch-accent contours combined with DataJake hymn lexicons; GitHub Slovene lemmatisers logged to map tonemic diacritics before refreshing NVDA braille exports. |
+| sq | Latin (Albanian) | Researching | Cached Wikipedia vowel reduction and stress tables coupled with DataJake diaspora lexicons; GitHub Albanian morphological analysers logged so NV Speech Player **Tone**/**Sibilant clarity** presets balance Gheg/Tosk contrasts. |
 | sm | Latin (Samoan) | Planned | Glottal stop (`ʻeta`) usage catalogued from Wikipedia; DataJake scripture datasets mapped to vowel length for EQ calibration and NVDA braille hyphenation. |
 | sd | Arabic (Sindhi) | Planned | Arabic-derived vowel marks and Sindhi-specific consonants tracked; NVDA braille tables referenced for implosive consonant cues. |
 | sg | Latin (Sango) | Researching | DataJake scripture corpora inventoried; Wikipedia tonal reduction studies combined with NVDA manual punctuation exports to calibrate **Macro volume** and **Tone** sliders. |
 | sn | Latin (Shona) | Researching | Wikipedia downstep/whistled speech studies cross-referenced with DataJake pronunciation datasets and GitHub prosody corpora; NVDA manual exports confirm tone apostrophe behaviour before CodeQL gating. |
-| sr, sr-Latn | Cyrillic & Latin (Serbian) | Planned | Paired alphabets flagged in Wikipedia crawler; DataJake MBROLA voices aligned for digraph/dzh handling. |
+| sr, sr-Latn | Cyrillic & Latin (Serbian) | Researching | Cached Wikipedia palatalisation notes plus Serbian National Corpus samples funnel into DataJake `.lex` payload triage; NVDA manual exports confirm Cyrillic/Latin punctuation parity ahead of CodeQL-audited template seeding. |
+| cnr | Latin (Montenegrin) | Planned | Wikipedia dual-accent overview staged; GitHub Montenegrin corpus snippets aligned with Serbian/Bosnian templates to validate ś/ź phoneme coverage. |
 | yo | Latin (Yoruba) | Researching | Tone ladder charts and vowel harmony metadata from Wikipedia feed DataJake `.lex` payload seeding; NV Speech Player **Tone size**/**Scope depth** presets tuned alongside NVDA braille exports and CodeQL dictionary validation. |
 | so | Latin (Somali) | Planned | Wikipedia ATR harmony and emphatic consonant notes catalogued; DataJake `.lex` archives queued to tune NV Speech Player **Tone** and **Sibilant clarity** sliders. |
 | sw | Latin (Swahili) | Comprehensive | Phoneme templates tuned to recorded DataJake archives with 48 kHz stereo metadata. |
@@ -363,4 +366,34 @@ Contributors can reference this roadmap when proposing pull requests so reviews 
 - Execute `python -m unittest discover tests` after seeding the Visayan/Hmong datasets to confirm CLI reports absorb the expanded tone metadata.
 - Build the add-on with `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` to validate that glottal stop and tone register metadata package cleanly without live downloads.
 - Append sprint notes to `AGENTS.md`, referencing refreshed Wikipedia/DataJake/GitHub/NVDA artefacts and regenerated dashboards so offline contributors can replay the Philippine/Mainland workflow.
+
+## Adriatic and Balkan sprint (October 2025 follow-up)
+
+| ISO / tag | Script focus | Status | Notes |
+| --- | --- | --- | --- |
+| sq | Latin (Albanian) | Researching | Wikipedia stress/vowel reduction tables cross-checked with GitHub Albanian morphological analysers and DataJake diaspora dictionaries; NVDA braille exports confirm ë/ç handling for both Gheg and Tosk presets. |
+| bs | Latin (Bosnian) | Researching | Sarajevo news corpora from DataJake mirror Wikipedia pitch-accent research while GitHub lemmatisers validate ijekavian vs. ekavian toggles for NV Speech Player **Inflection contour** presets. |
+| hr | Latin (Croatian) | Researching | Wikipedia four-way accent inventory paired with DataJake drama recordings and GitHub rhyme dictionaries to stage long/short falling patterns before regenerating frequency envelopes. |
+| sr, sr-Latn | Cyrillic & Latin (Serbian) | Researching | Serbian National Corpus extracts align with Wikipedia palatalisation tables; DataJake `.lex` payloads and NVDA manuals anchor punctuation parity ahead of CodeQL-audited dual-script templates. |
+| cnr | Latin (Montenegrin) | Planned | Cached Wikipedia orthography reforms merge with GitHub Montenegrin corpora to track ś/ź/ź́ phoneme demand; DataJake accent samples queued for validation. |
+| sl | Latin (Slovene) | Researching | Wikipedia tonemic diacritic charts plus DataJake hymn inventories feed GitHub accent analyzers so NV Speech Player **Tone size** defaults capture circumflex vs. acute contrasts. |
+| mk | Cyrillic (Macedonian) | Researching | Cached Wikipedia vowel reduction + schwa data align with DataJake broadcast lexicons; GitHub transliteration scripts under CodeQL review ensure Latin fallback mappings stay reversible. |
+
+### Frequency, phoneme, and speech parameter backlog
+
+- Re-run `python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print` after capturing Bosnian/Croatian/Serbian vowel length recordings so NV Speech Player harmonics reflect four-accent contrasts.
+- Extend `voice_parameters.py` with Albanian **Sibilant clarity** and Slovene **Tone size** presets, then regenerate [`docs/voice_parameter_report.md`](voice_parameter_report.md) to expose the Adriatic defaults alongside existing tone-rich locales.
+- Update `phoneme_customizer.py` with palatalised alveolar cues for Serbian/Montenegrin and alveolo-palatal affricates for Slovene; validate via `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`.
+
+### Dictionary and corpus integration tasks
+
+- Append Albanian, Bosnian, Croatian, Serbian, Montenegrin, Slovene, and Macedonian bibliographies to [`docs/language_research_index.md`](language_research_index.md) / `.json`, then rerun `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print` so provenance dashboards log the new ISO coverage.
+- Stage DataJake `.dic`/`.lex` payloads for each locale in `eloquence_data/` and refresh `docs/archive_inventory.json` through `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` to capture updated viability and audio-fidelity tags.
+- Audit NV Access manuals for Macedonian, Serbian, Croatian, and Slovene using `python tools/audit_nvaccess_downloads.py --roots releases/stable releases/2025.3 snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs/download_nvaccess_snapshot.json --markdown docs/download_nvaccess_snapshot.md`, then translate severity changes via `python tools/check_nvda_updates.py --snapshot docs/download_nvaccess_snapshot.json --validated docs/validated_nvda_builds.json --manifest manifest.ini --markdown docs/nvda_update_recommendations.md --json docs/nvda_update_recommendations.json`.
+
+### Testing and packaging checkpoints
+
+- Execute `python -m unittest discover tests` once the Adriatic datasets land to confirm CLI dashboards absorb the four-accent logic.
+- Build the add-on with `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` so dual-script Serbian assets and Montenegrin diacritics package correctly without new releases.
+- Log sprint outcomes in `AGENTS.md`, referencing refreshed Wikipedia/DataJake/GitHub/NVDA artefacts plus regenerated dashboards to preserve provenance for future offline drills.
 
