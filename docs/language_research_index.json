@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-16",
+  "updated": "2025-09-29T23:43:24Z",
   "sources": [
     {
       "title": "Lists of languages",
@@ -2251,6 +2251,102 @@
         "GitHub transliteration utilities"
       ],
       "notes": "Highlights schwa behaviour and voicing assimilation used to validate NVDA braille exports and dual-script fallbacks for ISO `mk`."
+    },
+    {
+      "title": "Bislama language",
+      "url": "https://en.wikipedia.org/wiki/Bislama_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "DataJake Radio Vanuatu lexicons",
+        "Wikipedia phonotactic tables",
+        "GitHub orthography converters"
+      ],
+      "notes": "Feeds ISO `bi` roadmap entries with loanword and phonotactic cues aligned to NVDA braille punctuation tests."
+    },
+    {
+      "title": "Chamorro language",
+      "url": "https://en.wikipedia.org/wiki/Chamorro_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "DataJake Guam civic corpora",
+        "Wikipedia glottal stop guidelines",
+        "GitHub Chamorro spelling reform scripts"
+      ],
+      "notes": "Documents glottal stop and reduplication behaviour so ISO `ch` profiles keep NV Speech Player tone presets and NVDA braille exports in sync."
+    },
+    {
+      "title": "Palauan language",
+      "url": "https://en.wikipedia.org/wiki/Palauan_language",
+      "usefulness": "medium",
+      "progress": "requires phoneme summary",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "DataJake civic-education transcripts",
+        "Wikipedia vowel harmony research",
+        "GitHub reduplication analysers"
+      ],
+      "notes": "Aligns ISO `pau` tone and consonant harmony planning with NV Speech Player **Tone size**/**Vocal layers** presets."
+    },
+    {
+      "title": "Niuean language",
+      "url": "https://en.wikipedia.org/wiki/Niuean_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "DataJake hymn dictionaries",
+        "Wikipedia stress/macron tables",
+        "NVDA braille exports"
+      ],
+      "notes": "Confirms macron rendering and stress defaults for ISO `niu` packaging drills that follow the README no-release workflow."
+    },
+    {
+      "title": "Tokelauan language",
+      "url": "https://en.wikipedia.org/wiki/Tokelauan_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "DataJake hymn lexicons",
+        "Wikipedia vowel length charts",
+        "GitHub Tokelauan spell-checkers"
+      ],
+      "notes": "Guides NV Speech Player **Tone size**/**Subtones** presets and NVDA braille macron checks for ISO `tkl` entries."
+    },
+    {
+      "title": "Rapa Nui language",
+      "url": "https://en.wikipedia.org/wiki/Rapa_Nui_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "revitalisation"
+      ],
+      "sample_assets": [
+        "DataJake oral-history recordings",
+        "GitHub revitalisation grammars",
+        "NVDA braille tables"
+      ],
+      "notes": "Captures glottal stop timing and vowel length data so ISO `rap` voice presets map to the frequency matrix and offline packaging drill."
     }
   ]
 }
