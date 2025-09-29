@@ -1,11 +1,11 @@
 # Language asset summary
 
-- Generated: 2025-09-28T19:16:19.596719+00:00
+- Generated: 2025-09-29T21:32:41.214270+00:00
 - Languages analysed: 53
 - Languages with voice templates: 53
 - Languages with coverage data: 52
 - Languages with detailed progress: 52
-- Research sources indexed: 107
+- Research sources indexed: 136
 
 ## Coverage status overview
 
@@ -73,22 +73,23 @@
 
 ## Research classifications
 
-- Last updated: 2025-10-04
+- Last updated: 2025-10-13
 - Classification counts:
   - accent: 3
   - audio: 1
   - constructed: 5
-  - creole: 1
+  - creole: 2
   - dialect: 11
   - family: 16
   - historical: 5
   - isolates: 1
-  - language: 89
+  - language: 114
   - lexicon: 2
   - metadata: 14
   - mixed: 3
-  - orthography: 10
-  - phonology: 1
+  - morphology: 1
+  - orthography: 14
+  - phonology: 11
   - policy: 1
   - region: 11
   - research: 6
@@ -96,3 +97,4 @@
   - sign-language: 2
   - sociolinguistics: 1
   - technical: 8
+  - tone: 14

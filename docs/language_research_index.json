@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-11",
+  "updated": "2025-10-13",
   "sources": [
     {
       "title": "Lists of languages",
@@ -299,7 +299,7 @@
       "notes": "Provides lexical comparison data for fine-tuning high-frequency consonant bands within Taloid dialect presets."
     },
     {
-      "title": "Talodi–Heiban languages",
+      "title": "Talodi\u2013Heiban languages",
       "url": "https://en.wikipedia.org/wiki/Talodi%E2%80%93Heiban_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
@@ -310,7 +310,7 @@
       "sample_assets": [
         "family classification"
       ],
-      "notes": "Supports inclusion of Niger–Congo branches within African language packs."
+      "notes": "Supports inclusion of Niger\u2013Congo branches within African language packs."
     },
     {
       "title": "Yupik languages",
@@ -356,7 +356,7 @@
       "notes": "Helps define accent/intonation cues for retro computing voices and developer-centric presets."
     },
     {
-      "title": "List of constructed languages – Languages used in fiction",
+      "title": "List of constructed languages \u2013 Languages used in fiction",
       "url": "https://en.wikipedia.org/wiki/List_of_constructed_languages#Languages_used_in_fiction",
       "usefulness": "high",
       "progress": "pending structured ingestion",
@@ -1339,7 +1339,7 @@
       "notes": "Guides ISO kl (Kalaallisut) tone curves, affix stacking, and NVDA punctuation defaults sourced from NV Access manuals."
     },
     {
-      "title": "Denaʼina language",
+      "title": "Dena\u02bcina language",
       "url": "https://en.wikipedia.org/wiki/Dena%27ina_language",
       "usefulness": "medium",
       "progress": "researching tone plateau cues",
@@ -1522,7 +1522,7 @@
         "orthography"
       ],
       "sample_assets": [
-        "Ge’ez syllable tables",
+        "Ge\u2019ez syllable tables",
         "gemination notes",
         "punctuation guides"
       ],
@@ -1646,7 +1646,7 @@
         "Thaana diacritics",
         "dialect tone notes"
       ],
-      "notes": "Thaana right-to-left diacritics guide NVDA braille exports and offline packaging for ISO dv; paired with DataJake Qur’anic pronunciation lexicons and GitHub transliteration tooling."
+      "notes": "Thaana right-to-left diacritics guide NVDA braille exports and offline packaging for ISO dv; paired with DataJake Qur\u2019anic pronunciation lexicons and GitHub transliteration tooling."
     },
     {
       "title": "Thaana",
@@ -1733,7 +1733,7 @@
         "emphatic consonants",
         "Tifinagh transliteration"
       ],
-      "notes": "Kabyle consonant emphasis, vowel harmony, and Tifinagh ⇄ Latin transliteration cues steer ISO kab phoneme presets, NV Speech Player Plosive impact sliders, and NVDA braille exports."
+      "notes": "Kabyle consonant emphasis, vowel harmony, and Tifinagh \u21c4 Latin transliteration cues steer ISO kab phoneme presets, NV Speech Player Plosive impact sliders, and NVDA braille exports."
     },
     {
       "title": "Central Atlas Tamazight",
@@ -1823,7 +1823,127 @@
         "consonant gradation",
         "vowel harmony"
       ],
-      "notes": "Lule Sámi consonant gradation and vowel harmony references align GitHub finite-state analysers, DataJake lexical payloads, and NVDA braille exports for ISO smj."
+      "notes": "Lule S\u00e1mi consonant gradation and vowel harmony references align GitHub finite-state analysers, DataJake lexical payloads, and NVDA braille exports for ISO smj."
+    },
+    {
+      "title": "Yoruba language",
+      "url": "https://en.wikipedia.org/wiki/Yoruba_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "tone ladder charts",
+        "orthography diacritics"
+      ],
+      "notes": "Anchors ISO yo tonal planning with NV Speech Player Tone size/Scope depth presets, combining DataJake hymn lexicons and NVDA braille exports."
+    },
+    {
+      "title": "Yoruba phonology",
+      "url": "https://en.wikipedia.org/wiki/Yoruba_phonology",
+      "usefulness": "high",
+      "progress": "requires summary integration",
+      "classification": [
+        "phonology",
+        "tone"
+      ],
+      "sample_assets": [
+        "downstep rules",
+        "ATR harmony tables"
+      ],
+      "notes": "Captures downstep, ATR harmony, and vowel length cues for CodeQL-audited dictionary ingestion and tools/summarize_language_assets.py dashboards."
+    },
+    {
+      "title": "Akan language",
+      "url": "https://en.wikipedia.org/wiki/Akan_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "tone tiers",
+        "nasal vowel alternations"
+      ],
+      "notes": "Guides Akan/Twi ISO ak tone planning with DataJake sermon corpora, GitHub morphological analysers, and NVDA apostrophe punctuation exports."
+    },
+    {
+      "title": "Ewe language",
+      "url": "https://en.wikipedia.org/wiki/Ewe_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "ATR harmony charts",
+        "floating tone notes"
+      ],
+      "notes": "Pairs DataJake hymn dictionaries with NV Speech Player Tone/Subtones presets and NVDA punctuation exports for ISO ee."
+    },
+    {
+      "title": "Ga language",
+      "url": "https://en.wikipedia.org/wiki/Ga_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "nasal vowel tables",
+        "glottal stop cues"
+      ],
+      "notes": "Supports ISO gaa nasal resonance presets by combining Wikipedia phonology, DataJake broadcast corpora, and NVDA braille punctuation snapshots."
+    },
+    {
+      "title": "Luganda",
+      "url": "https://en.wikipedia.org/wiki/Luganda",
+      "usefulness": "medium",
+      "progress": "researching noun-class export",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "noun-class concord charts",
+        "tone sandhi examples"
+      ],
+      "notes": "Aligns Luganda (lg) dictionary staging with DataJake scripture payloads, GitHub morphological toolkits, and NVDA hyphenation tables."
+    },
+    {
+      "title": "Lingala language",
+      "url": "https://en.wikipedia.org/wiki/Lingala_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "tonal morphology notes",
+        "French-derived punctuation"
+      ],
+      "notes": "Ensures Lingala (ln) contour presets match DataJake scripture corpora while validating NVDA manual quotation marks and CodeQL packaging rules."
+    },
+    {
+      "title": "Shona language",
+      "url": "https://en.wikipedia.org/wiki/Shona_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "downstep descriptions",
+        "whistled speech references"
+      ],
+      "notes": "Feeds Shona (sn) EQ calibration and CodeQL-reviewed dictionary imports using DataJake phonology datasets and NV Speech Player contour presets."
     }
   ]
 }

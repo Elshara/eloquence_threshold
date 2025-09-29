@@ -209,6 +209,19 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | Medium | [Marshallese language](https://en.wikipedia.org/wiki/Marshallese_language) | language / phonology | Pending structured ingestion | Captures voiceless vowel series and consonant allophones; ties into DataJake hymn recordings to stage Marshallese (`mh`) frequency presets. |
 | Medium | [Lule Sami](https://en.wikipedia.org/wiki/Lule_Sami_language) | language / phonology | Researching consonant gradation export | Details consonant gradation, vowel harmony, and orthography used to seed Lule Sámi (`smj`) dictionaries with GitHub finite-state analysers and NVDA braille exports. |
 
+## Gulf of Guinea and Great Lakes research sprint (October 2025 update)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Yoruba language](https://en.wikipedia.org/wiki/Yoruba_language) | language / tone | Pending structured ingestion | Tone ladder charts and orthography metadata steer NV Speech Player **Tone size**/**Scope depth** presets while pairing DataJake hymn `.lex` payloads with NVDA braille exports for ISO `yo`. |
+| High | [Yoruba phonology](https://en.wikipedia.org/wiki/Yoruba_phonology) | phonology / tone | Requires summary integration | Captures downstep, ATR harmony, and vowel length cues we mirror in `tools/summarize_language_assets.py` and CodeQL-audited dictionary ingestion. |
+| Medium | [Akan language](https://en.wikipedia.org/wiki/Akan_language) | language / tone | Pending structured ingestion | Documents Akan/Twi tone tiers and nasal vowel alternations; ties to DataJake sermon corpora and GitHub morphological analysers before seeding ISO `ak` profiles. |
+| Medium | [Ewe language](https://en.wikipedia.org/wiki/Ewe_language) | language / tone | Pending structured ingestion | Provides ATR harmony and floating tone notes that align NV Speech Player **Tone**/**Subtones** sliders with DataJake `.dic` payloads and NVDA punctuation exports for ISO `ee`. |
+| Medium | [Ga language](https://en.wikipedia.org/wiki/Ga_language) | language / phonology | Pending structured ingestion | Highlights nasal resonance and glottal stop behaviour; paired with DataJake broadcast corpora and NVDA braille punctuation to seed ISO `gaa` presets. |
+| Medium | [Luganda](https://en.wikipedia.org/wiki/Luganda) | language / tone | Researching noun-class export | Tracks noun-class concord and tone sandhi; informs Luganda (`lg`) dictionary staging with GitHub morphological tooling and NVDA hyphenation tables. |
+| Medium | [Lingala language](https://en.wikipedia.org/wiki/Lingala_language) | language / tone | Pending structured ingestion | Covers tonal morphology and French-derived punctuation; ensures Lingala (`ln`) lexicons align DataJake scripture corpora with NVDA manual exports. |
+| Medium | [Shona language](https://en.wikipedia.org/wiki/Shona_language) | language / tone | Pending structured ingestion | Downstep, whistled speech, and nasal cluster cues calibrate Shona (`sn`) EQ presets and CodeQL-reviewed `.dic` imports sourced from DataJake phonology datasets. |
+
 ## Technical, programming, and modelling languages
 
 These resources ensure Eloquence can speak developer-centric content with the
