@@ -1,13 +1,19 @@
 {
-  "updated": "2025-10-04",
+  "updated": "2025-10-10",
   "sources": [
     {
       "title": "Lists of languages",
       "url": "https://en.wikipedia.org/wiki/Lists_of_languages",
       "usefulness": "critical",
       "progress": "indexed via catalog_wikipedia_languages.py; needs continual refresh",
-      "classification": ["language", "dialect", "accent"],
-      "sample_assets": ["hierarchical list metadata"],
+      "classification": [
+        "language",
+        "dialect",
+        "accent"
+      ],
+      "sample_assets": [
+        "hierarchical list metadata"
+      ],
       "notes": "Primary entry point for harvesting Wikipedia's grouped language, dialect, and accent lists. Drives the cached docs/wikipedia_language_index.* outputs that seed NVDA's tiered selector."
     },
     {
@@ -15,8 +21,14 @@
       "url": "https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes",
       "usefulness": "critical",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["ISO 639-1/2/3 codes", "native names"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "ISO 639-1/2/3 codes",
+        "native names"
+      ],
       "notes": "Master table that links historic and modern ISO 639 identifiers; anchors phoneme profiles to authoritative code pairs for NVDA configuration exports."
     },
     {
@@ -24,8 +36,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["bibliographic vs terminologic codes"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "bibliographic vs terminologic codes"
+      ],
       "notes": "Differentiates bibliographic (B) and terminologic (T) macrolanguage groupings required for backwards compatible voice template packaging."
     },
     {
@@ -33,8 +50,13 @@
       "url": "https://en.wikipedia.org/wiki/ISO_639_macrolanguage",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "dialect"],
-      "sample_assets": ["macrolanguage membership tables"],
+      "classification": [
+        "language",
+        "dialect"
+      ],
+      "sample_assets": [
+        "macrolanguage membership tables"
+      ],
       "notes": "Explains how multiple dialects and closely related languages collapse into a single ISO 639-3 code; informs dialect menu roll-ups."
     },
     {
@@ -42,8 +64,14 @@
       "url": "https://en.wikipedia.org/wiki/List_of_ISO_639-3_codes",
       "usefulness": "critical",
       "progress": "pending structured ingestion",
-      "classification": ["language", "dialect"],
-      "sample_assets": ["639-3 registry", "scope/type flags"],
+      "classification": [
+        "language",
+        "dialect"
+      ],
+      "sample_assets": [
+        "639-3 registry",
+        "scope/type flags"
+      ],
       "notes": "Provides per-language scope (individual, macrolanguage, special) and type (living, extinct, historical) indicators for Eloquence voice catalog metadata."
     },
     {
@@ -51,8 +79,13 @@
       "url": "https://en.wikipedia.org/wiki/ISO_15924",
       "usefulness": "critical",
       "progress": "pending structured ingestion",
-      "classification": ["orthography"],
-      "sample_assets": ["script codes", "sample glyphs"],
+      "classification": [
+        "orthography"
+      ],
+      "sample_assets": [
+        "script codes",
+        "sample glyphs"
+      ],
       "notes": "Maps writing systems to four-letter codes; required for script-aware phoneme seed bundles and braille/export planning."
     },
     {
@@ -60,8 +93,12 @@
       "url": "https://en.wikipedia.org/wiki/List_of_scripts_with_no_ISO_15924_code",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["orthography"],
-      "sample_assets": ["unregistered scripts"],
+      "classification": [
+        "orthography"
+      ],
+      "sample_assets": [
+        "unregistered scripts"
+      ],
       "notes": "Highlights gaps in ISO 15924 coverage so the phoneme customizer can stage provisional script identifiers and placeholder glyph datasets."
     },
     {
@@ -69,8 +106,13 @@
       "url": "https://en.wikipedia.org/wiki/ISO_15924#List_of_codes",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["orthography"],
-      "sample_assets": ["numeric/alpha codes", "age data"],
+      "classification": [
+        "orthography"
+      ],
+      "sample_assets": [
+        "numeric/alpha codes",
+        "age data"
+      ],
       "notes": "Contains the canonical numeric and alphabetic script codes plus sample eras; feeds phoneme EQ defaults for script-specific consonant/vowel ranges."
     },
     {
@@ -78,8 +120,13 @@
       "url": "https://en.wikipedia.org/wiki/ConScript_Unicode_Registry#Under-ConScript_Unicode_Registry",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["constructed", "orthography"],
-      "sample_assets": ["private-use code charts"],
+      "classification": [
+        "constructed",
+        "orthography"
+      ],
+      "sample_assets": [
+        "private-use code charts"
+      ],
       "notes": "Documents community-maintained encoded scripts that inform fallback phoneme mappings when ISO standards do not exist."
     },
     {
@@ -87,8 +134,13 @@
       "url": "https://en.wikipedia.org/wiki/Medieval_Unicode_Font_Initiative",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["orthography", "historical"],
-      "sample_assets": ["scribal variant charts"],
+      "classification": [
+        "orthography",
+        "historical"
+      ],
+      "sample_assets": [
+        "scribal variant charts"
+      ],
       "notes": "Supplies historical glyph variants necessary for contextual phoneme shaping in medieval language templates."
     },
     {
@@ -96,8 +148,13 @@
       "url": "https://en.wikipedia.org/wiki/ISO_639-5",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "family"],
-      "sample_assets": ["language family codes"],
+      "classification": [
+        "language",
+        "family"
+      ],
+      "sample_assets": [
+        "language family codes"
+      ],
       "notes": "Defines alpha-3 codes for language families; sets up parent-level selectors and informs NVDA's mutually intelligible groupings."
     },
     {
@@ -105,8 +162,12 @@
       "url": "https://en.wikipedia.org/wiki/ISO_639-6",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["dialect"],
-      "sample_assets": ["extended language identifiers"],
+      "classification": [
+        "dialect"
+      ],
+      "sample_assets": [
+        "extended language identifiers"
+      ],
       "notes": "Captures dialect-level refinements formerly maintained in the 639-6 registry; helpful for accent-specific presets."
     },
     {
@@ -114,8 +175,12 @@
       "url": "https://en.wikipedia.org/wiki/List_of_ISO_639-6_codes",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["dialect"],
-      "sample_assets": ["archived 639-6 entries"],
+      "classification": [
+        "dialect"
+      ],
+      "sample_assets": [
+        "archived 639-6 entries"
+      ],
       "notes": "Archived table of ISO 639-6 identifiers that can seed dialect and accent menus where modern registries lack detail."
     },
     {
@@ -123,8 +188,14 @@
       "url": "https://en.wikipedia.org/wiki/Language_family",
       "usefulness": "critical",
       "progress": "requires summarised taxonomy",
-      "classification": ["family", "language"],
-      "sample_assets": ["family trees", "mutual intelligibility notes"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "family trees",
+        "mutual intelligibility notes"
+      ],
       "notes": "Explains classification theory and relationships; guides the structuring of Eloquence's family-level overviews and documentation."
     },
     {
@@ -132,8 +203,15 @@
       "url": "https://en.wikipedia.org/wiki/IETF_language_tag",
       "usefulness": "critical",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata", "dialect"],
-      "sample_assets": ["BCP 47 syntax", "extlang samples"],
+      "classification": [
+        "language",
+        "metadata",
+        "dialect"
+      ],
+      "sample_assets": [
+        "BCP 47 syntax",
+        "extlang samples"
+      ],
       "notes": "Details BCP 47 tags needed for NVDA configuration exports and bridging ISO codes with regional subtags (script, region, variant)."
     },
     {
@@ -141,8 +219,13 @@
       "url": "https://en.wikipedia.org/wiki/Codes_for_constructed_languages",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["constructed", "language"],
-      "sample_assets": ["ISO/BCP identifiers"],
+      "classification": [
+        "constructed",
+        "language"
+      ],
+      "sample_assets": [
+        "ISO/BCP identifiers"
+      ],
       "notes": "Outlines how Esperanto, Interlingua, and other constructed languages receive standardized codes for packaging."
     },
     {
@@ -150,8 +233,12 @@
       "url": "https://en.wikipedia.org/wiki/Flag_icons_for_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["metadata"],
-      "sample_assets": ["flag/icon references"],
+      "classification": [
+        "metadata"
+      ],
+      "sample_assets": [
+        "flag/icon references"
+      ],
       "notes": "Offers accessible iconography references for NVDA dialogs while emphasising cultural sensitivity."
     },
     {
@@ -159,8 +246,13 @@
       "url": "https://en.wikipedia.org/wiki/Index_of_language_articles",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "research"],
-      "sample_assets": ["topical index"],
+      "classification": [
+        "language",
+        "research"
+      ],
+      "sample_assets": [
+        "topical index"
+      ],
       "notes": "Master index for targeted research topics such as phonology, orthography, and sociolinguistics that influence phoneme EQ presets."
     },
     {
@@ -168,8 +260,14 @@
       "url": "https://en.wikipedia.org/wiki/List_of_lesser-known_Loloish_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "family"],
-      "sample_assets": ["language list", "ethnographic notes"],
+      "classification": [
+        "language",
+        "family"
+      ],
+      "sample_assets": [
+        "language list",
+        "ethnographic notes"
+      ],
       "notes": "Informs expansion of Sino-Tibetan coverage and highlights endangered dialects requiring urgent phoneme seeding."
     },
     {
@@ -177,8 +275,13 @@
       "url": "https://en.wikipedia.org/wiki/Hani_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "dialect"],
-      "sample_assets": ["dialect cluster descriptions"],
+      "classification": [
+        "language",
+        "dialect"
+      ],
+      "sample_assets": [
+        "dialect cluster descriptions"
+      ],
       "notes": "Details Hani/Miao-Yao dialect chains which align to phoneme contour variations documented in Loloish research."
     },
     {
@@ -186,8 +289,13 @@
       "url": "https://en.wikipedia.org/wiki/Taloid_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "family"],
-      "sample_assets": ["comparative tables"],
+      "classification": [
+        "language",
+        "family"
+      ],
+      "sample_assets": [
+        "comparative tables"
+      ],
       "notes": "Provides lexical comparison data for fine-tuning high-frequency consonant bands within Taloid dialect presets."
     },
     {
@@ -195,8 +303,13 @@
       "url": "https://en.wikipedia.org/wiki/Talodi%E2%80%93Heiban_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "family"],
-      "sample_assets": ["family classification"],
+      "classification": [
+        "language",
+        "family"
+      ],
+      "sample_assets": [
+        "family classification"
+      ],
       "notes": "Supports inclusion of Niger–Congo branches within African language packs."
     },
     {
@@ -204,8 +317,14 @@
       "url": "https://en.wikipedia.org/wiki/Yupik_languages",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "dialect"],
-      "sample_assets": ["phoneme inventories", "orthographic variants"],
+      "classification": [
+        "language",
+        "dialect"
+      ],
+      "sample_assets": [
+        "phoneme inventories",
+        "orthographic variants"
+      ],
       "notes": "Includes orthography and phoneme descriptions essential for polysynthetic language modelling."
     },
     {
@@ -213,8 +332,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_programming_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["technical", "language"],
-      "sample_assets": ["lexicon examples"],
+      "classification": [
+        "technical",
+        "language"
+      ],
+      "sample_assets": [
+        "lexicon examples"
+      ],
       "notes": "Feeds pronunciation dictionaries for code reading modes; intersects with NVDA's developer audiences."
     },
     {
@@ -222,8 +346,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_BASIC_dialects",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["technical", "dialect"],
-      "sample_assets": ["dialect names"],
+      "classification": [
+        "technical",
+        "dialect"
+      ],
+      "sample_assets": [
+        "dialect names"
+      ],
       "notes": "Helps define accent/intonation cues for retro computing voices and developer-centric presets."
     },
     {
@@ -231,8 +360,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_constructed_languages#Languages_used_in_fiction",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["constructed", "language"],
-      "sample_assets": ["fictional phonologies"],
+      "classification": [
+        "constructed",
+        "language"
+      ],
+      "sample_assets": [
+        "fictional phonologies"
+      ],
       "notes": "Guides fan-driven phoneme templates and ensures NVDA can surface fictional language presets with consistent metadata."
     },
     {
@@ -240,8 +374,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory",
       "usefulness": "critical",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["country-level assignments"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "country-level assignments"
+      ],
       "notes": "Supports priority planning for official support tiers and packaging by jurisdiction."
     },
     {
@@ -249,8 +388,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_languages",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["language counts"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "language counts"
+      ],
       "notes": "Highlights multilingual hotspots to prioritise for phoneme and accent data collection."
     },
     {
@@ -258,8 +402,13 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_countries_and_territories_by_official_language",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["jurisdictional breakdown"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "jurisdictional breakdown"
+      ],
       "notes": "Refines packaging needs for regional NVDA builds and cross-checks official statuses."
     },
     {
@@ -267,8 +416,13 @@
       "url": "https://en.wikipedia.org/wiki/Linguistic_diversity_index",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["diversity metrics"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "diversity metrics"
+      ],
       "notes": "Quantifies coverage gaps to measure Eloquence expansion impact regionally."
     },
     {
@@ -276,8 +430,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_language_names",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["endonyms/exonyms"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "endonyms/exonyms"
+      ],
       "notes": "Assists with accessible naming and NVDA speech label localisation."
     },
     {
@@ -285,8 +444,13 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_extinct_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "historical"],
-      "sample_assets": ["extinction timelines"],
+      "classification": [
+        "language",
+        "historical"
+      ],
+      "sample_assets": [
+        "extinction timelines"
+      ],
       "notes": "Guides archival phoneme modelling and documentation of revived pronunciation efforts."
     },
     {
@@ -294,8 +458,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_language_families",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["family overview"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "family overview"
+      ],
       "notes": "Provides enumerations of families for macro documentation and NVDA selector grouping."
     },
     {
@@ -303,8 +472,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_proposed_language_families",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["family", "research"],
-      "sample_assets": ["proposal notes"],
+      "classification": [
+        "family",
+        "research"
+      ],
+      "sample_assets": [
+        "proposal notes"
+      ],
       "notes": "Tracks speculative relationships useful for research roadmaps and future-proofing dialect clustering."
     },
     {
@@ -312,8 +486,13 @@
       "url": "https://en.wikipedia.org/wiki/Extinct_language",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["historical", "language"],
-      "sample_assets": ["case studies"],
+      "classification": [
+        "historical",
+        "language"
+      ],
+      "sample_assets": [
+        "case studies"
+      ],
       "notes": "Offers guidance on documenting pronunciation evidence for languages without living speakers."
     },
     {
@@ -321,8 +500,13 @@
       "url": "https://en.wikipedia.org/wiki/Intercontinental_Dictionary_Series",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "lexicon"],
-      "sample_assets": ["parallel vocabulary"],
+      "classification": [
+        "language",
+        "lexicon"
+      ],
+      "sample_assets": [
+        "parallel vocabulary"
+      ],
       "notes": "Provides comparative lexicon samples necessary for cross-language phoneme and prosody tuning."
     },
     {
@@ -330,8 +514,13 @@
       "url": "https://en.wikipedia.org/wiki/International_auxiliary_language",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["constructed", "language"],
-      "sample_assets": ["auxlang case studies"],
+      "classification": [
+        "constructed",
+        "language"
+      ],
+      "sample_assets": [
+        "auxlang case studies"
+      ],
       "notes": "Frames prioritisation for widely used constructed languages in accessibility contexts."
     },
     {
@@ -339,8 +528,13 @@
       "url": "https://en.wikipedia.org/wiki/Universal_language",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["constructed", "research"],
-      "sample_assets": ["historical proposals"],
+      "classification": [
+        "constructed",
+        "research"
+      ],
+      "sample_assets": [
+        "historical proposals"
+      ],
       "notes": "Historical background for universal speech projects; informs documentation narrative."
     },
     {
@@ -348,8 +542,13 @@
       "url": "https://en.wikipedia.org/wiki/Language_isolate#List_of_language_isolates_by_continent",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "isolates"],
-      "sample_assets": ["isolate lists"],
+      "classification": [
+        "language",
+        "isolates"
+      ],
+      "sample_assets": [
+        "isolate lists"
+      ],
       "notes": "Ensures isolates receive bespoke phoneme templates without incorrect family assignments."
     },
     {
@@ -357,8 +556,13 @@
       "url": "https://en.wikipedia.org/wiki/Unclassified_language",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["language", "research"],
-      "sample_assets": ["case studies"],
+      "classification": [
+        "language",
+        "research"
+      ],
+      "sample_assets": [
+        "case studies"
+      ],
       "notes": "Highlights research gaps for languages lacking classification; informs placeholder metadata."
     },
     {
@@ -366,8 +570,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_unclassified_languages_according_to_the_Ethnologue",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "research"],
-      "sample_assets": ["Ethnologue references"],
+      "classification": [
+        "language",
+        "research"
+      ],
+      "sample_assets": [
+        "Ethnologue references"
+      ],
       "notes": "Adds Ethnologue perspective to unclassified languages, guiding outreach for phoneme data."
     },
     {
@@ -375,8 +584,14 @@
       "url": "https://en.wikipedia.org/wiki/Afroasiatic_languages",
       "usefulness": "high",
       "progress": "requires taxonomy summary",
-      "classification": ["family", "language"],
-      "sample_assets": ["family structure", "phonology highlights"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "family structure",
+        "phonology highlights"
+      ],
       "notes": "Sets expectations for Semitic, Berber, Cushitic, Omotic, and Chadic coverage."
     },
     {
@@ -384,8 +599,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Austronesian_languages",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["regional breakdown"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "regional breakdown"
+      ],
       "notes": "Supports Pacific and Southeast Asian voice planning with sample lexical resources."
     },
     {
@@ -393,8 +613,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Indo-European_languages",
       "usefulness": "critical",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["branch structure"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "branch structure"
+      ],
       "notes": "Major coverage area for Eloquence; cross-links to existing NV Speech Player templates."
     },
     {
@@ -402,8 +627,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Mayan_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["phoneme sets"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "phoneme sets"
+      ],
       "notes": "Provides glottalised consonant inventories needed for phoneme EQ presets."
     },
     {
@@ -411,8 +641,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Mongolic_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["dialect groupings"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "dialect groupings"
+      ],
       "notes": "Informs vowel harmony parameter defaults for Mongolic voices."
     },
     {
@@ -420,8 +655,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Oto-Manguean_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["tonal inventories"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "tonal inventories"
+      ],
       "notes": "Essential for building tonal contour presets for Mesoamerican languages."
     },
     {
@@ -429,8 +669,13 @@
       "url": "https://en.wikipedia.org/wiki/Tungusic_languages#Classification",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["classification tables"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "classification tables"
+      ],
       "notes": "Guides template design for Siberian dialect clusters."
     },
     {
@@ -438,8 +683,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Turkic_languages",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["Oghuz/Kipchak/Karluk branches"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "Oghuz/Kipchak/Karluk branches"
+      ],
       "notes": "Supports vowel harmony and palatalization parameter sets."
     },
     {
@@ -447,8 +697,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Uralic_languages",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["family", "language"],
-      "sample_assets": ["phoneme characteristics"],
+      "classification": [
+        "family",
+        "language"
+      ],
+      "sample_assets": [
+        "phoneme characteristics"
+      ],
       "notes": "Captures agglutinative morphology considerations for NVDA voice phrasing."
     },
     {
@@ -456,8 +711,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_first_written_account",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "historical"],
-      "sample_assets": ["chronology"],
+      "classification": [
+        "language",
+        "historical"
+      ],
+      "sample_assets": [
+        "chronology"
+      ],
       "notes": "Contextualises script evolution timelines for historical voice packs."
     },
     {
@@ -465,8 +725,13 @@
       "url": "https://en.wikipedia.org/wiki/Undeciphered_writing_systems",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["orthography", "research"],
-      "sample_assets": ["glyph tables"],
+      "classification": [
+        "orthography",
+        "research"
+      ],
+      "sample_assets": [
+        "glyph tables"
+      ],
       "notes": "Flags scripts that require placeholder phoneme strategies and research disclaimers."
     },
     {
@@ -474,8 +739,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["speaker populations"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "speaker populations"
+      ],
       "notes": "Guides prioritisation for voice and phoneme expansion."
     },
     {
@@ -483,8 +753,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_dictionaries_by_number_of_words",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["lexicon", "language"],
-      "sample_assets": ["dictionary sizes"],
+      "classification": [
+        "lexicon",
+        "language"
+      ],
+      "sample_assets": [
+        "dictionary sizes"
+      ],
       "notes": "Identifies corpora suitable for training phoneme and prosody models."
     },
     {
@@ -492,8 +767,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_number_of_phonemes",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["phonology", "language"],
-      "sample_assets": ["phoneme counts"],
+      "classification": [
+        "phonology",
+        "language"
+      ],
+      "sample_assets": [
+        "phoneme counts"
+      ],
       "notes": "Directly informs EQ band planning and slider ranges for clarity vs. smoothness."
     },
     {
@@ -501,8 +781,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Africa",
       "usefulness": "high",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["regional overviews"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "regional overviews"
+      ],
       "notes": "Contextualises coverage targets for African voice bundles and sample rate needs for tonal languages."
     },
     {
@@ -510,8 +795,13 @@
       "url": "https://en.wikipedia.org/wiki/Indigenous_languages_of_the_Americas",
       "usefulness": "high",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["family breakdown"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "family breakdown"
+      ],
       "notes": "Frames documentation for North, Central, and South American indigenous languages."
     },
     {
@@ -519,8 +809,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_Native_American_languages_acquired_by_children",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "revitalisation"],
-      "sample_assets": ["transmission status"],
+      "classification": [
+        "language",
+        "revitalisation"
+      ],
+      "sample_assets": [
+        "transmission status"
+      ],
       "notes": "Identifies living acquisition contexts for tailoring phoneme instruction resources."
     },
     {
@@ -528,8 +823,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_North_America",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["regional overviews"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "regional overviews"
+      ],
       "notes": "Feeds NVDA packaging notes for North American locales."
     },
     {
@@ -537,8 +837,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_South_America",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["regional overviews"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "regional overviews"
+      ],
       "notes": "Highlights hotspots for phoneme diversity in Amazonian and Andean regions."
     },
     {
@@ -546,8 +851,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Asia",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["regional overviews"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "regional overviews"
+      ],
       "notes": "Frames coverage for South, Southeast, East, and Central Asian phoneme templates."
     },
     {
@@ -555,8 +865,13 @@
       "url": "https://en.wikipedia.org/wiki/East_Asian_languages",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["branch descriptions"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "branch descriptions"
+      ],
       "notes": "Focuses on Sino-Tibetan, Japonic, Koreanic, and neighboring families for tonal and pitch-accent modelling."
     },
     {
@@ -564,8 +879,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_South_Asia",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["regional overviews"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "regional overviews"
+      ],
       "notes": "Highlights Indo-Aryan and Dravidian interplay for phoneme contour planning."
     },
     {
@@ -573,8 +893,13 @@
       "url": "https://en.wikipedia.org/wiki/Classification_of_Southeast_Asian_languages",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["classification tables"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "classification tables"
+      ],
       "notes": "Summarises Mainland vs Maritime Southeast Asian typologies for voice presets."
     },
     {
@@ -582,8 +907,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Europe",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["regional overviews"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "regional overviews"
+      ],
       "notes": "Coordinates coverage of Indo-European, Uralic, and minority languages for European NVDA builds."
     },
     {
@@ -591,8 +921,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Russia",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["regional overviews"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "regional overviews"
+      ],
       "notes": "Critical for covering Russia's diverse linguistic landscape and script usage."
     },
     {
@@ -600,8 +935,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_of_Oceania",
       "usefulness": "medium",
       "progress": "requires taxonomy summary",
-      "classification": ["region", "language"],
-      "sample_assets": ["regional overviews"],
+      "classification": [
+        "region",
+        "language"
+      ],
+      "sample_assets": [
+        "regional overviews"
+      ],
       "notes": "Combines Austronesian and Papuan coverage needs for Pacific voice bundles."
     },
     {
@@ -609,8 +949,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_languages_by_time_of_extinction",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["historical", "language"],
-      "sample_assets": ["extinction chronology"],
+      "classification": [
+        "historical",
+        "language"
+      ],
+      "sample_assets": [
+        "extinction chronology"
+      ],
       "notes": "Useful for planning archival voice packs and resurrected phoneme datasets."
     },
     {
@@ -618,8 +963,13 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_endangered_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "revitalisation"],
-      "sample_assets": ["endangerment status"],
+      "classification": [
+        "language",
+        "revitalisation"
+      ],
+      "sample_assets": [
+        "endangerment status"
+      ],
       "notes": "Prioritises languages that need urgent preservation in Eloquence."
     },
     {
@@ -627,8 +977,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_revived_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "revitalisation"],
-      "sample_assets": ["revival case studies"],
+      "classification": [
+        "language",
+        "revitalisation"
+      ],
+      "sample_assets": [
+        "revival case studies"
+      ],
       "notes": "Shows where community documentation already exists to seed phoneme templates."
     },
     {
@@ -636,8 +991,13 @@
       "url": "https://en.wikipedia.org/wiki/Regional_language",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["language", "policy"],
-      "sample_assets": ["legal definitions"],
+      "classification": [
+        "language",
+        "policy"
+      ],
+      "sample_assets": [
+        "legal definitions"
+      ],
       "notes": "Helps align NVDA packaging with legal definitions of regional languages."
     },
     {
@@ -645,8 +1005,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_lingua_francas",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "sociolinguistics"],
-      "sample_assets": ["lingua franca cases"],
+      "classification": [
+        "language",
+        "sociolinguistics"
+      ],
+      "sample_assets": [
+        "lingua franca cases"
+      ],
       "notes": "Identifies languages needing robust accent coverage for cross-community communication."
     },
     {
@@ -654,8 +1019,13 @@
       "url": "https://en.wikipedia.org/wiki/International_English",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["language", "accent"],
-      "sample_assets": ["accent guidelines"],
+      "classification": [
+        "language",
+        "accent"
+      ],
+      "sample_assets": [
+        "accent guidelines"
+      ],
       "notes": "Supports NVDA's global English presets spanning neutral accent strategies."
     },
     {
@@ -663,8 +1033,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_official_languages",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["official status"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "official status"
+      ],
       "notes": "Companion dataset to country/territory lists for packaging planning."
     },
     {
@@ -672,8 +1047,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_official_languages_of_international_organizations",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["organisation-level language policies"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "organisation-level language policies"
+      ],
       "notes": "Helps prioritise languages critical for NGO and intergovernmental accessibility."
     },
     {
@@ -681,8 +1061,13 @@
       "url": "https://en.wikipedia.org/wiki/Languages_used_on_the_Internet",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "metadata"],
-      "sample_assets": ["usage statistics"],
+      "classification": [
+        "language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "usage statistics"
+      ],
       "notes": "Supports planning for online text-to-speech coverage and phoneme bias corrections."
     },
     {
@@ -690,8 +1075,14 @@
       "url": "https://en.wikipedia.org/wiki/Mutual_intelligibility#List_of_mutually_intelligible_languages",
       "usefulness": "high",
       "progress": "requires summary integration",
-      "classification": ["language", "dialect", "accent"],
-      "sample_assets": ["mutual intelligibility pairs"],
+      "classification": [
+        "language",
+        "dialect",
+        "accent"
+      ],
+      "sample_assets": [
+        "mutual intelligibility pairs"
+      ],
       "notes": "Guides accent slider defaults and cross-dialect bundling for Eloquence."
     },
     {
@@ -699,8 +1090,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_creole_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "creole"],
-      "sample_assets": ["creole inventories"],
+      "classification": [
+        "language",
+        "creole"
+      ],
+      "sample_assets": [
+        "creole inventories"
+      ],
       "notes": "Documents lexifier/substrate relationships vital for phoneme blending parameters."
     },
     {
@@ -708,8 +1104,13 @@
       "url": "https://en.wikipedia.org/wiki/Mixed_language#Examples",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["language", "mixed"],
-      "sample_assets": ["language pairs"],
+      "classification": [
+        "language",
+        "mixed"
+      ],
+      "sample_assets": [
+        "language pairs"
+      ],
       "notes": "Supports modelling of blended phoneme sets and accent transitions."
     },
     {
@@ -717,8 +1118,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_pidgins,_creoles,_mixed_languages_and_cants_based_on_Indo-European_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "mixed"],
-      "sample_assets": ["language catalogues"],
+      "classification": [
+        "language",
+        "mixed"
+      ],
+      "sample_assets": [
+        "language catalogues"
+      ],
       "notes": "Gives actionable lists for English/French/Spanish-based derivatives relevant to NVDA."
     },
     {
@@ -726,8 +1132,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_English-based_pidgins",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language", "mixed"],
-      "sample_assets": ["pidgin descriptions"],
+      "classification": [
+        "language",
+        "mixed"
+      ],
+      "sample_assets": [
+        "pidgin descriptions"
+      ],
       "notes": "Focuses English derivative coverage for accent slider presets."
     },
     {
@@ -735,8 +1146,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_sign_languages",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["sign-language"],
-      "sample_assets": ["sign language names", "regions"],
+      "classification": [
+        "sign-language"
+      ],
+      "sample_assets": [
+        "sign language names",
+        "regions"
+      ],
       "notes": "Supports planning for signed language phoneme proxies and iconography integration."
     },
     {
@@ -744,8 +1160,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_sign_languages_by_number_of_native_signers",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["sign-language", "metadata"],
-      "sample_assets": ["population data"],
+      "classification": [
+        "sign-language",
+        "metadata"
+      ],
+      "sample_assets": [
+        "population data"
+      ],
       "notes": "Prioritises sign languages by community size for gesture-to-phoneme mapping."
     },
     {
@@ -753,8 +1174,12 @@
       "url": "https://en.wikipedia.org/wiki/Category:Dialects_by_language",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["dialect"],
-      "sample_assets": ["category listings"],
+      "classification": [
+        "dialect"
+      ],
+      "sample_assets": [
+        "category listings"
+      ],
       "notes": "Helps automate discovery of per-language dialect pages for accent slider presets."
     },
     {
@@ -762,8 +1187,12 @@
       "url": "https://en.wikipedia.org/wiki/List_of_writing_systems",
       "usefulness": "high",
       "progress": "pending structured ingestion",
-      "classification": ["orthography"],
-      "sample_assets": ["script inventories"],
+      "classification": [
+        "orthography"
+      ],
+      "sample_assets": [
+        "script inventories"
+      ],
       "notes": "Enables crosswalk between scripts and NVDA phoneme templates."
     },
     {
@@ -771,8 +1200,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_shorthand_systems",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["orthography", "technical"],
-      "sample_assets": ["system descriptions"],
+      "classification": [
+        "orthography",
+        "technical"
+      ],
+      "sample_assets": [
+        "system descriptions"
+      ],
       "notes": "Relevant for high-speed phoneme articulation and stenography-friendly presets."
     },
     {
@@ -780,8 +1214,13 @@
       "url": "https://en.wikipedia.org/wiki/Category:Lists_of_computer_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["technical", "language"],
-      "sample_assets": ["category members"],
+      "classification": [
+        "technical",
+        "language"
+      ],
+      "sample_assets": [
+        "category members"
+      ],
       "notes": "Broader index for programming and markup language pronunciation packs."
     },
     {
@@ -789,8 +1228,13 @@
       "url": "https://en.wikipedia.org/wiki/Lists_of_programming_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["technical", "language"],
-      "sample_assets": ["sub-list index"],
+      "classification": [
+        "technical",
+        "language"
+      ],
+      "sample_assets": [
+        "sub-list index"
+      ],
       "notes": "Ensures coverage for domain-specific languages and education-focused pronunciations."
     },
     {
@@ -798,8 +1242,13 @@
       "url": "https://en.wikipedia.org/wiki/Ontology_language#Classification_of_ontology_languages",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["technical", "language"],
-      "sample_assets": ["ontology language families"],
+      "classification": [
+        "technical",
+        "language"
+      ],
+      "sample_assets": [
+        "ontology language families"
+      ],
       "notes": "Supports knowledge graph integration and speech output for ontology editors."
     },
     {
@@ -807,8 +1256,13 @@
       "url": "https://en.wikipedia.org/wiki/Modeling_language#Type_of_modeling_languages",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["technical", "language"],
-      "sample_assets": ["modeling language types"],
+      "classification": [
+        "technical",
+        "language"
+      ],
+      "sample_assets": [
+        "modeling language types"
+      ],
       "notes": "Aligns phoneme articulation for UML, SysML, and related modelling vocabularies."
     },
     {
@@ -816,8 +1270,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_markup_languages",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["technical", "language"],
-      "sample_assets": ["markup catalog"],
+      "classification": [
+        "technical",
+        "language"
+      ],
+      "sample_assets": [
+        "markup catalog"
+      ],
       "notes": "Captures HTML/XML variants for developer voice presets."
     },
     {
@@ -825,8 +1284,14 @@
       "url": "https://en.wikipedia.org/wiki/Inuktitut_language",
       "usefulness": "high",
       "progress": "researching syllabics integration",
-      "classification": ["language"],
-      "sample_assets": ["syllabics inventory", "mora timing", "orthography notes"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "syllabics inventory",
+        "mora timing",
+        "orthography notes"
+      ],
       "notes": "Feeds ISO iu roadmap work with syllabics charts, mora timing research, and punctuation guidance for right-to-left syllable clusters."
     },
     {
@@ -834,8 +1299,14 @@
       "url": "https://en.wikipedia.org/wiki/Cherokee_language",
       "usefulness": "high",
       "progress": "researching syllabary phoneme mapping",
-      "classification": ["language"],
-      "sample_assets": ["phonology overview", "tone references", "orthography alignment"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "phonology overview",
+        "tone references",
+        "orthography alignment"
+      ],
       "notes": "Supports ISO chr pronunciation templates and DECtalk lexicon comparisons prior to NVDA braille export updates."
     },
     {
@@ -843,8 +1314,13 @@
       "url": "https://en.wikipedia.org/wiki/Cherokee_syllabary",
       "usefulness": "high",
       "progress": "researching glyph metadata",
-      "classification": ["orthography"],
-      "sample_assets": ["syllabic code chart", "Unicode mappings"],
+      "classification": [
+        "orthography"
+      ],
+      "sample_assets": [
+        "syllabic code chart",
+        "Unicode mappings"
+      ],
       "notes": "Documents syllable blocks for CodeQL validation and NVDA braille table integration when packaging Cherokee presets."
     },
     {
@@ -852,8 +1328,14 @@
       "url": "https://en.wikipedia.org/wiki/Greenlandic_language",
       "usefulness": "medium",
       "progress": "researching polysynthetic morphology",
-      "classification": ["language"],
-      "sample_assets": ["affix catalog", "phonotactics", "example paradigms"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "affix catalog",
+        "phonotactics",
+        "example paradigms"
+      ],
       "notes": "Guides ISO kl (Kalaallisut) tone curves, affix stacking, and NVDA punctuation defaults sourced from NV Access manuals."
     },
     {
@@ -861,8 +1343,14 @@
       "url": "https://en.wikipedia.org/wiki/Dena%27ina_language",
       "usefulness": "medium",
       "progress": "researching tone plateau cues",
-      "classification": ["language"],
-      "sample_assets": ["Athabaskan consonant clusters", "tone ladder", "lexical datasets"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "Athabaskan consonant clusters",
+        "tone ladder",
+        "lexical datasets"
+      ],
       "notes": "Aligns ISO tfn Athabaskan presets with DataJake lexical archives and NV Speech Player nasal balance sliders."
     },
     {
@@ -870,8 +1358,13 @@
       "url": "https://en.wikipedia.org/wiki/Gwich%27in_language",
       "usefulness": "medium",
       "progress": "researching apostrophe tone markers",
-      "classification": ["language"],
-      "sample_assets": ["tone descriptions", "orthography notes"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "tone descriptions",
+        "orthography notes"
+      ],
       "notes": "Supports ISO gwi slider planning with tone marker metadata for NVDA braille and phoneme EQ exports."
     },
     {
@@ -879,8 +1372,13 @@
       "url": "https://en.wikipedia.org/wiki/Uyghur_language",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["language"],
-      "sample_assets": ["Arabic script vowels", "Latin transliteration"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "Arabic script vowels",
+        "Latin transliteration"
+      ],
       "notes": "Highlights Arabic-script vowels and Latin transliteration tables for ISO ug dual-script packaging."
     },
     {
@@ -888,8 +1386,13 @@
       "url": "https://en.wikipedia.org/wiki/Uzbek_language",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language"],
-      "sample_assets": ["Cyrillic/Latin policy", "vowel harmony notes"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "Cyrillic/Latin policy",
+        "vowel harmony notes"
+      ],
       "notes": "Documents dual-script policy and vowel harmony cues that feed ISO uz roadmap updates."
     },
     {
@@ -897,8 +1400,14 @@
       "url": "https://en.wikipedia.org/wiki/Pashto_language",
       "usefulness": "medium",
       "progress": "requires phoneme summary",
-      "classification": ["language"],
-      "sample_assets": ["retroflex inventories", "aspirated consonants", "fricative sets"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "retroflex inventories",
+        "aspirated consonants",
+        "fricative sets"
+      ],
       "notes": "Captures retroflex, aspirated, and fricative inventories for ISO ps pronunciation presets."
     },
     {
@@ -906,8 +1415,13 @@
       "url": "https://en.wikipedia.org/wiki/Sindhi_language",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language"],
-      "sample_assets": ["implosive consonants", "braille mappings"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "implosive consonants",
+        "braille mappings"
+      ],
       "notes": "Provides implosive consonant coverage and braille mappings to support ISO sd roadmap work."
     },
     {
@@ -915,8 +1429,13 @@
       "url": "https://en.wikipedia.org/wiki/Somali_language",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language"],
-      "sample_assets": ["ATR harmony", "tone plateau examples"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "ATR harmony",
+        "tone plateau examples"
+      ],
       "notes": "Supplies ATR vowel harmony references and tone plateau examples for ISO so voice planning."
     },
     {
@@ -924,8 +1443,13 @@
       "url": "https://en.wikipedia.org/wiki/Fula_language",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language"],
-      "sample_assets": ["Pulaar/Fulfulde tone splits", "prenasalised stops"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "Pulaar/Fulfulde tone splits",
+        "prenasalised stops"
+      ],
       "notes": "Records Pulaar/Fulfulde dialect tone splits and prenasalised stop cues to guide ISO ff slider presets."
     },
     {
@@ -933,8 +1457,14 @@
       "url": "https://en.wikipedia.org/wiki/Sinhala_language",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language"],
-      "sample_assets": ["murmur consonants", "retroflex contrasts", "consonant length"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "murmur consonants",
+        "retroflex contrasts",
+        "consonant length"
+      ],
       "notes": "Details murmur, retroflex, and consonant length contrasts for ISO si phoneme datasets."
     },
     {
@@ -942,8 +1472,14 @@
       "url": "https://en.wikipedia.org/wiki/Nepali_language",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language"],
-      "sample_assets": ["schwa deletion rules", "retroflex series", "tone neutralisation"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "schwa deletion rules",
+        "retroflex series",
+        "tone neutralisation"
+      ],
       "notes": "Documents schwa deletion, retroflex series, and tone neutralisation heuristics for ISO ne roadmap entries."
     },
     {
@@ -951,8 +1487,13 @@
       "url": "https://en.wikipedia.org/wiki/Kashmiri_language",
       "usefulness": "medium",
       "progress": "pending structured ingestion",
-      "classification": ["language"],
-      "sample_assets": ["Perso-Arabic orthography", "Sharada orthography"],
+      "classification": [
+        "language"
+      ],
+      "sample_assets": [
+        "Perso-Arabic orthography",
+        "Sharada orthography"
+      ],
       "notes": "Tracks Perso-Arabic and Sharada orthography details to align ISO ks dual-script packaging."
     },
     {
@@ -960,9 +1501,137 @@
       "url": "https://en.wikipedia.org/wiki/Omniglot",
       "usefulness": "medium",
       "progress": "requires summary integration",
-      "classification": ["language", "orthography", "audio"],
-      "sample_assets": ["script samples", "audio clips"],
+      "classification": [
+        "language",
+        "orthography",
+        "audio"
+      ],
+      "sample_assets": [
+        "script samples",
+        "audio clips"
+      ],
       "notes": "Secondary repository for script charts and pronunciation audio that can seed Eloquence phoneme datasets."
+    },
+    {
+      "title": "Tigrinya language",
+      "url": "https://en.wikipedia.org/wiki/Tigrinya_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Ge’ez syllable tables",
+        "gemination notes",
+        "punctuation guides"
+      ],
+      "notes": "Captures Ethiopic syllable structure for NVDA braille exports and informs DataJake lexicon extraction plus GitHub transliteration tooling."
+    },
+    {
+      "title": "Afar language",
+      "url": "https://en.wikipedia.org/wiki/Afar_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "vowel harmony tables",
+        "ejective consonant inventory"
+      ],
+      "notes": "Supports dual Ethiopic/Latin script planning when aligning DataJake `.dic` payloads with NVDA braille punctuation."
+    },
+    {
+      "title": "Somali phonology",
+      "url": "https://en.wikipedia.org/wiki/Somali_phonology",
+      "usefulness": "high",
+      "progress": "indexed via catalog_wikipedia_languages.py",
+      "classification": [
+        "phonology",
+        "tone"
+      ],
+      "sample_assets": [
+        "ATR harmony rules",
+        "tonal contour diagrams"
+      ],
+      "notes": "Feeds NV Speech Player Tone/Vocal range presets and validates DataJake hymn corpora before packaging."
+    },
+    {
+      "title": "Malagasy language",
+      "url": "https://en.wikipedia.org/wiki/Malagasy_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "morphology"
+      ],
+      "sample_assets": [
+        "penultimate stress patterns",
+        "reduplication rules"
+      ],
+      "notes": "Guides GitHub morphology scripts and NVDA hyphenation tables for Malagasy voice templates."
+    },
+    {
+      "title": "Kirundi language",
+      "url": "https://en.wikipedia.org/wiki/Kirundi_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "noun-class tone ladders",
+        "prenasalisation notes"
+      ],
+      "notes": "Aligns DataJake `.lex` payloads with NV Speech Player Inflection contour defaults and Bantu EQ presets."
+    },
+    {
+      "title": "Sango language",
+      "url": "https://en.wikipedia.org/wiki/Sango_language",
+      "usefulness": "medium",
+      "progress": "requires summary integration",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "toneless vs tonal variety notes",
+        "orthographic conventions"
+      ],
+      "notes": "Informs macro volume and Tone presets while confirming NVDA punctuation for French-derived digraphs."
+    },
+    {
+      "title": "Tswana language",
+      "url": "https://en.wikipedia.org/wiki/Tswana_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "alveolar click inventory",
+        "vowel length data"
+      ],
+      "notes": "Supports DataJake archive mapping and NVDA braille validation for Setswana coverage."
+    },
+    {
+      "title": "Tsonga language",
+      "url": "https://en.wikipedia.org/wiki/Tsonga_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "prenasalised stop catalogues",
+        "tone sandhi descriptions"
+      ],
+      "notes": "Aligns DataJake recordings with NV Speech Player EQ calibration for Tsonga voices."
     }
   ]
 }

@@ -171,6 +171,22 @@ regional presets (hard/soft consonants, tonal contours, vowel harmony).
 | High | [List of sign languages](https://en.wikipedia.org/wiki/List_of_sign_languages) | Planning dataset for sign-language phoneme proxies and NVDA iconography. |
 | Medium | [List of sign languages by number of native signers](https://en.wikipedia.org/wiki/List_of_sign_languages_by_number_of_native_signers) | Prioritisation by community size. |
 
+## Horn of Africa and Indian Ocean research sprint (October 2025)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Tigrinya language](https://en.wikipedia.org/wiki/Tigrinya_language) | language / orthography | Pending structured ingestion | Captures Ge’ez syllable tables, gemination notes, and punctuation cues we mirror in NVDA braille exports and DataJake lexicon extractions. |
+| Medium | [Afar language](https://en.wikipedia.org/wiki/Afar_language) | language / phonology | Pending structured ingestion | Documents vowel harmony and ejective consonants; paired with DataJake `.dic` payloads for Ethiopic/Latin dual-script planning. |
+| High | [Somali phonology](https://en.wikipedia.org/wiki/Somali_phonology) | phonology / tone | Indexed via tool | Supplies ATR harmony data that maps directly to NV Speech Player **Tone** and **Vocal range** presets while validating DataJake hymn corpora. |
+| Medium | [Malagasy language](https://en.wikipedia.org/wiki/Malagasy_language) | language / morphology | Pending structured ingestion | Highlights penultimate stress and reduplication rules; guides segmentation for GitHub morphology scripts and NVDA hyphenation tables. |
+| Medium | [Kirundi language](https://en.wikipedia.org/wiki/Kirundi_language) | language / tone | Pending structured ingestion | Tracks noun-class tones and prenasalisation cues; aligns DataJake `.lex` payloads with NV Speech Player **Inflection contour** defaults. |
+| Medium | [Sango language](https://en.wikipedia.org/wiki/Sango_language) | language / tone | Requires summary integration | Chronicles toneless vs tonal varieties; informs macro volume presets and NVDA punctuation exports for French-derived digraphs. |
+| Medium | [Tswana language](https://en.wikipedia.org/wiki/Tswana_language) | language / phonology | Pending structured ingestion | Provides alveolar click inventories and vowel length metadata, supporting DataJake archive mapping and NVDA braille validation. |
+| Medium | [Tsonga language](https://en.wikipedia.org/wiki/Tsonga_language) | language / tone | Pending structured ingestion | Documents prenasalised stops and tone sandhi for aligning DataJake recordings with NV Speech Player EQ calibration. |
+
+This sprint pulls each bibliography into `docs/language_research_index.json` so CodeQL automation can confirm every new ISO entry cites its provenance alongside the cached DataJake, GitHub, and NVDA artefacts referenced in the README and ISO roadmap.
+
+
 ## Technical, programming, and modelling languages
 
 These resources ensure Eloquence can speak developer-centric content with the
