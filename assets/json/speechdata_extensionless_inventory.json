@@ -1,0 +1,4023 @@
+{
+  "generated_at": "2025-09-30T21:23:27+00:00",
+  "speechdata_root": "/workspace/eloquence_threshold/speechdata",
+  "total_extensionless_files": 498,
+  "summary_by_top_level": {
+    "festival": {
+      "files": 9,
+      "bytes": 34933
+    },
+    "mbrulainespeak": {
+      "files": 197,
+      "bytes": 228753576
+    },
+    "speechplayerinespeak": {
+      "files": 292,
+      "bytes": 5614184
+    }
+  },
+  "summary_by_classification": {
+    "binary/unknown": {
+      "files": 225,
+      "bytes": 234279541
+    },
+    "text/unknown": {
+      "files": 7,
+      "bytes": 13366
+    },
+    "text/utf-8": {
+      "files": 265,
+      "bytes": 109530
+    },
+    "text/utf-8-bom": {
+      "files": 1,
+      "bytes": 256
+    }
+  },
+  "entries": [
+    {
+      "relative_path": "festival/festival/lib/dicts/cmu/COPYING",
+      "size_bytes": 2258,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "festival/festival/lib/dicts/cmu/cmu2ft",
+      "size_bytes": 536,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "festival/festival/lib/etc/email_filter",
+      "size_bytes": 3169,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "festival/festival/lib/voices/czech/czech_ph/COPYING",
+      "size_bytes": 17992,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "festival/festival/lib/voices/czech/czech_ph/INSTALL",
+      "size_bytes": 1381,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "festival/festival/lib/voices/czech/czech_ph/Makefile",
+      "size_bytes": 2664,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "festival/festival/lib/voices/czech/czech_ph/README",
+      "size_bytes": 1799,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "festival/festival/lib/voices/english/kal_diphone/COPYING",
+      "size_bytes": 2630,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "festival/festival/lib/voices/english/ked_diphone/COPYING",
+      "size_bytes": 2504,
+      "top_level": "festival",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/af_dict",
+      "size_bytes": 82372,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/am_dict",
+      "size_bytes": 3334,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/an_dict",
+      "size_bytes": 6696,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/as_dict",
+      "size_bytes": 5024,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/az_dict",
+      "size_bytes": 2135,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/bg_dict",
+      "size_bytes": 27006,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/bn_dict",
+      "size_bytes": 9774,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ca_dict",
+      "size_bytes": 4153,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/cs_dict",
+      "size_bytes": 7565,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/cy_dict",
+      "size_bytes": 3467,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/da_dict",
+      "size_bytes": 208497,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/de_dict",
+      "size_bytes": 21821,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/el_dict",
+      "size_bytes": 8435,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/en_dict",
+      "size_bytes": 126921,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/eo_dict",
+      "size_bytes": 4677,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/es_dict",
+      "size_bytes": 6290,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/et_dict",
+      "size_bytes": 6767,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/eu_dict",
+      "size_bytes": 4193,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/fa_dict",
+      "size_bytes": 233021,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/fi_dict",
+      "size_bytes": 5120,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/fr_dict",
+      "size_bytes": 21422,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ga_dict",
+      "size_bytes": 8917,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/gd_dict",
+      "size_bytes": 3794,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/grc_dict",
+      "size_bytes": 3429,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/gu_dict",
+      "size_bytes": 5324,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/hbs_dict",
+      "size_bytes": 7721,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/hi_dict",
+      "size_bytes": 9006,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/hu_dict",
+      "size_bytes": 113340,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/hy_dict",
+      "size_bytes": 3400,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ia_dict",
+      "size_bytes": 2081,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/id_dict",
+      "size_bytes": 3082,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/intonations",
+      "size_bytes": 1224,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/is_dict",
+      "size_bytes": 5400,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/it_dict",
+      "size_bytes": 86280,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/jbo_dict",
+      "size_bytes": 2057,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ka_dict",
+      "size_bytes": 3138,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/kl_dict",
+      "size_bytes": 2645,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/kn_dict",
+      "size_bytes": 5515,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ko_dict",
+      "size_bytes": 6462,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ku_dict",
+      "size_bytes": 2268,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/la_dict",
+      "size_bytes": 3817,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/lfn_dict",
+      "size_bytes": 2870,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/lt_dict",
+      "size_bytes": 5171,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/lv_dict",
+      "size_bytes": 12293,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/af1",
+      "size_bytes": 8057988,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/br1",
+      "size_bytes": 5457022,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/br4",
+      "size_bytes": 5117251,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/cr1",
+      "size_bytes": 3515376,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/cz2",
+      "size_bytes": 9812385,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/de2",
+      "size_bytes": 10447243,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/de4",
+      "size_bytes": 22267458,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/ee1",
+      "size_bytes": 12129415,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/en1",
+      "size_bytes": 6716280,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/es1",
+      "size_bytes": 2831137,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/fr1",
+      "size_bytes": 5080000,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/hu1",
+      "size_bytes": 8925695,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/ic1",
+      "size_bytes": 12037945,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/id1",
+      "size_bytes": 5544972,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/ir1",
+      "size_bytes": 5948960,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/it3",
+      "size_bytes": 6779935,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/it4",
+      "size_bytes": 6157513,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/la1",
+      "size_bytes": 8627910,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/mx1",
+      "size_bytes": 2294129,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/mx2",
+      "size_bytes": 4240683,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/nl2",
+      "size_bytes": 15192776,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/pl1",
+      "size_bytes": 4745551,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/ro1",
+      "size_bytes": 3822298,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/sw1",
+      "size_bytes": 11545528,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/sw2",
+      "size_bytes": 6574729,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/tr1",
+      "size_bytes": 4694632,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/us1",
+      "size_bytes": 7238094,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/us2",
+      "size_bytes": 7080251,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/us3",
+      "size_bytes": 7410252,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola/vz1",
+      "size_bytes": 2893218,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/af1_phtrans",
+      "size_bytes": 1636,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/ca1_phtrans",
+      "size_bytes": 1372,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/cr1_phtrans",
+      "size_bytes": 2164,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/cs_phtrans",
+      "size_bytes": 580,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/de2_phtrans",
+      "size_bytes": 1540,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/de4_phtrans",
+      "size_bytes": 1660,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/de6_phtrans",
+      "size_bytes": 1276,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/ee1_phtrans",
+      "size_bytes": 1444,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/en1_phtrans",
+      "size_bytes": 796,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/es_phtrans",
+      "size_bytes": 1708,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/fr1_phtrans",
+      "size_bytes": 1972,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/gr2_phtrans",
+      "size_bytes": 2212,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/grc-de6_phtrans",
+      "size_bytes": 484,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/hn1_phtrans",
+      "size_bytes": 532,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/hu1_phtrans",
+      "size_bytes": 1444,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/ic1_phtrans",
+      "size_bytes": 1132,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/id1_phtrans",
+      "size_bytes": 892,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/in1_phtrans",
+      "size_bytes": 1444,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/ir1_phtrans",
+      "size_bytes": 5812,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/it3_phtrans",
+      "size_bytes": 892,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/la1_phtrans",
+      "size_bytes": 748,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/lt1_phtrans",
+      "size_bytes": 1060,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/lt2_phtrans",
+      "size_bytes": 1060,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/mx1_phtrans",
+      "size_bytes": 1804,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/mx2_phtrans",
+      "size_bytes": 1828,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/nl_phtrans",
+      "size_bytes": 1684,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/pl1_phtrans",
+      "size_bytes": 1564,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/pt1_phtrans",
+      "size_bytes": 2092,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/pt_phtrans",
+      "size_bytes": 2092,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/ptbr4_phtrans",
+      "size_bytes": 2356,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/ptbr_phtrans",
+      "size_bytes": 2500,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/ro1_phtrans",
+      "size_bytes": 2164,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/sv2_phtrans",
+      "size_bytes": 1588,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/sv_phtrans",
+      "size_bytes": 1588,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/tr1_phtrans",
+      "size_bytes": 364,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/us3_phtrans",
+      "size_bytes": 1108,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/us_phtrans",
+      "size_bytes": 1156,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mbrola_ph/vz_phtrans",
+      "size_bytes": 2284,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/mk_dict",
+      "size_bytes": 4945,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ml_dict",
+      "size_bytes": 4159,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ms_dict",
+      "size_bytes": 12248,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/nci_dict",
+      "size_bytes": 1534,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ne_dict",
+      "size_bytes": 10817,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/nl_dict",
+      "size_bytes": 27197,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/no_dict",
+      "size_bytes": 4178,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/or_dict",
+      "size_bytes": 4765,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/pa_dict",
+      "size_bytes": 6346,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/pap_dict",
+      "size_bytes": 2128,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/phondata",
+      "size_bytes": 450420,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/phondata-manifest",
+      "size_bytes": 18636,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/phonindex",
+      "size_bytes": 26166,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/phontab",
+      "size_bytes": 41636,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/pl_dict",
+      "size_bytes": 34924,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/pt_dict",
+      "size_bytes": 26527,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ro_dict",
+      "size_bytes": 25205,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ru_dict",
+      "size_bytes": 1958608,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/si_dict",
+      "size_bytes": 4143,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/sk_dict",
+      "size_bytes": 9161,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/sl_dict",
+      "size_bytes": 3965,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/sq_dict",
+      "size_bytes": 3199,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/sv_dict",
+      "size_bytes": 9676,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/sw_dict",
+      "size_bytes": 3029,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ta_dict",
+      "size_bytes": 117470,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/te_dict",
+      "size_bytes": 3556,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/tr_dict",
+      "size_bytes": 6052,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/ur_dict",
+      "size_bytes": 25149,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/vi_dict",
+      "size_bytes": 7438,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-af1",
+      "size_bytes": 88,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-af1-en",
+      "size_bytes": 83,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-br1",
+      "size_bytes": 115,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-br3",
+      "size_bytes": 115,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-br4",
+      "size_bytes": 119,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-cr1",
+      "size_bytes": 126,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-cz2",
+      "size_bytes": 82,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de2",
+      "size_bytes": 83,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de3",
+      "size_bytes": 99,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de4",
+      "size_bytes": 85,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de4-en",
+      "size_bytes": 79,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de5",
+      "size_bytes": 192,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de5-en",
+      "size_bytes": 90,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de6",
+      "size_bytes": 78,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de6-grc",
+      "size_bytes": 83,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-de7",
+      "size_bytes": 106,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-ee1",
+      "size_bytes": 95,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-en1",
+      "size_bytes": 113,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-es1",
+      "size_bytes": 97,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-es2",
+      "size_bytes": 91,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-fr1",
+      "size_bytes": 150,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-fr1-en",
+      "size_bytes": 103,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-fr4",
+      "size_bytes": 111,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-fr4-en",
+      "size_bytes": 106,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-gr2",
+      "size_bytes": 94,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-gr2-en",
+      "size_bytes": 88,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-hu1",
+      "size_bytes": 102,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-hu1-en",
+      "size_bytes": 97,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-ic1",
+      "size_bytes": 86,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-id1",
+      "size_bytes": 101,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-ir1",
+      "size_bytes": 753,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-ir2",
+      "size_bytes": 768,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-it3",
+      "size_bytes": 142,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-it4",
+      "size_bytes": 145,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-la1",
+      "size_bytes": 83,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-mx1",
+      "size_bytes": 120,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-mx2",
+      "size_bytes": 120,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-nl2",
+      "size_bytes": 96,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-nl2-en",
+      "size_bytes": 91,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-pl1",
+      "size_bytes": 99,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-pl1-en",
+      "size_bytes": 82,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-pt1",
+      "size_bytes": 114,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-ro1",
+      "size_bytes": 87,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-ro1-en",
+      "size_bytes": 81,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-sw1",
+      "size_bytes": 98,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-sw1-en",
+      "size_bytes": 93,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-sw2",
+      "size_bytes": 102,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-sw2-en",
+      "size_bytes": 99,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-tr1",
+      "size_bytes": 85,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-tr2",
+      "size_bytes": 114,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-us1",
+      "size_bytes": 170,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-us2",
+      "size_bytes": 178,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-us3",
+      "size_bytes": 180,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/voices/mb/mb-vz1",
+      "size_bytes": 144,
+      "top_level": "mbrulainespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/zh_dict",
+      "size_bytes": 1066907,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "mbrulainespeak/espeak-data/zhy_dict",
+      "size_bytes": 481709,
+      "top_level": "mbrulainespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/af_dict",
+      "size_bytes": 82495,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/am_dict",
+      "size_bytes": 3334,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/an_dict",
+      "size_bytes": 6696,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/as_dict",
+      "size_bytes": 5024,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/az_dict",
+      "size_bytes": 2135,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/bg_dict",
+      "size_bytes": 27006,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/bn_dict",
+      "size_bytes": 9774,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ca_dict",
+      "size_bytes": 4153,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/cs_dict",
+      "size_bytes": 7565,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/cy_dict",
+      "size_bytes": 3467,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/da_dict",
+      "size_bytes": 208497,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/de_dict",
+      "size_bytes": 21821,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/el_dict",
+      "size_bytes": 10144,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/en_dict",
+      "size_bytes": 129636,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/eo_dict",
+      "size_bytes": 4677,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/es_dict",
+      "size_bytes": 6673,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/et_dict",
+      "size_bytes": 6767,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/eu_dict",
+      "size_bytes": 4628,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/fa_dict",
+      "size_bytes": 237908,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/fi_dict",
+      "size_bytes": 5120,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/fr_dict",
+      "size_bytes": 21552,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ga_dict",
+      "size_bytes": 8917,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/gd_dict",
+      "size_bytes": 3794,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/gn_dict",
+      "size_bytes": 3157,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/grc_dict",
+      "size_bytes": 3429,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/gu_dict",
+      "size_bytes": 5324,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/hbs_dict",
+      "size_bytes": 7788,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/hi_dict",
+      "size_bytes": 9094,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/hu_dict",
+      "size_bytes": 113312,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/hy_dict",
+      "size_bytes": 3400,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ia_dict",
+      "size_bytes": 2081,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/id_dict",
+      "size_bytes": 3091,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/intonations",
+      "size_bytes": 1768,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/is_dict",
+      "size_bytes": 5400,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/it_dict",
+      "size_bytes": 104966,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/jbo_dict",
+      "size_bytes": 2057,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ka_dict",
+      "size_bytes": 3138,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/kl_dict",
+      "size_bytes": 2645,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/kn_dict",
+      "size_bytes": 5519,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ko_dict",
+      "size_bytes": 6462,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ku_dict",
+      "size_bytes": 2268,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ky_dict",
+      "size_bytes": 2098,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/la_dict",
+      "size_bytes": 3817,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/lfn_dict",
+      "size_bytes": 2870,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/lt_dict",
+      "size_bytes": 5171,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/lv_dict",
+      "size_bytes": 17396,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/mk_dict",
+      "size_bytes": 4945,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ml_dict",
+      "size_bytes": 4159,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/mr_dict",
+      "size_bytes": 5681,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ms_dict",
+      "size_bytes": 12248,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/mt_dict",
+      "size_bytes": 4384,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/my_dict",
+      "size_bytes": 1300,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/nci_dict",
+      "size_bytes": 1534,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ne_dict",
+      "size_bytes": 10817,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/nl_dict",
+      "size_bytes": 27201,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/no_dict",
+      "size_bytes": 4178,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/om_dict",
+      "size_bytes": 2302,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/or_dict",
+      "size_bytes": 4765,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/pa_dict",
+      "size_bytes": 6346,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/pap_dict",
+      "size_bytes": 2128,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/phondata",
+      "size_bytes": 453916,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/phondata-manifest",
+      "size_bytes": 19020,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/phonindex",
+      "size_bytes": 28688,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/phontab",
+      "size_bytes": 44196,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/pl_dict",
+      "size_bytes": 34269,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/pt_dict",
+      "size_bytes": 26527,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ro_dict",
+      "size_bytes": 25205,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ru_dict",
+      "size_bytes": 1958608,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/si_dict",
+      "size_bytes": 4143,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/sk_dict",
+      "size_bytes": 9161,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/sl_dict",
+      "size_bytes": 3965,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/sq_dict",
+      "size_bytes": 3199,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/sv_dict",
+      "size_bytes": 9676,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/sw_dict",
+      "size_bytes": 3029,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ta_dict",
+      "size_bytes": 120287,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/te_dict",
+      "size_bytes": 3556,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/tn_dict",
+      "size_bytes": 3072,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/tr_dict",
+      "size_bytes": 6080,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/tt_dict",
+      "size_bytes": 2121,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/ur_dict",
+      "size_bytes": 25149,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/vi_dict",
+      "size_bytes": 7438,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Andy",
+      "size_bytes": 330,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Annie",
+      "size_bytes": 298,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/AnxiousAndy",
+      "size_bytes": 370,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Denis",
+      "size_bytes": 286,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Gene",
+      "size_bytes": 264,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Gene2",
+      "size_bytes": 266,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Jacky",
+      "size_bytes": 250,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Lee",
+      "size_bytes": 332,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Mario",
+      "size_bytes": 253,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Michael",
+      "size_bytes": 256,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8-bom",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text with BOM"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Mr serious",
+      "size_bytes": 3144,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/unknown",
+      "recommended_extension": "txt",
+      "notes": "Text-like but not UTF-8"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Storm",
+      "size_bytes": 397,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/Tweaky",
+      "size_bytes": 3140,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/unknown",
+      "recommended_extension": "txt",
+      "notes": "Text-like but not UTF-8"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/aunty",
+      "size_bytes": 368,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/boris",
+      "size_bytes": 209,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/croak",
+      "size_bytes": 93,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/edward",
+      "size_bytes": 151,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/f1",
+      "size_bytes": 324,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/f2",
+      "size_bytes": 357,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/f3",
+      "size_bytes": 375,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/f4",
+      "size_bytes": 350,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/f5",
+      "size_bytes": 425,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/iven",
+      "size_bytes": 262,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/unknown",
+      "recommended_extension": "txt",
+      "notes": "Text-like but not UTF-8"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/iven2",
+      "size_bytes": 280,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/unknown",
+      "recommended_extension": "txt",
+      "notes": "Text-like but not UTF-8"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/iven3",
+      "size_bytes": 263,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/unknown",
+      "recommended_extension": "txt",
+      "notes": "Text-like but not UTF-8"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/john",
+      "size_bytes": 3137,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/unknown",
+      "recommended_extension": "txt",
+      "notes": "Text-like but not UTF-8"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/kaukovalta",
+      "size_bytes": 346,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/klatt",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/klatt2",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/klatt3",
+      "size_bytes": 39,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/klatt4",
+      "size_bytes": 39,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/linda",
+      "size_bytes": 369,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/m1",
+      "size_bytes": 335,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/m2",
+      "size_bytes": 264,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/m3",
+      "size_bytes": 300,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/m4",
+      "size_bytes": 290,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/m5",
+      "size_bytes": 262,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/m6",
+      "size_bytes": 188,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/m7",
+      "size_bytes": 254,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/max",
+      "size_bytes": 210,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/michel",
+      "size_bytes": 382,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/norbert",
+      "size_bytes": 3140,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/unknown",
+      "recommended_extension": "txt",
+      "notes": "Text-like but not UTF-8"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/quincy",
+      "size_bytes": 334,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/rob",
+      "size_bytes": 248,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/robert",
+      "size_bytes": 257,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/steph",
+      "size_bytes": 364,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/steph2",
+      "size_bytes": 367,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/steph3",
+      "size_bytes": 377,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/travis",
+      "size_bytes": 360,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/whisper",
+      "size_bytes": 186,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/whisperf",
+      "size_bytes": 392,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/!v/zac",
+      "size_bytes": 260,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/aav/vi",
+      "size_bytes": 59,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/aav/vi-VN-x-central",
+      "size_bytes": 211,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/aav/vi-VN-x-south",
+      "size_bytes": 209,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/art/eo",
+      "size_bytes": 53,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/art/ia",
+      "size_bytes": 29,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/art/jbo",
+      "size_bytes": 69,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/art/lfn",
+      "size_bytes": 139,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/axm/hy",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/axm/hy-arevmda",
+      "size_bytes": 328,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/azc/nci",
+      "size_bytes": 124,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/bnt/sw",
+      "size_bytes": 53,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/bnt/tn",
+      "size_bytes": 54,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/ccs/ka",
+      "size_bytes": 26,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/cel/cy",
+      "size_bytes": 49,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/cel/ga",
+      "size_bytes": 65,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/cel/gd",
+      "size_bytes": 49,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/cus/om",
+      "size_bytes": 39,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/default",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/dra/kn",
+      "size_bytes": 55,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/dra/ml",
+      "size_bytes": 69,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/dra/ta",
+      "size_bytes": 63,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/dra/te",
+      "size_bytes": 70,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/esx/kl",
+      "size_bytes": 30,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmq/da",
+      "size_bytes": 57,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmq/is",
+      "size_bytes": 40,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmq/no",
+      "size_bytes": 65,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmq/sv",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/af",
+      "size_bytes": 67,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/de",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/en",
+      "size_bytes": 136,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/en-029",
+      "size_bytes": 359,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/en-GB-scotland",
+      "size_bytes": 300,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/en-GB-x-gbclan",
+      "size_bytes": 264,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/en-GB-x-gbcwmd",
+      "size_bytes": 208,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/en-GB-x-rp",
+      "size_bytes": 257,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/en-US",
+      "size_bytes": 281,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/gmw/nl",
+      "size_bytes": 35,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/grk/el",
+      "size_bytes": 37,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/grk/grc",
+      "size_bytes": 110,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/as",
+      "size_bytes": 42,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/bn",
+      "size_bytes": 37,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/gu",
+      "size_bytes": 42,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/hi",
+      "size_bytes": 35,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/mr",
+      "size_bytes": 41,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/ne",
+      "size_bytes": 49,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/or",
+      "size_bytes": 39,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/pa",
+      "size_bytes": 25,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/si",
+      "size_bytes": 55,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/inc/ur",
+      "size_bytes": 53,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/ine/sq",
+      "size_bytes": 115,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/ira/fa",
+      "size_bytes": 362,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/ira/fa-Latn",
+      "size_bytes": 267,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/ira/fa-en-us",
+      "size_bytes": 287,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/ira/ku",
+      "size_bytes": 52,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/itc/la",
+      "size_bytes": 298,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/ko",
+      "size_bytes": 63,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-af1",
+      "size_bytes": 88,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-af1-en",
+      "size_bytes": 83,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-br1",
+      "size_bytes": 115,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-br2",
+      "size_bytes": 119,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-br3",
+      "size_bytes": 115,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-br4",
+      "size_bytes": 119,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-cr1",
+      "size_bytes": 126,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-cz2",
+      "size_bytes": 82,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de1",
+      "size_bytes": 99,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de1-en",
+      "size_bytes": 96,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de2",
+      "size_bytes": 83,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de2-en",
+      "size_bytes": 80,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de3",
+      "size_bytes": 99,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de3-en",
+      "size_bytes": 96,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de4",
+      "size_bytes": 85,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de4-en",
+      "size_bytes": 81,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de5",
+      "size_bytes": 192,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de5-en",
+      "size_bytes": 90,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de6",
+      "size_bytes": 78,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de6-en",
+      "size_bytes": 74,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de6-grc",
+      "size_bytes": 83,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-de7",
+      "size_bytes": 106,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-ee1",
+      "size_bytes": 95,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-en1",
+      "size_bytes": 113,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-es1",
+      "size_bytes": 97,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-es2",
+      "size_bytes": 91,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-fr1",
+      "size_bytes": 150,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-fr1-en",
+      "size_bytes": 103,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-fr4",
+      "size_bytes": 111,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-fr4-en",
+      "size_bytes": 106,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-gr2",
+      "size_bytes": 94,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-gr2-en",
+      "size_bytes": 88,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-hu1",
+      "size_bytes": 102,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-hu1-en",
+      "size_bytes": 97,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-ic1",
+      "size_bytes": 86,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-id1",
+      "size_bytes": 101,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-ir1",
+      "size_bytes": 753,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-ir2",
+      "size_bytes": 768,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-it3",
+      "size_bytes": 142,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-it4",
+      "size_bytes": 145,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-la1",
+      "size_bytes": 83,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-lt1",
+      "size_bytes": 88,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-lt2",
+      "size_bytes": 88,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-mx1",
+      "size_bytes": 120,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-mx2",
+      "size_bytes": 120,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-nl2",
+      "size_bytes": 96,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-nl2-en",
+      "size_bytes": 91,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-pl1",
+      "size_bytes": 99,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-pl1-en",
+      "size_bytes": 82,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-pt1",
+      "size_bytes": 114,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-ro1",
+      "size_bytes": 87,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-ro1-en",
+      "size_bytes": 81,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-sw1",
+      "size_bytes": 98,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-sw1-en",
+      "size_bytes": 93,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-sw2",
+      "size_bytes": 102,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-sw2-en",
+      "size_bytes": 99,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-tr1",
+      "size_bytes": 85,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-tr2",
+      "size_bytes": 114,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-us1",
+      "size_bytes": 170,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-us2",
+      "size_bytes": 178,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-us3",
+      "size_bytes": 180,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/mb/mb-vz1",
+      "size_bytes": 144,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/poz/id",
+      "size_bytes": 146,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/poz/ms",
+      "size_bytes": 457,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/an",
+      "size_bytes": 39,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/ca",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/es",
+      "size_bytes": 70,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/es-419",
+      "size_bytes": 182,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/fr",
+      "size_bytes": 82,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/fr-BE",
+      "size_bytes": 94,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/it",
+      "size_bytes": 122,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/pap",
+      "size_bytes": 62,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/pt-BR",
+      "size_bytes": 106,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/pt-PT",
+      "size_bytes": 96,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/roa/ro",
+      "size_bytes": 40,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/sai/gn",
+      "size_bytes": 48,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/sem/am",
+      "size_bytes": 41,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/sem/mt",
+      "size_bytes": 41,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/sit/cmn",
+      "size_bytes": 611,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/sit/my",
+      "size_bytes": 25,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/sit/yue",
+      "size_bytes": 210,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/trk/az",
+      "size_bytes": 45,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/trk/ky",
+      "size_bytes": 43,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/trk/tr",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/trk/tt",
+      "size_bytes": 35,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/urj/et",
+      "size_bytes": 27,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/urj/fi",
+      "size_bytes": 38,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/urj/hu",
+      "size_bytes": 73,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/xaq/eu",
+      "size_bytes": 40,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/xaq/lt",
+      "size_bytes": 42,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/xaq/lv",
+      "size_bytes": 235,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/bg",
+      "size_bytes": 110,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/bs",
+      "size_bytes": 257,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/cs",
+      "size_bytes": 36,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/hr",
+      "size_bytes": 290,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/mk",
+      "size_bytes": 41,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/pl",
+      "size_bytes": 50,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/ru",
+      "size_bytes": 71,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/sk",
+      "size_bytes": 37,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/sl",
+      "size_bytes": 43,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/voices/zls/sr",
+      "size_bytes": 277,
+      "top_level": "speechplayerinespeak",
+      "classification": "text/utf-8",
+      "recommended_extension": "txt",
+      "notes": "UTF-8 text"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/zh_dict",
+      "size_bytes": 1067075,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    },
+    {
+      "relative_path": "speechplayerinespeak/espeak-ng-data/zhy_dict",
+      "size_bytes": 481709,
+      "top_level": "speechplayerinespeak",
+      "classification": "binary/unknown",
+      "recommended_extension": null,
+      "notes": "Binary payload (no known signature)"
+    }
+  ]
+}
