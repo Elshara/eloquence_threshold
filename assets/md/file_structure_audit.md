@@ -49,6 +49,27 @@ Document future updates here as you work through the backlog so the history of t
 - **Extensionless audit published.** `python assets/py/report_speechdata_extensionless.py` inventories every suffix-less file under `speechdata/`, classifies obvious WAV/OGG/ZIP/MIDI payloads, and recommends extensions when we can add them safely. Refresh [`assets/json/speechdata_extensionless_inventory.json`](../json/speechdata_extensionless_inventory.json) and [`assets/md/speechdata_extensionless_inventory.md`](speechdata_extensionless_inventory.md) before each NVDA or CodeQL rehearsal so reviewers can see which assets still need manual cleanup.
 - **Assets layout reporter added.** `python assets/py/report_assets_layout.py` captures the new extension-first structure in machine- and human-readable summaries. Refresh [`assets/json/assets_layout_summary.json`](../json/assets_layout_summary.json) and [`assets/md/assets_layout_summary.md`](assets_layout_summary.md) after moving files so packaging rehearsals and CodeQL rulepacks can validate that DLLs, scripts, and documentation continue to live under matching buckets.
 - **CLI smoke tests retargeted.** The unit tests that exercise `python assets/py/report_*` and `python assets/py/run_nvda_release_checks.py` now invoke the tools from the `assets/py` bucket, preload the bucket on `PYTHONPATH`, and consume cached artefacts from `assets/json/` and `assets/ini/manifest.ini`. This keeps the NVDA release-audit workflow passing under the new layout while CodeQL retains visibility into the commands we expect builders to run offline.
+- **Root build wrapper now seeds PYTHONPATH.** Calling `python build.py` from the repository root now injects `assets/py/` onto `sys.path` before forwarding execution to the real helper. This guarantees Python 3.13+ environments can resolve `resource_paths` without manual `PYTHONPATH` edits when we package 32-bit and 64-bit builds for NVDA alpha snapshots.
+
+### Packaging execution map (2025-10-26)
+
+Running `python build.py --no-download --insecure --output dist/test.nvda-addon` exercises a specific slice of the packaging pipeline. Track which helpers fired so we can target refactors and Python 3.13 compatibility work:
+
+| Helper | Triggered? | Notes |
+| --- | --- | --- |
+| `parse_args()` | ✅ | Captured the explicit `--no-download`/`--insecure`/`--output` options for the offline rehearsal. |
+| `_validate_template_url()` | ✅ | Checked the default GitHub release URL even though downloads were disabled, confirming the allow-list logic stays Python 3.13-safe. |
+| `ensure_template()` | ✅ | Confirmed the `eloquence_original.nvda-addon` template is absent and respected the "no download" flag so the build stayed air-gapped. |
+| `stage_template()` | ✅ | Initialised `synthDrivers/` with an empty layout because no template archive was supplied. |
+| `stage_root_files()` | ✅ | Copied `assets/ini/manifest.ini` into the staging directory for NVDA alpha compatibility. |
+| `stage_synth_driver_modules()` | ✅ | Staged the Eloquence driver modules (Python 3.13-friendly) and generated `synthDrivers/__init__.py` so NVDA treats the folder as a package. |
+| `stage_assets_tree()` | ✅ | Mirrored the entire `assets/` hierarchy into the add-on, ensuring DLL, `.syn`, JSON, Markdown, and tooling buckets remain shallow and extension-aligned. |
+| `stage_speechdata_tree()` | ✅ | Bundled the temporary `speechdata/` folder so extensionless dictionaries continue working while we refactor them. |
+| `copy_optional_directory()` | ⚠️ | Helper executed for `eloquence_data/` and architecture-specific folders but skipped copying because those caches are absent in this checkout. Keep testing on machines that stage x86/x64 payloads. |
+| `has_runtime_assets()` | ✅ | Detected `eci.dll` inside the `assets/dll` bucket, preventing the fallback warning and confirming the runtime discovery shim works without legacy folders. |
+| `write_archive()` | ✅ | Produced `dist/test.nvda-addon` with ZIP_DEFLATED compression ready for NVDA alpha installation. |
+
+Helpers **not** triggered in this offline drill—`ensure_template()`'s download branch, architecture-specific `copy_optional_directory()` copies, and the legacy `eloquence_data` staging—remain queued for validation once we attach cached NVDA runtimes or rehearse with historical add-on templates. Document the next run when those branches execute so we can confirm 32-bit/64-bit parity before NVDA alpha sign-off.
 
 ### Current remediation queue (update 2025-10-26)
 

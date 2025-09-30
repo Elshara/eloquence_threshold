@@ -21,6 +21,7 @@ def main() -> None:
             "Expected build script at assets/py/build.py; the repository layout may be corrupt."
         )
     sys.argv[0] = str(builder)
+    sys.path.insert(0, str(builder.parent))
     runpy.run_path(str(builder), run_name="__main__")
 
 
