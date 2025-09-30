@@ -303,6 +303,17 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | Medium | [Even language](https://en.wikipedia.org/wiki/Even_language) | language / phonology | Pending structured ingestion | Aggregates Tungusic vowel harmony and glottal consonant cues; DataJake scripture lexicons and GitHub orthography converters inform NVDA braille validation for ISO `eve`. |
 | Medium | [Evenki language](https://en.wikipedia.org/wiki/Evenki_language) | language / phonology | Researching dual-script export | Covers Cyrillic/Latin orthography, vowel harmony, and ejective consonants; DataJake storytelling archives plus GitHub morphology scripts align with NV Speech Player presets and NVDA manuals for ISO `evn`. |
 
+## Trans-Baikal and Oirat resonance sprint (October 2025 update)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Buryat language](https://en.wikipedia.org/wiki/Buryat_language) | language / vowel harmony | Researching structured export | Captures Lake Baikal vowel harmony tiers, stress patterns, and Cyrillic/Latin orthography needed to align DataJake storytelling corpora, GitHub morphological parsers, and NVDA braille exports before seeding ISO `bxr` profiles. |
+| High | [Kalmyk language](https://en.wikipedia.org/wiki/Kalmyk_language) | language / phonology | Researching overtone mapping | Documents Kalmyk/Oirat vowel harmony, long vowels, and chant cadence; ties DataJake Buddhist scripture recordings, GitHub orthography converters, and NV Speech Player **Macro volume**/**Subtones** presets for ISO `xal`. |
+| Medium | [Tuvan language](https://en.wikipedia.org/wiki/Tuvan_language) | language / phonology | Pending structured ingestion | Provides khoomei (throat singing) contour analysis, uvular stops, and tone data that guide NV Speech Player **Vocal layers**/**Whisper** sliders alongside DataJake harmonic studies for ISO `tyv`. |
+| Medium | [Altai language](https://en.wikipedia.org/wiki/Altai_language) | language / vowel harmony | Researching dual-script export | Highlights Southern Altay vowel harmony, palatal contrasts, and Cyrillic/Latin orthography; DataJake dictionary scans and GitHub Turkic finite-state analysers inform ISO `alt` dictionary planning and NVDA braille validation. |
+| Medium | [Dolgan language](https://en.wikipedia.org/wiki/Dolgan_language) | language / phonology | Pending structured ingestion | Summarises Dolgan phoneme inventory, loanword adaptation, and orthography cues that sync DataJake oral-history lexicons, GitHub Turkic converters, and NVDA braille exports for ISO `dlg`. |
+| Medium | [Yakut language](https://en.wikipedia.org/wiki/Yakut_language) | language / phonology | Researching overtone refresh | Updates Sakha/Yakut vowel length and overtone references; underpins DataJake storytelling corpora ingestion, NV Speech Player **Tone size**/**Scope depth** presets, and NVDA braille exports for ISO `sah`. |
+
 ## Anatolian and Caspian sprint dossiers (October 2025)
 
 | Usefulness | Source | Classification | Progress | Notes |

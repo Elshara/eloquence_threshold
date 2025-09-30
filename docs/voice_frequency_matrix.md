@@ -2,7 +2,7 @@
 
 This matrix outlines the frequency coverage of Eloquence's advanced voice parameters. Each slider shapes the phoneme EQ bands documented in `voice_parameters.py`, giving NVDA users and tooling a reproducible way to align NV Speech Player metadata with Eloquence's parametric filters.
 
-*Generated:* `2025-09-30T01:13:47Z`
+*Generated:* `2025-09-30T01:44:58Z`
 
 ## Parameter coverage
 

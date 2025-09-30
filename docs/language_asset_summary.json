@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-30T01:13:52.643140+00:00",
+  "generatedAt": "2025-09-30T01:44:43.086128+00:00",
   "globalStats": {
-    "generatedAt": "2025-09-30T01:13:52.643140+00:00",
+    "generatedAt": "2025-09-30T01:44:43.086128+00:00",
     "languageCount": 53,
     "languagesWithProgress": 52,
     "languagesWithCoverage": 52,
@@ -16,9 +16,9 @@
     }
   },
   "globalResearch": {
-    "sourceCount": 201,
+    "sourceCount": 213,
     "classificationCounts": {
-      "language": 179,
+      "language": 191,
       "dialect": 11,
       "accent": 6,
       "metadata": 14,
@@ -30,7 +30,7 @@
       "technical": 8,
       "lexicon": 2,
       "isolates": 1,
-      "phonology": 40,
+      "phonology": 45,
       "region": 11,
       "revitalisation": 4,
       "policy": 1,
@@ -38,14 +38,14 @@
       "creole": 2,
       "mixed": 3,
       "sign-language": 2,
+      "tone": 24,
       "audio": 1,
-      "tone": 18,
       "morphology": 5,
-      "vowel harmony": 3,
+      "vowel harmony": 5,
       "dual-script": 1,
       "grammar": 1
     },
-    "updated": "2025-10-21T04:30:00Z"
+    "updated": "2025-10-23T04:30:00Z"
   },
   "languages": [
     {

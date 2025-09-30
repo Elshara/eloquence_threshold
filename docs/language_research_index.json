@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-21T04:30:00Z",
+  "updated": "2025-10-23T04:30:00Z",
   "sources": [
     {
       "title": "Lists of languages",
@@ -2859,7 +2859,7 @@
         "GitHub palatalisation analysers",
         "NVDA braille exports"
       ],
-      "notes": "Captures ejective consonants, palatal harmony, and digraph usage so ISO `ab` profiles can align DataJake corpora and GitHub converters with NVDA Cyrillic\u2194Latin transliteration under CodeQL review."
+      "notes": "Captures ejective consonants, palatal harmony, and digraph usage so ISO `ab` profiles can align DataJake corpora and GitHub converters with NVDA Cyrillic↔Latin transliteration under CodeQL review."
     },
     {
       "title": "Adyghe language",
@@ -2944,7 +2944,7 @@
         "GitHub Sorani analysers",
         "NVDA braille exports"
       ],
-      "notes": "Tanw\u012bn-style diacritics and clitic behaviour documented here guide ISO `ckb` dictionary imports, keeping DataJake sources and NVDA braille punctuation in sync under CodeQL supervision."
+      "notes": "Tanwīn-style diacritics and clitic behaviour documented here guide ISO `ckb` dictionary imports, keeping DataJake sources and NVDA braille punctuation in sync under CodeQL supervision."
     },
     {
       "title": "South Azerbaijani language",
@@ -3098,6 +3098,108 @@
         "NVDA braille exports"
       ],
       "notes": "Tone plateaus, nasal harmony, and ATR studies ensure ISO `wo` presets align DataJake radio corpora, GitHub finite-state tooling, and NVDA braille punctuation with NV Speech Player **Tone**/**Scope depth** envelopes."
+    },
+    {
+      "title": "Buryat language",
+      "url": "https://en.wikipedia.org/wiki/Buryat_language",
+      "usefulness": "high",
+      "progress": "researching structured export",
+      "classification": [
+        "language",
+        "vowel harmony"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony diagrams",
+        "DataJake storytelling corpora",
+        "GitHub morphological parsers",
+        "NVDA braille exports"
+      ],
+      "notes": "Lake Baikal vowel harmony, stress, and Cyrillic/Latin orthography references drive ISO `bxr` dual-script planning across DataJake corpora, GitHub analysers, and NVDA braille validation."
+    },
+    {
+      "title": "Kalmyk language",
+      "url": "https://en.wikipedia.org/wiki/Kalmyk_language",
+      "usefulness": "high",
+      "progress": "researching overtone mapping",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony research",
+        "DataJake Buddhist scripture recordings",
+        "GitHub orthography converters",
+        "NV Speech Player slider presets"
+      ],
+      "notes": "Kalmyk/Oirat chant cadence and vowel harmony inform ISO `xal` **Macro volume**/**Subtones** presets with DataJake overtone captures and NVDA manual punctuation audits."
+    },
+    {
+      "title": "Tuvan language",
+      "url": "https://en.wikipedia.org/wiki/Tuvan_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia khoomei contour research",
+        "DataJake harmonic analyses",
+        "GitHub pronunciation notebooks",
+        "NV Speech Player slider presets"
+      ],
+      "notes": "Khoomei overtone data, uvular stops, and tone research calibrate ISO `tyv` **Vocal layers**/**Whisper** controls while coordinating DataJake recordings and NV Speech Player EQ planning."
+    },
+    {
+      "title": "Altai language",
+      "url": "https://en.wikipedia.org/wiki/Altai_language",
+      "usefulness": "medium",
+      "progress": "researching dual-script export",
+      "classification": [
+        "language",
+        "vowel harmony"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony tables",
+        "DataJake dictionary scans",
+        "GitHub Turkic finite-state analysers",
+        "NVDA braille exports"
+      ],
+      "notes": "Southern Altay vowel harmony and palatal contrasts feed ISO `alt` dictionary prep with DataJake scans, GitHub analysers, and NVDA braille punctuation tests."
+    },
+    {
+      "title": "Dolgan language",
+      "url": "https://en.wikipedia.org/wiki/Dolgan_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia phoneme inventory",
+        "DataJake oral-history lexicons",
+        "GitHub Turkic converters",
+        "NVDA braille exports"
+      ],
+      "notes": "Dolgan phoneme and orthography cues align ISO `dlg` planning with DataJake lexicons, GitHub converters, and NVDA braille checks before CodeQL-reviewed dictionary imports."
+    },
+    {
+      "title": "Yakut language",
+      "url": "https://en.wikipedia.org/wiki/Yakut_language",
+      "usefulness": "medium",
+      "progress": "researching overtone refresh",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel length studies",
+        "DataJake storytelling recordings",
+        "NV Speech Player slider presets",
+        "NVDA braille exports"
+      ],
+      "notes": "Updated Sakha/Yakut vowel length and overtone metadata keep ISO `sah` **Tone size**/**Scope depth** presets aligned with DataJake corpora and NVDA documentation."
     }
   ]
 }
