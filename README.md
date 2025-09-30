@@ -19,7 +19,7 @@ We are actively splitting multi-purpose scripts and datasets into single-respons
 1. **Driver and tooling shims** – Extend `resource_paths.py` before adjusting loaders like [`assets/py/Eloquence.py`](assets/py/Eloquence.py) or [`assets/py/build.py`](assets/py/build.py) so add-on builds keep functioning during the transition.
 2. **Speech data triage** – Classify extensionless assets still staged in [`speechdata/`](speechdata/) and either migrate them into an `assets/<ext>/` home or retire them if they duplicate incompatible NVDA-era payloads.
 3. **Documentation refresh** – Continue centralising contributor guidance under [`assets/md/`](assets/md/) while ensuring top-level onboarding starts here. Cross-link major playbooks such as [`assets/md/offline_packaging_playbook.md`](assets/md/offline_packaging_playbook.md) and [`assets/md/offline_build_rehearsal.md`](assets/md/offline_build_rehearsal.md) so GitHub visitors immediately see the modern packaging workflow.
-4. **Testing cadence** – After touching catalogues or resource loaders, rerun `python -m unittest discover tests` (when the suite lands) and `python build.py --no-download --insecure --output dist/eloquence.nvda-addon` to validate the add-on structure.
+4. **Testing cadence** – After touching catalogues or resource loaders, rerun `python -m unittest discover assets/py 'test_*.py'` and `python build.py --no-download --insecure --output dist/eloquence.nvda-addon` to validate the add-on structure.
 
 Track progress in the audit document and note any outstanding cleanups in pull requests so we can plan follow-up patches without losing context.
 

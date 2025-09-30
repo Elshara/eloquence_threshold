@@ -10,9 +10,9 @@ The current tree reflects the "assets by extension" reshuffle that moved the leg
 _Run `python - <<'PY'` scripts from this audit to regenerate the counts when you move files again so the numbers stay fresh for reviewers._
 
 ## Impact on packaging and testing
-- The Python tooling under `assets/py/` still expects historical relative paths (for example `eloquence/eci.dll`, `espeak-ng-data/voices/`). Before we can ship another build we must update import paths, resource loaders, and packaging manifests (`python build.py --insecure --no-download --output dist/eloquence.nvda-addon`) so they resolve the new asset layout.
-- The unit test suite (`python -m unittest discover tests`) will currently fail because resource discovery hooks and fixture paths still point at the pre-shuffle directories. We need to triage each failure, then update fixtures to reference the `assets/` layout. Capture the failure logs so CodeQL and NVDA compatibility docs can track the delta.
-- Offline packaging rehearsals must continue to rely on cached datasets. When refreshing NV Access snapshots or DataJake inventories, reuse the commands documented in `AGENTS.md` so we never redownload archives unnecessarily.
+- Python tooling under `assets/py/` now resolves DLLs, `.syn` voices, JSON catalogues, and Markdown manifests through [`resource_paths.py`](../py/resource_paths.py). Keep extending the shim before touching loaders so partially migrated checkouts and cached NVDA add-on templates continue to work while CodeQL tracks the canonical asset locations.
+- The CLI smoke tests and language catalogue unit tests have been retargeted to the extension-first layout. Run `python -m unittest discover assets/py 'test_*.py'` after updating catalogues or loader code so NVDA/CodeQL reviews capture a clean log of the reshuffled fixtures.
+- Offline packaging rehearsals must continue to rely on cached datasets. When refreshing NV Access snapshots or DataJake inventories, reuse the commands documented in `AGENTS.md` so we never redownload archives unnecessarily before running `python build.py --insecure --no-download --output dist/eloquence.nvda-addon`.
 
 ## Incremental cleanup recommendations
 1. **Establish loader shims.** Introduce helper functions (for example `assets/py/resource_paths.py`) that expose canonical lookups for DLLs, voices, lexicons, and Markdown docs. Update the NVDA driver modules to consume the shim instead of embedding `eloquence/` or `espeak-ng-data/` literals. This gives us a single choke point if the asset taxonomy shifts again.
@@ -23,7 +23,7 @@ _Run `python - <<'PY'` scripts from this audit to regenerate the counts when you
 
 ## Open questions and next steps
 - **How do we package extensionless lexicons?** Investigate NVDA's expectations for eSpeak NG voice dictionaries. If we must retain the extensionless filenames, consider leaving them in `speechdata/` but surfacing the directory via the resource shim so the loader can locate them without relative path hacks.
-- **What is the testing story for the rehomed binaries?** Confirm whether the existing integration scripts exercise each speech engine (Eloquence, DECtalk/FonixTalk, eSpeak NG, IBM TTS). If gaps exist, add targeted smoke tests that run under `python -m unittest discover tests` to validate DLL discovery, configuration parsing, and speech sample synthesis for every engine we ship.
+- **What is the testing story for the rehomed binaries?** Confirm whether the existing integration scripts exercise each speech engine (Eloquence, DECtalk/FonixTalk, eSpeak NG, IBM TTS). If gaps exist, add targeted smoke tests that run under `python -m unittest discover assets/py 'test_*.py'` to validate DLL discovery, configuration parsing, and speech sample synthesis for every engine we ship.
 - **How will we document partial migrations?** Until all payloads follow the extension-first convention, keep this audit file updated with a checklist of which frameworks have been fully normalised. Link to the manifest recommended above so contributors know where to focus.
 
 ## Suggested status tracking template
@@ -54,7 +54,7 @@ Document future updates here as you work through the backlog so the history of t
 - [ ] Update the Eloquence driver and helper scripts to read DLL, `.syn`, and configuration assets exclusively through `resource_paths`, then validate on NVDA alpha-52731. *(Packaging helper updated; runtime modules still pending end-to-end verification.)*
 - [ ] Port NV Speech Player phoneme and language dictionaries out of `speechdata/` or document loader exceptions when extensions cannot change.
 - [ ] Split the remaining multi-purpose Python utilities into single-purpose modules (for example, separate CLI entry points from data transforms) so the `assets/py` folder mirrors the "one function per file" goal.
-- [ ] Decide on a permanent home for test fixtures (`tests/fixtures/` vs. `assets/txt/tests_*`) and wire them into `python -m unittest discover tests` once the loader shims settle.
+- [ ] Decide on a permanent home for test fixtures (`tests/fixtures/` vs. `assets/txt/tests_*`) and wire them into `python -m unittest discover assets/py 'test_*.py'` once the loader shims settle.
 - [ ] Review `.pyo` and other historical cache files; if they no longer serve NVDA or CodeQL workflows, stage them for deletion and record the rationale here before removing them from the tree.
 - [ ] Use [`assets/md/speechdata_extensionless_inventory.md`](speechdata_extensionless_inventory.md) to plan extension or loader updates for the 225 `binary/unknown` files—primarily eSpeak NG dictionaries—so NVDA can keep loading them even if we adopt suffixes or shims.
 
