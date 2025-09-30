@@ -128,11 +128,11 @@ regional presets (hard/soft consonants, tonal contours, vowel harmony).
 | Medium | [Pashto language](https://en.wikipedia.org/wiki/Pashto_language) | language | Requires phoneme summary | Captures retroflex, aspirated, and fricative inventories to drive ISO `ps` pronunciation presets. |
 | Medium | [Sindhi language](https://en.wikipedia.org/wiki/Sindhi_language) | language | Pending structured ingestion | Provides implosive consonant coverage and braille mappings for ISO `sd`. |
 | Medium | [Somali language](https://en.wikipedia.org/wiki/Somali_language) | language | Pending structured ingestion | Supplies ATR vowel harmony references and tone plateau examples for ISO `so`. |
-| Medium | [Fula language](https://en.wikipedia.org/wiki/Fula_language) | language | Pending structured ingestion | Records Pulaar/Fulfulde dialect tone splits and prenasalised stop cues for ISO `ff`. |
+| Medium | [Fula language](https://en.wikipedia.org/wiki/Fula_language) | language / tone | Researching Ajami alignment | Records Pulaar/Fulfulde tone plateaus, implosive consonants, and Ajami ↔ Latin transliteration rules that pair DataJake Qur’anic corpora with NVDA punctuation exports and GitHub morphology tooling for ISO `ff`. |
 | Medium | [Sinhala language](https://en.wikipedia.org/wiki/Sinhala_language) | language | Pending structured ingestion | Details murmur, retroflex, and consonant length contrasts for ISO `si`. |
 | Medium | [Nepali language](https://en.wikipedia.org/wiki/Nepali_language) | language | Pending structured ingestion | Documents schwa deletion, retroflex series, and tone neutralisation heuristics for ISO `ne`. |
 | Medium | [Kashmiri language](https://en.wikipedia.org/wiki/Kashmiri_language) | language | Pending structured ingestion | Tracks Perso-Arabic and Sharada orthography details to align ISO `ks` dual-script packaging. |
-| Medium | [Wolof language](https://en.wikipedia.org/wiki/Wolof_language) | language | Pending structured ingestion | Tone and nasal cluster references for ISO `wo` roadmaps. |
+| Medium | [Wolof language](https://en.wikipedia.org/wiki/Wolof_language) | language / tone | Researching frequency atlas export | Tone plateau, nasal harmony, and ATR notes calibrate NV Speech Player **Tone**/**Scope depth** presets while DataJake Dakar radio corpora and NVDA braille exports anchor ISO `wo` packaging. |
 | Medium | [Igbo language](https://en.wikipedia.org/wiki/Igbo_language) | language | Pending structured ingestion | Nasal harmony, tone ladder, and syllabic nasal planning for ISO `ig`. |
 | Medium | [Irish language](https://en.wikipedia.org/wiki/Irish_language) | language | Pending structured ingestion | Lenition/eclipsis scheduling to calibrate consonant hardness sliders for `ga-IE`. |
 | Medium | [Georgian language](https://en.wikipedia.org/wiki/Georgian_language) | language | Pending structured ingestion | Ejective consonant frequencies and vowel harmony metadata for ISO `ka`. |
@@ -316,6 +316,16 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | Medium | [South Azerbaijani language](https://en.wikipedia.org/wiki/South_Azerbaijani_language) | language / orthography | Pending structured ingestion | Captures Perso-Arabic ↔ Latin mapping, vowel harmony, and fortition cues; anchors ISO `azb` dictionaries sourced from DataJake radio glossaries and GitHub transliteration pipelines. |
 | Medium | [Talysh language](https://en.wikipedia.org/wiki/Talysh_language) | language / phonology | Researching nasal harmony export | Provides Caspian vowel harmony, nasalisation, and prosody tables that guide NV Speech Player **Nasal balance** presets with DataJake corpus support for ISO `tly`. |
 | Medium | [Zaza language](https://en.wikipedia.org/wiki/Zaza_language) | language / phonology | Researching stress contour staging | Highlights vowel harmony variants, stress, and emphatic consonants; DataJake liturgical recordings plus GitHub Kurdish–Zaza converters inform ISO `zza` dictionary seeding and NVDA braille regressions. |
+
+## Atlantic Sahel convergence sprint (October 2025 progression)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| Medium | [Serer language](https://en.wikipedia.org/wiki/Serer_language) | language / tone | Researching nasal harmony export | Documents Serer ATR harmony, nasal vowels, and implosives; pairs DataJake Dakar radio corpora with GitHub nasal harmony analysers and NVDA braille punctuation to seed ISO `srr` tone presets. |
+| Medium | [Soninke language](https://en.wikipedia.org/wiki/Soninke_language) | language / phonology | Researching Ajami↔Latin conversion | Captures Soninke vowel length, implosive consonants, and Ajami orthography that inform ISO `snk` dictionary staging with DataJake scripture lexicons, GitHub transliteration notebooks, and NVDA punctuation exports. |
+| Medium | [Mooré language](https://en.wikipedia.org/wiki/Moore_language) | language / tone | Researching noun-class coverage | Highlights Mossi noun-class tone ladders and nasal assimilation; ties into DataJake news corpora, GitHub finite-state morphology, and NVDA braille exports for ISO `mos`. |
+| Medium | [Bemba language](https://en.wikipedia.org/wiki/Bemba_language) | language / tone | Researching tonal segmentation export | Provides Bemba tone, prenasalised consonant, and verb morphology cues that align DataJake hymn dictionaries with GitHub tonal segmentation scripts and NV Speech Player **Vocal layers** presets for ISO `bem`. |
+| Medium | [Lozi language](https://en.wikipedia.org/wiki/Lozi_language) | language / tone | Researching baritone EQ export | Details Lozi tonal accent, vowel length, and nasal harmony; pairs DataJake Barotseland corpora with GitHub tonal morphology projects and NVDA braille exports to tune ISO `loz` **Plosive impact**/**Macro volume** sliders. |
 
 ## Technical, programming, and modelling languages
 

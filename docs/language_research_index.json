@@ -1442,15 +1442,18 @@
       "title": "Fula language",
       "url": "https://en.wikipedia.org/wiki/Fula_language",
       "usefulness": "medium",
-      "progress": "pending structured ingestion",
+      "progress": "researching Ajami alignment",
       "classification": [
-        "language"
+        "language",
+        "tone"
       ],
       "sample_assets": [
-        "Pulaar/Fulfulde tone splits",
-        "prenasalised stops"
+        "Wikipedia ATR harmony studies",
+        "DataJake Qur’anic corpora",
+        "GitHub Ajami transliterators",
+        "NVDA punctuation exports"
       ],
-      "notes": "Records Pulaar/Fulfulde dialect tone splits and prenasalised stop cues to guide ISO ff slider presets."
+      "notes": "Pulaar/Fulfulde ATR harmony, implosive consonants, and Ajami ↔ Latin rules align ISO `ff` dictionary imports with DataJake recitations, GitHub morphology tooling, and NVDA punctuation audits."
     },
     {
       "title": "Sinhala language",
@@ -2993,6 +2996,108 @@
         "NVDA braille exports"
       ],
       "notes": "Stress contour, vowel harmony, and emphatic consonant references allow ISO `zza` seeding to align DataJake recordings, GitHub converters, and NVDA braille validation before packaging."
+    },
+    {
+      "title": "Serer language",
+      "url": "https://en.wikipedia.org/wiki/Serer_language",
+      "usefulness": "medium",
+      "progress": "researching nasal harmony export",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "Wikipedia ATR harmony research",
+        "DataJake Dakar radio corpora",
+        "GitHub nasal harmony analysers",
+        "NVDA braille punctuation exports"
+      ],
+      "notes": "Serer ATR harmony, nasal vowel, and implosive consonant documentation aligns ISO `srr` tone presets with DataJake recordings, GitHub tooling, and NVDA punctuation audits."
+    },
+    {
+      "title": "Soninke language",
+      "url": "https://en.wikipedia.org/wiki/Soninke_language",
+      "usefulness": "medium",
+      "progress": "researching Ajami to Latin conversion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel length notes",
+        "DataJake scripture lexicons",
+        "GitHub Ajami transliteration notebooks",
+        "NVDA punctuation exports"
+      ],
+      "notes": "Ajami ↔ Latin guidance, implosive consonants, and vowel length research keep ISO `snk` dictionary imports aligned with DataJake corpora, GitHub converters, and NVDA punctuation baselines."
+    },
+    {
+      "title": "Mooré language",
+      "url": "https://en.wikipedia.org/wiki/Moore_language",
+      "usefulness": "medium",
+      "progress": "researching noun-class coverage",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "Wikipedia noun-class tone ladders",
+        "DataJake news corpora",
+        "GitHub finite-state morphology",
+        "NVDA braille exports"
+      ],
+      "notes": "Mossi noun-class tone ladders and nasal assimilation studies pair DataJake corpora with GitHub morphology pipelines and NVDA braille exports to seed ISO `mos` presets."
+    },
+    {
+      "title": "Bemba language",
+      "url": "https://en.wikipedia.org/wiki/Bemba_language",
+      "usefulness": "medium",
+      "progress": "researching tonal segmentation export",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "Wikipedia tone and prenasalisation research",
+        "DataJake hymn dictionaries",
+        "GitHub tonal segmentation scripts",
+        "NV Speech Player slider presets"
+      ],
+      "notes": "Bemba tone patterns and prenasalised consonant studies inform ISO `bem` NV Speech Player **Vocal layers**/**Head size contour** tuning alongside DataJake hymn corpora and GitHub tonal segmentation tooling."
+    },
+    {
+      "title": "Lozi language",
+      "url": "https://en.wikipedia.org/wiki/Lozi_language",
+      "usefulness": "medium",
+      "progress": "researching baritone EQ export",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "Wikipedia tonal accent research",
+        "DataJake Barotseland corpora",
+        "GitHub tonal morphology projects",
+        "NVDA braille exports"
+      ],
+      "notes": "Lozi tonal accents, vowel length, and nasal harmony references guide ISO `loz` **Plosive impact**/**Macro volume** presets with DataJake hymn corpora, GitHub tonal morphology tooling, and NVDA punctuation audits."
+    },
+    {
+      "title": "Wolof language",
+      "url": "https://en.wikipedia.org/wiki/Wolof_language",
+      "usefulness": "medium",
+      "progress": "researching frequency atlas export",
+      "classification": [
+        "language",
+        "tone"
+      ],
+      "sample_assets": [
+        "Wikipedia tone plateau research",
+        "DataJake Dakar radio lexicons",
+        "GitHub Wolof finite-state grammars",
+        "NVDA braille exports"
+      ],
+      "notes": "Tone plateaus, nasal harmony, and ATR studies ensure ISO `wo` presets align DataJake radio corpora, GitHub finite-state tooling, and NVDA braille punctuation with NV Speech Player **Tone**/**Scope depth** envelopes."
     }
   ]
 }

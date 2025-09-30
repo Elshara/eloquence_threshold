@@ -125,6 +125,14 @@ To keep Eloquence's phoneme, lexicon, and tooling pipeline fresh we now version 
 - **Kurdish and Caspian linkage** – Kurmanji (`kmr`), Sorani (`ckb`), and South Azerbaijani (`azb`) roadmap entries cross-reference DataJake radio glossaries, GitHub morphological generators, and NVDA manual punctuation tables to balance Perso-Arabic and Latin orthographies. The offline build workflow now calls out `python tools/validate_language_pronunciations.py` after regenerating the coverage dashboards so vowel harmony and tanwīn-style diacritics survive offline packaging.
 - **Research dossier refresh** – [`docs/language_research_index.md`](docs/language_research_index.md) and its JSON companion catalogue new Wikipedia sources for Talysh (`tly`), Zazaki (`zza`), and Caspian Kurdish prosody. Pair the catalogue with `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` before seeding new `.dic` archives so CodeQL automation and the offline playbook record tone sandhi, emphatic consonants, and NV Speech Player slider expectations for the sprint.
 
+### Atlantic Sahel convergence sprint (October 2025 progression)
+
+- **Wolof and Serer tone bridges** – Wolof (`wo`) and Serer (`srr`) rows in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) now log cached Wikipedia ATR harmony studies, DataJake Dakar radio lexicons, GitHub nasal harmony analysers, and NVDA braille exports. The README sprint calls for recalibrating NV Speech Player **Tone**, **Scope depth**, and **Macro volume** sliders so CodeQL-audited dictionary imports capture long-vowel vs. consonant gemination cues.
+- **Fulfulde and Soninke corridor** – Fula/Pulaar (`ff`) moves from *planned* to *researching* status alongside new Soninke (`snk`) coverage. We reference DataJake Qur’anic recitations, GitHub Ajami↔Latin transliteration tools, and NV Access manual punctuation exports to preserve implosive consonants and prenasalised stops. Regenerate `docs/voice_frequency_matrix.md` so frequency envelopes reflect the Sahelian bass emphasis before packaging.
+- **Mooré and Bambara expansion** – Mooré (`mos`) and Bambara (`bam`) additions capture Burkina Faso and Mali corpora sourced from DataJake, cross-checking Wikipedia noun-class tone ladders and NV Speech Player **Subtones**/**Nasal balance** presets. GitHub morphological pipelines anchor affix ordering so `language_profiles.py` can expose contextual pronunciation for the Mossi and Manding families.
+- **Zambezi resonance** – New Bemba (`bem`) and Lozi (`loz`) entries trace Zambia/Zimbabwe tonal corpora, DataJake hymn dictionaries, and NVDA braille exports. Contributors should refresh `docs/language_asset_summary.md` and rerun `python tools/report_voice_parameters.py` to confirm **Vocal layers**, **Plosive impact**, and **Head size contour** align with the lower-register recordings staged for this sprint.
+- **Offline packaging reminder** – Before packaging these Atlantic–Sahel locales, replay the no-release drill below, then log the run in `AGENTS.md`. Pair the reports with `python tools/audit_nvaccess_downloads.py` and `python tools/check_nvda_updates.py` so NVDA alpha validations stay current while you seed new tone dictionaries from cached DataJake mirrors.
+
 After each documentation or profile change, regenerate the cached coverage artefacts so pull requests reflect the current dataset without hammering upstream mirrors:
 
 - `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`
@@ -494,6 +502,17 @@ python tools\validate_language_pronunciations.py --json docs\language_pronunciat
 python -m unittest discover tests
 python build.py --insecure --no-download --output dist\eloquence.nvda-addon
 ```
+
+### Offline ZIP bootstrap (alternative workflow)
+
+If you cannot use `git clone`, download the repository ZIP from a trusted mirror, verify its checksum, and then follow these steps:
+
+1. Extract the archive into `C:\eloquence_threshold` (or another writable path) and ensure Windows SmartScreen is satisfied with the source.
+2. Restore cached Markdown/JSON artefacts into `docs/` from your offline vault or regenerate them with the commands listed above. This keeps CodeQL-ready dashboards such as `docs/language_progress.json` and `docs/voice_language_matrix.json` aligned with the sprint.
+3. Copy the proprietary Eloquence binaries into the `eloquence*/` architecture slots (`eloquence/`, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, `eloquence_arm64/`). The loader validates PE headers and will refuse mismatched DLLs.
+4. Open PowerShell, run `py -3 -m venv .venv` (or use an existing Python 3.11+ interpreter), activate it, and install any optional helpers you mirrored (for example, `pip install -r scripts\requirements.txt`).
+5. Execute the provenance refresh commands (`python tools\summarize_language_assets.py`, `python tools\report_language_maturity.py`, `python tools\report_language_progress.py`, and companions) so NVDA-linked dashboards, DataJake inventories, and NV Speech Player slider reports reflect your cached datasets.
+6. Finish with `python -m unittest discover tests` and `python build.py --insecure --no-download --output dist\eloquence.nvda-addon`. Inspect the resulting add-on to confirm the sprint artefacts—including the Sahelian frequency envelopes and updated ISO roadmap—are embedded before installing into NVDA.
 
 ### Build script reference
 - `python build.py --output dist/eloquence.nvda-addon` writes the package to a custom path.
