@@ -5,7 +5,7 @@ The current tree reflects the "assets by extension" reshuffle that moved the leg
 
 ## Inventory snapshot (2025-10-26)
 - `assets/` now contains 22 extension-scoped directories. The heaviest buckets are `py` (72 files), `dll` (44 files), `txt` (44 files), `json` (41 files), and `syn` (36 files). No mismatched extensions were detected inside the asset folders, so the renaming pass stayed internally consistent.
-- `speechdata/` still stages the frameworks that rely on extensionless resources. The tree holds 949 files across 103 subdirectories, with 498 files lacking an extension (primarily eSpeak NG lexicons and phoneme tables). Those payloads need bespoke handling when we promote them into the extension-first layout or wire them into the add-on without renaming.
+- `speechdata/` still stages the frameworks that rely on extensionless resources. The tree holds 949 files across 103 subdirectories, with 498 files lacking an extension (primarily eSpeak NG lexicons and phoneme tables). Regenerate [`assets/json/speechdata_inventory.json`](../json/speechdata_inventory.json) and [`assets/md/speechdata_manifest.md`](speechdata_manifest.md) with `python assets/py/report_speechdata_inventory.py` to keep the counts current as you migrate payloads. Those datasets need bespoke handling when we promote them into the extension-first layout or wire them into the add-on without renaming.
 
 _Run `python - <<'PY'` scripts from this audit to regenerate the counts when you move files again so the numbers stay fresh for reviewers._
 
@@ -16,7 +16,7 @@ _Run `python - <<'PY'` scripts from this audit to regenerate the counts when you
 
 ## Incremental cleanup recommendations
 1. **Establish loader shims.** Introduce helper functions (for example `assets/py/resource_paths.py`) that expose canonical lookups for DLLs, voices, lexicons, and Markdown docs. Update the NVDA driver modules to consume the shim instead of embedding `eloquence/` or `espeak-ng-data/` literals. This gives us a single choke point if the asset taxonomy shifts again.
-2. **Track unresolved speechdata assets.** Create a manifest (JSON + Markdown) that lists every extensionless file under `speechdata/`, the framework it belongs to (Festival, NV Speech Player, DECtalk, IBM TTS, etc.), and whether it can be renamed without breaking consumers. Use the manifest to prioritise which datasets move into `assets/` next versus which should stay in place with documentation updates.
+2. **Track unresolved speechdata assets.** Keep [`assets/json/speechdata_inventory.json`](../json/speechdata_inventory.json) and [`assets/md/speechdata_manifest.md`](speechdata_manifest.md) up to date. The inventory enumerates every high-risk subtree (Festival, NV Speech Player, DECtalk, IBM TTS, etc.) and surfaces how many files remain extensionless. Use it to prioritise which datasets move into `assets/` next versus which should stay in place with documentation updates.
 3. **Normalise testing artefacts.** Decide where test fixtures live (for example `assets/txt/tests_*` or `tests/fixtures/`). Update any pytest/unittest helpers so they read via the new shim. When fixtures cannot be renamed because NVDA expects exact filenames, document the exception directly in the manifest and README.
 4. **Refresh documentation.** Keep `assets/md/README.md` aligned with the evolving structure, including notes about architecture-specific DLL lookups, NV Speech Player slider mappings, and CodeQL coverage. Reference upstream projects—eSpeak NG, RetroBunn/dt51, NV Speech Player, and NVDA—when you describe provenance so contributors understand the lineage of each asset folder.
 5. **Stage deletion candidates.** Some binaries appear redundant after the move (for example historical `.pyo` caches). Verify whether they are required for backward compatibility. If not, schedule them for removal and record the rationale inside the manifest so reviewers can confirm the decision before we cut a release.
@@ -38,3 +38,8 @@ Use the table below to mark progress. Update it whenever you move assets or fini
 | Documentation bundles | `assets/md/*.md` | ✅ Aligned | Continue refreshing snapshot reports with the documented tooling cadence so CodeQL, NVDA, and DataJake coverage stays current. |
 
 Document future updates here as you work through the backlog so the history of the cleanup stays transparent to both maintainers and the NVDA community.
+
+## Automation helpers
+
+- Run `python assets/py/report_speechdata_inventory.py` after every migration batch. The helper writes both the JSON inventory (consumed by future tooling) and the Markdown summary that the NVDA community reviews when validating cached datasets.
+- Extend the helper with additional metadata (`requires_exact_names`, NVDA loader ownership, CodeQL coverage) as you refactor each subtree so downstream packaging scripts can detect risky renames automatically.

@@ -1,0 +1,178 @@
+{
+  "sam": {
+    "total_files": 1,
+    "extensionless_files": 0,
+    "extensions": {
+      ".py": 1
+    }
+  },
+  "mbrulainespeak": {
+    "total_files": 200,
+    "extensionless_files": 197,
+    "extensions": {
+      ".dll": 1,
+      ".py": 2
+    }
+  },
+  "mbrulainespeak/espeak-data": {
+    "total_files": 197,
+    "extensionless_files": 197,
+    "extensions": {}
+  },
+  "speechplayerinespeak": {
+    "total_files": 295,
+    "extensionless_files": 292,
+    "extensions": {
+      ".dll": 1,
+      ".py": 2
+    }
+  },
+  "speechplayerinespeak/espeak-ng-data": {
+    "total_files": 292,
+    "extensionless_files": 292,
+    "extensions": {}
+  },
+  "festival": {
+    "total_files": 128,
+    "extensionless_files": 9,
+    "extensions": {
+      ".cs": 1,
+      ".diff": 1,
+      ".dll": 1,
+      ".dtd": 2,
+      ".el": 1,
+      ".ent": 1,
+      ".gram": 1,
+      ".group": 3,
+      ".in": 1,
+      ".ngrambin": 3,
+      ".out": 2,
+      ".poslex": 1,
+      ".poslexr": 1,
+      ".properties": 1,
+      ".scm": 99
+    }
+  },
+  "festival/festival": {
+    "total_files": 127,
+    "extensionless_files": 9,
+    "extensions": {
+      ".cs": 1,
+      ".diff": 1,
+      ".dtd": 2,
+      ".el": 1,
+      ".ent": 1,
+      ".gram": 1,
+      ".group": 3,
+      ".in": 1,
+      ".ngrambin": 3,
+      ".out": 2,
+      ".poslex": 1,
+      ".poslexr": 1,
+      ".properties": 1,
+      ".scm": 99
+    }
+  },
+  "orpheus": {
+    "total_files": 287,
+    "extensionless_files": 0,
+    "extensions": {
+      ".chm": 20,
+      ".cnt": 20,
+      ".cpp": 1,
+      ".def": 1,
+      ".dll": 9,
+      ".doc": 20,
+      ".exc": 1,
+      ".exe": 1,
+      ".hlp": 20,
+      ".ini": 56,
+      ".phm": 24,
+      ".py": 2,
+      ".sys": 1,
+      ".tts": 25,
+      ".txt": 1,
+      ".vcx": 55,
+      ".wav": 30
+    }
+  },
+  "orpheus/orpheus": {
+    "total_files": 285,
+    "extensionless_files": 0,
+    "extensions": {
+      ".chm": 20,
+      ".cnt": 20,
+      ".cpp": 1,
+      ".def": 1,
+      ".dll": 9,
+      ".doc": 20,
+      ".exc": 1,
+      ".exe": 1,
+      ".hlp": 20,
+      ".ini": 56,
+      ".phm": 24,
+      ".sys": 1,
+      ".tts": 25,
+      ".txt": 1,
+      ".vcx": 55,
+      ".wav": 30
+    }
+  },
+  "newfon": {
+    "total_files": 38,
+    "extensionless_files": 0,
+    "extensions": {
+      ".css": 1,
+      ".dat": 2,
+      ".dll": 7,
+      ".html": 2,
+      ".ini": 2,
+      ".json": 1,
+      ".md": 2,
+      ".mo": 2,
+      ".po": 2,
+      ".py": 11,
+      ".txt": 6
+    }
+  },
+  "newfon/licenses": {
+    "total_files": 5,
+    "extensionless_files": 0,
+    "extensions": {
+      ".txt": 5
+    }
+  },
+  "newfon/doc": {
+    "total_files": 5,
+    "extensionless_files": 0,
+    "extensions": {
+      ".css": 1,
+      ".html": 2,
+      ".md": 2
+    }
+  },
+  "newfon/languages": {
+    "total_files": 9,
+    "extensionless_files": 0,
+    "extensions": {
+      ".py": 9
+    }
+  },
+  "newfon/bin": {
+    "total_files": 5,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dat": 1,
+      ".dll": 4
+    }
+  },
+  "newfon/locale": {
+    "total_files": 6,
+    "extensionless_files": 0,
+    "extensions": {
+      ".ini": 2,
+      ".mo": 2,
+      ".po": 2
+    }
+  }
+}
