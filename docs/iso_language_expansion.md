@@ -17,6 +17,8 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | bo | Tibetan | Planned | Wikipedia tone contour and stackable consonant charts staged; DataJake archives searched for Wylie transliteration lexicons. |
 | bs | Latin (Bosnian) | Researching | Cached Wikipedia accentuation charts paired with DataJake Sarajevo news lexicons; GitHub Bosnian diacritic normalisers queued so NVDA braille exports keep č/ć/đ distinctions intact. |
 | ar, ar-EG | Arabic | Seeded | Profiles sourced from `eloquence_data/languages/world_language_seeds.json`; leverages Quranic recitation corpora for emphatic consonants. |
+| ase | SignWriting & Latin gloss (American Sign Language) | Researching | Cached Wikipedia handshape/phonology primers combine with DataJake ASL glossaries, GitHub SignWriting converters, and NVDA braille exports; CodeQL follow-up tracks gesture-to-phoneme validation before seeding signed/spoken presets. |
+| asf | SignWriting & Latin gloss (Auslan) | Researching | DataJake caption archives, GitHub HamNoSys renderers, and NVDA punctuation exports align Auslan dual-hand parameters with NV Speech Player contour sliders; CodeQL gating ensures HamNoSys ingestion stays reproducible. |
 | as | Bengali-Assamese | Planned | Wikipedia-derived consonant inventory staged; awaiting Assamese-specific schwa deletion tests via NVDA nightly builds. |
 | ast | Latin (Asturian) | Planned | Cached Wikipedia nasal vowel and palatal lateral research combined with DataJake folk song dictionaries and NVDA braille contractions to guide **Inflection contour** presets prior to CodeQL dictionary ingestion. |
 | az | Latin (Azeri) | Planned | GitHub transliteration utilities catalogued; NVDA docs scanned for glottal stop punctuation cues. |
@@ -24,6 +26,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | ba | Cyrillic & Latin (Bashkir) | Researching | Cached Wikipedia vowel harmony/velarisation tables paired with DataJake folk song corpora and GitHub transliteration tools; NVDA braille exports confirm Bashkir-specific diacritics before EQ tuning. |
 | bam | Latin & N’Ko (Bambara) | Researching | Wikipedia Manding tone ladder research and DataJake radio sermon corpora align with GitHub Bambara morphological parsers; NVDA braille exports verify nasal vowel diacritics before CodeQL-reviewed dictionary imports tune **Subtones**/**Nasal balance** presets. |
 | bem | Latin (Bemba) | Researching | Cached Wikipedia Zambian tone studies plus DataJake hymn dictionaries pair with GitHub tonal segmentation notebooks; NVDA braille exports confirm prenasalised consonant markers ahead of NV Speech Player **Vocal layers**/**Head size contour** calibration. |
+| bfi | SignWriting & Latin gloss (British Sign Language) | Researching | Wikipedia BSL structure notes, DataJake interpreter glossaries, and GitHub HamNoSys parsers align with NVDA braille contractions; CodeQL task captures classifier alignment before packaging. |
 | bxr | Cyrillic & Latin (Buryat) | Researching | Cached Lake Baikal vowel harmony charts and DataJake storytelling corpora paired with GitHub morphological parsers; NVDA braille exports verify dotted vs. umlauted vowel handling while CodeQL policies gate dual-script dictionary imports. |
 | bg | Cyrillic (Bulgarian) | Developing | DataJake MBROLA payloads flagged for vowel reduction heuristics; Wikipedia stress matrices under review. |
 | bi | Latin (Bislama) | Planned | Cached Wikipedia phonotactic notes and DataJake Radio Vanuatu lexicons align with GitHub orthography converters; NVDA manual exports confirm apostrophe punctuation before CodeQL profile seeding. |
@@ -64,6 +67,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | ha | Latin (Hausa) | Developing | Pulling tonal contour data from Wikipedia and DataJake `.lex` archives to align NV Speech Player **Tone** slider defaults. |
 | haw | Latin (ʻŌlelo Hawaiʻi) | Planned | Wikipedia phonology tables and `ʻokina`/kahakō orthography guides staged; DataJake hymn corpora queued to map macron vowels and NVDA braille exports to diacritic rules. |
 | ig | Latin (Igbo) | Planned | Tone ladder and nasal harmony cues catalogued; GitHub finite-state resources queued for vowel alternation. |
+| ils | International Sign (gloss + SignWriting) | Researching | Wikipedia congress usage notes, DataJake summit glossaries, GitHub gesture corpora, and NVDA braille exports align; CodeQL policies verify gesture normalisation before packaging signed-spoken presets. |
 | ilo | Latin (Ilocano) | Researching | DataJake radio news corpora and GitHub orthography datasets logged to validate glottal stop markers; Wikipedia vowel length notes align NV Speech Player **Tone size**/**Subtones** presets with Ilokano stress patterns. |
 | iu | Canadian Aboriginal syllabics & Latin (Inuktitut) | Researching | DataJake `.lex` payloads catalogued alongside Wikipedia syllabics charts; NVDA manual punctuation tables queued for mixed-script fallback validation. |
 | he | Hebrew | Seeded | Masoretic vowel points mirrored from NV Access documentation snapshots; DataJake lexicons flagged for cantillation cues. |
@@ -144,6 +148,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | cnr | Latin (Montenegrin) | Planned | Wikipedia dual-accent overview staged; GitHub Montenegrin corpus snippets aligned with Serbian/Bosnian templates to validate ś/ź phoneme coverage. |
 | yo | Latin (Yoruba) | Researching | Tone ladder charts and vowel harmony metadata from Wikipedia feed DataJake `.lex` payload seeding; NV Speech Player **Tone size**/**Scope depth** presets tuned alongside NVDA braille exports and CodeQL dictionary validation. |
 | xal | Cyrillic (Kalmyk/Oirat) | Researching | Cached Wikipedia vowel harmony and Oirat script notes cross-referenced with DataJake Buddhist scripture recordings and GitHub Kalmyk orthography converters; NVDA braille exports validate Cyrillic vowel signs while CodeQL gating prepares dual-script dictionary imports. |
+| xki | Latin & SignWriting (Kenyan Sign Language) | Researching | Wikipedia KSL phonology, DataJake educational glossaries, GitHub gesture datasets, and NVDA braille exports combine to seed East African sign presets; CodeQL gating monitors classifier mapping and gloss normalisation before packaging. |
 | yrk | Cyrillic & Latin (Nenets) | Researching | Cached Wikipedia nasal harmony tables merged with DataJake scripture corpora and GitHub Nenets morphological toolkits; NVDA braille exports confirm superscript diacritics before CodeQL-audited pronunciation staging. |
 | zza | Perso-Arabic & Latin (Zazaki) | Researching | Wikipedia vowel harmony and stress analyses plus DataJake liturgical recordings guide NV Speech Player **Inflection contour** presets; GitHub Kurdish–Zaza converters and NVDA braille exports confirm diacritic mapping across scripts. |
 | so | Latin (Somali) | Planned | Wikipedia ATR harmony and emphatic consonant notes catalogued; DataJake `.lex` archives queued to tune NV Speech Player **Tone** and **Sibilant clarity** sliders. |
@@ -495,6 +500,7 @@ Contributors can reference this roadmap when proposing pull requests so reviews 
 | bm | Latin (Bambara) | Researching | DataJake scripture recordings and GitHub tonal corpora inform ATR harmony and nasal vowel defaults; cross-reference [`docs/voice_parameter_report.md`](voice_parameter_report.md) for **Nasal balance**/**Macro volume** calibration. |
 | tpi | Latin (Tok Pisin) | Planned | Wikipedia orthography and creole structure notes paired with DataJake sermon corpora; NVDA punctuation exports confirm English-derived digraph handling for tone-neutral presets. |
 | fj | Latin (Fijian) | Researching | GitHub vowel-length datasets and DataJake hymn recordings guide frequency envelopes; NV Speech Player **Inflection contour** defaults validated against NVDA braille manuals. |
+| fsl | SignWriting & Latin gloss (French Sign Language) | Researching | Cached Wikipedia phonology timelines merge with DataJake bilingual lexicons, GitHub SignWriting tooling, and NVDA braille exports; CodeQL validation monitors manual/spoken synchronisation for tactile-first presets. |
 | mh | Latin (Marshallese) | Planned | Cached Wikipedia consonant inventory (including voiceless vowels) merged with GitHub orthography tables; DataJake hymn samples staged to map resonant frequency bands before packaging. |
 | smj | Latin (Lule Sámi) | Researching | Wikipedia consonant gradation tables and GitHub finite-state analysers align with DataJake lexical payloads; NVDA alpha-52762 braille exports confirm diacritic handling. |
 
@@ -515,6 +521,35 @@ Contributors can reference this roadmap when proposing pull requests so reviews 
 - Execute `python -m unittest discover tests` and `python tools/report_integration_scope.py --json docs/integration_scope.json --markdown docs/integration_scope.md --print` after updating these locales to ensure linkage matrices reflect the new profiles.
 - Build with `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` to confirm Tifinagh ⇄ Latin assets, creole frequency presets, and Sámi consonant gradation data package correctly without live downloads.
 - Record sprint outcomes in `AGENTS.md`, referencing the refreshed Wikipedia/DataJake/GitHub/NVDA artefacts and regenerated dashboards so future offline drills can replay the Saharan/Pacific workflow.
+
+## Global sign-language accessibility sprint (October 2025 extension)
+
+| ISO / tag | Script focus | Status | Notes |
+| --- | --- | --- | --- |
+| ase | SignWriting & Latin gloss (American Sign Language) | Researching | Cached Wikipedia phonology/handshape primers stitched together with DataJake ASL glossaries, GitHub SignWriting converters, and NVDA braille exports; CodeQL follow-up monitors gesture-to-phoneme validation before packaging spoken/sign presets. |
+| asf | SignWriting & Latin gloss (Auslan) | Researching | DataJake caption archives plus GitHub HamNoSys renderers align Auslan dual-hand cues with NV Speech Player contour sliders; NVDA manual punctuation exports track BSL-influenced grammar ahead of CodeQL-reviewed ingestion. |
+| bfi | SignWriting & Latin gloss (British Sign Language) | Researching | Wikipedia BSL syntax references and DataJake interpreter glossaries pair with GitHub HamNoSys parsers; NVDA braille contractions validate finger-spelling exports before offline packaging. |
+| fsl | SignWriting & Latin gloss (French Sign Language) | Researching | Cached Wikipedia phonology timelines combine with DataJake bilingual lexicons, GitHub SignWriting tooling, and NVDA braille exports; CodeQL gating ensures tactile-first presets stay synchronised with spoken-French cues. |
+| ils | International Sign (gloss + SignWriting) | Researching | Wikipedia congress usage notes, DataJake summit glossaries, and GitHub gesture corpora align with NVDA braille exports; CodeQL policies verify classifier normalisation prior to packaging. |
+| xki | Latin & SignWriting (Kenyan Sign Language) | Researching | Wikipedia KSL phonology primers, DataJake educational glossaries, GitHub gesture datasets, and NVDA braille exports coordinate East African sign coverage; CodeQL tasks track classifier mapping and gloss deduplication. |
+
+### Frequency, phoneme, and speech parameter backlog
+
+- Map SignWriting and HamNoSys cues to NV Speech Player **Tone**, **Inflection contour**, **Vocal layers**, and **Scope depth** sliders; rerun `python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print` so gesture-enabled locales appear in the linkage dashboard.
+- Extend `voice_parameters.py` with sign-language presets (highlighting **Macro volume**/**Sibilant clarity** ties to paired spoken cues) and regenerate [`docs/voice_parameter_report.md`](voice_parameter_report.md) alongside [`docs/voice_frequency_matrix.md`](voice_frequency_matrix.md) to capture motion-driven harmonics.
+- Queue gesture phoneme placeholders in `language_profiles.py` and validate the additions through `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print` so dashboards record manual cue maturity.
+
+### Dictionary and corpus integration tasks
+
+- Catalogue SignWriting/HamNoSys datasets via `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md`, tagging gesture, gloss, and bilingual payloads so CodeQL automation can audit licensing and viability.
+- Refresh [`docs/language_research_index.md`](language_research_index.md) / `.json` with ASL, Auslan, BSL, LSF, International Sign, and Kenyan Sign Language bibliographies, then rerun `python tools/catalog_wikipedia_languages.py --output-json docs/wikipedia_language_index.json --output-markdown docs/wikipedia_language_index.md` to capture updated classifications.
+- Mirror NV Access documentation snapshots for NVDA sign/gesture support (braille finger-spelling tables, interpreter workflow notes) using `python tools/audit_nvaccess_downloads.py` followed by `python tools/check_nvda_updates.py` so offline builders stage relevant manuals before packaging.
+
+### Testing and packaging checkpoints
+
+- Execute `python tools/validate_language_pronunciations.py --json docs/language_pronunciation_validation.json --markdown docs/language_pronunciation_validation.md` to flag gloss drift once gesture phoneme mappings land.
+- Run `python -m unittest discover tests` to confirm the CLI reporting suite accepts sign-language locales and HamNoSys metadata.
+- Package offline builds with `python build.py --insecure --no-download --output dist/eloquence.nvda-addon`, then document the sprint in `AGENTS.md` so future contributors can reproduce SignWriting-aware releases from cached datasets.
 
 ## Philippine archipelago and Mainland Southeast Asia sprint (October 2025 extension)
 

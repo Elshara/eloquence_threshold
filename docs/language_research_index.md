@@ -311,6 +311,17 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | Medium | [Even language](https://en.wikipedia.org/wiki/Even_language) | language / phonology | Pending structured ingestion | Aggregates Tungusic vowel harmony and glottal consonant cues; DataJake scripture lexicons and GitHub orthography converters inform NVDA braille validation for ISO `eve`. |
 | Medium | [Evenki language](https://en.wikipedia.org/wiki/Evenki_language) | language / phonology | Researching dual-script export | Covers Cyrillic/Latin orthography, vowel harmony, and ejective consonants; DataJake storytelling archives plus GitHub morphology scripts align with NV Speech Player presets and NVDA manuals for ISO `evn`. |
 
+## Global sign-language accessibility sprint (October 2025 extension)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [American Sign Language](https://en.wikipedia.org/wiki/American_Sign_Language) | language / sign-language / phonology | Pending structured ingestion | Handshape/phoneme inventories and SignWriting references connect cached Wikipedia notes with DataJake ASL glossaries, GitHub SignWriting converters, and NVDA braille finger-spelling exports; CodeQL follow-up tracks gesture-to-phoneme validation before packaging. |
+| High | [Auslan](https://en.wikipedia.org/wiki/Auslan) | language / sign-language | Researching HamNoSys export | DataJake caption archives and GitHub HamNoSys renderers align Auslan dual-hand cues with NV Speech Player contour sliders; NVDA manual punctuation captures confirm BSL-derived gloss conventions. |
+| Medium | [British Sign Language](https://en.wikipedia.org/wiki/British_Sign_Language) | language / sign-language | Researching classifier alignment | Wikipedia BSL syntax/lexicon notes pair with DataJake interpreter glossaries and GitHub HamNoSys parsers; NVDA braille exports validate finger-spelling before CodeQL-reviewed dictionary staging. |
+| Medium | [French Sign Language](https://en.wikipedia.org/wiki/French_Sign_Language) | language / sign-language | Pending structured ingestion | Historical phonology timelines, DataJake bilingual lexicons, and GitHub SignWriting tooling support tactile-first presets; NVDA braille contractions confirm liaison markers while CodeQL gates bilingual gloss imports. |
+| Medium | [International Sign](https://en.wikipedia.org/wiki/International_Sign) | language / sign-language / lingua franca | Researching glossary aggregation | Summarises congress usage, classifier harmonisation, and lexical borrowing; ties DataJake summit glossaries, GitHub gesture corpora, and NVDA braille exports together so dashboards track lingua-franca coverage. |
+| Medium | [Kenyan Sign Language](https://en.wikipedia.org/wiki/Kenyan_Sign_Language) | language / sign-language | Researching educational corpus ingestion | Captures East African phonology, classifier usage, and bilingual gloss references; DataJake education dictionaries, GitHub gesture datasets, and NVDA braille exports guide HamNoSys + SignWriting packaging for ISO `xki`. |
+
 ## Trans-Baikal and Oirat resonance sprint (October 2025 update)
 
 | Usefulness | Source | Classification | Progress | Notes |

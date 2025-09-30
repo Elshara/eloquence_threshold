@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-24T04:30:00Z",
+  "updated": "2025-10-24T08:00:00Z",
   "sources": [
     {
       "title": "Lists of languages",
@@ -3251,6 +3251,110 @@
         "NVDA punctuation exports"
       ],
       "notes": "Lagoon prosody and diacritic cues support ISO `vec` **Scope depth**/**Smoothness** presets while CodeQL tracks dictionary provenance from DataJake and GitHub artefacts."
+    },
+    {
+      "title": "American Sign Language",
+      "url": "https://en.wikipedia.org/wiki/American_Sign_Language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "sign-language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia handshape/phoneme charts",
+        "DataJake ASL glossaries",
+        "GitHub SignWriting converters",
+        "NVDA braille finger-spelling exports"
+      ],
+      "notes": "Anchors gesture-to-phoneme planning so CodeQL-audited SignWriting imports align with NV Speech Player contour sliders before packaging ISO `ase`."
+    },
+    {
+      "title": "Auslan",
+      "url": "https://en.wikipedia.org/wiki/Auslan",
+      "usefulness": "high",
+      "progress": "researching HamNoSys export",
+      "classification": [
+        "language",
+        "sign-language"
+      ],
+      "sample_assets": [
+        "DataJake caption archives",
+        "GitHub HamNoSys renderers",
+        "Wikipedia phonology overview",
+        "NVDA interpreter workflow notes"
+      ],
+      "notes": "Aligns Auslan dual-hand cues with NV Speech Player **Inflection contour**/**Tone** sliders while NVDA manual exports confirm BSL-influenced punctuation before CodeQL ingestion."
+    },
+    {
+      "title": "British Sign Language",
+      "url": "https://en.wikipedia.org/wiki/British_Sign_Language",
+      "usefulness": "medium",
+      "progress": "researching classifier alignment",
+      "classification": [
+        "language",
+        "sign-language"
+      ],
+      "sample_assets": [
+        "Wikipedia syntax/lexicon notes",
+        "DataJake interpreter glossaries",
+        "GitHub HamNoSys parsers",
+        "NVDA braille exports"
+      ],
+      "notes": "Feeds ISO `bfi` classifier planning so HamNoSys glyphs match NV Speech Player presets and CodeQL validates finger-spelling datasets."
+    },
+    {
+      "title": "French Sign Language",
+      "url": "https://en.wikipedia.org/wiki/French_Sign_Language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "sign-language"
+      ],
+      "sample_assets": [
+        "Wikipedia phonology timelines",
+        "DataJake bilingual lexicons",
+        "GitHub SignWriting tooling",
+        "NVDA braille contractions"
+      ],
+      "notes": "Supports ISO `fsl` tactile-first presets by pairing bilingual gloss resources with CodeQL-audited SignWriting ingestion and NV Speech Player **Scope depth** tuning."
+    },
+    {
+      "title": "International Sign",
+      "url": "https://en.wikipedia.org/wiki/International_Sign",
+      "usefulness": "medium",
+      "progress": "researching glossary aggregation",
+      "classification": [
+        "language",
+        "sign-language",
+        "lingua franca"
+      ],
+      "sample_assets": [
+        "Wikipedia congress usage notes",
+        "DataJake summit glossaries",
+        "GitHub gesture corpora",
+        "NVDA braille exports"
+      ],
+      "notes": "Captures lingua-franca classifier norms so ISO `ils` profiles balance spoken-language cues, NVDA braille outputs, and CodeQL-governed gloss imports."
+    },
+    {
+      "title": "Kenyan Sign Language",
+      "url": "https://en.wikipedia.org/wiki/Kenyan_Sign_Language",
+      "usefulness": "medium",
+      "progress": "researching educational corpus ingestion",
+      "classification": [
+        "language",
+        "sign-language"
+      ],
+      "sample_assets": [
+        "Wikipedia phonology primers",
+        "DataJake education glossaries",
+        "GitHub gesture datasets",
+        "NVDA braille exports"
+      ],
+      "notes": "Stages ISO `xki` HamNoSys/SignWriting presets by aligning East African gesture corpora with NV Speech Player harmonics and CodeQL validation."
     }
   ]
 }
