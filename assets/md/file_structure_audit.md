@@ -42,6 +42,7 @@ Document future updates here as you work through the backlog so the history of t
 ### Progress since the last update
 
 - **Resource path shim landed.** `assets/py/resource_paths.py` now centralises path discovery for DLLs, `.syn` voices, language profiles, phoneme catalogues, and NV Speech Player exports. The Eloquence driver, phoneme and voice catalogues, and the language profile tooling now resolve assets through this helper so the extension-first layout works without recreating the legacy `eloquence/` tree. Follow-up work: teach `build.py` to hydrate `synthDrivers/eloquence_data` from the new buckets before packaging.
+- **Build helper now hydrates the assets layout.** Running `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` copies the `assets/` hierarchy (DLLs, `.syn` voices, documentation, JSON catalogues) directly into the staging area, falls back to legacy `eloquence_data/` when present, and warns when `eci.dll` is missing from `assets/dll`. This keeps the NVDA packaging drill and downstream CodeQL scanning aligned with the new structure while we continue migrating extensionless datasets out of `speechdata/`.
 
 ## Automation helpers
 

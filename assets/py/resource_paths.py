@@ -18,7 +18,27 @@ from pathlib import Path
 from typing import Iterable, Iterator, List
 
 
-_REPO_ROOT = Path(__file__).resolve().parents[1]
+def _discover_repo_root() -> Path:
+    """Return the directory that hosts the ``assets`` tree.
+
+    The helper walks up from the current module until it finds a parent that
+    exposes an ``assets`` directory.  This keeps the logic resilient to both
+    repository checkouts (where this file lives under ``assets/py``) and
+    packaged add-ons (where the module ships inside ``synthDrivers`` alongside
+    a sibling ``assets`` directory).
+    """
+
+    current = Path(__file__).resolve().parent
+    for candidate in [current, *current.parents]:
+        assets_dir = candidate / "assets"
+        if assets_dir.is_dir():
+            return candidate
+    # Fall back to the immediate parent so unit tests still run even if the
+    # asset tree has not been staged yet.
+    return current
+
+
+_REPO_ROOT = _discover_repo_root()
 _ASSETS_ROOT = _REPO_ROOT / "assets"
 
 
