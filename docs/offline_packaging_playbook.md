@@ -155,6 +155,12 @@ documentation or dataset payloads you staged.
 - Stage the matching `.dic` and corpus payloads—DataJake radio drama lexicons for Basque/Occitan, canton education corpora for Romansh, parliamentary transcripts for Luxembourgish, and folk song dictionaries for Asturian/Walloon—then refresh `docs/archive_inventory.{json,md}` with `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` to log audio fidelity, voice hints, and pronunciation coverage before packaging.
 - Regenerate the frequency and slider reports (`python tools/report_voice_frequency_matrix.py`, `python tools/report_voice_parameters.py`) alongside `python tools/report_language_progress.py` so NV Speech Player **Inflection contour**, **Nasal balance**, **Stress**, and **Macro volume** presets reflect the new Romance and Basque heritage dialects prior to running `python build.py --insecure --no-download --output dist/eloquence.nvda-addon`.
 
+### Anatolian and Caspian sprint focus
+
+- Refresh the new Abkhaz, Adyghe, Kabardian, Laz, Kurmanji, Sorani, South Azerbaijani, Talysh, and Zazaki dossiers via [`docs/language_research_index.*`](language_research_index.md) or rerun `python tools/catalog_wikipedia_languages.py --output-json docs/wikipedia_language_index.json --output-markdown docs/wikipedia_language_index.md` before staging assets so offline builders capture the Caucasus and Caspian provenance snapshot.
+- Restore or extract the paired DataJake corpora (Caucasus field recordings, radio glossaries, civic-language dictionaries) and log them with `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` so CodeQL reviews can trace ejective consonant coverage, tanwīn-style diacritics, and dual-script transcription payloads.
+- After regenerating the standard dashboards, run `python tools/validate_language_pronunciations.py --json docs/language_pronunciation_validation.json --markdown docs/language_pronunciation_validation.md` to confirm Perso-Arabic ↔ Latin transliteration rules remain consistent, then rebuild `python tools/report_voice_frequency_matrix.py` to tune **Plosive impact**, **Tone**, **Sibilant clarity**, and **Nasal balance** presets for the sprint before packaging.
+
 ## 7. Validate in NVDA
 
 1. Install the add-on via **Tools → Add-ons → Install** inside NVDA (alpha-52731

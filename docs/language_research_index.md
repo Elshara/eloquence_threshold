@@ -303,6 +303,20 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | Medium | [Even language](https://en.wikipedia.org/wiki/Even_language) | language / phonology | Pending structured ingestion | Aggregates Tungusic vowel harmony and glottal consonant cues; DataJake scripture lexicons and GitHub orthography converters inform NVDA braille validation for ISO `eve`. |
 | Medium | [Evenki language](https://en.wikipedia.org/wiki/Evenki_language) | language / phonology | Researching dual-script export | Covers Cyrillic/Latin orthography, vowel harmony, and ejective consonants; DataJake storytelling archives plus GitHub morphology scripts align with NV Speech Player presets and NVDA manuals for ISO `evn`. |
 
+## Anatolian and Caspian sprint dossiers (October 2025)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Abkhaz language](https://en.wikipedia.org/wiki/Abkhaz_language) | language / phonology | Pending structured ingestion | Captures ejective consonant inventories and palatal harmony notes; pairs with DataJake Abkhaz grammar corpora and NVDA braille exports to validate Cyrillic↔Latin transliteration for ISO `ab`. |
+| High | [Adyghe language](https://en.wikipedia.org/wiki/Adyghe_language) | language / phonology | Pending structured ingestion | Details North-West Caucasian ejectives, labialisation, and stress placement; informs NV Speech Player **Plosive impact** and **Sibilant clarity** presets backed by DataJake field recordings and GitHub morphological analysers. |
+| Medium | [Kabardian language](https://en.wikipedia.org/wiki/Kabardian_language) | language / morphology | Researching tone/affricate mapping | Provides polysynthetic verb structure references and velar harmony metadata; ties to DataJake Kabardian dictionaries and NVDA braille tests for soft sign behaviour across ISO `kbd`. |
+| Medium | [Laz language](https://en.wikipedia.org/wiki/Laz_language) | language / orthography | Researching ejective apostrophes | Documents Georgian script usage, Latin transcription, and vowel harmony; aligns with DataJake Black Sea corpora and GitHub orthography converters for ISO `lzz` packaging. |
+| High | [Kurmanji Kurdish](https://en.wikipedia.org/wiki/Kurmanji) | language / morphology | Pending structured ingestion | Tracks Latin orthography, vowel harmony, and stress cues; used to calibrate DataJake broadcast lexicons and GitHub morphological generators for ISO `kmr` voice templates. |
+| High | [Central Kurdish](https://en.wikipedia.org/wiki/Central_Kurdish) | language / phonology | Researching Perso-Arabic diacritics | Surfaces Sorani vowel reduction, tanwīn-style diacritics, and clitic behaviour; NVDA braille exports plus DataJake civic-language corpora map the ISO `ckb` roadmap. |
+| Medium | [South Azerbaijani language](https://en.wikipedia.org/wiki/South_Azerbaijani_language) | language / orthography | Pending structured ingestion | Captures Perso-Arabic ↔ Latin mapping, vowel harmony, and fortition cues; anchors ISO `azb` dictionaries sourced from DataJake radio glossaries and GitHub transliteration pipelines. |
+| Medium | [Talysh language](https://en.wikipedia.org/wiki/Talysh_language) | language / phonology | Researching nasal harmony export | Provides Caspian vowel harmony, nasalisation, and prosody tables that guide NV Speech Player **Nasal balance** presets with DataJake corpus support for ISO `tly`. |
+| Medium | [Zaza language](https://en.wikipedia.org/wiki/Zaza_language) | language / phonology | Researching stress contour staging | Highlights vowel harmony variants, stress, and emphatic consonants; DataJake liturgical recordings plus GitHub Kurdish–Zaza converters inform ISO `zza` dictionary seeding and NVDA braille regressions. |
+
 ## Technical, programming, and modelling languages
 
 These resources ensure Eloquence can speak developer-centric content with the

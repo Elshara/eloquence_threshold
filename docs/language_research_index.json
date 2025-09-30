@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-20T04:30:00Z",
+  "updated": "2025-10-21T04:30:00Z",
   "sources": [
     {
       "title": "Lists of languages",
@@ -2840,6 +2840,159 @@
         "NVDA manual punctuation exports"
       ],
       "notes": "Dual-script vowel harmony and ejective consonant data ensures ISO `evn` coverage lines up with DataJake corpora, GitHub morphology tools, and NVDA punctuation/braille audits during offline packaging."
+    },
+    {
+      "title": "Abkhaz language",
+      "url": "https://en.wikipedia.org/wiki/Abkhaz_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia ejective consonant inventories",
+        "DataJake Abkhaz grammar corpora",
+        "GitHub palatalisation analysers",
+        "NVDA braille exports"
+      ],
+      "notes": "Captures ejective consonants, palatal harmony, and digraph usage so ISO `ab` profiles can align DataJake corpora and GitHub converters with NVDA Cyrillic\u2194Latin transliteration under CodeQL review."
+    },
+    {
+      "title": "Adyghe language",
+      "url": "https://en.wikipedia.org/wiki/Adyghe_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia ejective consonant charts",
+        "DataJake Caucasus field recordings",
+        "GitHub morphology analysers",
+        "NVDA braille exports"
+      ],
+      "notes": "North-West Caucasian phonotactics guide NV Speech Player **Plosive impact** and **Sibilant clarity** presets while DataJake recordings and NVDA punctuation audits validate ISO `ady` dictionary staging."
+    },
+    {
+      "title": "Kabardian language",
+      "url": "https://en.wikipedia.org/wiki/Kabardian_language",
+      "usefulness": "medium",
+      "progress": "researching tone/affricate mapping",
+      "classification": [
+        "language",
+        "morphology"
+      ],
+      "sample_assets": [
+        "Wikipedia polysynthetic verb notes",
+        "DataJake Kabardian dictionaries",
+        "GitHub finite-state morphology tools",
+        "NVDA braille exports"
+      ],
+      "notes": "Tracks verb template stacking, velar harmony, and affricate soft sign usage so ISO `kbd` seeding can balance DataJake lexicons with GitHub tooling and NVDA braille tests."
+    },
+    {
+      "title": "Laz language",
+      "url": "https://en.wikipedia.org/wiki/Laz_language",
+      "usefulness": "medium",
+      "progress": "researching ejective apostrophes",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Wikipedia orthography primers",
+        "DataJake Black Sea corpora",
+        "GitHub Georgian-Latin converters",
+        "NVDA braille exports"
+      ],
+      "notes": "Documents Georgian script usage, Latin transcription, and ejective apostrophes so ISO `lzz` packaging can align DataJake corpora with NVDA braille punctuation and CodeQL-reviewed converters."
+    },
+    {
+      "title": "Kurmanji",
+      "url": "https://en.wikipedia.org/wiki/Kurmanji",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "morphology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony tables",
+        "DataJake broadcast lexicons",
+        "GitHub morphological generators",
+        "NVDA braille exports"
+      ],
+      "notes": "Captures Latin orthography, vowel harmony, and stress cues so ISO `kmr` voices map DataJake corpora to NV Speech Player tone sliders with NVDA braille regression coverage."
+    },
+    {
+      "title": "Central Kurdish",
+      "url": "https://en.wikipedia.org/wiki/Central_Kurdish",
+      "usefulness": "high",
+      "progress": "researching Perso-Arabic diacritics",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel reduction notes",
+        "DataJake civic-language corpora",
+        "GitHub Sorani analysers",
+        "NVDA braille exports"
+      ],
+      "notes": "Tanw\u012bn-style diacritics and clitic behaviour documented here guide ISO `ckb` dictionary imports, keeping DataJake sources and NVDA braille punctuation in sync under CodeQL supervision."
+    },
+    {
+      "title": "South Azerbaijani language",
+      "url": "https://en.wikipedia.org/wiki/South_Azerbaijani_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony research",
+        "DataJake radio glossaries",
+        "GitHub transliteration pipelines",
+        "NVDA manual punctuation exports"
+      ],
+      "notes": "Perso-Arabic to Latin mapping and vowel harmony cues align ISO `azb` voice templates with DataJake glossaries, GitHub tooling, and NVDA punctuation/braille baselines."
+    },
+    {
+      "title": "Talysh language",
+      "url": "https://en.wikipedia.org/wiki/Talysh_language",
+      "usefulness": "medium",
+      "progress": "researching nasal harmony export",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia nasalisation studies",
+        "DataJake Caspian corpora",
+        "GitHub transliteration tools",
+        "NV Speech Player slider presets"
+      ],
+      "notes": "Nasal harmony and vowel reduction metadata guide NV Speech Player **Nasal balance** settings for ISO `tly`, tying DataJake corpora to GitHub converters and NVDA punctuation audits."
+    },
+    {
+      "title": "Zaza language",
+      "url": "https://en.wikipedia.org/wiki/Zaza_language",
+      "usefulness": "medium",
+      "progress": "researching stress contour staging",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia stress contour notes",
+        "DataJake liturgical recordings",
+        "GitHub Kurdish-Zaza converters",
+        "NVDA braille exports"
+      ],
+      "notes": "Stress contour, vowel harmony, and emphatic consonant references allow ISO `zza` seeding to align DataJake recordings, GitHub converters, and NVDA braille validation before packaging."
     }
   ]
 }

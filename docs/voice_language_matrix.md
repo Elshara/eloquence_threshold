@@ -1,6 +1,6 @@
 # Voice and language linkage
 
-* Generated: 2025-09-30T00:28:25Z
+* Generated: 2025-09-30T01:13:43Z
 * Templates analysed: 70
 * Language profiles analysed: 53
 * Languages observed: 53
