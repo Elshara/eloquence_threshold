@@ -1,5 +1,5 @@
 {
-  "updated": "2025-09-29T23:43:24Z",
+  "updated": "2025-10-18T02:15:00Z",
   "sources": [
     {
       "title": "Lists of languages",
@@ -2347,6 +2347,118 @@
         "NVDA braille tables"
       ],
       "notes": "Captures glottal stop timing and vowel length data so ISO `rap` voice presets map to the frequency matrix and offline packaging drill."
+    },
+    {
+      "title": "Kyrgyz language",
+      "url": "https://en.wikipedia.org/wiki/Kyrgyz_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "vowel harmony"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony tables",
+        "DataJake MBROLA lexicons",
+        "GitHub transliteration pipelines"
+      ],
+      "notes": "Documents vowel harmony, stress, and apostrophe digraph behaviour so ISO `ky` dual-script presets align with NVDA braille exports and CodeQL-audited transliteration helpers."
+    },
+    {
+      "title": "Kazakh language",
+      "url": "https://en.wikipedia.org/wiki/Kazakh_language",
+      "usefulness": "high",
+      "progress": "indexed from backlog",
+      "classification": [
+        "language",
+        "vowel harmony"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony charts",
+        "DataJake news corpora",
+        "NVDA punctuation audits"
+      ],
+      "notes": "Captures vowel harmony tiers, ejective consonants, and script reform metadata that feed NV Speech Player **Tone**/**Macro volume** presets for ISO `kk`."
+    },
+    {
+      "title": "Tajik language",
+      "url": "https://en.wikipedia.org/wiki/Tajik_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "dual-script"
+      ],
+      "sample_assets": [
+        "Persian phonology references",
+        "DataJake dictionary payloads",
+        "GitHub Latinisation utilities"
+      ],
+      "notes": "Pairs Persian phonology with Tajik Cyrillic orthography; guides CodeQL-reviewed transliteration helpers and NV Speech Player preset validation before packaging ISO `tg`."
+    },
+    {
+      "title": "Bashkir language",
+      "url": "https://en.wikipedia.org/wiki/Bashkir_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia velarisation notes",
+        "DataJake folk song recordings",
+        "GitHub orthography scripts"
+      ],
+      "notes": "Highlights velarised consonants, vowel harmony, and diacritics so Bashkir (`ba`) EQ presets mirror Central Eurasian corpora and NVDA braille exports."
+    },
+    {
+      "title": "Chuvash language",
+      "url": "https://en.wikipedia.org/wiki/Chuvash_language",
+      "usefulness": "medium",
+      "progress": "researching structured export",
+      "classification": [
+        "language",
+        "vowel harmony"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony deviations",
+        "DataJake hymn lexicons",
+        "GitHub morphological analysers"
+      ],
+      "notes": "Details vowel harmony deviations and palatalisation cues so ISO `cv` dictionary imports align with NV Speech Player **Sibilant clarity** presets and CodeQL policies."
+    },
+    {
+      "title": "Sakha language",
+      "url": "https://en.wikipedia.org/wiki/Sakha_language",
+      "usefulness": "medium",
+      "progress": "researching overtone capture",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia overtone/throat singing notes",
+        "DataJake storytelling corpora",
+        "NVDA braille punctuation exports"
+      ],
+      "notes": "Provides throat-singing timbre, vowel harmony, and consonant length metadata so ISO `sah` presets map NV Speech Player **Tone size**/**Scope depth** sliders to Central Eurasian recordings."
+    },
+    {
+      "title": "Udmurt language",
+      "url": "https://en.wikipedia.org/wiki/Udmurt_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia consonant harmony notes",
+        "DataJake folk song dictionaries",
+        "GitHub finite-state analysers"
+      ],
+      "notes": "Supplies consonant harmony, vowel reduction, and orthography cues so ISO `udm` packaging aligns DataJake corpora with NVDA braille exports and NV Speech Player slider defaults."
     }
   ]
 }

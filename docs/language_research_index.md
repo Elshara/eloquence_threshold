@@ -258,6 +258,18 @@ This sprint pulls each bibliography into `docs/language_research_index.json` so 
 | Medium | [Slovene language](https://en.wikipedia.org/wiki/Slovene_language) | language / accent | Researching tone extraction | Lists tonemic diacritics and circumflex/acute contrasts; guides Slovene hymn lexicon ingestion and NV Speech Player **Tone size** defaults. |
 | Medium | [Macedonian language](https://en.wikipedia.org/wiki/Macedonian_language) | language / phonology | Pending structured ingestion | Highlights schwa behaviour, voicing assimilation, and stress regularity; underpins GitHub transliteration utilities and NVDA manual audits for Macedonian packaging. |
 
+## Central Eurasian Silk Road research sprint (October 2025 extension)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Kyrgyz language](https://en.wikipedia.org/wiki/Kyrgyz_language) | language / vowel harmony | Pending structured ingestion | Documents vowel harmony, stress, and digraph apostrophes used to align Kyrgyz (`ky`) dual-script presets with DataJake MBROLA corpora and GitHub transliteration pipelines. |
+| High | [Kazakh language](https://en.wikipedia.org/wiki/Kazakh_language) | language / vowel harmony | Indexed from backlog | Captures vowel harmony tiers, ejective consonants, and script reform metadata feeding NV Speech Player **Tone**/**Macro volume** defaults and NVDA braille punctuation checks. |
+| High | [Tajik language](https://en.wikipedia.org/wiki/Tajik_language) | language / dual-script | Pending structured ingestion | Pairs Persian phonology with Tajik Cyrillic orthography; informs CodeQL-reviewed transliteration helpers, DataJake `.dic` payload planning, and NVDA punctuation validation before packaging ISO `tg`. |
+| Medium | [Bashkir language](https://en.wikipedia.org/wiki/Bashkir_language) | language / phonology | Pending structured ingestion | Highlights velarised consonants, vowel harmony, and diacritics leveraged to tune Bashkir (`ba`) EQ presets from DataJake folk song corpora and GitHub orthography scripts. |
+| Medium | [Chuvash language](https://en.wikipedia.org/wiki/Chuvash_language) | language / vowel harmony | Researching structured export | Details vowel harmony deviations and palatalisation cues; guides DataJake hymn lexicon ingestion and NV Speech Player **Sibilant clarity** presets for ISO `cv`. |
+| Medium | [Sakha language](https://en.wikipedia.org/wiki/Sakha_language) | language / phonology | Researching overtone capture | Provides throat-singing timbre, vowel harmony, and consonant length metadata used to map NV Speech Player **Tone size**/**Scope depth** sliders while cross-referencing DataJake storytelling archives for ISO `sah`. |
+| Medium | [Udmurt language](https://en.wikipedia.org/wiki/Udmurt_language) | language / phonology | Pending structured ingestion | Supplies consonant harmony, vowel reduction, and orthography notes necessary to align DataJake folk song dictionaries, GitHub finite-state analysers, and NVDA braille exports for ISO `udm`. |
+
 ## Technical, programming, and modelling languages
 
 These resources ensure Eloquence can speak developer-centric content with the

@@ -15,6 +15,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | ar, ar-EG | Arabic | Seeded | Profiles sourced from `eloquence_data/languages/world_language_seeds.json`; leverages Quranic recitation corpora for emphatic consonants. |
 | as | Bengali-Assamese | Planned | Wikipedia-derived consonant inventory staged; awaiting Assamese-specific schwa deletion tests via NVDA nightly builds. |
 | az | Latin (Azeri) | Planned | GitHub transliteration utilities catalogued; NVDA docs scanned for glottal stop punctuation cues. |
+| ba | Cyrillic & Latin (Bashkir) | Researching | Cached Wikipedia vowel harmony/velarisation tables paired with DataJake folk song corpora and GitHub transliteration tools; NVDA braille exports confirm Bashkir-specific diacritics before EQ tuning. |
 | bg | Cyrillic (Bulgarian) | Developing | DataJake MBROLA payloads flagged for vowel reduction heuristics; Wikipedia stress matrices under review. |
 | bi | Latin (Bislama) | Planned | Cached Wikipedia phonotactic notes and DataJake Radio Vanuatu lexicons align with GitHub orthography converters; NVDA manual exports confirm apostrophe punctuation before CodeQL profile seeding. |
 | bn, bn-IN | Bengali | Comprehensive | Builds on DataJake phoneme stubs and NVDA manual terminology to map inherent vowel suppression rules. |
@@ -22,6 +23,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | cab | Latin (Garifuna) | Researching | Cached Wikipedia Garifuna phonology and orthography charts paired with DataJake community radio `.dic` inventories; GitHub revitalisation grammars and NVDA braille exports confirm apostrophe tone markers prior to EQ tuning. |
 | ceb | Latin (Cebuano) | Researching | DataJake hymn `.dic` payloads catalogued alongside GitHub orthography converters; cached Wikipedia vowel harmony notes guide NV Speech Player **Tone size** and **Subtones** defaults prior to CodeQL-audited profile seeding. |
 | ch | Latin (Chamorro) | Planned | Wikipedia glottal stop guidance matched with DataJake Guam civic-language corpora and GitHub Chamorro spelling reform scripts; NVDA braille tables referenced to validate geminate consonant dots. |
+| cv | Cyrillic & Latin (Chuvash) | Researching | DataJake hymn recordings catalogued alongside Wikipedia vowel harmony and palatalisation notes; GitHub morphology projects feed CodeQL-audited dictionary staging with NVDA braille exports for diacritics. |
 | chr | Cherokee syllabary | Researching | Wikipedia syllabary tables mirrored; GitHub DECtalk lexicon fragments staged for syllable-to-phoneme mapping prior to NVDA braille export integration. |
 | cs | Latin (Czech) | Established | Awaiting expanded consonant cluster rules from archived DECtalk dictionaries. |
 | da | Latin (Danish) | Developing | NVDA documentation snapshot provides stød examples; DataJake lexicons mapped to vowel reduction slider defaults. |
@@ -59,6 +61,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | ka | Georgian (Mkhedruli) | Planned | Wikipedia ejective consonant inventory stored; NV Speech Player presets targeted for uvular EQ boosts. |
 | kl | Latin (Kalaallisut) | Researching | Greenlandic polysynthetic morphology mapped from Wikipedia; GitHub analysers referenced for suffix stacking during phoneme generation. |
 | ks | Perso-Arabic & Sharada (Kashmiri) | Planned | Dual-script roadmap logged; NVDA braille tables and GitHub transliteration utilities referenced for voiceless aspirate handling. |
+| ky | Cyrillic & Latin (Kyrgyz) | Researching | Wikipedia vowel harmony charts and DataJake MBROLA lexicons align with GitHub transliteration utilities; NV Speech Player **Tone**/**Vocal range** presets staged pending dual-script validation in NVDA manuals. |
 | jv | Latin (Javanese) | Planned | Script variants (Latin/Hanacaraka) catalogued in the Wikipedia index; awaiting dictionary ingestion to resolve vowel length cues. |
 | kk | Cyrillic (Kazakh) | Planned | Cyrillic/Latin dual-script corpora tagged; NVDA docset scanned for apostrophe-based digraph hints. |
 | km | Khmer | Planned | Unicode dependent vowel tables mirrored; DataJake MBROLA seeds under review for diphthong contours. |
@@ -99,6 +102,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | sm | Latin (Samoan) | Planned | Glottal stop (`ʻeta`) usage catalogued from Wikipedia; DataJake scripture datasets mapped to vowel length for EQ calibration and NVDA braille hyphenation. |
 | sd | Arabic (Sindhi) | Planned | Arabic-derived vowel marks and Sindhi-specific consonants tracked; NVDA braille tables referenced for implosive consonant cues. |
 | sg | Latin (Sango) | Researching | DataJake scripture corpora inventoried; Wikipedia tonal reduction studies combined with NVDA manual punctuation exports to calibrate **Macro volume** and **Tone** sliders. |
+| sah | Cyrillic (Sakha/Yakut) | Researching | Cached Wikipedia vowel harmony and long consonant cues paired with DataJake storytelling archives; NV Speech Player **Tone size**/**Scope depth** presets tuned while NVDA braille exports verify Cyrillic diacritics. |
 | sn | Latin (Shona) | Researching | Wikipedia downstep/whistled speech studies cross-referenced with DataJake pronunciation datasets and GitHub prosody corpora; NVDA manual exports confirm tone apostrophe behaviour before CodeQL gating. |
 | sr, sr-Latn | Cyrillic & Latin (Serbian) | Researching | Cached Wikipedia palatalisation notes plus Serbian National Corpus samples funnel into DataJake `.lex` payload triage; NVDA manual exports confirm Cyrillic/Latin punctuation parity ahead of CodeQL-audited template seeding. |
 | cnr | Latin (Montenegrin) | Planned | Wikipedia dual-accent overview staged; GitHub Montenegrin corpus snippets aligned with Serbian/Bosnian templates to validate ś/ź phoneme coverage. |
@@ -107,6 +111,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | sw | Latin (Swahili) | Comprehensive | Phoneme templates tuned to recorded DataJake archives with 48 kHz stereo metadata. |
 | si | Sinhala | Planned | Sinhala script stroke order and inherent vowel data mirrored; NV Speech Player contour presets targeted for murmur handling and DataJake lexicons flagged for geminate consonants. |
 | tfn | Latin (Dena’ina) | Researching | Wikipedia dialect dossier ingested; DataJake archival wordlists tagged for tone plateau modelling and NV Speech Player **Nasal balance** presets. |
+| tg | Cyrillic & Perso-Arabic (Tajik) | Researching | Wikipedia phonology articles linked with DataJake Persian/Tajik dictionaries; GitHub transliteration pipelines staged so NV Speech Player presets cover both scripts ahead of CodeQL review. |
 | ti | Ethiopic (Tigrinya) | Researching | Ethiopic gemination charts captured from Wikipedia; DataJake lexicons and NVDA braille exports queued to validate Ge’ez punctuation while GitHub finite-state resources inform verb template planning. |
 | tkl | Latin (Tokelauan) | Planned | Cached Wikipedia vowel length contour data merged with DataJake hymn lexicons and GitHub Tokelauan spelling checkers; NVDA braille exports validate macron and glottal stop behaviour ahead of CodeQL packaging checks. |
 | tn | Latin (Setswana) | Planned | DataJake `.lex` payloads mapped to alveolar click coverage; NV Speech Player **Vocal range** slider defaults tuned using GitHub phonology datasets and NVDA hyphenation samples. |
@@ -122,6 +127,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | wo | Latin (Wolof) | Planned | High/low tone orthography referenced; GitHub language models queued for nasal cluster coverage. |
 | zh-Hans | Han (Simplified Chinese) | Developing | NVDA dictionary extracts and GitHub Pinyin to IPA datasets align; DataJake tone recordings queued for 4-tone verification. |
 | zh-Hant | Han (Traditional Chinese) | Planned | Wikipedia-based bopomofo mapping added; awaiting DataJake lexicons for Hakka/Min overlays. |
+| udm | Cyrillic (Udmurt) | Researching | DataJake folk song corpora queued with Wikipedia consonant harmony notes; GitHub finite-state analysers guide NV Speech Player **Sibilant clarity**/**Smoothness** sliders and NVDA braille exports confirm diacritics. |
 | ug | Arabic & Latin (Uyghur) | Planned | Wikipedia vowel harmony notes stored; GitHub Latinisation datasets and NVDA punctuation exports staged for dual-script packaging. |
 | uz | Latin & Cyrillic (Uzbek) | Planned | Script switcher seeded using GitHub transliteration rules; DataJake `.dic` inventory queued to verify vowel harmony and stress. |
 | yue | Han (Traditional, Cantonese) | Planned | Jyutping corpora catalogued; NV Speech Player tone slider clones targeted at six-tone sets. |
@@ -252,6 +258,36 @@ Contributors can reference this roadmap when proposing pull requests so reviews 
 - Validate the Andean/Amazonian locales against NVDA alpha-52762 and `2025.3` installers mirrored via `python tools/audit_nvaccess_downloads.py` before staging a release candidate.
 - Capture unit test and build logs in the pull request body (see the offline build rehearsal checklist) so blind/low-vision reviewers can replay the commands without leaving the terminal.
 - Refresh the README sprint summary and `AGENTS.md` after each iteration to highlight the cross-source artefacts consumed during the expansion.
+
+## Central Eurasian Silk Road sprint (October 2025 extension)
+
+| ISO / tag | Script focus | Status | Notes |
+| --- | --- | --- | --- |
+| ky | Cyrillic & Latin (Kyrgyz) | Researching | Wikipedia vowel harmony charts aligned with DataJake MBROLA lexicons and GitHub transliteration utilities; NVDA braille exports confirm apostrophe-based digraphs before seeding dual-script presets. |
+| kk | Cyrillic & Latin (Kazakh) | Researching | Cached vowel harmony and ejective consonant data reused from the global roadmap now includes DataJake news corpora and NVDA punctuation audits to stage NV Speech Player **Tone**/**Macro volume** defaults. |
+| tg | Cyrillic & Perso-Arabic (Tajik) | Researching | Persian phonology references matched with Tajik Cyrillic orthography; GitHub Latinisation pipelines and DataJake `.dic` payloads document dual-script packaging tasks ahead of CodeQL review. |
+| ba | Cyrillic & Latin (Bashkir) | Researching | DataJake folk song recordings paired with Wikipedia velarisation notes and GitHub transliteration tools; NVDA braille exports confirm Bashkir diacritics before EQ calibration. |
+| cv | Cyrillic & Latin (Chuvash) | Researching | Wikipedia vowel harmony and consonant palatalisation metadata staged with DataJake hymn corpora; GitHub morphological analysers drive CodeQL-audited dictionary imports. |
+| sah | Cyrillic (Sakha/Yakut) | Researching | Cached vowel harmony, long consonant, and throat-singing timbre notes from Wikipedia cross-referenced with DataJake storytelling corpora to tune NV Speech Player **Tone size**/**Scope depth** presets. |
+| udm | Cyrillic (Udmurt) | Researching | DataJake folk song lexicons and GitHub finite-state analysers stage consonant harmony coverage; NVDA braille exports validate diacritic handling before packaging. |
+
+### Frequency, phoneme, and speech parameter backlog
+
+- Regenerate `docs/voice_frequency_matrix.md` after capturing Kyrgyz and Bashkir vowel harmony EQ envelopes so **Tone**, **Vocal range**, and **Sibilant clarity** sliders reflect Central Eurasian spectral data.
+- Map Tajik dual-script vowel inventories into `phoneme_customizer.py`, clamping frequency boosts to the 1–8 kHz band for Cyrillic vowels while verifying 8–384 kHz safety against the WASAPI-aware EQ engine recorded in `AGENTS.md`.
+- Extend NV Speech Player presets with Sakha throat-singing overtone metadata by running `python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print` after staging DataJake corpora.
+
+### Dictionary and corpus integration tasks
+
+- Audit DataJake archives for Bashkir, Chuvash, and Udmurt `.dic`/`.lex` payloads with `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` and tag the findings in `docs/language_research_index.md` / `.json`.
+- Capture GitHub transliteration utilities for Kyrgyz, Kazakh, and Tajik (Cyrillic ⇄ Latin/Perso-Arabic) in the research index so CodeQL policies can track dual-script pipelines before import.
+- Coordinate NVDA manual snapshot refreshes via `python tools/audit_nvaccess_downloads.py` and `python tools/check_nvda_updates.py` whenever new Cyrillic/Latin documentation surfaces, then update `docs/nvda_update_recommendations.md` with the severity notes.
+
+### Testing and packaging checkpoints
+
+- Run `python tools/summarize_language_assets.py`, `python tools/report_language_maturity.py`, and `python tools/report_language_progress.py` after ingesting any Central Eurasian dictionaries so coverage dashboards log the dual-script deltas.
+- Validate the updated locales against NVDA alpha-52762 nightly builds plus the cached `2025.3` stable installer, capturing logs in README/AGENTS updates for offline reproducibility.
+- Exercise `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` once the dashboards refresh to confirm the add-on packages new presets without accessing external mirrors.
 
 ## Horn of Africa and Indian Ocean integration sprint (October 2025 extension)
 
