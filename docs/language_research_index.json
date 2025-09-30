@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-23T04:30:00Z",
+  "updated": "2025-10-24T04:30:00Z",
   "sources": [
     {
       "title": "Lists of languages",
@@ -3200,6 +3200,57 @@
         "NVDA braille exports"
       ],
       "notes": "Updated Sakha/Yakut vowel length and overtone metadata keep ISO `sah` **Tone size**/**Scope depth** presets aligned with DataJake corpora and NVDA documentation."
+    },
+    {
+      "title": "Faroese language",
+      "url": "https://en.wikipedia.org/wiki/Faroese_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia stød and vowel length tables",
+        "DataJake hymn lexicons",
+        "GitHub Faroese lemmatisers",
+        "NVDA braille exports"
+      ],
+      "notes": "Stød and vowel length guidance align ISO `fo` presets with DataJake corpora, GitHub lemmatisers, and NVDA documentation before CodeQL-reviewed dictionary imports."
+    },
+    {
+      "title": "Ligurian language",
+      "url": "https://en.wikipedia.org/wiki/Ligurian_language",
+      "usefulness": "medium",
+      "progress": "researching diacritic export",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Wikipedia orthography surveys",
+        "DataJake diaspora corpora",
+        "GitHub Genoese spell-checkers",
+        "NVDA braille exports"
+      ],
+      "notes": "Historical orthography metadata feeds ISO `lij` dictionary planning, NV Speech Player **Sibilant clarity** presets, and NVDA braille regression tests."
+    },
+    {
+      "title": "Venetian language",
+      "url": "https://en.wikipedia.org/wiki/Venetian_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia prosody research",
+        "DataJake theatre transcripts",
+        "GitHub Veneto NLP toolkits",
+        "NVDA punctuation exports"
+      ],
+      "notes": "Lagoon prosody and diacritic cues support ISO `vec` **Scope depth**/**Smoothness** presets while CodeQL tracks dictionary provenance from DataJake and GitHub artefacts."
     }
   ]
 }

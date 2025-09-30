@@ -52,6 +52,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | fa | Arabic (Persian) | Comprehensive | Integrates Ezafe articulation from Wikipedia grammar references. |
 | ff | Latin (Fula/Pulaar) | Researching | Wikipedia ATR harmony tables combined with DataJake Qur’anic recitations, GitHub Ajami↔Latin transliteration tools, and NVDA punctuation exports so CodeQL-audited dictionaries preserve implosive and prenasalised consonants. |
 | fil | Latin (Filipino) | Seeded | NVDA manual extracts processed; awaiting morphological corpora from GitHub to tune affix pronunciation. |
+| fo | Latin (Faroese) | Researching | Cached Wikipedia vowel length and stød studies paired with DataJake hymn lexicons, GitHub Faroese lemmatisers, and NVDA braille exports; informs **Tone size**/**Inflection contour** presets before CodeQL-reviewed dictionary imports. |
 | ga-IE | Latin (Irish Gaelic) | Planned | Adds BCP 47 regional tag; lenition/eclipsis roadmaps tie into NV Speech Player consonant hardness sliders. |
 | fr | Latin (French) | Developing | DataJake `.dic` payloads assigned to nasal vowel validation; NVDA manual punctuation tables mirrored. |
 | fur | Latin (Friulian) | Planned | Wikipedia orthography reforms and DataJake civic-language corpora paired with NVDA braille exports; NV Speech Player **Tone size** presets tuned for alveolar affricates prior to template seeding. |
@@ -92,6 +93,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | koi | Cyrillic (Komi-Permyak) | Researching | Cached Wikipedia vowel harmony and palatalisation notes aligned with DataJake folk-song lexicons and GitHub Uralic finite-state analysers; NVDA braille exports validate diacritics before CodeQL-ingested dictionaries. |
 | kpv | Cyrillic (Komi-Zyrian) | Researching | Wikipedia ergative alignment primers combined with DataJake archival recordings and GitHub morphological segmenters; NVDA manuals confirm soft sign handling ahead of pronunciation profile staging. |
 | lg | Latin (Luganda) | Researching | Wikipedia noun-class tone tables paired with DataJake scripture `.dic` payloads and GitHub Luganda morphological analysers; NVDA braille exports capture prenasalised digraph rules prior to CodeQL review. |
+| lij | Latin (Ligurian) | Researching | Historical orthography surveys from Wikipedia align with DataJake Ligurian diaspora corpora and GitHub Genoese spell-checkers; guides **Sibilant clarity**/**Macro volume** presets while NVDA braille exports validate grave-accent vowels ahead of dictionary seeding. |
 | ln | Latin (Lingala) | Researching | DataJake radio/scripture archives and GitHub tone sandhi scripts drive Lingala contour presets; NVDA punctuation snapshots validate French-derived quotation marks before packaging. |
 | loz | Latin (Lozi) | Researching | Cached Wikipedia Lozi tone/accent guides merged with DataJake Barotseland hymn corpora and GitHub tonal morphology projects; NVDA braille exports validate diacritics while **Plosive impact**/**Macro volume** sliders capture baritone delivery. |
 | lt | Latin (Lithuanian) | Planned | Stress accent reports collated from Wikipedia; DataJake archives triaged for pitch contour metadata. |
@@ -163,6 +165,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | tyv | Cyrillic & Latin (Tuvan) | Researching | Cached Wikipedia khoomei/tuvan throat singing contour research combined with DataJake harmonic analyses and GitHub pronunciation notebooks; NVDA braille exports validate diacritic vowels while CodeQL-reviewed dictionaries capture uvular stops and breathy phonation. |
 | ty | Latin (Tahitian) | Planned | Wikipedia phonology notes mirrored; DataJake lexicons queued for glottal stop handling while NVDA documentation guides apostrophe-based braille entries. |
 | uk | Cyrillic (Ukrainian) | Seeded | Stress data mirrored from Wikipedia tables; DataJake archives flagged for palatalisation pairs. |
+| vec | Latin (Venetian) | Researching | Cached Wikipedia Venetian phonology and orthography reforms linked with DataJake theatre corpora and GitHub Veneto NLP toolkits; informs **Scope depth**/**Smoothness** presets while NVDA braille exports verify Ò/Ù diacritic handling pre-CodeQL import. |
 | vi | Latin (Vietnamese) | Developing | Tone sandhi heuristics pulled from Wikipedia; DataJake lexical tone recordings assigned to frequency matrix planning. |
 | war | Latin (Waray-Waray) | Planned | Wikipedia stress and vowel length charts combined with DataJake scripture recordings; GitHub syllabifiers queued to validate glottal stop notation before refreshing NVDA braille exports. |
 | wa | Latin (Walloon) | Planned | Cached Wikipedia nasal vowel inventories, DataJake folk song lexicons, and NVDA braille contraction tables align Walloon diphthongs with NV Speech Player **Nasal balance** presets prior to dictionary ingestion. |
@@ -426,6 +429,33 @@ Contributors can reference this roadmap when proposing pull requests so reviews 
 - Execute `python -m unittest discover tests` after seeding the Siberian datasets to ensure CLI dashboards absorb the overtone metadata.
 - Run `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` to validate that khoomei EQ curves and dual-script dictionaries package correctly from cached assets.
 - Log sprint outcomes in `AGENTS.md`, referencing the regenerated Wikipedia/DataJake/GitHub/NVDA artefacts and refreshed dashboards to preserve provenance for future offline drills.
+
+## North Atlantic and Ligurian maritime sprint (October 2025 addition)
+
+| ISO / tag | Script focus | Status | Notes |
+| --- | --- | --- | --- |
+| fo | Latin (Faroese) | Researching | Wikipedia vowel length + stød research aligned with DataJake hymn dictionaries, GitHub Faroese lemmatisers, and NVDA braille exports; CodeQL gating protects dual-tone dictionary imports while NV Speech Player **Tone size**/**Inflection contour** presets capture island cadence. |
+| lij | Latin (Ligurian) | Researching | Historical orthography surveys and diaspora corpora cached from Wikipedia/DataJake combine with GitHub Genoese spell-checkers; NV Speech Player **Sibilant clarity**/**Macro volume** presets staged pending NVDA braille diacritic validation. |
+| vec | Latin (Venetian) | Researching | Wikipedia Venetian phonology, DataJake theatre transcripts, and GitHub Veneto NLP toolkits anchor **Scope depth**/**Smoothness** presets; NVDA punctuation exports confirm Ò/Ù handling before CodeQL-audited dictionaries land. |
+
+### Frequency, phoneme, and speech parameter backlog
+
+- Regenerate [`docs/voice_parameter_report.md`](docs/voice_parameter_report.md) and [`docs/voice_frequency_matrix.md`](docs/voice_frequency_matrix.md) after seeding Faroese, Ligurian, and Venetian EQ bands so **Tone size**, **Macro volume**, and **Smoothness** sliders reflect the new coastal corpora.
+- Extend `phoneme_customizer.py` with insular North Germanic stød controls and Ligurian/Venetian palatal fricative presets, then rerun `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print` plus `python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print` to document the new phoneme metadata.
+- Capture NV Speech Player slider defaults for each locale in `voice_parameters.py`, verifying against NVDA alpha-52762 WASAPI sample rate clamps before exporting updated presets.
+
+### Dictionary and corpus integration tasks
+
+- Append Faroese, Ligurian, and Venetian bibliographies to [`docs/language_research_index.md`](language_research_index.md) / `.json`, then refresh `docs/language_asset_summary.*` with `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print` so CodeQL automation sees the provenance delta.
+- Run `python tools/catalog_wikipedia_languages.py --output-json docs/wikipedia_language_index.json --output-markdown docs/wikipedia_language_index.md` to capture the new archipelago + Ligurian groupings before staging dictionaries.
+- Stage DataJake hymn/theatre lexicons inside `eloquence_data/` and catalogue them with `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md`; record extraction tooling (7z/unzip) for reproducibility.
+- Audit NV Access documentation for Faroese, Ligurian, and Venetian braille tables via `python tools/audit_nvaccess_downloads.py --roots releases/stable snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs/download_nvaccess_snapshot.json --markdown docs/download_nvaccess_snapshot.md`, then translate severity guidance using `python tools/check_nvda_updates.py` so offline packaging references current compatibility notes.
+
+### Testing and packaging checkpoints
+
+- Execute `python -m unittest discover tests` after importing the coastal corpora to validate CLI dashboards and EQ limits.
+- Run `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` to confirm Faroese/Ligurian/Venetian assets package correctly without published releases.
+- Log the sprint in `AGENTS.md`, citing the refreshed Wikipedia/DataJake/GitHub/NVDA artefacts, regenerated Markdown/JSON dashboards, and CodeQL gating notes for future offline drills.
 
 ## Pan-Atlantic and Indian Ocean diaspora sprint (October 2025 follow-up)
 

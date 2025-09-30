@@ -198,6 +198,14 @@ regional presets (hard/soft consonants, tonal contours, vowel harmony).
 
 This sprint pulls each bibliography into `docs/language_research_index.json` so CodeQL automation can confirm every new ISO entry cites its provenance alongside the cached DataJake, GitHub, and NVDA artefacts referenced in the README and ISO roadmap.
 
+## North Atlantic and Ligurian maritime research sprint (October 2025 addition)
+
+| Usefulness | Source | Classification | Progress | Notes |
+| --- | --- | --- | --- | --- |
+| High | [Faroese language](https://en.wikipedia.org/wiki/Faroese_language) | language / phonology | Pending structured ingestion | Documents island stød, vowel length, and prosody; pairs with DataJake hymn lexicons and NVDA braille exports so Faroese (`fo`) presets cover insular cadence before CodeQL-audited dictionary imports. |
+| Medium | [Ligurian language](https://en.wikipedia.org/wiki/Ligurian_language) | language / orthography | Researching diacritic export | Captures grave-accent vowels, apostrophes, and historical spelling reforms leveraged by DataJake diaspora corpora and GitHub Genoese spell-checkers for Ligurian (`lij`) packaging. |
+| Medium | [Venetian language](https://en.wikipedia.org/wiki/Venetian_language) | language / phonology | Pending structured ingestion | Provides Ò/Ù diacritic behaviour, voicing assimilation, and lagoon prosody; guides Venetian (`vec`) EQ presets and NVDA punctuation validation tied to cached DataJake theatre transcripts. |
+
 ## Pan-Atlantic and Indian Ocean research sprint (October 2025 follow-up)
 
 | Usefulness | Source | Classification | Progress | Notes |
