@@ -9,13 +9,15 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Dict, Iterable, List, MutableMapping, Optional
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
 import sys
 
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
+MODULE_DIR = Path(__file__).resolve().parent
+if str(MODULE_DIR) not in sys.path:
+    sys.path.insert(0, str(MODULE_DIR))
+REPO_ROOT = MODULE_DIR.parent
 
 from language_profiles import normalize_language_tag  # noqa: E402
+import resource_paths  # noqa: E402
 
 
 @dataclass
@@ -63,6 +65,19 @@ def load_json(path: Path) -> Dict[str, object]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+_JSON_DIR = resource_paths.asset_dir("json")
+
+
+def _json_path(name: str) -> Path:
+    for candidate in (
+        _JSON_DIR / name,
+        REPO_ROOT / "docs" / name,
+    ):
+        if candidate.exists():
+            return candidate
+    return _JSON_DIR / name
+
+
 def build_language_aggregates() -> Dict[str, LanguageAggregate]:
     aggregates: Dict[str, LanguageAggregate] = {}
 
@@ -76,7 +91,7 @@ def build_language_aggregates() -> Dict[str, LanguageAggregate]:
             aggregates[normalised] = aggregate
         return aggregate
 
-    progress_path = REPO_ROOT / "docs" / "language_progress.json"
+    progress_path = _json_path("language_progress.json")
     if progress_path.exists():
         progress_payload = load_json(progress_path)
         for entry in progress_payload.get("entries", []):
@@ -98,7 +113,7 @@ def build_language_aggregates() -> Dict[str, LanguageAggregate]:
                 "hasContextualHints": bool(entry.get("hasContextualHints")),
             }
 
-    coverage_path = REPO_ROOT / "docs" / "language_coverage.json"
+    coverage_path = _json_path("language_coverage.json")
     coverage_status_counts: Counter[str] = Counter()
     if coverage_path.exists():
         coverage_payload = load_json(coverage_path)
@@ -124,7 +139,7 @@ def build_language_aggregates() -> Dict[str, LanguageAggregate]:
                 }
             )
 
-    matrix_path = REPO_ROOT / "docs" / "voice_language_matrix.json"
+    matrix_path = _json_path("voice_language_matrix.json")
     template_totals = {
         "languages": 0,
         "pairings": 0,
@@ -156,7 +171,7 @@ def build_language_aggregates() -> Dict[str, LanguageAggregate]:
             template_totals["pairings"] += len(language_entry.get("pairings", []))
             template_totals["templates"] += int(language_entry.get("templateCount", 0))
 
-    research_path = REPO_ROOT / "docs" / "language_research_index.json"
+    research_path = _json_path("language_research_index.json")
     research_classifications: Counter[str] = Counter()
     research_source_total = 0
     research_updated: Optional[str] = None

@@ -9,11 +9,11 @@ from pathlib import Path
 from typing import Dict, Iterable, List, MutableMapping, Optional
 import sys
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
+MODULE_DIR = Path(__file__).resolve().parent
+if str(MODULE_DIR) not in sys.path:
+    sys.path.insert(0, str(MODULE_DIR))
 
-from tools.summarize_language_assets import (  # noqa: E402
+from summarize_language_assets import (  # noqa: E402
     LanguageAggregate,
     build_language_aggregates,
 )

@@ -9,7 +9,7 @@ import tempfile
 import unittest
 import zipfile
 
-from tests.nvda_test_stubs import install_basic_stubs
+from nvda_test_stubs import install_basic_stubs
 
 ADDON_PATH = pathlib.Path(__file__).resolve().parents[1] / "eloquence.nvda-addon"
 

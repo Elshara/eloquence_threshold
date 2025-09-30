@@ -1,7 +1,7 @@
 """Tests for Equalizer APO configuration import tooling."""
 from __future__ import annotations
 
-from tools.import_eq_apo_config import parse_eq_apo_config
+from import_eq_apo_config import parse_eq_apo_config
 
 
 _SAMPLE_CONFIG = """Device: Test Device

@@ -3,7 +3,7 @@ import pathlib
 import tempfile
 import unittest
 
-from tools import catalog_datajake_archives as archive_catalog
+import catalog_datajake_archives as archive_catalog
 
 
 class ArchiveCatalogDetectionTests(unittest.TestCase):

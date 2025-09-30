@@ -323,12 +323,15 @@ def load_default_voice_catalog() -> VoiceCatalog:
     default_template_id: Optional[str] = None
 
     for source_id, path, payload in payloads:
-        ranges = _parse_parameter_ranges(payload.get("parameters", {}))
+        ranges = _parse_parameter_ranges(payload.get("parameters"))
         for name, range_info in ranges.items():
             parameter_ranges.setdefault(name, range_info)
         combined_ranges = dict(parameter_ranges)
         combined_ranges.update(ranges)
-        templates.extend(_parse_templates(payload.get("templates", []), combined_ranges))
+        raw_templates = payload.get("templates")
+        if not isinstance(raw_templates, (list, tuple)):
+            raw_templates = []
+        templates.extend(_parse_templates(raw_templates, combined_ranges))
 
         meta_entry: Dict[str, object] = {}
         raw_metadata = payload.get("metadata")
@@ -375,8 +378,12 @@ def _load_voice_payload(path: str) -> Optional[Dict[str, object]]:
     return payload
 
 
-def _parse_parameter_ranges(raw: Dict[str, object]) -> Dict[str, VoiceParameterRange]:
+def _parse_parameter_ranges(raw: Optional[Dict[str, object]]) -> Dict[str, VoiceParameterRange]:
     ranges: Dict[str, VoiceParameterRange] = {}
+    if not isinstance(raw, dict):
+        if raw not in (None, {}):
+            LOG.debug("Ignoring parameter payload because it is not a mapping: %r", raw)
+        return ranges
     for name, data in raw.items():
         if not isinstance(data, dict):
             LOG.warning("Ignoring malformed parameter description for '%s'", name)

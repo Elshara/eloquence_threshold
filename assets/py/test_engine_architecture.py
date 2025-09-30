@@ -9,11 +9,11 @@ import tempfile
 import unittest
 from unittest import mock
 
-from tests.nvda_test_stubs import install_basic_stubs
+from nvda_test_stubs import install_basic_stubs
 
 install_basic_stubs()
 
-import _eloquence
+import Eloquence as _eloquence
 
 
 def _write_fake_dll(path: pathlib.Path, machine: int) -> None:
@@ -43,6 +43,21 @@ class EngineArchitectureResolutionTests(unittest.TestCase):
         _eloquence._dictionaryDirs = [
             _eloquence.VOICE_DIR,
         ]
+        repo_root = pathlib.Path(self.tmpdir.name)
+        self._repo_root_patch = mock.patch.object(
+            _eloquence.resource_paths,
+            "repo_root",
+            return_value=repo_root,
+        )
+        self._library_roots_patch = mock.patch.object(
+            _eloquence.resource_paths,
+            "eloquence_library_roots",
+            return_value=[pathlib.Path(_eloquence.VOICE_DIR)],
+        )
+        self._repo_root_patch.start()
+        self._library_roots_patch.start()
+        self.addCleanup(self._repo_root_patch.stop)
+        self.addCleanup(self._library_roots_patch.stop)
         self.addCleanup(self._restore_globals)
 
     def _restore_globals(self) -> None:
@@ -57,7 +72,7 @@ class EngineArchitectureResolutionTests(unittest.TestCase):
         _write_fake_dll(x64_path, 0x8664)
         _write_fake_dll(base_path, 0x14C)
 
-        with mock.patch("_eloquence._current_architecture_family", return_value="x64"):
+        with mock.patch.object(_eloquence, "_current_architecture_family", return_value="x64"):
             resolved = _eloquence._resolve_eci_path()
 
         self.assertEqual(os.path.normcase(resolved), os.path.normcase(str(x64_path)))
@@ -69,7 +84,7 @@ class EngineArchitectureResolutionTests(unittest.TestCase):
         _write_fake_dll(arm64_path, 0xAA64)
         _write_fake_dll(base_path, 0x14C)
 
-        with mock.patch("_eloquence._current_architecture_family", return_value="arm64"):
+        with mock.patch.object(_eloquence, "_current_architecture_family", return_value="arm64"):
             resolved = _eloquence._resolve_eci_path()
 
         self.assertEqual(os.path.normcase(resolved), os.path.normcase(str(arm64_path)))
@@ -81,7 +96,7 @@ class EngineArchitectureResolutionTests(unittest.TestCase):
         _write_fake_dll(x86_path, 0x14C)
         _write_fake_dll(legacy_path, 0x8664)
 
-        with mock.patch("_eloquence._current_architecture_family", return_value="x86"):
+        with mock.patch.object(_eloquence, "_current_architecture_family", return_value="x86"):
             resolved = _eloquence._resolve_eci_path()
 
         self.assertEqual(os.path.normcase(resolved), os.path.normcase(str(x86_path)))
@@ -91,7 +106,7 @@ class EngineArchitectureResolutionTests(unittest.TestCase):
         mismatched = repo_root / "eloquence_x64" / "eci64.dll"
         _write_fake_dll(mismatched, 0x8664)
 
-        with mock.patch("_eloquence._current_architecture_family", return_value="arm64"):
+        with mock.patch.object(_eloquence, "_current_architecture_family", return_value="arm64"):
             self.assertFalse(_eloquence._library_matches_current_arch(str(mismatched)))
 
 
