@@ -2,6 +2,84 @@
   "languages": {
     "profiles": [
       {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-am-et"
+        ],
+        "display": "Amharic \u2013 ejective cadence \u2013 am \u2013 Placeholder emphasising Amharic ejectives and the seven-syllable abugida patterns.",
+        "id": "am-et-seed",
+        "language": "am",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-am-et"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ar-eg"
+        ],
+        "display": "Arabic (Egyptian) \u2013 colloquial glide \u2013 ar-EG \u2013 Captures Cairene consonant shifts (g\u012bm\u2192/g/, q\u0101f\u2192/\u0294/) so phoneme EQ can mimic everyday Egyptian Arabic.",
+        "id": "ar-eg-seed",
+        "language": "ar-EG",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ar-eg"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ar-msa"
+        ],
+        "display": "Arabic (Modern Standard) \u2013 emphatic backbone \u2013 ar \u2013 Seeded MSA profile capturing emphatic coronals and the sun/moon assimilation patterns.",
+        "id": "ar-msa-seed",
+        "language": "ar",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ar-msa"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-bn-bd"
+        ],
+        "display": "Bengali \u2013 retroflex melody \u2013 bn \u2013 Bengali placeholder emphasising retroflex flaps, palatal fricatives, and nasal vowels.",
+        "id": "bn-bd-seed",
+        "language": "bn",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-bn-bd"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-cs-cz"
+        ],
+        "display": "Czech \u2013 trill precision \u2013 cs \u2013 Czech placeholder emphasising the \u0159 trill, velar fricative ch, and palatal nasals.",
+        "id": "cs-cz-seed",
+        "language": "cs",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-cs-cz"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-da-dk"
+        ],
+        "display": "Danish \u2013 st\u00f8d scaffolding \u2013 da \u2013 Danish placeholder highlighting st\u00f8d, uvular r, and vowel reductions.",
+        "id": "da-dk-seed",
+        "language": "da",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-da-dk"
+        ]
+      },
+      {
         "characterCount": 11,
         "defaultVoiceTemplates": [
           "espeak-de-precision"
@@ -12,6 +90,19 @@
         "missingDefaults": [],
         "referencedBy": [
           "espeak-de-precision"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-el-gr"
+        ],
+        "display": "Greek \u2013 consonant balance \u2013 el \u2013 Greek placeholder emphasising dental fricatives, velar fricatives, and consonant clusters.",
+        "id": "el-gr-seed",
+        "language": "el",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-el-gr"
         ]
       },
       {
@@ -107,6 +198,45 @@
         ]
       },
       {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-fa-ir"
+        ],
+        "display": "Persian (Farsi) \u2013 smooth ezafe \u2013 fa \u2013 Seeded Persian profile that foregrounds ezafe liaisons and the soft postalveolar fricatives common in Tehrani speech.",
+        "id": "fa-ir-seed",
+        "language": "fa",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-fa-ir"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-fi-fi"
+        ],
+        "display": "Finnish \u2013 vowel length discipline \u2013 fi \u2013 Finnish placeholder covering vowel length contrasts, front rounded vowels, and velar nasals.",
+        "id": "fi-fi-seed",
+        "language": "fi",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-fi-fi"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-fil-ph"
+        ],
+        "display": "Filipino \u2013 Tagalog clarity \u2013 fil \u2013 Filipino placeholder addressing velar nasals, Spanish \u00f1 loans, and affricate onsets.",
+        "id": "fil-ph-seed",
+        "language": "fil",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-fil-ph"
+        ]
+      },
+      {
         "characterCount": 15,
         "defaultVoiceTemplates": [
           "espeak-fr-velvet"
@@ -120,6 +250,45 @@
         ]
       },
       {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-gu-in"
+        ],
+        "display": "Gujarati \u2013 vocalic resonances \u2013 gu \u2013 Gujarati placeholder emphasising retroflex laterals, palatal nasals, and vocalic r vowels.",
+        "id": "gu-in-seed",
+        "language": "gu",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-gu-in"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ha-ng"
+        ],
+        "display": "Hausa \u2013 vibrant glottalic stops \u2013 ha \u2013 Captures Hausa ejective stops and high/low tone contrasts for the Latin orthography.",
+        "id": "ha-ng-seed",
+        "language": "ha",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ha-ng"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-he-il"
+        ],
+        "display": "Hebrew \u2013 modern articulation \u2013 he \u2013 Modern Israeli Hebrew placeholder accentuating uvular frication and ejective-like tsadi bursts.",
+        "id": "he-il-seed",
+        "language": "he",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-he-il"
+        ]
+      },
+      {
         "characterCount": 5,
         "defaultVoiceTemplates": [
           "espeak-hi-dynamic"
@@ -130,6 +299,19 @@
         "missingDefaults": [],
         "referencedBy": [
           "espeak-hi-dynamic"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-id-id"
+        ],
+        "display": "Indonesian \u2013 archipelago clarity \u2013 id \u2013 Indonesian placeholder capturing prenasalised onsets and clear loan consonants.",
+        "id": "id-id-seed",
+        "language": "id",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-id-id"
         ]
       },
       {
@@ -159,6 +341,175 @@
         ]
       },
       {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-km-kh"
+        ],
+        "display": "Khmer \u2013 diphthong radiance \u2013 km \u2013 Khmer placeholder capturing palatal nasals, aspirated affricates, and complex vowel nuclei.",
+        "id": "km-kh-seed",
+        "language": "km",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-km-kh"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-kn-in"
+        ],
+        "display": "Kannada \u2013 gentle palatals \u2013 kn \u2013 Kannada placeholder covering retroflex laterals, palatal nasals, and diphthongs used in literary Kannada.",
+        "id": "kn-in-seed",
+        "language": "kn",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-kn-in"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ko-kr"
+        ],
+        "display": "Korean \u2013 fortis balance \u2013 ko \u2013 Korean placeholder balancing tense consonants, aspiration, and vowel harmony cues.",
+        "id": "ko-kr-seed",
+        "language": "ko",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ko-kr"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-lo-la"
+        ],
+        "display": "Lao \u2013 tone class guidance \u2013 lo \u2013 Lao placeholder emphasising silent-h tone class markers, diphthongs, and vowel carriers.",
+        "id": "lo-la-seed",
+        "language": "lo",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-lo-la"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ml-in"
+        ],
+        "display": "Malayalam \u2013 retroflex waves \u2013 ml \u2013 Malayalam placeholder tuned for retroflex approximants, nasal clusters, and geminated stops.",
+        "id": "ml-in-seed",
+        "language": "ml",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ml-in"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-mr-in"
+        ],
+        "display": "Marathi \u2013 syllabic liquids \u2013 mr \u2013 Marathi placeholder focusing on syllabic /r\u0329/, retroflex laterals, and complex consonant conjuncts.",
+        "id": "mr-in-seed",
+        "language": "mr",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-mr-in"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ms-my"
+        ],
+        "display": "Malay \u2013 peninsular warmth \u2013 ms \u2013 Malay placeholder aligned with peninsular pronunciation, balancing Arabic loans and Malay vowels.",
+        "id": "ms-my-seed",
+        "language": "ms",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ms-my"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-my-mm"
+        ],
+        "display": "Burmese \u2013 creaky tone balance \u2013 my \u2013 Burmese placeholder highlighting creaky vs modal tone, aspiration markers, and vowel colouring.",
+        "id": "my-mm-seed",
+        "language": "my",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-my-mm"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-nb-no"
+        ],
+        "display": "Norwegian (Bokm\u00e5l) \u2013 tonal balance \u2013 nb \u2013 Norwegian placeholder capturing palatal kj, retroflex skj, and pitch accent pairs.",
+        "id": "nb-no-seed",
+        "language": "nb",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-nb-no"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ne-np"
+        ],
+        "display": "Nepali \u2013 Himalayan cadence \u2013 ne \u2013 Nepali placeholder emphasising aspirated affricates, velar nasals, and consonant clusters with /r/.",
+        "id": "ne-np-seed",
+        "language": "ne",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ne-np"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-nl-nl"
+        ],
+        "display": "Dutch \u2013 diphthong clarity \u2013 nl \u2013 Dutch placeholder focusing on diphthongs IJ/UI and the sch/gt fricative cluster.",
+        "id": "nl-nl-seed",
+        "language": "nl",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-nl-nl"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-pa-in"
+        ],
+        "display": "Punjabi \u2013 tonal Gurmukhi \u2013 pa \u2013 Punjabi placeholder aligning retroflex flaps, nasalisation, and tonal contrasts in Gurmukhi.",
+        "id": "pa-in-seed",
+        "language": "pa",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-pa-in"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-pl-pl"
+        ],
+        "display": "Polish \u2013 sibilant contrast \u2013 pl \u2013 Polish placeholder emphasising alveolo-palatal vs retroflex sibilants and dark \u0142 vowels.",
+        "id": "pl-pl-seed",
+        "language": "pl",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-pl-pl"
+        ]
+      },
+      {
         "characterCount": 18,
         "defaultVoiceTemplates": [
           "espeak-pt-br-vibrant"
@@ -170,9 +521,204 @@
         "referencedBy": [
           "espeak-pt-br-vibrant"
         ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ru-ru"
+        ],
+        "display": "Russian \u2013 palatal richness \u2013 ru \u2013 Russian placeholder tuned for palatalised consonants, retroflex fricatives, and reduced vowels.",
+        "id": "ru-ru-seed",
+        "language": "ru",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ru-ru"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-si-lk"
+        ],
+        "display": "Sinhala \u2013 rounded cadence \u2013 si \u2013 Sinhala placeholder emphasising prenasalised stops, palatal nasals, and loan fricatives.",
+        "id": "si-lk-seed",
+        "language": "si",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-si-lk"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-sv-se"
+        ],
+        "display": "Swedish \u2013 pitch accent \u2013 sv \u2013 Swedish placeholder emphasising sj/tj fricatives and tonal accent pairs.",
+        "id": "sv-se-seed",
+        "language": "sv",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-sv-se"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-sw-ke"
+        ],
+        "display": "Swahili \u2013 coastal clarity \u2013 sw \u2013 Swahili placeholder emphasising prenasalised consonants and open vowels for East African dialects.",
+        "id": "sw-ke-seed",
+        "language": "sw",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-sw-ke"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ta-in"
+        ],
+        "display": "Tamil \u2013 classical resonance \u2013 ta \u2013 Tamil placeholder anchoring retroflex approximants and geminate stops for Sangam-style articulation.",
+        "id": "ta-in-seed",
+        "language": "ta",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ta-in"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-te-in"
+        ],
+        "display": "Telugu \u2013 lyrical aspiration \u2013 te \u2013 Telugu placeholder centred on aspirated retroflexes, velar nasals, and diphthong glides.",
+        "id": "te-in-seed",
+        "language": "te",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-te-in"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-th-th"
+        ],
+        "display": "Thai \u2013 tonal glide \u2013 th \u2013 Thai placeholder featuring high-class consonants, long vowels, and diphthongs.",
+        "id": "th-th-seed",
+        "language": "th",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-th-th"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-tr-tr"
+        ],
+        "display": "Turkish \u2013 vowel harmony \u2013 tr \u2013 Turkish placeholder emphasising vowel harmony, soft g, and postalveolar fricatives.",
+        "id": "tr-tr-seed",
+        "language": "tr",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-tr-tr"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-uk-ua"
+        ],
+        "display": "Ukrainian \u2013 bright palatals \u2013 uk \u2013 Ukrainian placeholder focusing on palatalised consonants, /\u0266/ vs /g/, and melodic intonation.",
+        "id": "uk-ua-seed",
+        "language": "uk",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-uk-ua"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-ur-pk"
+        ],
+        "display": "Urdu \u2013 poetic glide \u2013 ur \u2013 Urdu placeholder capturing retroflex flaps and aspirated stops used in ghazal recitation and newscasts.",
+        "id": "ur-pk-seed",
+        "language": "ur",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-ur-pk"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-vi-vn"
+        ],
+        "display": "Vietnamese \u2013 six-tone brilliance \u2013 vi \u2013 Vietnamese placeholder highlighting tone contours, implosives, and short vowels.",
+        "id": "vi-vn-seed",
+        "language": "vi",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-vi-vn"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-yo-ng"
+        ],
+        "display": "Yoruba \u2013 tonal resonance \u2013 yo \u2013 Yoruba placeholder covering three-level tone diacritics and labio-velar stops.",
+        "id": "yo-ng-seed",
+        "language": "yo",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-yo-ng"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-yue-hk"
+        ],
+        "display": "Chinese (Cantonese) \u2013 six-tone contour \u2013 yue-Hant-HK \u2013 Cantonese placeholder covering high level, low falling, and nasal-only syllables.",
+        "id": "yue-hk-seed",
+        "language": "yue-Hant-HK",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-yue-hk"
+        ]
+      },
+      {
+        "characterCount": 1,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-zh-cn"
+        ],
+        "display": "Chinese (Mandarin) \u2013 tonal baseline \u2013 zh-CN \u2013 Mandarin placeholder emphasising neutral tones, retroflex affricates, and aspect particles.",
+        "id": "zh-cn-seed",
+        "language": "zh-CN",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-zh-cn"
+        ]
+      },
+      {
+        "characterCount": 3,
+        "defaultVoiceTemplates": [
+          "eloquence-seed-zu-za"
+        ],
+        "display": "Zulu \u2013 click-rich texture \u2013 zu \u2013 Zulu placeholder mixing click consonants with lateral fricatives to prep the phoneme editor.",
+        "id": "zu-za-seed",
+        "language": "zu",
+        "missingDefaults": [],
+        "referencedBy": [
+          "eloquence-seed-zu-za"
+        ]
       }
     ],
-    "total": 11
+    "total": 53
   },
   "phonemes": {
     "categories": [
@@ -359,6 +905,300 @@
         "name": "ViaVoice Paul XL (SAPI 5)"
       },
       {
+        "defaultLanguageProfile": "am-et-seed",
+        "id": "eloquence-seed-am-et",
+        "issues": [],
+        "language": "am",
+        "name": "Eloquence seed \u2013 Amharic"
+      },
+      {
+        "defaultLanguageProfile": "ar-eg-seed",
+        "id": "eloquence-seed-ar-eg",
+        "issues": [],
+        "language": "ar-EG",
+        "name": "Eloquence seed \u2013 Arabic (Egyptian)"
+      },
+      {
+        "defaultLanguageProfile": "ar-msa-seed",
+        "id": "eloquence-seed-ar-msa",
+        "issues": [],
+        "language": "ar",
+        "name": "Eloquence seed \u2013 Arabic (MSA)"
+      },
+      {
+        "defaultLanguageProfile": "bn-bd-seed",
+        "id": "eloquence-seed-bn-bd",
+        "issues": [],
+        "language": "bn",
+        "name": "Eloquence seed \u2013 Bengali"
+      },
+      {
+        "defaultLanguageProfile": "cs-cz-seed",
+        "id": "eloquence-seed-cs-cz",
+        "issues": [],
+        "language": "cs",
+        "name": "Eloquence seed \u2013 Czech"
+      },
+      {
+        "defaultLanguageProfile": "da-dk-seed",
+        "id": "eloquence-seed-da-dk",
+        "issues": [],
+        "language": "da",
+        "name": "Eloquence seed \u2013 Danish"
+      },
+      {
+        "defaultLanguageProfile": "el-gr-seed",
+        "id": "eloquence-seed-el-gr",
+        "issues": [],
+        "language": "el",
+        "name": "Eloquence seed \u2013 Greek"
+      },
+      {
+        "defaultLanguageProfile": "fa-ir-seed",
+        "id": "eloquence-seed-fa-ir",
+        "issues": [],
+        "language": "fa",
+        "name": "Eloquence seed \u2013 Persian"
+      },
+      {
+        "defaultLanguageProfile": "fi-fi-seed",
+        "id": "eloquence-seed-fi-fi",
+        "issues": [],
+        "language": "fi",
+        "name": "Eloquence seed \u2013 Finnish"
+      },
+      {
+        "defaultLanguageProfile": "fil-ph-seed",
+        "id": "eloquence-seed-fil-ph",
+        "issues": [],
+        "language": "fil",
+        "name": "Eloquence seed \u2013 Filipino"
+      },
+      {
+        "defaultLanguageProfile": "gu-in-seed",
+        "id": "eloquence-seed-gu-in",
+        "issues": [],
+        "language": "gu",
+        "name": "Eloquence seed \u2013 Gujarati"
+      },
+      {
+        "defaultLanguageProfile": "ha-ng-seed",
+        "id": "eloquence-seed-ha-ng",
+        "issues": [],
+        "language": "ha",
+        "name": "Eloquence seed \u2013 Hausa"
+      },
+      {
+        "defaultLanguageProfile": "he-il-seed",
+        "id": "eloquence-seed-he-il",
+        "issues": [],
+        "language": "he",
+        "name": "Eloquence seed \u2013 Hebrew"
+      },
+      {
+        "defaultLanguageProfile": "id-id-seed",
+        "id": "eloquence-seed-id-id",
+        "issues": [],
+        "language": "id",
+        "name": "Eloquence seed \u2013 Indonesian"
+      },
+      {
+        "defaultLanguageProfile": "km-kh-seed",
+        "id": "eloquence-seed-km-kh",
+        "issues": [],
+        "language": "km",
+        "name": "Eloquence seed \u2013 Khmer"
+      },
+      {
+        "defaultLanguageProfile": "kn-in-seed",
+        "id": "eloquence-seed-kn-in",
+        "issues": [],
+        "language": "kn",
+        "name": "Eloquence seed \u2013 Kannada"
+      },
+      {
+        "defaultLanguageProfile": "ko-kr-seed",
+        "id": "eloquence-seed-ko-kr",
+        "issues": [],
+        "language": "ko",
+        "name": "Eloquence seed \u2013 Korean"
+      },
+      {
+        "defaultLanguageProfile": "lo-la-seed",
+        "id": "eloquence-seed-lo-la",
+        "issues": [],
+        "language": "lo",
+        "name": "Eloquence seed \u2013 Lao"
+      },
+      {
+        "defaultLanguageProfile": "ml-in-seed",
+        "id": "eloquence-seed-ml-in",
+        "issues": [],
+        "language": "ml",
+        "name": "Eloquence seed \u2013 Malayalam"
+      },
+      {
+        "defaultLanguageProfile": "mr-in-seed",
+        "id": "eloquence-seed-mr-in",
+        "issues": [],
+        "language": "mr",
+        "name": "Eloquence seed \u2013 Marathi"
+      },
+      {
+        "defaultLanguageProfile": "ms-my-seed",
+        "id": "eloquence-seed-ms-my",
+        "issues": [],
+        "language": "ms",
+        "name": "Eloquence seed \u2013 Malay"
+      },
+      {
+        "defaultLanguageProfile": "my-mm-seed",
+        "id": "eloquence-seed-my-mm",
+        "issues": [],
+        "language": "my",
+        "name": "Eloquence seed \u2013 Burmese"
+      },
+      {
+        "defaultLanguageProfile": "nb-no-seed",
+        "id": "eloquence-seed-nb-no",
+        "issues": [],
+        "language": "nb",
+        "name": "Eloquence seed \u2013 Norwegian"
+      },
+      {
+        "defaultLanguageProfile": "ne-np-seed",
+        "id": "eloquence-seed-ne-np",
+        "issues": [],
+        "language": "ne",
+        "name": "Eloquence seed \u2013 Nepali"
+      },
+      {
+        "defaultLanguageProfile": "nl-nl-seed",
+        "id": "eloquence-seed-nl-nl",
+        "issues": [],
+        "language": "nl",
+        "name": "Eloquence seed \u2013 Dutch"
+      },
+      {
+        "defaultLanguageProfile": "pa-in-seed",
+        "id": "eloquence-seed-pa-in",
+        "issues": [],
+        "language": "pa",
+        "name": "Eloquence seed \u2013 Punjabi"
+      },
+      {
+        "defaultLanguageProfile": "pl-pl-seed",
+        "id": "eloquence-seed-pl-pl",
+        "issues": [],
+        "language": "pl",
+        "name": "Eloquence seed \u2013 Polish"
+      },
+      {
+        "defaultLanguageProfile": "ru-ru-seed",
+        "id": "eloquence-seed-ru-ru",
+        "issues": [],
+        "language": "ru",
+        "name": "Eloquence seed \u2013 Russian"
+      },
+      {
+        "defaultLanguageProfile": "si-lk-seed",
+        "id": "eloquence-seed-si-lk",
+        "issues": [],
+        "language": "si",
+        "name": "Eloquence seed \u2013 Sinhala"
+      },
+      {
+        "defaultLanguageProfile": "sv-se-seed",
+        "id": "eloquence-seed-sv-se",
+        "issues": [],
+        "language": "sv",
+        "name": "Eloquence seed \u2013 Swedish"
+      },
+      {
+        "defaultLanguageProfile": "sw-ke-seed",
+        "id": "eloquence-seed-sw-ke",
+        "issues": [],
+        "language": "sw",
+        "name": "Eloquence seed \u2013 Swahili"
+      },
+      {
+        "defaultLanguageProfile": "ta-in-seed",
+        "id": "eloquence-seed-ta-in",
+        "issues": [],
+        "language": "ta",
+        "name": "Eloquence seed \u2013 Tamil"
+      },
+      {
+        "defaultLanguageProfile": "te-in-seed",
+        "id": "eloquence-seed-te-in",
+        "issues": [],
+        "language": "te",
+        "name": "Eloquence seed \u2013 Telugu"
+      },
+      {
+        "defaultLanguageProfile": "th-th-seed",
+        "id": "eloquence-seed-th-th",
+        "issues": [],
+        "language": "th",
+        "name": "Eloquence seed \u2013 Thai"
+      },
+      {
+        "defaultLanguageProfile": "tr-tr-seed",
+        "id": "eloquence-seed-tr-tr",
+        "issues": [],
+        "language": "tr",
+        "name": "Eloquence seed \u2013 Turkish"
+      },
+      {
+        "defaultLanguageProfile": "uk-ua-seed",
+        "id": "eloquence-seed-uk-ua",
+        "issues": [],
+        "language": "uk",
+        "name": "Eloquence seed \u2013 Ukrainian"
+      },
+      {
+        "defaultLanguageProfile": "ur-pk-seed",
+        "id": "eloquence-seed-ur-pk",
+        "issues": [],
+        "language": "ur",
+        "name": "Eloquence seed \u2013 Urdu"
+      },
+      {
+        "defaultLanguageProfile": "vi-vn-seed",
+        "id": "eloquence-seed-vi-vn",
+        "issues": [],
+        "language": "vi",
+        "name": "Eloquence seed \u2013 Vietnamese"
+      },
+      {
+        "defaultLanguageProfile": "yo-ng-seed",
+        "id": "eloquence-seed-yo-ng",
+        "issues": [],
+        "language": "yo",
+        "name": "Eloquence seed \u2013 Yoruba"
+      },
+      {
+        "defaultLanguageProfile": "yue-hk-seed",
+        "id": "eloquence-seed-yue-hk",
+        "issues": [],
+        "language": "yue-Hant-HK",
+        "name": "Eloquence seed \u2013 Cantonese"
+      },
+      {
+        "defaultLanguageProfile": "zh-cn-seed",
+        "id": "eloquence-seed-zh-cn",
+        "issues": [],
+        "language": "zh-CN",
+        "name": "Eloquence seed \u2013 Mandarin"
+      },
+      {
+        "defaultLanguageProfile": "zu-za-seed",
+        "id": "eloquence-seed-zu-za",
+        "issues": [],
+        "language": "zu",
+        "name": "Eloquence seed \u2013 Zulu"
+      },
+      {
         "defaultLanguageProfile": "en-us-heritage",
         "id": "eloquence-window-eyes-expressive",
         "issues": [],
@@ -478,6 +1318,6 @@
         "name": "NV Speech Player David"
       }
     ],
-    "total": 28
+    "total": 70
   }
 }

@@ -67,7 +67,82 @@
     "IPA 'e' for symbol 'e' in profile 'es-419-basic' does not map to any known phoneme",
     "IPA 'i' for symbol 'i' in profile 'es-419-basic' does not map to any known phoneme",
     "IPA 'o' for symbol 'o' in profile 'es-419-basic' does not map to any known phoneme",
-    "IPA 'u' for symbol 'u' in profile 'es-419-basic' does not map to any known phoneme"
+    "IPA 'u' for symbol 'u' in profile 'es-419-basic' does not map to any known phoneme",
+    "IPA 'q' for symbol '\u0642' in profile 'ar-msa-seed' does not map to any known phoneme",
+    "IPA 'd\u02e4' for symbol '\u0636' in profile 'ar-msa-seed' does not map to any known phoneme",
+    "IPA 'al' for symbol '\u0627\u0644' in profile 'ar-msa-seed' does not map to any known phoneme",
+    "IPA 'g' for symbol '\u062c' in profile 'ar-eg-seed' does not map to any known phoneme",
+    "IPA 's' for symbol '\u062b' in profile 'ar-eg-seed' does not map to any known phoneme",
+    "IPA 'p' for symbol '\u067e' in profile 'fa-ir-seed' does not map to any known phoneme",
+    "IPA '\u027d' for symbol '\u0691' in profile 'ur-pk-seed' does not map to any known phoneme",
+    "IPA 'x' for symbol '\u062e' in profile 'ur-pk-seed' does not map to any known phoneme",
+    "IPA '\u03c7' for symbol '\u05d7' in profile 'he-il-seed' does not map to any known phoneme",
+    "IPA 'ts\u02bc' for symbol '\u05e6' in profile 'he-il-seed' does not map to any known phoneme",
+    "IPA 'k\u02bc' for symbol '\u1240' in profile 'am-et-seed' does not map to any known phoneme",
+    "IPA 's\u02bc' for symbol '\u1338' in profile 'am-et-seed' does not map to any known phoneme",
+    "IPA 'k\u02bc' for symbol '\u0199' in profile 'ha-ng-seed' does not map to any known phoneme",
+    "IPA 'ts\u02bc' for symbol 'ts' in profile 'ha-ng-seed' does not map to any known phoneme",
+    "IPA '\u0261\u0361b' for symbol 'gb' in profile 'yo-ng-seed' leaves unmatched fragment '\u0361b'",
+    "IPA '\u014b\u01c3' for symbol 'ngc' in profile 'zu-za-seed' leaves unmatched fragment '\u01c3'",
+    "IPA '\u026e' for symbol 'dl' in profile 'zu-za-seed' does not map to any known phoneme",
+    "IPA 't\u0264\u02d9' for symbol '\u7684' in profile 'zh-cn-seed' does not map to any known phoneme",
+    "IPA 't\u026ak\u031a\u02e5' for symbol '\u7684' in profile 'yue-hk-seed' leaves unmatched fragment 'tk\u031a\u02e5'",
+    "IPA 'ts\u0254\u02e7\u02e5' for symbol '\u5497' in profile 'yue-hk-seed' leaves unmatched fragment 'ts\u02e7\u02e5'",
+    "IPA 'm\u0329\u02e8\u02e9' for symbol '\u5514' in profile 'yue-hk-seed' leaves unmatched fragment '\u02e8\u02e9'",
+    "IPA 'l' for symbol '\u3139' in profile 'ko-kr-seed' does not map to any known phoneme",
+    "IPA 's\u0348' for symbol '\u3146' in profile 'ko-kr-seed' does not map to any known phoneme",
+    "IPA 'a\u0306' for symbol '\u0103' in profile 'vi-vn-seed' does not map to any known phoneme",
+    "IPA '\u0257' for symbol '\u0111' in profile 'vi-vn-seed' does not map to any known phoneme",
+    "IPA 'k\u02b0' for symbol '\u0e02' in profile 'th-th-seed' does not map to any known phoneme",
+    "IPA 'a\u02d0' for symbol '\u0e32' in profile 'th-th-seed' does not map to any known phoneme",
+    "IPA 'aj' for symbol '\u0e44' in profile 'th-th-seed' does not map to any known phoneme",
+    "IPA 'x' for symbol 'kh' in profile 'ms-my-seed' does not map to any known phoneme",
+    "IPA 'ts' for symbol 'ts' in profile 'fil-ph-seed' does not map to any known phoneme",
+    "IPA '\u027d' for symbol '\u09a1\u09bc' in profile 'bn-bd-seed' does not map to any known phoneme",
+    "IPA '\u027b' for symbol '\u0bb4' in profile 'ta-in-seed' does not map to any known phoneme",
+    "IPA 'ai' for symbol '\u0b90' in profile 'ta-in-seed' does not map to any known phoneme",
+    "IPA '\u0256\u02b1' for symbol '\u0c22' in profile 'te-in-seed' does not map to any known phoneme",
+    "IPA 'ai' for symbol '\u0c56' in profile 'te-in-seed' does not map to any known phoneme",
+    "IPA '\u027b' for symbol '\u0d34' in profile 'ml-in-seed' does not map to any known phoneme",
+    "IPA '\u014b\u0261a' for symbol '\u0d19\u0d4d\u0d15' in profile 'ml-in-seed' leaves unmatched fragment 'a'",
+    "IPA '\u0288\u0288a' for symbol '\u0d31\u0d4d\u0d31' in profile 'ml-in-seed' does not map to any known phoneme",
+    "IPA 'ai' for symbol '\u0cd6' in profile 'kn-in-seed' does not map to any known phoneme",
+    "IPA '\u0261j\u0259' for symbol '\u091c\u094d\u091e' in profile 'mr-in-seed' leaves unmatched fragment 'j'",
+    "IPA 'd\u0292\u0272a' for symbol '\u091c\u094d\u091e' in profile 'mr-in-seed' leaves unmatched fragment 'da'",
+    "IPA '\u027d' for symbol '\u0a5c' in profile 'pa-in-seed' does not map to any known phoneme",
+    "IPA '\u0303' for symbol '\u0a02' in profile 'pa-in-seed' does not map to any known phoneme",
+    "IPA 'd\u032a\u02d0\u02b1' for symbol '\u0a71\u0a27' in profile 'pa-in-seed' does not map to any known phoneme",
+    "IPA 'f' for symbol '\u0dc6' in profile 'si-lk-seed' does not map to any known phoneme",
+    "IPA 'c\u02b0' for symbol '\u1786' in profile 'km-kh-seed' does not map to any known phoneme",
+    "IPA 'u\u0259' for symbol '\u17bd' in profile 'km-kh-seed' leaves unmatched fragment 'u'",
+    "IPA '\u02b0' for symbol '\u103e' in profile 'my-mm-seed' does not map to any known phoneme",
+    "IPA '\u0254\u0301' for symbol '\u1031\u102c' in profile 'my-mm-seed' leaves unmatched fragment '\u0301'",
+    "IPA 'n' for symbol '\u0eab\u0e99' in profile 'lo-la-seed' does not map to any known phoneme",
+    "IPA 'aj' for symbol '\u0ec4' in profile 'lo-la-seed' does not map to any known phoneme",
+    "IPA '\u0294\u0254\u02d0' for symbol '\u0ead' in profile 'lo-la-seed' leaves unmatched fragment '\u02d0'",
+    "IPA 't\u0283\u02b0' for symbol '\u091b' in profile 'ne-np-seed' leaves unmatched fragment '\u02b0'",
+    "IPA '\u0255\u02d0' for symbol '\u0449' in profile 'ru-ru-seed' leaves unmatched fragment '\u02d0'",
+    "IPA '\u0268' for symbol '\u044b' in profile 'ru-ru-seed' does not map to any known phoneme",
+    "IPA 'ji' for symbol '\u0457' in profile 'uk-ua-seed' does not map to any known phoneme",
+    "IPA 'je' for symbol '\u0454' in profile 'uk-ua-seed' does not map to any known phoneme",
+    "IPA 'w' for symbol '\u0142' in profile 'pl-pl-seed' does not map to any known phoneme",
+    "IPA 't\u0282' for symbol 'cz' in profile 'pl-pl-seed' leaves unmatched fragment 't'",
+    "IPA 'r\u031d' for symbol '\u0159' in profile 'cs-cz-seed' leaves unmatched fragment '\u031d'",
+    "IPA 'x' for symbol 'ch' in profile 'cs-cz-seed' does not map to any known phoneme",
+    "IPA '\u0270' for symbol '\u011f' in profile 'tr-tr-seed' does not map to any known phoneme",
+    "IPA '\u026f' for symbol '\u0131' in profile 'tr-tr-seed' does not map to any known phoneme",
+    "IPA '\u0263' for symbol '\u03b3' in profile 'el-gr-seed' does not map to any known phoneme",
+    "IPA 'ks' for symbol '\u03be' in profile 'el-gr-seed' does not map to any known phoneme",
+    "IPA '\u025bi' for symbol 'ij' in profile 'nl-nl-seed' leaves unmatched fragment 'i'",
+    "IPA 'sx' for symbol 'sch' in profile 'nl-nl-seed' does not map to any known phoneme",
+    "IPA '\u0153y' for symbol 'ui' in profile 'nl-nl-seed' does not map to any known phoneme",
+    "IPA '\u0267' for symbol 'sj' in profile 'sv-se-seed' does not map to any known phoneme",
+    "IPA 'o\u02d0' for symbol '\u00e5' in profile 'sv-se-seed' does not map to any known phoneme",
+    "IPA '\u00e7' for symbol 'kj' in profile 'nb-no-seed' does not map to any known phoneme",
+    "IPA '\u00f8\u02d0y' for symbol '\u00f8y' in profile 'nb-no-seed' does not map to any known phoneme",
+    "IPA 't\u02e2' for symbol 'dg' in profile 'da-dk-seed' does not map to any known phoneme",
+    "IPA '\u00f8' for symbol '\u00f8' in profile 'da-dk-seed' does not map to any known phoneme",
+    "IPA 'y' for symbol 'y' in profile 'fi-fi-seed' does not map to any known phoneme"
   ],
   "profiles": [
     {
@@ -1005,12 +1080,1475 @@
       ],
       "language": "es-419",
       "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Arabic (Modern Standard) \u2013 emphatic backbone \u2013 ar \u2013 Seeded MSA profile capturing emphatic coronals and the sun/moon assimilation patterns.",
+      "entries": [
+        {
+          "ipa": "q",
+          "issue": "IPA 'q' for symbol '\u0642' in profile 'ar-msa-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0642"
+        },
+        {
+          "ipa": "d\u02e4",
+          "issue": "IPA 'd\u02e4' for symbol '\u0636' in profile 'ar-msa-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0636"
+        },
+        {
+          "ipa": "al",
+          "issue": "IPA 'al' for symbol '\u0627\u0644' in profile 'ar-msa-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0627\u0644"
+        }
+      ],
+      "id": "ar-msa-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'q' for symbol '\u0642' in profile 'ar-msa-seed' does not map to any known phoneme",
+        "IPA 'd\u02e4' for symbol '\u0636' in profile 'ar-msa-seed' does not map to any known phoneme",
+        "IPA 'al' for symbol '\u0627\u0644' in profile 'ar-msa-seed' does not map to any known phoneme"
+      ],
+      "language": "ar",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Arabic (Egyptian) \u2013 colloquial glide \u2013 ar-EG \u2013 Captures Cairene consonant shifts (g\u012bm\u2192/g/, q\u0101f\u2192/\u0294/) so phoneme EQ can mimic everyday Egyptian Arabic.",
+      "entries": [
+        {
+          "ipa": "g",
+          "issue": "IPA 'g' for symbol '\u062c' in profile 'ar-eg-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u062c"
+        },
+        {
+          "ipa": "\u0294",
+          "matches": [
+            "\u0294"
+          ],
+          "symbol": "\u0642"
+        },
+        {
+          "ipa": "s",
+          "issue": "IPA 's' for symbol '\u062b' in profile 'ar-eg-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u062b"
+        }
+      ],
+      "id": "ar-eg-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'g' for symbol '\u062c' in profile 'ar-eg-seed' does not map to any known phoneme",
+        "IPA 's' for symbol '\u062b' in profile 'ar-eg-seed' does not map to any known phoneme"
+      ],
+      "language": "ar-EG",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Persian (Farsi) \u2013 smooth ezafe \u2013 fa \u2013 Seeded Persian profile that foregrounds ezafe liaisons and the soft postalveolar fricatives common in Tehrani speech.",
+      "entries": [
+        {
+          "ipa": "p",
+          "issue": "IPA 'p' for symbol '\u067e' in profile 'fa-ir-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u067e"
+        },
+        {
+          "ipa": "\u0292",
+          "matches": [
+            "\u0292"
+          ],
+          "symbol": "\u0698"
+        },
+        {
+          "ipa": "\u0261",
+          "matches": [
+            "\u0261"
+          ],
+          "symbol": "\u06af"
+        }
+      ],
+      "id": "fa-ir-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'p' for symbol '\u067e' in profile 'fa-ir-seed' does not map to any known phoneme"
+      ],
+      "language": "fa",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Urdu \u2013 poetic glide \u2013 ur \u2013 Urdu placeholder capturing retroflex flaps and aspirated stops used in ghazal recitation and newscasts.",
+      "entries": [
+        {
+          "ipa": "\u027d",
+          "issue": "IPA '\u027d' for symbol '\u0691' in profile 'ur-pk-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0691"
+        },
+        {
+          "ipa": "x",
+          "issue": "IPA 'x' for symbol '\u062e' in profile 'ur-pk-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u062e"
+        },
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "\u06ba"
+        }
+      ],
+      "id": "ur-pk-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u027d' for symbol '\u0691' in profile 'ur-pk-seed' does not map to any known phoneme",
+        "IPA 'x' for symbol '\u062e' in profile 'ur-pk-seed' does not map to any known phoneme"
+      ],
+      "language": "ur",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Hebrew \u2013 modern articulation \u2013 he \u2013 Modern Israeli Hebrew placeholder accentuating uvular frication and ejective-like tsadi bursts.",
+      "entries": [
+        {
+          "ipa": "\u03c7",
+          "issue": "IPA '\u03c7' for symbol '\u05d7' in profile 'he-il-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u05d7"
+        },
+        {
+          "ipa": "ts\u02bc",
+          "issue": "IPA 'ts\u02bc' for symbol '\u05e6' in profile 'he-il-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u05e6"
+        },
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "\u05e9\u05c1"
+        }
+      ],
+      "id": "he-il-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u03c7' for symbol '\u05d7' in profile 'he-il-seed' does not map to any known phoneme",
+        "IPA 'ts\u02bc' for symbol '\u05e6' in profile 'he-il-seed' does not map to any known phoneme"
+      ],
+      "language": "he",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Amharic \u2013 ejective cadence \u2013 am \u2013 Placeholder emphasising Amharic ejectives and the seven-syllable abugida patterns.",
+      "entries": [
+        {
+          "ipa": "h",
+          "matches": [
+            "h"
+          ],
+          "symbol": "\u1200"
+        },
+        {
+          "ipa": "k\u02bc",
+          "issue": "IPA 'k\u02bc' for symbol '\u1240' in profile 'am-et-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u1240"
+        },
+        {
+          "ipa": "s\u02bc",
+          "issue": "IPA 's\u02bc' for symbol '\u1338' in profile 'am-et-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u1338"
+        }
+      ],
+      "id": "am-et-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'k\u02bc' for symbol '\u1240' in profile 'am-et-seed' does not map to any known phoneme",
+        "IPA 's\u02bc' for symbol '\u1338' in profile 'am-et-seed' does not map to any known phoneme"
+      ],
+      "language": "am",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Hausa \u2013 vibrant glottalic stops \u2013 ha \u2013 Captures Hausa ejective stops and high/low tone contrasts for the Latin orthography.",
+      "entries": [
+        {
+          "ipa": "k\u02bc",
+          "issue": "IPA 'k\u02bc' for symbol '\u0199' in profile 'ha-ng-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0199"
+        },
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "sh"
+        },
+        {
+          "ipa": "ts\u02bc",
+          "issue": "IPA 'ts\u02bc' for symbol 'ts' in profile 'ha-ng-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "ts"
+        }
+      ],
+      "id": "ha-ng-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'k\u02bc' for symbol '\u0199' in profile 'ha-ng-seed' does not map to any known phoneme",
+        "IPA 'ts\u02bc' for symbol 'ts' in profile 'ha-ng-seed' does not map to any known phoneme"
+      ],
+      "language": "ha",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Swahili \u2013 coastal clarity \u2013 sw \u2013 Swahili placeholder emphasising prenasalised consonants and open vowels for East African dialects.",
+      "entries": [
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "ng"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "ny"
+        },
+        {
+          "ipa": "t\u0283",
+          "matches": [
+            "dt_ch"
+          ],
+          "symbol": "ch"
+        }
+      ],
+      "id": "sw-ke-seed",
+      "ipaCount": 3,
+      "issues": [],
+      "language": "sw",
+      "matchedCount": 3
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Yoruba \u2013 tonal resonance \u2013 yo \u2013 Yoruba placeholder covering three-level tone diacritics and labio-velar stops.",
+      "entries": [
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "\u1e63"
+        },
+        {
+          "ipa": "\u0261\u0361b",
+          "issue": "IPA '\u0261\u0361b' for symbol 'gb' in profile 'yo-ng-seed' leaves unmatched fragment '\u0361b'",
+          "matches": [
+            "\u0261"
+          ],
+          "symbol": "gb"
+        },
+        {
+          "ipa": "\u0254",
+          "matches": [
+            "\u0254"
+          ],
+          "symbol": "\u1ecd"
+        }
+      ],
+      "id": "yo-ng-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u0261\u0361b' for symbol 'gb' in profile 'yo-ng-seed' leaves unmatched fragment '\u0361b'"
+      ],
+      "language": "yo",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Zulu \u2013 click-rich texture \u2013 zu \u2013 Zulu placeholder mixing click consonants with lateral fricatives to prep the phoneme editor.",
+      "entries": [
+        {
+          "ipa": "\u026c",
+          "matches": [
+            "l#"
+          ],
+          "symbol": "hl"
+        },
+        {
+          "ipa": "\u014b\u01c3",
+          "issue": "IPA '\u014b\u01c3' for symbol 'ngc' in profile 'zu-za-seed' leaves unmatched fragment '\u01c3'",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "ngc"
+        },
+        {
+          "ipa": "\u026e",
+          "issue": "IPA '\u026e' for symbol 'dl' in profile 'zu-za-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "dl"
+        }
+      ],
+      "id": "zu-za-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u014b\u01c3' for symbol 'ngc' in profile 'zu-za-seed' leaves unmatched fragment '\u01c3'",
+        "IPA '\u026e' for symbol 'dl' in profile 'zu-za-seed' does not map to any known phoneme"
+      ],
+      "language": "zu",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 1,
+      "charactersWithIpa": 1,
+      "display": "Chinese (Mandarin) \u2013 tonal baseline \u2013 zh-CN \u2013 Mandarin placeholder emphasising neutral tones, retroflex affricates, and aspect particles.",
+      "entries": [
+        {
+          "ipa": "t\u0264\u02d9",
+          "issue": "IPA 't\u0264\u02d9' for symbol '\u7684' in profile 'zh-cn-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u7684"
+        }
+      ],
+      "id": "zh-cn-seed",
+      "ipaCount": 1,
+      "issues": [
+        "IPA 't\u0264\u02d9' for symbol '\u7684' in profile 'zh-cn-seed' does not map to any known phoneme"
+      ],
+      "language": "zh-CN",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Chinese (Cantonese) \u2013 six-tone contour \u2013 yue-Hant-HK \u2013 Cantonese placeholder covering high level, low falling, and nasal-only syllables.",
+      "entries": [
+        {
+          "ipa": "t\u026ak\u031a\u02e5",
+          "issue": "IPA 't\u026ak\u031a\u02e5' for symbol '\u7684' in profile 'yue-hk-seed' leaves unmatched fragment 'tk\u031a\u02e5'",
+          "matches": [
+            "\u026a"
+          ],
+          "symbol": "\u7684"
+        },
+        {
+          "ipa": "ts\u0254\u02e7\u02e5",
+          "issue": "IPA 'ts\u0254\u02e7\u02e5' for symbol '\u5497' in profile 'yue-hk-seed' leaves unmatched fragment 'ts\u02e7\u02e5'",
+          "matches": [
+            "\u0254"
+          ],
+          "symbol": "\u5497"
+        },
+        {
+          "ipa": "m\u0329\u02e8\u02e9",
+          "issue": "IPA 'm\u0329\u02e8\u02e9' for symbol '\u5514' in profile 'yue-hk-seed' leaves unmatched fragment '\u02e8\u02e9'",
+          "matches": [
+            "m-"
+          ],
+          "symbol": "\u5514"
+        }
+      ],
+      "id": "yue-hk-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 't\u026ak\u031a\u02e5' for symbol '\u7684' in profile 'yue-hk-seed' leaves unmatched fragment 'tk\u031a\u02e5'",
+        "IPA 'ts\u0254\u02e7\u02e5' for symbol '\u5497' in profile 'yue-hk-seed' leaves unmatched fragment 'ts\u02e7\u02e5'",
+        "IPA 'm\u0329\u02e8\u02e9' for symbol '\u5514' in profile 'yue-hk-seed' leaves unmatched fragment '\u02e8\u02e9'"
+      ],
+      "language": "yue-Hant-HK",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Korean \u2013 fortis balance \u2013 ko \u2013 Korean placeholder balancing tense consonants, aspiration, and vowel harmony cues.",
+      "entries": [
+        {
+          "ipa": "h",
+          "matches": [
+            "h"
+          ],
+          "symbol": "\u314e"
+        },
+        {
+          "ipa": "\u027e",
+          "matches": [
+            "**"
+          ],
+          "symbol": "\u3139"
+        },
+        {
+          "ipa": "l",
+          "issue": "IPA 'l' for symbol '\u3139' in profile 'ko-kr-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u3139"
+        },
+        {
+          "ipa": "s\u0348",
+          "issue": "IPA 's\u0348' for symbol '\u3146' in profile 'ko-kr-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u3146"
+        }
+      ],
+      "id": "ko-kr-seed",
+      "ipaCount": 4,
+      "issues": [
+        "IPA 'l' for symbol '\u3139' in profile 'ko-kr-seed' does not map to any known phoneme",
+        "IPA 's\u0348' for symbol '\u3146' in profile 'ko-kr-seed' does not map to any known phoneme"
+      ],
+      "language": "ko",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Vietnamese \u2013 six-tone brilliance \u2013 vi \u2013 Vietnamese placeholder highlighting tone contours, implosives, and short vowels.",
+      "entries": [
+        {
+          "ipa": "a\u0306",
+          "issue": "IPA 'a\u0306' for symbol '\u0103' in profile 'vi-vn-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0103"
+        },
+        {
+          "ipa": "\u0257",
+          "issue": "IPA '\u0257' for symbol '\u0111' in profile 'vi-vn-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0111"
+        },
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "ngh"
+        }
+      ],
+      "id": "vi-vn-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'a\u0306' for symbol '\u0103' in profile 'vi-vn-seed' does not map to any known phoneme",
+        "IPA '\u0257' for symbol '\u0111' in profile 'vi-vn-seed' does not map to any known phoneme"
+      ],
+      "language": "vi",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Thai \u2013 tonal glide \u2013 th \u2013 Thai placeholder featuring high-class consonants, long vowels, and diphthongs.",
+      "entries": [
+        {
+          "ipa": "k\u02b0",
+          "issue": "IPA 'k\u02b0' for symbol '\u0e02' in profile 'th-th-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0e02"
+        },
+        {
+          "ipa": "a\u02d0",
+          "issue": "IPA 'a\u02d0' for symbol '\u0e32' in profile 'th-th-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0e32"
+        },
+        {
+          "ipa": "aj",
+          "issue": "IPA 'aj' for symbol '\u0e44' in profile 'th-th-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0e44"
+        }
+      ],
+      "id": "th-th-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'k\u02b0' for symbol '\u0e02' in profile 'th-th-seed' does not map to any known phoneme",
+        "IPA 'a\u02d0' for symbol '\u0e32' in profile 'th-th-seed' does not map to any known phoneme",
+        "IPA 'aj' for symbol '\u0e44' in profile 'th-th-seed' does not map to any known phoneme"
+      ],
+      "language": "th",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Indonesian \u2013 archipelago clarity \u2013 id \u2013 Indonesian placeholder capturing prenasalised onsets and clear loan consonants.",
+      "entries": [
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "ng"
+        },
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "sy"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "ny"
+        }
+      ],
+      "id": "id-id-seed",
+      "ipaCount": 3,
+      "issues": [],
+      "language": "id",
+      "matchedCount": 3
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Malay \u2013 peninsular warmth \u2013 ms \u2013 Malay placeholder aligned with peninsular pronunciation, balancing Arabic loans and Malay vowels.",
+      "entries": [
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "ng"
+        },
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "sy"
+        },
+        {
+          "ipa": "x",
+          "issue": "IPA 'x' for symbol 'kh' in profile 'ms-my-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "kh"
+        }
+      ],
+      "id": "ms-my-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'x' for symbol 'kh' in profile 'ms-my-seed' does not map to any known phoneme"
+      ],
+      "language": "ms",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Filipino \u2013 Tagalog clarity \u2013 fil \u2013 Filipino placeholder addressing velar nasals, Spanish \u00f1 loans, and affricate onsets.",
+      "entries": [
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "ng"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "\u00f1"
+        },
+        {
+          "ipa": "ts",
+          "issue": "IPA 'ts' for symbol 'ts' in profile 'fil-ph-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "ts"
+        }
+      ],
+      "id": "fil-ph-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'ts' for symbol 'ts' in profile 'fil-ph-seed' does not map to any known phoneme"
+      ],
+      "language": "fil",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Bengali \u2013 retroflex melody \u2013 bn \u2013 Bengali placeholder emphasising retroflex flaps, palatal fricatives, and nasal vowels.",
+      "entries": [
+        {
+          "ipa": "\u027d",
+          "issue": "IPA '\u027d' for symbol '\u09a1\u09bc' in profile 'bn-bd-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u09a1\u09bc"
+        },
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "\u0999"
+        },
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "\u09b6"
+        }
+      ],
+      "id": "bn-bd-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u027d' for symbol '\u09a1\u09bc' in profile 'bn-bd-seed' does not map to any known phoneme"
+      ],
+      "language": "bn",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Tamil \u2013 classical resonance \u2013 ta \u2013 Tamil placeholder anchoring retroflex approximants and geminate stops for Sangam-style articulation.",
+      "entries": [
+        {
+          "ipa": "\u027b",
+          "issue": "IPA '\u027b' for symbol '\u0bb4' in profile 'ta-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0bb4"
+        },
+        {
+          "ipa": "\u0273",
+          "matches": [
+            "n."
+          ],
+          "symbol": "\u0ba3"
+        },
+        {
+          "ipa": "ai",
+          "issue": "IPA 'ai' for symbol '\u0b90' in profile 'ta-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0b90"
+        }
+      ],
+      "id": "ta-in-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u027b' for symbol '\u0bb4' in profile 'ta-in-seed' does not map to any known phoneme",
+        "IPA 'ai' for symbol '\u0b90' in profile 'ta-in-seed' does not map to any known phoneme"
+      ],
+      "language": "ta",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Telugu \u2013 lyrical aspiration \u2013 te \u2013 Telugu placeholder centred on aspirated retroflexes, velar nasals, and diphthong glides.",
+      "entries": [
+        {
+          "ipa": "\u0256\u02b1",
+          "issue": "IPA '\u0256\u02b1' for symbol '\u0c22' in profile 'te-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0c22"
+        },
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "\u0c19"
+        },
+        {
+          "ipa": "ai",
+          "issue": "IPA 'ai' for symbol '\u0c56' in profile 'te-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0c56"
+        }
+      ],
+      "id": "te-in-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u0256\u02b1' for symbol '\u0c22' in profile 'te-in-seed' does not map to any known phoneme",
+        "IPA 'ai' for symbol '\u0c56' in profile 'te-in-seed' does not map to any known phoneme"
+      ],
+      "language": "te",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Malayalam \u2013 retroflex waves \u2013 ml \u2013 Malayalam placeholder tuned for retroflex approximants, nasal clusters, and geminated stops.",
+      "entries": [
+        {
+          "ipa": "\u027b",
+          "issue": "IPA '\u027b' for symbol '\u0d34' in profile 'ml-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0d34"
+        },
+        {
+          "ipa": "\u014b\u0261a",
+          "issue": "IPA '\u014b\u0261a' for symbol '\u0d19\u0d4d\u0d15' in profile 'ml-in-seed' leaves unmatched fragment 'a'",
+          "matches": [
+            "\u014b",
+            "\u0261"
+          ],
+          "symbol": "\u0d19\u0d4d\u0d15"
+        },
+        {
+          "ipa": "\u0288\u0288a",
+          "issue": "IPA '\u0288\u0288a' for symbol '\u0d31\u0d4d\u0d31' in profile 'ml-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0d31\u0d4d\u0d31"
+        }
+      ],
+      "id": "ml-in-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u027b' for symbol '\u0d34' in profile 'ml-in-seed' does not map to any known phoneme",
+        "IPA '\u014b\u0261a' for symbol '\u0d19\u0d4d\u0d15' in profile 'ml-in-seed' leaves unmatched fragment 'a'",
+        "IPA '\u0288\u0288a' for symbol '\u0d31\u0d4d\u0d31' in profile 'ml-in-seed' does not map to any known phoneme"
+      ],
+      "language": "ml",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Kannada \u2013 gentle palatals \u2013 kn \u2013 Kannada placeholder covering retroflex laterals, palatal nasals, and diphthongs used in literary Kannada.",
+      "entries": [
+        {
+          "ipa": "\u026d",
+          "matches": [
+            "l."
+          ],
+          "symbol": "\u0cb3"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "\u0c9e"
+        },
+        {
+          "ipa": "ai",
+          "issue": "IPA 'ai' for symbol '\u0cd6' in profile 'kn-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0cd6"
+        }
+      ],
+      "id": "kn-in-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'ai' for symbol '\u0cd6' in profile 'kn-in-seed' does not map to any known phoneme"
+      ],
+      "language": "kn",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Marathi \u2013 syllabic liquids \u2013 mr \u2013 Marathi placeholder focusing on syllabic /r\u0329/, retroflex laterals, and complex consonant conjuncts.",
+      "entries": [
+        {
+          "ipa": "\u026d",
+          "matches": [
+            "l."
+          ],
+          "symbol": "\u0933"
+        },
+        {
+          "ipa": "\u0261j\u0259",
+          "issue": "IPA '\u0261j\u0259' for symbol '\u091c\u094d\u091e' in profile 'mr-in-seed' leaves unmatched fragment 'j'",
+          "matches": [
+            "\u0261",
+            "@-"
+          ],
+          "symbol": "\u091c\u094d\u091e"
+        },
+        {
+          "ipa": "d\u0292\u0272a",
+          "issue": "IPA 'd\u0292\u0272a' for symbol '\u091c\u094d\u091e' in profile 'mr-in-seed' leaves unmatched fragment 'da'",
+          "matches": [
+            "\u0292",
+            "n^"
+          ],
+          "symbol": "\u091c\u094d\u091e"
+        },
+        {
+          "ipa": "r\u0329",
+          "matches": [
+            "r-"
+          ],
+          "symbol": "\u090b"
+        }
+      ],
+      "id": "mr-in-seed",
+      "ipaCount": 4,
+      "issues": [
+        "IPA '\u0261j\u0259' for symbol '\u091c\u094d\u091e' in profile 'mr-in-seed' leaves unmatched fragment 'j'",
+        "IPA 'd\u0292\u0272a' for symbol '\u091c\u094d\u091e' in profile 'mr-in-seed' leaves unmatched fragment 'da'"
+      ],
+      "language": "mr",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Gujarati \u2013 vocalic resonances \u2013 gu \u2013 Gujarati placeholder emphasising retroflex laterals, palatal nasals, and vocalic r vowels.",
+      "entries": [
+        {
+          "ipa": "\u026d",
+          "matches": [
+            "l."
+          ],
+          "symbol": "\u0ab3"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "\u0a9e"
+        },
+        {
+          "ipa": "r\u0329",
+          "matches": [
+            "r-"
+          ],
+          "symbol": "\u0ac3"
+        }
+      ],
+      "id": "gu-in-seed",
+      "ipaCount": 3,
+      "issues": [],
+      "language": "gu",
+      "matchedCount": 3
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Punjabi \u2013 tonal Gurmukhi \u2013 pa \u2013 Punjabi placeholder aligning retroflex flaps, nasalisation, and tonal contrasts in Gurmukhi.",
+      "entries": [
+        {
+          "ipa": "\u027d",
+          "issue": "IPA '\u027d' for symbol '\u0a5c' in profile 'pa-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0a5c"
+        },
+        {
+          "ipa": "\u0303",
+          "issue": "IPA '\u0303' for symbol '\u0a02' in profile 'pa-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0a02"
+        },
+        {
+          "ipa": "d\u032a\u02d0\u02b1",
+          "issue": "IPA 'd\u032a\u02d0\u02b1' for symbol '\u0a71\u0a27' in profile 'pa-in-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0a71\u0a27"
+        }
+      ],
+      "id": "pa-in-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u027d' for symbol '\u0a5c' in profile 'pa-in-seed' does not map to any known phoneme",
+        "IPA '\u0303' for symbol '\u0a02' in profile 'pa-in-seed' does not map to any known phoneme",
+        "IPA 'd\u032a\u02d0\u02b1' for symbol '\u0a71\u0a27' in profile 'pa-in-seed' does not map to any known phoneme"
+      ],
+      "language": "pa",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Sinhala \u2013 rounded cadence \u2013 si \u2013 Sinhala placeholder emphasising prenasalised stops, palatal nasals, and loan fricatives.",
+      "entries": [
+        {
+          "ipa": "\u014b\u0261",
+          "matches": [
+            "\u014b",
+            "\u0261"
+          ],
+          "symbol": "\u0d9f"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "\u0da4"
+        },
+        {
+          "ipa": "f",
+          "issue": "IPA 'f' for symbol '\u0dc6' in profile 'si-lk-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0dc6"
+        }
+      ],
+      "id": "si-lk-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'f' for symbol '\u0dc6' in profile 'si-lk-seed' does not map to any known phoneme"
+      ],
+      "language": "si",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Khmer \u2013 diphthong radiance \u2013 km \u2013 Khmer placeholder capturing palatal nasals, aspirated affricates, and complex vowel nuclei.",
+      "entries": [
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "\u1789"
+        },
+        {
+          "ipa": "c\u02b0",
+          "issue": "IPA 'c\u02b0' for symbol '\u1786' in profile 'km-kh-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u1786"
+        },
+        {
+          "ipa": "u\u0259",
+          "issue": "IPA 'u\u0259' for symbol '\u17bd' in profile 'km-kh-seed' leaves unmatched fragment 'u'",
+          "matches": [
+            "@-"
+          ],
+          "symbol": "\u17bd"
+        }
+      ],
+      "id": "km-kh-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'c\u02b0' for symbol '\u1786' in profile 'km-kh-seed' does not map to any known phoneme",
+        "IPA 'u\u0259' for symbol '\u17bd' in profile 'km-kh-seed' leaves unmatched fragment 'u'"
+      ],
+      "language": "km",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Burmese \u2013 creaky tone balance \u2013 my \u2013 Burmese placeholder highlighting creaky vs modal tone, aspiration markers, and vowel colouring.",
+      "entries": [
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "\u1004\u103a"
+        },
+        {
+          "ipa": "\u02b0",
+          "issue": "IPA '\u02b0' for symbol '\u103e' in profile 'my-mm-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u103e"
+        },
+        {
+          "ipa": "\u0254\u0301",
+          "issue": "IPA '\u0254\u0301' for symbol '\u1031\u102c' in profile 'my-mm-seed' leaves unmatched fragment '\u0301'",
+          "matches": [
+            "\u0254"
+          ],
+          "symbol": "\u1031\u102c"
+        }
+      ],
+      "id": "my-mm-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u02b0' for symbol '\u103e' in profile 'my-mm-seed' does not map to any known phoneme",
+        "IPA '\u0254\u0301' for symbol '\u1031\u102c' in profile 'my-mm-seed' leaves unmatched fragment '\u0301'"
+      ],
+      "language": "my",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Lao \u2013 tone class guidance \u2013 lo \u2013 Lao placeholder emphasising silent-h tone class markers, diphthongs, and vowel carriers.",
+      "entries": [
+        {
+          "ipa": "n",
+          "issue": "IPA 'n' for symbol '\u0eab\u0e99' in profile 'lo-la-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0eab\u0e99"
+        },
+        {
+          "ipa": "aj",
+          "issue": "IPA 'aj' for symbol '\u0ec4' in profile 'lo-la-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0ec4"
+        },
+        {
+          "ipa": "\u0294\u0254\u02d0",
+          "issue": "IPA '\u0294\u0254\u02d0' for symbol '\u0ead' in profile 'lo-la-seed' leaves unmatched fragment '\u02d0'",
+          "matches": [
+            "\u0294",
+            "\u0254"
+          ],
+          "symbol": "\u0ead"
+        }
+      ],
+      "id": "lo-la-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'n' for symbol '\u0eab\u0e99' in profile 'lo-la-seed' does not map to any known phoneme",
+        "IPA 'aj' for symbol '\u0ec4' in profile 'lo-la-seed' does not map to any known phoneme",
+        "IPA '\u0294\u0254\u02d0' for symbol '\u0ead' in profile 'lo-la-seed' leaves unmatched fragment '\u02d0'"
+      ],
+      "language": "lo",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Nepali \u2013 Himalayan cadence \u2013 ne \u2013 Nepali placeholder emphasising aspirated affricates, velar nasals, and consonant clusters with /r/.",
+      "entries": [
+        {
+          "ipa": "t\u0283\u02b0",
+          "issue": "IPA 't\u0283\u02b0' for symbol '\u091b' in profile 'ne-np-seed' leaves unmatched fragment '\u02b0'",
+          "matches": [
+            "dt_ch"
+          ],
+          "symbol": "\u091b"
+        },
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "\u0919"
+        },
+        {
+          "ipa": "\u0283r",
+          "matches": [
+            "dt_sh",
+            "R"
+          ],
+          "symbol": "\u0936\u094d\u0930"
+        }
+      ],
+      "id": "ne-np-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 't\u0283\u02b0' for symbol '\u091b' in profile 'ne-np-seed' leaves unmatched fragment '\u02b0'"
+      ],
+      "language": "ne",
+      "matchedCount": 2
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Russian \u2013 palatal richness \u2013 ru \u2013 Russian placeholder tuned for palatalised consonants, retroflex fricatives, and reduced vowels.",
+      "entries": [
+        {
+          "ipa": "\u0255\u02d0",
+          "issue": "IPA '\u0255\u02d0' for symbol '\u0449' in profile 'ru-ru-seed' leaves unmatched fragment '\u02d0'",
+          "matches": [
+            "S;"
+          ],
+          "symbol": "\u0449"
+        },
+        {
+          "ipa": "\u0268",
+          "issue": "IPA '\u0268' for symbol '\u044b' in profile 'ru-ru-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u044b"
+        },
+        {
+          "ipa": "\u0290",
+          "matches": [
+            "z."
+          ],
+          "symbol": "\u0436"
+        }
+      ],
+      "id": "ru-ru-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u0255\u02d0' for symbol '\u0449' in profile 'ru-ru-seed' leaves unmatched fragment '\u02d0'",
+        "IPA '\u0268' for symbol '\u044b' in profile 'ru-ru-seed' does not map to any known phoneme"
+      ],
+      "language": "ru",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Ukrainian \u2013 bright palatals \u2013 uk \u2013 Ukrainian placeholder focusing on palatalised consonants, /\u0266/ vs /g/, and melodic intonation.",
+      "entries": [
+        {
+          "ipa": "ji",
+          "issue": "IPA 'ji' for symbol '\u0457' in profile 'uk-ua-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0457"
+        },
+        {
+          "ipa": "\u0261",
+          "matches": [
+            "\u0261"
+          ],
+          "symbol": "\u0491"
+        },
+        {
+          "ipa": "je",
+          "issue": "IPA 'je' for symbol '\u0454' in profile 'uk-ua-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0454"
+        }
+      ],
+      "id": "uk-ua-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'ji' for symbol '\u0457' in profile 'uk-ua-seed' does not map to any known phoneme",
+        "IPA 'je' for symbol '\u0454' in profile 'uk-ua-seed' does not map to any known phoneme"
+      ],
+      "language": "uk",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Polish \u2013 sibilant contrast \u2013 pl \u2013 Polish placeholder emphasising alveolo-palatal vs retroflex sibilants and dark \u0142 vowels.",
+      "entries": [
+        {
+          "ipa": "w",
+          "issue": "IPA 'w' for symbol '\u0142' in profile 'pl-pl-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0142"
+        },
+        {
+          "ipa": "\u0255",
+          "matches": [
+            "S;"
+          ],
+          "symbol": "\u015b"
+        },
+        {
+          "ipa": "t\u0282",
+          "issue": "IPA 't\u0282' for symbol 'cz' in profile 'pl-pl-seed' leaves unmatched fragment 't'",
+          "matches": [
+            "s."
+          ],
+          "symbol": "cz"
+        }
+      ],
+      "id": "pl-pl-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'w' for symbol '\u0142' in profile 'pl-pl-seed' does not map to any known phoneme",
+        "IPA 't\u0282' for symbol 'cz' in profile 'pl-pl-seed' leaves unmatched fragment 't'"
+      ],
+      "language": "pl",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Czech \u2013 trill precision \u2013 cs \u2013 Czech placeholder emphasising the \u0159 trill, velar fricative ch, and palatal nasals.",
+      "entries": [
+        {
+          "ipa": "r\u031d",
+          "issue": "IPA 'r\u031d' for symbol '\u0159' in profile 'cs-cz-seed' leaves unmatched fragment '\u031d'",
+          "matches": [
+            "R"
+          ],
+          "symbol": "\u0159"
+        },
+        {
+          "ipa": "x",
+          "issue": "IPA 'x' for symbol 'ch' in profile 'cs-cz-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "ch"
+        },
+        {
+          "ipa": "\u0272",
+          "matches": [
+            "n^"
+          ],
+          "symbol": "\u0148"
+        }
+      ],
+      "id": "cs-cz-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'r\u031d' for symbol '\u0159' in profile 'cs-cz-seed' leaves unmatched fragment '\u031d'",
+        "IPA 'x' for symbol 'ch' in profile 'cs-cz-seed' does not map to any known phoneme"
+      ],
+      "language": "cs",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Turkish \u2013 vowel harmony \u2013 tr \u2013 Turkish placeholder emphasising vowel harmony, soft g, and postalveolar fricatives.",
+      "entries": [
+        {
+          "ipa": "\u0283",
+          "matches": [
+            "dt_sh"
+          ],
+          "symbol": "\u015f"
+        },
+        {
+          "ipa": "\u0270",
+          "issue": "IPA '\u0270' for symbol '\u011f' in profile 'tr-tr-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u011f"
+        },
+        {
+          "ipa": "\u026f",
+          "issue": "IPA '\u026f' for symbol '\u0131' in profile 'tr-tr-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u0131"
+        }
+      ],
+      "id": "tr-tr-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u0270' for symbol '\u011f' in profile 'tr-tr-seed' does not map to any known phoneme",
+        "IPA '\u026f' for symbol '\u0131' in profile 'tr-tr-seed' does not map to any known phoneme"
+      ],
+      "language": "tr",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Greek \u2013 consonant balance \u2013 el \u2013 Greek placeholder emphasising dental fricatives, velar fricatives, and consonant clusters.",
+      "entries": [
+        {
+          "ipa": "\u03b8",
+          "matches": [
+            "\u03b8"
+          ],
+          "symbol": "\u03b8"
+        },
+        {
+          "ipa": "\u0263",
+          "issue": "IPA '\u0263' for symbol '\u03b3' in profile 'el-gr-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u03b3"
+        },
+        {
+          "ipa": "ks",
+          "issue": "IPA 'ks' for symbol '\u03be' in profile 'el-gr-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u03be"
+        }
+      ],
+      "id": "el-gr-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u0263' for symbol '\u03b3' in profile 'el-gr-seed' does not map to any known phoneme",
+        "IPA 'ks' for symbol '\u03be' in profile 'el-gr-seed' does not map to any known phoneme"
+      ],
+      "language": "el",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Dutch \u2013 diphthong clarity \u2013 nl \u2013 Dutch placeholder focusing on diphthongs IJ/UI and the sch/gt fricative cluster.",
+      "entries": [
+        {
+          "ipa": "\u025bi",
+          "issue": "IPA '\u025bi' for symbol 'ij' in profile 'nl-nl-seed' leaves unmatched fragment 'i'",
+          "matches": [
+            "\u025b"
+          ],
+          "symbol": "ij"
+        },
+        {
+          "ipa": "sx",
+          "issue": "IPA 'sx' for symbol 'sch' in profile 'nl-nl-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "sch"
+        },
+        {
+          "ipa": "\u0153y",
+          "issue": "IPA '\u0153y' for symbol 'ui' in profile 'nl-nl-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "ui"
+        }
+      ],
+      "id": "nl-nl-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u025bi' for symbol 'ij' in profile 'nl-nl-seed' leaves unmatched fragment 'i'",
+        "IPA 'sx' for symbol 'sch' in profile 'nl-nl-seed' does not map to any known phoneme",
+        "IPA '\u0153y' for symbol 'ui' in profile 'nl-nl-seed' does not map to any known phoneme"
+      ],
+      "language": "nl",
+      "matchedCount": 0
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Swedish \u2013 pitch accent \u2013 sv \u2013 Swedish placeholder emphasising sj/tj fricatives and tonal accent pairs.",
+      "entries": [
+        {
+          "ipa": "\u0267",
+          "issue": "IPA '\u0267' for symbol 'sj' in profile 'sv-se-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "sj"
+        },
+        {
+          "ipa": "\u0255",
+          "matches": [
+            "S;"
+          ],
+          "symbol": "tj"
+        },
+        {
+          "ipa": "o\u02d0",
+          "issue": "IPA 'o\u02d0' for symbol '\u00e5' in profile 'sv-se-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00e5"
+        }
+      ],
+      "id": "sv-se-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u0267' for symbol 'sj' in profile 'sv-se-seed' does not map to any known phoneme",
+        "IPA 'o\u02d0' for symbol '\u00e5' in profile 'sv-se-seed' does not map to any known phoneme"
+      ],
+      "language": "sv",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Norwegian (Bokm\u00e5l) \u2013 tonal balance \u2013 nb \u2013 Norwegian placeholder capturing palatal kj, retroflex skj, and pitch accent pairs.",
+      "entries": [
+        {
+          "ipa": "\u00e7",
+          "issue": "IPA '\u00e7' for symbol 'kj' in profile 'nb-no-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "kj"
+        },
+        {
+          "ipa": "\u0282",
+          "matches": [
+            "s."
+          ],
+          "symbol": "skj"
+        },
+        {
+          "ipa": "\u00f8\u02d0y",
+          "issue": "IPA '\u00f8\u02d0y' for symbol '\u00f8y' in profile 'nb-no-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00f8y"
+        }
+      ],
+      "id": "nb-no-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA '\u00e7' for symbol 'kj' in profile 'nb-no-seed' does not map to any known phoneme",
+        "IPA '\u00f8\u02d0y' for symbol '\u00f8y' in profile 'nb-no-seed' does not map to any known phoneme"
+      ],
+      "language": "nb",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Danish \u2013 st\u00f8d scaffolding \u2013 da \u2013 Danish placeholder highlighting st\u00f8d, uvular r, and vowel reductions.",
+      "entries": [
+        {
+          "ipa": "t\u02e2",
+          "issue": "IPA 't\u02e2' for symbol 'dg' in profile 'da-dk-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "dg"
+        },
+        {
+          "ipa": "\u0281",
+          "matches": [
+            "Q\""
+          ],
+          "symbol": "r"
+        },
+        {
+          "ipa": "\u00f8",
+          "issue": "IPA '\u00f8' for symbol '\u00f8' in profile 'da-dk-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "\u00f8"
+        }
+      ],
+      "id": "da-dk-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 't\u02e2' for symbol 'dg' in profile 'da-dk-seed' does not map to any known phoneme",
+        "IPA '\u00f8' for symbol '\u00f8' in profile 'da-dk-seed' does not map to any known phoneme"
+      ],
+      "language": "da",
+      "matchedCount": 1
+    },
+    {
+      "characterCount": 3,
+      "charactersWithIpa": 3,
+      "display": "Finnish \u2013 vowel length discipline \u2013 fi \u2013 Finnish placeholder covering vowel length contrasts, front rounded vowels, and velar nasals.",
+      "entries": [
+        {
+          "ipa": "\u014b",
+          "matches": [
+            "\u014b"
+          ],
+          "symbol": "ng"
+        },
+        {
+          "ipa": "y",
+          "issue": "IPA 'y' for symbol 'y' in profile 'fi-fi-seed' does not map to any known phoneme",
+          "matches": [],
+          "symbol": "y"
+        },
+        {
+          "ipa": "\u00e6",
+          "matches": [
+            "dt_ae"
+          ],
+          "symbol": "\u00e4"
+        }
+      ],
+      "id": "fi-fi-seed",
+      "ipaCount": 3,
+      "issues": [
+        "IPA 'y' for symbol 'y' in profile 'fi-fi-seed' does not map to any known phoneme"
+      ],
+      "language": "fi",
+      "matchedCount": 2
     }
   ],
   "stats": {
-    "ipaCount": 108,
-    "matchedCount": 41,
-    "profileCount": 11,
-    "unmatchedCount": 67
+    "ipaCount": 234,
+    "matchedCount": 92,
+    "profileCount": 53,
+    "unmatchedCount": 142
   }
 }

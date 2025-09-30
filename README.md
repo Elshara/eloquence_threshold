@@ -112,11 +112,25 @@ To keep Eloquence's phoneme, lexicon, and tooling pipeline fresh we now version 
 - **Cross-border Germanic pulse** – Luxembourgish (`lb`) and West Frisian (`fy`) references blend Wikipedia digraph inventories with DataJake parliamentary corpora and GitHub spelling normalisers. Refresh [`docs/language_research_index.md`](docs/language_research_index.md) and rerun `python tools/report_language_progress.py` so NVDA’s Speech dialog surfaces the updated IPA scorecards alongside NV Speech Player **Stress**/**Sibilant clarity** defaults.
 - **Astur-Leonese resonance** – Asturian (`ast`) and Walloon (`wa`) planning leans on cached Wikipedia nasal vowel research, DataJake folk song dictionaries, and NVDA braille contractions. Update the offline packaging playbook to acknowledge their palatal lateral cues, and run `python tools/summarize_language_assets.py` before packaging to log the newly paired dictionary and frequency assets.
 
+### Circumpolar and Siberian revitalisation sprint (October 2025 continuation)
+
+- **Uralic convergence** – Komi-Zyrian (`kpv`), Komi-Permyak (`koi`), Meadow Mari (`mhr`), and Hill Mari (`mrj`) entries now live in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) with vowel harmony, palatalisation, and voiceless lateral data captured from cached Wikipedia grammars. We paired those notes with DataJake hymn dictionaries, GitHub finite-state analysers, and NVDA braille exports so CodeQL-audited imports keep dual Cyrillic/Latin scripts aligned before staging pronunciation profiles in `language_profiles.py`.
+- **Ob River contour sweep** – Khanty (`kca`) and Mansi (`mns`) dossiers log Siberian oral history captures from the DataJake archive, GitHub morphological segmentation notebooks, and NV Speech Player **Tone size**, **Scope depth**, and **Subtones** defaults tuned from frequency-domain analyses. Contributors should rerun `python tools/report_voice_frequency_matrix.py` and `python tools/report_voice_parameters.py` after adjusting these presets so harmonic envelopes match the recorded Uralic continuum.
+- **Arctic Samoyedic and Tungusic bridge** – Nenets (`yrk`), Evenki (`evn`), and Even (`eve`) roadmap rows cite nasal harmony and ejective consonant cues from cached Wikipedia fieldwork plus NVDA manual exports that document Cyrillic diacritic behaviour. We reference GitHub corpus parsers and DataJake scripture lexicons to seed NV Speech Player **Nasal balance**, **Plosive impact**, and **Whisper** defaults; regenerate the coverage dashboards via `python tools/report_language_progress.py` and `python tools/report_language_coverage.py` whenever these assets shift.
+- **Trans-Bering revitalisation** – Chukchi (`ckt`), Nivkh (`niv`), Ainu (`ain`), and Aleut (`ale`) additions stitch together Wikipedia orthography tables, GitHub revitalisation grammars, DataJake narrative recordings, and NVDA braille exports so polysynthetic and ergative structures stay audible offline. `python tools/report_integration_scope.py` and `python tools/report_catalog_status.py` now surface these locales in the linkage matrix, and the README quickstart reminds builders to refresh the provenance suite before packaging `eloquence.nvda-addon` from cached mirrors.
+
 After each documentation or profile change, regenerate the cached coverage artefacts so pull requests reflect the current dataset without hammering upstream mirrors:
 
+- `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`
+- `python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print`
 - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
 - `python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print`
 - `python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print`
+- `python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print`
+- `python tools/report_integration_scope.py --json docs/integration_scope.json --markdown docs/integration_scope.md --print`
+- `python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print`
+- `python tools/report_catalog_status.py --json docs/catalog_status.json --markdown docs/catalog_status.md`
+- `python tools/validate_language_pronunciations.py --json docs/language_pronunciation_validation.json --markdown docs/language_pronunciation_validation.md`
 
 The current snapshot (53 language profiles across 70 templates) reports a 39% average IPA completion rate with Gujarati and Indonesian leading at 100%. These Markdown/JSON pairs power the tables referenced throughout `docs/iso_language_expansion.md` and surface gaps where additional phoneme dictionaries, contextual rules, or DataJake archives should be prioritised. CodeQL workflows ingest the JSON outputs to ensure new dictionary parsers or ISO ingestion scripts never regress coverage or introduce unsafe archive handling.
 
@@ -433,7 +447,17 @@ python build.py --insecure --no-download --output dist\eloquence.nvda-addon
 2. **Rehydrate cached artefacts** – copy the Markdown/JSON reports from `docs/` into place (or regenerate them using the commands listed above) so `build.py` embeds the refreshed provenance ledger without hitting external mirrors.
 3. **Verify Eloquence binaries** – confirm that each architecture folder (`eloquence/`, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, `eloquence_arm64/`) contains a matching `eci.dll`, `eci20.dll`, or equivalent runtime plus `.syn` voice data. The builder validates PE headers and will refuse to bundle mismatched architectures.
 4. **Prime phoneme dictionaries** – ensure any `.dic`/`.lex` files you want packaged live under `eloquence_data/` and are referenced in `docs/archive_inventory.json`. If you add new archives, rerun `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` to refresh metadata before building.
-5. **Summarise cross-source assets** – run `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print` and `python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print` to validate that the refreshed coverage, progress, voice template, frequency envelope, and research snapshots line up before packaging.
+5. **Rebuild cross-source dashboards** – run the reporting helpers below so coverage, maturity, frequency, linkage, and validation artefacts reflect the sprint before packaging:
+   - `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`
+   - `python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print`
+   - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
+   - `python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print`
+   - `python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print`
+   - `python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print`
+   - `python tools/report_integration_scope.py --json docs/integration_scope.json --markdown docs/integration_scope.md --print`
+   - `python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print`
+   - `python tools/report_catalog_status.py --json docs/catalog_status.json --markdown docs/catalog_status.md`
+   - `python tools/validate_language_pronunciations.py --json docs/language_pronunciation_validation.json --markdown docs/language_pronunciation_validation.md`
 6. **Run unit tests** – execute `python -m unittest discover tests` to confirm voice sliders, phoneme inventories, and documentation parsers still pass integrity checks.
 7. **Build the add-on** – run `python build.py --insecure --output dist/eloquence.nvda-addon` (add `--template` if you want to reuse a prior package). The script stitches together binaries, documentation, and cached datasets without requiring an internet connection.
 8. **Inspect the package** – unzip `dist/eloquence.nvda-addon` and verify that `manifest.ini`, `globalPlugins/eloquenceThreshold/` assets, the `/eloquence*/` runtimes, and any refreshed docs are present.
@@ -455,6 +479,10 @@ python tools\report_language_progress.py --json docs\language_progress.json --ma
 python tools\report_language_coverage.py --json docs\language_coverage.json --markdown docs\language_coverage.md --print
 python tools\report_voice_language_matrix.py --json docs\voice_language_matrix.json --markdown docs\voice_language_matrix.md --print
 python tools\report_voice_frequency_matrix.py --json docs\voice_frequency_matrix.json --markdown docs\voice_frequency_matrix.md --print
+python tools\report_integration_scope.py --json docs\integration_scope.json --markdown docs\integration_scope.md --print
+python tools\report_voice_parameters.py --json docs\voice_parameter_report.json --markdown docs\voice_parameter_report.md --print
+python tools\report_catalog_status.py --json docs\catalog_status.json --markdown docs\catalog_status.md
+python tools\validate_language_pronunciations.py --json docs\language_pronunciation_validation.json --markdown docs\language_pronunciation_validation.md
 
 # 3. Validate code + build the NVDA add-on without network access
 python -m unittest discover tests

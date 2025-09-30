@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-18T02:15:00Z",
+  "updated": "2025-10-20T04:30:00Z",
   "sources": [
     {
       "title": "Lists of languages",
@@ -2619,6 +2619,227 @@
         "GitHub orthography reforms"
       ],
       "notes": "Details Walloon diphthongs, nasal vowels, and orthography updates so ISO `wa` presets align NV Speech Player **Nasal balance**/**Tone size** sliders with NVDA braille exports."
+    },
+    {
+      "title": "Ainu language",
+      "url": "https://en.wikipedia.org/wiki/Ainu_language",
+      "usefulness": "high",
+      "progress": "researching dual-script export",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia Katakana ⇄ Latin tables",
+        "DataJake oral-history recordings",
+        "GitHub revitalisation grammars",
+        "NVDA braille punctuation exports"
+      ],
+      "notes": "Documents Katakana and Latin transcription, tone, and consonant inventories so ISO `ain` presets align NV Speech Player contour sliders while CodeQL monitors dictionary imports staged from cached DataJake corpora."
+    },
+    {
+      "title": "Aleut language",
+      "url": "https://en.wikipedia.org/wiki/Aleut_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Wikipedia dual-script orthography notes",
+        "DataJake missionary dictionaries",
+        "GitHub transliteration helpers",
+        "NVDA manual punctuation exports"
+      ],
+      "notes": "Captures Cyrillic and Latin Aleut spellings plus glottal stop cues so ISO `ale` presets bundle DataJake lexicons, GitHub converters, and NVDA braille audits before CodeQL-gated packaging."
+    },
+    {
+      "title": "Chukchi language",
+      "url": "https://en.wikipedia.org/wiki/Chukchi_language",
+      "usefulness": "high",
+      "progress": "researching polysynthetic mapping",
+      "classification": [
+        "language",
+        "morphology"
+      ],
+      "sample_assets": [
+        "Wikipedia polysynthetic morphology tables",
+        "DataJake narrative recordings",
+        "GitHub segmentation notebooks",
+        "NVDA braille exports"
+      ],
+      "notes": "Provides polysynthetic templates, ejective consonants, and vowel harmony data so ISO `ckt` voices mirror Siberian corpora and NV Speech Player contour presets while CodeQL verifies archive provenance."
+    },
+    {
+      "title": "Nivkh language",
+      "url": "https://en.wikipedia.org/wiki/Nivkh_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Wikipedia orthography comparisons",
+        "DataJake fishing narratives",
+        "GitHub revitalisation grammars",
+        "NVDA braille exports"
+      ],
+      "notes": "Orthography and ejective consonant research keeps ISO `niv` profiles aligned with dual-script needs while DataJake corpora and NVDA braille audits confirm apostrophe handling for offline builds."
+    },
+    {
+      "title": "Khanty language",
+      "url": "https://en.wikipedia.org/wiki/Khanty_language",
+      "usefulness": "medium",
+      "progress": "researching consonant gradation",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia consonant gradation charts",
+        "DataJake oral-history lexicons",
+        "GitHub finite-state analysers",
+        "NVDA braille exports"
+      ],
+      "notes": "Highlights gradation, vowel harmony, and dialect splits so ISO `kca` presets blend DataJake recordings with GitHub tooling and NVDA braille checks prior to CodeQL-reviewed dictionary ingestion."
+    },
+    {
+      "title": "Mansi language",
+      "url": "https://en.wikipedia.org/wiki/Mansi_language",
+      "usefulness": "medium",
+      "progress": "researching consonant gradation",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel/consonant gradation tables",
+        "DataJake oral-history recordings",
+        "GitHub segmentation notebooks",
+        "NVDA braille exports"
+      ],
+      "notes": "Extends Khanty gradation research for ISO `mns`, guiding NV Speech Player **Tone size**/**Subtones** presets while NVDA braille exports confirm diacritic placement in offline builds."
+    },
+    {
+      "title": "Komi-Zyrian language",
+      "url": "https://en.wikipedia.org/wiki/Komi-Zyrian_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "morphology"
+      ],
+      "sample_assets": [
+        "Wikipedia ergative alignment notes",
+        "DataJake archival dictionaries",
+        "GitHub morphological toolkits",
+        "NVDA braille exports"
+      ],
+      "notes": "Captures palatalisation, ergativity, and diacritic usage so ISO `kpv` voice and dictionary updates align DataJake assets with GitHub analysers and NVDA braille behaviour under CodeQL supervision."
+    },
+    {
+      "title": "Komi-Permyak language",
+      "url": "https://en.wikipedia.org/wiki/Komi-Permyak_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony inventories",
+        "DataJake folk-song lexicons",
+        "GitHub transliteration helpers",
+        "NVDA braille exports"
+      ],
+      "notes": "Documents vowel harmony deviations and consonant palatalisation so ISO `koi` presets mirror DataJake corpora and GitHub converters while NVDA braille exports confirm diacritic coverage."
+    },
+    {
+      "title": "Meadow Mari language",
+      "url": "https://en.wikipedia.org/wiki/Meadow_Mari_language",
+      "usefulness": "medium",
+      "progress": "researching vowel harmony export",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony tables",
+        "DataJake choral lexicons",
+        "GitHub finite-state analysers",
+        "NVDA braille exports"
+      ],
+      "notes": "Vowel harmony, gemination, and orthography notes help ISO `mhr` profiles align NV Speech Player presets with DataJake corpora while NVDA braille exports validate umlaut permutations."
+    },
+    {
+      "title": "Hill Mari language",
+      "url": "https://en.wikipedia.org/wiki/Hill_Mari_language",
+      "usefulness": "medium",
+      "progress": "researching diacritic mapping",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia palatalisation notes",
+        "DataJake liturgical corpora",
+        "GitHub morphology notebooks",
+        "NVDA braille exports"
+      ],
+      "notes": "Dialect split and palatalisation metadata keep ISO `mrj` presets aligned with DataJake corpora and NVDA braille cues while CodeQL tracks dictionary ingestion workflows."
+    },
+    {
+      "title": "Nenets languages",
+      "url": "https://en.wikipedia.org/wiki/Nenets_languages",
+      "usefulness": "medium",
+      "progress": "researching nasal harmony export",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia nasal harmony studies",
+        "DataJake scripture corpora",
+        "GitHub morphology toolkits",
+        "NVDA braille exports"
+      ],
+      "notes": "Tracks nasal harmony, superscript diacritics, and vowel length cues so ISO `yrk` voices can pair DataJake dictionaries with GitHub tooling and NVDA braille audits before packaging."
+    },
+    {
+      "title": "Even language",
+      "url": "https://en.wikipedia.org/wiki/Even_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia phonotactic notes",
+        "DataJake scripture lexicons",
+        "GitHub orthography converters",
+        "NVDA braille exports"
+      ],
+      "notes": "Aggregates Tungusic phonotactics and glottal consonant cues so ISO `eve` presets align DataJake lexicons with NVDA braille behaviour and CodeQL-monitored dictionary ingestion."
+    },
+    {
+      "title": "Evenki language",
+      "url": "https://en.wikipedia.org/wiki/Evenki_language",
+      "usefulness": "medium",
+      "progress": "researching dual-script export",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony charts",
+        "DataJake storytelling archives",
+        "GitHub morphological analysers",
+        "NVDA manual punctuation exports"
+      ],
+      "notes": "Dual-script vowel harmony and ejective consonant data ensures ISO `evn` coverage lines up with DataJake corpora, GitHub morphology tools, and NVDA punctuation/braille audits during offline packaging."
     }
   ]
 }
