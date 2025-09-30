@@ -8,6 +8,7 @@ The project now organises resources by file extension under the top-level [`asse
 Supporting reports help track the migration:
 
 - [`assets/md/file_structure_audit.md`](assets/md/file_structure_audit.md) – remediation checklist covering loader updates, NV Speech Player catalogue moves, cached dataset staging, and pending cleanups within `speechdata/`.
+- [`assets/md/assets_migration_backlog.md`](assets/md/assets_migration_backlog.md) – live register of frameworks still straddling `assets/` and `speechdata/`, including the smoke-test and offline build cadence required before NVDA/CodeQL reviews.
 - [`assets/md/assets_layout_summary.md`](assets/md/assets_layout_summary.md) – generated snapshot (via `python assets/py/report_assets_layout.py --print`) that counts files in every extension bucket and flags mismatched suffixes.
 - [`assets/md/speechdata_manifest.md`](assets/md/speechdata_manifest.md) – inventory of legacy datasets that still live under [`speechdata/`](speechdata/) until their formats or provenance can be confirmed.
 
