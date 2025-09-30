@@ -54,6 +54,18 @@ def assets_root() -> Path:
     return _ASSETS_ROOT
 
 
+def speechdata_root() -> Path:
+    """Return the repository's ``speechdata`` directory.
+
+    The folder continues to host extensionless datasets (for example eSpeak NG
+    lexicons) until we can either add safe suffixes or teach the NVDA loaders to
+    resolve them dynamically.  Callers should still check ``Path.exists``
+    because lean deployments or future cleanups may omit the tree entirely.
+    """
+
+    return _REPO_ROOT / "speechdata"
+
+
 def asset_dir(name: str) -> Path:
     """Return the directory for a given *name* under ``assets/``.
 

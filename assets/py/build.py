@@ -38,13 +38,15 @@ import zipfile
 from pathlib import Path
 from typing import Dict, Iterable, Optional, Tuple
 
+import resource_paths
+
 if sys.version_info < (3, 8):
     raise RuntimeError("Python 3.8 or newer is required to build the add-on")
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-ASSETS_ROOT = SCRIPT_DIR.parent
-REPO_ROOT = ASSETS_ROOT.parent
+ASSETS_ROOT = resource_paths.assets_root()
+REPO_ROOT = resource_paths.repo_root()
 
 DEFAULT_OUTPUT = REPO_ROOT / "eloquence.nvda-addon"
 DEFAULT_TEMPLATE = REPO_ROOT / "eloquence_original.nvda-addon"
@@ -83,16 +85,10 @@ def _contains_eci_dll(path: Path) -> bool:
 def has_runtime_assets() -> bool:
     """Return ``True`` if any staged directory exposes ``eci.dll``."""
 
-    runtime_candidates = [
-        ASSETS_ROOT / "dll",
-        REPO_ROOT / "eloquence",
-        REPO_ROOT / "eloquence_x86",
-        REPO_ROOT / "eloquence_x64",
-        REPO_ROOT / "eloquence_arm32",
-        REPO_ROOT / "eloquence_arm64",
-        REPO_ROOT / "eloquence_arm",
-    ]
-    return any(_contains_eci_dll(candidate) for candidate in runtime_candidates)
+    for candidate in resource_paths.eloquence_library_roots():
+        if _contains_eci_dll(candidate):
+            return True
+    return False
 
 ARCH_DIRECTORIES: Tuple[Tuple[str, Path, str], ...] = (
     ("eloquence_x86", Path("synthDrivers") / "eloquence" / "x86", "Embedded 32-bit runtime from ./eloquence_x86"),
@@ -282,9 +278,10 @@ def stage_root_files(staging_dir: Path) -> None:
 
 
 def iter_asset_directories() -> Iterable[Path]:
-    if not ASSETS_ROOT.exists():
+    assets_root = resource_paths.assets_root()
+    if not assets_root.exists():
         return
-    for path in sorted(ASSETS_ROOT.iterdir()):
+    for path in sorted(assets_root.iterdir()):
         if path.name in ASSET_EXCLUDES:
             continue
         yield path
@@ -308,7 +305,7 @@ def stage_assets_tree(staging_dir: Path) -> bool:
 
 
 def stage_speechdata_tree(staging_dir: Path) -> bool:
-    speechdata_root = REPO_ROOT / "speechdata"
+    speechdata_root = resource_paths.speechdata_root()
     if not speechdata_root.is_dir():
         return False
     return copy_optional_directory(
