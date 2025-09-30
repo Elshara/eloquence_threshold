@@ -14,6 +14,8 @@ import argparse
 import sys
 from typing import List, Optional, Sequence, Tuple
 
+import resource_paths
+
 from language_profiles import (
     LanguageProfile,
     LanguageProfileCatalog,
@@ -175,16 +177,24 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     arguments = parse_arguments(argv)
     catalog = load_default_language_profiles()
     if catalog.is_empty:
+        targets = [str(path) for path in resource_paths.language_profile_directories()]
+        if not targets:
+            targets = [str(resource_paths.asset_dir("json"))]
+        hint = ", ".join(targets)
         raise SystemExit(
-            "No language profiles were found. Ensure eloquence_data/languages is populated."
+            f"No language profiles were found. Ensure the JSON bundles in {hint} include language entries."
         )
     if arguments.list_profiles:
         list_profiles(catalog)
         return 0
     profile = select_profile(catalog, arguments.profile, arguments.language)
     if profile is None:
+        targets = [str(path) for path in resource_paths.language_profile_directories()]
+        if not targets:
+            targets = [str(resource_paths.asset_dir("json"))]
+        hint = ", ".join(targets)
         raise SystemExit(
-            "No language profiles are available. Populate eloquence_data/languages first."
+            f"No language profiles are available. Populate {hint} with language JSON files first."
         )
     print(f"Using profile: {profile.display_label()} ({profile.id})")
     if arguments.show_characters:

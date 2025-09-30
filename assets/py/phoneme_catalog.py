@@ -22,6 +22,8 @@ from collections import OrderedDict, defaultdict
 from dataclasses import dataclass, field
 from typing import Dict, Iterable, Iterator, List, Optional, Sequence, Tuple
 
+import resource_paths
+
 LOG = logging.getLogger(__name__)
 
 _CATEGORY_BORDER_CHARS = "*/=\\-#~"
@@ -223,7 +225,7 @@ def load_default_inventory() -> PhonemeInventory:
     """Load the bundled eSpeak NG and contributed phoneme catalogues."""
 
     phonemes: List[PhonemeDefinition] = []
-    data_path = os.path.join(os.path.dirname(__file__), "eloquence_data", "espeak_phonemes.txt")
+    data_path = os.path.abspath(str(resource_paths.phoneme_inventory_path()))
     if os.path.exists(data_path):
         try:
             with open(data_path, "r", encoding="utf-8") as source:
@@ -245,21 +247,25 @@ def load_default_inventory() -> PhonemeInventory:
 def _load_contributed_phonemes() -> List[PhonemeDefinition]:
     """Load JSON-based phoneme inventories contributed by the community."""
 
-    data_dir = os.path.join(os.path.dirname(__file__), "eloquence_data", "phonemes")
-    if not os.path.isdir(data_dir):
-        return []
     definitions: List[PhonemeDefinition] = []
-    for entry in sorted(os.listdir(data_dir)):
-        if not entry.lower().endswith(".json"):
+    for directory in resource_paths.phoneme_json_directories():
+        data_dir = os.path.abspath(str(directory))
+        if not os.path.isdir(data_dir):
             continue
-        path = os.path.join(data_dir, entry)
-        try:
-            with open(path, "r", encoding="utf-8") as handle:
-                payload = json.load(handle)
-        except (OSError, json.JSONDecodeError):
-            LOG.exception("Unable to read contributed phoneme data from %s", path)
-            continue
-        definitions.extend(_parse_contributed_phonemes(payload, path))
+        for entry in sorted(os.listdir(data_dir)):
+            if not entry.lower().endswith(".json"):
+                continue
+            path = os.path.join(data_dir, entry)
+            try:
+                with open(path, "r", encoding="utf-8") as handle:
+                    payload = json.load(handle)
+            except (OSError, json.JSONDecodeError):
+                LOG.exception("Unable to read contributed phoneme data from %s", path)
+                continue
+            if not isinstance(payload, dict) or not isinstance(payload.get("phonemes"), list):
+                LOG.debug("Skipping %s because it does not expose a phoneme list", path)
+                continue
+            definitions.extend(_parse_contributed_phonemes(payload, path))
     return definitions
 
 

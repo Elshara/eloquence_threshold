@@ -16,20 +16,22 @@ from collections import OrderedDict
 from dataclasses import dataclass
 from typing import Dict, Iterable, Iterator, List, Optional, Set, Tuple
 
+import resource_paths
 from voice_parameters import ADVANCED_VOICE_PARAMETER_SPECS
 
 LOG = logging.getLogger(__name__)
 
-_VOICE_DATA_ROOT = os.path.join(os.path.dirname(__file__), "eloquence_data")
-_VOICE_SUBDIR = os.path.join(_VOICE_DATA_ROOT, "voices")
-_ESPEAK_VARIANT_DIR = os.path.join(_VOICE_DATA_ROOT, "espeak_variants")
+_VOICE_DATA_ROOT = os.path.abspath(str(resource_paths.assets_root()))
+_VOICE_DIRECTORIES = [
+    os.path.abspath(str(path)) for path in resource_paths.voice_data_directories()
+]
+if not _VOICE_DIRECTORIES:
+    _VOICE_DIRECTORIES = [os.path.join(_VOICE_DATA_ROOT, "json")]
+_ESPEAK_VARIANT_DIR = os.path.abspath(str(resource_paths.asset_dir("voice")))
 
 
 def _iter_voice_data_files() -> Iterator[Tuple[str, str]]:
     """Yield ``(source_id, path)`` pairs for bundled voice catalog files."""
-
-    if not os.path.isdir(_VOICE_DATA_ROOT):
-        return
 
     seen: Set[str] = set()
 
@@ -41,31 +43,19 @@ def _iter_voice_data_files() -> Iterator[Tuple[str, str]]:
         source_id = _source_id_from_path(absolute)
         return source_id, absolute
 
-    # Top-level ``*_voices.json`` files keep backward compatibility with the
-    # original layout.
-    for name in sorted(os.listdir(_VOICE_DATA_ROOT)):
-        if not name.lower().endswith("_voices.json"):
+    for directory in _VOICE_DIRECTORIES:
+        if not os.path.isdir(directory):
             continue
-        path = os.path.join(_VOICE_DATA_ROOT, name)
-        if not os.path.isfile(path):
-            continue
-        result = register(path)
-        if result:
-            yield result
-
-    if not os.path.isdir(_VOICE_SUBDIR):
-        return
-
-    for root, _dirs, files in os.walk(_VOICE_SUBDIR):
-        for name in sorted(files):
-            if not name.lower().endswith(".json"):
-                continue
-            path = os.path.join(root, name)
-            if not os.path.isfile(path):
-                continue
-            result = register(path)
-            if result:
-                yield result
+        for root, _dirs, files in os.walk(directory):
+            for name in sorted(files):
+                if not name.lower().endswith(".json"):
+                    continue
+                path = os.path.join(root, name)
+                if not os.path.isfile(path):
+                    continue
+                result = register(path)
+                if result:
+                    yield result
 
 
 def _source_id_from_path(path: str) -> str:
@@ -377,7 +367,10 @@ def _load_voice_payload(path: str) -> Optional[Dict[str, object]]:
         LOG.exception("Unable to read voice data from %s", path)
         return None
     if not isinstance(payload, dict):
-        LOG.warning("Voice catalogue payload in %s is not an object", path)
+        LOG.debug("Voice catalogue payload in %s is not an object", path)
+        return None
+    if not any(key in payload for key in ("templates", "variants", "parameters")):
+        LOG.debug("Skipping %s because it does not contain voice template data", path)
         return None
     return payload
 

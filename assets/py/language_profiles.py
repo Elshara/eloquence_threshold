@@ -11,16 +11,21 @@ from datetime import datetime, timezone
 from statistics import median
 from typing import TYPE_CHECKING, Dict, Iterable, Iterator, List, Optional, Tuple
 
+import resource_paths
+
 if TYPE_CHECKING:
     from phoneme_catalog import PhonemeInventory
     from voice_catalog import VoiceCatalog, VoiceTemplate
 
 LOG = logging.getLogger(__name__)
 
-_REPO_ROOT = os.path.dirname(__file__)
-_DATA_DIR = os.path.join(_REPO_ROOT, "eloquence_data", "languages")
-_DOCS_DIR = os.path.join(_REPO_ROOT, "docs")
-_WIKIPEDIA_INDEX_PATH = os.path.join(_DOCS_DIR, "wikipedia_language_index.json")
+_DATA_DIRECTORIES = [
+    os.path.abspath(str(path)) for path in resource_paths.language_profile_directories()
+]
+if not _DATA_DIRECTORIES:
+    _DATA_DIRECTORIES = [os.path.join(os.path.abspath(str(resource_paths.assets_root())), "json")]
+_PRIMARY_DATA_DIR = _DATA_DIRECTORIES[0]
+_WIKIPEDIA_INDEX_PATH = os.path.abspath(str(resource_paths.wikipedia_index_path()))
 
 _WHITESPACE_RE = re.compile(r"\s+")
 
@@ -411,28 +416,46 @@ class LanguageProfileCatalog:
 
 
 def load_default_language_profiles() -> LanguageProfileCatalog:
-    if not os.path.isdir(_DATA_DIR):
-        LOG.info("No language profiles found under %s", _DATA_DIR)
-        return LanguageProfileCatalog([])
     profiles: List[LanguageProfile] = []
-    for name in sorted(os.listdir(_DATA_DIR)):
-        if not name.lower().endswith(".json"):
+    seen_paths: set[str] = set()
+    for data_dir in _DATA_DIRECTORIES:
+        if not os.path.isdir(data_dir):
+            LOG.debug("Language profile directory missing: %s", data_dir)
             continue
-        path = os.path.join(_DATA_DIR, name)
-        try:
-            with open(path, "r", encoding="utf-8") as source:
-                data = json.load(source)
-        except (OSError, json.JSONDecodeError):
-            LOG.exception("Unable to parse language profile %s", path)
-            continue
-        if isinstance(data, dict) and "profiles" in data and isinstance(data["profiles"], list):
-            payloads = [entry for entry in data["profiles"] if isinstance(entry, dict)]
-        else:
-            payloads = [data]
-        for payload in payloads:
-            profile = _parse_language_profile(payload)
-            if profile is not None:
-                profiles.append(profile)
+        for name in sorted(os.listdir(data_dir)):
+            if not name.lower().endswith(".json"):
+                continue
+            path = os.path.abspath(os.path.join(data_dir, name))
+            if path in seen_paths:
+                continue
+            seen_paths.add(path)
+            try:
+                with open(path, "r", encoding="utf-8") as source:
+                    data = json.load(source)
+            except (OSError, json.JSONDecodeError):
+                LOG.exception("Unable to parse language profile %s", path)
+                continue
+            payloads: List[Dict[str, object]] = []
+            if isinstance(data, dict) and "profiles" in data and isinstance(data["profiles"], list):
+                for entry in data["profiles"]:
+                    if isinstance(entry, dict) and (
+                        isinstance(entry.get("characters"), list)
+                        or isinstance(entry.get("id"), str)
+                    ):
+                        payloads.append(entry)
+                if not payloads and isinstance(data.get("characters"), list):
+                    payloads.append(data)
+            elif isinstance(data, dict) and isinstance(data.get("characters"), list):
+                payloads.append(data)
+            else:
+                LOG.debug("Skipping %s because it does not contain language profiles", path)
+                continue
+            for payload in payloads:
+                profile = _parse_language_profile(payload)
+                if profile is not None:
+                    profiles.append(profile)
+    if not profiles:
+        LOG.info("No language profiles found under %s", _PRIMARY_DATA_DIR)
     return LanguageProfileCatalog(profiles)
 
 

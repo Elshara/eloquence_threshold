@@ -39,6 +39,10 @@ Use the table below to mark progress. Update it whenever you move assets or fini
 
 Document future updates here as you work through the backlog so the history of the cleanup stays transparent to both maintainers and the NVDA community.
 
+### Progress since the last update
+
+- **Resource path shim landed.** `assets/py/resource_paths.py` now centralises path discovery for DLLs, `.syn` voices, language profiles, phoneme catalogues, and NV Speech Player exports. The Eloquence driver, phoneme and voice catalogues, and the language profile tooling now resolve assets through this helper so the extension-first layout works without recreating the legacy `eloquence/` tree. Follow-up work: teach `build.py` to hydrate `synthDrivers/eloquence_data` from the new buckets before packaging.
+
 ## Automation helpers
 
 - Run `python assets/py/report_speechdata_inventory.py` after every migration batch. The helper writes both the JSON inventory (consumed by future tooling) and the Markdown summary that the NVDA community reviews when validating cached datasets.

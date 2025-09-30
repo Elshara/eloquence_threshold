@@ -3,8 +3,8 @@
 
 The script reads the ``data.py`` table from the NV Speech Player project and
 emits a JSON payload compatible with :mod:`phoneme_catalog`. Use this helper to
-refresh ``eloquence_data/phonemes/nvspeechplayer_core.json`` whenever you pull a
-new upstream revision.
+refresh ``assets/json/nvspeechplayer_core.json`` whenever you pull a new
+upstream revision.
 """
 from __future__ import annotations
 
@@ -15,6 +15,8 @@ import os
 import subprocess
 from datetime import datetime, timezone
 from typing import Dict, List, Mapping, MutableMapping, Optional, Sequence, Tuple
+
+import resource_paths
 
 CATEGORY_MAP = {
     "_isVowel": "NVSpeechPlayer vowels",
@@ -62,7 +64,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         dest="output_path",
-        default=os.path.join("eloquence_data", "phonemes", "nvspeechplayer_core.json"),
+        default=str(resource_paths.nvspeechplayer_core_path()),
         help="Where to write the generated JSON payload",
     )
     parser.add_argument(

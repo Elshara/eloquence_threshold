@@ -20,6 +20,7 @@ import config
 from ctypes import wintypes
 import threading, os, queue, re
 import nvwave
+import resource_paths
 
 OLE32 = ctypes.WinDLL("ole32", use_last_error=True)
 
@@ -153,9 +154,15 @@ EDataFlow_eRender = 0
 ERole_eConsole = 0
 
 IS_64BIT = ctypes.sizeof(ctypes.c_void_p) == 8
-VOICE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "eloquence"))
+VOICE_DIR = os.path.abspath(str(resource_paths.eloquence_default_voice_directory()))
 voiceDirectory = VOICE_DIR
-_dictionaryDirs = [VOICE_DIR]
+_dictionaryDirs = []
+for _path in resource_paths.eloquence_dictionary_dirs():
+    normalized = os.path.abspath(str(_path))
+    if normalized not in _dictionaryDirs:
+        _dictionaryDirs.append(normalized)
+if VOICE_DIR not in _dictionaryDirs:
+    _dictionaryDirs.insert(0, VOICE_DIR)
 
 user32 = ctypes.WinDLL("user32", use_last_error=True)
 kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
@@ -650,7 +657,7 @@ def _library_matches_current_arch(path):
 
 def _candidate_library_paths():
  base_dir = VOICE_DIR
- repo_root = os.path.dirname(base_dir)
+ repo_root = os.path.abspath(str(resource_paths.repo_root()))
  family = _current_architecture_family()
  search_roots = []
  seen_roots = set()
@@ -662,6 +669,8 @@ def _candidate_library_paths():
   search_roots.append(path)
   seen_roots.add(normalized)
 
+ for root in resource_paths.eloquence_library_roots():
+  add_root(os.path.abspath(str(root)))
  for root_name in _ARCH_FAMILY_ROOTS.get(family, ()):  # Prefer explicit architecture roots
   add_root(os.path.join(repo_root, root_name))
  add_root(base_dir)

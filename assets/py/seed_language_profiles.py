@@ -7,9 +7,10 @@ import sys
 from copy import deepcopy
 from typing import Dict, List
 
+import resource_paths
+
 REPO_ROOT = os.path.dirname(os.path.dirname(__file__))
-LANGUAGE_DIR = os.path.join(REPO_ROOT, "eloquence_data", "languages")
-OUTPUT_FILE = os.path.join(LANGUAGE_DIR, "world_language_seeds.json")
+OUTPUT_FILE = str(resource_paths.language_seed_output_path())
 
 
 def _entry(symbol: str, spoken: str, ipa: List[str], description: str, example: str, *notes: str) -> Dict[str, object]:
@@ -1424,7 +1425,7 @@ BASE_TEMPLATE_PARAMETERS = {
     "volume": 92,
 }
 
-VOICE_OUTPUT_FILE = os.path.join(REPO_ROOT, "eloquence_data", "voices", "eloquence_global_seeds.json")
+VOICE_OUTPUT_FILE = str(resource_paths.voice_seed_output_path())
 
 
 def _ensure_repo_on_path() -> None:

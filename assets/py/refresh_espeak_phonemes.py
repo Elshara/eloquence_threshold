@@ -1,7 +1,7 @@
 """Utility to refresh the bundled eSpeak NG phoneme catalogue.
 
 This helper copies the upstream ``phsource/phonemes`` file from an eSpeak NG
-checkout (or unpacked data directory) into ``eloquence_data/espeak_phonemes.txt``.
+checkout (or unpacked data directory) into ``assets/txt/espeak_phonemes.txt``.
 Keeping the catalogue in sync with eSpeak ensures Eloquence exposes the latest
 phoneme categories and sample comments when users explore NVDA's voice dialog.
 
@@ -23,6 +23,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 from typing import Iterable, Optional
+
+import resource_paths
 
 
 def main() -> None:
@@ -105,8 +107,7 @@ def _normalize_newlines(text: str) -> str:
 
 
 def _default_output_path() -> str:
-    repo_root = Path(__file__).resolve().parent.parent
-    return str(repo_root / "eloquence_data" / "espeak_phonemes.txt")
+    return str(resource_paths.phoneme_inventory_path())
 
 
 if __name__ == "__main__":
