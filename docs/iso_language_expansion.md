@@ -14,6 +14,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | bs | Latin (Bosnian) | Researching | Cached Wikipedia accentuation charts paired with DataJake Sarajevo news lexicons; GitHub Bosnian diacritic normalisers queued so NVDA braille exports keep č/ć/đ distinctions intact. |
 | ar, ar-EG | Arabic | Seeded | Profiles sourced from `eloquence_data/languages/world_language_seeds.json`; leverages Quranic recitation corpora for emphatic consonants. |
 | as | Bengali-Assamese | Planned | Wikipedia-derived consonant inventory staged; awaiting Assamese-specific schwa deletion tests via NVDA nightly builds. |
+| ast | Latin (Asturian) | Planned | Cached Wikipedia nasal vowel and palatal lateral research combined with DataJake folk song dictionaries and NVDA braille contractions to guide **Inflection contour** presets prior to CodeQL dictionary ingestion. |
 | az | Latin (Azeri) | Planned | GitHub transliteration utilities catalogued; NVDA docs scanned for glottal stop punctuation cues. |
 | ba | Cyrillic & Latin (Bashkir) | Researching | Cached Wikipedia vowel harmony/velarisation tables paired with DataJake folk song corpora and GitHub transliteration tools; NVDA braille exports confirm Bashkir-specific diacritics before EQ tuning. |
 | bg | Cyrillic (Bulgarian) | Developing | DataJake MBROLA payloads flagged for vowel reduction heuristics; Wikipedia stress matrices under review. |
@@ -24,6 +25,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | ceb | Latin (Cebuano) | Researching | DataJake hymn `.dic` payloads catalogued alongside GitHub orthography converters; cached Wikipedia vowel harmony notes guide NV Speech Player **Tone size** and **Subtones** defaults prior to CodeQL-audited profile seeding. |
 | ch | Latin (Chamorro) | Planned | Wikipedia glottal stop guidance matched with DataJake Guam civic-language corpora and GitHub Chamorro spelling reform scripts; NVDA braille tables referenced to validate geminate consonant dots. |
 | cv | Cyrillic & Latin (Chuvash) | Researching | DataJake hymn recordings catalogued alongside Wikipedia vowel harmony and palatalisation notes; GitHub morphology projects feed CodeQL-audited dictionary staging with NVDA braille exports for diacritics. |
+| co | Latin (Corsican) | Planned | Wikipedia vowel centralisation charts paired with DataJake liturgical corpora and GitHub dialect surveys; NVDA braille exports confirm grave-accent punctuation before tuning NV Speech Player **Vocal range** presets. |
 | chr | Cherokee syllabary | Researching | Wikipedia syllabary tables mirrored; GitHub DECtalk lexicon fragments staged for syllable-to-phoneme mapping prior to NVDA braille export integration. |
 | cs | Latin (Czech) | Established | Awaiting expanded consonant cluster rules from archived DECtalk dictionaries. |
 | da | Latin (Danish) | Developing | NVDA documentation snapshot provides stød examples; DataJake lexicons mapped to vowel reduction slider defaults. |
@@ -32,12 +34,15 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | en-GB, en-US | Latin (English) | Comprehensive | Heritage Eloquence templates cross-referenced with GitHub-hosted pronunciation dictionaries. |
 | es-ES, es-419 | Latin (Spanish) | Comprehensive | Castilian and Latin American variants mapped to NV Speech Player tone curves. |
 | et | Latin (Estonian) | Planned | Partial vowel harmony patterns mirrored from Wikipedia; DataJake archives scanned for palatal consonant cues. |
+| eu | Latin (Basque) | Researching | Ergative-absolutive grammar primers and sibilant harmony charts cached from Wikipedia; DataJake news dictionaries plus GitHub Euskara analyzers feed NV Speech Player **Inflection contour**/**Sibilant clarity** presets before CodeQL ingestion. |
 | ee | Latin (Ewe) | Researching | Wikipedia ATR harmony charts, DataJake hymn `.dic` payloads, and GitHub tone sandhi analysers guide NV Speech Player **Tone**/**Subtones** presets; NVDA braille exports validate digraph punctuation. |
 | fa | Arabic (Persian) | Comprehensive | Integrates Ezafe articulation from Wikipedia grammar references. |
 | ff | Latin (Fula/Pulaar) | Planned | Wikipedia tone plateau tables staged; DataJake `.lex` inventories queued for ATR harmony validation with NV Speech Player tone sliders. |
 | fil | Latin (Filipino) | Seeded | NVDA manual extracts processed; awaiting morphological corpora from GitHub to tune affix pronunciation. |
 | ga-IE | Latin (Irish Gaelic) | Planned | Adds BCP 47 regional tag; lenition/eclipsis roadmaps tie into NV Speech Player consonant hardness sliders. |
 | fr | Latin (French) | Developing | DataJake `.dic` payloads assigned to nasal vowel validation; NVDA manual punctuation tables mirrored. |
+| fur | Latin (Friulian) | Planned | Wikipedia orthography reforms and DataJake civic-language corpora paired with NVDA braille exports; NV Speech Player **Tone size** presets tuned for alveolar affricates prior to template seeding. |
+| fy | Latin (West Frisian) | Planned | Cached Wikipedia vowel harmony notes, DataJake parliamentary transcripts, and GitHub spelling normalisers underpin **Stress**/**Sibilant clarity** slider defaults and upcoming dictionary imports. |
 | ga | Latin (Irish) | Planned | Wikipedia mutation schedules recorded; NVDA docs referenced for braille grade 2 interplay. |
 | gaa | Latin (Ga) | Researching | Cached Wikipedia nasal vowel inventories tied to DataJake broadcast corpora and GitHub orthography datasets; informs **Nasal balance**/**Macro volume** presets and NVDA punctuation regression tests. |
 | gwi | Latin (Gwich’in) | Researching | Wikipedia tone/accent notes linked with DataJake lexicon scans; NVDA braille tables flagged for apostrophe tone markers. |
@@ -62,6 +67,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | kl | Latin (Kalaallisut) | Researching | Greenlandic polysynthetic morphology mapped from Wikipedia; GitHub analysers referenced for suffix stacking during phoneme generation. |
 | ks | Perso-Arabic & Sharada (Kashmiri) | Planned | Dual-script roadmap logged; NVDA braille tables and GitHub transliteration utilities referenced for voiceless aspirate handling. |
 | ky | Cyrillic & Latin (Kyrgyz) | Researching | Wikipedia vowel harmony charts and DataJake MBROLA lexicons align with GitHub transliteration utilities; NV Speech Player **Tone**/**Vocal range** presets staged pending dual-script validation in NVDA manuals. |
+| lb | Latin (Luxembourgish) | Planned | Cached Wikipedia digraph inventories, DataJake parliamentary corpora, and GitHub G Lëtzebuergesch spelling normalisers guide **Stress**/**Sibilant clarity** presets and NVDA braille hyphenation tests. |
 | jv | Latin (Javanese) | Planned | Script variants (Latin/Hanacaraka) catalogued in the Wikipedia index; awaiting dictionary ingestion to resolve vowel length cues. |
 | kk | Cyrillic (Kazakh) | Planned | Cyrillic/Latin dual-script corpora tagged; NVDA docset scanned for apostrophe-based digraph hints. |
 | km | Khmer | Planned | Unicode dependent vowel tables mirrored; DataJake MBROLA seeds under review for diphthong contours. |
@@ -81,6 +87,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | ne | Devanagari (Nepali) | Planned | Cached Wikipedia vowel length charts staged; GitHub corpora tagged for schwa deletion and tone neutralisation checks prior to CodeQL validation. |
 | mt | Latin (Maltese) | Planned | NVDA manuals highlight Semitic roots; GitHub lexicons queued to validate emphatic consonants. |
 | nso | Latin (Northern Sotho) | Planned | Bantu tone tiers mapped; DataJake references under review for alveolar click representations. |
+| oc | Latin (Occitan) | Planned | Troubadour phonology, DataJake poetry corpora, and GitHub Occitan normalisers coordinate NV Speech Player **Nasal balance** presets with NVDA braille diacritic tests. |
 | om | Ethiopic & Latin (Oromo) | Planned | Wikipedia Gadaa dialect splits recorded; NVDA documentation scanned for Latin orthography fallback. |
 | or | Odia (Oriya) | Planned | Script-specific ligatures inventoried; DataJake `.lex` search queued for inherent vowel suppression rules. |
 | pa, pa-Arab | Gurmukhi & Shahmukhi (Punjabi) | Planned | Dual-script packaging references NVDA manual samples; DataJake `.dic` payloads tagged for tone and retroflex calibration. |
@@ -93,6 +100,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | quc | Latin (K'iche') | Researching | Wikipedia Mayan phoneme tables staged with DataJake scripture lexicons; GitHub community grammars and NVDA braille exports validate ejective consonant markers ahead of CodeQL-audited dictionary imports. |
 | rap | Latin (Rapa Nui) | Planned | GitHub revitalisation grammars and DataJake oral-history recordings document glottal stop and vowel length cues; NVDA braille tables mapped to confirm Polynesian macron coverage prior to slider tuning. |
 | ro | Latin (Romanian) | Planned | DECtalk lexicon ancestry catalogued; Wikipedia sources list vowel centralisation heuristics pending validation. |
+| rm | Latin (Romansh) | Planned | Wikipedia orthography reforms, DataJake canton education corpora, and NVDA braille exports align digraph handling with NV Speech Player **Tone size**/**Inflection contour** presets ahead of template tuning. |
 | ru | Cyrillic (Russian) | Developing | Awaiting vowel reduction matrices from Wikipedia stress tables before graduating to "established". |
 | rn | Latin (Kirundi) | Planned | GitHub morphological analyzers catalogued; DataJake `.lex` payloads queued to document Bantu noun-class tones alongside NVDA punctuation exports. |
 | rw | Latin (Kinyarwanda) | Planned | Tone plateau heuristics sourced from Wikipedia; NV Speech Player pitch defaults mapped for nasal prefix handling. |
@@ -103,6 +111,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | sd | Arabic (Sindhi) | Planned | Arabic-derived vowel marks and Sindhi-specific consonants tracked; NVDA braille tables referenced for implosive consonant cues. |
 | sg | Latin (Sango) | Researching | DataJake scripture corpora inventoried; Wikipedia tonal reduction studies combined with NVDA manual punctuation exports to calibrate **Macro volume** and **Tone** sliders. |
 | sah | Cyrillic (Sakha/Yakut) | Researching | Cached Wikipedia vowel harmony and long consonant cues paired with DataJake storytelling archives; NV Speech Player **Tone size**/**Scope depth** presets tuned while NVDA braille exports verify Cyrillic diacritics. |
+| sc | Latin (Sardinian) | Planned | DataJake liturgical recordings, Wikipedia Logudorese/Campidanese phonology tables, and NVDA braille exports coordinate **Macro volume**/**Subtones** presets before importing community dictionaries. |
 | sn | Latin (Shona) | Researching | Wikipedia downstep/whistled speech studies cross-referenced with DataJake pronunciation datasets and GitHub prosody corpora; NVDA manual exports confirm tone apostrophe behaviour before CodeQL gating. |
 | sr, sr-Latn | Cyrillic & Latin (Serbian) | Researching | Cached Wikipedia palatalisation notes plus Serbian National Corpus samples funnel into DataJake `.lex` payload triage; NVDA manual exports confirm Cyrillic/Latin punctuation parity ahead of CodeQL-audited template seeding. |
 | cnr | Latin (Montenegrin) | Planned | Wikipedia dual-accent overview staged; GitHub Montenegrin corpus snippets aligned with Serbian/Bosnian templates to validate ś/ź phoneme coverage. |
@@ -124,6 +133,7 @@ This living roadmap outlines how Eloquence Threshold is expanding ISO 639 and BC
 | uk | Cyrillic (Ukrainian) | Seeded | Stress data mirrored from Wikipedia tables; DataJake archives flagged for palatalisation pairs. |
 | vi | Latin (Vietnamese) | Developing | Tone sandhi heuristics pulled from Wikipedia; DataJake lexical tone recordings assigned to frequency matrix planning. |
 | war | Latin (Waray-Waray) | Planned | Wikipedia stress and vowel length charts combined with DataJake scripture recordings; GitHub syllabifiers queued to validate glottal stop notation before refreshing NVDA braille exports. |
+| wa | Latin (Walloon) | Planned | Cached Wikipedia nasal vowel inventories, DataJake folk song lexicons, and NVDA braille contraction tables align Walloon diphthongs with NV Speech Player **Nasal balance** presets prior to dictionary ingestion. |
 | wo | Latin (Wolof) | Planned | High/low tone orthography referenced; GitHub language models queued for nasal cluster coverage. |
 | zh-Hans | Han (Simplified Chinese) | Developing | NVDA dictionary extracts and GitHub Pinyin to IPA datasets align; DataJake tone recordings queued for 4-tone verification. |
 | zh-Hant | Han (Traditional Chinese) | Planned | Wikipedia-based bopomofo mapping added; awaiting DataJake lexicons for Hakka/Min overlays. |

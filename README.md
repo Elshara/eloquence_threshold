@@ -104,6 +104,14 @@ To keep Eloquence's phoneme, lexicon, and tooling pipeline fresh we now version 
 - **Slavic vowel reduction roadmap** – Macedonian (`mk`) and Slovene (`sl`) entries pair Wikipedia schwa/pitch-accent research with GitHub transliteration utilities and DataJake hymn corpora. Refresh [`docs/language_research_index.md`](docs/language_research_index.md) and rerun `python tools/summarize_language_assets.py` after capturing new bibliographies so provenance dashboards flag the Adriatic delta before packaging.
 - **Offline packaging alignment** – The offline quickstart and packaging playbook now highlight the Adriatic sprint, reminding contributors to refresh NV Access manual audits (`python tools/audit_nvaccess_downloads.py` + `python tools/check_nvda_updates.py`) and log the run in `AGENTS.md` before producing `eloquence.nvda-addon` without a published release.
 
+### Western Romance and Basque revitalisation sprint (October 2025 follow-up)
+
+- **Pyrenean bridge** – Basque (`eu`) and Occitan (`oc`) gain roadmap entries in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) that cite cached Wikipedia ergative-absolutive primers, vowel harmony notes, and troubadour-era phonology charts. We paired these sources with DataJake radio drama lexicons and GitHub Basque/Occitan morphological analysers so NV Speech Player **Inflection contour**, **Nasal balance**, and **Tone** sliders have contextual defaults before CodeQL-gated dictionary imports.
+- **Rhaeto-Romance coverage** – Romansh (`rm`) and Friulian (`fur`) dossiers combine Wikipedia orthography reforms, DataJake civic-language corpora, and NVDA braille exports to map digraphs (`tg`, `gl`, `sc`) back to Eloquence phoneme bands. Contributors should regenerate `docs/voice_parameter_report.md` and `docs/voice_frequency_matrix.md` after tuning the new alveolar fricative emphasis so automation keeps the EQ atlas aligned.
+- **Island and alpine dialect weave** – Sardinian (`sc`) and Corsican (`co`) roadmap updates document DataJake liturgical recordings, GitHub vowel centralisation studies, and NVDA braille punctuation tests. The README offline drill now calls out these heritage Romance dialects so builders validate **Vocal range**, **Subtones**, and **Macro volume** presets after staging `.lex` payloads.
+- **Cross-border Germanic pulse** – Luxembourgish (`lb`) and West Frisian (`fy`) references blend Wikipedia digraph inventories with DataJake parliamentary corpora and GitHub spelling normalisers. Refresh [`docs/language_research_index.md`](docs/language_research_index.md) and rerun `python tools/report_language_progress.py` so NVDA’s Speech dialog surfaces the updated IPA scorecards alongside NV Speech Player **Stress**/**Sibilant clarity** defaults.
+- **Astur-Leonese resonance** – Asturian (`ast`) and Walloon (`wa`) planning leans on cached Wikipedia nasal vowel research, DataJake folk song dictionaries, and NVDA braille contractions. Update the offline packaging playbook to acknowledge their palatal lateral cues, and run `python tools/summarize_language_assets.py` before packaging to log the newly paired dictionary and frequency assets.
+
 After each documentation or profile change, regenerate the cached coverage artefacts so pull requests reflect the current dataset without hammering upstream mirrors:
 
 - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
@@ -431,6 +439,27 @@ python build.py --insecure --no-download --output dist\eloquence.nvda-addon
 8. **Inspect the package** – unzip `dist/eloquence.nvda-addon` and verify that `manifest.ini`, `globalPlugins/eloquenceThreshold/` assets, the `/eloquence*/` runtimes, and any refreshed docs are present.
 9. **Install into NVDA** – use NVDA's add-on manager to install the build, then confirm new language profiles or voice parameters appear and announce their coverage metrics.
 10. **Document the run** – capture the commands you executed and note any regenerated artefacts in your pull request summary so future contributors can follow the same offline workflow.
+
+### Quick clone-and-build command recap (offline safe)
+
+```powershell
+# 1. Grab the repository and optional data helpers
+git clone https://github.com/pumper42nickel/eloquence_threshold.git
+cd eloquence_threshold
+git submodule update --init --recursive
+
+# 2. Restore cached documentation snapshots (copy from your archive or regenerate)
+python tools\summarize_language_assets.py --json docs\language_asset_summary.json --markdown docs\language_asset_summary.md --print
+python tools\report_language_maturity.py --json docs\language_maturity.json --markdown docs\language_maturity.md --print
+python tools\report_language_progress.py --json docs\language_progress.json --markdown docs\language_progress.md --print
+python tools\report_language_coverage.py --json docs\language_coverage.json --markdown docs\language_coverage.md --print
+python tools\report_voice_language_matrix.py --json docs\voice_language_matrix.json --markdown docs\voice_language_matrix.md --print
+python tools\report_voice_frequency_matrix.py --json docs\voice_frequency_matrix.json --markdown docs\voice_frequency_matrix.md --print
+
+# 3. Validate code + build the NVDA add-on without network access
+python -m unittest discover tests
+python build.py --insecure --no-download --output dist\eloquence.nvda-addon
+```
 
 ### Build script reference
 - `python build.py --output dist/eloquence.nvda-addon` writes the package to a custom path.

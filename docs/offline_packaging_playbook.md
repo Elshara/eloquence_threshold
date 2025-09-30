@@ -149,6 +149,12 @@ documentation or dataset payloads you staged.
 - Stage the corresponding DataJake hymn/scripture `.dic` payloads and update `docs/archive_inventory.{json,md}` via `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` so CodeQL reviews log their provenance and audio fidelity.
 - Regenerate the tone-aware dashboards (`python tools/report_voice_frequency_matrix.py`, `python tools/report_voice_parameters.py`, and `python tools/report_language_progress.py`) after adding these locales so NV Speech Player **Tone**, **Scope depth**, **Subtones**, and **Whisper** presets stay aligned with the README roadmap before you run the packaging command above.
 
+### Western Romance and Basque sprint focus
+
+- Cache the new Basque, Occitan, Romansh, Friulian, Sardinian, Corsican, Luxembourgish, West Frisian, Asturian, and Walloon dossiers documented in [`docs/language_research_index.*`](language_research_index.md). Copy your archived Markdown/JSON or rerun `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print` so the provenance dashboard lists their Wikipedia, DataJake, GitHub, and NVDA sources offline.
+- Stage the matching `.dic` and corpus payloads—DataJake radio drama lexicons for Basque/Occitan, canton education corpora for Romansh, parliamentary transcripts for Luxembourgish, and folk song dictionaries for Asturian/Walloon—then refresh `docs/archive_inventory.{json,md}` with `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` to log audio fidelity, voice hints, and pronunciation coverage before packaging.
+- Regenerate the frequency and slider reports (`python tools/report_voice_frequency_matrix.py`, `python tools/report_voice_parameters.py`) alongside `python tools/report_language_progress.py` so NV Speech Player **Inflection contour**, **Nasal balance**, **Stress**, and **Macro volume** presets reflect the new Romance and Basque heritage dialects prior to running `python build.py --insecure --no-download --output dist/eloquence.nvda-addon`.
+
 ## 7. Validate in NVDA
 
 1. Install the add-on via **Tools → Add-ons → Install** inside NVDA (alpha-52731

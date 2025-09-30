@@ -2459,6 +2459,166 @@
         "GitHub finite-state analysers"
       ],
       "notes": "Supplies consonant harmony, vowel reduction, and orthography cues so ISO `udm` packaging aligns DataJake corpora with NVDA braille exports and NV Speech Player slider defaults."
+    },
+    {
+      "title": "Basque language",
+      "url": "https://en.wikipedia.org/wiki/Basque_language",
+      "usefulness": "high",
+      "progress": "researching sibilant mapping",
+      "classification": [
+        "language",
+        "grammar"
+      ],
+      "sample_assets": [
+        "Wikipedia ergativity and sibilant harmony notes",
+        "DataJake news lexicons",
+        "GitHub Euskara morphological analysers"
+      ],
+      "notes": "Pairs ergative-absolutive structure, sibilant harmony, and stress data with DataJake corpora so NV Speech Player **Inflection contour**/**Sibilant clarity** presets align before CodeQL dictionary imports for ISO `eu`."
+    },
+    {
+      "title": "Occitan language",
+      "url": "https://en.wikipedia.org/wiki/Occitan_language",
+      "usefulness": "high",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia troubadour phonology charts",
+        "DataJake poetry corpora",
+        "NVDA braille diacritic exports"
+      ],
+      "notes": "Captures nasal balance, schwa reduction, and accent placement so ISO `oc` presets align NV Speech Player **Nasal balance** sliders with NVDA punctuation tests and DataJake recordings."
+    },
+    {
+      "title": "Romansh language",
+      "url": "https://en.wikipedia.org/wiki/Romansh_language",
+      "usefulness": "medium",
+      "progress": "researching digraph export",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Wikipedia Lia Rumantscha reforms",
+        "DataJake canton education corpora",
+        "NVDA braille tables"
+      ],
+      "notes": "Documents `tg`, `gl`, and `sc` digraph handling so ISO `rm` profiles sync Eloquence phonemes, NVDA braille contractions, and NV Speech Player **Tone size**/**Inflection contour** presets."
+    },
+    {
+      "title": "Friulian language",
+      "url": "https://en.wikipedia.org/wiki/Friulian_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia alveolar affricate notes",
+        "DataJake civic-language transcripts",
+        "NV Speech Player frequency presets"
+      ],
+      "notes": "Captures alveolar affricates, vowel length, and orthography variants to stage Friulian (`fur`) dictionaries with NV Speech Player **Tone size** calibration."
+    },
+    {
+      "title": "Sardinian language",
+      "url": "https://en.wikipedia.org/wiki/Sardinian_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia Logudorese/Campidanese comparisons",
+        "DataJake liturgical recordings",
+        "NVDA braille punctuation exports"
+      ],
+      "notes": "Provides vowel centralisation and consonant contrast metadata so ISO `sc` presets tune NV Speech Player **Macro volume**/**Subtones** sliders before CodeQL dictionary review."
+    },
+    {
+      "title": "Corsican language",
+      "url": "https://en.wikipedia.org/wiki/Corsican_language",
+      "usefulness": "medium",
+      "progress": "researching vowel centralisation",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel reduction notes",
+        "DataJake liturgical corpora",
+        "GitHub dialect surveys"
+      ],
+      "notes": "Highlights vowel reduction, syllable timing, and accent placement so ISO `co` voices validate NV Speech Player **Vocal range** presets with NVDA braille accent handling."
+    },
+    {
+      "title": "Luxembourgish language",
+      "url": "https://en.wikipedia.org/wiki/Luxembourgish_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "orthography"
+      ],
+      "sample_assets": [
+        "Wikipedia digraph inventories",
+        "DataJake parliamentary corpora",
+        "GitHub Luxembourgish spelling normalisers"
+      ],
+      "notes": "Documents digraphs, stress, and schwa behaviour so ISO `lb` presets align NV Speech Player **Stress**/**Sibilant clarity** sliders with NVDA hyphenation exports."
+    },
+    {
+      "title": "West Frisian language",
+      "url": "https://en.wikipedia.org/wiki/West_Frisian_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia vowel harmony notes",
+        "DataJake parliamentary proceedings",
+        "NVDA braille hyphenation exports"
+      ],
+      "notes": "Tracks vowel harmony, diphthongs, and voiced fricatives so ISO `fy` voices share NV Speech Player **Stress**/**Sibilant clarity** presets with NVDA braille guidance."
+    },
+    {
+      "title": "Asturian language",
+      "url": "https://en.wikipedia.org/wiki/Asturian_language",
+      "usefulness": "medium",
+      "progress": "researching nasal vowel export",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia nasal vowel research",
+        "DataJake folk song dictionaries",
+        "NVDA braille contraction tables"
+      ],
+      "notes": "Provides nasal vowel and palatal lateral cues so ISO `ast` presets tune NV Speech Player **Inflection contour** and braille contractions before packaging."
+    },
+    {
+      "title": "Walloon language",
+      "url": "https://en.wikipedia.org/wiki/Walloon_language",
+      "usefulness": "medium",
+      "progress": "pending structured ingestion",
+      "classification": [
+        "language",
+        "phonology"
+      ],
+      "sample_assets": [
+        "Wikipedia nasal vowel inventories",
+        "DataJake folk corpora",
+        "GitHub orthography reforms"
+      ],
+      "notes": "Details Walloon diphthongs, nasal vowels, and orthography updates so ISO `wa` presets align NV Speech Player **Nasal balance**/**Tone size** sliders with NVDA braille exports."
     }
   ]
 }
