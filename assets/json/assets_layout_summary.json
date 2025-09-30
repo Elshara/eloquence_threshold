@@ -1,0 +1,185 @@
+{
+  "assets_root": "/workspace/eloquence_threshold/assets",
+  "buckets": [
+    {
+      "directory_count": 0,
+      "extension": "bin",
+      "file_count": 20,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "bin"
+    },
+    {
+      "directory_count": 0,
+      "extension": "cjk",
+      "file_count": 1,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "cjk"
+    },
+    {
+      "directory_count": 0,
+      "extension": "cmd",
+      "file_count": 1,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "cmd"
+    },
+    {
+      "directory_count": 0,
+      "extension": "cnt",
+      "file_count": 16,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "cnt"
+    },
+    {
+      "directory_count": 0,
+      "extension": "csv",
+      "file_count": 1,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "csv"
+    },
+    {
+      "directory_count": 0,
+      "extension": "dic",
+      "file_count": 13,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "dic"
+    },
+    {
+      "directory_count": 0,
+      "extension": "dll",
+      "file_count": 44,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "dll"
+    },
+    {
+      "directory_count": 0,
+      "extension": "exe",
+      "file_count": 2,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "exe"
+    },
+    {
+      "directory_count": 0,
+      "extension": "hlp",
+      "file_count": 32,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "hlp"
+    },
+    {
+      "directory_count": 0,
+      "extension": "html",
+      "file_count": 1,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "html"
+    },
+    {
+      "directory_count": 0,
+      "extension": "ico",
+      "file_count": 2,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "ico"
+    },
+    {
+      "directory_count": 0,
+      "extension": "ini",
+      "file_count": 4,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "ini"
+    },
+    {
+      "directory_count": 0,
+      "extension": "json",
+      "file_count": 43,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "json"
+    },
+    {
+      "directory_count": 0,
+      "extension": "md",
+      "file_count": 31,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "md"
+    },
+    {
+      "directory_count": 0,
+      "extension": "pdf",
+      "file_count": 1,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "pdf"
+    },
+    {
+      "directory_count": 0,
+      "extension": "py",
+      "file_count": 75,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "py"
+    },
+    {
+      "directory_count": 0,
+      "extension": "pyc",
+      "file_count": 1,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "pyc"
+    },
+    {
+      "directory_count": 0,
+      "extension": "pyo",
+      "file_count": 2,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "pyo"
+    },
+    {
+      "directory_count": 0,
+      "extension": "syn",
+      "file_count": 36,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "syn"
+    },
+    {
+      "directory_count": 0,
+      "extension": "txt",
+      "file_count": 44,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "txt"
+    },
+    {
+      "directory_count": 0,
+      "extension": "uil",
+      "file_count": 13,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "uil"
+    },
+    {
+      "directory_count": 0,
+      "extension": "voice",
+      "file_count": 2,
+      "mismatch_count": 0,
+      "mismatched_files": [],
+      "path": "voice"
+    }
+  ],
+  "top_level_files": [],
+  "total_buckets": 22,
+  "total_directories": 0,
+  "total_files": 385
+}
