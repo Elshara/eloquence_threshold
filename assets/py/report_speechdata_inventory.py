@@ -123,10 +123,16 @@ def main() -> None:
     for rel, path in iter_subtrees(args.max_depth):
         snapshot[rel] = summarise_tree(path)
 
+    # Keep outputs deterministic so diffs stay readable for CodeQL and review.
+    ordered_snapshot = {key: snapshot[key] for key in sorted(snapshot)}
+
     args.json.parent.mkdir(parents=True, exist_ok=True)
-    args.json.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    args.json.write_text(
+        json.dumps(ordered_snapshot, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
     args.markdown.parent.mkdir(parents=True, exist_ok=True)
-    args.markdown.write_text(build_manifest(snapshot), encoding="utf-8")
+    args.markdown.write_text(build_manifest(ordered_snapshot), encoding="utf-8")
 
 
 if __name__ == "__main__":

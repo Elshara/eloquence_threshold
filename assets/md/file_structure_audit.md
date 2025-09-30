@@ -43,6 +43,15 @@ Document future updates here as you work through the backlog so the history of t
 
 - **Resource path shim landed.** `assets/py/resource_paths.py` now centralises path discovery for DLLs, `.syn` voices, language profiles, phoneme catalogues, and NV Speech Player exports. The Eloquence driver, phoneme and voice catalogues, and the language profile tooling now resolve assets through this helper so the extension-first layout works without recreating the legacy `eloquence/` tree. Follow-up work: teach `build.py` to hydrate `synthDrivers/eloquence_data` from the new buckets before packaging.
 - **Build helper now hydrates the assets layout.** Running `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` copies the `assets/` hierarchy (DLLs, `.syn` voices, documentation, JSON catalogues) directly into the staging area, falls back to legacy `eloquence_data/` when present, and warns when `eci.dll` is missing from `assets/dll`. This keeps the NVDA packaging drill and downstream CodeQL scanning aligned with the new structure while we continue migrating extensionless datasets out of `speechdata/`.
+- **Speechdata inventory stabilised.** `python assets/py/report_speechdata_inventory.py` now emits deterministically sorted JSON and Markdown so review diffs stay readable. Regenerate the artefacts after every migration batch—the helper now lists `festival`, `mbrulainespeak`, `newfon`, `orpheus`, `sam`, and `speechplayerinespeak` in alphabetical order, matching the Markdown manifest consumers rely on for NVDA and CodeQL cross-checks.
+
+### Current remediation queue (update 2025-10-26)
+
+- [ ] Update the Eloquence driver and helper scripts to read DLL, `.syn`, and configuration assets exclusively through `resource_paths`, then validate on NVDA alpha-52731.
+- [ ] Port NV Speech Player phoneme and language dictionaries out of `speechdata/` or document loader exceptions when extensions cannot change.
+- [ ] Split the remaining multi-purpose Python utilities into single-purpose modules (for example, separate CLI entry points from data transforms) so the `assets/py` folder mirrors the "one function per file" goal.
+- [ ] Decide on a permanent home for test fixtures (`tests/fixtures/` vs. `assets/txt/tests_*`) and wire them into `python -m unittest discover tests` once the loader shims settle.
+- [ ] Review `.pyo` and other historical cache files; if they no longer serve NVDA or CodeQL workflows, stage them for deletion and record the rationale here before removing them from the tree.
 
 ## Automation helpers
 
