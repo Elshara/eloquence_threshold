@@ -19,6 +19,156 @@ Because NVDA 2026 builds execute as a 64-bit process, the add-on must load a 64-
 ### DataJake archive classification
 To keep Eloquence's phoneme, lexicon, and tooling pipeline fresh we now version the entire DataJake archive manifest inside this repository. Run `python tools/catalog_datajake_archives.py` to regenerate `docs/archive_inventory.json` and the Markdown companion after updating `docs/datajake_archive_urls.txt`. The refreshed script adds extension, sample-rate, bit-depth (when detected), channel-layout, audio-fidelity tiers, `audio_signature` strings, language, BCP-47 language tags, synthesizer hints, collection families, voice-token, platform/architecture, version, category, viability, voice gender/age hints, and priority-tag summaries (plus per-entry metadata blocks and a metadata coverage rollup) so automation can spot IPA dictionaries, lexicon bundles, documentation stubs, NVDA add-ons, and direct `.dic`/`.lex` payloads without manually scanning 1,500 URLs. Cross-reference `docs/archive_code_targets.md` for examples of how these imports expand MBROLA coverage, inform CodeQL policies, and ensure our NVDA add-on ships with reusable pronunciation data across Eloquence, DECtalk/FonixTalk, IBM TTS, and RHVoice collections.
 
+### Language expansion scorecard (refreshed)
+### Global ISO/script onboarding sprint (Q4 2025 refresh)
+- **New Latin clusters** – Afrikaans, Catalan, Danish, Estonian, Filipino, French, Galician, Irish, Italian, Lithuanian, Latvian, Polish, Romanian, Slovak, Slovene, and Vietnamese now carry roadmap entries in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) with cross-links to their DataJake, Wikipedia, and NVDA provenance notes.
+- **Dual-script locales** – Serbian (Cyrillic/Latin), Kazakh (Cyrillic/Latin), and Cantonese (Jyutping + Han) are tracked with mirrored tone and digraph planning, ensuring CodeQL policies surface both alphabets when regenerating lexicon payloads.
+- **Tone-rich coverage** – Hausa, Yoruba, Thai, Vietnamese, Cantonese, and Mandarin now reference cached tone diagrams, lexical tone recordings, and NV Speech Player slider defaults so testers can validate contour changes while packaging.
+- **Expanded morphology tooling** – GitHub-hosted finite-state transducers for Turkish, Finnish, and Hungarian are logged against the same roadmap, aligning contextual pronunciation generators with `language_profiles.py` descriptors.
+- **Voice metric calibration** – Every locale snapshot references `docs/voice_parameter_report.md` so contributors can correlate NV Speech Player slider presets, EQ band groupings, and DataJake spectral captures before publishing new ISO profiles.
+- **Frequency envelope atlas** – `tools/report_voice_frequency_matrix.py` now exports [`docs/voice_frequency_matrix.md`](docs/voice_frequency_matrix.md), mapping slider ranges to Hertz spans so phoneme EQ presets, NV Speech Player harmonics, and DataJake capture metadata stay aligned when calibrating new locales.
+- **South Asian + Himalayan sprint** – Newly tracked Nepali (`ne`), Sinhala (`si`), Sindhi (`sd`), and Kashmiri (`ks`) pull vowel length, inherent schwa, and retroflex cues from cached Wikipedia grammar tables; DataJake `.lex` payloads and GitHub corpora are queued for CodeQL-audited imports while NVDA manuals confirm braille contractions.
+- **Central and West Asian bridge** – Uzbek (`uz`), Uyghur (`ug`), and Pashto (`ps`) roadmap entries now cite dual Arabic/Latin script coverage with NVDA punctuation exports, while GitHub transliteration utilities back the switchable phoneme presets described in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md).
+- **Pan-African reinforcement** – Fula/Pulaar (`ff`), Somali (`so`), and Wolof (`wo`) dossiers log tone plateau, ATR harmony, and emphatic consonant references from DataJake lexicons; pairing them with NV Speech Player **Tone**, **Vocal range**, and **Sibilant clarity** defaults keeps the roadmap aligned with NVDA’s slider set.
+- **Pacific and Caribbean pulse** – Haitian Creole (`ht`), Jamaican Patois (`jam`), Māori (`mi`), Samoan (`sm`), Tongan (`to`), Tahitian (`ty`), and Hawaiian (`haw`) roadmap entries now cite cached Wikipedia phonology tables, DataJake pronunciation archives, and NVDA braille exports so new Austronesian and Creole voices can launch with tone, nasalisation, and orthography metadata intact.
+- **Heritage dictionary sweep** – Newly catalogued Wikipedia sources (see [`docs/language_research_index.md`](docs/language_research_index.md)) document high-value lexicographic corpora for Sinhala, Nepali, Somali, and Uzbek so `tools/catalog_datajake_archives.py` can flag matching `.dic`/`.lex` downloads before the next build.
+
+### Micronesian and Polynesian revitalisation sprint (October 2025 follow-up)
+
+- **Vanuatu–Guam corridor** – Bislama (`bi`) and Chamorro (`ch`) join the roadmap with Wikipedia phonotactic charts, DataJake broadcast lexicons, and GitHub orthography converters documented in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md). NVDA manual exports back the braille punctuation plan so CodeQL packaging jobs can audit glottal stop handling before we seed new pronunciation profiles.
+- **Palauan reef voices** – Palauan (`pau`) staging pairs DataJake civic-education corpora with NV Speech Player **Tone size**, **Vocal layers**, and **Sibilant clarity** presets; GitHub morphological analysers ensure reduplication cues sync with `language_profiles.py`, and the README build quickstart now reminds contributors to regenerate `docs/voice_frequency_matrix.md` after tuning the new sliders.
+- **Niuean and Tokelauan tone ladder** – Niuean (`niu`) and Tokelauan (`tkl`) leverage cached Wikipedia vowel length studies plus NVDA braille exports to confirm macron coverage. We log the provenance trail in [`docs/language_research_index.md`](docs/language_research_index.md) and call for DataJake hymn dictionaries so the offline packaging drill captures the tonal contrast presets alongside the regenerated coverage dashboards.
+- **Rapa Nui revitalisation** – Rapa Nui (`rap`) planning links GitHub revitalisation grammars with NVDA braille tables and DataJake oral-history recordings. Contributors should follow the "No-release packaging drill" below step by step—rehydrating cached reports, running `python tools/summarize_language_assets.py`, executing `python -m unittest discover tests`, and finishing with `python build.py --insecure --no-download --output dist/eloquence.nvda-addon`—to publish updated `eloquence.nvda-addon` builds without relying on public releases.
+
+### Andean and Amazonian sprint (October 2025 follow-up)
+
+- **Quechuan macrolanguage** – Quechua (`qu`, `quz`, `quy`) staging pulls vowel harmony and ejective consonant cues from cached Wikipedia grammar tables and DataJake `.dic` payloads. GitHub finite-state analyzers such as *qupobox* back the contextual pronunciation rules slated for `language_profiles.py`.
+- **Aymara highland coverage** – Aymara (`ay`) entries prioritise uvular/velar contrasts recorded in NV Speech Player captures while NVDA punctuation exports guide braille hyphenation. CodeQL rules focus on validating glottal stop markers throughout dictionary imports.
+- **Guaraní nasal harmony** – Guaraní (`gn`) roadmap updates align nasal harmony metadata from Wikipedia with DataJake lexicon inventories so NV Speech Player **Nasal balance**, **Subtones**, and **Tone size** sliders default to community expectations.
+- **Mapudungun morphology** – Mapuche/Mapudungun (`arn`) datasets sourced from GitHub corpora pair with NV Access documentation caches to ensure braille exports honour rich agglutinative suffix chains. `phoneme_customizer.py` presets flag aspirated alveolar affricates for EQ calibration.
+- **Shipibo-Conibo contouring** – Shipibo-Conibo (`shp`) planning references recorded tone contour research (Wikipedia + DataJake fieldwork archives) and seeds NV Speech Player **Inflection contour** defaults to keep rising/falling sequences intelligible at NVDA’s default rate.
+- **Nahuatl revitalisation** – Nahuatl (`nah`) documentation cross-links DataJake audio captures, GitHub orthography normalisers, and NVDA manual punctuation tables to stage glottal stop, vowel length, and macro-morpheme cues for future pronunciation generators that the roadmap will capture in `language_profiles.py`.
+
+### Central Eurasian Silk Road sprint (October 2025 extension)
+
+- **Steppe vowel harmony** – Kyrgyz (`ky`) and Kazakh (`kk`) ingest cached Wikipedia vowel harmony charts alongside DataJake MBROLA lexicons and GitHub transliteration tools so dual Cyrillic/Latin presets share tone, vowel length, and apostrophe-based digraph cues. NVDA alpha manuals confirm braille behaviour before CodeQL gating.
+- **Highland Persian corridor** – Tajik (`tg`) roadmap entries align Cyrillic-script resources with Persian phonology references while staging NV Speech Player **Tone**, **Vocal range**, and **Smoothness** presets. DataJake `.dic` payloads and GitHub transliteration utilities document Latin fallback mapping so offline builds bundle both scripts.
+- **Uralic revitalisation** – Bashkir (`ba`), Chuvash (`cv`), and Udmurt (`udm`) dossiers log Wikipedia consonant harmony research, DataJake folk song recordings, and GitHub morphological analysers. The README workflow now calls for regenerating `docs/voice_frequency_matrix.md` and `docs/language_asset_summary.md` so NVDA sliders capture voiced/unvoiced harmony and palatalisation data before packaging.
+- **Arctic Yakut tone planning** – Sakha/Yakut (`sah`) pulls vowel harmony and long consonant cues from cached Wikipedia sources, cross-references DataJake storytelling corpora, and maps NV Speech Player **Tone size**, **Scope depth**, and **Macro volume** sliders to match the recorded throat singing timbre while NVDA braille exports verify Cyrillic diacritic behaviour.
+- **Silk Road provenance ledger** – [`docs/language_research_index.md`](docs/language_research_index.md) now tracks the Wikipedia dossiers for these locales, and `docs/iso_language_expansion.md` logs follow-up tasks for transliteration, dictionary extraction, and NV Speech Player preset validation so contributors can align DataJake, GitHub, and NVDA assets before staging CodeQL-audited imports.
+- **Cross-source provenance** – Each locale references the regenerated dashboards in [`docs/language_progress.md`](docs/language_progress.md), [`docs/language_coverage.md`](docs/language_coverage.md), [`docs/language_maturity.md`](docs/language_maturity.md), and [`docs/voice_language_matrix.md`](docs/voice_language_matrix.md) to keep ISO coverage, speech parameters, and dictionary ingestion in sync with the README roadmap.
+
+### Horn of Africa and Indian Ocean sprint (October 2025 extension)
+
+- **Tigrinya and Afar onboarding** – Newly tracked Tigrinya (`ti`) and Afar (`aa`) locales in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) combine Ethiopic script charts from Wikipedia, DataJake `.dic` inventories, and GitHub transliteration tooling with NVDA braille tables so Geez-derived punctuation and gemination cues survive offline packaging drills.
+- **Somali + Malagasy tone ladder audit** – Somali (`so`) and Malagasy (`mg`) entries reference cached DataJake hymn and news corpora to tune NV Speech Player **Tone**, **Vocal range**, and **Inflection contour** sliders, while NV Access manual exports confirm comma and apostrophe handling before regenerating [`docs/voice_parameter_report.md`](docs/voice_parameter_report.md).
+- **Swahili Rim support** – Kirundi (`rn`), Setswana (`tn`), Sango (`sg`), and Tsonga (`ts`) coverage uses GitHub lexical analyzers plus DataJake `.lex` payloads to map Bantu noun-class tones and prenasalised stops; README guidance now points contributors at the refreshed linkage matrix so packaging catches template/profile gaps early.
+- **Cross-source research trail** – [`docs/language_research_index.md`](docs/language_research_index.md) logs the supporting Wikipedia bibliographies for this sprint and mirrors them in the JSON companion so CodeQL automation can verify every new locale cites its provenance across Wikipedia, DataJake, GitHub, and NVDA snapshots.
+- **Offline validation cadence** – The sprint reiterates the `python tools/report_language_progress.py`, `python tools/report_language_coverage.py`, and `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` workflow so contributors regenerate dashboards, run unit tests, and build the add-on without published releases while staging Ethiopic, Latin, and extended Latin scripts.
+
+### Pan-Atlantic and Indian Ocean diaspora sprint (October 2025 follow-up)
+
+- **Thaana + Devanagari bridge** – Dhivehi (`dv`) joins the roadmap with Thaana script baselines from cached Wikipedia typography studies, DataJake Qur’anic recitation lexicons, and NVDA braille tables that confirm right-to-left diacritics render correctly in offline builds. Parallel Maltese (`mt`) and Sinhala (`si`) refreshes reuse these artefacts to align consonant emphatics across the Indian Ocean corridor.
+- **Lower Mekong tonal reinforcement** – Lao (`lo`) planning layers Wikipedia tone contour diagrams with GitHub IPA conversion utilities and DataJake sermon recordings so **Tone size**, **Scope depth**, and **Subtones** sliders inherit empirically tuned defaults. The sprint captures these updates in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) alongside CodeQL notes for validating rising/falling contour generators.
+- **Celtic revitalisation hooks** – Welsh (`cy`) and Breton (`br`) coverage now cite archived DECtalk dictionaries, GitHub finite-state mutation models, and NVDA braille manuals to enforce lenition/eclipsis behaviour. Contributors are pointed at `python tools/report_voice_frequency_matrix.py` so fricative emphasis bands track the consonant mutation rules recorded in the Wikipedia corpus.
+- **Nilotic tone ladders** – Nuer (`nus`) documentation references DataJake scripture corpora, GitHub tone-tracking analyzers, and NV Speech Player recordings to seed nasal harmony and vowel length presets. These cues join the language maturity dashboard so testers can audit tonal accuracy before packaging.
+- **Cross-source delta audit** – Regenerate the provenance suite (`python tools/summarize_language_assets.py`, `python tools/report_language_maturity.py`, and `python tools/report_voice_language_matrix.py`) after updating these locales so README metrics, the ISO roadmap, and CodeQL automation stay aligned with the latest Wikipedia/DataJake/GitHub/NVDA datasets.
+
+### Saharan-to-Pacific bridging sprint (October 2025 continuation)
+
+- **Tamazight and Kabyle expansion** – Central Atlas Tamazight (`tzm`) and Kabyle (`kab`) now carry roadmap entries in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) detailing how cached [Afroasiatic research dossiers](docs/language_research_index.md) map Berber consonant emphatics to NV Speech Player **Plosive impact**, **Tone**, and **Overtones** sliders. We paired DataJake `.lex` payloads with GitHub Amazigh morphological analysers so the phoneme customiser respects tri-consonantal roots while retaining NVDA braille punctuation exports for Tifinagh ⇄ Latin workflows.
+- **Sahelian corridor reinforcement** – Bambara (`bm`) progresses from an exploratory note to a staged profile with GitHub tonal corpora and DataJake scripture recordings that anchor ATR harmony and nasal vowel metadata. The regenerated [`docs/voice_parameter_report.md`](docs/voice_parameter_report.md) snapshot keeps **Nasal balance** and **Macro volume** presets aligned with Mali-based speech samples.
+- **Pacific accessibility uplift** – Tok Pisin (`tpi`), Fijian (`fj`), and Marshallese (`mh`) join the roadmap with tone-neutral creole planning, vowel-length-aware frequency scaffolding, and GitHub orthography datasets catalogued in [`docs/language_research_index.md`](docs/language_research_index.md). NVDA manual exports validate punctuation and braille handling, while DataJake hymn recordings feed new EQ presets captured in [`docs/voice_frequency_matrix.md`](docs/voice_frequency_matrix.md).
+- **Circumpolar Sámi bridge** – Lule Sámi (`smj`) inherits consonant gradation and vowel harmony references from cached Wikipedia phonology tables and GitHub finite-state analysers. We logged the sprint in the ISO roadmap and research index so CodeQL automation tracks the DataJake lexical payloads staged for NV Speech Player **Inflection contour** testing alongside NVDA alpha-52762 braille exports.
+- **Packaging documentation refresh** – The offline quickstart workflow now highlights `python tools/report_integration_scope.py` and the updated [`docs/offline_packaging_playbook.md`](docs/offline_packaging_playbook.md) so contributors capture linkage deltas and provenance updates before building `eloquence.nvda-addon` without published releases.
+
+### Gulf of Guinea and Great Lakes tonal sprint (October 2025 update)
+
+- **Yoruba, Akan/Twi, and Ewe tonal ladders** – Yoruba (`yo`), Akan (`ak`), and Ewe (`ee`) now feature in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) with tone-tier inventories sourced from cached Wikipedia phonology tables, DataJake hymn/sermon `.dic` payloads, and GitHub tonal grammar toolkits. We mapped their three-level tone ladders to NV Speech Player **Tone**, **Scope depth**, and **Subtones** sliders while logging braille punctuation checks against the NVDA alpha-52731 manual exports captured in [`docs/language_research_index.md`](docs/language_research_index.md).
+- **Ga coastal resonance planning** – Ga (`gaa`) joins the roadmap with nasal vowel and glottal stop references harvested from the Wikipedia backlog and DataJake radio-broadcast corpora. The sprint ties these cues into the regenerated [`docs/voice_frequency_matrix.md`](docs/voice_frequency_matrix.md) snapshot so contributors can align **Nasal balance**, **Macro volume**, and **Overtones** presets with the new Gulf of Guinea lexicons before packaging.
+- **Great Lakes contour reinforcement** – Luganda (`lg`) and Lingala (`ln`) entries highlight noun-class tone sandhi sourced from DataJake scripture collections and GitHub morphological analysers. We coordinated these updates with NVDA braille exports and CodeQL follow-ups to keep `language_profiles.py` expansion tasks aligned with [`docs/voice_language_matrix.md`](docs/voice_language_matrix.md) coverage gaps.
+- **Southern Bantu tonal sweep** – Shona (`sn`) inherits downstep and whistled speech references from cached Wikipedia articles and DataJake pronunciation datasets. Contributors are now instructed to rerun `python tools/report_language_maturity.py` and `python tools/summarize_language_assets.py` after seeding new `.lex` payloads so the sprint's ISO additions surface in maturity dashboards and the offline packaging playbook.
+- **Offline drill refresh** – The step-by-step build workflow below now calls out the refreshed tonal sprint artefacts alongside `python tools/report_voice_frequency_matrix.py` and `python tools/report_integration_scope.py`. Pair it with [`docs/offline_build_rehearsal.md`](docs/offline_build_rehearsal.md) and [`docs/offline_packaging_playbook.md`](docs/offline_packaging_playbook.md) when staging Yoruba/Akan/Ewe/Ga/Luganda/Lingala/Shona datasets for a no-release build validated against NVDA alpha snapshots and CodeQL policies.
+
+### Philippine archipelago and Mainland Southeast Asia sprint (October 2025 extension)
+
+- **Visayan and Ilokano coverage** – Cebuano (`ceb`), Hiligaynon (`hil`), and Ilocano (`ilo`) now join [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) with DataJake `.dic` hymn corpora, GitHub orthography datasets, and Wikipedia vowel harmony charts cited in [`docs/language_research_index.md`](docs/language_research_index.md). We mapped their glottal stop and vowel length cues to NV Speech Player **Tone size**, **Subtones**, and **Inflection contour** sliders so the README scorecards surface Visayan resonance requirements before packaging.
+- **Waray and Kapampangan phonology bridge** – Waray-Waray (`war`) planning layers Eastern Visayan stress references from cached Wikipedia pages with DataJake scripture recordings, while Kapampangan (`pam`) staging—tracked alongside Waray in the ISO roadmap—uses GitHub orthography converters to validate Austronesian glottal marker handling inside NVDA braille exports. Contributors should rerun `python tools/report_language_progress.py` and `python tools/report_language_coverage.py` after seeding these corpora so CodeQL automation registers the expanded Central Philippines coverage.
+- **Hmong-Mien tonal matrices** – Hmong Daw (`hmn`) and Mizo/Lushai (`lus`) roadmap entries log the five- to eight-level tone charts pulled from Wikipedia and DataJake oral history archives; GitHub tonal contour notebooks backstop the NV Speech Player **Tone**, **Scope depth**, and **Whisper** presets captured in [`docs/voice_frequency_matrix.md`](docs/voice_frequency_matrix.md). Regenerate the frequency atlas and [`docs/voice_parameter_report.md`](docs/voice_parameter_report.md) once new tonal samples land to keep the slider catalogue aligned with Mainland Southeast Asia datasets.
+- **Offline rehearsal updates** – [`docs/offline_build_rehearsal.md`](docs/offline_build_rehearsal.md) and [`docs/offline_packaging_playbook.md`](docs/offline_packaging_playbook.md) now call out the Visayan/Hmong sprint so offline builders script DataJake archive restoration, Wikipedia provenance capture, and NVDA braille validation before running the packaging commands below.
+
+### Adriatic and Balkan sprint (October 2025 follow-up)
+
+- **Four-accent calibration** – Albanian (`sq`), Bosnian (`bs`), Croatian (`hr`), and Serbian (`sr`, `sr-Latn`) gain refreshed roadmap notes in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) that tie cached Wikipedia pitch-accent charts to DataJake radio/news `.dic` payloads and GitHub morphological analysers. We aligned NV Speech Player **Inflection contour**, **Tone size**, and **Sibilant clarity** presets with the regenerated [`docs/voice_frequency_matrix.md`](docs/voice_frequency_matrix.md) snapshot so rising vs. falling patterns surface directly in NVDA’s Speech dialog.
+- **Dual-script resilience** – Serbian Cyrillic/Latin toggles, plus the newly tracked Montenegrin (`cnr`) orthography reforms, are now documented alongside NVDA manual exports and CodeQL follow-ups to guarantee punctuation parity across scripts. Contributors staging DataJake `.lex` bundles should rerun `python tools/report_language_progress.py` and `python tools/report_language_maturity.py` to confirm dual-script templates stay in lockstep with the README workflow.
+- **Slavic vowel reduction roadmap** – Macedonian (`mk`) and Slovene (`sl`) entries pair Wikipedia schwa/pitch-accent research with GitHub transliteration utilities and DataJake hymn corpora. Refresh [`docs/language_research_index.md`](docs/language_research_index.md) and rerun `python tools/summarize_language_assets.py` after capturing new bibliographies so provenance dashboards flag the Adriatic delta before packaging.
+- **Offline packaging alignment** – The offline quickstart and packaging playbook now highlight the Adriatic sprint, reminding contributors to refresh NV Access manual audits (`python tools/audit_nvaccess_downloads.py` + `python tools/check_nvda_updates.py`) and log the run in `AGENTS.md` before producing `eloquence.nvda-addon` without a published release.
+
+### Western Romance and Basque revitalisation sprint (October 2025 follow-up)
+
+- **Pyrenean bridge** – Basque (`eu`) and Occitan (`oc`) gain roadmap entries in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) that cite cached Wikipedia ergative-absolutive primers, vowel harmony notes, and troubadour-era phonology charts. We paired these sources with DataJake radio drama lexicons and GitHub Basque/Occitan morphological analysers so NV Speech Player **Inflection contour**, **Nasal balance**, and **Tone** sliders have contextual defaults before CodeQL-gated dictionary imports.
+- **Rhaeto-Romance coverage** – Romansh (`rm`) and Friulian (`fur`) dossiers combine Wikipedia orthography reforms, DataJake civic-language corpora, and NVDA braille exports to map digraphs (`tg`, `gl`, `sc`) back to Eloquence phoneme bands. Contributors should regenerate `docs/voice_parameter_report.md` and `docs/voice_frequency_matrix.md` after tuning the new alveolar fricative emphasis so automation keeps the EQ atlas aligned.
+- **Island and alpine dialect weave** – Sardinian (`sc`) and Corsican (`co`) roadmap updates document DataJake liturgical recordings, GitHub vowel centralisation studies, and NVDA braille punctuation tests. The README offline drill now calls out these heritage Romance dialects so builders validate **Vocal range**, **Subtones**, and **Macro volume** presets after staging `.lex` payloads.
+- **Cross-border Germanic pulse** – Luxembourgish (`lb`) and West Frisian (`fy`) references blend Wikipedia digraph inventories with DataJake parliamentary corpora and GitHub spelling normalisers. Refresh [`docs/language_research_index.md`](docs/language_research_index.md) and rerun `python tools/report_language_progress.py` so NVDA’s Speech dialog surfaces the updated IPA scorecards alongside NV Speech Player **Stress**/**Sibilant clarity** defaults.
+- **Astur-Leonese resonance** – Asturian (`ast`) and Walloon (`wa`) planning leans on cached Wikipedia nasal vowel research, DataJake folk song dictionaries, and NVDA braille contractions. Update the offline packaging playbook to acknowledge their palatal lateral cues, and run `python tools/summarize_language_assets.py` before packaging to log the newly paired dictionary and frequency assets.
+
+### Circumpolar and Siberian revitalisation sprint (October 2025 continuation)
+
+- **Uralic convergence** – Komi-Zyrian (`kpv`), Komi-Permyak (`koi`), Meadow Mari (`mhr`), and Hill Mari (`mrj`) entries now live in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) with vowel harmony, palatalisation, and voiceless lateral data captured from cached Wikipedia grammars. We paired those notes with DataJake hymn dictionaries, GitHub finite-state analysers, and NVDA braille exports so CodeQL-audited imports keep dual Cyrillic/Latin scripts aligned before staging pronunciation profiles in `language_profiles.py`.
+- **Ob River contour sweep** – Khanty (`kca`) and Mansi (`mns`) dossiers log Siberian oral history captures from the DataJake archive, GitHub morphological segmentation notebooks, and NV Speech Player **Tone size**, **Scope depth**, and **Subtones** defaults tuned from frequency-domain analyses. Contributors should rerun `python tools/report_voice_frequency_matrix.py` and `python tools/report_voice_parameters.py` after adjusting these presets so harmonic envelopes match the recorded Uralic continuum.
+- **Arctic Samoyedic and Tungusic bridge** – Nenets (`yrk`), Evenki (`evn`), and Even (`eve`) roadmap rows cite nasal harmony and ejective consonant cues from cached Wikipedia fieldwork plus NVDA manual exports that document Cyrillic diacritic behaviour. We reference GitHub corpus parsers and DataJake scripture lexicons to seed NV Speech Player **Nasal balance**, **Plosive impact**, and **Whisper** defaults; regenerate the coverage dashboards via `python tools/report_language_progress.py` and `python tools/report_language_coverage.py` whenever these assets shift.
+- **Trans-Bering revitalisation** – Chukchi (`ckt`), Nivkh (`niv`), Ainu (`ain`), and Aleut (`ale`) additions stitch together Wikipedia orthography tables, GitHub revitalisation grammars, DataJake narrative recordings, and NVDA braille exports so polysynthetic and ergative structures stay audible offline. `python tools/report_integration_scope.py` and `python tools/report_catalog_status.py` now surface these locales in the linkage matrix, and the README quickstart reminds builders to refresh the provenance suite before packaging `eloquence.nvda-addon` from cached mirrors.
+
+### Global sign-language accessibility sprint (October 2025 extension)
+
+- **North American corpus bridge** – American Sign Language (`ase`) roadmap coverage links cached Wikipedia handshape/phonology primers with DataJake ASL glossaries, GitHub SignWriting converters, and NVDA braille exports so offline builders can map manual parameters to NV Speech Player **Tone**, **Inflection contour**, and **Vocal layers** sliders before CodeQL-audited dictionary ingestion.
+- **Commonwealth visual pathways** – Auslan (`asf`) and British Sign Language (`bfi`) planning pairs DataJake broadcast caption corpora with GitHub HamNoSys renderers and NVDA manual punctuation captures; contributors are instructed to rerun `python tools/report_voice_language_matrix.py` and `python tools/report_language_progress.py` after seeding dual-handed phoneme bundles so coverage dashboards record the signed-to-spoken mapping cadence.
+- **Francophone sign cluster** – French Sign Language (`fsl`) sourcing leans on cached Wikipedia history and phonology timelines, DataJake bilingual lexicons, and NVDA braille contractions, ensuring **Scope depth**, **Sibilant clarity**, and **Macro volume** presets reflect paired spoken-language cues for interpreters packaging tactile-first presets.
+- **Global summit harmonisation** – International Sign (`ils`) and Kenyan Sign Language (`xki`) dossiers coordinate GitHub gesture datasets, DataJake educational corpora, and NVDA alpha-52731 braille exports. The sprint adds validation checkpoints for motion-to-phoneme alignment via `python tools/validate_language_pronunciations.py` so CodeQL policies can flag gesture gloss drift before builders refresh `eloquence.nvda-addon` offline.
+
+### Anatolian and Caspian convergence sprint (October 2025 addition)
+
+- **Caucasus arc onboarding** – Abkhaz (`ab`), Adyghe (`ady`), Kabardian (`kbd`), and Laz (`lzz`) join [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) with cached Wikipedia ejective consonant inventories, DataJake Caucasus grammar corpora, and GitHub palatalisation analysers steering NV Speech Player **Plosive impact**, **Tone**, and **Sibilant clarity** presets. NVDA braille exports for Georgian and Cyrillic scripts anchor the dual-script fallback story while CodeQL gating tracks dictionary imports.
+- **Kurdish and Caspian linkage** – Kurmanji (`kmr`), Sorani (`ckb`), and South Azerbaijani (`azb`) roadmap entries cross-reference DataJake radio glossaries, GitHub morphological generators, and NVDA manual punctuation tables to balance Perso-Arabic and Latin orthographies. The offline build workflow now calls out `python tools/validate_language_pronunciations.py` after regenerating the coverage dashboards so vowel harmony and tanwīn-style diacritics survive offline packaging.
+- **Research dossier refresh** – [`docs/language_research_index.md`](docs/language_research_index.md) and its JSON companion catalogue new Wikipedia sources for Talysh (`tly`), Zazaki (`zza`), and Caspian Kurdish prosody. Pair the catalogue with `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` before seeding new `.dic` archives so CodeQL automation and the offline playbook record tone sandhi, emphatic consonants, and NV Speech Player slider expectations for the sprint.
+
+### Atlantic Sahel convergence sprint (October 2025 progression)
+
+- **Wolof and Serer tone bridges** – Wolof (`wo`) and Serer (`srr`) rows in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) now log cached Wikipedia ATR harmony studies, DataJake Dakar radio lexicons, GitHub nasal harmony analysers, and NVDA braille exports. The README sprint calls for recalibrating NV Speech Player **Tone**, **Scope depth**, and **Macro volume** sliders so CodeQL-audited dictionary imports capture long-vowel vs. consonant gemination cues.
+- **Fulfulde and Soninke corridor** – Fula/Pulaar (`ff`) moves from *planned* to *researching* status alongside new Soninke (`snk`) coverage. We reference DataJake Qur’anic recitations, GitHub Ajami↔Latin transliteration tools, and NV Access manual punctuation exports to preserve implosive consonants and prenasalised stops. Regenerate `docs/voice_frequency_matrix.md` so frequency envelopes reflect the Sahelian bass emphasis before packaging.
+- **Mooré and Bambara expansion** – Mooré (`mos`) and Bambara (`bam`) additions capture Burkina Faso and Mali corpora sourced from DataJake, cross-checking Wikipedia noun-class tone ladders and NV Speech Player **Subtones**/**Nasal balance** presets. GitHub morphological pipelines anchor affix ordering so `language_profiles.py` can expose contextual pronunciation for the Mossi and Manding families.
+- **Zambezi resonance** – New Bemba (`bem`) and Lozi (`loz`) entries trace Zambia/Zimbabwe tonal corpora, DataJake hymn dictionaries, and NVDA braille exports. Contributors should refresh `docs/language_asset_summary.md` and rerun `python tools/report_voice_parameters.py` to confirm **Vocal layers**, **Plosive impact**, and **Head size contour** align with the lower-register recordings staged for this sprint.
+- **Offline packaging reminder** – Before packaging these Atlantic–Sahel locales, replay the no-release drill below, then log the run in `AGENTS.md`. Pair the reports with `python tools/audit_nvaccess_downloads.py` and `python tools/check_nvda_updates.py` so NVDA alpha validations stay current while you seed new tone dictionaries from cached DataJake mirrors.
+
+### Trans-Baikal and Oirat resonance sprint (October 2025 update)
+
+- **Lake Baikal coverage** – Buryat (`bxr`) joins [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) with cached Wikipedia vowel harmony diagrams, DataJake steppe storytelling corpora, and GitHub morphological parsers. NVDA braille exports confirm dotted vs. umlauted vowel handling so we can stage NV Speech Player **Tone size**, **Scope depth**, and **Sibilant clarity** presets before CodeQL-audited dictionary imports.
+- **Volga steppe revival** – Kalmyk/Oirat (`xal`) entries reference DataJake Buddhist scripture recordings, GitHub Kalmyk orthography converters, and NVDA manual exports that document Cyrillic vowel signs. Contributors should refresh `docs/voice_frequency_matrix.md` and `docs/voice_parameter_report.md` after tuning **Macro volume**/**Subtones** for the low-register chants.
+- **Tyvan throat resonance** – Tuvan (`tyv`) planning pulls Wikipedia khoomei contour research and DataJake harmonic analyses into [`docs/language_research_index.md`](docs/language_research_index.md). Regenerate `docs/language_progress.md` and `docs/language_coverage.md` so tone layering, uvular stops, and breathy phonation presets align with NV Speech Player **Vocal layers** and **Whisper** sliders.
+- **Altai and Dolgan continuum** – Southern Altay (`alt`) and Dolgan (`dlg`) roadmap rows cite GitHub Turkic finite-state analysers, DataJake dictionary scans, and NVDA braille exports to verify dotted I vs. diacritic behaviour. Update `python tools/report_language_maturity.py` outputs so mutual intelligibility planning across Turkic Siberia remains transparent to offline builders.
+- **Yakutic reinforcement** – Sakha/Yakut (`sah`) gains refreshed harmonic notes comparing cached Wikipedia vowel length data with DataJake long-form storytelling archives. Contributors should re-run the no-release drill—`python tools/summarize_language_assets.py`, `python tools/report_language_progress.py`, `python tools/report_language_coverage.py`, `python -m unittest discover tests`, and `python build.py --insecure --no-download --output dist/eloquence.nvda-addon`—before logging the sprint in `AGENTS.md`.
+
+### North Atlantic and Ligurian maritime sprint (October 2025 addition)
+
+- **Faroe archipelago staging** – Faroese (`fo`) planning now cites cached Wikipedia vowel length and stød research, DataJake hymn lexicons, GitHub Faroese lemmatisers, and NVDA braille exports so **Tone size**, **Inflection contour**, and **Nasal balance** sliders cover insular North Germanic contrasts alongside CodeQL-audited dictionary staging.
+- **Liguro-Venetian corridor** – Ligurian (`lij`) and Venetian (`vec`) coverage connects historical orthography surveys on Wikipedia with DataJake diaspora corpora and GitHub Romance revitalisation grammars. The roadmap captures how NV Speech Player **Macro volume**, **Sibilant clarity**, and **Scope depth** presets track coastal prosody while NVDA braille exports validate Ò/Ù diacritics.
+- **Offline step-by-step refresh** – The cloning-and-build checklist below now calls out Faroese/Ligurian/Venetian provenance. Pair `python tools/catalog_wikipedia_languages.py`, `python tools/report_voice_parameters.py`, and the existing reporting suite with `python tools/audit_nvaccess_downloads.py --roots releases/stable snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs/download_nvaccess_snapshot.json --markdown docs/download_nvaccess_snapshot.md` to ensure offline builders validate NVDA alpha-52762 compatibility before running `python build.py --insecure --no-download --output dist/eloquence.nvda-addon`.
+
+After each documentation or profile change, regenerate the cached coverage artefacts so pull requests reflect the current dataset without hammering upstream mirrors:
+
+- `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`
+- `python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print`
+- `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
+- `python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print`
+- `python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print`
+- `python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print`
+- `python tools/report_integration_scope.py --json docs/integration_scope.json --markdown docs/integration_scope.md --print`
+- `python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print`
+- `python tools/report_catalog_status.py --json docs/catalog_status.json --markdown docs/catalog_status.md`
+- `python tools/validate_language_pronunciations.py --json docs/language_pronunciation_validation.json --markdown docs/language_pronunciation_validation.md`
+
+The current snapshot (53 language profiles across 70 templates) reports a 39% average IPA completion rate with Gujarati and Indonesian leading at 100%. These Markdown/JSON pairs power the tables referenced throughout `docs/iso_language_expansion.md` and surface gaps where additional phoneme dictionaries, contextual rules, or DataJake archives should be prioritised. CodeQL workflows ingest the JSON outputs to ensure new dictionary parsers or ISO ingestion scripts never regress coverage or introduce unsafe archive handling.
+
 ### Mapping the NV Access download archive for automation
 To keep Eloquence Threshold validated against every public NVDA milestone we catalogue the layout of [download.nvaccess.org](https://download.nvaccess.org/). Automation scripts can crawl these predictable folders to fetch installers, controller clients, manuals, and debugging symbols without hand-editing URLs every time NVDA publishes a build.
 
@@ -124,14 +274,267 @@ Because the hierarchy is deterministic, you can parametrise CI jobs to pull the 
 | Stable releases | `2025.3` | `https://download.nvaccess.org/releases/stable/nvda_2025.3.exe` | Info | Supported within the current manifest window. Ship add-on updates once nightly validation passes. |
 | Stable releases | `2024.3` | `https://download.nvaccess.org/releases/2024.3/nvda_2024.3.exe` | Info | Older release still inside the supported range—retain downgrade assets for users stuck on long-term deployments. |
 
-The scorecard mirrors the generated snapshot and highlights which installers or manuals deserve immediate attention. Extend the table whenever you validate additional beta, RC, or try builds so contributors know what to test next.
+The scorecard mirrors the generated snapshot and highlights which installers or manuals deserve immediate attention. Extend the table whenever you validate additional beta, RC, or try builds so contributors know what to test next. Pair NVDA audit refreshes with updates to `docs/iso_language_expansion.md` and the cached language scorecards so cached datasets, CodeQL checks, and packaging steps stay aligned across pull requests.
+
+## Global language expansion and ISO coverage
+We are steadily expanding Eloquence to align with ISO 639/BCP-47 language tags, Unicode script metadata, and the speech parameter envelopes documented by NV Speech Player, DECtalk/FonixTalk, IBM TTS, and community archives. The latest roadmap snapshot lives in [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) and summarises:
+
+- Which ISO 639-1/639-2 codes and companion scripts already have seeded phoneme inventories or voice templates.
+- Script coverage priorities mapped from the [Wikipedia language index](docs/wikipedia_language_index.md), including planned ingestion of sign-language and orthography references.
+- Speech parameter and frequency-band combinations captured from NVDA's slider catalogue, with notes on the DataJake archive items that inform EQ calibration.
+- Dictionary and phoneme datasets currently staged from GitHub, NVDA upstream tooling, and archived Eloquence `.dic`/`.lex` resources.
+- Vocal metrics we expose through NVDA's Speech dialog so blind users can judge cadence, timbre, range, and contextual pronunciation in real time.
+
+The document tracks progress milestones so contributors can focus on underrepresented locales or script families (for example Ethiopic, Vai, Cherokee, Ol Chiki, Tengwar proposals, or revived Hebrew cantillation). Pair it with the generated [`docs/language_progress.md`](docs/language_progress.md) and [`docs/voice_parameter_report.md`](docs/voice_parameter_report.md) dashboards when refining phoneme datasets or adding NV Speech Player-style sliders to the voice picker.
+
+### Wikipedia, DataJake, GitHub, and NVDA utilisation dashboard
+| Source | What we mirror | Refresh helper | Latest snapshot | Next actions |
+| --- | --- | --- | --- | --- |
+| Wikipedia | ISO/script taxonomy, dialect flags, language family rollups, orthography research, endangered-language dashboards. | `python tools/catalog_wikipedia_languages.py --output-json docs/wikipedia_language_index.json --output-markdown docs/wikipedia_language_index.md` | `docs/wikipedia_language_index.md` (seeded via 2025-09 cache). | Add Assamese, Javanese, Maithili, Thai, and Northern Sotho macrolanguage cross-references before seeding new profiles. |
+| DataJake archives | `.dic`/`.lex` lexicons, MBROLA voices, NV Speech Player captures, heritage SAPI payloads, pronunciation spreadsheets. | `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` | `docs/archive_inventory.md` + `docs/archive_code_targets.md` (inventory refreshed 2025-09). | Promote high-value Assamese, Maltese, and Cree archives into `eloquence_data/` with duplicate lexeme checks in `tests/test_archive_catalog.py`. |
+| GitHub | eSpeak NG phoneme tables, NV Speech Player JSON exports, open-source kana/IPA mappers, historical DECtalk dictionaries. | `git submodule update` where applicable plus manual mirrors recorded in `docs/language_research_index.md`. | `eloquence_data/` JSON bundles and README references. | Track upstream revisions and refresh `eloquence_data/espeak_phonemes.txt` + NV Speech Player captures before the next CodeQL audit. |
+| NV Access | Installer/manual tree audits, nightly build metadata, severity scoring for regressions, documentation coverage. | `python tools/audit_nvaccess_downloads.py` followed by `python tools/check_nvda_updates.py` and `python tools/report_nvaccess_tree.py`. | `docs/nvda_update_recommendations.md`, `docs/nvaccess_tree.md`, `docs/download_nvaccess_snapshot.md`. | Compare the cached alpha-52762 snapshot against the next nightly once NV Access publishes fresh binaries and update severity guidance accordingly. |
+
+Each refresh reuses cached datasets staged under `docs/` to avoid hammering upstream mirrors. When proposing ISO expansions, cite the relevant row(s) above so reviewers know which cached report informed the change and which helper command must be re-run after merge.
+
+### Q4 coverage progress checkpoints
+| Track | Highlights | Latest artefacts | Next action |
+| --- | --- | --- | --- |
+| **ISO + scripts** | Expanded roadmap now tracks 68 ISO codes with dual-script notes for Kazakh, Serbian, and Cantonese alongside new Afroasiatic (Tigrinya/Oromo) and Indo-Aryan (Odia/Punjabi) targets. | [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) | Validate sample wordlists for Tigrinya and Odia using cached Wikipedia inventories before seeding phoneme presets. |
+| **Speech parameters** | Voice slider catalogue mirrors NV Speech Player metadata and now lists frequency scaffolds (8 kHz → 384 kHz) plus harmonic/noise band pairings for tone-heavy locales. | [`docs/voice_parameter_report.md`](docs/voice_parameter_report.md) | Import DataJake spectral captures for Hausa, Vietnamese, and Cantonese to calibrate tone and plosive presets. |
+| **Phoneme datasets** | DataJake manifest audit highlights `.dic`/`.lex` payloads for Maltese, Cree, and Yupik; GitHub FST projects queued for Turkish/Hungarian contextual inflection. | [`docs/archive_inventory.md`](docs/archive_inventory.md) | Refresh `docs/archive_inventory.json` after triaging Cree/Yupik payloads so CodeQL checks inherit provenance metadata. |
+| **Dictionary integrations** | README build drill references cached NVDA manuals and DataJake lexicons so offline packaging mirrors documentation used in tests. | [`docs/nvda_update_recommendations.md`](docs/nvda_update_recommendations.md) | Capture controller client deltas from the next NVDA nightly snapshot and flag severity in the recommendations report. |
+| **Vocal metrics** | Voice-language matrix ties 70 voice templates to 53 locales and surfaces IPA completion percentages inside NVDA’s Speech dialog. | [`docs/voice_language_matrix.md`](docs/voice_language_matrix.md) | Extend `tools/report_voice_language_matrix.py` with tone-range annotations for Yoruba, Thai, and Vietnamese bundles. |
+
+### Language maturity gap analysis
+
+- **New maturity dashboard** – `python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print` now rolls up the cached [`docs/language_progress.json`](docs/language_progress.json), [`docs/language_coverage.json`](docs/language_coverage.json), [`docs/voice_language_matrix.json`](docs/voice_language_matrix.json), and research metadata into a single scoreboard. It highlights locales that still need coverage snapshots, voice templates, or stage annotations so contributors can prioritise the next sprint without trawling multiple reports.
+- **Cross-source alignment** – The generated [`docs/language_maturity.md`](docs/language_maturity.md) file calls out gaps (for example the placeholder `unspecified` voice template that lacks a labelled profile) alongside the languages that already include DataJake dictionaries, NVDA manual provenance, and Wikipedia-derived IPA inventories. Use the JSON companion when wiring CodeQL dashboards or packaging automation that depends on these counts.
+- **Workflow integration** – Pair the maturity summary with the existing `tools/summarize_language_assets.py` output before building so you validate both per-language detail and aggregate coverage against the cached Wikipedia, DataJake, GitHub, and NV Access artefacts.
+
+### Arctic and Indigenous language surge (October 2025)
+
+- **Inuktitut (`iu`)** – Roadmap entries now tie syllabics sourced from `docs/wikipedia_language_index.md` and the
+  *Inuktitut language* article to DataJake `.lex` payloads extracted from archived NVDA community bundles.  The README scorecards
+  reference newly documented CodeQL guardrails for handling right-to-left syllabic glyphs while aligning NV Speech Player
+  **Tone** and **Scope depth** sliders with Inuit Broadcasting Corporation recordings preserved in DataJake archives.
+- **Cherokee (`chr`)** – Added syllabary coverage backed by the *Cherokee syllabary* and *Cherokee language* Wikipedia entries
+  alongside DECtalk lexicon fragments recovered from GitHub mirrors.  Packaging guidance now calls out the need to map syllabary
+  characters into NVDA’s braille translation tables before shipping Giduwa voice templates.
+- **Greenlandic Kalaallisut (`kl`)** – Leveraging the *Greenlandic language* Wikipedia research dossier and GitHub morphological
+  analysers to seed polysynthetic inflection handling.  NVDA manual excerpts for hyphenation and punctuation have been folded
+  into the roadmap so CodeQL policies can track the complex affixation pipeline.
+- **Northern Athabaskan targets** – Documented research hooks for *Dena’ina* and *Gwich’in* within `docs/language_research_index.md`
+  so the next sprint can align tone ladder presets, DataJake archival wordlists, and NV Speech Player **Nasal balance** sliders.
+
+These dossiers appear throughout [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) and the refreshed
+`docs/language_research_index.*` files so contributors can trace Wikipedia, GitHub, DataJake, and NVDA provenance before staging
+new phoneme presets.
+
+### Eastern Europe and Caucasus integration sprint (October 2025)
+
+- **Bulgarian (`bg`) + Macedonian (`mk`)** – Leveraged the cached *Bulgarian phonology* and *Macedonian language* Wikipedia
+  pages to refine consonant cluster, schwa deletion, and stress rules.  DataJake MBROLA payloads are mapped to NV Speech Player
+  **Stress**, **Vocal layers**, and **Plosive impact** sliders so testers can validate devoicing against cached alpha NVDA
+  builds.  GitHub transliteration utilities feed CodeQL-reviewed scripts that convert historical Cyrillic spellings into
+  Eloquence-ready grapheme clusters.
+- **Georgian (`ka`) + Armenian (`hy`)** – Documented Mkhedruli and Mesropian orthography planning, pairing DataJake `.lex`
+  payloads with the *Georgian language* and *Armenian language* Wikipedia inventories.  NVDA manual excerpts on punctuation and
+  braille hyphenation are folded into [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md) to keep the
+  cross-script loader guidance aligned with the add-on's architecture-aware directory scan.
+- **Azerbaijani (`az`) and Kazakh (`kk`) dual script** – Staged Arabic, Latin, and Cyrillic variants using GitHub transliteration
+  repos plus cached NVDA documentation so we can seed tri-script pronunciation presets.  DataJake lexicons inform the
+  `phoneme_customizer.py` frequency clamps, while CodeQL policies watch for unsafe archive extraction when refreshing the
+  language bundles.
+- **Baltic reinforcement (`lt`, `lv`)** – Logged vowel length, pitch accent, and palatalisation research from Wikipedia and
+  DataJake `.dic` payloads.  The roadmap now pairs these cues with NV Speech Player **Tone size**, **Subtones**, and **Sibilant
+  clarity** defaults, ready for validation via cached GitHub corpora and NVDA alpha 52762 nightly builds.
+
+Each locale entry in the roadmap now cross-references the maturity dashboard so developers can spot gaps in dictionary imports,
+phoneme completion, or voice template coverage before packaging.  See [`docs/iso_language_expansion.md`](docs/iso_language_expansion.md)
+for the full matrix plus forward-looking tasks, and log follow-up findings in `docs/language_research_index.md` to keep
+Wikipedia/DataJake/GitHub/NVDA provenance synchronised with CodeQL guardrails.
+
+### Caribbean and Central American sprint (October 2025)
+
+- **Haitian Creole (`ht`) + Jamaican Patois (`jam`)** – Built on cached *Haitian Creole* and *Jamaican Patois* Wikipedia
+  phonology portals, cross-linking nasal vowel charts, creole grammar baselines, and diaspora speech corpora.  DataJake
+  hymn and radio lexicons are mapped to NV Speech Player **Inflection contour**, **Nasal balance**, and **Tone** sliders
+  so we can rehearse prosody before importing the dictionaries under CodeQL supervision.  GitHub transliteration scripts
+  help reconcile French-orthography punctuation with NVDA braille exports staged in the packaging playbook.
+- **K'iche' (`quc`) and Garifuna (`cab`)** – Cached Mayan and Arawakan Wikipedia phoneme tables anchor ejective consonant
+  and nasal harmony coverage while GitHub community grammars highlight dialect branches.  DataJake scripture corpora and
+  community storytelling archives underpin planned `.dic` extractions, and NVDA braille snapshots confirm glottal stop and
+  saltillo handling before we ship Central American presets.
+- **Papiamento (`pap`) and Miskito (`miq`)** – Leveraged DataJake call centre, education, and historical speech archives
+  to capture creole vowel mergers and Miskito nasal stress placement.  Wikipedia orthography notes pair with GitHub
+  transliteration utilities, while cached NVDA documentation keeps punctuation and braille expectations aligned across
+  Latin-script variants.  The new roadmap rows track frequency envelope experiments so we can stage NV Speech Player
+  **Overtones**/**Scope depth** presets alongside dictionary ingestion tasks.
 
 ## Getting started
-1. Download the latest packaged add-on from the [releases page](https://github.com/pumper42nickel/eloquence_threshold/releases/latest/download/eloquence.nvda-addon), or clone this repository to build locally.
-2. If you are building your own package, gather the proprietary Eloquence binaries: place the classic 32-bit runtime (for example `ECI.DLL` and the `.syn` voice data) inside an `eloquence/` directory. Add architecture-specific payloads beside it by creating `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, or `eloquence_arm64/` folders containing the corresponding DLLs and voices. You can also reuse an earlier add-on as a template by dropping it next to the build script as `eloquence_original.nvda-addon` or by passing `--template /path/to/addon.nvda-addon` when building.
-3. Run `python build.py` to produce `eloquence.nvda-addon` in the repository root. The builder now stages everything locally so offline or firewalled systems no longer block packaging. Supply `--no-download` if you do not want it to attempt downloading the legacy template, or point at a custom cache with `--template`.
-4. Install the add-on in NVDA 2019.3 or newer on Windows 10 or Windows 11. NVDA alpha-52731 has been verified when the 64-bit runtime is available.
-5. Visit NVDA's **Preferences → Speech** dialog to select Eloquence and begin exploring customization options—including the growing set of voice and phoneme parameters we surface in the dialog.
+1. **Clone the repository** – `git clone https://github.com/pumper42nickel/eloquence_threshold.git` (or your fork) and `cd eloquence_threshold`. This is now the canonical way to obtain the add-on source when no release archive is published.
+2. **Review the bundled data snapshots** – skim [`docs/wikipedia_language_index.md`](docs/wikipedia_language_index.md), [`docs/archive_inventory.md`](docs/archive_inventory.md), and [`docs/nvda_update_recommendations.md`](docs/nvda_update_recommendations.md) to understand which Wikipedia, DataJake, GitHub, and NVDA assets have already been ingested. These reports guide the ISO/script priorities documented above.
+3. **Gather proprietary Eloquence binaries** – place the classic 32-bit runtime (`ECI.DLL`, `.syn` voice data, and associated `.ph/ .phs` assets) inside an `eloquence/` directory. Add architecture-specific payloads beside it by creating `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, or `eloquence_arm64/` folders containing the corresponding DLLs and voices. You can also reuse an earlier add-on as a template by dropping it next to the build script as `eloquence_original.nvda-addon` or by passing `--template /path/to/addon.nvda-addon` when building.
+4. **Optional – create an isolated Python environment** – `python -m venv .venv` followed by `.venv\Scripts\activate` (PowerShell) or `source .venv/bin/activate` (WSL/Linux/macOS). Install build helpers with `pip install -r tools/requirements-build.txt` if you maintain a custom dependency set; the repository only relies on the Python standard library by default.
+5. **Stage cached datasets** – copy refreshed Markdown/JSON artefacts from `docs/` (for example `docs/language_progress.md`, `docs/language_coverage.md`, `docs/voice_language_matrix.md`, and `docs/wikipedia_language_index.md`) into your clone so the build script embeds the latest provenance notes without re-downloading public archives. When you add or modify datasets—including the new Haitian Creole, Jamaican Patois, K'iche', Garifuna, Papiamento, and Miskito research packs—rerun:
+   - `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`
+   - `python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print`
+   - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
+   - `python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print`
+   - `python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print`
+   - `python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print`
+   - `python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print`
+   - `python tools/audit_nvaccess_downloads.py --roots releases/stable releases/2025.3 snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs/download_nvaccess_snapshot.json --markdown docs/download_nvaccess_snapshot.md`
+   - `python tools/check_nvda_updates.py --snapshot docs/download_nvaccess_snapshot.json --validated docs/validated_nvda_builds.json --manifest manifest.ini --markdown docs/nvda_update_recommendations.md --json docs/nvda_update_recommendations.json`
+   - `python tools/report_nvaccess_tree.py --snapshot docs/download_nvaccess_snapshot.json --recommendations docs/nvda_update_recommendations.json --json docs/nvaccess_tree.json --markdown docs/nvaccess_tree.md`
+6. **Run the test suite** – `python -m unittest discover tests`. The tests verify voice catalogues, phoneme inventories, documentation parsers, and ensure cached NVDA/Wikipedia/DataJake reports still parse correctly before you package the add-on. Add CodeQL runs when working on archive ingestion or CLI tooling.
+7. **Build the add-on** – `python build.py --insecure --no-download --output dist/eloquence.nvda-addon` (for air-gapped or TLS-pinned environments) or simply `python build.py`. The command emits `eloquence.nvda-addon` in the repository root using the binaries you staged in step 3 and the latest documentation snapshots from `docs/`.
+8. **Validate the output** – open the generated `.nvda-addon` (it is a ZIP archive) to confirm the `manifest.ini`, voice catalogues, and `/eloquence*/` runtime folders are present. Cross-check the `docs/` excerpts packaged inside if you enabled documentation bundling.
+9. **Install in NVDA** – on Windows 10 or Windows 11, run NVDA 2019.3 or newer (alpha-52731 or later is our validation baseline), choose **Tools → Add-ons → Install**, and select your freshly built package.
+10. **Explore and customise** – visit **Preferences → Speech** to pick Eloquence, adjust the expanded slider set (Emphasis, Stress, Timbre, Tone, Pitch height, Vocal layers, Plosive impact, Overtones, Sibilant clarity, Subtones, Nasal balance, Vocal range, Inflection contour, Roughness, Smoothness, Whisper, Head size contour, Macro volume, Tone size, Scope depth, Sample rate, and Phoneme EQ bands), and inspect the language profile picker for the ISO/script/vocal metrics you just updated.
+
+#### Offline build quickstart (no-release scenario, October 2025 update)
+
+> Need the narrated drill-by-drill version?  Pair this table with the new
+> [`docs/offline_build_rehearsal.md`](docs/offline_build_rehearsal.md) checklist
+> for a narrated walkthrough that ties every command to cached Wikipedia,
+> DataJake, GitHub, and NV Access artefacts plus CodeQL follow-ups.
+
+| Step | Command(s) | Purpose |
+| --- | --- | --- |
+| 1. Clone | `git clone https://github.com/pumper42nickel/eloquence_threshold.git`<br>`cd eloquence_threshold` | Pull the current `work` branch when no release ZIP exists. |
+| 2. Restore caches | `cp -r /path/to/snapshots/docs/* docs/` *(or rerun the reporting helpers listed above)* | Keep Markdown/JSON provenance artefacts in sync so the builder packages language coverage without hitting external mirrors. |
+| 3. Stage binaries | Populate `eloquence/`, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, and/or `eloquence_arm64/` with the appropriate `eci*.dll` plus `.syn` voices. | Provide architecture-matched runtimes; the builder validates PE headers and fails fast on mismatches. |
+| 4. Seed dictionaries | Drop `.dic`/`.lex` assets into `eloquence_data/` and rerun `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md`. | Catalogues imported dictionaries for CodeQL review and packaging. |
+| 5. Verify metadata | Run the report suite:<br>`python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`<br>`python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print`<br>`python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`<br>`python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print`<br>`python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print`<br>`python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print`<br>`python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print`<br>`python tools/report_integration_scope.py --json docs/integration_scope.json --markdown docs/integration_scope.md --print`<br>`python tools/audit_nvaccess_downloads.py --roots releases/stable releases/2025.3 snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs/download_nvaccess_snapshot.json --markdown docs/download_nvaccess_snapshot.md`<br>`python tools/check_nvda_updates.py --snapshot docs/download_nvaccess_snapshot.json --validated docs/validated_nvda_builds.json --manifest manifest.ini --markdown docs/nvda_update_recommendations.md --json docs/nvda_update_recommendations.json`<br>`python tools/report_nvaccess_tree.py --snapshot docs/download_nvaccess_snapshot.json --recommendations docs/nvda_update_recommendations.json --json docs/nvaccess_tree.json --markdown docs/nvaccess_tree.md` | Refresh ISO/script dashboards after editing profiles or dictionaries, align NVDA severity guidance, and capture consolidated cross-source snapshots before packaging. |
+| 6. Run tests | `python -m unittest discover tests` | Ensure catalogues, phoneme inventories, and documentation parsers still pass integrity checks. |
+| 7. Package | `python build.py --insecure --output dist/eloquence.nvda-addon` | Produce the add-on offline, embedding refreshed docs and cached datasets. |
+| 8. Install | Use NVDA’s **Tools → Add-ons → Install** dialog and select `dist/eloquence.nvda-addon`. | Deploy the build on Windows 10/11 for validation against NVDA alpha/stable releases. |
+| 9. Log run | Document the commands you executed in your pull request, append notable observations to `AGENTS.md`, and cross-reference [`docs/offline_packaging_playbook.md`](docs/offline_packaging_playbook.md). | Keeps the progress log reproducible for future offline packaging drills and ensures the playbook reflects Saharan/Pacific sprint updates. |
+
+#### Example offline rebuild script (bash)
+
+```bash
+git clone https://github.com/pumper42nickel/eloquence_threshold.git
+cd eloquence_threshold
+
+# Optional: restore cached Markdown/JSON artefacts from a trusted mirror
+rsync -a /mnt/offline-snapshots/docs/ docs/
+
+# Stage proprietary binaries (modify the source path for your environment)
+rsync -a /mnt/offline-snapshots/eloquence_runtime/ ./
+
+# Refresh provenance dashboards
+python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print
+python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print
+python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print
+python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print
+python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print
+python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print
+python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print
+
+# Audit NV Access mirrors to confirm compatibility before packaging
+python tools/audit_nvaccess_downloads.py --roots releases/stable releases/2025.3 snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs/download_nvaccess_snapshot.json --markdown docs/download_nvaccess_snapshot.md
+python tools/check_nvda_updates.py --snapshot docs/download_nvaccess_snapshot.json --validated docs/validated_nvda_builds.json --manifest manifest.ini --markdown docs/nvda_update_recommendations.md --json docs/nvda_update_recommendations.json
+
+# Run integrity tests and build the add-on
+python -m unittest discover tests
+python build.py --insecure --no-download --output dist/eloquence.nvda-addon
+```
+
+#### Example offline rebuild script (PowerShell)
+
+```powershell
+git clone https://github.com/pumper42nickel/eloquence_threshold.git
+Set-Location eloquence_threshold
+
+# Optional: restore cached Markdown/JSON artefacts from a trusted snapshot
+robocopy C:\offline\eloquence_docs .\docs /E
+
+# Stage proprietary Eloquence binaries for every architecture slot
+robocopy C:\offline\eloquence_runtime .\ eloquence*.* /E
+
+# Refresh provenance dashboards so CodeQL + NVDA audits stay aligned
+python tools\summarize_language_assets.py --json docs\language_asset_summary.json --markdown docs\language_asset_summary.md --print
+python tools\report_language_maturity.py --json docs\language_maturity.json --markdown docs\language_maturity.md --print
+python tools\report_language_progress.py --json docs\language_progress.json --markdown docs\language_progress.md --print
+python tools\report_language_coverage.py --json docs\language_coverage.json --markdown docs\language_coverage.md --print
+python tools\report_voice_language_matrix.py --json docs\voice_language_matrix.json --markdown docs\voice_language_matrix.md --print
+python tools\report_voice_parameters.py --json docs\voice_parameter_report.json --markdown docs\voice_parameter_report.md --print
+python tools\report_voice_frequency_matrix.py --json docs\voice_frequency_matrix.json --markdown docs\voice_frequency_matrix.md --print
+
+# Audit NV Access mirrors and regenerate compatibility reports
+python tools\audit_nvaccess_downloads.py --roots releases/stable releases/2025.3 snapshots/alpha --max-depth 2 --limit-per-dir 12 --insecure --json docs\download_nvaccess_snapshot.json --markdown docs\download_nvaccess_snapshot.md
+python tools\check_nvda_updates.py --snapshot docs\download_nvaccess_snapshot.json --validated docs\validated_nvda_builds.json --manifest manifest.ini --markdown docs\nvda_update_recommendations.md --json docs\nvda_update_recommendations.json
+python tools\report_nvaccess_tree.py --snapshot docs\download_nvaccess_snapshot.json --recommendations docs\nvda_update_recommendations.json --json docs\nvaccess_tree.json --markdown docs\nvaccess_tree.md
+
+# Run unit tests and package the add-on without hitting the network
+python -m unittest discover tests
+python build.py --insecure --no-download --output dist\eloquence.nvda-addon
+```
+
+### No-release packaging drill (step-by-step)
+
+> Looking for the full walkthrough?  See [`docs/offline_packaging_playbook.md`](docs/offline_packaging_playbook.md) for the
+> October 2025 offline rebuild guide that expands on each step with CodeQL, NV Access snapshot, and DataJake cache workflows.
+1. **Clone or update the repository** – on your build machine, run `git clone https://github.com/pumper42nickel/eloquence_threshold.git` (or sync your fork with `git pull`) and then execute `git submodule update --init --recursive` if you mirror optional data helpers.
+2. **Rehydrate cached artefacts** – copy the Markdown/JSON reports from `docs/` into place (or regenerate them using the commands listed above) so `build.py` embeds the refreshed provenance ledger without hitting external mirrors.
+3. **Verify Eloquence binaries** – confirm that each architecture folder (`eloquence/`, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, `eloquence_arm64/`) contains a matching `eci.dll`, `eci20.dll`, or equivalent runtime plus `.syn` voice data. The builder validates PE headers and will refuse to bundle mismatched architectures.
+4. **Prime phoneme dictionaries** – ensure any `.dic`/`.lex` files you want packaged live under `eloquence_data/` and are referenced in `docs/archive_inventory.json`. If you add new archives, rerun `python tools/catalog_datajake_archives.py --json docs/archive_inventory.json --markdown docs/archive_inventory.md` to refresh metadata before building.
+5. **Rebuild cross-source dashboards** – run the reporting helpers below so coverage, maturity, frequency, linkage, and validation artefacts reflect the sprint before packaging:
+   - `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`
+   - `python tools/report_language_maturity.py --json docs/language_maturity.json --markdown docs/language_maturity.md --print`
+   - `python tools/report_language_progress.py --json docs/language_progress.json --markdown docs/language_progress.md --print`
+   - `python tools/report_language_coverage.py --json docs/language_coverage.json --markdown docs/language_coverage.md --print`
+   - `python tools/report_voice_language_matrix.py --json docs/voice_language_matrix.json --markdown docs/voice_language_matrix.md --print`
+   - `python tools/report_voice_frequency_matrix.py --json docs/voice_frequency_matrix.json --markdown docs/voice_frequency_matrix.md --print`
+   - `python tools/report_integration_scope.py --json docs/integration_scope.json --markdown docs/integration_scope.md --print`
+   - `python tools/report_voice_parameters.py --json docs/voice_parameter_report.json --markdown docs/voice_parameter_report.md --print`
+   - `python tools/report_catalog_status.py --json docs/catalog_status.json --markdown docs/catalog_status.md`
+   - `python tools/validate_language_pronunciations.py --json docs/language_pronunciation_validation.json --markdown docs/language_pronunciation_validation.md`
+   - `python tools/catalog_wikipedia_languages.py --output-json docs/wikipedia_language_index.json --output-markdown docs/wikipedia_language_index.md` (captures new sign-language classifications before packaging)
+6. **Run unit tests** – execute `python -m unittest discover tests` to confirm voice sliders, phoneme inventories, and documentation parsers still pass integrity checks.
+7. **Build the add-on** – run `python build.py --insecure --output dist/eloquence.nvda-addon` (add `--template` if you want to reuse a prior package). The script stitches together binaries, documentation, and cached datasets without requiring an internet connection.
+8. **Inspect the package** – unzip `dist/eloquence.nvda-addon` and verify that `manifest.ini`, `globalPlugins/eloquenceThreshold/` assets, the `/eloquence*/` runtimes, and any refreshed docs are present.
+9. **Install into NVDA** – use NVDA's add-on manager to install the build, then confirm new language profiles or voice parameters appear and announce their coverage metrics.
+10. **Document the run** – capture the commands you executed and note any regenerated artefacts in your pull request summary so future contributors can follow the same offline workflow.
+
+### Quick clone-and-build command recap (offline safe)
+
+```powershell
+# 1. Grab the repository and optional data helpers
+git clone https://github.com/pumper42nickel/eloquence_threshold.git
+cd eloquence_threshold
+git submodule update --init --recursive
+
+# 2. Restore cached documentation snapshots (copy from your archive or regenerate)
+python tools\summarize_language_assets.py --json docs\language_asset_summary.json --markdown docs\language_asset_summary.md --print
+python tools\report_language_maturity.py --json docs\language_maturity.json --markdown docs\language_maturity.md --print
+python tools\report_language_progress.py --json docs\language_progress.json --markdown docs\language_progress.md --print
+python tools\report_language_coverage.py --json docs\language_coverage.json --markdown docs\language_coverage.md --print
+python tools\report_voice_language_matrix.py --json docs\voice_language_matrix.json --markdown docs\voice_language_matrix.md --print
+python tools\report_voice_frequency_matrix.py --json docs\voice_frequency_matrix.json --markdown docs\voice_frequency_matrix.md --print
+python tools\report_integration_scope.py --json docs\integration_scope.json --markdown docs\integration_scope.md --print
+python tools\report_voice_parameters.py --json docs\voice_parameter_report.json --markdown docs\voice_parameter_report.md --print
+python tools\report_catalog_status.py --json docs\catalog_status.json --markdown docs\catalog_status.md
+python tools\validate_language_pronunciations.py --json docs\language_pronunciation_validation.json --markdown docs\language_pronunciation_validation.md
+
+# 3. Validate code + build the NVDA add-on without network access
+python -m unittest discover tests
+python build.py --insecure --no-download --output dist\eloquence.nvda-addon
+```
+
+### Offline ZIP bootstrap (alternative workflow)
+
+If you cannot use `git clone`, download the repository ZIP from a trusted mirror, verify its checksum, and then follow these steps:
+
+1. Extract the archive into `C:\eloquence_threshold` (or another writable path) and ensure Windows SmartScreen is satisfied with the source.
+2. Restore cached Markdown/JSON artefacts into `docs/` from your offline vault or regenerate them with the commands listed above. This keeps CodeQL-ready dashboards such as `docs/language_progress.json` and `docs/voice_language_matrix.json` aligned with the sprint.
+3. Copy the proprietary Eloquence binaries into the `eloquence*/` architecture slots (`eloquence/`, `eloquence_x86/`, `eloquence_x64/`, `eloquence_arm32/`, `eloquence_arm64/`). The loader validates PE headers and will refuse mismatched DLLs.
+4. Open PowerShell, run `py -3 -m venv .venv` (or use an existing Python 3.11+ interpreter), activate it, and install any optional helpers you mirrored (for example, `pip install -r scripts\requirements.txt`).
+5. Execute the provenance refresh commands (`python tools\summarize_language_assets.py`, `python tools\report_language_maturity.py`, `python tools\report_language_progress.py`, and companions) so NVDA-linked dashboards, DataJake inventories, and NV Speech Player slider reports reflect your cached datasets.
+6. Finish with `python -m unittest discover tests` and `python build.py --insecure --no-download --output dist\eloquence.nvda-addon`. Inspect the resulting add-on to confirm the sprint artefacts—including the Sahelian frequency envelopes and updated ISO roadmap—are embedded before installing into NVDA.
 
 ### Build script reference
 - `python build.py --output dist/eloquence.nvda-addon` writes the package to a custom path.
@@ -183,6 +586,7 @@ The scorecard mirrors the generated snapshot and highlights which installers or 
 - If you want something even more dynamic, drop eSpeak NG variant voice files (for example anything from `espeak-ng-data/voices/!v/`) into `eloquence_data/espeak_variants/`. The loader parses their pitch, speed, voicing, and consonant settings, maps them to Eloquence sliders, and exposes the result as new templates the next time NVDA starts. This automated import workflow was inspired by dynamic synthesizer projects such as [mush42/sonata-nvda](https://github.com/mush42/sonata-nvda) so contributors can experiment without hand-editing JSON.
 - DECtalk starter templates are now available in `eloquence_data/dectalk_voices.json`, capturing the personality of classics like Perfect Paul, Beautiful Betty, and Rough Rita. These entries model FonixTalk-era parameter sets so you can approximate DECtalk timbres when running on top of the Eloquence engine.
 - Heritage captures from JAWS, Window-Eyes, and Loquence SAPI-4 installs ship in `eloquence_data/voices/eloquence_heritage.json`. These presets toggle abbreviation dictionaries, phrase prediction, and phoneme fallbacks so modern NVDA builds inherit the feel of their legacy counterparts.
+- Generative pronunciation layers sit alongside these templates: profiles that rely on contextual AI or rule-based synthesis include `generation` metadata inside their JSON seeds, and NVDA announces when a locale uses dynamic phoneme derivation so testers can audit tone sandhi, vowel harmony, or accent-sensitive alternations directly from the Speech dialog.
 - Fresh SAPI-4 and SAPI-5 captures derived from the DataJake archives (`eloq61.exe`, `IBM-ViaVoice_TTS-SAPI4.zip`, and `SAPI5_IBMTTS.zip`) live in `eloquence_data/voices/eloquence_sapi.json`. Each template documents the upstream package inside its `extras.sourceArchive` field so you can cross-reference provenance while tuning.
 - Select **Voice template** inside NVDA's Speech dialog to apply these presets. Eloquence will switch to the appropriate `.syn` voice, set its variant, and adjust sliders instantly. You can still tweak the individual sliders afterward; the template simply provides a faster starting point.
 - Contributors can add more templates by editing the JSON files. Drop new payloads either alongside the existing `_voices.json` descriptors or inside `eloquence_data/voices/` and the loader will pick them up automatically. The metadata documents the expected ranges for each parameter so community voices stay within Eloquence's safe operating window. New synthesizer families (for example, SAPI-4 ports) can live in additional JSON descriptors alongside DECtalk and eSpeak.
@@ -200,6 +604,11 @@ The scorecard mirrors the generated snapshot and highlights which installers or 
 - Linguists estimate that more than 7,000 languages are in active use worldwide, and the number continues to evolve as dialects are documented or revitalised. Our long-term plan is to make Eloquence capable of speaking every script and symbol by piggybacking on community data.
 - To keep the roadmap honest we now mirror [Wikipedia’s “Lists of languages” portal](https://en.wikipedia.org/wiki/Lists_of_languages) inside `docs/wikipedia_language_index.{json,md}`. Generate the snapshot with `python tools/catalog_wikipedia_languages.py --output-json docs/wikipedia_language_index.json --output-markdown docs/wikipedia_language_index.md` whenever Wikipedia updates the underlying article. The crawler now records not just the core **language → dialect → accent** tiers but also flags for **sign-language**, **orthography**, **language family**, **constructed language**, **programming/technical language**, **standards/ISO codes**, and **status or statistical dashboards**. NVDA’s speech dialog will consume those tags to expose mutually intelligible phoneme defaults, hook phoneme EQ templates to language families, and surface auxiliary research menus (for example, contact languages, endangered/extinct inventories, and markup or ontology languages that inform pronunciation datasets).
 - [eSpeak NG](https://github.com/espeak-ng/espeak-ng) already publishes phoneme inventories and voice rules for over 100 languages and variants, giving us a solid foundation for rapid expansion. As we import these datasets we track the maturity of each locale across phoneme coverage, language profiles, and keyboard-driven voice controls.
+
+### Consolidated language asset dashboard
+- Generate `docs/language_asset_summary.{json,md}` with `python tools/summarize_language_assets.py --json docs/language_asset_summary.json --markdown docs/language_asset_summary.md --print`. The summary fuses the language progress, language coverage, voice/language matrix, and research index snapshots so you can confirm Wikipedia/DataJake/GitHub/NVDA provenance lines up before committing updates.
+- The Markdown view surfaces per-locale stage, IPA coverage, voice template counts, and coverage status in one table, while the JSON payload powers automation (for example, validating that every ISO seed has both a dictionary provenance trail and an NV Speech Player/Eloquence template pairing).
+- Use the aggregated counts to prioritise future imports: coverage gaps indicate where fresh DataJake `.lex` dictionaries or Wikipedia pronunciation tables should be harvested next, and research classification totals show which language families still lack dedicated phoneme EQ experiments.
 
 | Locale / Dialect | Phoneme dataset status | Language profile status | Voice template status | Keyboard customisation | Speech fluency target | Braille hand-off status | Dictionary / corpus status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |

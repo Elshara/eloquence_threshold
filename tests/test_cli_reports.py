@@ -37,6 +37,24 @@ class CliReportTests(unittest.TestCase):
             self.assertIn("parameterRanges", payload)
             self.assertTrue(md_path.read_text(encoding="utf-8").strip())
 
+    def test_report_voice_frequency_matrix(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            json_path = Path(tmp, "voice_frequency.json")
+            md_path = Path(tmp, "voice_frequency.md")
+            result = self._run_tool(
+                "tools/report_voice_frequency_matrix.py",
+                "--json",
+                str(json_path),
+                "--markdown",
+                str(md_path),
+                "--print",
+            )
+            self.assertEqual(result.returncode, 0, msg=result.stderr)
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            self.assertIn("parameters", payload)
+            self.assertGreater(payload.get("parameterCount", 0), 0)
+            self.assertTrue(md_path.read_text(encoding="utf-8").strip())
+
     def test_report_catalog_status(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             json_path = Path(tmp, "catalog_status.json")
@@ -144,6 +162,45 @@ class CliReportTests(unittest.TestCase):
             self.assertIn("entries", payload)
             self.assertIn("stats", payload)
             self.assertGreaterEqual(payload.get("totalProfiles", 0), 0)
+            self.assertTrue(md_path.read_text(encoding="utf-8").strip())
+
+    def test_summarize_language_assets(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            json_path = Path(tmp, "language_assets.json")
+            md_path = Path(tmp, "language_assets.md")
+            result = self._run_tool(
+                "tools/summarize_language_assets.py",
+                "--json",
+                str(json_path),
+                "--markdown",
+                str(md_path),
+                "--print",
+            )
+            self.assertEqual(result.returncode, 0, msg=result.stderr)
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            self.assertIn("languages", payload)
+            self.assertIn("globalStats", payload)
+            self.assertIn("globalResearch", payload)
+            self.assertGreaterEqual(len(payload["languages"]), 1)
+            self.assertTrue(md_path.read_text(encoding="utf-8").strip())
+
+    def test_report_language_maturity(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            json_path = Path(tmp, "language_maturity.json")
+            md_path = Path(tmp, "language_maturity.md")
+            result = self._run_tool(
+                "tools/report_language_maturity.py",
+                "--json",
+                str(json_path),
+                "--markdown",
+                str(md_path),
+                "--print",
+            )
+            self.assertEqual(result.returncode, 0, msg=result.stderr)
+            payload = json.loads(json_path.read_text(encoding="utf-8"))
+            self.assertIn("entries", payload)
+            self.assertIn("stageCounts", payload)
+            self.assertIn("coverageStatusCounts", payload)
             self.assertTrue(md_path.read_text(encoding="utf-8").strip())
 
     def test_run_nvda_release_checks_from_snapshot(self) -> None:

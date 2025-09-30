@@ -1,0 +1,1341 @@
+{
+  "generatedAt": "2025-09-30T01:45:04.993652+00:00",
+  "languageCount": 53,
+  "stageCounts": {
+    "established": 28,
+    "developing": 9,
+    "comprehensive": 15
+  },
+  "coverageStatusCounts": {
+    "profile + templates": 52
+  },
+  "languagesWithFullStack": [
+    "am",
+    "ar",
+    "ar-EG",
+    "bn",
+    "cs",
+    "da",
+    "de-DE",
+    "el",
+    "en-GB",
+    "en-US",
+    "es-419",
+    "es-ES",
+    "fa",
+    "fi",
+    "fil",
+    "fr-FR",
+    "gu",
+    "ha",
+    "he",
+    "hi-IN",
+    "id",
+    "it-IT",
+    "ja-JP",
+    "km",
+    "kn",
+    "ko",
+    "lo",
+    "ml",
+    "mr",
+    "ms",
+    "my",
+    "nb",
+    "ne",
+    "nl",
+    "pa",
+    "pl",
+    "pt-BR",
+    "ru",
+    "si",
+    "sv",
+    "sw",
+    "ta",
+    "te",
+    "th",
+    "tr",
+    "uk",
+    "ur",
+    "vi",
+    "yo",
+    "yue-Hant-HK",
+    "zh-CN",
+    "zu"
+  ],
+  "languagesMissingProgress": [
+    "unspecified"
+  ],
+  "languagesMissingCoverage": [
+    "unspecified"
+  ],
+  "languagesMissingVoiceTemplates": [],
+  "entries": [
+    {
+      "languageTag": "am",
+      "labels": [
+        "Amharic – ejective cadence",
+        "Amharic – ejective cadence – am – Placeholder emphasising Amharic ejectives and the seven-syllable abugida patterns.",
+        "am"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ar",
+      "labels": [
+        "Arabic (Modern Standard) – emphatic backbone",
+        "Arabic (Modern Standard) – emphatic backbone – ar – Seeded MSA profile capturing emphatic coronals and the sun/moon assimilation patterns.",
+        "ar"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ar-EG",
+      "labels": [
+        "Arabic (Egyptian) – colloquial glide",
+        "Arabic (Egyptian) – colloquial glide – ar-EG – Captures Cairene consonant shifts (gīm→/g/, qāf→/ʔ/) so phoneme EQ can mimic everyday Egyptian Arabic.",
+        "ar-EG"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "bn",
+      "labels": [
+        "Bengali – retroflex melody",
+        "Bengali – retroflex melody – bn – Bengali placeholder emphasising retroflex flaps, palatal fricatives, and nasal vowels.",
+        "bn"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "cs",
+      "labels": [
+        "Czech – trill precision",
+        "Czech – trill precision – cs – Czech placeholder emphasising the ř trill, velar fricative ch, and palatal nasals.",
+        "cs"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "da",
+      "labels": [
+        "Danish – stød scaffolding",
+        "Danish – stød scaffolding – da – Danish placeholder highlighting stød, uvular r, and vowel reductions.",
+        "da"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "de-DE",
+      "labels": [
+        "German – precise articulation",
+        "German – precise articulation – de-DE – Key German letters referencing eSpeak de voice",
+        "de-DE"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 27.27,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "el",
+      "labels": [
+        "Greek – consonant balance",
+        "Greek – consonant balance – el – Greek placeholder emphasising dental fricatives, velar fricatives, and consonant clusters.",
+        "el"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "en-GB",
+      "labels": [
+        "English (UK) – clipped clarity",
+        "English (UK) – clipped clarity – en-GB – Receives vowels tuned for eSpeak en-gb",
+        "en-GB"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 40.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "en-US",
+      "labels": [
+        "English (US) – Heritage Eloquence",
+        "English (US) – Heritage Eloquence – en-US – Pronunciation cues transcribed from JAWS, Window-Eyes, and Loquence studio dictionaries",
+        "English (US) – tactile vowels",
+        "English (US) – tactile vowels – en-US – Foundational Latin alphabet mapping derived from eSpeak en-us",
+        "en-US"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 25.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 18,
+      "profileCount": 2,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "es-419",
+      "labels": [
+        "Spanish (LatAm) – sonorous core",
+        "Spanish (LatAm) – sonorous core – es-419 – Latin American Spanish vowels and consonants following eSpeak es-la",
+        "es-419"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 28.57,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "es-ES",
+      "labels": [
+        "Spanish (Castilian) – crisp sibilants",
+        "Spanish (Castilian) – crisp sibilants – es-ES – Castilian defaults matching eSpeak es",
+        "es-ES"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 60.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "fa",
+      "labels": [
+        "Persian (Farsi) – smooth ezafe",
+        "Persian (Farsi) – smooth ezafe – fa – Seeded Persian profile that foregrounds ezafe liaisons and the soft postalveolar fricatives common in Tehrani speech.",
+        "fa"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "fi",
+      "labels": [
+        "Finnish – vowel length discipline",
+        "Finnish – vowel length discipline – fi – Finnish placeholder covering vowel length contrasts, front rounded vowels, and velar nasals.",
+        "fi"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "fil",
+      "labels": [
+        "Filipino – Tagalog clarity",
+        "Filipino – Tagalog clarity – fil – Filipino placeholder addressing velar nasals, Spanish ñ loans, and affricate onsets.",
+        "fil"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "fr-FR",
+      "labels": [
+        "French – nasal warmth",
+        "French – nasal warmth – fr-FR – Core French characters tuned against eSpeak fr defaults",
+        "fr-FR"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "gu",
+      "labels": [
+        "Gujarati – vocalic resonances",
+        "Gujarati – vocalic resonances – gu – Gujarati placeholder emphasising retroflex laterals, palatal nasals, and vocalic r vowels.",
+        "gu"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 100.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ha",
+      "labels": [
+        "Hausa – vibrant glottalic stops",
+        "Hausa – vibrant glottalic stops – ha – Captures Hausa ejective stops and high/low tone contrasts for the Latin orthography.",
+        "ha"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "he",
+      "labels": [
+        "Hebrew – modern articulation",
+        "Hebrew – modern articulation – he – Modern Israeli Hebrew placeholder accentuating uvular frication and ejective-like tsadi bursts.",
+        "he"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "hi-IN",
+      "labels": [
+        "Hindi – retroflex energy",
+        "Hindi – retroflex energy – hi-IN – Core Devanagari characters tuned against eSpeak hi phonemes",
+        "hi-IN"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 40.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "id",
+      "labels": [
+        "Indonesian – archipelago clarity",
+        "Indonesian – archipelago clarity – id – Indonesian placeholder capturing prenasalised onsets and clear loan consonants.",
+        "id"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 100.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "it-IT",
+      "labels": [
+        "Italian – open vowels",
+        "Italian – open vowels – it-IT – Italian vowel core tied to eSpeak it voice",
+        "it-IT"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 46.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ja-JP",
+      "labels": [
+        "Japanese – mora rhythmic",
+        "Japanese – mora rhythmic – ja-JP – Kana coverage with pitch-accent guidance for NVDA phoneme hints",
+        "ja-JP"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "km",
+      "labels": [
+        "Khmer – diphthong radiance",
+        "Khmer – diphthong radiance – km – Khmer placeholder capturing palatal nasals, aspirated affricates, and complex vowel nuclei.",
+        "km"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "kn",
+      "labels": [
+        "Kannada – gentle palatals",
+        "Kannada – gentle palatals – kn – Kannada placeholder covering retroflex laterals, palatal nasals, and diphthongs used in literary Kannada.",
+        "kn"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ko",
+      "labels": [
+        "Korean – fortis balance",
+        "Korean – fortis balance – ko – Korean placeholder balancing tense consonants, aspiration, and vowel harmony cues.",
+        "ko"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "lo",
+      "labels": [
+        "Lao – tone class guidance",
+        "Lao – tone class guidance – lo – Lao placeholder emphasising silent-h tone class markers, diphthongs, and vowel carriers.",
+        "lo"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ml",
+      "labels": [
+        "Malayalam – retroflex waves",
+        "Malayalam – retroflex waves – ml – Malayalam placeholder tuned for retroflex approximants, nasal clusters, and geminated stops.",
+        "ml"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "mr",
+      "labels": [
+        "Marathi – syllabic liquids",
+        "Marathi – syllabic liquids – mr – Marathi placeholder focusing on syllabic /r̩/, retroflex laterals, and complex consonant conjuncts.",
+        "mr"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ms",
+      "labels": [
+        "Malay – peninsular warmth",
+        "Malay – peninsular warmth – ms – Malay placeholder aligned with peninsular pronunciation, balancing Arabic loans and Malay vowels.",
+        "ms"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "my",
+      "labels": [
+        "Burmese – creaky tone balance",
+        "Burmese – creaky tone balance – my – Burmese placeholder highlighting creaky vs modal tone, aspiration markers, and vowel colouring.",
+        "my"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "nb",
+      "labels": [
+        "Norwegian (Bokmål) – tonal balance",
+        "Norwegian (Bokmål) – tonal balance – nb – Norwegian placeholder capturing palatal kj, retroflex skj, and pitch accent pairs.",
+        "nb"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ne",
+      "labels": [
+        "Nepali – Himalayan cadence",
+        "Nepali – Himalayan cadence – ne – Nepali placeholder emphasising aspirated affricates, velar nasals, and consonant clusters with /r/.",
+        "ne"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "nl",
+      "labels": [
+        "Dutch – diphthong clarity",
+        "Dutch – diphthong clarity – nl – Dutch placeholder focusing on diphthongs IJ/UI and the sch/gt fricative cluster.",
+        "nl"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "pa",
+      "labels": [
+        "Punjabi – tonal Gurmukhi",
+        "Punjabi – tonal Gurmukhi – pa – Punjabi placeholder aligning retroflex flaps, nasalisation, and tonal contrasts in Gurmukhi.",
+        "pa"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "pl",
+      "labels": [
+        "Polish – sibilant contrast",
+        "Polish – sibilant contrast – pl – Polish placeholder emphasising alveolo-palatal vs retroflex sibilants and dark ł vowels.",
+        "pl"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "pt-BR",
+      "labels": [
+        "Portuguese (Brazil) – vibrant vowels",
+        "Portuguese (Brazil) – vibrant vowels – pt-BR – Brazilian Portuguese nasal set mapped from eSpeak pt-br",
+        "pt-BR"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 44.44,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ru",
+      "labels": [
+        "Russian – palatal richness",
+        "Russian – palatal richness – ru – Russian placeholder tuned for palatalised consonants, retroflex fricatives, and reduced vowels.",
+        "ru"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "si",
+      "labels": [
+        "Sinhala – rounded cadence",
+        "Sinhala – rounded cadence – si – Sinhala placeholder emphasising prenasalised stops, palatal nasals, and loan fricatives.",
+        "si"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "sv",
+      "labels": [
+        "Swedish – pitch accent",
+        "Swedish – pitch accent – sv – Swedish placeholder emphasising sj/tj fricatives and tonal accent pairs.",
+        "sv"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "sw",
+      "labels": [
+        "Swahili – coastal clarity",
+        "Swahili – coastal clarity – sw – Swahili placeholder emphasising prenasalised consonants and open vowels for East African dialects.",
+        "sw"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 100.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ta",
+      "labels": [
+        "Tamil – classical resonance",
+        "Tamil – classical resonance – ta – Tamil placeholder anchoring retroflex approximants and geminate stops for Sangam-style articulation.",
+        "ta"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "te",
+      "labels": [
+        "Telugu – lyrical aspiration",
+        "Telugu – lyrical aspiration – te – Telugu placeholder centred on aspirated retroflexes, velar nasals, and diphthong glides.",
+        "te"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "th",
+      "labels": [
+        "Thai – tonal glide",
+        "Thai – tonal glide – th – Thai placeholder featuring high-class consonants, long vowels, and diphthongs.",
+        "th"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "tr",
+      "labels": [
+        "Turkish – vowel harmony",
+        "Turkish – vowel harmony – tr – Turkish placeholder emphasising vowel harmony, soft g, and postalveolar fricatives.",
+        "tr"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "uk",
+      "labels": [
+        "Ukrainian – bright palatals",
+        "Ukrainian – bright palatals – uk – Ukrainian placeholder focusing on palatalised consonants, /ɦ/ vs /g/, and melodic intonation.",
+        "uk"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "unspecified",
+      "labels": [],
+      "stage": null,
+      "stageDisplay": "—",
+      "ipaCoveragePercent": null,
+      "hasProgress": false,
+      "hasCoverage": false,
+      "coverageStatuses": [],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 0,
+      "sources": [
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "ur",
+      "labels": [
+        "Urdu – poetic glide",
+        "Urdu – poetic glide – ur – Urdu placeholder capturing retroflex flaps and aspirated stops used in ghazal recitation and newscasts.",
+        "ur"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "vi",
+      "labels": [
+        "Vietnamese – six-tone brilliance",
+        "Vietnamese – six-tone brilliance – vi – Vietnamese placeholder highlighting tone contours, implosives, and short vowels.",
+        "vi"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "yo",
+      "labels": [
+        "Yoruba – tonal resonance",
+        "Yoruba – tonal resonance – yo – Yoruba placeholder covering three-level tone diacritics and labio-velar stops.",
+        "yo"
+      ],
+      "stage": "comprehensive",
+      "stageDisplay": "Comprehensive",
+      "ipaCoveragePercent": 66.67,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "yue-Hant-HK",
+      "labels": [
+        "Chinese (Cantonese) – six-tone contour",
+        "Chinese (Cantonese) – six-tone contour – yue-Hant-HK – Cantonese placeholder covering high level, low falling, and nasal-only syllables.",
+        "yue-Hant-HK"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "zh-CN",
+      "labels": [
+        "Chinese (Mandarin) – tonal baseline",
+        "Chinese (Mandarin) – tonal baseline – zh-CN – Mandarin placeholder emphasising neutral tones, retroflex affricates, and aspect particles.",
+        "zh-CN"
+      ],
+      "stage": "developing",
+      "stageDisplay": "Developing",
+      "ipaCoveragePercent": 0.0,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    },
+    {
+      "languageTag": "zu",
+      "labels": [
+        "Zulu – click-rich texture",
+        "Zulu – click-rich texture – zu – Zulu placeholder mixing click consonants with lateral fricatives to prep the phoneme editor.",
+        "zu"
+      ],
+      "stage": "established",
+      "stageDisplay": "Established",
+      "ipaCoveragePercent": 33.33,
+      "hasProgress": true,
+      "hasCoverage": true,
+      "coverageStatuses": [
+        "profile + templates"
+      ],
+      "hasVoiceTemplates": true,
+      "voiceTemplateCount": 1,
+      "profileCount": 1,
+      "sources": [
+        "language_coverage",
+        "language_progress",
+        "voice_language_matrix"
+      ]
+    }
+  ]
+}

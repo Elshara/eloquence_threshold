@@ -1,16 +1,18 @@
 {
   "summary": {
     "voices": {
-      "totalTemplates": 28,
-      "languagesWithTemplates": 11,
+      "totalTemplates": 70,
+      "languagesWithTemplates": 53,
       "tagCounts": {
+        "eloquence": 50,
+        "seed": 42,
         "english": 18,
-        "eloquence": 8,
         "dectalk": 4,
         "espeak": 4,
         "legacy": 4,
         "nvspeechplayer": 4,
         "sapi4": 3,
+        "arabic": 2,
         "community": 2,
         "heritage": 2,
         "ibm": 2,
@@ -20,31 +22,73 @@
         "studio": 2,
         "variant": 2,
         "viavoice": 2,
+        "amharic": 1,
         "asia": 1,
+        "bengali": 1,
         "blindhelp": 1,
         "brazil": 1,
         "breathy": 1,
         "bright": 1,
+        "burmese": 1,
+        "cantonese": 1,
         "classic": 1,
         "codefactory": 1,
+        "czech": 1,
+        "danish": 1,
+        "dutch": 1,
+        "egyptian": 1,
+        "filipino": 1,
+        "finnish": 1,
         "french": 1,
         "german": 1,
+        "greek": 1,
+        "gujarati": 1,
+        "hausa": 1,
+        "hebrew": 1,
         "hindi": 1,
         "indic": 1,
+        "indonesian": 1,
         "italian": 1,
         "japanese": 1,
         "jaws": 1,
+        "kannada": 1,
+        "khmer": 1,
+        "korean": 1,
         "lang:en-us": 1,
         "lang:hi": 1,
         "lang:ja": 1,
+        "lao": 1,
         "latin": 1,
         "low": 1,
+        "malay": 1,
+        "malayalam": 1,
+        "mandarin": 1,
+        "marathi": 1,
         "modern": 1,
+        "nepali": 1,
+        "norwegian": 1,
+        "persian": 1,
+        "placeholder": 1,
+        "polish": 1,
         "portuguese": 1,
+        "punjabi": 1,
+        "russian": 1,
+        "sinhala": 1,
         "spain": 1,
+        "swahili": 1,
+        "swedish": 1,
+        "tamil": 1,
+        "telugu": 1,
+        "thai": 1,
+        "turkish": 1,
         "uk": 1,
+        "ukrainian": 1,
+        "urdu": 1,
         "us": 1,
-        "window-eyes": 1
+        "vietnamese": 1,
+        "window-eyes": 1,
+        "yoruba": 1,
+        "zulu": 1
       },
       "unmatchedTemplates": [
         "espeak-variant-espeak-variants-alex"
@@ -129,12 +173,262 @@
           "tags": [
             "timbre"
           ]
+        },
+        "sampleRate": {
+          "label": "Sample rate",
+          "minimum": 8000,
+          "maximum": 48000,
+          "default": 22050,
+          "step": 50,
+          "tags": [
+            "output",
+            "quality"
+          ]
+        },
+        "emphasis": {
+          "label": "Emphasis shaping",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "nvspeechplayer",
+            "prosody"
+          ]
+        },
+        "stress": {
+          "label": "Stress contour",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "prosody",
+            "stress"
+          ]
+        },
+        "timbre": {
+          "label": "Timbre focus",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "formant",
+            "timbre"
+          ]
+        },
+        "tone": {
+          "label": "Tone colour",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "harmonics",
+            "tone"
+          ]
+        },
+        "pitchHeight": {
+          "label": "Pitch height",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "pitch",
+            "prosody"
+          ]
+        },
+        "vocalLayers": {
+          "label": "Vocal layering",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "layering",
+            "texture"
+          ]
+        },
+        "plosiveImpact": {
+          "label": "Plosive impact",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "attack",
+            "consonant",
+            "eq"
+          ]
+        },
+        "overtones": {
+          "label": "Overtone brilliance",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "brightness",
+            "eq",
+            "harmonics"
+          ]
+        },
+        "sibilantClarity": {
+          "label": "Sibilant clarity",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "consonant",
+            "eq",
+            "sibilant"
+          ]
+        },
+        "subtones": {
+          "label": "Subtone weight",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "harmonics",
+            "warmth"
+          ]
+        },
+        "nasalBalance": {
+          "label": "Nasal balance",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "nasal",
+            "resonance"
+          ]
+        },
+        "vocalRange": {
+          "label": "Vocal range spread",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "prosody",
+            "range"
+          ]
+        },
+        "smoothness": {
+          "label": "Smoothness",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "softness",
+            "texture"
+          ]
+        },
+        "whisper": {
+          "label": "Whisper blend",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "texture",
+            "whisper"
+          ]
+        },
+        "inflectionContour": {
+          "label": "Inflection contour",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "inflection",
+            "prosody"
+          ]
+        },
+        "roughnessControl": {
+          "label": "Roughness",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "roughness",
+            "texture"
+          ]
+        },
+        "headSizeContour": {
+          "label": "Head size contour",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "formant",
+            "size"
+          ]
+        },
+        "macroVolume": {
+          "label": "Macro volume envelope",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "loudness",
+            "mix"
+          ]
+        },
+        "toneSize": {
+          "label": "Tone size",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "eq",
+            "formant",
+            "size"
+          ]
+        },
+        "scopeDepth": {
+          "label": "Scope depth",
+          "minimum": 0,
+          "maximum": 200,
+          "default": 100,
+          "step": 1,
+          "tags": [
+            "depth",
+            "eq",
+            "warmth"
+          ]
         }
       }
     },
     "languageProfiles": {
-      "total": 11,
-      "withCharacters": 11
+      "total": 53,
+      "withCharacters": 53
     },
     "phonemes": {
       "categories": 20,
@@ -181,6 +475,66 @@
       "defaultProfileTemplates": []
     },
     {
+      "language": "am",
+      "normalised": "am",
+      "templateIds": [
+        "eloquence-seed-am-et"
+      ],
+      "defaultProfileTemplates": [
+        "am-et-seed"
+      ]
+    },
+    {
+      "language": "ar",
+      "normalised": "ar",
+      "templateIds": [
+        "eloquence-seed-ar-msa"
+      ],
+      "defaultProfileTemplates": [
+        "ar-msa-seed"
+      ]
+    },
+    {
+      "language": "ar-EG",
+      "normalised": "ar-EG",
+      "templateIds": [
+        "eloquence-seed-ar-eg"
+      ],
+      "defaultProfileTemplates": [
+        "ar-eg-seed"
+      ]
+    },
+    {
+      "language": "bn",
+      "normalised": "bn",
+      "templateIds": [
+        "eloquence-seed-bn-bd"
+      ],
+      "defaultProfileTemplates": [
+        "bn-bd-seed"
+      ]
+    },
+    {
+      "language": "cs",
+      "normalised": "cs",
+      "templateIds": [
+        "eloquence-seed-cs-cz"
+      ],
+      "defaultProfileTemplates": [
+        "cs-cz-seed"
+      ]
+    },
+    {
+      "language": "da",
+      "normalised": "da",
+      "templateIds": [
+        "eloquence-seed-da-dk"
+      ],
+      "defaultProfileTemplates": [
+        "da-dk-seed"
+      ]
+    },
+    {
       "language": "de-DE",
       "normalised": "de-DE",
       "templateIds": [
@@ -188,6 +542,16 @@
       ],
       "defaultProfileTemplates": [
         "de-de-basic"
+      ]
+    },
+    {
+      "language": "el",
+      "normalised": "el",
+      "templateIds": [
+        "eloquence-seed-el-gr"
+      ],
+      "defaultProfileTemplates": [
+        "el-gr-seed"
       ]
     },
     {
@@ -221,6 +585,36 @@
       ]
     },
     {
+      "language": "fa",
+      "normalised": "fa",
+      "templateIds": [
+        "eloquence-seed-fa-ir"
+      ],
+      "defaultProfileTemplates": [
+        "fa-ir-seed"
+      ]
+    },
+    {
+      "language": "fi",
+      "normalised": "fi",
+      "templateIds": [
+        "eloquence-seed-fi-fi"
+      ],
+      "defaultProfileTemplates": [
+        "fi-fi-seed"
+      ]
+    },
+    {
+      "language": "fil",
+      "normalised": "fil",
+      "templateIds": [
+        "eloquence-seed-fil-ph"
+      ],
+      "defaultProfileTemplates": [
+        "fil-ph-seed"
+      ]
+    },
+    {
       "language": "fr-FR",
       "normalised": "fr-FR",
       "templateIds": [
@@ -231,6 +625,36 @@
       ]
     },
     {
+      "language": "gu",
+      "normalised": "gu",
+      "templateIds": [
+        "eloquence-seed-gu-in"
+      ],
+      "defaultProfileTemplates": [
+        "gu-in-seed"
+      ]
+    },
+    {
+      "language": "ha",
+      "normalised": "ha",
+      "templateIds": [
+        "eloquence-seed-ha-ng"
+      ],
+      "defaultProfileTemplates": [
+        "ha-ng-seed"
+      ]
+    },
+    {
+      "language": "he",
+      "normalised": "he",
+      "templateIds": [
+        "eloquence-seed-he-il"
+      ],
+      "defaultProfileTemplates": [
+        "he-il-seed"
+      ]
+    },
+    {
       "language": "hi-IN",
       "normalised": "hi-IN",
       "templateIds": [
@@ -238,6 +662,16 @@
       ],
       "defaultProfileTemplates": [
         "hi-in-basic"
+      ]
+    },
+    {
+      "language": "id",
+      "normalised": "id",
+      "templateIds": [
+        "eloquence-seed-id-id"
+      ],
+      "defaultProfileTemplates": [
+        "id-id-seed"
       ]
     },
     {
@@ -261,6 +695,136 @@
       ]
     },
     {
+      "language": "km",
+      "normalised": "km",
+      "templateIds": [
+        "eloquence-seed-km-kh"
+      ],
+      "defaultProfileTemplates": [
+        "km-kh-seed"
+      ]
+    },
+    {
+      "language": "kn",
+      "normalised": "kn",
+      "templateIds": [
+        "eloquence-seed-kn-in"
+      ],
+      "defaultProfileTemplates": [
+        "kn-in-seed"
+      ]
+    },
+    {
+      "language": "ko",
+      "normalised": "ko",
+      "templateIds": [
+        "eloquence-seed-ko-kr"
+      ],
+      "defaultProfileTemplates": [
+        "ko-kr-seed"
+      ]
+    },
+    {
+      "language": "lo",
+      "normalised": "lo",
+      "templateIds": [
+        "eloquence-seed-lo-la"
+      ],
+      "defaultProfileTemplates": [
+        "lo-la-seed"
+      ]
+    },
+    {
+      "language": "ml",
+      "normalised": "ml",
+      "templateIds": [
+        "eloquence-seed-ml-in"
+      ],
+      "defaultProfileTemplates": [
+        "ml-in-seed"
+      ]
+    },
+    {
+      "language": "mr",
+      "normalised": "mr",
+      "templateIds": [
+        "eloquence-seed-mr-in"
+      ],
+      "defaultProfileTemplates": [
+        "mr-in-seed"
+      ]
+    },
+    {
+      "language": "ms",
+      "normalised": "ms",
+      "templateIds": [
+        "eloquence-seed-ms-my"
+      ],
+      "defaultProfileTemplates": [
+        "ms-my-seed"
+      ]
+    },
+    {
+      "language": "my",
+      "normalised": "my",
+      "templateIds": [
+        "eloquence-seed-my-mm"
+      ],
+      "defaultProfileTemplates": [
+        "my-mm-seed"
+      ]
+    },
+    {
+      "language": "nb",
+      "normalised": "nb",
+      "templateIds": [
+        "eloquence-seed-nb-no"
+      ],
+      "defaultProfileTemplates": [
+        "nb-no-seed"
+      ]
+    },
+    {
+      "language": "ne",
+      "normalised": "ne",
+      "templateIds": [
+        "eloquence-seed-ne-np"
+      ],
+      "defaultProfileTemplates": [
+        "ne-np-seed"
+      ]
+    },
+    {
+      "language": "nl",
+      "normalised": "nl",
+      "templateIds": [
+        "eloquence-seed-nl-nl"
+      ],
+      "defaultProfileTemplates": [
+        "nl-nl-seed"
+      ]
+    },
+    {
+      "language": "pa",
+      "normalised": "pa",
+      "templateIds": [
+        "eloquence-seed-pa-in"
+      ],
+      "defaultProfileTemplates": [
+        "pa-in-seed"
+      ]
+    },
+    {
+      "language": "pl",
+      "normalised": "pl",
+      "templateIds": [
+        "eloquence-seed-pl-pl"
+      ],
+      "defaultProfileTemplates": [
+        "pl-pl-seed"
+      ]
+    },
+    {
       "language": "pt-BR",
       "normalised": "pt-BR",
       "templateIds": [
@@ -269,9 +833,363 @@
       "defaultProfileTemplates": [
         "pt-br-basic"
       ]
+    },
+    {
+      "language": "ru",
+      "normalised": "ru",
+      "templateIds": [
+        "eloquence-seed-ru-ru"
+      ],
+      "defaultProfileTemplates": [
+        "ru-ru-seed"
+      ]
+    },
+    {
+      "language": "si",
+      "normalised": "si",
+      "templateIds": [
+        "eloquence-seed-si-lk"
+      ],
+      "defaultProfileTemplates": [
+        "si-lk-seed"
+      ]
+    },
+    {
+      "language": "sv",
+      "normalised": "sv",
+      "templateIds": [
+        "eloquence-seed-sv-se"
+      ],
+      "defaultProfileTemplates": [
+        "sv-se-seed"
+      ]
+    },
+    {
+      "language": "sw",
+      "normalised": "sw",
+      "templateIds": [
+        "eloquence-seed-sw-ke"
+      ],
+      "defaultProfileTemplates": [
+        "sw-ke-seed"
+      ]
+    },
+    {
+      "language": "ta",
+      "normalised": "ta",
+      "templateIds": [
+        "eloquence-seed-ta-in"
+      ],
+      "defaultProfileTemplates": [
+        "ta-in-seed"
+      ]
+    },
+    {
+      "language": "te",
+      "normalised": "te",
+      "templateIds": [
+        "eloquence-seed-te-in"
+      ],
+      "defaultProfileTemplates": [
+        "te-in-seed"
+      ]
+    },
+    {
+      "language": "th",
+      "normalised": "th",
+      "templateIds": [
+        "eloquence-seed-th-th"
+      ],
+      "defaultProfileTemplates": [
+        "th-th-seed"
+      ]
+    },
+    {
+      "language": "tr",
+      "normalised": "tr",
+      "templateIds": [
+        "eloquence-seed-tr-tr"
+      ],
+      "defaultProfileTemplates": [
+        "tr-tr-seed"
+      ]
+    },
+    {
+      "language": "uk",
+      "normalised": "uk",
+      "templateIds": [
+        "eloquence-seed-uk-ua"
+      ],
+      "defaultProfileTemplates": [
+        "uk-ua-seed"
+      ]
+    },
+    {
+      "language": "ur",
+      "normalised": "ur",
+      "templateIds": [
+        "eloquence-seed-ur-pk"
+      ],
+      "defaultProfileTemplates": [
+        "ur-pk-seed"
+      ]
+    },
+    {
+      "language": "vi",
+      "normalised": "vi",
+      "templateIds": [
+        "eloquence-seed-vi-vn"
+      ],
+      "defaultProfileTemplates": [
+        "vi-vn-seed"
+      ]
+    },
+    {
+      "language": "yo",
+      "normalised": "yo",
+      "templateIds": [
+        "eloquence-seed-yo-ng"
+      ],
+      "defaultProfileTemplates": [
+        "yo-ng-seed"
+      ]
+    },
+    {
+      "language": "yue-Hant-HK",
+      "normalised": "yue-Hant-HK",
+      "templateIds": [
+        "eloquence-seed-yue-hk"
+      ],
+      "defaultProfileTemplates": [
+        "yue-hk-seed"
+      ]
+    },
+    {
+      "language": "zh-CN",
+      "normalised": "zh-CN",
+      "templateIds": [
+        "eloquence-seed-zh-cn"
+      ],
+      "defaultProfileTemplates": [
+        "zh-cn-seed"
+      ]
+    },
+    {
+      "language": "zu",
+      "normalised": "zu",
+      "templateIds": [
+        "eloquence-seed-zu-za"
+      ],
+      "defaultProfileTemplates": [
+        "zu-za-seed"
+      ]
     }
   ],
   "languageProfiles": [
+    {
+      "id": "am-et-seed",
+      "language": "am",
+      "normalisedLanguage": "am",
+      "displayName": "Amharic – ejective cadence",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-am-et"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-am-et"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Amharic – am – Placeholder voice projecting Amharic ejectives with balanced nasal vowels."
+      ],
+      "tags": [
+        "amharic",
+        "seed",
+        "lang:am"
+      ],
+      "stressNotes": [
+        "Penultimate stress is common, with pitch lowering on final syllables.",
+        "Questions add rising contour that should engage inflection sliders."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with rich verb inflection; subordinate clauses take verb-final participles.",
+        "Relative clauses introduce pronoun markers that alter rhythm and require macro volume balance."
+      ],
+      "grammarNotes": [
+        "Ejectives need strong emphasis but limited overtones to avoid harshness.",
+        "Gemination is phonemic; smoothness must preserve doubled consonants distinctly."
+      ]
+    },
+    {
+      "id": "ar-msa-seed",
+      "language": "ar",
+      "normalisedLanguage": "ar",
+      "displayName": "Arabic (Modern Standard) – emphatic backbone",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ar-msa"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Arabic (Egyptian) – ar-EG – Placeholder voice tuned for Cairene consonant mergers and the breezy Egyptian cadence.",
+        "Eloquence seed – Arabic (MSA) – ar – Placeholder timbre emphasising emphatic consonants and uvular frication while we gather community recordings."
+      ],
+      "tags": [
+        "arabic",
+        "msa",
+        "seed",
+        "lang:ar"
+      ],
+      "stressNotes": [
+        "Stress defaults to the final heavy syllable unless vowel length or sukun dictates otherwise.",
+        "Qur'anic recitation keeps long vowels fully articulated even at fast rates."
+      ],
+      "sentenceStructure": [
+        "Verb–Subject–Object remains the neutral order for narrative speech.",
+        "Adjectives typically follow nouns and inherit definiteness from the article."
+      ],
+      "grammarNotes": [
+        "Sun letters assimilate the /l/ in the definite article while moon letters retain it.",
+        "Emphatic consonants back neighbouring vowels and call for darker timbre settings."
+      ]
+    },
+    {
+      "id": "ar-eg-seed",
+      "language": "ar-EG",
+      "normalisedLanguage": "ar-EG",
+      "displayName": "Arabic (Egyptian) – colloquial glide",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ar-eg"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ar-eg",
+        "eloquence-seed-ar-msa"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Arabic (Egyptian) – ar-EG – Placeholder voice tuned for Cairene consonant mergers and the breezy Egyptian cadence.",
+        "Eloquence seed – Arabic (MSA) – ar – Placeholder timbre emphasising emphatic consonants and uvular frication while we gather community recordings."
+      ],
+      "tags": [
+        "arabic",
+        "egyptian",
+        "seed",
+        "lang:ar"
+      ],
+      "stressNotes": [
+        "Colloquial stress leans toward penultimate syllables unless closed final syllables intervene.",
+        "Sentence-final questions rise sharply; tone slider should mirror that cadence."
+      ],
+      "sentenceStructure": [
+        "Verb–Subject–Object dominates conversational speech though topicalisation is common.",
+        "Negation wraps verbs with ما ... ش framing that benefits from macro volume balance."
+      ],
+      "grammarNotes": [
+        "Dental fricatives merge with /s/ and /z/ in casual contexts, so emphasis must recover clarity.",
+        "The glottal realisation of qāf requires extra whisper control to avoid harsh stops."
+      ]
+    },
+    {
+      "id": "bn-bd-seed",
+      "language": "bn",
+      "normalisedLanguage": "bn",
+      "displayName": "Bengali – retroflex melody",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-bn-bd"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-bn-bd"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Bengali – bn – Placeholder Bengali timbre tuned for retroflex flaps and palatal fricatives."
+      ],
+      "tags": [
+        "bengali",
+        "seed",
+        "lang:bn"
+      ],
+      "stressNotes": [
+        "Stress is typically on the penultimate syllable but light; macro volume retains vowel colour.",
+        "Questions rise at the end; tone slider should support the upward glide."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with postpositions; smoothness keeps conjunct letters legible.",
+        "Compound verbs pair light verbs; emphasis ensures the semantic verb remains forward."
+      ],
+      "grammarNotes": [
+        "Retroflex flap ড় requires scope depth to avoid merging with alveolar d.",
+        "Palatal fricatives benefit from overtone boost to stay bright."
+      ]
+    },
+    {
+      "id": "cs-cz-seed",
+      "language": "cs",
+      "normalisedLanguage": "cs",
+      "displayName": "Czech – trill precision",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-cs-cz"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-cs-cz"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Czech – cs – Placeholder Czech timbre balancing ř trills and velar fricatives."
+      ],
+      "tags": [
+        "czech",
+        "seed",
+        "lang:cs"
+      ],
+      "stressNotes": [
+        "Stress falls on the first syllable; macro volume prevents trailing vowels from dropping.",
+        "Questions raise pitch on the final syllable; inflection slider ensures smooth rise."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with frequent clitic stacking; smoothness keeps clitics audible.",
+        "Aspectual pairs rely on prefixes; emphasis should highlight them."
+      ],
+      "grammarNotes": [
+        "Ř trill requires scope depth to avoid harshness.",
+        "Voiceless velar fricative ch needs whisper to stay airy."
+      ]
+    },
+    {
+      "id": "da-dk-seed",
+      "language": "da",
+      "normalisedLanguage": "da",
+      "displayName": "Danish – stød scaffolding",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-da-dk"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-da-dk"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Danish – da – Placeholder Danish timbre tuned for stød and uvular r."
+      ],
+      "tags": [
+        "danish",
+        "seed",
+        "lang:da"
+      ],
+      "stressNotes": [
+        "Stress usually on first syllable but stød adds creaky phonation; tone slider must represent it.",
+        "Questions raise pitch near the end; inflection slider handles the rise."
+      ],
+      "sentenceStructure": [
+        "Verb-second order; smoothness keeps clitic pronouns audible despite reductions.",
+        "Stød-bearing syllables need macro volume to highlight creaky voice."
+      ],
+      "grammarNotes": [
+        "Uvular r /ʁ/ requires subtone support to stay warm.",
+        "Affricate dg in loans should maintain crispness via emphasis."
+      ]
+    },
     {
       "id": "de-de-basic",
       "language": "de-DE",
@@ -302,6 +1220,39 @@
       "grammarNotes": [
         "Final-obstruent devoicing",
         "Umlauts mark vowel fronting"
+      ]
+    },
+    {
+      "id": "el-gr-seed",
+      "language": "el",
+      "normalisedLanguage": "el",
+      "displayName": "Greek – consonant balance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-el-gr"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-el-gr"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Greek – el – Placeholder Greek timbre balancing dental and velar fricatives with smooth clusters."
+      ],
+      "tags": [
+        "greek",
+        "seed",
+        "lang:el"
+      ],
+      "stressNotes": [
+        "Stress is contrastive and indicated orthographically; macro volume protects unstressed vowels.",
+        "Questions raise pitch mid-word; inflection slider supports the rise."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object common; smoothness ensures consonant clusters remain intelligible.",
+        "Clitics attach to verbs; emphasis should keep them audible."
+      ],
+      "grammarNotes": [
+        "Dental fricatives θ/ð require emphasis to maintain clarity.",
+        "Velar fricative γ needs smoothness to avoid roughness."
       ]
     },
     {
@@ -583,6 +1534,107 @@
       ]
     },
     {
+      "id": "fa-ir-seed",
+      "language": "fa",
+      "normalisedLanguage": "fa",
+      "displayName": "Persian (Farsi) – smooth ezafe",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fa-ir"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-fa-ir"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Persian – fa – Placeholder tuning that keeps Persian fricatives silky and highlights ezafe vowels for chaining nouns."
+      ],
+      "tags": [
+        "persian",
+        "farsi",
+        "seed",
+        "lang:fa"
+      ],
+      "stressNotes": [
+        "Stress falls on the final syllable unless enclitics are present.",
+        "Colloquial intonation keeps declaratives falling quickly after the verb."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order pairs with light ezafe vowels between linked nouns.",
+        "Question particles such as آیا cue rising inflection even with falling lexical accents."
+      ],
+      "grammarNotes": [
+        "Voiceless stops often aspirate; emphasis and smoothness should balance that breathiness.",
+        "Distinct letters پ, ژ, and گ need overtone support to avoid collapsing into Arabic neighbours."
+      ]
+    },
+    {
+      "id": "fi-fi-seed",
+      "language": "fi",
+      "normalisedLanguage": "fi",
+      "displayName": "Finnish – vowel length discipline",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fi-fi"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-fi-fi"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Finnish – fi – Placeholder Finnish timbre tuned for vowel length and front rounded vowels."
+      ],
+      "tags": [
+        "finnish",
+        "seed",
+        "lang:fi"
+      ],
+      "stressNotes": [
+        "Stress on the first syllable; macro volume ensures length differences stay audible.",
+        "Questions raise pitch at the end; inflection slider adds the lift."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with rich case endings; smoothness keeps suffix vowels crisp.",
+        "Consonant gradation changes stops; emphasis must highlight alternations."
+      ],
+      "grammarNotes": [
+        "Front rounded vowel y needs tone slider to maintain brightness.",
+        "Open front vowel ä requires subtone support to remain warm."
+      ]
+    },
+    {
+      "id": "fil-ph-seed",
+      "language": "fil",
+      "normalisedLanguage": "fil",
+      "displayName": "Filipino – Tagalog clarity",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-fil-ph"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-fil-ph"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Filipino – fil – Placeholder Filipino timbre mixing Austronesian vowels with Spanish consonant loans."
+      ],
+      "tags": [
+        "filipino",
+        "tagalog",
+        "seed",
+        "lang:fil"
+      ],
+      "stressNotes": [
+        "Stress alternates between penultimate and ultimate; macro volume should announce the stressed vowel.",
+        "Question particles like ba rely on rising contours; inflection slider should mirror the shift."
+      ],
+      "sentenceStructure": [
+        "Verb–Subject–Object common with focus markers; smoothness ensures enclitic pronouns stay audible.",
+        "Aspect markers (mag-, nag-, -um-) adjust vowel quality; emphasis keeps transitions clear."
+      ],
+      "grammarNotes": [
+        "Velar nasal ng as a standalone syllable needs subtle subtone support.",
+        "Spanish loan ñ requires overtone brightening to avoid blending with ny."
+      ]
+    },
+    {
       "id": "fr-fr-basic",
       "language": "fr-FR",
       "normalisedLanguage": "fr-FR",
@@ -612,6 +1664,105 @@
       "grammarNotes": [
         "Mute e weakens between consonants",
         "liaison links final consonants to following vowels"
+      ]
+    },
+    {
+      "id": "gu-in-seed",
+      "language": "gu",
+      "normalisedLanguage": "gu",
+      "displayName": "Gujarati – vocalic resonances",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-gu-in"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-gu-in"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Gujarati – gu – Placeholder Gujarati timbre focusing on retroflex laterals and vocalic r vowels."
+      ],
+      "tags": [
+        "gujarati",
+        "seed",
+        "lang:gu"
+      ],
+      "stressNotes": [
+        "Stress tends to penultimate syllables; macro volume prevents final vowels from disappearing.",
+        "Questions add rising contour; inflection slider should adapt quickly."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with enclitic particles; smoothness ensures joined vowels remain intelligible.",
+        "Reduplicated adjectives require emphasis to avoid monotony."
+      ],
+      "grammarNotes": [
+        "Vocalic r (ૃ) needs subtones to stay resonant.",
+        "Retroflex lateral ળ requires scope depth to contrast with લ."
+      ]
+    },
+    {
+      "id": "ha-ng-seed",
+      "language": "ha",
+      "normalisedLanguage": "ha",
+      "displayName": "Hausa – vibrant glottalic stops",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ha-ng"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ha-ng"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Hausa – ha – Placeholder Hausa tuning to keep ejective bursts crisp and tones balanced."
+      ],
+      "tags": [
+        "hausa",
+        "seed",
+        "lang:ha"
+      ],
+      "stressNotes": [
+        "Tone rather than stress carries contrast; tone slider should remain responsive across phrases.",
+        "Emphatic focus raises pitch and loudness on the final syllable."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object order dominates with prepositions preceding noun phrases.",
+        "Relative clauses follow nouns and require smoothness to keep glottalic bursts legible."
+      ],
+      "grammarNotes": [
+        "Ejective consonants need inflection contour to emphasise release.",
+        "Nasal vowels appear before certain consonants; subtone boosts keep them resonant."
+      ]
+    },
+    {
+      "id": "he-il-seed",
+      "language": "he",
+      "normalisedLanguage": "he",
+      "displayName": "Hebrew – modern articulation",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-he-il"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-he-il"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Hebrew – he – Placeholder timbre tuned for uvular consonants and modern Israeli cadence."
+      ],
+      "tags": [
+        "hebrew",
+        "seed",
+        "lang:he"
+      ],
+      "stressNotes": [
+        "Lexical stress varies but often falls on the final syllable; the tone slider should highlight last vowels.",
+        "Yes/no questions rise sharply on the final syllable, while wh-questions show wider inflection."
+      ],
+      "sentenceStructure": [
+        "Verb–Subject–Object is common in formal speech, with Subject–Verb alternations in conversation.",
+        "Construct state nouns bind tightly; smoothness keeps these clusters intelligible."
+      ],
+      "grammarNotes": [
+        "Khet /χ/ and tav /t/ assimilation require overtones to preserve contrast against /s/ and /ʃ/.",
+        "Tsere and kamatz vowels change quality with stress; macro volume preserves the shift."
       ]
     },
     {
@@ -645,6 +1796,39 @@
       "grammarNotes": [
         "Retroflex /ɽ/ contrasts with dental /ɾ/",
         "Aspiration distinguishes minimal pairs such as क /k/ vs ख /kʰ/"
+      ]
+    },
+    {
+      "id": "id-id-seed",
+      "language": "id",
+      "normalisedLanguage": "id",
+      "displayName": "Indonesian – archipelago clarity",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-id-id"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-id-id"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Indonesian – id – Placeholder Indonesian timbre mixing velar nasals with bright loanword fricatives."
+      ],
+      "tags": [
+        "indonesian",
+        "seed",
+        "lang:id"
+      ],
+      "stressNotes": [
+        "Stress is generally penultimate but light; macro volume keeps phrase-final vowels audible.",
+        "Questions and focus words rely on pitch height rather than stress; inflection slider should track this."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object order with optional topicalisation; smoothness ensures vowel harmony in reduplication.",
+        "Particles like kok and dong adjust pragmatics and need tone adjustments for nuance."
+      ],
+      "grammarNotes": [
+        "Prenasalised ng-, ny- clusters should remain smooth to avoid pops.",
+        "Loan digraph sy should sparkle via overtone boosts without sounding harsh."
       ]
     },
     {
@@ -713,6 +1897,435 @@
       ]
     },
     {
+      "id": "km-kh-seed",
+      "language": "km",
+      "normalisedLanguage": "km",
+      "displayName": "Khmer – diphthong radiance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-km-kh"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-km-kh"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Khmer – km – Placeholder Khmer timbre tuned for aspirated affricates and glide-heavy vowels."
+      ],
+      "tags": [
+        "khmer",
+        "seed",
+        "lang:km"
+      ],
+      "stressNotes": [
+        "Khmer lacks lexical tone; macro volume maintains contrast between reduced and full vowels.",
+        "Sentence-final particles soften pitch; inflection slider assists subtle fall."
+      ],
+      "sentenceStructure": [
+        "Verb serialization and aspect markers change rhythm; smoothness keeps stacked consonants legible.",
+        "Dependent vowels shift quality by context; tone size slider should track glides."
+      ],
+      "grammarNotes": [
+        "Palatal nasal ញ requires smooth onset; aspirated affricate ឆ needs emphasis for aspiration.",
+        "Diphthong sign ើ/ួ demands tone-size control to avoid monotone delivery."
+      ]
+    },
+    {
+      "id": "kn-in-seed",
+      "language": "kn",
+      "normalisedLanguage": "kn",
+      "displayName": "Kannada – gentle palatals",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-kn-in"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-kn-in"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Kannada – kn – Placeholder Kannada tuning for palatal nasals and retroflex laterals."
+      ],
+      "tags": [
+        "kannada",
+        "seed",
+        "lang:kn"
+      ],
+      "stressNotes": [
+        "Stress is syllable-timed; macro volume keeps vowel reductions audible.",
+        "Questions raise intonation on sentence-final vowels; inflection slider ensures clarity."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with extensive postpositions; smoothness avoids merging sandhi outcomes.",
+        "Verb auxiliaries stack at the end; emphasis keeps sequential consonants articulate."
+      ],
+      "grammarNotes": [
+        "Retroflex lateral ಳ and palatal nasal ಞ require scope depth and subtone boost.",
+        "Diphthong sign ೈ needs tone slider assistance for gliding vowels."
+      ]
+    },
+    {
+      "id": "ko-kr-seed",
+      "language": "ko",
+      "normalisedLanguage": "ko",
+      "displayName": "Korean – fortis balance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ko-kr"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ko-kr"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Korean – ko – Placeholder Korean tuning for tense consonants and polite sentence endings."
+      ],
+      "tags": [
+        "korean",
+        "seed",
+        "lang:ko"
+      ],
+      "stressNotes": [
+        "Syllable timing is even; smoothness should prioritise transitions over stress.",
+        "Sentence-final particles modulate politeness levels; inflection sliders reflect rising pitch in questions."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with topic markers 은/는; macro volume keeps particles audible.",
+        "Honorific endings lengthen vowels; scope depth supports contrast between declaratives and questions."
+      ],
+      "grammarNotes": [
+        "Fortis consonants require high emphasis while maintaining controlled overtones.",
+        "ㄹ alternates between flap and lateral; smoothness mediates position-based transitions."
+      ]
+    },
+    {
+      "id": "lo-la-seed",
+      "language": "lo",
+      "normalisedLanguage": "lo",
+      "displayName": "Lao – tone class guidance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-lo-la"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-lo-la"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Lao – lo – Placeholder Lao timbre tuned for tone-class prefixes and vowel carriers."
+      ],
+      "tags": [
+        "lao",
+        "seed",
+        "lang:lo"
+      ],
+      "stressNotes": [
+        "Tone classes dictate contour; tone slider must respond to high/low class shifts.",
+        "Glottal carriers demand macro volume to stay audible at phrase edges."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with topic fronting; smoothness keeps vowel sequences stable.",
+        "Classifier phrases require emphasis to highlight tone patterns."
+      ],
+      "grammarNotes": [
+        "Silent h prefix modifies tone; inflection slider should adapt accordingly.",
+        "Glottal carrier ອ ensures initial vowel; macro volume prevents drop-out."
+      ]
+    },
+    {
+      "id": "ml-in-seed",
+      "language": "ml",
+      "normalisedLanguage": "ml",
+      "displayName": "Malayalam – retroflex waves",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ml-in"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ml-in"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Malayalam – ml – Placeholder Malayalam timbre emphasising retroflex waves and nasal clusters."
+      ],
+      "tags": [
+        "malayalam",
+        "seed",
+        "lang:ml"
+      ],
+      "stressNotes": [
+        "Stress is weak but long vowels extend rhythm; macro volume preserves their length.",
+        "Questions raise pitch softly; inflection slider should keep endings lively."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with extensive agglutination; smoothness ensures morpheme boundaries remain clear.",
+        "Relative clauses use participles; emphasis maintains clarity in consonant clusters."
+      ],
+      "grammarNotes": [
+        "Retroflex approximant ഴ needs scope depth; geminated retroflex stops need strong emphasis.",
+        "Velar nasal clusters demand smoothness to avoid clicks."
+      ]
+    },
+    {
+      "id": "mr-in-seed",
+      "language": "mr",
+      "normalisedLanguage": "mr",
+      "displayName": "Marathi – syllabic liquids",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-mr-in"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-mr-in"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Marathi – mr – Placeholder Marathi timbre balancing syllabic liquids and retroflex articulations."
+      ],
+      "tags": [
+        "marathi",
+        "seed",
+        "lang:mr"
+      ],
+      "stressNotes": [
+        "Stress usually falls on the first syllable; macro volume needs to preserve trailing vowels.",
+        "Questions raise pitch at the end; inflection slider handles the climb."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with enclitic pronouns; smoothness keeps bound forms distinct.",
+        "Participles modify nouns; emphasis ensures conjuncts like ज्ञ remain legible."
+      ],
+      "grammarNotes": [
+        "Retroflex lateral ळ and syllabic ऋ demand scope depth and subtone support.",
+        "Conjunct ज्ञ requires smoothness to avoid merging with ज."
+      ]
+    },
+    {
+      "id": "ms-my-seed",
+      "language": "ms",
+      "normalisedLanguage": "ms",
+      "displayName": "Malay – peninsular warmth",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ms-my"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ms-my"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Malay – ms – Placeholder Malay timbre mixing Arabic loan consonants with mellow Malay vowels."
+      ],
+      "tags": [
+        "malay",
+        "seed",
+        "lang:ms"
+      ],
+      "stressNotes": [
+        "Stress tends to the penultimate syllable; macro volume keeps open finals resonant.",
+        "Tone is not phonemic but rising questioning intonation uses the inflection slider heavily."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with preposed relative clauses; smoothness preserves clarity when pronoun clitics attach.",
+        "Reduplication adds rhythmic pairs; emphasis ensures repeated syllables remain crisp."
+      ],
+      "grammarNotes": [
+        "Arabic loan fricative kh requires whisper plus overtones for airy release.",
+        "Velar nasals appear word-finally; subtone slider keeps them warm."
+      ]
+    },
+    {
+      "id": "my-mm-seed",
+      "language": "my",
+      "normalisedLanguage": "my",
+      "displayName": "Burmese – creaky tone balance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-my-mm"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-my-mm"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Burmese – my – Placeholder Burmese timbre balancing creaky tones, aspiration, and nasal finals."
+      ],
+      "tags": [
+        "burmese",
+        "seed",
+        "lang:my"
+      ],
+      "stressNotes": [
+        "Tone quality (creaky, high, low) is key; tone slider needs to range across phonation types.",
+        "Particles such as မ require final pitch drop handled by inflection contour."
+      ],
+      "sentenceStructure": [
+        "Verb-final particles express modality; macro volume keeps them audible after long vowels.",
+        "Reduplication and compounding require smoothness to avoid glottal clicks."
+      ],
+      "grammarNotes": [
+        "Nasal finals -င် require subtone boosts; aspiration diacritic needs whisper to add breathiness.",
+        "Diphthong ို needs tone slider management for rising contour."
+      ]
+    },
+    {
+      "id": "nb-no-seed",
+      "language": "nb",
+      "normalisedLanguage": "nb",
+      "displayName": "Norwegian (Bokmål) – tonal balance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-nb-no"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-nb-no"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Norwegian – nb – Placeholder Norwegian timbre tuned for kj/skj fricatives and pitch accents."
+      ],
+      "tags": [
+        "norwegian",
+        "seed",
+        "lang:nb"
+      ],
+      "stressNotes": [
+        "Pitch accents differentiate word pairs; tone slider must follow accent 1 vs 2.",
+        "Questions rise at the end; inflection slider should raise final syllables."
+      ],
+      "sentenceStructure": [
+        "Verb-second word order; smoothness ensures clitics remain audible.",
+        "Modal particles like vel and jo adjust tone; emphasis clarifies them."
+      ],
+      "grammarNotes": [
+        "Palatal kj /ç/ requires tone smoothing to avoid hiss.",
+        "Retroflex skj /ʂ/ needs overtones for clarity."
+      ]
+    },
+    {
+      "id": "ne-np-seed",
+      "language": "ne",
+      "normalisedLanguage": "ne",
+      "displayName": "Nepali – Himalayan cadence",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ne-np"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ne-np"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Nepali – ne – Placeholder Nepali timbre tuned for aspirated affricates and consonant clusters."
+      ],
+      "tags": [
+        "nepali",
+        "seed",
+        "lang:ne"
+      ],
+      "stressNotes": [
+        "Stress falls on the penultimate syllable; macro volume keeps final vowels audible.",
+        "Questions raise contour at the end; inflection slider supports the rise."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with extensive postpositions; smoothness prevents cluster smearing.",
+        "Honorific forms lengthen vowels; scope depth needs to preserve the change."
+      ],
+      "grammarNotes": [
+        "Aspirated affricates छ /tʃʰ/ need emphasis to differentiate from unaspirated pairs.",
+        "Clusters like श्र require smoothness to keep consonants distinct."
+      ]
+    },
+    {
+      "id": "nl-nl-seed",
+      "language": "nl",
+      "normalisedLanguage": "nl",
+      "displayName": "Dutch – diphthong clarity",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-nl-nl"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-nl-nl"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Dutch – nl – Placeholder Dutch timbre balancing bright diphthongs with velar fricatives."
+      ],
+      "tags": [
+        "dutch",
+        "seed",
+        "lang:nl"
+      ],
+      "stressNotes": [
+        "Stress often penultimate but lexical; macro volume keeps reduced vowels audible.",
+        "Questions raise pitch on the final diphthong; inflection slider emphasises the glide."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with V2 inversion; smoothness ensures clitic pronouns remain distinct.",
+        "Modal particles like toch adjust tone; emphasis clarifies them."
+      ],
+      "grammarNotes": [
+        "IJ and UI diphthongs need tone-size support to remain bright.",
+        "sch cluster requires whisper plus overtones to avoid harshness."
+      ]
+    },
+    {
+      "id": "pa-in-seed",
+      "language": "pa",
+      "normalisedLanguage": "pa",
+      "displayName": "Punjabi – tonal Gurmukhi",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-pa-in"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-pa-in"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Punjabi – pa – Placeholder Punjabi timbre tuned for tonal Gurmukhi and nasal vowels."
+      ],
+      "tags": [
+        "punjabi",
+        "seed",
+        "lang:pa"
+      ],
+      "stressNotes": [
+        "Tone variations (high-falling, low-rising) require responsive tone sliders.",
+        "Boliyan call-and-response uses macro volume to highlight question-response cadence."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with postpositions; smoothness maintains enclitic pronoun clarity.",
+        "Relative clauses often omit copulas; emphasis ensures tonal cues remain."
+      ],
+      "grammarNotes": [
+        "Retroflex flap ੜ needs scope depth to avoid merging with ਡ.",
+        "Bindī nasal marker demands subtone support for vowel nasalisation."
+      ]
+    },
+    {
+      "id": "pl-pl-seed",
+      "language": "pl",
+      "normalisedLanguage": "pl",
+      "displayName": "Polish – sibilant contrast",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-pl-pl"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-pl-pl"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Polish – pl – Placeholder Polish timbre tuned for soft vs hard sibilants and dark ł."
+      ],
+      "tags": [
+        "polish",
+        "seed",
+        "lang:pl"
+      ],
+      "stressNotes": [
+        "Stress typically lands on the penultimate syllable; macro volume must protect final vowels.",
+        "Questions increase pitch near the end; inflection slider handles the lift."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object order; smoothness prevents consonant clusters from blending.",
+        "Perfective/imperfective aspect prefixes require emphasis for clarity."
+      ],
+      "grammarNotes": [
+        "Soft sibilants ś/ź need overtone tweaks to avoid merging with hard counterparts.",
+        "Dark ł (w) requires subtone emphasis to keep timbre warm."
+      ]
+    },
+    {
       "id": "pt-br-basic",
       "language": "pt-BR",
       "normalisedLanguage": "pt-BR",
@@ -742,6 +2355,501 @@
       "grammarNotes": [
         "Nasal vowels marked with tilde",
         "Diphthongs soften before palatal consonants"
+      ]
+    },
+    {
+      "id": "ru-ru-seed",
+      "language": "ru",
+      "normalisedLanguage": "ru",
+      "displayName": "Russian – palatal richness",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ru-ru"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ru-ru"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Russian – ru – Placeholder Russian timbre balancing palatalisation and retroflex frication."
+      ],
+      "tags": [
+        "russian",
+        "seed",
+        "lang:ru"
+      ],
+      "stressNotes": [
+        "Stress is contrastive; macro volume keeps unstressed vowels from disappearing.",
+        "Questions raise pitch on the final syllable; inflection slider follows the contour."
+      ],
+      "sentenceStructure": [
+        "Flexible word order with stress-driven focus; smoothness ensures consonant clusters stay distinct.",
+        "Aspect pairs require emphasis on prefixes to mark perfective/imperfective contrasts."
+      ],
+      "grammarNotes": [
+        "Palatalised consonants need overtones to highlight the [j] offglide.",
+        "Retroflex fricative ж benefits from subtone support to avoid muddiness."
+      ]
+    },
+    {
+      "id": "si-lk-seed",
+      "language": "si",
+      "normalisedLanguage": "si",
+      "displayName": "Sinhala – rounded cadence",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-si-lk"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-si-lk"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Sinhala – si – Placeholder Sinhala timbre balancing prenasalised clusters with borrowed fricatives."
+      ],
+      "tags": [
+        "sinhala",
+        "seed",
+        "lang:si"
+      ],
+      "stressNotes": [
+        "Stress is weak and tends toward the penultimate syllable; macro volume retains vowel resonance.",
+        "Tone is absent but pitch rises on interrogatives; inflection slider handles the rise."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with postpositions; smoothness prevents nasal-stop clusters from clicking.",
+        "Loanword fricatives require overtones to remain distinct."
+      ],
+      "grammarNotes": [
+        "Pranasalised stops (ඟ) need smoothness to keep the nasal lead-in.",
+        "Loan fricative ෆ requires overtone support to stand out."
+      ]
+    },
+    {
+      "id": "sv-se-seed",
+      "language": "sv",
+      "normalisedLanguage": "sv",
+      "displayName": "Swedish – pitch accent",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-sv-se"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-sv-se"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Swedish – sv – Placeholder Swedish timbre tuned for sj/tj fricatives and tonal accents."
+      ],
+      "tags": [
+        "swedish",
+        "seed",
+        "lang:sv"
+      ],
+      "stressNotes": [
+        "Primary stress often on the first syllable with tonal accent 1 vs 2; tone slider handles pitch patterns.",
+        "Questions rise late in the phrase; inflection slider adds the uplift."
+      ],
+      "sentenceStructure": [
+        "Verb-second order; smoothness keeps clitic pronouns audible after verbs.",
+        "Compound nouns require emphasis to highlight primary vs secondary stress."
+      ],
+      "grammarNotes": [
+        "Sj-sound /ɧ/ needs overtone balancing to avoid white noise.",
+        "Tj /ɕ/ should stay bright but not piercing; tone slider helps."
+      ]
+    },
+    {
+      "id": "sw-ke-seed",
+      "language": "sw",
+      "normalisedLanguage": "sw",
+      "displayName": "Swahili – coastal clarity",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-sw-ke"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-sw-ke"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Swahili – sw – Placeholder voice blending coastal Swahili openness with crisp consonant clusters."
+      ],
+      "tags": [
+        "swahili",
+        "seed",
+        "lang:sw"
+      ],
+      "stressNotes": [
+        "Stress is penultimate; macro volume keeps long final vowels audible.",
+        "Questions raise pitch on the final mora and need tone slider support."
+      ],
+      "sentenceStructure": [
+        "Subject markers attach to verbs; maintaining smoothness keeps these prefixes distinct.",
+        "Noun classes drive agreement prefixes across clauses and require consistent rhythm."
+      ],
+      "grammarNotes": [
+        "Prenasalised clusters (ng, ny) need smooth transitions to avoid clicks.",
+        "Loan digraph ch retains affricate quality; emphasis slider should brighten it."
+      ]
+    },
+    {
+      "id": "ta-in-seed",
+      "language": "ta",
+      "normalisedLanguage": "ta",
+      "displayName": "Tamil – classical resonance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ta-in"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ta-in"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Tamil – ta – Placeholder Tamil timbre balancing classical retroflex consonants with smooth syllable timing."
+      ],
+      "tags": [
+        "tamil",
+        "seed",
+        "lang:ta"
+      ],
+      "stressNotes": [
+        "Stress is weak; rhythm flows from syllable timing so smoothness should stay high.",
+        "Question particles such as ஆ? at the end raise pitch; inflection slider must respond accordingly."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order with agglutinative suffixes; macro volume keeps case endings audible.",
+        "Relative participles precede nouns; emphasis keeps retroflex clusters intelligible."
+      ],
+      "grammarNotes": [
+        "Unique retroflex approximant ழ requires scope depth for clarity.",
+        "Geminated retroflex stops need high emphasis without saturating overtones."
+      ]
+    },
+    {
+      "id": "te-in-seed",
+      "language": "te",
+      "normalisedLanguage": "te",
+      "displayName": "Telugu – lyrical aspiration",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-te-in"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-te-in"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Telugu – te – Placeholder Telugu voice balancing aspirated retroflexes with smooth vowel glides."
+      ],
+      "tags": [
+        "telugu",
+        "seed",
+        "lang:te"
+      ],
+      "stressNotes": [
+        "Stress remains light; musical metre focuses on mora counts requiring smooth transitions.",
+        "Yes/no questions rise slightly; inflection contour should emphasise the glide."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with extensive participial clauses; smoothness keeps sandhi boundaries intelligible.",
+        "Object markers like -ni shift rhythm; macro volume ensures suffix vowels stay present."
+      ],
+      "grammarNotes": [
+        "Aspirated retroflex stops need macro volume plus emphasis to maintain breathy release.",
+        "Dependent vowel signs (like ఐ) must glide cleanly; tone slider assists the transition."
+      ]
+    },
+    {
+      "id": "th-th-seed",
+      "language": "th",
+      "normalisedLanguage": "th",
+      "displayName": "Thai – tonal glide",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-th-th"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-th-th"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Thai – th – Placeholder Thai mapping for high-class consonants and long vowels."
+      ],
+      "tags": [
+        "thai",
+        "seed",
+        "lang:th"
+      ],
+      "stressNotes": [
+        "Tone supersedes stress; tone slider should reflect contour shifts triggered by class markers.",
+        "Sentence-final particles (ครับ, ค่ะ) require subtle rising inflection."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with frequent topic fronting; smoothness keeps topicalised phrases fluid.",
+        "Classifier constructions need macro volume to highlight numeral and classifier pairings."
+      ],
+      "grammarNotes": [
+        "Aspirated stops (ข, ถ, ผ) require emphasis to stay distinct from unaspirated pairs.",
+        "Long vowels mark lexical contrast; macro volume ensures length perception."
+      ]
+    },
+    {
+      "id": "tr-tr-seed",
+      "language": "tr",
+      "normalisedLanguage": "tr",
+      "displayName": "Turkish – vowel harmony",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-tr-tr"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-tr-tr"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Turkish – tr – Placeholder Turkish timbre balancing vowel harmony with soft-g vowel lengthening."
+      ],
+      "tags": [
+        "turkish",
+        "seed",
+        "lang:tr"
+      ],
+      "stressNotes": [
+        "Stress usually falls on the final syllable; macro volume keeps suffix vowels clear.",
+        "Yes/no questions add rising intonation; inflection slider should adapt."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb with agglutinative suffixes; smoothness maintains harmony across endings.",
+        "Question particle mi requires emphasis to stand out between suffixes."
+      ],
+      "grammarNotes": [
+        "Soft g ğ lengthens vowels; scope depth ensures gentle lengthening.",
+        "Ş and ç need overtone support to stay sharp without harshness."
+      ]
+    },
+    {
+      "id": "uk-ua-seed",
+      "language": "uk",
+      "normalisedLanguage": "uk",
+      "displayName": "Ukrainian – bright palatals",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-uk-ua"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-uk-ua"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Ukrainian – uk – Placeholder Ukrainian timbre balancing melodic intonation with palatal consonants."
+      ],
+      "tags": [
+        "ukrainian",
+        "seed",
+        "lang:uk"
+      ],
+      "stressNotes": [
+        "Stress varies lexically; macro volume preserves vowel quality across unstressed syllables.",
+        "Questions have rising-falling melody; inflection slider should handle the contour."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object dominates; smoothness preserves vowel sequences in open syllables.",
+        "Aspectual prefixes require emphasis to differentiate motion verbs."
+      ],
+      "grammarNotes": [
+        "Distinct letters ї and є need smooth glides; ґ must remain a true /g/ via emphasis.",
+        "Palatalisation requires overtones without excessive hiss."
+      ]
+    },
+    {
+      "id": "ur-pk-seed",
+      "language": "ur",
+      "normalisedLanguage": "ur",
+      "displayName": "Urdu – poetic glide",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-ur-pk"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-ur-pk"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Urdu – ur – Placeholder voice balancing poetic softness with the textured consonants of modern Urdu broadcasts."
+      ],
+      "tags": [
+        "urdu",
+        "seed",
+        "lang:ur"
+      ],
+      "stressNotes": [
+        "Stress remains penultimate in native words but shifts with Persian and Arabic loans.",
+        "Poetic couplets prefer even pacing; macro volume should keep nasal vowels audible."
+      ],
+      "sentenceStructure": [
+        "Subject–Object–Verb order dominates while subordinate clauses precede the verb.",
+        "Postpositions follow nouns and influence tone contour on trailing vowels."
+      ],
+      "grammarNotes": [
+        "Retroflex consonants and aspiration need scope depth plus whisper to avoid smearing.",
+        "Nasalisation marker نٙ (noon ghunna) calls for subtone boosts to avoid drop-outs."
+      ]
+    },
+    {
+      "id": "vi-vn-seed",
+      "language": "vi",
+      "normalisedLanguage": "vi",
+      "displayName": "Vietnamese – six-tone brilliance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-vi-vn"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-vi-vn"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Vietnamese – vi – Placeholder Vietnamese timbre emphasising contour tones and implosives."
+      ],
+      "tags": [
+        "vietnamese",
+        "seed",
+        "lang:vi"
+      ],
+      "stressNotes": [
+        "Tone diacritics encode contour; tone slider must track both acute and dot diacritics.",
+        "Northern rising tones need inflection contour to avoid overshooting."
+      ],
+      "sentenceStructure": [
+        "Topic-comment with classifiers; macro volume emphasises short function words.",
+        "Question particles like không require rising final pitch; tone size balances the contour."
+      ],
+      "grammarNotes": [
+        "Implosive /ɓ/ and /ɗ/ need scope depth plus subtone support.",
+        "ngh onset before front vowels should remain smooth to avoid plosive artefacts."
+      ]
+    },
+    {
+      "id": "yo-ng-seed",
+      "language": "yo",
+      "normalisedLanguage": "yo",
+      "displayName": "Yoruba – tonal resonance",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-yo-ng"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-yo-ng"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Yoruba – yo – Placeholder Yoruba timbre tuned for three-level tone diacritics and labio-velar stops."
+      ],
+      "tags": [
+        "yoruba",
+        "seed",
+        "lang:yo"
+      ],
+      "stressNotes": [
+        "Tone tiers (high, mid, low) matter more than stress; tone size slider must track diacritics.",
+        "Downstep sequences benefit from macro volume to avoid drop-offs."
+      ],
+      "sentenceStructure": [
+        "Subject–Verb–Object with preverbal tense/aspect particles that change tonal melody.",
+        "Relative clauses follow nouns and often drop prenasalisation cues unless emphasis is applied."
+      ],
+      "grammarNotes": [
+        "Labio-velar stop /ɡ͡b/ needs scope depth to maintain separation from plain /b/.",
+        "Rhotacised vowels in loanwords benefit from overtone boosts."
+      ]
+    },
+    {
+      "id": "yue-hk-seed",
+      "language": "yue-Hant-HK",
+      "normalisedLanguage": "yue-Hant-HK",
+      "displayName": "Chinese (Cantonese) – six-tone contour",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-yue-hk"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-yue-hk"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Cantonese – yue-Hant-HK – Placeholder Cantonese timbre tuned for level tones and syllabic nasals."
+      ],
+      "tags": [
+        "cantonese",
+        "seed",
+        "lang:yue"
+      ],
+      "stressNotes": [
+        "Tone categories define contrast; the tone slider must stay sensitive across six level and contour tones.",
+        "Sentence particles add attitudinal nuance; inflection contour keeps the rising patterns natural."
+      ],
+      "sentenceStructure": [
+        "Topic-prominent clauses rely on aspect particles like 咗 and 緊; smoothness ensures stacking remains legible.",
+        "Classifiers precede nouns and alter cadence; macro volume should emphasise low-tone classifiers."
+      ],
+      "grammarNotes": [
+        "Entering tone finals (-p/-t/-k) need emphasis for stop closure.",
+        "Syllabic nasals such as 唔 require subtone support to avoid drop-outs."
+      ]
+    },
+    {
+      "id": "zh-cn-seed",
+      "language": "zh-CN",
+      "normalisedLanguage": "zh-CN",
+      "displayName": "Chinese (Mandarin) – tonal baseline",
+      "characterCount": 1,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-zh-cn"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-zh-cn"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Mandarin – zh-CN – Placeholder Mandarin mapping to keep retroflex affricates crisp and neutral tones audible."
+      ],
+      "tags": [
+        "mandarin",
+        "seed",
+        "lang:zh"
+      ],
+      "stressNotes": [
+        "Lexical tone carries primary contrast; neutral tone syllables need macro volume support.",
+        "Sentence-final particles adjust contour; inflection contour should mirror rising/falling shifts."
+      ],
+      "sentenceStructure": [
+        "Topic–comment structures are frequent; smoothness maintains clarity across tonal resets.",
+        "Resultative compounds require emphasis to differentiate successive tone sandhi outcomes."
+      ],
+      "grammarNotes": [
+        "Retroflex initials zh/ch/sh need overtone management to avoid hissing.",
+        "Neutral tone particles such as 的 and 了 demand macro volume to stay audible after full-tone syllables."
+      ]
+    },
+    {
+      "id": "zu-za-seed",
+      "language": "zu",
+      "normalisedLanguage": "zu",
+      "displayName": "Zulu – click-rich texture",
+      "characterCount": 3,
+      "defaultVoiceTemplates": [
+        "eloquence-seed-zu-za"
+      ],
+      "linkedVoiceTemplates": [
+        "eloquence-seed-zu-za"
+      ],
+      "linkedVoiceLabels": [
+        "Eloquence seed – Zulu – zu – Placeholder Zulu timbre that keeps click clusters sharp without harsh resonance."
+      ],
+      "tags": [
+        "zulu",
+        "seed",
+        "lang:zu"
+      ],
+      "stressNotes": [
+        "Penultimate stress drives rhythm; macro volume should protect the final syllable.",
+        "Wh-questions trigger rising-falling intonation requiring inflection contour support."
+      ],
+      "sentenceStructure": [
+        "Subject markers prefix verbs, and object markers embed before the stem; smoothness keeps them distinct.",
+        "Relative clauses use concord prefixes; emphasis must highlight click releases in these contexts."
+      ],
+      "grammarNotes": [
+        "Clicks paired with nasals or lateral releases need scope depth and overtones to avoid muddy blending.",
+        "Voiced lateral fricatives prefer higher smoothness values to stay stable."
       ]
     }
   ],

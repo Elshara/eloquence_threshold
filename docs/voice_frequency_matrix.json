@@ -1,0 +1,1024 @@
+{
+  "generated": "2025-09-30T01:44:58Z",
+  "parameterCount": 20,
+  "parameters": [
+    {
+      "id": "emphasis",
+      "label": "Emphasis shaping",
+      "description": "Boost or soften consonant attacks and vowel onsets to mirror how NV Speech Player emphasises foreground syllables.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "nvspeechplayer",
+        "prosody"
+      ],
+      "profileKind": "band",
+      "profileGain": 6.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 2200.0,
+          "highHz": 5200.0,
+          "widthHz": 3000.0,
+          "centreHz": 3700.0
+        },
+        {
+          "lowHz": 2200.0,
+          "highHz": 5200.0,
+          "widthHz": 3000.0,
+          "centreHz": 3700.0
+        }
+      ],
+      "minFrequencyHz": 2200.0,
+      "maxFrequencyHz": 5200.0,
+      "coverageWidthHz": 3000.0,
+      "medianCentreHz": 3700.0,
+      "meanCentreHz": 3700.0
+    },
+    {
+      "id": "headSizeContour",
+      "label": "Head size contour",
+      "description": "Simulates shorter or longer vocal tracts by biasing the first three formants, mirroring NV Speech Player's head size macro.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "formant",
+        "size"
+      ],
+      "profileKind": "triple-band",
+      "profileGain": 6.5,
+      "bandCount": 3,
+      "bands": [
+        {
+          "lowHz": 260.0,
+          "highHz": 520.0,
+          "widthHz": 260.0,
+          "centreHz": 390.0,
+          "gainMultiplier": 0.65
+        },
+        {
+          "lowHz": 820.0,
+          "highHz": 1500.0,
+          "widthHz": 680.0,
+          "centreHz": 1160.0
+        },
+        {
+          "lowHz": 2200.0,
+          "highHz": 3200.0,
+          "widthHz": 1000.0,
+          "centreHz": 2700.0,
+          "gainMultiplier": -0.4
+        }
+      ],
+      "minFrequencyHz": 260.0,
+      "maxFrequencyHz": 3200.0,
+      "coverageWidthHz": 2940.0,
+      "medianCentreHz": 1160.0,
+      "meanCentreHz": 1416.666667
+    },
+    {
+      "id": "inflectionContour",
+      "label": "Inflection contour",
+      "description": "Emphasises rising and falling transitions by shaping low-mid fundamentals and the 2\u20134 kHz glide band NV Speech Player uses for syllable inflection cues.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "inflection",
+        "prosody"
+      ],
+      "profileKind": "dual-band",
+      "profileGain": 5.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 110.0,
+          "highHz": 320.0,
+          "widthHz": 210.0,
+          "centreHz": 215.0,
+          "gainMultiplier": 0.55
+        },
+        {
+          "lowHz": 2200.0,
+          "highHz": 4200.0,
+          "widthHz": 2000.0,
+          "centreHz": 3200.0
+        }
+      ],
+      "minFrequencyHz": 110.0,
+      "maxFrequencyHz": 4200.0,
+      "coverageWidthHz": 4090.0,
+      "medianCentreHz": 1707.5,
+      "meanCentreHz": 1707.5
+    },
+    {
+      "id": "macroVolume",
+      "label": "Macro volume envelope",
+      "description": "Blends pre-mix gain with broadband EQ so the voice can swell or sit back without clipping, echoing NV Speech Player's volume macros.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "loudness",
+        "mix"
+      ],
+      "profileKind": "shelf-wide",
+      "profileGain": 4.5,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 90.0,
+          "highHz": 12000.0,
+          "widthHz": 11910.0,
+          "centreHz": 6045.0
+        },
+        {
+          "lowHz": 90.0,
+          "highHz": 12000.0,
+          "widthHz": 11910.0,
+          "centreHz": 6045.0
+        }
+      ],
+      "minFrequencyHz": 90.0,
+      "maxFrequencyHz": 12000.0,
+      "coverageWidthHz": 11910.0,
+      "medianCentreHz": 6045.0,
+      "meanCentreHz": 6045.0
+    },
+    {
+      "id": "nasalBalance",
+      "label": "Nasal balance",
+      "description": "Controls nasal resonance cues so voices can favour open or pinched pronunciations without muting clarity.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "nasal",
+        "resonance"
+      ],
+      "profileKind": "dual-band",
+      "profileGain": 6.8,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 260.0,
+          "highHz": 520.0,
+          "widthHz": 260.0,
+          "centreHz": 390.0
+        },
+        {
+          "lowHz": 980.0,
+          "highHz": 1600.0,
+          "widthHz": 620.0,
+          "centreHz": 1290.0,
+          "gainMultiplier": 0.8
+        }
+      ],
+      "minFrequencyHz": 260.0,
+      "maxFrequencyHz": 1600.0,
+      "coverageWidthHz": 1340.0,
+      "medianCentreHz": 840.0,
+      "meanCentreHz": 840.0
+    },
+    {
+      "id": "overtones",
+      "label": "Overtone brilliance",
+      "description": "Adds sparkle or dampens sibilants by shaping the 6\u201316 kHz band used by NV Speech Player's frication models.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "brightness",
+        "eq",
+        "harmonics"
+      ],
+      "profileKind": "shelf-high",
+      "profileGain": 12.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 5800.0,
+          "highHz": 16000.0,
+          "widthHz": 10200.0,
+          "centreHz": 10900.0
+        },
+        {
+          "lowHz": 5800.0,
+          "highHz": 16000.0,
+          "widthHz": 10200.0,
+          "centreHz": 10900.0
+        }
+      ],
+      "minFrequencyHz": 5800.0,
+      "maxFrequencyHz": 16000.0,
+      "coverageWidthHz": 10200.0,
+      "medianCentreHz": 10900.0,
+      "meanCentreHz": 10900.0
+    },
+    {
+      "id": "pitchHeight",
+      "label": "Pitch height",
+      "description": "Raises or lowers the perceived pitch centre by reshaping the fundamental energy band without affecting speaking rate.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "pitch",
+        "prosody"
+      ],
+      "profileKind": "band",
+      "profileGain": 9.0,
+      "bandCount": 3,
+      "bands": [
+        {
+          "lowHz": 70.0,
+          "highHz": 260.0,
+          "widthHz": 190.0,
+          "centreHz": 165.0
+        },
+        {
+          "lowHz": 70.0,
+          "highHz": 140.0,
+          "widthHz": 70.0,
+          "centreHz": 105.0,
+          "gainMultiplier": 1.1
+        },
+        {
+          "lowHz": 140.0,
+          "highHz": 260.0,
+          "widthHz": 120.0,
+          "centreHz": 200.0
+        }
+      ],
+      "minFrequencyHz": 70.0,
+      "maxFrequencyHz": 260.0,
+      "coverageWidthHz": 190.0,
+      "medianCentreHz": 165.0,
+      "meanCentreHz": 156.666667
+    },
+    {
+      "id": "plosiveImpact",
+      "label": "Plosive impact",
+      "description": "Accentuates consonant bursts (P, T, K, CH) by boosting the 1\u20134 kHz transient band where plosive energy peaks.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "attack",
+        "consonant",
+        "eq"
+      ],
+      "profileKind": "band",
+      "profileGain": 7.2,
+      "bandCount": 3,
+      "bands": [
+        {
+          "lowHz": 900.0,
+          "highHz": 3600.0,
+          "widthHz": 2700.0,
+          "centreHz": 2250.0
+        },
+        {
+          "lowHz": 900.0,
+          "highHz": 2200.0,
+          "widthHz": 1300.0,
+          "centreHz": 1550.0,
+          "gainMultiplier": 1.1
+        },
+        {
+          "lowHz": 2200.0,
+          "highHz": 3600.0,
+          "widthHz": 1400.0,
+          "centreHz": 2900.0
+        }
+      ],
+      "minFrequencyHz": 900.0,
+      "maxFrequencyHz": 3600.0,
+      "coverageWidthHz": 2700.0,
+      "medianCentreHz": 2250.0,
+      "meanCentreHz": 2233.333333
+    },
+    {
+      "id": "roughnessControl",
+      "label": "Roughness",
+      "description": "Adds rasp or polishes brightness by boosting or cutting the 2.6\u20138.2 kHz band tied to NV Speech Player's roughness tables.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "roughness",
+        "texture"
+      ],
+      "profileKind": "band",
+      "profileGain": 7.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 2600.0,
+          "highHz": 8200.0,
+          "widthHz": 5600.0,
+          "centreHz": 5400.0
+        },
+        {
+          "lowHz": 2600.0,
+          "highHz": 8200.0,
+          "widthHz": 5600.0,
+          "centreHz": 5400.0
+        }
+      ],
+      "minFrequencyHz": 2600.0,
+      "maxFrequencyHz": 8200.0,
+      "coverageWidthHz": 5600.0,
+      "medianCentreHz": 5400.0,
+      "meanCentreHz": 5400.0
+    },
+    {
+      "id": "scopeDepth",
+      "label": "Scope depth",
+      "description": "Controls how deep or shallow the voice feels by reshaping the upper-bass region present in NV Speech Player formants.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "depth",
+        "eq",
+        "warmth"
+      ],
+      "profileKind": "band",
+      "profileGain": 6.5,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 200.0,
+          "highHz": 820.0,
+          "widthHz": 620.0,
+          "centreHz": 510.0
+        },
+        {
+          "lowHz": 200.0,
+          "highHz": 820.0,
+          "widthHz": 620.0,
+          "centreHz": 510.0
+        }
+      ],
+      "minFrequencyHz": 200.0,
+      "maxFrequencyHz": 820.0,
+      "coverageWidthHz": 620.0,
+      "medianCentreHz": 510.0,
+      "meanCentreHz": 510.0
+    },
+    {
+      "id": "sibilantClarity",
+      "label": "Sibilant clarity",
+      "description": "Clarifies S/SH/CH/J style phonemes by shaping the 5\u201314 kHz sibilant noise band referenced by NV Speech Player.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "consonant",
+        "eq",
+        "sibilant"
+      ],
+      "profileKind": "band",
+      "profileGain": 8.2,
+      "bandCount": 3,
+      "bands": [
+        {
+          "lowHz": 5200.0,
+          "highHz": 14000.0,
+          "widthHz": 8800.0,
+          "centreHz": 9600.0
+        },
+        {
+          "lowHz": 5200.0,
+          "highHz": 9000.0,
+          "widthHz": 3800.0,
+          "centreHz": 7100.0
+        },
+        {
+          "lowHz": 9000.0,
+          "highHz": 14000.0,
+          "widthHz": 5000.0,
+          "centreHz": 11500.0,
+          "gainMultiplier": 0.7
+        }
+      ],
+      "minFrequencyHz": 5200.0,
+      "maxFrequencyHz": 14000.0,
+      "coverageWidthHz": 8800.0,
+      "medianCentreHz": 9600.0,
+      "meanCentreHz": 9400.0
+    },
+    {
+      "id": "smoothness",
+      "label": "Smoothness",
+      "description": "Controls how much high frequency noise is removed to mimic NV Speech Player's aspiration blending.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "softness",
+        "texture"
+      ],
+      "profileKind": "band",
+      "profileGain": 8.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 4200.0,
+          "highHz": 14000.0,
+          "widthHz": 9800.0,
+          "centreHz": 9100.0
+        },
+        {
+          "lowHz": 4200.0,
+          "highHz": 14000.0,
+          "widthHz": 9800.0,
+          "centreHz": 9100.0,
+          "gainMultiplier": -1.0
+        }
+      ],
+      "minFrequencyHz": 4200.0,
+      "maxFrequencyHz": 14000.0,
+      "coverageWidthHz": 9800.0,
+      "medianCentreHz": 9100.0,
+      "meanCentreHz": 9100.0
+    },
+    {
+      "id": "stress",
+      "label": "Stress contour",
+      "description": "Shapes the mid-high resonances that convey linguistic stress, mirroring NV Speech Player's intensity multipliers.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "prosody",
+        "stress"
+      ],
+      "profileKind": "band",
+      "profileGain": 6.5,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 1800.0,
+          "highHz": 4000.0,
+          "widthHz": 2200.0,
+          "centreHz": 2900.0
+        },
+        {
+          "lowHz": 1800.0,
+          "highHz": 4000.0,
+          "widthHz": 2200.0,
+          "centreHz": 2900.0
+        }
+      ],
+      "minFrequencyHz": 1800.0,
+      "maxFrequencyHz": 4000.0,
+      "coverageWidthHz": 2200.0,
+      "medianCentreHz": 2900.0,
+      "meanCentreHz": 2900.0
+    },
+    {
+      "id": "subtones",
+      "label": "Subtone weight",
+      "description": "Boost or trim the 60\u2013400 Hz band that defines chest resonance and NV Speech Player's low frequency shaping.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "harmonics",
+        "warmth"
+      ],
+      "profileKind": "shelf-low",
+      "profileGain": 12.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 60.0,
+          "highHz": 420.0,
+          "widthHz": 360.0,
+          "centreHz": 240.0
+        },
+        {
+          "lowHz": 60.0,
+          "highHz": 420.0,
+          "widthHz": 360.0,
+          "centreHz": 240.0
+        }
+      ],
+      "minFrequencyHz": 60.0,
+      "maxFrequencyHz": 420.0,
+      "coverageWidthHz": 360.0,
+      "medianCentreHz": 240.0,
+      "meanCentreHz": 240.0
+    },
+    {
+      "id": "timbre",
+      "label": "Timbre focus",
+      "description": "Balances lower formants against upper harmonics so the voice can sound darker or brighter without losing articulation.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "formant",
+        "timbre"
+      ],
+      "profileKind": "band",
+      "profileGain": 8.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 500.0,
+          "highHz": 1900.0,
+          "widthHz": 1400.0,
+          "centreHz": 1200.0
+        },
+        {
+          "lowHz": 500.0,
+          "highHz": 1900.0,
+          "widthHz": 1400.0,
+          "centreHz": 1200.0
+        }
+      ],
+      "minFrequencyHz": 500.0,
+      "maxFrequencyHz": 1900.0,
+      "coverageWidthHz": 1400.0,
+      "medianCentreHz": 1200.0,
+      "meanCentreHz": 1200.0
+    },
+    {
+      "id": "tone",
+      "label": "Tone colour",
+      "description": "Highlights the harmonic band responsible for tone colour, similar to NV Speech Player's cascade/parallel formant multipliers.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "harmonics",
+        "tone"
+      ],
+      "profileKind": "band",
+      "profileGain": 7.5,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 1400.0,
+          "highHz": 3200.0,
+          "widthHz": 1800.0,
+          "centreHz": 2300.0
+        },
+        {
+          "lowHz": 1400.0,
+          "highHz": 3200.0,
+          "widthHz": 1800.0,
+          "centreHz": 2300.0
+        }
+      ],
+      "minFrequencyHz": 1400.0,
+      "maxFrequencyHz": 3200.0,
+      "coverageWidthHz": 1800.0,
+      "medianCentreHz": 2300.0,
+      "meanCentreHz": 2300.0
+    },
+    {
+      "id": "toneSize",
+      "label": "Tone size",
+      "description": "Simulates smaller or larger resonant cavities by biasing the first three formants\u2014akin to NV Speech Player's head size macro.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "formant",
+        "size"
+      ],
+      "profileKind": "band",
+      "profileGain": 7.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 700.0,
+          "highHz": 2500.0,
+          "widthHz": 1800.0,
+          "centreHz": 1600.0
+        },
+        {
+          "lowHz": 700.0,
+          "highHz": 2500.0,
+          "widthHz": 1800.0,
+          "centreHz": 1600.0
+        }
+      ],
+      "minFrequencyHz": 700.0,
+      "maxFrequencyHz": 2500.0,
+      "coverageWidthHz": 1800.0,
+      "medianCentreHz": 1600.0,
+      "meanCentreHz": 1600.0
+    },
+    {
+      "id": "vocalLayers",
+      "label": "Vocal layering",
+      "description": "Controls the balance between fundamental energy and higher partials to simulate stacked voices or thinner single voices.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "layering",
+        "texture"
+      ],
+      "profileKind": "dual-band",
+      "profileGain": 5.5,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 120.0,
+          "highHz": 380.0,
+          "widthHz": 260.0,
+          "centreHz": 250.0,
+          "gainMultiplier": 0.7
+        },
+        {
+          "lowHz": 2400.0,
+          "highHz": 5200.0,
+          "widthHz": 2800.0,
+          "centreHz": 3800.0
+        }
+      ],
+      "minFrequencyHz": 120.0,
+      "maxFrequencyHz": 5200.0,
+      "coverageWidthHz": 5080.0,
+      "medianCentreHz": 2025.0,
+      "meanCentreHz": 2025.0
+    },
+    {
+      "id": "vocalRange",
+      "label": "Vocal range spread",
+      "description": "Expands or narrows the perceived vocal range by shaping both fundamentals and upper resonances.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "prosody",
+        "range"
+      ],
+      "profileKind": "dual-band",
+      "profileGain": 6.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 100.0,
+          "highHz": 320.0,
+          "widthHz": 220.0,
+          "centreHz": 210.0,
+          "gainMultiplier": 0.6
+        },
+        {
+          "lowHz": 3600.0,
+          "highHz": 7200.0,
+          "widthHz": 3600.0,
+          "centreHz": 5400.0
+        }
+      ],
+      "minFrequencyHz": 100.0,
+      "maxFrequencyHz": 7200.0,
+      "coverageWidthHz": 7100.0,
+      "medianCentreHz": 2805.0,
+      "meanCentreHz": 2805.0
+    },
+    {
+      "id": "whisper",
+      "label": "Whisper blend",
+      "description": "Introduces or removes aspiration-style whisper components across the band limited by NV Speech Player's breath tables.",
+      "min": 0,
+      "max": 200,
+      "default": 100,
+      "tags": [
+        "eq",
+        "texture",
+        "whisper"
+      ],
+      "profileKind": "dual-band",
+      "profileGain": 10.0,
+      "bandCount": 2,
+      "bands": [
+        {
+          "lowHz": 3600.0,
+          "highHz": 11000.0,
+          "widthHz": 7400.0,
+          "centreHz": 7300.0
+        },
+        {
+          "lowHz": 300.0,
+          "highHz": 900.0,
+          "widthHz": 600.0,
+          "centreHz": 600.0,
+          "gainMultiplier": -0.4
+        }
+      ],
+      "minFrequencyHz": 300.0,
+      "maxFrequencyHz": 11000.0,
+      "coverageWidthHz": 10700.0,
+      "medianCentreHz": 3950.0,
+      "meanCentreHz": 3950.0
+    }
+  ],
+  "missingProfiles": [],
+  "globalFrequency": {
+    "minHz": 60.0,
+    "maxHz": 16000.0,
+    "medianCentreHz": 2275.0,
+    "meanCentreHz": 3419.875
+  },
+  "tagSummary": [
+    {
+      "tag": "attack",
+      "parameterIds": [
+        "plosiveImpact"
+      ],
+      "minFrequencyHz": 900.0,
+      "maxFrequencyHz": 3600.0,
+      "coverageWidthHz": 2700.0
+    },
+    {
+      "tag": "brightness",
+      "parameterIds": [
+        "overtones"
+      ],
+      "minFrequencyHz": 5800.0,
+      "maxFrequencyHz": 16000.0,
+      "coverageWidthHz": 10200.0
+    },
+    {
+      "tag": "consonant",
+      "parameterIds": [
+        "plosiveImpact",
+        "sibilantClarity"
+      ],
+      "minFrequencyHz": 900.0,
+      "maxFrequencyHz": 14000.0,
+      "coverageWidthHz": 13100.0
+    },
+    {
+      "tag": "depth",
+      "parameterIds": [
+        "scopeDepth"
+      ],
+      "minFrequencyHz": 200.0,
+      "maxFrequencyHz": 820.0,
+      "coverageWidthHz": 620.0
+    },
+    {
+      "tag": "eq",
+      "parameterIds": [
+        "emphasis",
+        "headSizeContour",
+        "inflectionContour",
+        "macroVolume",
+        "nasalBalance",
+        "overtones",
+        "pitchHeight",
+        "plosiveImpact",
+        "roughnessControl",
+        "scopeDepth",
+        "sibilantClarity",
+        "smoothness",
+        "stress",
+        "subtones",
+        "timbre",
+        "tone",
+        "toneSize",
+        "vocalLayers",
+        "whisper"
+      ],
+      "minFrequencyHz": 60.0,
+      "maxFrequencyHz": 16000.0,
+      "coverageWidthHz": 15940.0
+    },
+    {
+      "tag": "formant",
+      "parameterIds": [
+        "headSizeContour",
+        "timbre",
+        "toneSize"
+      ],
+      "minFrequencyHz": 260.0,
+      "maxFrequencyHz": 3200.0,
+      "coverageWidthHz": 2940.0
+    },
+    {
+      "tag": "harmonics",
+      "parameterIds": [
+        "overtones",
+        "subtones",
+        "tone"
+      ],
+      "minFrequencyHz": 60.0,
+      "maxFrequencyHz": 16000.0,
+      "coverageWidthHz": 15940.0
+    },
+    {
+      "tag": "inflection",
+      "parameterIds": [
+        "inflectionContour"
+      ],
+      "minFrequencyHz": 110.0,
+      "maxFrequencyHz": 4200.0,
+      "coverageWidthHz": 4090.0
+    },
+    {
+      "tag": "layering",
+      "parameterIds": [
+        "vocalLayers"
+      ],
+      "minFrequencyHz": 120.0,
+      "maxFrequencyHz": 5200.0,
+      "coverageWidthHz": 5080.0
+    },
+    {
+      "tag": "loudness",
+      "parameterIds": [
+        "macroVolume"
+      ],
+      "minFrequencyHz": 90.0,
+      "maxFrequencyHz": 12000.0,
+      "coverageWidthHz": 11910.0
+    },
+    {
+      "tag": "mix",
+      "parameterIds": [
+        "macroVolume"
+      ],
+      "minFrequencyHz": 90.0,
+      "maxFrequencyHz": 12000.0,
+      "coverageWidthHz": 11910.0
+    },
+    {
+      "tag": "nasal",
+      "parameterIds": [
+        "nasalBalance"
+      ],
+      "minFrequencyHz": 260.0,
+      "maxFrequencyHz": 1600.0,
+      "coverageWidthHz": 1340.0
+    },
+    {
+      "tag": "nvspeechplayer",
+      "parameterIds": [
+        "emphasis"
+      ],
+      "minFrequencyHz": 2200.0,
+      "maxFrequencyHz": 5200.0,
+      "coverageWidthHz": 3000.0
+    },
+    {
+      "tag": "pitch",
+      "parameterIds": [
+        "pitchHeight"
+      ],
+      "minFrequencyHz": 70.0,
+      "maxFrequencyHz": 260.0,
+      "coverageWidthHz": 190.0
+    },
+    {
+      "tag": "prosody",
+      "parameterIds": [
+        "emphasis",
+        "inflectionContour",
+        "pitchHeight",
+        "stress",
+        "vocalRange"
+      ],
+      "minFrequencyHz": 70.0,
+      "maxFrequencyHz": 7200.0,
+      "coverageWidthHz": 7130.0
+    },
+    {
+      "tag": "range",
+      "parameterIds": [
+        "vocalRange"
+      ],
+      "minFrequencyHz": 100.0,
+      "maxFrequencyHz": 7200.0,
+      "coverageWidthHz": 7100.0
+    },
+    {
+      "tag": "resonance",
+      "parameterIds": [
+        "nasalBalance"
+      ],
+      "minFrequencyHz": 260.0,
+      "maxFrequencyHz": 1600.0,
+      "coverageWidthHz": 1340.0
+    },
+    {
+      "tag": "roughness",
+      "parameterIds": [
+        "roughnessControl"
+      ],
+      "minFrequencyHz": 2600.0,
+      "maxFrequencyHz": 8200.0,
+      "coverageWidthHz": 5600.0
+    },
+    {
+      "tag": "sibilant",
+      "parameterIds": [
+        "sibilantClarity"
+      ],
+      "minFrequencyHz": 5200.0,
+      "maxFrequencyHz": 14000.0,
+      "coverageWidthHz": 8800.0
+    },
+    {
+      "tag": "size",
+      "parameterIds": [
+        "headSizeContour",
+        "toneSize"
+      ],
+      "minFrequencyHz": 260.0,
+      "maxFrequencyHz": 3200.0,
+      "coverageWidthHz": 2940.0
+    },
+    {
+      "tag": "softness",
+      "parameterIds": [
+        "smoothness"
+      ],
+      "minFrequencyHz": 4200.0,
+      "maxFrequencyHz": 14000.0,
+      "coverageWidthHz": 9800.0
+    },
+    {
+      "tag": "stress",
+      "parameterIds": [
+        "stress"
+      ],
+      "minFrequencyHz": 1800.0,
+      "maxFrequencyHz": 4000.0,
+      "coverageWidthHz": 2200.0
+    },
+    {
+      "tag": "texture",
+      "parameterIds": [
+        "roughnessControl",
+        "smoothness",
+        "vocalLayers",
+        "whisper"
+      ],
+      "minFrequencyHz": 120.0,
+      "maxFrequencyHz": 14000.0,
+      "coverageWidthHz": 13880.0
+    },
+    {
+      "tag": "timbre",
+      "parameterIds": [
+        "timbre"
+      ],
+      "minFrequencyHz": 500.0,
+      "maxFrequencyHz": 1900.0,
+      "coverageWidthHz": 1400.0
+    },
+    {
+      "tag": "tone",
+      "parameterIds": [
+        "tone"
+      ],
+      "minFrequencyHz": 1400.0,
+      "maxFrequencyHz": 3200.0,
+      "coverageWidthHz": 1800.0
+    },
+    {
+      "tag": "warmth",
+      "parameterIds": [
+        "scopeDepth",
+        "subtones"
+      ],
+      "minFrequencyHz": 60.0,
+      "maxFrequencyHz": 820.0,
+      "coverageWidthHz": 760.0
+    },
+    {
+      "tag": "whisper",
+      "parameterIds": [
+        "whisper"
+      ],
+      "minFrequencyHz": 300.0,
+      "maxFrequencyHz": 11000.0,
+      "coverageWidthHz": 10700.0
+    }
+  ]
+}
