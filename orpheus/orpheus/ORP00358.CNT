@@ -1,0 +1,47 @@
+:Base orp00358.hlp>main
+:Title Orpheus
+1 Tervetuloa Orpheuksen ohjeeseen=O4099>Main
+1 Ohjelmiston käyttöoikeus=O4174>Normal
+1 Johdanto
+2 Johdanto=HELPID_MANWELCOME>Normal
+2 Mitä uutta=HELPID_MANWHATSNEW>Normal
+1 Orpheuksen asentaminen
+2 Orpheuksen asentaminen=HELPID_MANINSTALL>Normal
+2 Verkkoasennus=HELPID_MANNETINSTALL>Normal
+1 Orpheuksen asetukset
+2 Orpheuksen asetukset=HELPID_MANCTRLPANEL>Normal
+2 Yleinen=HELPID_MANCTRLPANELGEN>Normal
+2 Audio=HELPID_MANCTRLPANELAUD>Normal
+2 Kielet=HELPID_MANCTRLPANELLNG>Normal
+2 Lisäasetukset=HELPID_MANCTRLPANELADV>Normal
+2 Äänet
+3 Äänet=HELPID_MANCTRLPANELVCE>Normal
+3 Äänen muokkaus -valintaikkuna=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Orpheuksen säätimet
+2 Orpheuksen säätimet=HELPID_MANPARAMS>Normal
+2 Audiosäätimet=HELPID_MANPARAMSAUD>Normal
+2 Esityssäätimet=HELPID_MANPARAMSPRES>Normal
+2 Äänisäätimet=HELPID_MANPARAMSVOICFX>Normal
+1 Poikkeuseditori
+2 Poikkeuseditori=HELPID_EXNINTRO>Normal
+2 Poikkeukset=HELPID_EXNEXCEPTIONS>Normal
+2 Sanat ja foneemit=HELPID_EXNWORDANDPHON>Normal
+2 Poikkeuseditorin käyttäminen
+3 Poikkeuseditorin käyttäminen=HELPID_EXNDISPLAY>Normal
+3 Poikkeuksen lisääminen=HELPID_EXNADDEXN>Normal
+3 Poikkeuksen muokkaaminen=HELPID_EXNEDITEXN>Normal
+3 Foneemien käyttäminen=HELPID_EXNUSEPHON>Normal
+3 Poikkeuksen poistaminen=HELPID_EXNDELEXN>Normal
+3 Poikkeusten etsiminen=HELPID_EXNFINDEXN>Normal
+3 Lataaminen ja tallentaminen=HELPID_EXNLOADSAVE>Normal
+3 Poikkeusten tuominen ja vieminen=HELPID_EXNIMPEXP>Normal
+3 Poikkeuseditorin asetukset=HELPID_EXNPROGOPTS>Normal
+1 Vihjeet ja vianmääritys
+2 Vihjeet ja vianmääritys=HELPID_MANTNT>Normal
+2 Poikkeuseditorin käyttäminen ruudunlukijalla=O4175>Normal
+2 Yleinen vianmääritys=HELPID_MANTNTGEN>Normal
+2 Suorituskykyongelmat=HELPID_MANTNTPERFORM>Normal
+2 Mikseri- ja Direct Sound -ongelmat (vain Windows 95)=HELPID_MANTNTMIXDS>Normal
+2 Laitemiksausongelmat=HELPID_MANTNTHARDMIX>Normal
+2 Tekninen tuki=HELPID_MANTECHSUPPORT>Normal
+1 Versiohistoria (englanninkielinen)=O4114>Normal

@@ -1,0 +1,46 @@
+
+                              Dolphin SAM Driver for Dolphin Orpheus TTS version 2.
+
+This is the SAM Driver for Dolphin Orpheus TTS. SAM will find this driver using the stub driver located in the SAM folder. Do not copy this driver to SAM.
+
+
+1.	Features
+
+Automatic detection of Orpheus
+Supports several sound effects and pauses
+All the Orpheus TTS commands are available
+Prompts are translatable
+Provides a "raw" mode
+Windows 9x, NT, 2000 and XP compatible
+
+
+2.	Raw mode
+
+When text is sent to this driver in "raw" mode, no checking is done for character sets.
+
+You can insert Dolphin Orpheus TTS commands in the text by entering @<p=n> where p is the parameter number and n is the new value. For example, to set the pitch to 100Hz you could enter @<1=100>.
+
+The thirteen parameters and their valid ranges are:
+
+ 0 - speed              10 to  700
+ 1 - pitch              50 to  500
+ 2 - skim reading level  0 to    8
+ 3 - word pause          0 to 1000
+ 4 - phrase pause        0 to 2000
+ 5 - voice               *
+ 6 - volume              0 to  100
+ 7 - balance          -100 to  100
+ 8 - bass             -100 to  100
+ 9 - treble           -100 to  100
+10 - language            ** 
+11 - exceptions          0 or    1
+12 - anomalies           0 or    1
+
+* This command takes a voice-in-current language index.  For example @<5=01> would switch to the second voice in UK English, if UK English is the currently selected voice in Orpheus.
+
+** This command takes language code numbers to switch language. For example @<10=44> would switch to UK English if it is installed.
+
+In addition, @<0=0> will disable the voice block passed with a non-raw mode call, @<0=1> will enable processing of the voice block.
+
+When you use raw mode, the voice block and spelling flag are  ignored. However, index marks should work in the same way. You cannot split a command between two append calls.
+

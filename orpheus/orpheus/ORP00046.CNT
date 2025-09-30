@@ -1,0 +1,46 @@
+:Base orp00046.hlp>main
+:Title Orp00046
+1 Välkommen till Orpheus on-line hjälp=O4099>Main
+1 Licensavtal=O4174>Normal
+1 Introduktion
+2 Introduktion=HELPID_MANWELCOME>Normal
+2 Vad är nytt=HELPID_MANWHATSNEW>Normal
+1 Installera Orpheus
+2 Installera Orpheus=HELPID_MANINSTALL>Normal
+2 Nätverksinstallation=HELPID_MANNETINSTALL>Normal
+1 Konfigurera Orpheus
+2 Konfigurera Orpheus=HELPID_MANCTRLPANEL>Normal
+2 Programinformation=HELPID_MANCTRLPANELGEN>Normal
+2 Ljud=HELPID_MANCTRLPANELAUD>Normal
+2 Språk=HELPID_MANCTRLPANELLNG>Normal
+2 Avancerat=HELPID_MANCTRLPANELADV>Normal
+2 Röster
+3 Röster=HELPID_MANCTRLPANELVCE>Normal
+3 Dialogrutan Ändra röstinställningar=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Orpheus kontroller
+2 Orpheus kontroller=HELPID_MANPARAMS>Normal
+2 Ljudkontroller=HELPID_MANPARAMSAUD>Normal
+2 Läskontroller=HELPID_MANPARAMSPRES>Normal
+2 Röstkontroller=HELPID_MANPARAMSVOICFX>Normal
+1 Uttalshantering
+2 Uttalshantering=HELPID_EXNINTRO>Normal
+2 Uttalsregler=HELPID_EXNEXCEPTIONS>Normal
+2 Ord och fonem=HELPID_EXNWORDANDPHON>Normal
+2 Använd uttalshanteraren
+3 Använd uttalshanteraren=HELPID_EXNDISPLAY>Normal
+3 Skapa ny uttalsregel=HELPID_EXNADDEXN>Normal
+3 Ändra en uttalsregel=HELPID_EXNEDITEXN>Normal
+3 Användning av fonem=HELPID_EXNUSEPHON>Normal
+3 Ta bort en uttalsregel=HELPID_EXNDELEXN>Normal
+3 Sök uttalsregler=HELPID_EXNFINDEXN>Normal
+3 Öppna och spara=HELPID_EXNLOADSAVE>Normal
+3 Importera och exportera uttalsregler=HELPID_EXNIMPEXP>Normal
+3 Alternativ för uttalshanteringen=HELPID_EXNPROGOPTS>Normal
+1 Tips och felsökning
+2 Tips och felsökning=HELPID_MANTNT>Normal
+2 Använd uttalshanteringen med skärmläsare=O4175>Normal
+2 Allmän felsökning=HELPID_MANTNTGEN>Normal
+2 Prestanda felsökning=HELPID_MANTNTPERFORM>Normal
+2 Delning av ljudresurser=HELPID_MANTNTHARDMIX>Normal
+2 Teknisk support=HELPID_MANTECHSUPPORT>Normal
+1 Versionsinformation=O4114>Normal

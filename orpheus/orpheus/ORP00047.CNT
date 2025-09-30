@@ -1,0 +1,47 @@
+:Base orp00047.hlp>main
+:Title Orpheus
+1 Velkommen til Orpheus online hjelp=O4099>Main
+1 Programvarelisens=O4174>Normal
+1 Introduksjon
+2 Introduksjon=HELPID_MANWELCOME>Normal
+2 Hva er nytt=HELPID_MANWHATSNEW>Normal
+1 Installere Orpheus
+2 Installere Orpheus=HELPID_MANINSTALL>Normal
+2 Nettverk installasjon=HELPID_MANNETINSTALL>Normal
+1 Konfigurere Orpheus
+2 Konfigurere Orpheus=HELPID_MANCTRLPANEL>Normal
+2 Generell=HELPID_MANCTRLPANELGEN>Normal
+2 Lyd=HELPID_MANCTRLPANELAUD>Normal
+2 Språk=HELPID_MANCTRLPANELLNG>Normal
+2 Avansert=HELPID_MANCTRLPANELADV>Normal
+2 Stemmer
+3 Stemmer=HELPID_MANCTRLPANELVCE>Normal
+3 Redigere stemmer=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Orpheus kontroller
+2 Orpheus kontroller=HELPID_MANPARAMS>Normal
+2 Lydkontroller=HELPID_MANPARAMSAUD>Normal
+2 Lesekontroller=HELPID_MANPARAMSPRES>Normal
+2 Stemmekontroller=HELPID_MANPARAMSVOICFX>Normal
+1 Uttaleeditor
+2 Uttaleeditor=HELPID_EXNINTRO>Normal
+2 Uttaleregler=HELPID_EXNEXCEPTIONS>Normal
+2 Ord og fonemer=HELPID_EXNWORDANDPHON>Normal
+2 Bruke uttaleeditoren
+3 Bruke uttaleeditoren=HELPID_EXNDISPLAY>Normal
+3 Legge til uttaleregler=HELPID_EXNADDEXN>Normal
+3 Endre en uttaleregel=HELPID_EXNEDITEXN>Normal
+3 Bruke fonem=HELPID_EXNUSEPHON>Normal
+3 Slette en uttaleregel=HELPID_EXNDELEXN>Normal
+3 Søke etter uttaleregler=HELPID_EXNFINDEXN>Normal
+3 Åpne og lagre=HELPID_EXNLOADSAVE>Normal
+3 Importere og eksportere uttaleregler=HELPID_EXNIMPEXP>Normal
+3 Alternativ for uttalehåndtering=HELPID_EXNPROGOPTS>Normal
+1 Tips & feilsøking
+2 Tips & feilsøking=HELPID_MANTNT>Normal
+2 Bruk av uttaleeditoren med skjermleser=O4175>Normal
+2 Generell feilsøking=HELPID_MANTNTGEN>Normal
+2 Ytelse problemer=HELPID_MANTNTPERFORM>Normal
+2 Feilsøking på mikser og Direkte lyd (kun Windows 95)=HELPID_MANTNTMIXDS>Normal
+2 Feilsøking på maskinvare mikser=HELPID_MANTNTHARDMIX>Normal
+2 Teknisk support=HELPID_MANTECHSUPPORT>Normal
+1 Versjonshistorie=O4114>Normal

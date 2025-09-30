@@ -1,0 +1,47 @@
+:Base orp00031.hlp>main
+:Title Orpheus
+1 Welkom bij de online help van Orpheus=O4099>Main
+1 Software Overeenkomst=O4174>Normal
+1 Introductie
+2 Introductie=HELPID_MANWELCOME>Normal
+2 Wat is nieuw=HELPID_MANWHATSNEW>Normal
+1 Het installeren van Orpheus
+2 Het installeren van Orpheus=HELPID_MANINSTALL>Normal
+2 Netwerk Installatie=HELPID_MANNETINSTALL>Normal
+1 Orpheus Instellen
+2 Orpheus Instellen=HELPID_MANCTRLPANEL>Normal
+2 Algemeen=HELPID_MANCTRLPANELGEN>Normal
+2 Audio=HELPID_MANCTRLPANELAUD>Normal
+2 Talen=HELPID_MANCTRLPANELLNG>Normal
+2 Geavanceerd=HELPID_MANCTRLPANELADV>Normal
+2 Stemmen
+3 Stemmen=HELPID_MANCTRLPANELVCE>Normal
+3 Stem Bewerken dialoogvenster=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Orpheus Instellingen
+2 Orpheus Instellingen=HELPID_MANPARAMS>Normal
+2 Audio instellingen=HELPID_MANPARAMSAUD>Normal
+2 Presentatie Instellingen=HELPID_MANPARAMSPRES>Normal
+2 Stem Instellingen=HELPID_MANPARAMSVOICFX>Normal
+1 Uitzonderingen Bewerker
+2 Uitzonderingen Bewerker=HELPID_EXNINTRO>Normal
+2 Uitzonderingen=HELPID_EXNEXCEPTIONS>Normal
+2 Woorden en Fonemen=HELPID_EXNWORDANDPHON>Normal
+2 Gebruik van de Uitzonderingen Bewerker
+3 Gebruik van de Uitzonderingen Bewerker=HELPID_EXNDISPLAY>Normal
+3 Een Uitzondering invoegen=HELPID_EXNADDEXN>Normal
+3 Bewerken van een Uitzondering=HELPID_EXNEDITEXN>Normal
+3 Het gebruik van Fonemen=HELPID_EXNUSEPHON>Normal
+3 Verwijderen van een Uitzondering=HELPID_EXNDELEXN>Normal
+3 Zoeken naar Uitzonderingen=HELPID_EXNFINDEXN>Normal
+3 Laden en Opslaan=HELPID_EXNLOADSAVE>Normal
+3 Importeren en Exporteren van Uitzonderingen=HELPID_EXNIMPEXP>Normal
+3 Uitzonderingen Bewerker opties=HELPID_EXNPROGOPTS>Normal
+1 Tips & Problemen oplossen
+2 Tips & Problemen oplossen=HELPID_MANTNT>Normal
+2 Gebruik van de Uitzonderingen bewerker met een Schermlezer=O4175>Normal
+2 Algemene Probleemoplossingen=HELPID_MANTNTGEN>Normal
+2 Productiviteit Probleemoplossingen=HELPID_MANTNTPERFORM>Normal
+2 Mengpaneel en Direct Geluid Probleemoplossingen=HELPID_MANTNTMIXDS>Normal
+2 Hardwarematig mengen Probleemoplossingen=HELPID_MANTNTHARDMIX>Normal
+2 Technische Ondersteuning=HELPID_MANTECHSUPPORT>Normal
+1 Versie Geschiedenis=O4114>Normal

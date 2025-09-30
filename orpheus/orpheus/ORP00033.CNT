@@ -1,0 +1,47 @@
+:Base orp00033.hlp>main
+:Title Or00033
+1 Bienvenue sur l'Aide en ligne Orpheus=O4099>Main
+1 Licence du logiciel=O4174>Normal
+1 Introduction
+2 Introduction=HELPID_MANWELCOME>Normal
+2 Nouveautés=HELPID_MANWHATSNEW>Normal
+1 Installation de Orpheus
+2 Installation de Orpheus=HELPID_MANINSTALL>Normal
+2 Installation réseau=HELPID_MANNETINSTALL>Normal
+1 Configuration de Orpheus
+2 Configuration de Orpheus=HELPID_MANCTRLPANEL>Normal
+2 Général=HELPID_MANCTRLPANELGEN>Normal
+2 Audio=HELPID_MANCTRLPANELAUD>Normal
+2 Langues=HELPID_MANCTRLPANELLNG>Normal
+2 Avancé=HELPID_MANCTRLPANELADV>Normal
+2 Voix
+3 Voix=HELPID_MANCTRLPANELVCE>Normal
+3 Boîte de dialogue Modifier la voix=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Contrôles Orpheus
+2 Contrôles Orpheus=HELPID_MANPARAMS>Normal
+2 Contrôles audio=HELPID_MANPARAMSAUD>Normal
+2 Contrôles de présentation=HELPID_MANPARAMSPRES>Normal
+2 Contrôles de la voix=HELPID_MANPARAMSVOICFX>Normal
+1 Éditeur d'exceptions
+2 Éditeur d'exceptions=HELPID_EXNINTRO>Normal
+2 Exceptions=HELPID_EXNEXCEPTIONS>Normal
+2 Mots et Phonèmes=HELPID_EXNWORDANDPHON>Normal
+2 Utilisation de l'Éditeur d'exceptions
+3 Utilisation de l'Éditeur d'exceptions=HELPID_EXNDISPLAY>Normal
+3 Ajout d'une exception=HELPID_EXNADDEXN>Normal
+3 Modification d'une exception=HELPID_EXNEDITEXN>Normal
+3 Utilisation de phonèmes=HELPID_EXNUSEPHON>Normal
+3 Suppression d'une exception=HELPID_EXNDELEXN>Normal
+3 Recherche d'exceptions=HELPID_EXNFINDEXN>Normal
+3 Chargement et Enregistrement=HELPID_EXNLOADSAVE>Normal
+3 Importation et Exportation d'exceptions=HELPID_EXNIMPEXP>Normal
+3 Options de l'Éditeur d'exceptions=HELPID_EXNPROGOPTS>Normal
+1 Astuces & Résolution des problèmes
+2 Astuces & Résolution des problèmes=HELPID_MANTNT>Normal
+2 Utilisation de l'Éditeur d'exceptions avec un lecteur sonore d'écran=O4175>Normal
+2 Résolution des problèmes généraux=HELPID_MANTNTGEN>Normal
+2 Résolution des problèmes de performances=HELPID_MANTNTPERFORM>Normal
+2 Résolution des problèmes de mélangeur et de Son direct (Windows 95 uniquement)=HELPID_MANTNTMIXDS>Normal
+2 Résolution des problèmes du matériel de mixage=HELPID_MANTNTHARDMIX>Normal
+2 Support technique=HELPID_MANTECHSUPPORT>Normal
+1 Historique des versions=O4114>Normal

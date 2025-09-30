@@ -1,0 +1,4 @@
+this license  is related to a special version of the newfon synthesizer (program), adaptation of which is developed for the NVDA screenreader by Sergey Shishmintzev.
+1) permitted to distribute this program with NVDA screenreader or separately, only without financial gains (exclude compensating for the digital media costs).
+2) usage of the program allowed only for non commercial purposes.
+3) for the commercial purposes usage, or other things which are not described here, please, contact the author of program, Sergey Shishmintzev: sergey.shishmintzev@gmail.com

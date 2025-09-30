@@ -1,0 +1,47 @@
+:Base orp00044.hlp>main
+:Title Orpheus
+1 Welcome to the Orpheus Online Help=O4099>Main
+1 Software Licence=O4174>Normal
+1 Introduction
+2 Introduction=HELPID_MANWELCOME>Normal
+2 What's New=HELPID_MANWHATSNEW>Normal
+1 Installing Orpheus
+2 Installing Orpheus=HELPID_MANINSTALL>Normal
+2 Network Installation=HELPID_MANNETINSTALL>Normal
+1 Configuring Orpheus
+2 Configuring Orpheus=HELPID_MANCTRLPANEL>Normal
+2 General=HELPID_MANCTRLPANELGEN>Normal
+2 Audio=HELPID_MANCTRLPANELAUD>Normal
+2 Languages=HELPID_MANCTRLPANELLNG>Normal
+2 Advanced=HELPID_MANCTRLPANELADV>Normal
+2 Voices
+3 Voices=HELPID_MANCTRLPANELVCE>Normal
+3 Edit Voice dialog=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Orpheus Controls
+2 Orpheus Controls=HELPID_MANPARAMS>Normal
+2 Audio Controls=HELPID_MANPARAMSAUD>Normal
+2 Presentation Controls=HELPID_MANPARAMSPRES>Normal
+2 Voice Controls=HELPID_MANPARAMSVOICFX>Normal
+1 Exceptions Editor
+2 Exceptions Editor=HELPID_EXNINTRO>Normal
+2 Exceptions=HELPID_EXNEXCEPTIONS>Normal
+2 Words and Phonemes=HELPID_EXNWORDANDPHON>Normal
+2 Using the Exceptions Editor
+3 Using the Exceptions Editor=HELPID_EXNDISPLAY>Normal
+3 Adding an Exception=HELPID_EXNADDEXN>Normal
+3 Editing an Exception=HELPID_EXNEDITEXN>Normal
+3 Using Phonemes=HELPID_EXNUSEPHON>Normal
+3 Deleting an Exception=HELPID_EXNDELEXN>Normal
+3 Searching for Exceptions=HELPID_EXNFINDEXN>Normal
+3 Loading and Saving=HELPID_EXNLOADSAVE>Normal
+3 Importing and Exporting Exceptions=HELPID_EXNIMPEXP>Normal
+3 Exceptions Editor Options=HELPID_EXNPROGOPTS>Normal
+1 Tips & Troubleshooting
+2 Tips & Troubleshooting=HELPID_MANTNT>Normal
+2 Using the Exceptions Editor with a Screen Reader=O4175>Normal
+2 General Troubleshooting=HELPID_MANTNTGEN>Normal
+2 Performance Troubleshooting=HELPID_MANTNTPERFORM>Normal
+2 Mixer and Direct Sound Troubleshooting (Windows 95 Only)=HELPID_MANTNTMIXDS>Normal
+2 Hardware Mixing Troubleshooting=HELPID_MANTNTHARDMIX>Normal
+2 Technical Support=HELPID_MANTECHSUPPORT>Normal
+1 Version History=O4114>Normal

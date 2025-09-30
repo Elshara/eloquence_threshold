@@ -1,0 +1,47 @@
+:Base orp00049.hlp>main
+:Title Orpheus
+1 Wilkommen zur Orpheus Online Hilfe=O4099>Main
+1 Software-Lizenz=O4174>Normal
+1 Einführung
+2 Einführung=HELPID_MANWELCOME>Normal
+2 Was ist Neu=HELPID_MANWHATSNEW>Normal
+1 Orpheus installieren
+2 Orpheus installieren=HELPID_MANINSTALL>Normal
+2 Netzwerk Installation=HELPID_MANNETINSTALL>Normal
+1 Orpheus konfigurieren
+2 Orpheus konfigurieren=HELPID_MANCTRLPANEL>Normal
+2 Allgemein=HELPID_MANCTRLPANELGEN>Normal
+2 Audio=HELPID_MANCTRLPANELAUD>Normal
+2 Sprachen=HELPID_MANCTRLPANELLNG>Normal
+2 Erweitert=HELPID_MANCTRLPANELADV>Normal
+2 Stimmen
+3 Stimmen=HELPID_MANCTRLPANELVCE>Normal
+3 Stimme bearbeiten -Dialog=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Orpheus Steuerungen
+2 Orpheus Steuerungen=HELPID_MANPARAMS>Normal
+2 Audio-Steuerungen=HELPID_MANPARAMSAUD>Normal
+2 Präsentations-Steuerungen=HELPID_MANPARAMSPRES>Normal
+2 Stimmen-Steuerungen=HELPID_MANPARAMSVOICFX>Normal
+1 Ausnahmen-Editor
+2 Ausnahmen-Editor=HELPID_EXNINTRO>Normal
+2 Ausnahmen=HELPID_EXNEXCEPTIONS>Normal
+2 Wörter und Phoneme=HELPID_EXNWORDANDPHON>Normal
+2 Den Ausnahmen-Editor benutzen
+3 Den Ausnahmen-Editor benutzen=HELPID_EXNDISPLAY>Normal
+3 Eine Ausnahme hinzufügen=HELPID_EXNADDEXN>Normal
+3 Eine Ausnahme bearbeiten=HELPID_EXNEDITEXN>Normal
+3 Phoneme benutzen=HELPID_EXNUSEPHON>Normal
+3 Eine Ausnahme löschen=HELPID_EXNDELEXN>Normal
+3 Nach Ausnahmen suchen=HELPID_EXNFINDEXN>Normal
+3 Aufrufen und Abspeichern=HELPID_EXNLOADSAVE>Normal
+3 Ausnahmen importieren und exportieren=HELPID_EXNIMPEXP>Normal
+3 Optionen des Ausnahmen-Editor=HELPID_EXNPROGOPTS>Normal
+1 Tips & Problembehebung
+2 Tips & Problembehebung=HELPID_MANTNT>Normal
+2 Den Ausnahmen-Editor mit einem Bildschirmleser benutzen=O4175>Normal
+2 Allgemeine Problembehebung=HELPID_MANTNTGEN>Normal
+2 Leistungsprobleme beheben=HELPID_MANTNTPERFORM>Normal
+2 Problembehebung für Mixer und Direct Sound (Nur Windows 95)=HELPID_MANTNTMIXDS>Normal
+2 Problembehebung bei Hardware-Mixer=HELPID_MANTNTHARDMIX>Normal
+2 Technischer Support=HELPID_MANTECHSUPPORT>Normal
+1 Versions-History=O4114>Normal

@@ -1,0 +1,47 @@
+:Base orp00039.hlp>main
+:Title Orpheus
+1 Benvenuti nell'help on line di Orpheus=O4099>Main
+1 Accordo di Licenza per l'Utente Finale del software ("Contratto")=O4174>Normal
+1 Introduzione
+2 Introduzione=HELPID_MANWELCOME>Normal
+2 Quali sono le novità?=HELPID_MANWHATSNEW>Normal
+1 Installare Orpheus
+2 Installare Orpheus=HELPID_MANINSTALL>Normal
+2 Installazione in Rete=HELPID_MANNETINSTALL>Normal
+1 Configurare Orpheus
+2 Configurare Orpheus=HELPID_MANCTRLPANEL>Normal
+2 Generale=HELPID_MANCTRLPANELGEN>Normal
+2 Audio=HELPID_MANCTRLPANELAUD>Normal
+2 Lingue=HELPID_MANCTRLPANELLNG>Normal
+2 Avanzate=HELPID_MANCTRLPANELADV>Normal
+2 Voci
+3 Voci=HELPID_MANCTRLPANELVCE>Normal
+3 Edita Voce=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Controlli di Orpheus
+2 Controlli di Orpheus=HELPID_MANPARAMS>Normal
+2 Controlli Audio =HELPID_MANPARAMSAUD>Normal
+2 Controlli  Presentazione=HELPID_MANPARAMSPRES>Normal
+2 Controlli Voce=HELPID_MANPARAMSVOICFX>Normal
+1 Editor delle Eccezioni
+2 Editor delle Eccezioni=HELPID_EXNINTRO>Normal
+2 Eccezioni=HELPID_EXNEXCEPTIONS>Normal
+2 Parole e Fonemi=HELPID_EXNWORDANDPHON>Normal
+2 Utilizzo Editor delle Eccezioni
+3 Utilizzo Editor delle Eccezioni=HELPID_EXNDISPLAY>Normal
+3 Aggiungere una Eccezione =HELPID_EXNADDEXN>Normal
+3 Editare una Eccezione=HELPID_EXNEDITEXN>Normal
+3 Usare i Fonemi=HELPID_EXNUSEPHON>Normal
+3 Cancellare una Eccezione=HELPID_EXNDELEXN>Normal
+3 Ricerca Eccezioni=HELPID_EXNFINDEXN>Normal
+3 Carica e Salva=HELPID_EXNLOADSAVE>Normal
+3 Importare ed Esportare Eccezioni=HELPID_EXNIMPEXP>Normal
+3 Opzioni Editor Eccezioni=HELPID_EXNPROGOPTS>Normal
+1 Suggerimenti e Risoluzione dei problemi
+2 Suggerimenti e Risoluzione dei problemi=HELPID_MANTNT>Normal
+2 Usare Editor delle Eccezioni con uno  Screen Reader=O4175>Normal
+2 In generale=HELPID_MANTNTGEN>Normal
+2 Prestazioni=HELPID_MANTNTPERFORM>Normal
+2 Mixer e Uscita audio diretta=HELPID_MANTNTMIXDS>Normal
+2 Hardware =HELPID_MANTNTHARDMIX>Normal
+2 Supporto Tecnico=HELPID_MANTECHSUPPORT>Normal
+1 Cronologia delle Versioni=O4114>Normal

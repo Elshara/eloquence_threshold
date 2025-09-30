@@ -1,0 +1,49 @@
+:Base orp00044.hlp>main
+:Title Orpheus
+1 Welcome to the Dolphin Orpheus TTS Online Help=O4099@orp00044.hlp>Main
+1 Software Licence=O4174@orp00044.hlp>Normal
+1 Introduction
+2 Introduction=HELPID_MANWELCOME@orp00044.hlp>Normal
+2 What's New=HELPID_MANWHATSNEW@orp00044.hlp>Normal
+1 Installing Dolphin Orpheus TTS
+2 Installing Dolphin Orpheus TTS=HELPID_MANINSTALL@orp00044.hlp>Normal
+2 Network Installation=HELPID_MANNETINSTALL@orp00044.hlp>Normal
+2 Pocket PC Installation=O4615@orp00044.hlp>Normal
+1 Configuring Dolphin Orpheus TTS
+2 Configuring Dolphin Orpheus TTS=HELPID_MANCTRLPANEL@orp00044.hlp>Normal
+2 General=HELPID_MANCTRLPANELGEN@orp00044.hlp>Normal
+2 Audio=HELPID_MANCTRLPANELAUD@orp00044.hlp>Normal
+2 Languages=HELPID_MANCTRLPANELLNG@orp00044.hlp>Normal
+2 Advanced=HELPID_MANCTRLPANELADV@orp00044.hlp>Normal
+2 Voices
+3 Voices=HELPID_MANCTRLPANELVCE@orp00044.hlp>Normal
+3 Edit Voice dialog=HELPID_MANCTRLPANELVCEEDIT@orp00044.hlp>Normal
+1 Dolphin Orpheus TTS Controls
+2 Dolphin Orpheus TTS Controls=HELPID_MANPARAMS@orp00044.hlp>Normal
+2 Audio Controls=HELPID_MANPARAMSAUD@orp00044.hlp>Normal
+2 Presentation Controls=HELPID_MANPARAMSPRES@orp00044.hlp>Normal
+2 Voice Controls=HELPID_MANPARAMSVOICFX@orp00044.hlp>Normal
+1 Exceptions Editor
+2 Exceptions Editor=HELPID_EXNINTRO@orp00044.hlp>Normal
+2 Exceptions=HELPID_EXNEXCEPTIONS@orp00044.hlp>Normal
+2 Words and Phonemes=HELPID_EXNWORDANDPHON@orp00044.hlp>Normal
+2 Using the Exceptions Editor
+3 Using the Exceptions Editor=HELPID_EXNDISPLAY@orp00044.hlp>Normal
+3 Adding an Exception=HELPID_EXNADDEXN@orp00044.hlp>Normal
+3 Editing an Exception=HELPID_EXNEDITEXN@orp00044.hlp>Normal
+3 Using Phonemes=HELPID_EXNUSEPHON@orp00044.hlp>Normal
+3 Deleting an Exception=HELPID_EXNDELEXN@orp00044.hlp>Normal
+3 Searching for Exceptions=HELPID_EXNFINDEXN@orp00044.hlp>Normal
+3 Loading and Saving=HELPID_EXNLOADSAVE@orp00044.hlp>Normal
+3 Importing and Exporting Exceptions=HELPID_EXNIMPEXP@orp00044.hlp>Normal
+3 Exceptions Editor Options=HELPID_EXNPROGOPTS@orp00044.hlp>Normal
+1 Tips & Troubleshooting
+2 Tips & Troubleshooting=HELPID_MANTNT@orp00044.hlp>Normal
+2 Using the Exceptions Editor with a Screen Reader=O4175@orp00044.hlp>Normal
+2 General Troubleshooting=HELPID_MANTNTGEN@orp00044.hlp>Normal
+2 Performance Troubleshooting=HELPID_MANTNTPERFORM@orp00044.hlp>Normal
+2 Mixer and Direct Sound Troubleshooting (Windows 95 Only)=HELPID_MANTNTMIXDS@orp00044.hlp>Normal
+2 Hardware Mixing Troubleshooting=HELPID_MANTNTHARDMIX@orp00044.hlp>Normal
+2 Technical Support=HELPID_MANTECHSUPPORT@orp00044.hlp>Normal
+1 Version History=O4114@orp00044.hlp>Normal
+

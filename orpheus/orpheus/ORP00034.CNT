@@ -1,0 +1,47 @@
+:Base orp00034.hlp>main
+:Title Orpheus
+1 Bienvenidos a la Ayuda en pantalla de Orpheus=O4099>Main
+1 Licencia de software=O4174>Normal
+1 Introducción
+2 Introducción=HELPID_MANWELCOME>Normal
+2 Novedades=HELPID_MANWHATSNEW>Normal
+1 Instalación de Orpheus
+2 Instalación de Orpheus=HELPID_MANINSTALL>Normal
+2 Instalación de red=HELPID_MANNETINSTALL>Normal
+1 Configuración de Orpheus
+2 Configuración de Orpheus=HELPID_MANCTRLPANEL>Normal
+2 General=HELPID_MANCTRLPANELGEN>Normal
+2 Audio=HELPID_MANCTRLPANELAUD>Normal
+2 Idiomas=HELPID_MANCTRLPANELLNG>Normal
+2 Avanzadas=HELPID_MANCTRLPANELADV>Normal
+2 Voces
+3 Voces=HELPID_MANCTRLPANELVCE>Normal
+3 Cuadro de diálogo Editar voz=HELPID_MANCTRLPANELVCEEDIT>Normal
+1 Controles de Orpheus
+2 Controles de Orpheus=HELPID_MANPARAMS>Normal
+2 Controles de audio=HELPID_MANPARAMSAUD>Normal
+2 Controles de presentación=HELPID_MANPARAMSPRES>Normal
+2 Controles de la voz=HELPID_MANPARAMSVOICFX>Normal
+1 Editor de excepciones
+2 Editor de excepciones=HELPID_EXNINTRO>Normal
+2 Excepciones=HELPID_EXNEXCEPTIONS>Normal
+2 Palabras y fonemas=HELPID_EXNWORDANDPHON>Normal
+2 Uso del Editor de excepciones
+3 Uso del Editor de excepciones=HELPID_EXNDISPLAY>Normal
+3 Agregar una excepción=HELPID_EXNADDEXN>Normal
+3 Editar una excepción=HELPID_EXNEDITEXN>Normal
+3 Utilizar fonemas=HELPID_EXNUSEPHON>Normal
+3 Eliminar una excepción=HELPID_EXNDELEXN>Normal
+3 Buscar excepciones=HELPID_EXNFINDEXN>Normal
+3 Cargar y guardar=HELPID_EXNLOADSAVE>Normal
+3 Importar y exportar excepciones=HELPID_EXNIMPEXP>Normal
+3 Opciones del Editor de excepciones=HELPID_EXNPROGOPTS>Normal
+1 Sugerencias y solución de problemas
+2 Sugerencias y solución de problemas=HELPID_MANTNT>Normal
+2 Uso del Editor de excepciones con un lector de pantalla=O4175>Normal
+2 Solución general de problemas=HELPID_MANTNTGEN>Normal
+2 Solución de problemas de rendimiento=HELPID_MANTNTPERFORM>Normal
+2 Solución de problemas del mezclador y de Direct Sound (sólo para Windows 95)=HELPID_MANTNTMIXDS>Normal
+2 Solución de problemas de las mezclas por hardware=HELPID_MANTNTHARDMIX>Normal
+2 Soporte técnico=HELPID_MANTECHSUPPORT>Normal
+1 Historial de versiones=O4114>Normal
