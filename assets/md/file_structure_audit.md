@@ -52,6 +52,9 @@ Document future updates here as you work through the backlog so the history of t
 - **Root build wrapper now seeds PYTHONPATH.** Calling `python build.py` from the repository root now injects `assets/py/` onto `sys.path` before forwarding execution to the real helper. This guarantees Python 3.13+ environments can resolve `resource_paths` without manual `PYTHONPATH` edits when we package 32-bit and 64-bit builds for NVDA alpha snapshots.
 - **Build execution tracing shipped.** `python build.py --trace-json assets/json/build_execution_trace.json --trace-markdown assets/md/build_execution_trace.md --no-download --insecure --output dist/test.nvda-addon` now emits machine- and contributor-friendly reports that track which helpers fired, how many optional directories were copied, and where follow-up NVDA/CodeQL validation remains. The Markdown report feeds directly into reviewer discussions while the JSON log can seed future automation that enforces coverage of the packaging pipeline.
 
+- **Regression suite verified (2025-10-27).** Re-ran `python -m unittest discover assets/py 'test_*.py'` on Python 3.13 to make sure the extension-first loaders, resource-path shim, and NV Speech Player helpers still pass under the NVDA alpha-52731 cadence. The run exercised 77 tests (one skip for the cached NV Access provenance check) and is ready for CodeQL capture.
+- **Offline packaging reheated (2025-10-27).** Built `dist/test.nvda-addon` with `python build.py --no-download --insecure --output dist/test.nvda-addon`, confirming that the staging helper mirrored the `assets/` buckets, bundled `speechdata/` for the remaining extensionless corpora, and kept the runtime warnings quiet because `assets/dll/eci.dll` is present. Log the next drill with `--trace-json/--trace-markdown` once additional helpers fire so we can chart coverage for NVDA release rehearsals.
+
 ### Packaging execution map (2025-10-26)
 
 Running `python build.py --no-download --insecure --output dist/test.nvda-addon` exercises a specific slice of the packaging pipeline. Track which helpers fired so we can target refactors and Python 3.13 compatibility work:
@@ -72,7 +75,7 @@ Running `python build.py --no-download --insecure --output dist/test.nvda-addon`
 
 Helpers **not** triggered in this offline drill—`ensure_template()`'s download branch, architecture-specific `copy_optional_directory()` copies, and the legacy `eloquence_data` staging—remain queued for validation once we attach cached NVDA runtimes or rehearse with historical add-on templates. Document the next run when those branches execute so we can confirm 32-bit/64-bit parity before NVDA alpha sign-off.
 
-### Current remediation queue (update 2025-10-26)
+### Current remediation queue (update 2025-10-27)
 
 - [ ] Update the Eloquence driver and helper scripts to read DLL, `.syn`, and configuration assets exclusively through `resource_paths`, then validate on NVDA alpha-52731. *(Packaging helper updated; runtime modules still pending end-to-end verification.)*
 - [ ] Port NV Speech Player phoneme and language dictionaries out of `speechdata/` or document loader exceptions when extensions cannot change.
@@ -80,6 +83,7 @@ Helpers **not** triggered in this offline drill—`ensure_template()`'s download
 - [ ] Decide on a permanent home for test fixtures (`tests/fixtures/` vs. `assets/txt/tests_*`) and wire them into `python -m unittest discover assets/py 'test_*.py'` once the loader shims settle.
 - [ ] Review `.pyo` and other historical cache files; if they no longer serve NVDA or CodeQL workflows, stage them for deletion and record the rationale here before removing them from the tree.
 - [ ] Use [`assets/md/speechdata_extensionless_inventory.md`](speechdata_extensionless_inventory.md) to plan extension or loader updates for the 225 `binary/unknown` files—primarily eSpeak NG dictionaries—so NVDA can keep loading them even if we adopt suffixes or shims.
+- [ ] Document which build helpers remain unexercised (`copy_optional_directory` branches for cached 32-bit/64-bit payloads, template download fallbacks) and schedule rehearsals against cached NVDA snapshots so CodeQL can trace their Python 3.13 code paths.
 
 ## Automation helpers
 
