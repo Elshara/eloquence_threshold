@@ -36,6 +36,15 @@ class BuildCliFlagTests(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 build.parse_args(["--speechdata-subtree", "/absolute/path"])
 
+        with mock.patch.object(sys, "stderr", io.StringIO()):
+            with self.assertRaises(SystemExit):
+                build.parse_args(["--list-speechdata-depth", "0"])
+
+    def test_parse_args_accepts_list_flags(self) -> None:
+        args = build.parse_args(["--list-speechdata", "--list-speechdata-depth", "3"])
+        self.assertTrue(args.list_speechdata)
+        self.assertEqual(args.list_speechdata_depth, 3)
+
     def test_stage_speechdata_tree_subset(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             speechdata_root = Path(tmpdir, "speechdata")
@@ -90,6 +99,63 @@ class BuildCliFlagTests(unittest.TestCase):
         self.assertFalse(copied)
         self.assertEqual(details["mode"], "skipped")
         self.assertEqual(details["missing"], ["foo"])
+
+    def test_discover_speechdata_subtrees_orders_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            speechdata_root = Path(tmpdir, "speechdata")
+            (speechdata_root / "eloquence" / "dll").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "dll" / "eci.dll").write_bytes(b"dll")
+            (speechdata_root / "eloquence" / "syn").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "syn" / "voice.syn").write_bytes(b"syn")
+            (speechdata_root / "nv_speech_player").mkdir()
+            (speechdata_root / "nv_speech_player" / "nvSpeechPlayer.dll").write_bytes(b"np")
+            (speechdata_root / "README").write_text("notes", encoding="utf-8")
+
+            with mock.patch.object(
+                build.resource_paths,
+                "speechdata_root",
+                return_value=speechdata_root,
+            ):
+                entries = build.discover_speechdata_subtrees(max_depth=2)
+
+        self.assertEqual(
+            entries,
+            [
+                "README",
+                "eloquence",
+                "eloquence/dll",
+                "eloquence/dll/eci.dll",
+                "eloquence/syn",
+                "eloquence/syn/voice.syn",
+                "nv_speech_player",
+                "nv_speech_player/nvSpeechPlayer.dll",
+            ],
+        )
+
+    def test_discover_speechdata_subtrees_respects_depth(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            speechdata_root = Path(tmpdir, "speechdata")
+            (speechdata_root / "eloquence" / "dll").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "dll" / "eci.dll").write_bytes(b"dll")
+
+            with mock.patch.object(
+                build.resource_paths,
+                "speechdata_root",
+                return_value=speechdata_root,
+            ):
+                entries = build.discover_speechdata_subtrees(max_depth=1)
+
+        self.assertEqual(entries, ["eloquence"])
+
+    def test_discover_speechdata_subtrees_handles_missing_root(self) -> None:
+        with mock.patch.object(
+            build.resource_paths,
+            "speechdata_root",
+            return_value=Path("/missing"),
+        ):
+            entries = build.discover_speechdata_subtrees(max_depth=2)
+
+        self.assertEqual(entries, [])
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest main hook

@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import ssl
 import sys
@@ -83,6 +84,7 @@ TRACE_REGISTRY = {
     "stage_synth_driver_modules": "Copy the Eloquence synth driver modules into synthDrivers/ for NVDA.",
     "stage_assets_tree": "Mirror the extension-scoped assets/ hierarchy into the packaged add-on.",
     "stage_speechdata_tree": "Bundle temporary speechdata/ payloads that still need extension triage.",
+    "discover_speechdata_subtrees": "Enumerate candidate speechdata/ entries for targeted packaging drills.",
     "copy_optional_directory": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
     "has_runtime_assets": "Scan known locations for eci.dll so packaging can warn about missing runtimes.",
     "write_archive": "Zip the staged tree into an .nvda-addon payload ready for NVDA installation.",
@@ -305,6 +307,23 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--list-speechdata",
+        action="store_true",
+        help=(
+            "List available speechdata/ entries (up to the configured depth) and exit "
+            "without packaging."
+        ),
+    )
+    parser.add_argument(
+        "--list-speechdata-depth",
+        type=int,
+        default=2,
+        metavar="DEPTH",
+        help=(
+            "Directory depth to scan when listing speechdata/ entries (default: %(default)s)."
+        ),
+    )
+    parser.add_argument(
         "--trace-json",
         type=Path,
         help="Write a JSON report summarising which helpers executed during the build",
@@ -318,6 +337,9 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 
     if args.no_speechdata and args.speechdata_subtree:
         parser.error("--no-speechdata cannot be combined with --speechdata-subtree")
+
+    if args.list_speechdata_depth < 1:
+        parser.error("--list-speechdata-depth must be at least 1")
 
     normalised: list[str] = []
     root_requested = False
@@ -593,6 +615,58 @@ def stage_assets_tree(staging_dir: Path) -> bool:
     return copied_any
 
 
+def discover_speechdata_subtrees(*, max_depth: int = 2) -> List[str]:
+    """Return candidate ``speechdata/`` entries up to ``max_depth`` directories deep."""
+
+    root = resource_paths.speechdata_root()
+    if max_depth < 1:
+        max_depth = 1
+
+    entries: List[str] = []
+    if not root.is_dir():
+        record_trace(
+            "discover_speechdata_subtrees",
+            details={
+                "exists": False,
+                "max_depth": max_depth,
+                "entries": 0,
+            },
+        )
+        return entries
+
+    for dirpath, dirnames, filenames in os.walk(root):
+        relative_dir = Path(dirpath).relative_to(root)
+        depth = len(relative_dir.parts)
+        dirnames.sort()
+        filenames.sort()
+
+        if depth > max_depth:
+            dirnames[:] = []
+            continue
+
+        if depth >= max_depth:
+            dirnames[:] = []
+
+        if depth > 0:
+            entries.append(relative_dir.as_posix())
+
+        for filename in filenames:
+            if depth == 0:
+                entries.append(filename)
+            else:
+                entries.append((relative_dir / filename).as_posix())
+
+    record_trace(
+        "discover_speechdata_subtrees",
+        details={
+            "exists": True,
+            "max_depth": max_depth,
+            "entries": len(entries),
+        },
+    )
+    return entries
+
+
 def stage_speechdata_tree(
     staging_dir: Path,
     *,
@@ -744,8 +818,43 @@ def main() -> None:
             "template_url": args.template_url,
             "no_speechdata": args.no_speechdata,
             "speechdata_subtrees": args.speechdata_subtree,
+            "list_speechdata": args.list_speechdata,
+            "list_speechdata_depth": args.list_speechdata_depth,
         },
     )
+
+    if args.list_speechdata:
+        subtrees = discover_speechdata_subtrees(max_depth=args.list_speechdata_depth)
+        speechdata_root = resource_paths.speechdata_root()
+        if subtrees:
+            print(
+                "Discovered speechdata entries (depth ≤ "
+                f"{args.list_speechdata_depth}):"
+            )
+            for entry in subtrees:
+                print(f" - {entry}")
+        elif speechdata_root.is_dir():
+            print(
+                "speechdata directory exists but no entries were found within the "
+                f"requested depth ({args.list_speechdata_depth})."
+            )
+        else:
+            print(
+                "speechdata directory not found – stage cached datasets before "
+                "packaging or adjust the repository checkout."
+            )
+
+        emit_trace_reports(
+            json_path=args.trace_json,
+            markdown_path=args.trace_markdown,
+            context={
+                "mode": "list_speechdata",
+                "speechdata_entries": subtrees,
+                "speechdata_root": speechdata_root,
+                "speechdata_depth": args.list_speechdata_depth,
+            },
+        )
+        return
 
     _validate_template_url(str(args.template_url))
     record_trace(

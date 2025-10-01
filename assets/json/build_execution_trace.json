@@ -175,6 +175,12 @@
       ],
       "triggered": true
     },
+    "discover_speechdata_subtrees": {
+      "calls": 0,
+      "description": "Enumerate candidate speechdata/ entries for targeted packaging drills.",
+      "events": [],
+      "triggered": false
+    },
     "ensure_template": {
       "calls": 1,
       "description": "Locate or download the baseline template archive that seeds legacy binaries.",
@@ -203,6 +209,8 @@
       "events": [
         {
           "insecure": true,
+          "list_speechdata": false,
+          "list_speechdata_depth": 2,
           "no_download": true,
           "no_speechdata": false,
           "output": "dist/test.nvda-addon",
