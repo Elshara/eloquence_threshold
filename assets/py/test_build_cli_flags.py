@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import io
+import json
 import sys
 import tempfile
 import unittest
@@ -39,6 +40,10 @@ class BuildCliFlagTests(unittest.TestCase):
         with mock.patch.object(sys, "stderr", io.StringIO()):
             with self.assertRaises(SystemExit):
                 build.parse_args(["--list-speechdata-depth", "0"])
+
+        with mock.patch.object(sys, "stderr", io.StringIO()):
+            with self.assertRaises(SystemExit):
+                build.parse_args(["--list-speechdata-output", "report.json"])
 
     def test_parse_args_accepts_list_flags(self) -> None:
         args = build.parse_args(["--list-speechdata", "--list-speechdata-depth", "3"])
@@ -156,6 +161,56 @@ class BuildCliFlagTests(unittest.TestCase):
             entries = build.discover_speechdata_subtrees(max_depth=2)
 
         self.assertEqual(entries, [])
+
+    def test_summarise_speechdata_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            speechdata_root = Path(tmpdir)
+            (speechdata_root / "eloquence" / "dll").mkdir(parents=True)
+            dll = speechdata_root / "eloquence" / "dll" / "eci.dll"
+            dll.write_bytes(b"dll")
+            doc = speechdata_root / "README"
+            doc.write_text("notes", encoding="utf-8")
+
+            entries = ["eloquence", "eloquence/dll", "eloquence/dll/eci.dll", "README"]
+            summary = build.summarise_speechdata_entries(entries, root=speechdata_root)
+
+        summary_by_path = {item["path"]: item for item in summary}
+        self.assertEqual(summary_by_path["eloquence"]["kind"], "directory")
+        self.assertIn("children", summary_by_path["eloquence"])
+        dll_entry = summary_by_path["eloquence/dll/eci.dll"]
+        self.assertEqual(dll_entry["kind"], "file")
+        self.assertEqual(dll_entry["extension"], "dll")
+        self.assertFalse(dll_entry["extensionless"])
+        readme_entry = summary_by_path["README"]
+        self.assertEqual(readme_entry["kind"], "file")
+        self.assertTrue(readme_entry["extensionless"])
+
+    def test_list_speechdata_output_creates_report(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            speechdata_root = Path(tmpdir, "speechdata")
+            (speechdata_root / "eloquence" / "dll").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "dll" / "eci.dll").write_bytes(b"dll")
+            output_path = Path(tmpdir, "report.json")
+
+            argv = [
+                "build.py",
+                "--list-speechdata",
+                "--list-speechdata-depth",
+                "2",
+                "--list-speechdata-output",
+                str(output_path),
+            ]
+            with mock.patch.object(sys, "argv", argv):
+                with mock.patch.object(build.resource_paths, "speechdata_root", return_value=speechdata_root):
+                    with mock.patch.object(sys, "stdout", new=io.StringIO()):
+                        build.main()
+
+            data = json.loads(output_path.read_text(encoding="utf-8"))
+        self.assertTrue(data["root_exists"])
+        self.assertEqual(data["max_depth"], 2)
+        discovered_paths = [entry["path"] for entry in data["entries"]]
+        self.assertIn("eloquence", discovered_paths)
+        self.assertIn("eloquence/dll/eci.dll", discovered_paths)
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest main hook

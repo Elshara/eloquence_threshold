@@ -85,6 +85,7 @@ TRACE_REGISTRY = {
     "stage_assets_tree": "Mirror the extension-scoped assets/ hierarchy into the packaged add-on.",
     "stage_speechdata_tree": "Bundle temporary speechdata/ payloads that still need extension triage.",
     "discover_speechdata_subtrees": "Enumerate candidate speechdata/ entries for targeted packaging drills.",
+    "write_speechdata_list_output": "Serialise speechdata listings when --list-speechdata-output is supplied.",
     "copy_optional_directory": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
     "has_runtime_assets": "Scan known locations for eci.dll so packaging can warn about missing runtimes.",
     "write_archive": "Zip the staged tree into an .nvda-addon payload ready for NVDA installation.",
@@ -324,6 +325,14 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--list-speechdata-output",
+        type=Path,
+        metavar="JSON_PATH",
+        help=(
+            "Write a JSON report describing discovered speechdata entries when listing."
+        ),
+    )
+    parser.add_argument(
         "--trace-json",
         type=Path,
         help="Write a JSON report summarising which helpers executed during the build",
@@ -340,6 +349,9 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 
     if args.list_speechdata_depth < 1:
         parser.error("--list-speechdata-depth must be at least 1")
+
+    if args.list_speechdata_output and not args.list_speechdata:
+        parser.error("--list-speechdata-output requires --list-speechdata")
 
     normalised: list[str] = []
     root_requested = False
@@ -667,6 +679,88 @@ def discover_speechdata_subtrees(*, max_depth: int = 2) -> List[str]:
     return entries
 
 
+def summarise_speechdata_entries(
+    entries: Sequence[str],
+    *,
+    root: Path,
+) -> List[Dict[str, object]]:
+    """Describe discovered speechdata entries with lightweight metadata."""
+
+    summary: List[Dict[str, object]] = []
+    for entry in entries:
+        resolved = root / entry
+        details: Dict[str, object] = {"path": entry}
+        try:
+            stat_result = resolved.stat()
+        except FileNotFoundError:
+            details["kind"] = "missing"
+            summary.append(details)
+            continue
+
+        if resolved.is_dir():
+            files = 0
+            directories = 0
+            try:
+                for child in resolved.iterdir():
+                    if child.is_dir():
+                        directories += 1
+                    elif child.is_file():
+                        files += 1
+            except OSError as error:
+                details["kind"] = "directory"
+                details["child_scan_error"] = type(error).__name__
+            else:
+                details["kind"] = "directory"
+                details["children"] = {
+                    "directories": directories,
+                    "files": files,
+                }
+        else:
+            details["kind"] = "file"
+            suffix = resolved.suffix
+            details["size_bytes"] = stat_result.st_size
+            details["extension"] = suffix[1:] if suffix else ""
+            details["extensionless"] = not bool(suffix)
+
+        summary.append(details)
+
+    return summary
+
+
+def write_speechdata_list_output(
+    output_path: Path,
+    *,
+    speechdata_root: Path,
+    depth: int,
+    entries: Sequence[str],
+) -> Dict[str, object]:
+    """Write a JSON payload describing the speechdata listing to *output_path*."""
+
+    output_path = output_path.expanduser()
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    root_exists = speechdata_root.is_dir()
+    payload: Dict[str, object] = {
+        "speechdata_root": speechdata_root.as_posix(),
+        "root_exists": root_exists,
+        "max_depth": depth,
+        "entries": [] if not root_exists else summarise_speechdata_entries(entries, root=speechdata_root),
+    }
+
+    with output_path.open("w", encoding="utf-8") as handle:
+        json.dump(payload, handle, indent=2, sort_keys=True)
+
+    record_trace(
+        "write_speechdata_list_output",
+        details={
+            "output": output_path,
+            "entries": len(entries),
+            "root_exists": root_exists,
+        },
+    )
+
+    return payload
+
+
 def stage_speechdata_tree(
     staging_dir: Path,
     *,
@@ -820,12 +914,14 @@ def main() -> None:
             "speechdata_subtrees": args.speechdata_subtree,
             "list_speechdata": args.list_speechdata,
             "list_speechdata_depth": args.list_speechdata_depth,
+            "list_speechdata_output": args.list_speechdata_output,
         },
     )
 
     if args.list_speechdata:
         subtrees = discover_speechdata_subtrees(max_depth=args.list_speechdata_depth)
         speechdata_root = resource_paths.speechdata_root()
+        payload: Optional[Dict[str, object]] = None
         if subtrees:
             print(
                 "Discovered speechdata entries (depth ≤ "
@@ -844,6 +940,15 @@ def main() -> None:
                 "packaging or adjust the repository checkout."
             )
 
+        if args.list_speechdata_output is not None:
+            payload = write_speechdata_list_output(
+                args.list_speechdata_output,
+                speechdata_root=speechdata_root,
+                depth=args.list_speechdata_depth,
+                entries=subtrees,
+            )
+            print(f"Wrote speechdata listing to {args.list_speechdata_output}")
+
         emit_trace_reports(
             json_path=args.trace_json,
             markdown_path=args.trace_markdown,
@@ -852,6 +957,7 @@ def main() -> None:
                 "speechdata_entries": subtrees,
                 "speechdata_root": speechdata_root,
                 "speechdata_depth": args.list_speechdata_depth,
+                "speechdata_listing": payload,
             },
         )
         return
