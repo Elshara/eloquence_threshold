@@ -37,7 +37,7 @@ import socket
 import ipaddress
 import zipfile
 from pathlib import Path
-from typing import Dict, Iterable, Optional, Tuple, List
+from typing import Dict, Iterable, Optional, Tuple, List, Sequence
 
 import resource_paths
 
@@ -260,7 +260,7 @@ ARCH_DIRECTORIES: Tuple[Tuple[str, Path, str], ...] = (
 )
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build the Eloquence NVDA add-on")
     parser.add_argument(
         "--output",
@@ -314,7 +314,7 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help="Write a Markdown report summarising which helpers executed during the build",
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     if args.no_speechdata and args.speechdata_subtree:
         parser.error("--no-speechdata cannot be combined with --speechdata-subtree")
@@ -322,12 +322,15 @@ def parse_args() -> argparse.Namespace:
     normalised: list[str] = []
     root_requested = False
     for entry in args.speechdata_subtree:
-        candidate = Path(entry)
+        normalised_entry = entry.replace("\\", "/")
+        candidate = Path(normalised_entry)
         if candidate.is_absolute() or any(part == ".." for part in candidate.parts):
             parser.error(
                 "--speechdata-subtree values must be relative paths beneath speechdata/."
             )
         filtered_parts = [part for part in candidate.parts if part not in ("", ".")]
+        if filtered_parts and filtered_parts[0].lower() == "speechdata":
+            filtered_parts = filtered_parts[1:]
         if not filtered_parts:
             root_requested = True
             continue
@@ -614,13 +617,14 @@ def stage_speechdata_tree(
                 "reason": "skip_requested",
                 "mode": "skipped",
                 "requested": len(requested),
+                "missing": list(requested),
             },
         )
         return False, {
             "mode": "skipped",
             "requested": len(requested),
             "copied_entries": 0,
-            "missing": [],
+            "missing": list(requested),
             "included": [],
         }
 
@@ -633,13 +637,14 @@ def stage_speechdata_tree(
                 "reason": "missing_directory",
                 "mode": "missing",
                 "requested": len(requested),
+                "missing": list(requested),
             },
         )
         return False, {
             "mode": "missing",
             "requested": len(requested),
             "copied_entries": 0,
-            "missing": [],
+            "missing": list(requested),
             "included": [],
         }
 

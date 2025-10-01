@@ -6,6 +6,16 @@
     "legacy_runtime_copied": false,
     "output": "dist/test.nvda-addon",
     "speechdata_copied": true,
+    "speechdata_details": {
+      "copied_entries": 2,
+      "included": [
+        "eloquence/dll",
+        "eloquence/syn"
+      ],
+      "missing": [],
+      "mode": "subset",
+      "requested": 2
+    },
     "template": null,
     "template_used": false
   },
@@ -21,7 +31,7 @@
       "triggered": true
     },
     "copy_optional_directory": {
-      "calls": 21,
+      "calls": 23,
       "description": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
       "events": [
         {
@@ -86,6 +96,12 @@
         },
         {
           "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/newfon",
+          "preserve_existing": false,
+          "source": "assets/newfon"
+        },
+        {
+          "copied": true,
           "destination": "<temp>/eloquence_build/<run>/assets/pdf",
           "preserve_existing": false,
           "source": "assets/pdf"
@@ -104,9 +120,15 @@
         },
         {
           "copied": true,
-          "destination": "<temp>/eloquence_build/<run>/speechdata",
+          "destination": "<temp>/eloquence_build/<run>/speechdata/eloquence/dll",
           "preserve_existing": false,
-          "source": "speechdata"
+          "source": "speechdata/eloquence/dll"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/speechdata/eloquence/syn",
+          "preserve_existing": false,
+          "source": "speechdata/eloquence/syn"
         },
         {
           "copied": false,
@@ -182,7 +204,12 @@
         {
           "insecure": true,
           "no_download": true,
+          "no_speechdata": false,
           "output": "dist/test.nvda-addon",
+          "speechdata_subtrees": [
+            "eloquence/dll",
+            "eloquence/syn"
+          ],
           "template": "eloquence_original.nvda-addon",
           "template_url": "https://github.com/pumper42nickel/eloquence_threshold/releases/download/v0.20210417.01/eloquence.nvda-addon"
         }
@@ -195,7 +222,7 @@
       "events": [
         {
           "copied": true,
-          "entries": 13
+          "entries": 14
         }
       ],
       "triggered": true
@@ -215,7 +242,15 @@
       "description": "Bundle temporary speechdata/ payloads that still need extension triage.",
       "events": [
         {
-          "copied": true
+          "copied": true,
+          "copied_entries": 2,
+          "included": [
+            "eloquence/dll",
+            "eloquence/syn"
+          ],
+          "missing": [],
+          "mode": "subset",
+          "requested": 2
         }
       ],
       "triggered": true
@@ -246,7 +281,7 @@
       "description": "Zip the staged tree into an .nvda-addon payload ready for NVDA installation.",
       "events": [
         {
-          "files_packaged": 1277,
+          "files_packaged": 276,
           "output": "dist/test.nvda-addon"
         }
       ],
