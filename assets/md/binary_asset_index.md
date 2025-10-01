@@ -1,6 +1,6 @@
 # Speechdata binary index
 
-Generated on 2025-10-01T02:39:50.375099+00:00 to document which binaries live under `speechdata/` and which NVDA loaders still consume them.
+Generated on 2025-10-01T03:06:23.122397+00:00 to document which binaries live under `speechdata/` and which NVDA loaders still consume them.
 
 ## bestspeech
 Legacy Taiwanese driver kept for provenance research.
@@ -281,16 +281,6 @@ Primary Eloquence runtime shipped to NVDA users; DLLs and .SYN voices are requir
 | festival/lib/word-mapping.scm | .scm | 1936 | text |  |
 | festlib.dll | .dll | 2277376 | binary | No active loader references. |
 
-## fonixtalk
-FonixTalk successor to DECtalk maintained for archival driver validation against NVDA alpha builds.
-
-**Loader modules:** assets/py/_fonixtalk.py
-
-0 files | 0 binary | 0 text
-
-| File | Extension | Size (bytes) | Classification | Notes |
-| --- | --- | ---: | --- | --- |
-
 ## gregor
 Orpheus/Gregor hybrid runtime archived for compatibility tests.
 
@@ -533,7 +523,7 @@ Unclassified speech archives awaiting provenance research before promotion into 
 ## newfon
 **Loader modules:** _None_ (pending migration)
 
-38 files | 11 binary | 27 text
+26 files | 11 binary | 15 text
 
 | File | Extension | Size (bytes) | Classification | Notes |
 | --- | --- | ---: | --- | --- |
@@ -545,11 +535,6 @@ Unclassified speech archives awaiting provenance research before promotion into 
 | bin/newfon_nvda.dll | .dll | 121344 | binary | No active loader references. |
 | dict.dat | .dat | 7462912 | binary | No active loader references. |
 | dict.dll | .dll | 34304 | binary | No active loader references. |
-| doc/en/readme.html | .html | 6582 | text |  |
-| doc/en/readme.md | .md | 5641 | text |  |
-| doc/ru/readme.html | .html | 10467 | text |  |
-| doc/ru/readme.md | .md | 9526 | text |  |
-| doc/style.css | .css | 407 | text |  |
 | languages/__init__.py | .py | 0 | text |  |
 | languages/en.py | .py | 1769 | text |  |
 | languages/hr.py | .py | 3480 | text |  |
@@ -559,20 +544,13 @@ Unclassified speech archives awaiting provenance research before promotion into 
 | languages/sh_numbers.py | .py | 12585 | text |  |
 | languages/sr.py | .py | 3285 | text |  |
 | languages/uk.py | .py | 3617 | text |  |
-| licenses/GNU GENERAL PUBLIC LICENSE.txt | .txt | 18091 | text |  |
-| licenses/NewfonScriptsLicense.txt | .txt | 1158 | text |  |
-| licenses/libsamplerate_license.txt | .txt | 350 | text |  |
-| licenses/newfon_license_en.txt | .txt | 776 | text |  |
-| licenses/newfon_license_ru.txt | .txt | 1289 | text |  |
 | locale/ru/LC_MESSAGES/nvda.mo | .mo | 1873 | binary | No active loader references. |
 | locale/ru/LC_MESSAGES/nvda.po | .po | 3045 | text |  |
 | locale/ru/manifest.ini | .ini | 166 | text |  |
 | locale/uk/LC_MESSAGES/nvda.mo | .mo | 1638 | binary | No active loader references. |
 | locale/uk/LC_MESSAGES/nvda.po | .po | 2524 | text |  |
 | locale/uk/manifest.ini | .ini | 166 | text |  |
-| newfon.json | .json | 1031 | text |  |
 | newfon.py | .py | 8698 | text |  |
-| newfon_license.txt | .txt | 564 | text |  |
 | newfon_nvda.dll | .dll | 143872 | binary | No active loader references. |
 | sdrvxpdb.dll | .dll | 335872 | binary | No active loader references. |
 

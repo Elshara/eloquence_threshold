@@ -3,14 +3,6 @@
   "buckets": [
     {
       "directory_count": 0,
-      "extension": "bin",
-      "file_count": 20,
-      "mismatch_count": 0,
-      "mismatched_files": [],
-      "path": "bin"
-    },
-    {
-      "directory_count": 0,
       "extension": "cjk",
       "file_count": 1,
       "mismatch_count": 0,
@@ -51,22 +43,6 @@
     },
     {
       "directory_count": 0,
-      "extension": "dll",
-      "file_count": 44,
-      "mismatch_count": 0,
-      "mismatched_files": [],
-      "path": "dll"
-    },
-    {
-      "directory_count": 0,
-      "extension": "exe",
-      "file_count": 2,
-      "mismatch_count": 0,
-      "mismatched_files": [],
-      "path": "exe"
-    },
-    {
-      "directory_count": 0,
       "extension": "hlp",
       "file_count": 32,
       "mismatch_count": 0,
@@ -83,14 +59,6 @@
     },
     {
       "directory_count": 0,
-      "extension": "ico",
-      "file_count": 2,
-      "mismatch_count": 0,
-      "mismatched_files": [],
-      "path": "ico"
-    },
-    {
-      "directory_count": 0,
       "extension": "ini",
       "file_count": 4,
       "mismatch_count": 0,
@@ -100,7 +68,7 @@
     {
       "directory_count": 0,
       "extension": "json",
-      "file_count": 43,
+      "file_count": 46,
       "mismatch_count": 0,
       "mismatched_files": [],
       "path": "json"
@@ -108,10 +76,32 @@
     {
       "directory_count": 0,
       "extension": "md",
-      "file_count": 31,
+      "file_count": 36,
       "mismatch_count": 0,
       "mismatched_files": [],
       "path": "md"
+    },
+    {
+      "directory_count": 4,
+      "extension": "newfon",
+      "file_count": 13,
+      "mismatch_count": 13,
+      "mismatched_files": [
+        "README.txt",
+        "doc/en/readme.html",
+        "doc/en/readme.md",
+        "doc/ru/readme.html",
+        "doc/ru/readme.md",
+        "doc/style.css",
+        "licenses/GNU GENERAL PUBLIC LICENSE.txt",
+        "licenses/NewfonScriptsLicense.txt",
+        "licenses/libsamplerate_license.txt",
+        "licenses/newfon_license_en.txt",
+        "licenses/newfon_license_ru.txt",
+        "newfon.json",
+        "newfon_license.txt"
+      ],
+      "path": "newfon"
     },
     {
       "directory_count": 0,
@@ -124,34 +114,10 @@
     {
       "directory_count": 0,
       "extension": "py",
-      "file_count": 75,
+      "file_count": 77,
       "mismatch_count": 0,
       "mismatched_files": [],
       "path": "py"
-    },
-    {
-      "directory_count": 0,
-      "extension": "pyc",
-      "file_count": 1,
-      "mismatch_count": 0,
-      "mismatched_files": [],
-      "path": "pyc"
-    },
-    {
-      "directory_count": 0,
-      "extension": "pyo",
-      "file_count": 2,
-      "mismatch_count": 0,
-      "mismatched_files": [],
-      "path": "pyo"
-    },
-    {
-      "directory_count": 0,
-      "extension": "syn",
-      "file_count": 36,
-      "mismatch_count": 0,
-      "mismatched_files": [],
-      "path": "syn"
     },
     {
       "directory_count": 0,
@@ -163,14 +129,6 @@
     },
     {
       "directory_count": 0,
-      "extension": "uil",
-      "file_count": 13,
-      "mismatch_count": 0,
-      "mismatched_files": [],
-      "path": "uil"
-    },
-    {
-      "directory_count": 0,
       "extension": "voice",
       "file_count": 2,
       "mismatch_count": 0,
@@ -179,7 +137,7 @@
     }
   ],
   "top_level_files": [],
-  "total_buckets": 22,
-  "total_directories": 0,
-  "total_files": 385
+  "total_buckets": 15,
+  "total_directories": 4,
+  "total_files": 288
 }

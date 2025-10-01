@@ -1,4 +1,114 @@
 {
+  "bestspeech": {
+    "total_files": 2,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 2
+    }
+  },
+  "bestspeech/dll": {
+    "total_files": 2,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 2
+    }
+  },
+  "brailab": {
+    "total_files": 2,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 1,
+      ".pyo": 1
+    }
+  },
+  "brailab/compiled": {
+    "total_files": 1,
+    "extensionless_files": 0,
+    "extensions": {
+      ".pyo": 1
+    }
+  },
+  "brailab/dll": {
+    "total_files": 1,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 1
+    }
+  },
+  "captain": {
+    "total_files": 1,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 1
+    }
+  },
+  "captain/dll": {
+    "total_files": 1,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 1
+    }
+  },
+  "dectalk": {
+    "total_files": 18,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 18
+    }
+  },
+  "dectalk/dll": {
+    "total_files": 18,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 18
+    }
+  },
+  "eloquence": {
+    "total_files": 70,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 17,
+      ".exe": 2,
+      ".ico": 2,
+      ".syn": 36,
+      ".uil": 13
+    }
+  },
+  "eloquence/dll": {
+    "total_files": 17,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 17
+    }
+  },
+  "eloquence/exe": {
+    "total_files": 2,
+    "extensionless_files": 0,
+    "extensions": {
+      ".exe": 2
+    }
+  },
+  "eloquence/ico": {
+    "total_files": 2,
+    "extensionless_files": 0,
+    "extensions": {
+      ".ico": 2
+    }
+  },
+  "eloquence/syn": {
+    "total_files": 36,
+    "extensionless_files": 0,
+    "extensions": {
+      ".syn": 36
+    }
+  },
+  "eloquence/uil": {
+    "total_files": 13,
+    "extensionless_files": 0,
+    "extensions": {
+      ".uil": 13
+    }
+  },
   "festival": {
     "total_files": 128,
     "extensionless_files": 9,
@@ -40,6 +150,44 @@
       ".scm": 99
     }
   },
+  "gregor": {
+    "total_files": 3,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 1,
+      ".pyc": 1,
+      ".pyo": 1
+    }
+  },
+  "gregor/compiled": {
+    "total_files": 2,
+    "extensionless_files": 0,
+    "extensions": {
+      ".pyc": 1,
+      ".pyo": 1
+    }
+  },
+  "gregor/dll": {
+    "total_files": 1,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 1
+    }
+  },
+  "legacy": {
+    "total_files": 8,
+    "extensionless_files": 0,
+    "extensions": {
+      ".bin": 8
+    }
+  },
+  "legacy/bin": {
+    "total_files": 8,
+    "extensionless_files": 0,
+    "extensions": {
+      ".bin": 8
+    }
+  },
   "mbrulainespeak": {
     "total_files": 200,
     "extensionless_files": 197,
@@ -54,20 +202,15 @@
     "extensions": {}
   },
   "newfon": {
-    "total_files": 38,
+    "total_files": 26,
     "extensionless_files": 0,
     "extensions": {
-      ".css": 1,
       ".dat": 2,
       ".dll": 7,
-      ".html": 2,
       ".ini": 2,
-      ".json": 1,
-      ".md": 2,
       ".mo": 2,
       ".po": 2,
-      ".py": 11,
-      ".txt": 6
+      ".py": 11
     }
   },
   "newfon/bin": {
@@ -78,27 +221,11 @@
       ".dll": 4
     }
   },
-  "newfon/doc": {
-    "total_files": 5,
-    "extensionless_files": 0,
-    "extensions": {
-      ".css": 1,
-      ".html": 2,
-      ".md": 2
-    }
-  },
   "newfon/languages": {
     "total_files": 9,
     "extensionless_files": 0,
     "extensions": {
       ".py": 9
-    }
-  },
-  "newfon/licenses": {
-    "total_files": 5,
-    "extensionless_files": 0,
-    "extensions": {
-      ".txt": 5
     }
   },
   "newfon/locale": {
@@ -108,6 +235,20 @@
       ".ini": 2,
       ".mo": 2,
       ".po": 2
+    }
+  },
+  "nv_speech_player": {
+    "total_files": 3,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 3
+    }
+  },
+  "nv_speech_player/dll": {
+    "total_files": 3,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 3
     }
   },
   "orpheus": {
@@ -153,6 +294,28 @@
       ".txt": 1,
       ".vcx": 55,
       ".wav": 30
+    }
+  },
+  "pico": {
+    "total_files": 13,
+    "extensionless_files": 0,
+    "extensions": {
+      ".bin": 12,
+      ".dll": 1
+    }
+  },
+  "pico/dll": {
+    "total_files": 1,
+    "extensionless_files": 0,
+    "extensions": {
+      ".dll": 1
+    }
+  },
+  "pico/svox-pico-data": {
+    "total_files": 12,
+    "extensionless_files": 0,
+    "extensions": {
+      ".bin": 12
     }
   },
   "sam": {

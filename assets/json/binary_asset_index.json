@@ -2031,18 +2031,6 @@
       "text_count": 124
     },
     {
-      "binary_count": 0,
-      "engine": "fonixtalk",
-      "file_count": 0,
-      "files": [],
-      "loader_modules": [
-        "assets/py/_fonixtalk.py"
-      ],
-      "path": "speechdata/fonixtalk",
-      "purpose": "FonixTalk successor to DECtalk maintained for archival driver validation against NVDA alpha builds.",
-      "text_count": 0
-    },
-    {
       "binary_count": 3,
       "engine": "gregor",
       "file_count": 3,
@@ -3774,7 +3762,7 @@
     {
       "binary_count": 11,
       "engine": "newfon",
-      "file_count": 38,
+      "file_count": 26,
       "files": [
         {
           "classification": "text",
@@ -3839,46 +3827,6 @@
           "notes": "No active loader references.",
           "relative_path": "dict.dll",
           "size_bytes": 34304
-        },
-        {
-          "classification": "text",
-          "extension": ".html",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "doc/en/readme.html",
-          "size_bytes": 6582
-        },
-        {
-          "classification": "text",
-          "extension": ".md",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "doc/en/readme.md",
-          "size_bytes": 5641
-        },
-        {
-          "classification": "text",
-          "extension": ".html",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "doc/ru/readme.html",
-          "size_bytes": 10467
-        },
-        {
-          "classification": "text",
-          "extension": ".md",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "doc/ru/readme.md",
-          "size_bytes": 9526
-        },
-        {
-          "classification": "text",
-          "extension": ".css",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "doc/style.css",
-          "size_bytes": 407
         },
         {
           "classification": "text",
@@ -3953,46 +3901,6 @@
           "size_bytes": 3617
         },
         {
-          "classification": "text",
-          "extension": ".txt",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "licenses/GNU GENERAL PUBLIC LICENSE.txt",
-          "size_bytes": 18091
-        },
-        {
-          "classification": "text",
-          "extension": ".txt",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "licenses/NewfonScriptsLicense.txt",
-          "size_bytes": 1158
-        },
-        {
-          "classification": "text",
-          "extension": ".txt",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "licenses/libsamplerate_license.txt",
-          "size_bytes": 350
-        },
-        {
-          "classification": "text",
-          "extension": ".txt",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "licenses/newfon_license_en.txt",
-          "size_bytes": 776
-        },
-        {
-          "classification": "text",
-          "extension": ".txt",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "licenses/newfon_license_ru.txt",
-          "size_bytes": 1289
-        },
-        {
           "classification": "binary",
           "extension": ".mo",
           "loaders": [],
@@ -4042,27 +3950,11 @@
         },
         {
           "classification": "text",
-          "extension": ".json",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "newfon.json",
-          "size_bytes": 1031
-        },
-        {
-          "classification": "text",
           "extension": ".py",
           "loaders": [],
           "notes": null,
           "relative_path": "newfon.py",
           "size_bytes": 8698
-        },
-        {
-          "classification": "text",
-          "extension": ".txt",
-          "loaders": [],
-          "notes": null,
-          "relative_path": "newfon_license.txt",
-          "size_bytes": 564
         },
         {
           "classification": "binary",
@@ -4084,7 +3976,7 @@
       "loader_modules": [],
       "path": "speechdata/newfon",
       "purpose": "",
-      "text_count": 27
+      "text_count": 15
     },
     {
       "binary_count": 3,
@@ -9346,5 +9238,5 @@
       "text_count": 212
     }
   ],
-  "generated": "2025-10-01T02:39:50.375099+00:00"
+  "generated": "2025-10-01T03:06:23.122397+00:00"
 }
