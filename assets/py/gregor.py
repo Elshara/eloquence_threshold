@@ -2,7 +2,7 @@
 #synthDrivers/gregor.py by Grzegorz Zlotowicz
 #based on synthdrivers/espeak.py
 #A part of NonVisual Desktop Access (NVDA)
-#Copyright (C) 2007-2013 NV Access Limited, Peter Vágner
+#Copyright (C) 2007-2013 NV Access Limited, Peter VÃ¡gner
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 
@@ -19,6 +19,16 @@ import nvwave
 from ctypes import *
 import config
 import globalVars
+from pathlib import Path
+
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+GREGOR_DLL_DIRS = resource_paths.engine_directories("gregor", "dll") + [resource_paths.asset_dir("dll"), BASE_PATH]
+
+def _resolve_gregor_dll() -> str:
+    return os.fspath(resource_paths.find_file_casefold("libsyntgregor.dll", GREGOR_DLL_DIRS))
+
 
 t_gregor_callback=CFUNCTYPE(c_int,POINTER(c_short),c_int)
 
@@ -96,7 +106,7 @@ class SynthDriver(SynthDriver):
 
 	def __init__(self):
 		global gregorDLL, libHandle, bgThread, bgQueue, player
-		gregorDLL=cdll.LoadLibrary(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'libsyntgregor.dll'))
+		gregorDLL=cdll.LoadLibrary(_resolve_gregor_dll())
 		player = nvwave.WavePlayer(channels=1, samplesPerSec=22050, bitsPerSample=16, outputDevice=config.conf["speech"]["outputDevice"])
 		gregorDLL.setcallback(callback)
 		bgQueue = Queue.Queue()

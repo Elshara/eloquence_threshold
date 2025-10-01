@@ -1,5 +1,6 @@
 from ctypes import *
 import os
+from pathlib import Path
 import synthDriverHandler
 from synthDriverHandler import SynthDriver
 import nvwave
@@ -8,6 +9,23 @@ import threading
 from logHandler import log
 import Queue
 import re
+
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+SMP_DLL_DIRS = resource_paths.engine_directories("nv_speech_player", "dll") + [resource_paths.asset_dir("dll"), BASE_PATH]
+SMP_DATA_DIRS = resource_paths.engine_directories("nv_speech_player", "data") + [BASE_PATH / 'smp' / 'data']
+
+
+def _resolve_smp_dll() -> str:
+    return os.fspath(resource_paths.find_file_casefold('SMPRenderer.dll', SMP_DLL_DIRS))
+
+
+def _resolve_smp_data() -> str:
+    for directory in SMP_DATA_DIRS:
+        if directory.exists():
+            return os.fspath(directory)
+    return os.fspath(BASE_PATH / 'smp' / 'data')
 
 last = None
 bgQueue = Queue.Queue()
@@ -36,8 +54,8 @@ def _bgExec(func, *args, **kwargs):
 
 file_path = os.path.abspath(os.path.dirname(__file__))
 smp_path = os.path.join(file_path, 'smp')
-data_path = os.path.join(smp_path, 'data')
-dll_file = os.path.join(smp_path, 'SMPRenderer.dll')
+data_path = _resolve_smp_data()
+dll_file = _resolve_smp_dll()
 punctuation_re = re.compile(r"([,:.?!;])|(\d+)")
 punctuation = ",:?.;!"
 #really ugly hack, passing self, but it should work.

@@ -3,13 +3,15 @@
 Eloquence Threshold keeps the ETI Eloquence 6.1 synthesiser usable inside the NonVisual Desktop Access (NVDA) screen reader on Windows 10 and Windows 11. The fork tracks NVDA alpha builds (currently validated against alpha-52731) and aligns with CodeQL guidance so blind and low-vision users can rely on a single `eloquence.nvda-addon` package that bundles Eloquence, DECtalk/FonixTalk, eSpeak NG derived voices, and IBM TTS heritage payloads. We retain the ultra-low-latency Klatt delivery that long-time users expect while paving the way for richer phoneme control, multilingual voice templates, and offline packaging drills.
 
 ## Repository layout (assets-by-extension)
-The project now organises resources by file extension under the top-level [`assets/`](assets) directory. Each bucket (for example `assets/json/`, `assets/md/`, `assets/py/`, `assets/dll/`) holds files whose suffix matches the folder name and whose filename summarises the payload with `_` separators. Runtime shims in [`assets/py/resource_paths.py`](assets/py/resource_paths.py) translate this flattened structure back into concrete locations when the add-on runs inside NVDA.
+The project now organises resources by file extension under the top-level [`assets/`](assets) directory. Each bucket (for example `assets/json/`, `assets/md/`, `assets/py/`) holds files whose suffix matches the folder name and whose filename summarises the payload with `_` separators. Proprietary or binary payloads now live under [`speechdata/`](speechdata/) buckets scoped by engine (for example `speechdata/eloquence/dll/`, `speechdata/pico/svox-pico-data/`, and `speechdata/dectalk/dll/`). Runtime shims in [`assets/py/resource_paths.py`](assets/py/resource_paths.py) translate this hybrid layout back into concrete locations when the add-on runs inside NVDA.
 
 Supporting reports help track the migration:
 
 - [`assets/md/file_structure_audit.md`](assets/md/file_structure_audit.md) – remediation checklist covering loader updates, NV Speech Player catalogue moves, cached dataset staging, and pending cleanups within `speechdata/`.
 - [`assets/md/assets_migration_backlog.md`](assets/md/assets_migration_backlog.md) – live register of frameworks still straddling `assets/` and `speechdata/`, including the smoke-test and offline build cadence required before NVDA/CodeQL reviews.
 - [`assets/md/assets_layout_summary.md`](assets/md/assets_layout_summary.md) – generated snapshot (via `python assets/py/report_assets_layout.py --print`) that counts files in every extension bucket and flags mismatched suffixes.
+- [`assets/md/binary_asset_audit.md`](assets/md/binary_asset_audit.md) – documents every binary staged under `speechdata/`, lists the loaders that consume those DLLs/voices, and tracks the NVDA/CodeQL follow-ups required before redistribution.
+- [`assets/md/binary_asset_index.md`](assets/md/binary_asset_index.md) – refreshed by `python assets/py/report_binary_assets.py --print` to catalogue every `speechdata/` payload, note whether it is binary or text, and surface which NVDA loaders depend on it.
 - [`assets/md/speechdata_manifest.md`](assets/md/speechdata_manifest.md) – inventory of legacy datasets that still live under [`speechdata/`](speechdata/) until their formats or provenance can be confirmed.
 
 Please refresh these artefacts whenever you add or relocate assets so packaging, CodeQL, and accessibility reviews stay reproducible.
@@ -26,7 +28,7 @@ Track progress in the audit document and note any outstanding cleanups in pull r
 
 ## Getting started
 1. Clone the repository and install Python 3.11+ (matching NVDA alpha-52731 requirements).
-2. Populate proprietary Eloquence binaries under `eloquence/` and architecture-specific siblings (`eloquence_x86`, `eloquence_x64`, `eloquence_arm32`, `eloquence_arm64`). The build helper will scan these folders and confirm the PE machine type before packaging.
+2. Populate proprietary Eloquence binaries under `speechdata/eloquence/dll/` (and architecture-specific siblings such as `eloquence_x86`, `eloquence_x64`, `eloquence_arm32`, `eloquence_arm64` when you need per-architecture overrides). The build helper will scan these folders and confirm the PE machine type before packaging.
 3. Review the cached-dataset provenance tracked in the documentation folder, especially the NV Access snapshot and DataJake archive manifests, before performing offline builds.
 4. Run the reporting helpers listed above to refresh manifests, then package the add-on with `python build.py --no-download --insecure --output dist/eloquence.nvda-addon`. When you want an execution log that documents which helpers fired (and which ones still need coverage during NVDA alpha rehearsals), append `--trace-json assets/json/build_execution_trace.json --trace-markdown assets/md/build_execution_trace.md` so reviewers can diff packaging behaviour between runs.
 

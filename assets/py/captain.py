@@ -2,11 +2,21 @@
 
 from collections import OrderedDict
 import os
+from pathlib import Path
 from synthDriverHandler import SynthDriver,VoiceInfo
 from ctypes import *
 import config
 import nvwave
 from nvwave import outputDeviceNameToID
+
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+CAPTAIN_DLL_DIRS = resource_paths.engine_directories("captain", "dll") + [resource_paths.asset_dir("dll"), BASE_PATH]
+
+
+def _resolve_captain_dll() -> str:
+    return os.fspath(resource_paths.find_file_casefold("captain.dll", CAPTAIN_DLL_DIRS))
 
 isSpeaking = False
 player = None
@@ -31,14 +41,18 @@ class SynthDriver(SynthDriver):
 	dll = None
 	availableVoices = OrderedDict((("default", VoiceInfo("default", _("default")),),))
 
-	@classmethod
-	def check(cls):
-		return os.path.isfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'captain.dll'))
+        @classmethod
+        def check(cls):
+                try:
+                        _resolve_captain_dll()
+                except FileNotFoundError:
+                        return False
+                return True
 
 	def __init__(self):
 		global player
 		player = nvwave.WavePlayer(channels=1, samplesPerSec=22050, bitsPerSample=8, outputDevice=config.conf["speech"]["outputDevice"])
-		self.dll = CDLL(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'captain.dll'))
+                self.dll = CDLL(_resolve_captain_dll())
 		self.dll.SpeakText.argtypes = [c_wchar_p, c_int]
 		if not self.dll.InitSynth(processAudio): raise Exception
 

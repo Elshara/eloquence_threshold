@@ -21,6 +21,7 @@ from ctypes.wintypes import DWORD
 from io import BytesIO
 import logging
 import os
+from pathlib import Path
 from queue import SimpleQueue, Empty as QueueEmptyError
 import threading
 
@@ -44,6 +45,20 @@ except ImportError:  # NVDA >= 2021.1.
 	)
 import synthDriverHandler
 from winUser import WNDCLASSEXW, WNDPROC
+
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+DECTALK_DLL_DIRS = (
+        resource_paths.engine_directories("dectalk", "dll")
+        + resource_paths.engine_directories("fonixtalk", "dll")
+        + [resource_paths.asset_dir("dll"), BASE_PATH]
+)
+
+
+def _resolve_dectalk_library(name: str) -> str:
+        target = name if name.lower().endswith('.dll') else f"{name}.dll"
+        return os.fspath(resource_paths.find_file_casefold(target, DECTALK_DLL_DIRS))
 
 
 OWN_AUDIO_DEVICE = 1
@@ -179,8 +194,8 @@ class SynthDriver(synthDriverHandler.SynthDriver):
 
 	def __init__(self):
 		global g_stream
-		dectalk_path = os.path.abspath(os.path.join(os.path.dirname(__file__), f"{self.name}.dll"))
-		self.dectalk = cdll.LoadLibrary(dectalk_path)
+                dectalk_path = _resolve_dectalk_library(self.name)
+                self.dectalk = cdll.LoadLibrary(dectalk_path)
 		self.dectalk.TextToSpeechStartup.errcheck = errcheck
 		self.dectalk.TextToSpeechSpeak.errcheck = errcheck
 		self.dectalk.TextToSpeechAddBuffer.errcheck = errcheck
@@ -214,8 +229,8 @@ class SynthDriver(synthDriverHandler.SynthDriver):
 			None,
 		)
 		self.handle = c_void_p()
-		cwd = os.getcwd()
-		os.chdir(os.path.dirname(__file__))
+                cwd = os.getcwd()
+                os.chdir(os.fspath(BASE_PATH))
 		self.dectalk.TextToSpeechStartup(self._messageWindow, byref(self.handle), 0, DO_NOT_USE_AUDIO_DEVICE)
 		caps = TTS_CAPS_T()
 		self.dectalk.TextToSpeechGetCaps(byref(caps))

@@ -21,15 +21,9 @@
       "triggered": true
     },
     "copy_optional_directory": {
-      "calls": 27,
+      "calls": 21,
       "description": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
       "events": [
-        {
-          "copied": true,
-          "destination": "<temp>/eloquence_build/<run>/assets/bin",
-          "preserve_existing": false,
-          "source": "assets/bin"
-        },
         {
           "copied": true,
           "destination": "<temp>/eloquence_build/<run>/assets/cjk",
@@ -62,18 +56,6 @@
         },
         {
           "copied": true,
-          "destination": "<temp>/eloquence_build/<run>/assets/dll",
-          "preserve_existing": false,
-          "source": "assets/dll"
-        },
-        {
-          "copied": true,
-          "destination": "<temp>/eloquence_build/<run>/assets/exe",
-          "preserve_existing": false,
-          "source": "assets/exe"
-        },
-        {
-          "copied": true,
           "destination": "<temp>/eloquence_build/<run>/assets/hlp",
           "preserve_existing": false,
           "source": "assets/hlp"
@@ -83,12 +65,6 @@
           "destination": "<temp>/eloquence_build/<run>/assets/html",
           "preserve_existing": false,
           "source": "assets/html"
-        },
-        {
-          "copied": true,
-          "destination": "<temp>/eloquence_build/<run>/assets/ico",
-          "preserve_existing": false,
-          "source": "assets/ico"
         },
         {
           "copied": true,
@@ -116,21 +92,9 @@
         },
         {
           "copied": true,
-          "destination": "<temp>/eloquence_build/<run>/assets/syn",
-          "preserve_existing": false,
-          "source": "assets/syn"
-        },
-        {
-          "copied": true,
           "destination": "<temp>/eloquence_build/<run>/assets/txt",
           "preserve_existing": false,
           "source": "assets/txt"
-        },
-        {
-          "copied": true,
-          "destination": "<temp>/eloquence_build/<run>/assets/uil",
-          "preserve_existing": false,
-          "source": "assets/uil"
         },
         {
           "copied": true,
@@ -231,7 +195,7 @@
       "events": [
         {
           "copied": true,
-          "entries": 19
+          "entries": 13
         }
       ],
       "triggered": true
@@ -282,7 +246,7 @@
       "description": "Zip the staged tree into an .nvda-addon payload ready for NVDA installation.",
       "events": [
         {
-          "files_packaged": 1271,
+          "files_packaged": 1277,
           "output": "dist/test.nvda-addon"
         }
       ],

@@ -18,8 +18,8 @@ If a base add-on template is supplied (or already cached as
 that legacy 32-bit Eloquence binaries remain intact.  Otherwise the archive is
 created purely from the Python modules and data files in this repository.  Make
 sure any proprietary runtime you are entitled to redistribute is staged inside
-``assets/dll`` and the accompanying ``*.syn`` voices live in ``assets/syn``
-before packaging the add-on.
+``speechdata/eloquence/dll`` and the accompanying ``*.syn`` voices live in
+``speechdata/eloquence/syn`` before packaging the add-on.
 """
 
 from __future__ import annotations
@@ -652,8 +652,9 @@ def main() -> None:
             print("Embedded legacy Eloquence runtime from ./eloquence")
         elif not template_used and not has_runtime_assets():
             print(
-                "Warning: no Eloquence runtime detected. Stage eci.dll inside assets/dll "
-                "and copy .syn voices into assets/syn before installing the add-on."
+                "Warning: no Eloquence runtime detected. Stage ECI.DLL inside "
+                "speechdata/eloquence/dll and copy .syn voices into "
+                "speechdata/eloquence/syn before installing the add-on."
             )
         for notice in copied_architectures:
             print(notice)

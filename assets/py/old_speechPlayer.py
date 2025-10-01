@@ -12,6 +12,16 @@
 
 from ctypes import *
 import os
+from pathlib import Path
+
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+SPEECH_PLAYER_DLL_DIRS = resource_paths.engine_directories("nv_speech_player", "dll") + [resource_paths.asset_dir("dll"), BASE_PATH]
+
+
+def _resolve_speech_player_dll() -> str:
+    return os.fspath(resource_paths.find_file_casefold("speechPlayer.dll", SPEECH_PLAYER_DLL_DIRS))
 
 speechPlayer_frameParam_t=c_double
 
@@ -36,7 +46,7 @@ class Frame(Structure):
 		'endVoicePitch',
 	]]
 
-dllPath=os.path.join(os.path.dirname(__file__),'speechPlayer.dll')
+dllPath=_resolve_speech_player_dll()
 
 class SpeechPlayer(object):
 

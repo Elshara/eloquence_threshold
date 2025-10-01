@@ -10,8 +10,16 @@
 from synthDriverHandler import SynthDriver
 from ctypes import *
 import os
+from pathlib import Path
 
-BASE_PATH=os.path.dirname(__file__)
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+BRAILAB_DLL_DIRS = resource_paths.engine_directories("brailab", "dll") + [resource_paths.asset_dir("dll"), BASE_PATH]
+
+
+def _resolve_brailab_dll() -> str:
+    return os.fspath(resource_paths.find_file_casefold("tts.dll", BRAILAB_DLL_DIRS))
 minRate=0
 maxRate=9
 minPitch=-1
@@ -26,13 +34,17 @@ class SynthDriver(SynthDriver):
 
 
 
-	@classmethod
-	def check(cls):
-		return os.path.isfile(os.path.join(BASE_PATH,"tts.dll"))
+        @classmethod
+        def check(cls):
+                try:
+                        _resolve_brailab_dll()
+                except FileNotFoundError:
+                        return False
+                return True
 
 	def __init__(self):
 		global dll
-		dll=windll.LoadLibrary(os.path.join(BASE_PATH,'tts.dll'))
+                dll=windll.LoadLibrary(_resolve_brailab_dll())
 		dll.TTS_Init(1500,None)
 
 	def terminate(self):

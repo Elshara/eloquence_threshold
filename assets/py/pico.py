@@ -9,6 +9,7 @@ import os
 import Queue
 import threading
 from cStringIO import StringIO
+from pathlib import Path
 import speech
 from synthDriverHandler import SynthDriver,VoiceInfo
 from logHandler import log
@@ -16,7 +17,27 @@ import nvwave
 import config
 from collections import OrderedDict
 
-BASE_PATH=os.path.dirname(__file__)
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+PICO_DLL_DIRECTORIES = (
+    resource_paths.engine_directories("pico", "dll")
+    + [resource_paths.asset_dir("dll"), BASE_PATH]
+)
+PICO_DATA_DIRECTORIES = (
+    resource_paths.engine_directories("pico", "svox-pico-data")
+    + [resource_paths.asset_dir("bin"), BASE_PATH / "svox-pico-data"]
+)
+
+
+def _resolve_pico_file(name: str) -> str:
+    path = resource_paths.find_file_casefold(name, PICO_DATA_DIRECTORIES)
+    return os.fspath(path)
+
+
+def _resolve_pico_dll() -> str:
+    path = resource_paths.find_file_casefold("svox-pico.dll", PICO_DLL_DIRECTORIES)
+    return os.fspath(path)
 SVOX_MEMORY_SIZE=3*1024**2
 
 OUT_BUFFER_SIZE=4096 #it really generates 64 bytes at once
@@ -53,9 +74,13 @@ class SynthDriver(SynthDriver):
 		'de': ('Deutch', 'de-DE_ta.bin', 'de-DE_gl0_sg.bin'),
 	}
 
-	@classmethod
-	def check(cls):
-		return os.path.isfile(os.path.join(BASE_PATH,"svox-pico.dll"))
+        @classmethod
+        def check(cls):
+                try:
+                        _resolve_pico_dll()
+                except FileNotFoundError:
+                        return False
+                return True
 
 	def pico_system_errcheck(self,result,func,args):
 		if result!=0:
@@ -72,7 +97,7 @@ class SynthDriver(SynthDriver):
 		return result
 
 	def __init__(self):
-		self.dll=ctypes.cdll.LoadLibrary(os.path.join(BASE_PATH,'svox-pico.dll'))
+                self.dll=ctypes.cdll.LoadLibrary(_resolve_pico_dll())
 		#prepare dll object
 		system_functs=('pico_initialize','pico_terminate','pico_getSystemStatusMessage','pico_getNrSystemWarnings',
 		'pico_getSystemWarning','pico_loadResource','pico_unloadResource','pico_getResourceName','pico_createVoiceDefinition','pico_addResourceToVoiceDefinition',
@@ -101,11 +126,11 @@ class SynthDriver(SynthDriver):
 	def load_resources(self,name,langData,speakerData):
 		"""Loads lingware data, defines voice"""
 		langRes=pico_resource()
-		self.dll.pico_loadResource(self.pico_system,os.path.join(BASE_PATH,'svox-pico-data',langData),ctypes.byref(langRes))
+                self.dll.pico_loadResource(self.pico_system,_resolve_pico_file(langData),ctypes.byref(langRes))
 		langResName=ctypes.create_string_buffer(200)
 		self.dll.pico_getResourceName(self.pico_system,langRes,langResName)
 		speakerRes=pico_resource()
-		self.dll.pico_loadResource(self.pico_system,os.path.join(BASE_PATH,'svox-pico-data',speakerData),ctypes.byref(speakerRes))
+                self.dll.pico_loadResource(self.pico_system,_resolve_pico_file(speakerData),ctypes.byref(speakerRes))
 		speakerResName=ctypes.create_string_buffer(200)
 		self.dll.pico_getResourceName(self.pico_system,speakerRes,speakerResName)
 		self.dll.pico_createVoiceDefinition(self.pico_system,name)

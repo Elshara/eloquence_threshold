@@ -80,6 +80,54 @@ def _existing(paths: Iterable[Path]) -> List[Path]:
     return [path for path in paths if path.exists()]
 
 
+def _iter_existing(paths: Iterable[Path]) -> Iterator[Path]:
+    for path in paths:
+        if path.exists():
+            yield path
+
+
+def find_file_casefold(name: str, directories: Iterable[Path]) -> Path:
+    """Locate *name* within *directories* using case-folded comparison.
+
+    The helper searches each directory that exists and returns the first entry
+    whose name matches ``name`` when both strings are lowered via
+    :py:meth:`str.casefold`.  A :class:`FileNotFoundError` is raised when no
+    candidate is discovered.  Callers should prefer this over direct
+    ``Path(name)`` joins so Windows-centric payloads with inconsistent casing
+    (for example ``ECI.DLL`` versus ``eci.dll``) resolve correctly on
+    case-sensitive filesystems.
+    """
+
+    target = name.casefold()
+    for directory in _iter_existing(directories):
+        for entry in directory.iterdir():
+            if entry.name.casefold() == target:
+                return entry
+    raise FileNotFoundError(name)
+
+
+def engine_root(engine: str) -> Path:
+    """Return the ``speechdata`` subdirectory assigned to *engine*."""
+
+    return speechdata_root() / engine
+
+
+def engine_directories(engine: str, *subdirs: str) -> List[Path]:
+    """Return existing directories for *engine* under ``speechdata``.
+
+    When *subdirs* is provided, each entry is appended to the engine root and
+    candidates that exist on disk are returned.  Without *subdirs* the engine
+    root itself is validated.  The helper keeps callers concise when
+    translating between engine names (``"eloquence"``, ``"pico"``,
+    ``"dectalk"``…) and their staged binary buckets.
+    """
+
+    root = engine_root(engine)
+    if not subdirs:
+        return _existing([root])
+    return _existing([root / subdir for subdir in subdirs])
+
+
 def eloquence_dictionary_dirs() -> List[Path]:
     """Return directories that may contain Eloquence dictionary assets."""
 
@@ -87,6 +135,10 @@ def eloquence_dictionary_dirs() -> List[Path]:
     # Primary extension buckets.
     for bucket in ("syn", "dic", "txt", "cnt", "uil", "voice"):
         candidates.extend(_existing([asset_dir(bucket)]))
+
+    for subdir in ("syn", "dic", "txt", "cnt", "uil", "voice"):
+        candidates.extend(engine_directories("eloquence", subdir))
+    candidates.extend(engine_directories("eloquence"))
 
     # Legacy and partially migrated locations.
     legacy_dirs = [
@@ -129,6 +181,9 @@ def eloquence_library_roots() -> List[Path]:
     """Return directories that may contain Eloquence runtime DLLs."""
 
     roots: List[Path] = _existing([asset_dir("dll"), asset_dir("bin")])
+    roots.extend(engine_directories("eloquence", "dll"))
+    roots.extend(engine_directories("eloquence", "runtime"))
+    roots.extend(engine_directories("eloquence", "sapi"))
     for name in ("eloquence_x64", "eloquence_x86", "eloquence_arm64", "eloquence_arm32", "eloquence_arm"):
         candidate = _REPO_ROOT / name
         if candidate.exists():

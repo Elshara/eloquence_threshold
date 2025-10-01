@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from synthDriverHandler import SynthDriver, synthIndexReached, synthDoneSpeaking, VoiceInfo
 from speech.commands import IndexCommand, PitchCommand, CharacterModeCommand
 import ctypes
@@ -13,6 +14,15 @@ import time
 import queue
 import threading
 from logHandler import log
+
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+BESTSPEECH_DLL_DIRS = resource_paths.engine_directories("bestspeech", "dll") + [resource_paths.asset_dir("dll"), BASE_PATH]
+
+
+def _resolve_bestspeech_file(name: str) -> str:
+    return os.fspath(resource_paths.find_file_casefold(name, BESTSPEECH_DLL_DIRS))
 
 minRate = 200
 maxRate = -90
@@ -96,9 +106,9 @@ class SynthDriver(SynthDriver):
 
 	def __init__(self):
 		super().__init__()
-		path = os.path.join(os.path.dirname(__file__), 'b32_tts.dll')
-		wrapper_path = os.path.join(os.path.dirname(__file__), 'b32_wrapper.dll')
-		self.dll = ctypes.cdll[wrapper_path]
+                path = _resolve_bestspeech_file('b32_tts.dll')
+                wrapper_path = _resolve_bestspeech_file('b32_wrapper.dll')
+                self.dll = ctypes.cdll[wrapper_path]
 		self.player = None
 		try:
 			currentSoundcardOutput = config.conf['speech']['outputDevice']

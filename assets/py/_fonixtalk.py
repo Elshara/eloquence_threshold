@@ -21,6 +21,7 @@ from ctypes.wintypes import DWORD
 from io import BytesIO
 import logging
 import os
+from pathlib import Path
 from queue import SimpleQueue, Empty as QueueEmptyError
 import threading
 
@@ -43,6 +44,20 @@ except ImportError:  # NVDA >= 2021.1.
 		SpeechCommand,
 	)
 import synthDriverHandler
+
+import resource_paths
+
+BASE_PATH = Path(__file__).resolve().parent
+FONIX_DLL_DIRS = (
+        resource_paths.engine_directories("fonixtalk", "dll")
+        + resource_paths.engine_directories("dectalk", "dll")
+        + [resource_paths.asset_dir("dll"), BASE_PATH]
+)
+
+
+def _resolve_fonix_library(name: str) -> str:
+        target = name if name.lower().endswith('.dll') else f"{name}.dll"
+        return os.fspath(resource_paths.find_file_casefold(target, FONIX_DLL_DIRS))
 from winUser import WNDCLASSEXW, WNDPROC
 
 
@@ -176,8 +191,7 @@ class SynthDriver(synthDriverHandler.SynthDriver):
 
 	def __init__(self):
 		global g_stream
-		dectalk_path = os.path.abspath(os.path.join(os.path.dirname(__file__), f"{self.name}.dll"))
-		self.dectalk = cdll.LoadLibrary(dectalk_path)
+                self.dectalk = cdll.LoadLibrary(_resolve_fonix_library(self.name))
 		self.dectalk.TextToSpeechStartup.errcheck = errcheck
 		self.dectalk.TextToSpeechSpeak.errcheck = errcheck
 		self.dectalk.TextToSpeechAddBuffer.errcheck = errcheck
