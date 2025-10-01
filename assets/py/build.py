@@ -37,7 +37,7 @@ import socket
 import ipaddress
 import zipfile
 from pathlib import Path
-from typing import Dict, Iterable, Optional, Tuple
+from typing import Dict, Iterable, Optional, Tuple, List
 
 import resource_paths
 
@@ -290,6 +290,21 @@ def parse_args() -> argparse.Namespace:
         help="Override the URL used to fetch the base template",
     )
     parser.add_argument(
+        "--no-speechdata",
+        action="store_true",
+        help="Skip bundling the speechdata/ directory when packaging the add-on",
+    )
+    parser.add_argument(
+        "--speechdata-subtree",
+        action="append",
+        default=[],
+        metavar="RELATIVE_PATH",
+        help=(
+            "Relative path under speechdata/ to include in the package. "
+            "Provide multiple times to bundle several subtrees."
+        ),
+    )
+    parser.add_argument(
         "--trace-json",
         type=Path,
         help="Write a JSON report summarising which helpers executed during the build",
@@ -299,7 +314,38 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help="Write a Markdown report summarising which helpers executed during the build",
     )
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    if args.no_speechdata and args.speechdata_subtree:
+        parser.error("--no-speechdata cannot be combined with --speechdata-subtree")
+
+    normalised: list[str] = []
+    root_requested = False
+    for entry in args.speechdata_subtree:
+        candidate = Path(entry)
+        if candidate.is_absolute() or any(part == ".." for part in candidate.parts):
+            parser.error(
+                "--speechdata-subtree values must be relative paths beneath speechdata/."
+            )
+        filtered_parts = [part for part in candidate.parts if part not in ("", ".")]
+        if not filtered_parts:
+            root_requested = True
+            continue
+        normalised.append(Path(*filtered_parts).as_posix())
+
+    if root_requested:
+        normalised = []
+
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for entry in normalised:
+        if entry in seen:
+            continue
+        seen.add(entry)
+        ordered.append(entry)
+
+    args.speechdata_subtree = ordered
+    return args
 
 
 ALLOWED_TEMPLATE_HOSTS = {"github.com", "raw.githubusercontent.com"}
@@ -544,24 +590,122 @@ def stage_assets_tree(staging_dir: Path) -> bool:
     return copied_any
 
 
-def stage_speechdata_tree(staging_dir: Path) -> bool:
+def stage_speechdata_tree(
+    staging_dir: Path,
+    *,
+    subtrees: Optional[Iterable[str]] = None,
+    skip: bool = False,
+) -> Tuple[bool, Dict[str, object]]:
+    """Copy ``speechdata/`` (or selected subtrees) into ``staging_dir``.
+
+    When *subtrees* is empty the entire ``speechdata`` directory is copied.
+    Otherwise each relative path is mirrored beneath ``speechdata/`` inside the
+    staging directory.  The return value pairs a boolean that signals whether
+    any data was copied with a dictionary describing the mode and which entries
+    were included or missing.
+    """
+
+    requested = list(subtrees or [])
+    if skip:
+        record_trace(
+            "stage_speechdata_tree",
+            details={
+                "copied": False,
+                "reason": "skip_requested",
+                "mode": "skipped",
+                "requested": len(requested),
+            },
+        )
+        return False, {
+            "mode": "skipped",
+            "requested": len(requested),
+            "copied_entries": 0,
+            "missing": [],
+            "included": [],
+        }
+
     speechdata_root = resource_paths.speechdata_root()
     if not speechdata_root.is_dir():
         record_trace(
             "stage_speechdata_tree",
-            details={"copied": False, "reason": "missing_directory"},
+            details={
+                "copied": False,
+                "reason": "missing_directory",
+                "mode": "missing",
+                "requested": len(requested),
+            },
         )
-        return False
-    copied = copy_optional_directory(
-        speechdata_root,
-        staging_dir / "speechdata",
-        preserve_existing=False,
-    )
+        return False, {
+            "mode": "missing",
+            "requested": len(requested),
+            "copied_entries": 0,
+            "missing": [],
+            "included": [],
+        }
+
+    if not requested:
+        copied = copy_optional_directory(
+            speechdata_root,
+            staging_dir / "speechdata",
+            preserve_existing=False,
+        )
+        record_trace(
+            "stage_speechdata_tree",
+            details={
+                "copied": copied,
+                "mode": "full",
+                "requested": 0,
+                "missing": [],
+            },
+        )
+        return copied, {
+            "mode": "full",
+            "requested": 0,
+            "copied_entries": 1 if copied else 0,
+            "missing": [],
+            "included": ["."] if copied else [],
+        }
+
+    dest_root = staging_dir / "speechdata"
+    dest_root.mkdir(parents=True, exist_ok=True)
+
+    copied_any = False
+    copied_entries = 0
+    missing: List[str] = []
+    included: List[str] = []
+    for relative in requested:
+        source = speechdata_root / relative
+        if not source.exists():
+            missing.append(relative)
+            continue
+        destination = dest_root / relative
+        if source.is_dir():
+            copy_optional_directory(source, destination, preserve_existing=False)
+        else:
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, destination)
+        copied_any = True
+        copied_entries += 1
+        included.append(relative)
+
     record_trace(
         "stage_speechdata_tree",
-        details={"copied": copied},
+        details={
+            "copied": copied_any,
+            "mode": "subset",
+            "requested": len(requested),
+            "copied_entries": copied_entries,
+            "missing": missing,
+            "included": included,
+        },
     )
-    return copied
+    return copied_any, {
+        "mode": "subset",
+        "requested": len(requested),
+        "copied_entries": copied_entries,
+        "missing": missing,
+        "included": included,
+    }
 
 
 def write_archive(staging_dir: Path, output: Path) -> None:
@@ -593,6 +737,8 @@ def main() -> None:
             "no_download": args.no_download,
             "insecure": args.insecure,
             "template_url": args.template_url,
+            "no_speechdata": args.no_speechdata,
+            "speechdata_subtrees": args.speechdata_subtree,
         },
     )
 
@@ -615,7 +761,11 @@ def main() -> None:
         stage_root_files(staging_dir)
         stage_synth_driver_modules(staging_dir)
         assets_copied = stage_assets_tree(staging_dir)
-        speechdata_copied = stage_speechdata_tree(staging_dir)
+        speechdata_copied, speechdata_details = stage_speechdata_tree(
+            staging_dir,
+            subtrees=args.speechdata_subtree,
+            skip=args.no_speechdata,
+        )
 
         legacy_data_copied = copy_optional_directory(
             REPO_ROOT / "eloquence_data",
@@ -642,8 +792,32 @@ def main() -> None:
         else:
             print("Warning: assets directory was not copied – packaged add-on may be incomplete")
 
-        if speechdata_copied:
+        mode = speechdata_details["mode"]
+        if mode == "full" and speechdata_copied:
             print("Bundled speechdata directory for extensionless resources")
+        elif mode == "skipped":
+            print("Skipped speechdata bundling (requested via --no-speechdata)")
+        elif mode == "missing":
+            print(
+                "Warning: speechdata directory not found – no extensionless assets were bundled"
+            )
+        elif mode == "subset":
+            included = speechdata_details.get("included", [])
+            missing = speechdata_details.get("missing", [])
+            if included:
+                print(
+                    "Bundled speechdata subtrees: "
+                    + ", ".join(sorted(included))
+                )
+            if missing:
+                print(
+                    "Warning: missing speechdata subtrees were skipped: "
+                    + ", ".join(sorted(missing))
+                )
+        else:
+            print(
+                "Warning: speechdata directory was not copied – check repository permissions"
+            )
 
         if legacy_data_copied:
             print("Bundled legacy eloquence_data directory")
@@ -672,6 +846,7 @@ def main() -> None:
             "template_used": template_used,
             "assets_copied": assets_copied,
             "speechdata_copied": speechdata_copied,
+            "speechdata_details": speechdata_details,
             "legacy_data_copied": legacy_data_copied,
             "legacy_runtime_copied": legacy_runtime_copied,
             "copied_architectures": copied_architectures,
