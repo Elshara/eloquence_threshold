@@ -25,6 +25,7 @@ before packaging the add-on.
 from __future__ import annotations
 
 import argparse
+import json
 import shutil
 import ssl
 import sys
@@ -73,6 +74,163 @@ ROOT_FILES: Tuple[Tuple[Path, Path], ...] = (
 ASSET_EXCLUDES = {"py", "pyc", "pyo"}
 
 
+TRACE_REGISTRY = {
+    "parse_args": "Parse CLI arguments and apply defaults for offline packaging runs.",
+    "_validate_template_url": "Confirm the template URL targets an approved GitHub host before optional downloads.",
+    "ensure_template": "Locate or download the baseline template archive that seeds legacy binaries.",
+    "stage_template": "Extract an optional template archive into the temporary staging directory.",
+    "stage_root_files": "Copy root-level metadata such as manifest.ini into the staging directory.",
+    "stage_synth_driver_modules": "Copy the Eloquence synth driver modules into synthDrivers/ for NVDA.",
+    "stage_assets_tree": "Mirror the extension-scoped assets/ hierarchy into the packaged add-on.",
+    "stage_speechdata_tree": "Bundle temporary speechdata/ payloads that still need extension triage.",
+    "copy_optional_directory": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
+    "has_runtime_assets": "Scan known locations for eci.dll so packaging can warn about missing runtimes.",
+    "write_archive": "Zip the staged tree into an .nvda-addon payload ready for NVDA installation.",
+}
+
+TRACE_DATA = {
+    name: {"description": description, "calls": 0, "events": []}
+    for name, description in TRACE_REGISTRY.items()
+}
+
+TRACE_ENABLED = False
+TEMP_DIRECTORY_ROOT = Path(tempfile.gettempdir()).resolve()
+
+
+def _normalise_path_for_trace(path: Path) -> str:
+    try:
+        return path.resolve().relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        pass
+    try:
+        relative_temp = path.resolve().relative_to(TEMP_DIRECTORY_ROOT)
+    except ValueError:
+        return path.as_posix()
+    parts = list(relative_temp.parts)
+    if parts:
+        first = parts[0]
+        if first.startswith("eloquence_build_"):
+            parts[0] = "eloquence_build/<run>"
+        else:
+            parts[0] = f"<temp_root>/{first}"
+    return "<temp>/" + "/".join(parts)
+
+
+def _serialise_details(details: Dict[str, object]) -> Dict[str, object]:
+    serialised: Dict[str, object] = {}
+    for key, value in details.items():
+        if isinstance(value, Path):
+            serialised[key] = _normalise_path_for_trace(value)
+        else:
+            serialised[key] = value
+    return serialised
+
+
+def configure_trace(json_path: Optional[Path], markdown_path: Optional[Path]) -> None:
+    """Enable tracing when either report path is supplied."""
+
+    global TRACE_ENABLED
+    TRACE_ENABLED = bool(json_path or markdown_path)
+    if not TRACE_ENABLED:
+        return
+    for entry in TRACE_DATA.values():
+        entry["calls"] = 0
+        entry["events"] = []
+
+
+def record_trace(name: str, *, details: Optional[Dict[str, object]] = None) -> None:
+    if not TRACE_ENABLED:
+        return
+    if name not in TRACE_DATA:
+        return
+    entry = TRACE_DATA[name]
+    entry["calls"] += 1
+    if details:
+        entry["events"].append(_serialise_details(details))
+
+
+def build_trace_summary() -> Dict[str, Dict[str, object]]:
+    summary: Dict[str, Dict[str, object]] = {}
+    for name, payload in TRACE_DATA.items():
+        summary[name] = {
+            "description": payload["description"],
+            "calls": payload["calls"],
+            "triggered": bool(payload["calls"]),
+            "events": payload["events"],
+        }
+    return summary
+
+
+def _format_event(details: Dict[str, object]) -> str:
+    components = []
+    for key, value in details.items():
+        components.append(f"{key}={value}")
+    return ", ".join(components)
+
+
+def emit_trace_reports(
+    *,
+    json_path: Optional[Path],
+    markdown_path: Optional[Path],
+    context: Dict[str, object],
+) -> None:
+    if not TRACE_ENABLED:
+        return
+
+    summary = build_trace_summary()
+    serialised_context = _serialise_details(context)
+
+    if json_path is not None:
+        json_path = json_path.expanduser()
+        json_path.parent.mkdir(parents=True, exist_ok=True)
+        with json_path.open("w", encoding="utf-8") as handle:
+            json.dump(
+                {
+                    "context": serialised_context,
+                    "helpers": summary,
+                },
+                handle,
+                indent=2,
+                sort_keys=True,
+            )
+
+    if markdown_path is not None:
+        markdown_path = markdown_path.expanduser()
+        markdown_path.parent.mkdir(parents=True, exist_ok=True)
+        lines = [
+            "# Build helper execution trace",
+            "",
+            "The table below captures which packaging helpers executed during the most recent",
+            "`python build.py` invocation. Use it alongside the file-structure audit to plan",
+            "follow-up refactors and CodeQL-reviewed NVDA packaging drills.",
+            "",
+            "## Invocation context",
+        ]
+        for key, value in sorted(serialised_context.items()):
+            lines.append(f"- **{key.replace('_', ' ').title()}**: {value}")
+        lines.append("")
+        lines.extend(
+            [
+                "## Helper coverage",
+                "",
+                "| Helper | Triggered? | Calls | Notes |",
+                "| --- | --- | --- | --- |",
+            ]
+        )
+        for name, payload in summary.items():
+            triggered = "✅" if payload["triggered"] else "⚠️"
+            calls = payload["calls"]
+            if payload["events"]:
+                notes = "<br>".join(_format_event(event) for event in payload["events"])
+            else:
+                notes = "—"
+            lines.append(
+                f"| `{name}` | {triggered} | {calls} | {notes} |"
+            )
+
+        markdown_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def _contains_eci_dll(path: Path) -> bool:
     if not path.is_dir():
         return False
@@ -85,10 +243,13 @@ def _contains_eci_dll(path: Path) -> bool:
 def has_runtime_assets() -> bool:
     """Return ``True`` if any staged directory exposes ``eci.dll``."""
 
+    found = False
     for candidate in resource_paths.eloquence_library_roots():
         if _contains_eci_dll(candidate):
-            return True
-    return False
+            found = True
+            break
+    record_trace("has_runtime_assets", details={"found": found})
+    return found
 
 ARCH_DIRECTORIES: Tuple[Tuple[str, Path, str], ...] = (
     ("eloquence_x86", Path("synthDrivers") / "eloquence" / "x86", "Embedded 32-bit runtime from ./eloquence_x86"),
@@ -127,6 +288,16 @@ def parse_args() -> argparse.Namespace:
         "--template-url",
         default=TEMPLATE_URL,
         help="Override the URL used to fetch the base template",
+    )
+    parser.add_argument(
+        "--trace-json",
+        type=Path,
+        help="Write a JSON report summarising which helpers executed during the build",
+    )
+    parser.add_argument(
+        "--trace-markdown",
+        type=Path,
+        help="Write a Markdown report summarising which helpers executed during the build",
     )
     return parser.parse_args()
 
@@ -205,13 +376,25 @@ def ensure_template(
     """Return ``path`` if it exists, otherwise attempt to download it."""
 
     if path.is_file():
+        record_trace(
+            "ensure_template",
+            details={"path": path, "result": "existing"},
+        )
         return path
     if not allow_download:
+        record_trace(
+            "ensure_template",
+            details={"path": path, "result": "missing", "allow_download": False},
+        )
         return None
     try:
         _validate_template_url(url)
     except ValueError as error:
         print(f"Warning: {error}")
+        record_trace(
+            "ensure_template",
+            details={"path": path, "result": "skipped_invalid_url", "error": str(error)},
+        )
         return None
     try:
         print(f"Downloading template from {url}…")
@@ -220,9 +403,25 @@ def ensure_template(
             path.parent.mkdir(parents=True, exist_ok=True)
             with path.open("wb") as handle:
                 shutil.copyfileobj(response, handle)
+        record_trace(
+            "ensure_template",
+            details={
+                "path": path,
+                "result": "downloaded",
+                "insecure": insecure,
+            },
+        )
         return path
     except (OSError, urllib.error.URLError, ValueError) as exc:
         print(f"Warning: unable to download template: {exc}")
+        record_trace(
+            "ensure_template",
+            details={
+                "path": path,
+                "result": "download_failed",
+                "error": str(exc),
+            },
+        )
     return None
 
 
@@ -231,9 +430,17 @@ def stage_template(staging_dir: Path, template: Optional[Path]) -> bool:
 
     if template is None:
         (staging_dir / "synthDrivers").mkdir(parents=True, exist_ok=True)
+        record_trace(
+            "stage_template",
+            details={"template": None, "result": "initialised"},
+        )
         return False
     with zipfile.ZipFile(template, "r") as archive:
         archive.extractall(staging_dir)
+    record_trace(
+        "stage_template",
+        details={"template": template, "result": "extracted"},
+    )
     return True
 
 
@@ -248,11 +455,29 @@ def copy_optional_directory(
     src: Path, dest: Path, *, preserve_existing: bool = False
 ) -> bool:
     if not src.is_dir():
+        record_trace(
+            "copy_optional_directory",
+            details={
+                "source": src,
+                "destination": dest,
+                "copied": False,
+                "reason": "missing_source",
+            },
+        )
         return False
     if dest.exists() and not preserve_existing:
         shutil.rmtree(dest)
     dest.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(src, dest, dirs_exist_ok=preserve_existing)
+    record_trace(
+        "copy_optional_directory",
+        details={
+            "source": src,
+            "destination": dest,
+            "copied": True,
+            "preserve_existing": preserve_existing,
+        },
+    )
     return True
 
 
@@ -270,11 +495,19 @@ def stage_synth_driver_modules(staging_dir: Path) -> None:
             "# Auto-generated by build.py so NVDA treats this folder as a package.\n"
             "__all__ = ['eloquence']\n"
         )
+    record_trace(
+        "stage_synth_driver_modules",
+        details={"modules_copied": len(SYNTH_DRIVER_MODULES)},
+    )
 
 
 def stage_root_files(staging_dir: Path) -> None:
     for src, relative_dest in ROOT_FILES:
         copy_file(src, staging_dir / relative_dest)
+    record_trace(
+        "stage_root_files",
+        details={"files_copied": len(ROOT_FILES)},
+    )
 
 
 def iter_asset_directories() -> Iterable[Path]:
@@ -293,43 +526,81 @@ def stage_assets_tree(staging_dir: Path) -> bool:
     dest_root = staging_dir / "assets"
     dest_root.mkdir(parents=True, exist_ok=True)
     copied_any = False
+    copied_entries = 0
     for asset_path in iter_asset_directories():
         destination = dest_root / asset_path.name
         if asset_path.is_dir():
             copy_optional_directory(asset_path, destination, preserve_existing=False)
             copied_any = True
+            copied_entries += 1
         elif asset_path.is_file():
             copy_file(asset_path, destination)
             copied_any = True
+            copied_entries += 1
+    record_trace(
+        "stage_assets_tree",
+        details={"copied": copied_any, "entries": copied_entries},
+    )
     return copied_any
 
 
 def stage_speechdata_tree(staging_dir: Path) -> bool:
     speechdata_root = resource_paths.speechdata_root()
     if not speechdata_root.is_dir():
+        record_trace(
+            "stage_speechdata_tree",
+            details={"copied": False, "reason": "missing_directory"},
+        )
         return False
-    return copy_optional_directory(
+    copied = copy_optional_directory(
         speechdata_root,
         staging_dir / "speechdata",
         preserve_existing=False,
     )
+    record_trace(
+        "stage_speechdata_tree",
+        details={"copied": copied},
+    )
+    return copied
 
 
 def write_archive(staging_dir: Path, output: Path) -> None:
     if output.exists():
         output.unlink()
     output.parent.mkdir(parents=True, exist_ok=True)
+    file_count = 0
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(staging_dir.rglob("*")):
             if not path.is_file():
                 continue
             arcname = path.relative_to(staging_dir).as_posix()
             archive.write(path, arcname)
+            file_count += 1
+    record_trace(
+        "write_archive",
+        details={"output": output, "files_packaged": file_count},
+    )
 
 
 def main() -> None:
     args = parse_args()
+    configure_trace(args.trace_json, args.trace_markdown)
+    record_trace(
+        "parse_args",
+        details={
+            "output": args.output,
+            "template": args.template,
+            "no_download": args.no_download,
+            "insecure": args.insecure,
+            "template_url": args.template_url,
+        },
+    )
+
     _validate_template_url(str(args.template_url))
+    record_trace(
+        "_validate_template_url",
+        details={"template_url": args.template_url},
+    )
     template_path = ensure_template(
         args.template.expanduser().resolve(),
         url=args.template_url,
@@ -390,6 +661,21 @@ def main() -> None:
         write_archive(staging_dir, args.output.expanduser().resolve())
 
     print(f"Created {args.output}")
+
+    emit_trace_reports(
+        json_path=args.trace_json,
+        markdown_path=args.trace_markdown,
+        context={
+            "output": args.output,
+            "template": template_path,
+            "template_used": template_used,
+            "assets_copied": assets_copied,
+            "speechdata_copied": speechdata_copied,
+            "legacy_data_copied": legacy_data_copied,
+            "legacy_runtime_copied": legacy_runtime_copied,
+            "copied_architectures": copied_architectures,
+        },
+    )
 
 
 if __name__ == "__main__":

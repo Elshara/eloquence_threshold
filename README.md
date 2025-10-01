@@ -28,7 +28,7 @@ Track progress in the audit document and note any outstanding cleanups in pull r
 1. Clone the repository and install Python 3.11+ (matching NVDA alpha-52731 requirements).
 2. Populate proprietary Eloquence binaries under `eloquence/` and architecture-specific siblings (`eloquence_x86`, `eloquence_x64`, `eloquence_arm32`, `eloquence_arm64`). The build helper will scan these folders and confirm the PE machine type before packaging.
 3. Review the cached-dataset provenance tracked in the documentation folder, especially the NV Access snapshot and DataJake archive manifests, before performing offline builds.
-4. Run the reporting helpers listed above to refresh manifests, then package the add-on with `python build.py --no-download --insecure --output dist/eloquence.nvda-addon`.
+4. Run the reporting helpers listed above to refresh manifests, then package the add-on with `python build.py --no-download --insecure --output dist/eloquence.nvda-addon`. When you want an execution log that documents which helpers fired (and which ones still need coverage during NVDA alpha rehearsals), append `--trace-json assets/json/build_execution_trace.json --trace-markdown assets/md/build_execution_trace.md` so reviewers can diff packaging behaviour between runs.
 
 For deeper planning, explore the roadmap and research dossiers in [`assets/md/`](assets/md/), which detail upcoming language expansions, NV Speech Player slider coverage, and Equalizer APO integration strategies.
 

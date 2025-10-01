@@ -1,0 +1,292 @@
+{
+  "context": {
+    "assets_copied": true,
+    "copied_architectures": [],
+    "legacy_data_copied": false,
+    "legacy_runtime_copied": false,
+    "output": "dist/test.nvda-addon",
+    "speechdata_copied": true,
+    "template": null,
+    "template_used": false
+  },
+  "helpers": {
+    "_validate_template_url": {
+      "calls": 1,
+      "description": "Confirm the template URL targets an approved GitHub host before optional downloads.",
+      "events": [
+        {
+          "template_url": "https://github.com/pumper42nickel/eloquence_threshold/releases/download/v0.20210417.01/eloquence.nvda-addon"
+        }
+      ],
+      "triggered": true
+    },
+    "copy_optional_directory": {
+      "calls": 27,
+      "description": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
+      "events": [
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/bin",
+          "preserve_existing": false,
+          "source": "assets/bin"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/cjk",
+          "preserve_existing": false,
+          "source": "assets/cjk"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/cmd",
+          "preserve_existing": false,
+          "source": "assets/cmd"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/cnt",
+          "preserve_existing": false,
+          "source": "assets/cnt"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/csv",
+          "preserve_existing": false,
+          "source": "assets/csv"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/dic",
+          "preserve_existing": false,
+          "source": "assets/dic"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/dll",
+          "preserve_existing": false,
+          "source": "assets/dll"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/exe",
+          "preserve_existing": false,
+          "source": "assets/exe"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/hlp",
+          "preserve_existing": false,
+          "source": "assets/hlp"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/html",
+          "preserve_existing": false,
+          "source": "assets/html"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/ico",
+          "preserve_existing": false,
+          "source": "assets/ico"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/ini",
+          "preserve_existing": false,
+          "source": "assets/ini"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/json",
+          "preserve_existing": false,
+          "source": "assets/json"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/md",
+          "preserve_existing": false,
+          "source": "assets/md"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/pdf",
+          "preserve_existing": false,
+          "source": "assets/pdf"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/syn",
+          "preserve_existing": false,
+          "source": "assets/syn"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/txt",
+          "preserve_existing": false,
+          "source": "assets/txt"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/uil",
+          "preserve_existing": false,
+          "source": "assets/uil"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/assets/voice",
+          "preserve_existing": false,
+          "source": "assets/voice"
+        },
+        {
+          "copied": true,
+          "destination": "<temp>/eloquence_build/<run>/speechdata",
+          "preserve_existing": false,
+          "source": "speechdata"
+        },
+        {
+          "copied": false,
+          "destination": "<temp>/eloquence_build/<run>/synthDrivers/eloquence_data",
+          "reason": "missing_source",
+          "source": "eloquence_data"
+        },
+        {
+          "copied": false,
+          "destination": "<temp>/eloquence_build/<run>/synthDrivers/eloquence",
+          "reason": "missing_source",
+          "source": "eloquence"
+        },
+        {
+          "copied": false,
+          "destination": "<temp>/eloquence_build/<run>/synthDrivers/eloquence/x86",
+          "reason": "missing_source",
+          "source": "eloquence_x86"
+        },
+        {
+          "copied": false,
+          "destination": "<temp>/eloquence_build/<run>/synthDrivers/eloquence/x64",
+          "reason": "missing_source",
+          "source": "eloquence_x64"
+        },
+        {
+          "copied": false,
+          "destination": "<temp>/eloquence_build/<run>/synthDrivers/eloquence/arm32",
+          "reason": "missing_source",
+          "source": "eloquence_arm32"
+        },
+        {
+          "copied": false,
+          "destination": "<temp>/eloquence_build/<run>/synthDrivers/eloquence/arm64",
+          "reason": "missing_source",
+          "source": "eloquence_arm64"
+        },
+        {
+          "copied": false,
+          "destination": "<temp>/eloquence_build/<run>/synthDrivers/eloquence/arm",
+          "reason": "missing_source",
+          "source": "eloquence_arm"
+        }
+      ],
+      "triggered": true
+    },
+    "ensure_template": {
+      "calls": 1,
+      "description": "Locate or download the baseline template archive that seeds legacy binaries.",
+      "events": [
+        {
+          "allow_download": false,
+          "path": "eloquence_original.nvda-addon",
+          "result": "missing"
+        }
+      ],
+      "triggered": true
+    },
+    "has_runtime_assets": {
+      "calls": 1,
+      "description": "Scan known locations for eci.dll so packaging can warn about missing runtimes.",
+      "events": [
+        {
+          "found": true
+        }
+      ],
+      "triggered": true
+    },
+    "parse_args": {
+      "calls": 1,
+      "description": "Parse CLI arguments and apply defaults for offline packaging runs.",
+      "events": [
+        {
+          "insecure": true,
+          "no_download": true,
+          "output": "dist/test.nvda-addon",
+          "template": "eloquence_original.nvda-addon",
+          "template_url": "https://github.com/pumper42nickel/eloquence_threshold/releases/download/v0.20210417.01/eloquence.nvda-addon"
+        }
+      ],
+      "triggered": true
+    },
+    "stage_assets_tree": {
+      "calls": 1,
+      "description": "Mirror the extension-scoped assets/ hierarchy into the packaged add-on.",
+      "events": [
+        {
+          "copied": true,
+          "entries": 19
+        }
+      ],
+      "triggered": true
+    },
+    "stage_root_files": {
+      "calls": 1,
+      "description": "Copy root-level metadata such as manifest.ini into the staging directory.",
+      "events": [
+        {
+          "files_copied": 1
+        }
+      ],
+      "triggered": true
+    },
+    "stage_speechdata_tree": {
+      "calls": 1,
+      "description": "Bundle temporary speechdata/ payloads that still need extension triage.",
+      "events": [
+        {
+          "copied": true
+        }
+      ],
+      "triggered": true
+    },
+    "stage_synth_driver_modules": {
+      "calls": 1,
+      "description": "Copy the Eloquence synth driver modules into synthDrivers/ for NVDA.",
+      "events": [
+        {
+          "modules_copied": 8
+        }
+      ],
+      "triggered": true
+    },
+    "stage_template": {
+      "calls": 1,
+      "description": "Extract an optional template archive into the temporary staging directory.",
+      "events": [
+        {
+          "result": "initialised",
+          "template": null
+        }
+      ],
+      "triggered": true
+    },
+    "write_archive": {
+      "calls": 1,
+      "description": "Zip the staged tree into an .nvda-addon payload ready for NVDA installation.",
+      "events": [
+        {
+          "files_packaged": 1271,
+          "output": "dist/test.nvda-addon"
+        }
+      ],
+      "triggered": true
+    }
+  }
+}
