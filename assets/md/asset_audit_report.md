@@ -29,14 +29,14 @@ while following CodeQL-friendly packaging expectations.
 | nvda | 15 | 0.32 |
 | sam | 40 | 1.52 |
 | svox pico | 14 | 6.50 |
-| unspecified | 660 | 191.88 |
+| unspecified | 660 | 192.11 |
 
 ## Priority mix
 
 | Priority | Files | Size (MiB) |
 |----------|-------|------------|
 | high | 4786 | 35.36 |
-| medium | 679 | 9.97 |
+| medium | 679 | 10.20 |
 | low | 447 | 554.30 |
 
 ## Usefulness overview
@@ -45,7 +45,7 @@ while following CodeQL-friendly packaging expectations.
 |------------|-------|------------|
 | archive | 21 | 6.01 |
 | core-editable | 4535 | 27.39 |
-| reference | 499 | 10.28 |
+| reference | 499 | 10.51 |
 | runtime-binary | 857 | 555.95 |
 
 ## Action outcomes
@@ -54,8 +54,232 @@ while following CodeQL-friendly packaging expectations.
 |--------|-------|------------|
 | relocate-to-assets | 4765 | 29.36 |
 | relocate-to-speechdata | 21 | 6.01 |
-| retain-in-assets | 269 | 8.31 |
+| retain-in-assets | 269 | 8.54 |
 | retain-in-speechdata | 857 | 555.95 |
+
+## Extension footprint
+
+The following breakdown highlights which file extensions dominate the inventory so we can
+target consolidation work for editable materials before merging synthesizer code paths.
+
+| Extension | Files | Size (MiB) |
+|-----------|-------|------------|
+| <no extension> | 3928 | 321.73 |
+| .wav | 408 | 3.59 |
+| .png | 230 | 5.17 |
+| .xml | 136 | 0.34 |
+| .py | 101 | 1.01 |
+| .scm | 99 | 6.17 |
+| .md | 93 | 1.88 |
+| .dll | 63 | 28.21 |
+| .txt | 63 | 0.53 |
+| .ini | 62 | 0.25 |
+| .h | 58 | 0.25 |
+| .c | 56 | 1.74 |
+| .java | 56 | 0.46 |
+| .vcx | 55 | 88.49 |
+| .hlp | 52 | 6.96 |
+| .json | 48 | 2.88 |
+| .cnt | 36 | 0.06 |
+| .syn | 36 | 41.47 |
+| .tts | 25 | 3.54 |
+| .phm | 24 | 0.01 |
+| .yml | 21 | 0.04 |
+| .bin | 20 | 6.75 |
+| .chm | 20 | 4.19 |
+| .doc | 20 | 5.88 |
+| .test | 17 | 0.11 |
+| .dic | 13 | 2.63 |
+| .uil | 13 | 0.95 |
+| .cpp | 10 | 0.03 |
+| .ssml | 10 | 0.00 |
+| .cmake | 8 | 0.01 |
+| .expected | 8 | 0.00 |
+| .js | 8 | 0.03 |
+| .properties | 7 | 0.00 |
+| .sh | 6 | 0.00 |
+| .html | 5 | 1.68 |
+| .gradle | 4 | 0.01 |
+| .svg | 4 | 0.00 |
+| .ac | 3 | 0.03 |
+| .am | 3 | 0.07 |
+| .exe | 3 | 0.23 |
+| .filters | 3 | 0.01 |
+| .group | 3 | 39.19 |
+| .in | 3 | 0.00 |
+| .m4 | 3 | 0.01 |
+| .ngrambin | 3 | 0.17 |
+| .ucd | 3 | 0.01 |
+| .vcxproj | 3 | 0.06 |
+| .vim | 3 | 0.01 |
+| .apache | 2 | 0.02 |
+| .bat | 2 | 0.01 |
+| .bsd2 | 2 | 0.00 |
+| .dat | 2 | 14.36 |
+| .def | 2 | 0.00 |
+| .dtd | 2 | 0.01 |
+| .ico | 2 | 0.00 |
+| .idl | 2 | 0.00 |
+| .jar | 2 | 0.08 |
+| .jpg | 2 | 0.01 |
+| .mo | 2 | 0.00 |
+| .nanorc | 2 | 0.00 |
+| .out | 2 | 4.87 |
+| .po | 2 | 0.01 |
+| .pyo | 2 | 0.01 |
+| .ronn | 2 | 0.01 |
+| .voice | 2 | 0.00 |
+| .cjk | 1 | 0.06 |
+| .cmd | 1 | 0.00 |
+| .conf | 1 | 0.01 |
+| .cs | 1 | 0.00 |
+| .css | 1 | 0.00 |
+| .csv | 1 | 0.79 |
+| .diff | 1 | 0.12 |
+| .el | 1 | 0.01 |
+| .ent | 1 | 0.01 |
+| .exc | 1 | 0.01 |
+| .gram | 1 | 0.02 |
+| .pdf | 1 | 1.26 |
+| .poslex | 1 | 0.00 |
+| .poslexr | 1 | 1.16 |
+| .pyc | 1 | 0.01 |
+| .rtf | 1 | 0.04 |
+| .sln | 1 | 0.00 |
+| .ssml2 | 1 | 0.00 |
+| .sys | 1 | 0.00 |
+| .wixproj | 1 | 0.00 |
+| .wxs | 1 | 0.13 |
+| .yaml | 1 | 0.00 |
+
+## Consolidation targets
+
+Editable resources currently parked under ``speechdata`` need to move into ``assets`` before
+we can merge Eloquence, eSpeak NG, and NV Speech Player logic into unified modules.  Focus on
+the synthesizer/category pairs below to unblock that consolidation work.
+
+| Synthesizer | Category | Files | Size (MiB) |
+|-------------|----------|-------|------------|
+| eloquence | ico | 2 | 0.00 |
+| eloquence | uil | 1 | 0.06 |
+| espeak-ng | unknown | 3693 | 17.78 |
+| espeak-ng | text | 428 | 3.54 |
+| espeak-ng | png | 226 | 4.83 |
+| espeak-ng | test | 17 | 0.11 |
+| espeak-ng | ssml | 10 | 0.00 |
+| espeak-ng | cmake | 8 | 0.01 |
+| espeak-ng | expected | 8 | 0.00 |
+| espeak-ng | properties | 6 | 0.00 |
+| espeak-ng | gradle | 4 | 0.01 |
+| espeak-ng | svg | 4 | 0.00 |
+| espeak-ng | ac | 3 | 0.03 |
+| espeak-ng | am | 3 | 0.07 |
+| espeak-ng | filters | 3 | 0.01 |
+| espeak-ng | m4 | 3 | 0.01 |
+| espeak-ng | ucd | 3 | 0.01 |
+| espeak-ng | vcxproj | 3 | 0.06 |
+| espeak-ng | vim | 3 | 0.01 |
+| espeak-ng | apache | 2 | 0.02 |
+| espeak-ng | bat | 2 | 0.01 |
+| espeak-ng | bsd2 | 2 | 0.00 |
+| espeak-ng | idl | 2 | 0.00 |
+| espeak-ng | in | 2 | 0.00 |
+| espeak-ng | jar | 2 | 0.08 |
+| espeak-ng | jpg | 2 | 0.01 |
+| espeak-ng | nanorc | 2 | 0.00 |
+| espeak-ng | ronn | 2 | 0.01 |
+| espeak-ng | conf | 1 | 0.01 |
+| espeak-ng | def | 1 | 0.00 |
+| espeak-ng | rtf | 1 | 0.04 |
+| espeak-ng | sln | 1 | 0.00 |
+| espeak-ng | ssml2 | 1 | 0.00 |
+| espeak-ng | wixproj | 1 | 0.00 |
+| klatt | scm | 1 | 0.00 |
+| nvda | mo | 2 | 0.00 |
+| nvda | po | 2 | 0.01 |
+| sam | text | 37 | 0.05 |
+| unspecified | scm | 95 | 0.95 |
+| unspecified | vcx | 50 | 0.61 |
+| unspecified | text | 38 | 0.32 |
+| unspecified | phm | 24 | 0.01 |
+| unspecified | cnt | 20 | 0.04 |
+| unspecified | tts | 17 | 0.49 |
+| unspecified | unknown | 9 | 0.03 |
+| unspecified | dtd | 2 | 0.01 |
+| unspecified | ngrambin | 2 | 0.03 |
+| unspecified | pyo | 2 | 0.01 |
+| unspecified | cs | 1 | 0.00 |
+| unspecified | def | 1 | 0.00 |
+| unspecified | el | 1 | 0.01 |
+| unspecified | ent | 1 | 0.01 |
+| unspecified | exc | 1 | 0.01 |
+| unspecified | gram | 1 | 0.02 |
+| unspecified | in | 1 | 0.00 |
+| unspecified | out | 1 | 0.01 |
+| unspecified | poslex | 1 | 0.00 |
+| unspecified | properties | 1 | 0.00 |
+| unspecified | pyc | 1 | 0.01 |
+| unspecified | sys | 1 | 0.00 |
+
+## Duplicate payloads
+
+Use the digest-matched entries below to deduplicate archives before packaging the NVDA add-on.
+This keeps the repo lean while still capturing references for contextual voice design.
+
+| SHA-256 | Files | Size (MiB) | Synthesizers | Example path |
+|---------|-------|------------|--------------|--------------|
+| `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | 16 | 0.00 | espeak-ng, unspecified | `speechdata/espeak-ng-1.52.0/dictsource/chr_list` |
+| `fc8d3775b57186ef5e03aa0f1ed0f7128cfc38509a63fdb1e85eb6383de1e6ce` | 14 | 0.02 | sam | `speechdata/orpheus/orpheus/sam/Dso00020.ini` |
+| `2eaade658d04d2b7e2834117c45f44d21533df147542e1cb102c15f987093380` | 9 | 1.83 | unspecified | `speechdata/orpheus/orpheus/ORP00001.HLP` |
+| `b7c00244002f123199dd254a4a13c0598a63272b7c2fb9986878682828ad3d54` | 9 | 1.54 | unspecified | `speechdata/orpheus/orpheus/ORP00001.CHM` |
+| `7707da56806c642baa6d5f38e05b5444fb88416684bc5df592754cb20ae8e15d` | 8 | 0.01 | sam | `speechdata/orpheus/orpheus/sam/Dso00001.ini` |
+| `b09eb6659480cb7e3b3fa69f47284c0ff8e1c7755749c957238a6cc5ebbdc859` | 6 | 1.58 | unspecified | `speechdata/orpheus/orpheus/docs/ORP00001.DOC` |
+| `acb89e63e3e952a63e8f824705f38edd51c9619f6c4c9f37703c62cc409c9761` | 6 | 0.06 | espeak-ng | `speechdata/espeak-ng-1.52.0/dictsource/bs_list` |
+| `af786a4f267db0034d3990581a6382fb1cacb962794476c9d22fc4ccb2092469` | 6 | 0.02 | espeak-ng | `speechdata/espeak-ng-1.52.0/dictsource/bs_rules` |
+| `428091a6b403807b473b16d0cad27a2e7442140f3e27716a1ced7dc653013e4c` | 6 | 0.01 | unspecified | `speechdata/orpheus/orpheus/ORP00001.CNT` |
+| `11a677d9093cb5e539091cd57b2c6dd13cc0d41c26abdfe535865fbab7b5bc95` | 4 | 0.09 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/myanmar/a34` |
+| `51a89071698f2006a052615a9d1172900d5f7d6f709c7b00f4a2ba697625c909` | 4 | 0.08 | espeak-ng | `speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/es-la.png` |
+| `494b677c2ecdf300cb807117916f48f3f4f972dd1e4b69993263b0b8eff826ba` | 4 | 0.06 | espeak-ng | `speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/base.png` |
+| `d626bee183cc7bdcc72fe719ac2e0c7e6b43920908e09485d07002b78d1403bb` | 4 | 0.04 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/klatt/n_n^/n^_` |
+| `91152ecb574be9cf1968b61f1eac13932cdfe8d6823092dfd76a821917144752` | 4 | 0.04 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/klatt/n_n^/n^#_` |
+| `4ee9504c418e1ade70a0ac62a1fce25559f5abcc5af9eec702cd9c6c5346801a` | 4 | 0.02 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/ufric/x.wav` |
+| `607702d3715119e62d31eb74eedbf3ed046790e2fd419c59f7542605d8cfee40` | 4 | 0.01 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/ph_bashkir` |
+| `4e78c3be0d7fa40d054f426e05e0f652abc34b6d87bbac8d26727d72d391d798` | 4 | 0.01 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/klatt/n` |
+| `f5b79aadf133029b2557be6a03e5cd3e27525e9ac443c43fdfde189cf7e8e726` | 4 | 0.01 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/klatt/m` |
+| `de2ae3eb2c372060b4f77a6f3f1770df59dde9057586e6353d3ff895fba6daad` | 4 | 0.01 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/m/m-syl` |
+| `d04c4adae7f3aea8c597694d0ab3de03009e18cf93b8f6afcd27666b3a421de9` | 4 | 0.01 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/myanmar/t_hi.wav` |
+| `5306a143bc5aba60b6f0cdbf6476a6890fe3dc90b96894f9dd72d21009ae6173` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/fi` |
+| `89cafb6404c255f3176c940c0402bc407bdf01832802cd8b978e49fa5671bd43` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/n/n-syl` |
+| `8cebd3cd81694646011d39354b3e3d45343a96d7858e4bd42e3fce9be381a7fe` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-ir1` |
+| `62c78bd1b08a3eb2a02bf8b27aa1ddb06e82e124ec1ac64d8fd8c3590b8ac715` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/phsource/klatt/n_n^/_n^` |
+| `f7f3a3ddceed4081764cfc4c3b39329ca8f9197b2204e396910949e65ff6de62` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/base` |
+| `2a644b8ceb0d177f0c96eb707bdb0a66487ee75af8e7623954a2a16b64ba272f` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/es` |
+| `796fc7e7cb73322dd26102e270c55d1ce754702d9f6f76ba2abf3d2397783b94` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-us3` |
+| `63ea6b18456f022ae2cf80c1d0c0ec9d324575cf388eb4d6057f507b433bc669` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-us2` |
+| `03b30d4c8b571c48df3be931dae2bb6f10d683821df0e0dac612ebbae351ba32` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-us1` |
+| `6d6f27286476035298926ef3caf242ff37d6fdf8dda3e95d4e2b5776468d3004` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-it4` |
+| `4bd9cd1244c71b583fe8279bb8c092ddaca61873ce76b19a9d78a8731b97eedc` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-vz1` |
+| `ac301735de92fdf11d9f76a013eb5a25042cafa40fe7f276fe27326b1cf20f56` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-it3` |
+| `4130e2c6168a5ebcb98a595e8a7c569d0d5ebb1f8da0622f07accc86894181d2` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-mx1` |
+| `b20de9d7df7fd34a8f462245e78156e4b3d2fafdd3db1da04ac5d4d2e35070c4` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-mx2` |
+| `a0f57dfa06053452d3cc2a343e00e2717a7de11f6ff516507e7406cba70fc277` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-tr2` |
+| `1db8241a935ecd6a6b5e4ced906021a86535e68047fbbd91b20adbfbc5c68f81` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-hu1` |
+| `75a3b9f171f2e6681cb6656e1b9198fee6d1a6ad5c025dc52e056b37a0b5a40e` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-sw2` |
+| `351d13dee787052313d55f3762f3633b35c736348ecbb3e76914c9893f816e81` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-id1` |
+| `1b092a60c374081f2c9bac3d09bdeea6f97e821d7261fbb530db161505c63783` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-pl1` |
+| `42bfce7cea2a5f31e08f29a46885b741909ff2fb60badab5988b114a3bd81064` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-de3` |
+| `49cf98f88639db8c000fddd24af4dc6c48da571fce063d41a39a165b02b72166` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-sw2-en` |
+| `6263ef96f906154d2a4b9d7ab385239a3d48a7f929932beb8342a45e1c46aea0` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-sw1` |
+| `4a36dfce2aee32e2675feddc71ef8cd253a504cbe1ea81024867a2d7de158fac` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-hu1-en` |
+| `04c3b361ab3f1fda090f39e17a8b5ef7acdf9de20a3d332f30802cfc3d95877b` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-nl2` |
+| `cbbcb9184cc8d2b6193e29a27b428a4860d647eeda8c04cbfb2f6b21ad2024a1` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-sw1-en` |
+| `a7428804c19a26ba3340a235506341ed212ae7bdd7c87fc9a6e52a2eed7c25cf` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-nl2-en` |
+| `fcbf3863ac3b6bf117145a50699138de5a3426487eb2f69535300136aa6ff6f1` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-de5-en` |
+| `62ed7f850ff2871582fbcda1cf88954da64b5338ef11b325a74a2a01cefbbc3c` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-af1` |
+| `b69b92a118b367edff28839e49dac2608da570ae3c9f5d670481ab1c595e1264` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-gr2-en` |
+| `3b0923ea8affeaa73a7c658d7c7f44beb7f47ff32ba48be3a71fd469c69359dd` | 4 | 0.00 | espeak-ng | `speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-ro1` |
+
+_Showing 50 of 2029 duplicate groups.  Export the full JSON manifest for the complete list._
 
 ## Prioritised action list
 

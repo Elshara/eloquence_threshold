@@ -31,6 +31,7 @@ ASSETS_DIR = ROOT / "assets"
 SPEECHDATA_DIR = ROOT / "speechdata"
 DEFAULT_TARGETS = (ASSETS_DIR, SPEECHDATA_DIR)
 RELOCATION_DISPLAY_LIMIT = 200
+DUPLICATE_DISPLAY_LIMIT = 50
 
 # File extensions that typically indicate editable text content.
 TEXT_EXTENSIONS = {
@@ -358,7 +359,63 @@ def summarise_by(records: Iterable[AssetRecord], attribute: str) -> Dict[str, Di
     return summary
 
 
-def render_markdown(records: List[AssetRecord]) -> str:
+def summarise_extensions(records: Iterable[AssetRecord]) -> Dict[str, Dict[str, int]]:
+    summary: Dict[str, Dict[str, int]] = {}
+    for record in records:
+        suffix = Path(record.path).suffix.lower() or "<no extension>"
+        bucket = summary.setdefault(suffix, {"count": 0, "bytes": 0})
+        bucket["count"] += 1
+        bucket["bytes"] += record.size_bytes
+    return summary
+
+
+def find_duplicate_groups(records: Iterable[AssetRecord]) -> List[Dict[str, object]]:
+    buckets: Dict[str, List[AssetRecord]] = {}
+    for record in records:
+        buckets.setdefault(record.sha256, []).append(record)
+
+    groups: List[Dict[str, object]] = []
+    for digest, items in buckets.items():
+        if len(items) < 2:
+            continue
+        total_bytes = sum(item.size_bytes for item in items)
+        synths = sorted({item.synthesizer for item in items})
+        groups.append(
+            {
+                "sha256": digest,
+                "count": len(items),
+                "total_bytes": total_bytes,
+                "synthesizers": synths,
+                "paths": [item.path for item in items],
+            }
+        )
+
+    groups.sort(key=lambda group: (-group["count"], -group["total_bytes"], group["sha256"]))
+    return groups
+
+
+def consolidation_targets(records: Iterable[AssetRecord]) -> Dict[str, Dict[str, Dict[str, int]]]:
+    summary: Dict[str, Dict[str, Dict[str, int]]] = {}
+    for record in records:
+        if record.action != "relocate-to-assets":
+            continue
+        synth_bucket = summary.setdefault(record.synthesizer, {})
+        category_bucket = synth_bucket.setdefault(
+            record.category,
+            {"count": 0, "bytes": 0},
+        )
+        category_bucket["count"] += 1
+        category_bucket["bytes"] += record.size_bytes
+    return summary
+
+
+def render_markdown(
+    records: List[AssetRecord],
+    duplicates: List[Dict[str, object]],
+    consolidation: Dict[str, Dict[str, Dict[str, int]]],
+    extension_summary: Dict[str, Dict[str, int]],
+    duplicate_limit: int,
+) -> str:
     summary = summarise(records)
     priority_summary = summarise_by(records, "priority")
     usefulness_summary = summarise_by(records, "usefulness")
@@ -431,6 +488,79 @@ def render_markdown(records: List[AssetRecord]) -> str:
     for action, payload in sorted(action_summary.items()):
         size_mib = payload["bytes"] / (1024 * 1024)
         lines.append(f"| {action} | {payload['count']} | {size_mib:.2f} |")
+    lines.extend(
+        [
+            "",
+            "## Extension footprint",
+            "",
+            "The following breakdown highlights which file extensions dominate the inventory so we can",
+            "target consolidation work for editable materials before merging synthesizer code paths.",
+            "",
+            "| Extension | Files | Size (MiB) |",
+            "|-----------|-------|------------|",
+        ]
+    )
+    for extension, payload in sorted(
+        extension_summary.items(), key=lambda item: (-item[1]["count"], item[0])
+    ):
+        size_mib = payload["bytes"] / (1024 * 1024)
+        lines.append(f"| {extension} | {payload['count']} | {size_mib:.2f} |")
+    lines.extend(
+        [
+            "",
+            "## Consolidation targets",
+            "",
+            "Editable resources currently parked under ``speechdata`` need to move into ``assets`` before",
+            "we can merge Eloquence, eSpeak NG, and NV Speech Player logic into unified modules.  Focus on",
+            "the synthesizer/category pairs below to unblock that consolidation work.",
+            "",
+            "| Synthesizer | Category | Files | Size (MiB) |",
+            "|-------------|----------|-------|------------|",
+        ]
+    )
+    if consolidation:
+        for synth in sorted(consolidation):
+            for category, payload in sorted(consolidation[synth].items(), key=lambda item: (-item[1]["count"], item[0])):
+                size_mib = payload["bytes"] / (1024 * 1024)
+                lines.append(f"| {synth} | {category} | {payload['count']} | {size_mib:.2f} |")
+    else:
+        lines.append("| _No outstanding relocations into assets._ | | | |")
+    lines.extend(
+        [
+            "",
+            "## Duplicate payloads",
+            "",
+            "Use the digest-matched entries below to deduplicate archives before packaging the NVDA add-on.",
+            "This keeps the repo lean while still capturing references for contextual voice design.",
+            "",
+            "| SHA-256 | Files | Size (MiB) | Synthesizers | Example path |",
+            "|---------|-------|------------|--------------|--------------|",
+        ]
+    )
+    shown_duplicates = duplicates[:duplicate_limit]
+    if shown_duplicates:
+        for group in shown_duplicates:
+            size_mib = group["total_bytes"] / (1024 * 1024)
+            synths = ", ".join(group["synthesizers"])
+            example = group["paths"][0]
+            lines.append(
+                "| `{digest}` | {count} | {size:.2f} | {synths} | `{example}` |".format(
+                    digest=group["sha256"],
+                    count=group["count"],
+                    size=size_mib,
+                    synths=synths or "unspecified",
+                    example=example,
+                )
+            )
+        if len(duplicates) > duplicate_limit:
+            lines.extend(
+                [
+                    "",
+                    f"_Showing {duplicate_limit} of {len(duplicates)} duplicate groups.  Export the full JSON manifest for the complete list._",
+                ]
+            )
+    else:
+        lines.append("| _No duplicate payloads detected._ | | | | |")
     lines.extend(
         [
             "",
@@ -533,6 +663,9 @@ def main() -> None:
     priority_summary = summarise_by(records, "priority")
     action_summary = summarise_by(records, "action")
     usefulness_summary = summarise_by(records, "usefulness")
+    extension_summary = summarise_extensions(records)
+    duplicate_groups = find_duplicate_groups(records)
+    consolidation_summary = consolidation_targets(records)
     plan_candidates = prioritised_candidates(records)
     relocation_limit = RELOCATION_DISPLAY_LIMIT
     audit_payload = {
@@ -544,6 +677,11 @@ def main() -> None:
         "priority_summary": priority_summary,
         "action_summary": action_summary,
         "usefulness_summary": usefulness_summary,
+        "extension_summary": extension_summary,
+        "consolidation_summary": consolidation_summary,
+        "duplicate_group_count": len(duplicate_groups),
+        "duplicate_group_limit": DUPLICATE_DISPLAY_LIMIT,
+        "duplicate_groups": duplicate_groups[:DUPLICATE_DISPLAY_LIMIT],
         "relocation_count": len(relocations),
         "relocation_limit": relocation_limit,
         "relocations": [
@@ -561,7 +699,15 @@ def main() -> None:
 
     args.output_markdown.parent.mkdir(parents=True, exist_ok=True)
     with args.output_markdown.open("w", encoding="utf-8") as fh:
-        fh.write(render_markdown(records))
+        fh.write(
+            render_markdown(
+                records,
+                duplicate_groups,
+                consolidation_summary,
+                extension_summary,
+                DUPLICATE_DISPLAY_LIMIT,
+            )
+        )
 
     if args.full_json:
         args.full_json.parent.mkdir(parents=True, exist_ok=True)

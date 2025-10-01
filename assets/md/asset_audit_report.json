@@ -1,11 +1,11 @@
 {
-  "generated_at": "2025-10-01T05:08:38+00:00",
+  "generated_at": "2025-10-01T05:48:39+00:00",
   "total_files": 5912,
-  "total_bytes": 628758189,
+  "total_bytes": 629001035,
   "summary": {
     "unspecified": {
       "count": 660,
-      "bytes": 201202740
+      "bytes": 201445586
     },
     "fonix": {
       "count": 2,
@@ -61,7 +61,7 @@
   "priority_summary": {
     "medium": {
       "count": 679,
-      "bytes": 10454754
+      "bytes": 10697600
     },
     "high": {
       "count": 4786,
@@ -75,7 +75,7 @@
   "action_summary": {
     "retain-in-assets": {
       "count": 269,
-      "bytes": 8717226
+      "bytes": 8960072
     },
     "relocate-to-speechdata": {
       "count": 21,
@@ -93,7 +93,7 @@
   "usefulness_summary": {
     "reference": {
       "count": 499,
-      "bytes": 10777855
+      "bytes": 11020701
     },
     "archive": {
       "count": 21,
@@ -108,6 +108,1359 @@
       "bytes": 582958213
     }
   },
+  "extension_summary": {
+    ".cjk": {
+      "count": 1,
+      "bytes": 63138
+    },
+    ".cmd": {
+      "count": 1,
+      "bytes": 26
+    },
+    ".cnt": {
+      "count": 36,
+      "bytes": 59575
+    },
+    ".csv": {
+      "count": 1,
+      "bytes": 823317
+    },
+    ".dic": {
+      "count": 13,
+      "bytes": 2762472
+    },
+    ".hlp": {
+      "count": 52,
+      "bytes": 7295109
+    },
+    ".html": {
+      "count": 5,
+      "bytes": 1757930
+    },
+    ".ini": {
+      "count": 62,
+      "bytes": 263991
+    },
+    ".json": {
+      "count": 48,
+      "bytes": 3022850
+    },
+    ".md": {
+      "count": 93,
+      "bytes": 1976196
+    },
+    ".txt": {
+      "count": 63,
+      "bytes": 550769
+    },
+    ".css": {
+      "count": 1,
+      "bytes": 407
+    },
+    ".pdf": {
+      "count": 1,
+      "bytes": 1321641
+    },
+    ".py": {
+      "count": 101,
+      "bytes": 1064147
+    },
+    ".voice": {
+      "count": 2,
+      "bytes": 365
+    },
+    ".dll": {
+      "count": 63,
+      "bytes": 29585199
+    },
+    ".pyo": {
+      "count": 2,
+      "bytes": 11778
+    },
+    ".exe": {
+      "count": 3,
+      "bytes": 245760
+    },
+    ".ico": {
+      "count": 2,
+      "bytes": 1412
+    },
+    ".syn": {
+      "count": 36,
+      "bytes": 43479696
+    },
+    ".uil": {
+      "count": 13,
+      "bytes": 991232
+    },
+    ".yml": {
+      "count": 21,
+      "bytes": 44525
+    },
+    "<no extension>": {
+      "count": 3928,
+      "bytes": 337360359
+    },
+    ".apache": {
+      "count": 2,
+      "bytes": 22716
+    },
+    ".bsd2": {
+      "count": 2,
+      "bytes": 2488
+    },
+    ".ucd": {
+      "count": 3,
+      "bytes": 8364
+    },
+    ".am": {
+      "count": 3,
+      "bytes": 70020
+    },
+    ".xml": {
+      "count": 136,
+      "bytes": 357713
+    },
+    ".gradle": {
+      "count": 4,
+      "bytes": 7536
+    },
+    ".properties": {
+      "count": 7,
+      "bytes": 1772
+    },
+    ".png": {
+      "count": 230,
+      "bytes": 5425488
+    },
+    ".java": {
+      "count": 56,
+      "bytes": 485080
+    },
+    ".jar": {
+      "count": 2,
+      "bytes": 86924
+    },
+    ".bat": {
+      "count": 2,
+      "bytes": 5652
+    },
+    ".svg": {
+      "count": 4,
+      "bytes": 4686
+    },
+    ".h": {
+      "count": 58,
+      "bytes": 265810
+    },
+    ".c": {
+      "count": 56,
+      "bytes": 1819842
+    },
+    ".sh": {
+      "count": 6,
+      "bytes": 2433
+    },
+    ".cmake": {
+      "count": 8,
+      "bytes": 14561
+    },
+    ".ac": {
+      "count": 3,
+      "bytes": 27476
+    },
+    ".jpg": {
+      "count": 2,
+      "bytes": 8098
+    },
+    ".cpp": {
+      "count": 10,
+      "bytes": 34053
+    },
+    ".idl": {
+      "count": 2,
+      "bytes": 4040
+    },
+    ".js": {
+      "count": 8,
+      "bytes": 28330
+    },
+    ".in": {
+      "count": 3,
+      "bytes": 868
+    },
+    ".m4": {
+      "count": 3,
+      "bytes": 9996
+    },
+    ".wav": {
+      "count": 408,
+      "bytes": 3762912
+    },
+    ".ronn": {
+      "count": 2,
+      "bytes": 10196
+    },
+    ".conf": {
+      "count": 1,
+      "bytes": 6305
+    },
+    ".vcxproj": {
+      "count": 3,
+      "bytes": 66492
+    },
+    ".filters": {
+      "count": 3,
+      "bytes": 10236
+    },
+    ".sln": {
+      "count": 1,
+      "bytes": 3785
+    },
+    ".rtf": {
+      "count": 1,
+      "bytes": 38406
+    },
+    ".wxs": {
+      "count": 1,
+      "bytes": 131735
+    },
+    ".wixproj": {
+      "count": 1,
+      "bytes": 3670
+    },
+    ".def": {
+      "count": 2,
+      "bytes": 125
+    },
+    ".test": {
+      "count": 17,
+      "bytes": 112925
+    },
+    ".expected": {
+      "count": 8,
+      "bytes": 544
+    },
+    ".ssml": {
+      "count": 10,
+      "bytes": 2485
+    },
+    ".ssml2": {
+      "count": 1,
+      "bytes": 342
+    },
+    ".vim": {
+      "count": 3,
+      "bytes": 5733
+    },
+    ".yaml": {
+      "count": 1,
+      "bytes": 219
+    },
+    ".nanorc": {
+      "count": 2,
+      "bytes": 2131
+    },
+    ".dtd": {
+      "count": 2,
+      "bytes": 7319
+    },
+    ".scm": {
+      "count": 99,
+      "bytes": 6471798
+    },
+    ".out": {
+      "count": 2,
+      "bytes": 5106718
+    },
+    ".poslex": {
+      "count": 1,
+      "bytes": 2662
+    },
+    ".diff": {
+      "count": 1,
+      "bytes": 120798
+    },
+    ".poslexr": {
+      "count": 1,
+      "bytes": 1220512
+    },
+    ".ngrambin": {
+      "count": 3,
+      "bytes": 178490
+    },
+    ".el": {
+      "count": 1,
+      "bytes": 11103
+    },
+    ".ent": {
+      "count": 1,
+      "bytes": 8118
+    },
+    ".gram": {
+      "count": 1,
+      "bytes": 16192
+    },
+    ".cs": {
+      "count": 1,
+      "bytes": 988
+    },
+    ".group": {
+      "count": 3,
+      "bytes": 41095289
+    },
+    ".pyc": {
+      "count": 1,
+      "bytes": 7687
+    },
+    ".bin": {
+      "count": 20,
+      "bytes": 7077570
+    },
+    ".dat": {
+      "count": 2,
+      "bytes": 15056896
+    },
+    ".mo": {
+      "count": 2,
+      "bytes": 3511
+    },
+    ".po": {
+      "count": 2,
+      "bytes": 5569
+    },
+    ".phm": {
+      "count": 24,
+      "bytes": 13436
+    },
+    ".tts": {
+      "count": 25,
+      "bytes": 3712788
+    },
+    ".vcx": {
+      "count": 55,
+      "bytes": 92786944
+    },
+    ".chm": {
+      "count": 20,
+      "bytes": 4390566
+    },
+    ".doc": {
+      "count": 20,
+      "bytes": 6165504
+    },
+    ".sys": {
+      "count": 1,
+      "bytes": 804
+    },
+    ".exc": {
+      "count": 1,
+      "bytes": 5692
+    }
+  },
+  "consolidation_summary": {
+    "unspecified": {
+      "pyo": {
+        "count": 2,
+        "bytes": 11778
+      },
+      "dtd": {
+        "count": 2,
+        "bytes": 7319
+      },
+      "scm": {
+        "count": 95,
+        "bytes": 995795
+      },
+      "out": {
+        "count": 1,
+        "bytes": 9593
+      },
+      "poslex": {
+        "count": 1,
+        "bytes": 2662
+      },
+      "unknown": {
+        "count": 9,
+        "bytes": 34933
+      },
+      "text": {
+        "count": 38,
+        "bytes": 335366
+      },
+      "el": {
+        "count": 1,
+        "bytes": 11103
+      },
+      "ent": {
+        "count": 1,
+        "bytes": 8118
+      },
+      "gram": {
+        "count": 1,
+        "bytes": 16192
+      },
+      "ngrambin": {
+        "count": 2,
+        "bytes": 34921
+      },
+      "properties": {
+        "count": 1,
+        "bytes": 88
+      },
+      "cs": {
+        "count": 1,
+        "bytes": 988
+      },
+      "in": {
+        "count": 1,
+        "bytes": 354
+      },
+      "pyc": {
+        "count": 1,
+        "bytes": 7687
+      },
+      "phm": {
+        "count": 24,
+        "bytes": 13436
+      },
+      "vcx": {
+        "count": 50,
+        "bytes": 634976
+      },
+      "tts": {
+        "count": 17,
+        "bytes": 518484
+      },
+      "cnt": {
+        "count": 20,
+        "bytes": 41837
+      },
+      "def": {
+        "count": 1,
+        "bytes": 41
+      },
+      "sys": {
+        "count": 1,
+        "bytes": 804
+      },
+      "exc": {
+        "count": 1,
+        "bytes": 5692
+      }
+    },
+    "eloquence": {
+      "ico": {
+        "count": 2,
+        "bytes": 1412
+      },
+      "uil": {
+        "count": 1,
+        "bytes": 61440
+      }
+    },
+    "espeak-ng": {
+      "text": {
+        "count": 428,
+        "bytes": 3715643
+      },
+      "unknown": {
+        "count": 3693,
+        "bytes": 18639309
+      },
+      "apache": {
+        "count": 2,
+        "bytes": 22716
+      },
+      "bsd2": {
+        "count": 2,
+        "bytes": 2488
+      },
+      "ucd": {
+        "count": 3,
+        "bytes": 8364
+      },
+      "am": {
+        "count": 3,
+        "bytes": 70020
+      },
+      "gradle": {
+        "count": 4,
+        "bytes": 7536
+      },
+      "properties": {
+        "count": 6,
+        "bytes": 1684
+      },
+      "png": {
+        "count": 226,
+        "bytes": 5069214
+      },
+      "jar": {
+        "count": 2,
+        "bytes": 86924
+      },
+      "bat": {
+        "count": 2,
+        "bytes": 5652
+      },
+      "svg": {
+        "count": 4,
+        "bytes": 4686
+      },
+      "cmake": {
+        "count": 8,
+        "bytes": 14561
+      },
+      "ac": {
+        "count": 3,
+        "bytes": 27476
+      },
+      "jpg": {
+        "count": 2,
+        "bytes": 8098
+      },
+      "idl": {
+        "count": 2,
+        "bytes": 4040
+      },
+      "in": {
+        "count": 2,
+        "bytes": 514
+      },
+      "m4": {
+        "count": 3,
+        "bytes": 9996
+      },
+      "ronn": {
+        "count": 2,
+        "bytes": 10196
+      },
+      "conf": {
+        "count": 1,
+        "bytes": 6305
+      },
+      "vcxproj": {
+        "count": 3,
+        "bytes": 66492
+      },
+      "filters": {
+        "count": 3,
+        "bytes": 10236
+      },
+      "sln": {
+        "count": 1,
+        "bytes": 3785
+      },
+      "rtf": {
+        "count": 1,
+        "bytes": 38406
+      },
+      "wixproj": {
+        "count": 1,
+        "bytes": 3670
+      },
+      "def": {
+        "count": 1,
+        "bytes": 84
+      },
+      "test": {
+        "count": 17,
+        "bytes": 112925
+      },
+      "expected": {
+        "count": 8,
+        "bytes": 544
+      },
+      "ssml": {
+        "count": 10,
+        "bytes": 2485
+      },
+      "ssml2": {
+        "count": 1,
+        "bytes": 342
+      },
+      "vim": {
+        "count": 3,
+        "bytes": 5733
+      },
+      "nanorc": {
+        "count": 2,
+        "bytes": 2131
+      }
+    },
+    "klatt": {
+      "scm": {
+        "count": 1,
+        "bytes": 3273
+      }
+    },
+    "nvda": {
+      "mo": {
+        "count": 2,
+        "bytes": 3511
+      },
+      "po": {
+        "count": 2,
+        "bytes": 5569
+      }
+    },
+    "sam": {
+      "text": {
+        "count": 37,
+        "bytes": 54687
+      }
+    }
+  },
+  "duplicate_group_count": 2029,
+  "duplicate_group_limit": 50,
+  "duplicate_groups": [
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "count": 16,
+      "total_bytes": 0,
+      "synthesizers": [
+        "espeak-ng",
+        "unspecified"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/dictsource/chr_list",
+        "speechdata/espeak-ng-1.52.0/dictsource/cv_list",
+        "speechdata/espeak-ng-1.52.0/dictsource/fo_emoji",
+        "speechdata/espeak-ng-1.52.0/dictsource/kaa_emoji",
+        "speechdata/espeak-ng-1.52.0/dictsource/kk_emoji",
+        "speechdata/espeak-ng-1.52.0/dictsource/quc_emoji",
+        "speechdata/espeak-ng-1.52.0/emscripten/pre.js",
+        "speechdata/espeak-ng-master/dictsource/chr_list",
+        "speechdata/espeak-ng-master/dictsource/crh_emoji",
+        "speechdata/espeak-ng-master/dictsource/cv_list",
+        "speechdata/espeak-ng-master/dictsource/fo_emoji",
+        "speechdata/espeak-ng-master/dictsource/kaa_emoji",
+        "speechdata/espeak-ng-master/dictsource/kk_emoji",
+        "speechdata/espeak-ng-master/dictsource/quc_emoji",
+        "speechdata/espeak-ng-master/emscripten/pre.js",
+        "speechdata/newfon/languages/__init__.py"
+      ]
+    },
+    {
+      "sha256": "fc8d3775b57186ef5e03aa0f1ed0f7128cfc38509a63fdb1e85eb6383de1e6ce",
+      "count": 14,
+      "total_bytes": 18270,
+      "synthesizers": [
+        "sam"
+      ],
+      "paths": [
+        "speechdata/orpheus/orpheus/sam/Dso00020.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00044.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00045.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00055.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00081.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00086.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00351.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00354.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00370.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00372.ini",
+        "speechdata/orpheus/orpheus/sam/Dso01086.ini",
+        "speechdata/orpheus/orpheus/sam/Dso10034.ini",
+        "speechdata/orpheus/orpheus/sam/Dso10044.ini",
+        "speechdata/orpheus/orpheus/sam/Dso10086.ini"
+      ]
+    },
+    {
+      "sha256": "2eaade658d04d2b7e2834117c45f44d21533df147542e1cb102c15f987093380",
+      "count": 9,
+      "total_bytes": 1918413,
+      "synthesizers": [
+        "unspecified"
+      ],
+      "paths": [
+        "speechdata/orpheus/orpheus/ORP00001.HLP",
+        "speechdata/orpheus/orpheus/ORP00007.HLP",
+        "speechdata/orpheus/orpheus/ORP00020.HLP",
+        "speechdata/orpheus/orpheus/ORP00042.HLP",
+        "speechdata/orpheus/orpheus/ORP00045.HLP",
+        "speechdata/orpheus/orpheus/ORP00048.HLP",
+        "speechdata/orpheus/orpheus/ORP00055.HLP",
+        "speechdata/orpheus/orpheus/ORP00351.HLP",
+        "speechdata/orpheus/orpheus/ORP10042.HLP"
+      ]
+    },
+    {
+      "sha256": "b7c00244002f123199dd254a4a13c0598a63272b7c2fb9986878682828ad3d54",
+      "count": 9,
+      "total_bytes": 1614555,
+      "synthesizers": [
+        "unspecified"
+      ],
+      "paths": [
+        "speechdata/orpheus/orpheus/ORP00001.CHM",
+        "speechdata/orpheus/orpheus/ORP00007.CHM",
+        "speechdata/orpheus/orpheus/ORP00020.CHM",
+        "speechdata/orpheus/orpheus/ORP00042.CHM",
+        "speechdata/orpheus/orpheus/ORP00045.CHM",
+        "speechdata/orpheus/orpheus/ORP00048.CHM",
+        "speechdata/orpheus/orpheus/ORP00055.CHM",
+        "speechdata/orpheus/orpheus/ORP00351.CHM",
+        "speechdata/orpheus/orpheus/ORP10042.CHM"
+      ]
+    },
+    {
+      "sha256": "7707da56806c642baa6d5f38e05b5444fb88416684bc5df592754cb20ae8e15d",
+      "count": 8,
+      "total_bytes": 10440,
+      "synthesizers": [
+        "sam"
+      ],
+      "paths": [
+        "speechdata/orpheus/orpheus/sam/Dso00001.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00007.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00030.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00090.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00091.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00386.ini",
+        "speechdata/orpheus/orpheus/sam/Dso00972.ini",
+        "speechdata/orpheus/orpheus/sam/Dso10042.ini"
+      ]
+    },
+    {
+      "sha256": "b09eb6659480cb7e3b3fa69f47284c0ff8e1c7755749c957238a6cc5ebbdc859",
+      "count": 6,
+      "total_bytes": 1652736,
+      "synthesizers": [
+        "unspecified"
+      ],
+      "paths": [
+        "speechdata/orpheus/orpheus/docs/ORP00001.DOC",
+        "speechdata/orpheus/orpheus/docs/ORP00020.DOC",
+        "speechdata/orpheus/orpheus/docs/ORP00042.DOC",
+        "speechdata/orpheus/orpheus/docs/ORP00045.DOC",
+        "speechdata/orpheus/orpheus/docs/ORP00048.DOC",
+        "speechdata/orpheus/orpheus/docs/ORP10042.DOC"
+      ]
+    },
+    {
+      "sha256": "acb89e63e3e952a63e8f824705f38edd51c9619f6c4c9f37703c62cc409c9761",
+      "count": 6,
+      "total_bytes": 64506,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/dictsource/bs_list",
+        "speechdata/espeak-ng-1.52.0/dictsource/hr_list",
+        "speechdata/espeak-ng-1.52.0/dictsource/sr_list",
+        "speechdata/espeak-ng-master/dictsource/bs_list",
+        "speechdata/espeak-ng-master/dictsource/hr_list",
+        "speechdata/espeak-ng-master/dictsource/sr_list"
+      ]
+    },
+    {
+      "sha256": "af786a4f267db0034d3990581a6382fb1cacb962794476c9d22fc4ccb2092469",
+      "count": 6,
+      "total_bytes": 21522,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/dictsource/bs_rules",
+        "speechdata/espeak-ng-1.52.0/dictsource/hr_rules",
+        "speechdata/espeak-ng-1.52.0/dictsource/sr_rules",
+        "speechdata/espeak-ng-master/dictsource/bs_rules",
+        "speechdata/espeak-ng-master/dictsource/hr_rules",
+        "speechdata/espeak-ng-master/dictsource/sr_rules"
+      ]
+    },
+    {
+      "sha256": "428091a6b403807b473b16d0cad27a2e7442140f3e27716a1ced7dc653013e4c",
+      "count": 6,
+      "total_bytes": 11862,
+      "synthesizers": [
+        "unspecified"
+      ],
+      "paths": [
+        "speechdata/orpheus/orpheus/ORP00001.CNT",
+        "speechdata/orpheus/orpheus/ORP00020.CNT",
+        "speechdata/orpheus/orpheus/ORP00042.CNT",
+        "speechdata/orpheus/orpheus/ORP00055.CNT",
+        "speechdata/orpheus/orpheus/ORP00351.CNT",
+        "speechdata/orpheus/orpheus/ORP10042.CNT"
+      ]
+    },
+    {
+      "sha256": "11a677d9093cb5e539091cd57b2c6dd13cc0d41c26abdfe535865fbab7b5bc95",
+      "count": 4,
+      "total_bytes": 94340,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/myanmar/a34",
+        "speechdata/espeak-ng-1.52.0/phsource/myanmar/a35",
+        "speechdata/espeak-ng-master/phsource/myanmar/a34",
+        "speechdata/espeak-ng-master/phsource/myanmar/a35"
+      ]
+    },
+    {
+      "sha256": "51a89071698f2006a052615a9d1172900d5f7d6f709c7b00f4a2ba697625c909",
+      "count": 4,
+      "total_bytes": 82796,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/es-la.png",
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/es.png",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/es-la.png",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/es.png"
+      ]
+    },
+    {
+      "sha256": "494b677c2ecdf300cb807117916f48f3f4f972dd1e4b69993263b0b8eff826ba",
+      "count": 4,
+      "total_bytes": 65808,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/base.png",
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/consonants.png",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/base.png",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/consonants.png"
+      ]
+    },
+    {
+      "sha256": "d626bee183cc7bdcc72fe719ac2e0c7e6b43920908e09485d07002b78d1403bb",
+      "count": 4,
+      "total_bytes": 46364,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/klatt/n_n^/n^_",
+        "speechdata/espeak-ng-1.52.0/phsource/n^/n^_",
+        "speechdata/espeak-ng-master/phsource/klatt/n_n^/n^_",
+        "speechdata/espeak-ng-master/phsource/n^/n^_"
+      ]
+    },
+    {
+      "sha256": "91152ecb574be9cf1968b61f1eac13932cdfe8d6823092dfd76a821917144752",
+      "count": 4,
+      "total_bytes": 42512,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/klatt/n_n^/n^#_",
+        "speechdata/espeak-ng-1.52.0/phsource/n^/n^#_",
+        "speechdata/espeak-ng-master/phsource/klatt/n_n^/n^#_",
+        "speechdata/espeak-ng-master/phsource/n^/n^#_"
+      ]
+    },
+    {
+      "sha256": "4ee9504c418e1ade70a0ac62a1fce25559f5abcc5af9eec702cd9c6c5346801a",
+      "count": 4,
+      "total_bytes": 19368,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/ufric/x.wav",
+        "speechdata/espeak-ng-1.52.0/phsource/vocw/x.wav",
+        "speechdata/espeak-ng-master/phsource/ufric/x.wav",
+        "speechdata/espeak-ng-master/phsource/vocw/x.wav"
+      ]
+    },
+    {
+      "sha256": "607702d3715119e62d31eb74eedbf3ed046790e2fd419c59f7542605d8cfee40",
+      "count": 4,
+      "total_bytes": 10148,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/ph_bashkir",
+        "speechdata/espeak-ng-1.52.0/phsource/ph_tatar",
+        "speechdata/espeak-ng-master/phsource/ph_bashkir",
+        "speechdata/espeak-ng-master/phsource/ph_tatar"
+      ]
+    },
+    {
+      "sha256": "4e78c3be0d7fa40d054f426e05e0f652abc34b6d87bbac8d26727d72d391d798",
+      "count": 4,
+      "total_bytes": 6420,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/klatt/n",
+        "speechdata/espeak-ng-1.52.0/phsource/klatt/n-syl",
+        "speechdata/espeak-ng-master/phsource/klatt/n",
+        "speechdata/espeak-ng-master/phsource/klatt/n-syl"
+      ]
+    },
+    {
+      "sha256": "f5b79aadf133029b2557be6a03e5cd3e27525e9ac443c43fdfde189cf7e8e726",
+      "count": 4,
+      "total_bytes": 6420,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/klatt/m",
+        "speechdata/espeak-ng-1.52.0/phsource/klatt/m-syl",
+        "speechdata/espeak-ng-master/phsource/klatt/m",
+        "speechdata/espeak-ng-master/phsource/klatt/m-syl"
+      ]
+    },
+    {
+      "sha256": "de2ae3eb2c372060b4f77a6f3f1770df59dde9057586e6353d3ff895fba6daad",
+      "count": 4,
+      "total_bytes": 6064,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/m/m-syl",
+        "speechdata/espeak-ng-1.52.0/phsource/m/m_",
+        "speechdata/espeak-ng-master/phsource/m/m-syl",
+        "speechdata/espeak-ng-master/phsource/m/m_"
+      ]
+    },
+    {
+      "sha256": "d04c4adae7f3aea8c597694d0ab3de03009e18cf93b8f6afcd27666b3a421de9",
+      "count": 4,
+      "total_bytes": 5856,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/myanmar/t_hi.wav",
+        "speechdata/espeak-ng-1.52.0/phsource/ustop/t_hi.wav",
+        "speechdata/espeak-ng-master/phsource/myanmar/t_hi.wav",
+        "speechdata/espeak-ng-master/phsource/ustop/t_hi.wav"
+      ]
+    },
+    {
+      "sha256": "5306a143bc5aba60b6f0cdbf6476a6890fe3dc90b96894f9dd72d21009ae6173",
+      "count": 4,
+      "total_bytes": 4280,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/fi",
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/smj",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/fi",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/smj"
+      ]
+    },
+    {
+      "sha256": "89cafb6404c255f3176c940c0402bc407bdf01832802cd8b978e49fa5671bd43",
+      "count": 4,
+      "total_bytes": 3808,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/n/n-syl",
+        "speechdata/espeak-ng-1.52.0/phsource/n/n_long_",
+        "speechdata/espeak-ng-master/phsource/n/n-syl",
+        "speechdata/espeak-ng-master/phsource/n/n_long_"
+      ]
+    },
+    {
+      "sha256": "8cebd3cd81694646011d39354b3e3d45343a96d7858e4bd42e3fce9be381a7fe",
+      "count": 4,
+      "total_bytes": 3012,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-ir1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-ir1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-ir1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-ir1"
+      ]
+    },
+    {
+      "sha256": "62c78bd1b08a3eb2a02bf8b27aa1ddb06e82e124ec1ac64d8fd8c3590b8ac715",
+      "count": 4,
+      "total_bytes": 2572,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/phsource/klatt/n_n^/_n^",
+        "speechdata/espeak-ng-1.52.0/phsource/n^/_n^",
+        "speechdata/espeak-ng-master/phsource/klatt/n_n^/_n^",
+        "speechdata/espeak-ng-master/phsource/n^/_n^"
+      ]
+    },
+    {
+      "sha256": "f7f3a3ddceed4081764cfc4c3b39329ca8f9197b2204e396910949e65ff6de62",
+      "count": 4,
+      "total_bytes": 1992,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/base",
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/consonants",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/base",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/consonants"
+      ]
+    },
+    {
+      "sha256": "2a644b8ceb0d177f0c96eb707bdb0a66487ee75af8e7623954a2a16b64ba272f",
+      "count": 4,
+      "total_bytes": 1840,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/es",
+        "speechdata/espeak-ng-1.52.0/docs/phonemes/vowelcharts/es-la",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/es",
+        "speechdata/espeak-ng-master/docs/phonemes/vowelcharts/es-la"
+      ]
+    },
+    {
+      "sha256": "796fc7e7cb73322dd26102e270c55d1ce754702d9f6f76ba2abf3d2397783b94",
+      "count": 4,
+      "total_bytes": 720,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-us3",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-us3",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-us3",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-us3"
+      ]
+    },
+    {
+      "sha256": "63ea6b18456f022ae2cf80c1d0c0ec9d324575cf388eb4d6057f507b433bc669",
+      "count": 4,
+      "total_bytes": 712,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-us2",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-us2",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-us2",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-us2"
+      ]
+    },
+    {
+      "sha256": "03b30d4c8b571c48df3be931dae2bb6f10d683821df0e0dac612ebbae351ba32",
+      "count": 4,
+      "total_bytes": 680,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-us1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-us1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-us1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-us1"
+      ]
+    },
+    {
+      "sha256": "6d6f27286476035298926ef3caf242ff37d6fdf8dda3e95d4e2b5776468d3004",
+      "count": 4,
+      "total_bytes": 580,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-it4",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-it4",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-it4",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-it4"
+      ]
+    },
+    {
+      "sha256": "4bd9cd1244c71b583fe8279bb8c092ddaca61873ce76b19a9d78a8731b97eedc",
+      "count": 4,
+      "total_bytes": 576,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-vz1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-vz1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-vz1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-vz1"
+      ]
+    },
+    {
+      "sha256": "ac301735de92fdf11d9f76a013eb5a25042cafa40fe7f276fe27326b1cf20f56",
+      "count": 4,
+      "total_bytes": 568,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-it3",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-it3",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-it3",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-it3"
+      ]
+    },
+    {
+      "sha256": "4130e2c6168a5ebcb98a595e8a7c569d0d5ebb1f8da0622f07accc86894181d2",
+      "count": 4,
+      "total_bytes": 480,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-mx1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-mx1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-mx1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-mx1"
+      ]
+    },
+    {
+      "sha256": "b20de9d7df7fd34a8f462245e78156e4b3d2fafdd3db1da04ac5d4d2e35070c4",
+      "count": 4,
+      "total_bytes": 480,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-mx2",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-mx2",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-mx2",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-mx2"
+      ]
+    },
+    {
+      "sha256": "a0f57dfa06053452d3cc2a343e00e2717a7de11f6ff516507e7406cba70fc277",
+      "count": 4,
+      "total_bytes": 456,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-tr2",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-tr2",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-tr2",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-tr2"
+      ]
+    },
+    {
+      "sha256": "1db8241a935ecd6a6b5e4ced906021a86535e68047fbbd91b20adbfbc5c68f81",
+      "count": 4,
+      "total_bytes": 408,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-hu1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-hu1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-hu1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-hu1"
+      ]
+    },
+    {
+      "sha256": "75a3b9f171f2e6681cb6656e1b9198fee6d1a6ad5c025dc52e056b37a0b5a40e",
+      "count": 4,
+      "total_bytes": 408,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-sw2",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-sw2",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-sw2",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-sw2"
+      ]
+    },
+    {
+      "sha256": "351d13dee787052313d55f3762f3633b35c736348ecbb3e76914c9893f816e81",
+      "count": 4,
+      "total_bytes": 404,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-id1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-id1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-id1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-id1"
+      ]
+    },
+    {
+      "sha256": "1b092a60c374081f2c9bac3d09bdeea6f97e821d7261fbb530db161505c63783",
+      "count": 4,
+      "total_bytes": 396,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-pl1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-pl1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-pl1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-pl1"
+      ]
+    },
+    {
+      "sha256": "42bfce7cea2a5f31e08f29a46885b741909ff2fb60badab5988b114a3bd81064",
+      "count": 4,
+      "total_bytes": 396,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-de3",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-de3",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-de3",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-de3"
+      ]
+    },
+    {
+      "sha256": "49cf98f88639db8c000fddd24af4dc6c48da571fce063d41a39a165b02b72166",
+      "count": 4,
+      "total_bytes": 396,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-sw2-en",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-sw2-en",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-sw2-en",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-sw2-en"
+      ]
+    },
+    {
+      "sha256": "6263ef96f906154d2a4b9d7ab385239a3d48a7f929932beb8342a45e1c46aea0",
+      "count": 4,
+      "total_bytes": 392,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-sw1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-sw1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-sw1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-sw1"
+      ]
+    },
+    {
+      "sha256": "4a36dfce2aee32e2675feddc71ef8cd253a504cbe1ea81024867a2d7de158fac",
+      "count": 4,
+      "total_bytes": 388,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-hu1-en",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-hu1-en",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-hu1-en",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-hu1-en"
+      ]
+    },
+    {
+      "sha256": "04c3b361ab3f1fda090f39e17a8b5ef7acdf9de20a3d332f30802cfc3d95877b",
+      "count": 4,
+      "total_bytes": 384,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-nl2",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-nl2",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-nl2",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-nl2"
+      ]
+    },
+    {
+      "sha256": "cbbcb9184cc8d2b6193e29a27b428a4860d647eeda8c04cbfb2f6b21ad2024a1",
+      "count": 4,
+      "total_bytes": 372,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-sw1-en",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-sw1-en",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-sw1-en",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-sw1-en"
+      ]
+    },
+    {
+      "sha256": "a7428804c19a26ba3340a235506341ed212ae7bdd7c87fc9a6e52a2eed7c25cf",
+      "count": 4,
+      "total_bytes": 364,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-nl2-en",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-nl2-en",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-nl2-en",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-nl2-en"
+      ]
+    },
+    {
+      "sha256": "fcbf3863ac3b6bf117145a50699138de5a3426487eb2f69535300136aa6ff6f1",
+      "count": 4,
+      "total_bytes": 360,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-de5-en",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-de5-en",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-de5-en",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-de5-en"
+      ]
+    },
+    {
+      "sha256": "62ed7f850ff2871582fbcda1cf88954da64b5338ef11b325a74a2a01cefbbc3c",
+      "count": 4,
+      "total_bytes": 352,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-af1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-af1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-af1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-af1"
+      ]
+    },
+    {
+      "sha256": "b69b92a118b367edff28839e49dac2608da570ae3c9f5d670481ab1c595e1264",
+      "count": 4,
+      "total_bytes": 352,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-gr2-en",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-gr2-en",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-gr2-en",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-gr2-en"
+      ]
+    },
+    {
+      "sha256": "3b0923ea8affeaa73a7c658d7c7f44beb7f47ff32ba48be3a71fd469c69359dd",
+      "count": 4,
+      "total_bytes": 348,
+      "synthesizers": [
+        "espeak-ng"
+      ],
+      "paths": [
+        "speechdata/espeak-ng-1.52.0/espeak-ng-data/voices/mb/mb-ro1",
+        "speechdata/espeak-ng-master/espeak-ng-data/voices/mb/mb-ro1",
+        "speechdata/mbrulainespeak/espeak-data/voices/mb/mb-ro1",
+        "speechdata/speechplayerinespeak/espeak-ng-data/voices/mb/mb-ro1"
+      ]
+    }
+  ],
   "relocation_count": 4786,
   "relocation_limit": 200,
   "relocations": [
