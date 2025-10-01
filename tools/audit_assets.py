@@ -111,6 +111,11 @@ class AssetRecord:
     recommended_location: str
     size_bytes: int
     sha256: str
+    actual_root: str
+    usefulness: str
+    priority: str
+    action: str
+    notes: str
 
     def to_dict(self) -> Dict[str, object]:
         return asdict(self)
@@ -156,6 +161,87 @@ def recommend_location(path: Path, editable: bool) -> str:
     return "assets" if editable else "speechdata"
 
 
+def choose_usefulness(
+    synthesizer: str, editable: bool, category: str, actual_root: str
+) -> str:
+    if editable and synthesizer != "unspecified":
+        return "core-editable"
+    if editable:
+        return "reference"
+    if category == "audio":
+        return "audio-archive"
+    if actual_root == "speechdata":
+        return "runtime-binary"
+    return "archive"
+
+
+def determine_action(actual_root: str, recommended: str, editable: bool) -> str:
+    if actual_root == recommended:
+        if recommended == "assets":
+            return "retain-in-assets"
+        return "retain-in-speechdata"
+    if recommended == "assets":
+        return "relocate-to-assets"
+    if editable:
+        return "split-reference"
+    return "relocate-to-speechdata"
+
+
+def priority_rank(priority: str) -> int:
+    order = {"high": 0, "medium": 1, "low": 2, "info": 3}
+    return order.get(priority, 99)
+
+
+def determine_priority(action: str, size_bytes: int, editable: bool) -> str:
+    if action in {"relocate-to-assets", "relocate-to-speechdata"}:
+        return "high"
+    if action == "split-reference":
+        return "medium"
+    if editable or size_bytes < 32 * 1024:
+        return "medium"
+    if size_bytes > 50 * 1024 * 1024:
+        return "high"
+    return "low"
+
+
+def build_notes(
+    record_path: str,
+    actual_root: str,
+    recommended: str,
+    action: str,
+    editable: bool,
+    category: str,
+    size_bytes: int,
+    synthesizer: str,
+) -> str:
+    notes: List[str] = []
+    if action.startswith("relocate"):
+        notes.append(
+            f"Currently in {actual_root}; recommend staging under {recommended} to match audit policy."
+        )
+    if action == "split-reference":
+        notes.append(
+            "Mixed payload: keep binaries in speechdata and extract editable portions into assets."
+        )
+    if editable and actual_root == "speechdata":
+        notes.append(
+            "Editable resource is hidden in speechdata; move so version control can track diffs."
+        )
+    if not editable and actual_root == "assets":
+        notes.append("Binary payload inflates assets; archive it in speechdata instead.")
+    if category == "audio":
+        notes.append("Audio sample useful for phoneme or timbre reference.")
+    if size_bytes > 50 * 1024 * 1024:
+        notes.append(
+            f"Large file (~{size_bytes / (1024 * 1024):.1f} MiB); plan dedicated extraction or compression."
+        )
+    if synthesizer == "unspecified":
+        notes.append(
+            "Synthesizer family undetected—tag the path or relocate next to known assets for clarity."
+        )
+    return " " + " ".join(notes) if notes else ""
+
+
 def sha256sum(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as fh:
@@ -182,7 +268,23 @@ def build_records(paths: Iterable[Path]) -> List[AssetRecord]:
         recommended = recommend_location(path, editable)
         size_bytes = path.stat().st_size
         digest = sha256sum(path)
-        rel_path = str(path.relative_to(ROOT)).replace(os.sep, "/")
+        rel_path_obj = path.relative_to(ROOT)
+        rel_path = str(rel_path_obj).replace(os.sep, "/")
+        parts = rel_path_obj.parts
+        actual_root = parts[0] if parts else ""
+        usefulness = choose_usefulness(synthesizer, editable, category, actual_root)
+        action = determine_action(actual_root, recommended, editable)
+        priority = determine_priority(action, size_bytes, editable)
+        notes = build_notes(
+            rel_path,
+            actual_root,
+            recommended,
+            action,
+            editable,
+            category,
+            size_bytes,
+            synthesizer,
+        )
         records.append(
             AssetRecord(
                 path=rel_path,
@@ -192,6 +294,11 @@ def build_records(paths: Iterable[Path]) -> List[AssetRecord]:
                 recommended_location=recommended,
                 size_bytes=size_bytes,
                 sha256=digest,
+                actual_root=actual_root,
+                usefulness=usefulness,
+                priority=priority,
+                action=action,
+                notes=notes,
             )
         )
     return records
@@ -219,6 +326,19 @@ def relocation_candidates(records: Iterable[AssetRecord]) -> List[AssetRecord]:
     return sorted(candidates, key=lambda record: (record.recommended_location, record.path))
 
 
+def prioritised_candidates(records: Iterable[AssetRecord]) -> List[AssetRecord]:
+    return sorted(
+        records,
+        key=lambda record: (
+            priority_rank(record.priority),
+            0 if record.action.startswith("relocate") else 1,
+            -1 if record.editable else 0,
+            -record.size_bytes,
+            record.path,
+        ),
+    )
+
+
 def summarise_relocations(relocations: Iterable[AssetRecord]) -> Dict[str, Dict[str, int]]:
     summary: Dict[str, Dict[str, int]] = {}
     for record in relocations:
@@ -228,11 +348,26 @@ def summarise_relocations(relocations: Iterable[AssetRecord]) -> Dict[str, Dict[
     return summary
 
 
+def summarise_by(records: Iterable[AssetRecord], attribute: str) -> Dict[str, Dict[str, int]]:
+    summary: Dict[str, Dict[str, int]] = {}
+    for record in records:
+        key = getattr(record, attribute)
+        bucket = summary.setdefault(key, {"count": 0, "bytes": 0})
+        bucket["count"] += 1
+        bucket["bytes"] += record.size_bytes
+    return summary
+
+
 def render_markdown(records: List[AssetRecord]) -> str:
     summary = summarise(records)
+    priority_summary = summarise_by(records, "priority")
+    usefulness_summary = summarise_by(records, "usefulness")
+    action_summary = summarise_by(records, "action")
     relocations = relocation_candidates(records)
     relocation_limit = RELOCATION_DISPLAY_LIMIT
     displayed = relocations[:relocation_limit]
+    plan_candidates = prioritised_candidates(records)
+    plan_display = plan_candidates[:relocation_limit]
     lines = [
         "# Synthesizer asset audit",
         "",
@@ -259,6 +394,73 @@ def render_markdown(records: List[AssetRecord]) -> str:
     for synth, payload in sorted(summary.items()):
         size_mib = payload["bytes"] / (1024 * 1024)
         lines.append(f"| {synth} | {payload['count']} | {size_mib:.2f} |")
+    lines.extend(
+        [
+            "",
+            "## Priority mix",
+            "",
+            "| Priority | Files | Size (MiB) |",
+            "|----------|-------|------------|",
+        ]
+    )
+    for priority in sorted(priority_summary.keys(), key=priority_rank):
+        payload = priority_summary[priority]
+        size_mib = payload["bytes"] / (1024 * 1024)
+        lines.append(f"| {priority} | {payload['count']} | {size_mib:.2f} |")
+    lines.extend(
+        [
+            "",
+            "## Usefulness overview",
+            "",
+            "| Usefulness | Files | Size (MiB) |",
+            "|------------|-------|------------|",
+        ]
+    )
+    for usefulness, payload in sorted(usefulness_summary.items()):
+        size_mib = payload["bytes"] / (1024 * 1024)
+        lines.append(f"| {usefulness} | {payload['count']} | {size_mib:.2f} |")
+    lines.extend(
+        [
+            "",
+            "## Action outcomes",
+            "",
+            "| Action | Files | Size (MiB) |",
+            "|--------|-------|------------|",
+        ]
+    )
+    for action, payload in sorted(action_summary.items()):
+        size_mib = payload["bytes"] / (1024 * 1024)
+        lines.append(f"| {action} | {payload['count']} | {size_mib:.2f} |")
+    lines.extend(
+        [
+            "",
+            "## Prioritised action list",
+            "",
+            "Use this table to drive incremental clean-ups.  It combines relocation guidance",
+            "with usefulness scoring so we can focus on high-impact edits first.",
+            "",
+            "| Path | Priority | Action | Synth | Editable | Notes |",
+            "|------|----------|--------|-------|----------|-------|",
+        ]
+    )
+    for record in plan_display:
+        lines.append(
+            "| `{path}` | {priority} | {action} | {synth} | {editable} | {notes} |".format(
+                path=record.path,
+                priority=record.priority,
+                action=record.action,
+                synth=record.synthesizer,
+                editable="yes" if record.editable else "no",
+                notes=record.notes.strip() if record.notes else "",
+            )
+        )
+    if len(plan_candidates) > relocation_limit:
+        lines.extend(
+            [
+                "",
+                f"_Showing {relocation_limit} of {len(plan_candidates)} prioritised actions.  Use ``python tools/audit_assets.py --full-json assets/md/asset_audit_full.json`` for the entire list._",
+            ]
+        )
     lines.extend(
         [
             "",
@@ -328,6 +530,10 @@ def main() -> None:
     relocations = relocation_candidates(records)
     summary = summarise(records)
     relocation_summary = summarise_relocations(relocations)
+    priority_summary = summarise_by(records, "priority")
+    action_summary = summarise_by(records, "action")
+    usefulness_summary = summarise_by(records, "usefulness")
+    plan_candidates = prioritised_candidates(records)
     relocation_limit = RELOCATION_DISPLAY_LIMIT
     audit_payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -335,11 +541,17 @@ def main() -> None:
         "total_bytes": sum(record.size_bytes for record in records),
         "summary": summary,
         "relocation_summary": relocation_summary,
+        "priority_summary": priority_summary,
+        "action_summary": action_summary,
+        "usefulness_summary": usefulness_summary,
         "relocation_count": len(relocations),
         "relocation_limit": relocation_limit,
         "relocations": [
             {**record.to_dict(), "actual_root": location_bucket(record)} for record in relocations[:relocation_limit]
         ],
+        "action_plan_count": len(plan_candidates),
+        "action_plan_limit": relocation_limit,
+        "action_plan": [record.to_dict() for record in plan_candidates[:relocation_limit]],
     }
 
     args.output_json.parent.mkdir(parents=True, exist_ok=True)
