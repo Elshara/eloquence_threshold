@@ -32,6 +32,7 @@ SPEECHDATA_DIR = ROOT / "speechdata"
 DEFAULT_TARGETS = (ASSETS_DIR, SPEECHDATA_DIR)
 RELOCATION_DISPLAY_LIMIT = 200
 DUPLICATE_DISPLAY_LIMIT = 50
+LARGEST_DISPLAY_LIMIT = 25
 
 # File extensions that typically indicate editable text content.
 TEXT_EXTENSIONS = {
@@ -415,6 +416,8 @@ def render_markdown(
     consolidation: Dict[str, Dict[str, Dict[str, int]]],
     extension_summary: Dict[str, Dict[str, int]],
     duplicate_limit: int,
+    largest_editable: List[AssetRecord],
+    largest_archival: List[AssetRecord],
 ) -> str:
     summary = summarise(records)
     priority_summary = summarise_by(records, "priority")
@@ -623,6 +626,65 @@ def render_markdown(
                 f"_Showing {relocation_limit} of {len(relocations)} candidates.  Run ``python tools/audit_assets.py --full-json assets/md/asset_audit_full.json`` to export the complete manifest._",
             ]
         )
+    lines.extend(
+        [
+            "",
+            "## Largest editable assets",
+            "",
+            "The table below highlights the largest editable resources tracked under version control.",
+            "Use these entries to plan modularisation work, split oversized manifests, or migrate",
+            "language packs into shared utility modules before packaging the NVDA add-on.",
+            "",
+            "| Path | Synthesizer | Size (MiB) | Notes |",
+            "|------|-------------|------------|-------|",
+        ]
+    )
+    if largest_editable:
+        for record in largest_editable:
+            size_mib = record.size_bytes / (1024 * 1024)
+            lines.append(
+                "| `{path}` | {synth} | {size:.2f} | {notes} |".format(
+                    path=record.path,
+                    synth=record.synthesizer,
+                    size=size_mib,
+                    notes=record.notes.strip() if record.notes else "",
+                )
+            )
+    else:
+        lines.append("| _Editable payloads remain small._ | | | |")
+    lines.extend(
+        [
+            "",
+            "## Largest archival payloads",
+            "",
+            "These entries surface the heaviest runtime binaries or speech corpora currently staged",
+            "under ``speechdata``.  Use them to schedule extraction or recompression passes while",
+            "keeping CodeQL-friendly source assets in ``assets``.",
+            "",
+            "| Path | Synthesizer | Size (MiB) | Notes |",
+            "|------|-------------|------------|-------|",
+        ]
+    )
+    if largest_archival:
+        for record in largest_archival:
+            size_mib = record.size_bytes / (1024 * 1024)
+            lines.append(
+                "| `{path}` | {synth} | {size:.2f} | {notes} |".format(
+                    path=record.path,
+                    synth=record.synthesizer,
+                    size=size_mib,
+                    notes=record.notes.strip() if record.notes else "",
+                )
+            )
+        if len(largest_archival) >= LARGEST_DISPLAY_LIMIT:
+            lines.extend(
+                [
+                    "",
+                    "_Review the JSON manifest for the full archival list if additional triage is needed._",
+                ]
+            )
+    else:
+        lines.append("| _No large archival payloads detected._ | | | |")
     lines.append("")
     return "\n".join(lines)
 
@@ -668,6 +730,20 @@ def main() -> None:
     consolidation_summary = consolidation_targets(records)
     plan_candidates = prioritised_candidates(records)
     relocation_limit = RELOCATION_DISPLAY_LIMIT
+    editable_pool = [record for record in records if record.editable]
+    archival_pool = [
+        record
+        for record in records
+        if not record.editable or record.recommended_location == "speechdata"
+    ]
+    largest_editable = sorted(
+        editable_pool,
+        key=lambda record: (-record.size_bytes, record.path),
+    )[:LARGEST_DISPLAY_LIMIT]
+    largest_archival = sorted(
+        archival_pool,
+        key=lambda record: (-record.size_bytes, record.path),
+    )[:LARGEST_DISPLAY_LIMIT]
     audit_payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "total_files": len(records),
@@ -690,6 +766,10 @@ def main() -> None:
         "action_plan_count": len(plan_candidates),
         "action_plan_limit": relocation_limit,
         "action_plan": [record.to_dict() for record in plan_candidates[:relocation_limit]],
+        "largest_editable_limit": LARGEST_DISPLAY_LIMIT,
+        "largest_editable": [record.to_dict() for record in largest_editable],
+        "largest_archival_limit": LARGEST_DISPLAY_LIMIT,
+        "largest_archival": [record.to_dict() for record in largest_archival],
     }
 
     args.output_json.parent.mkdir(parents=True, exist_ok=True)
@@ -706,6 +786,8 @@ def main() -> None:
                 consolidation_summary,
                 extension_summary,
                 DUPLICATE_DISPLAY_LIMIT,
+                largest_editable,
+                largest_archival,
             )
         )
 

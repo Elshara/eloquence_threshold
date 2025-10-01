@@ -29,14 +29,14 @@ while following CodeQL-friendly packaging expectations.
 | nvda | 15 | 0.32 |
 | sam | 40 | 1.52 |
 | svox pico | 14 | 6.50 |
-| unspecified | 660 | 192.11 |
+| unspecified | 660 | 192.16 |
 
 ## Priority mix
 
 | Priority | Files | Size (MiB) |
 |----------|-------|------------|
 | high | 4786 | 35.36 |
-| medium | 679 | 10.20 |
+| medium | 679 | 10.25 |
 | low | 447 | 554.30 |
 
 ## Usefulness overview
@@ -45,7 +45,7 @@ while following CodeQL-friendly packaging expectations.
 |------------|-------|------------|
 | archive | 21 | 6.01 |
 | core-editable | 4535 | 27.39 |
-| reference | 499 | 10.51 |
+| reference | 499 | 10.56 |
 | runtime-binary | 857 | 555.95 |
 
 ## Action outcomes
@@ -54,7 +54,7 @@ while following CodeQL-friendly packaging expectations.
 |--------|-------|------------|
 | relocate-to-assets | 4765 | 29.36 |
 | relocate-to-speechdata | 21 | 6.01 |
-| retain-in-assets | 269 | 8.54 |
+| retain-in-assets | 269 | 8.59 |
 | retain-in-speechdata | 857 | 555.95 |
 
 ## Extension footprint
@@ -70,7 +70,7 @@ target consolidation work for editable materials before merging synthesizer code
 | .xml | 136 | 0.34 |
 | .py | 101 | 1.01 |
 | .scm | 99 | 6.17 |
-| .md | 93 | 1.88 |
+| .md | 93 | 1.90 |
 | .dll | 63 | 28.21 |
 | .txt | 63 | 0.53 |
 | .ini | 62 | 0.25 |
@@ -79,7 +79,7 @@ target consolidation work for editable materials before merging synthesizer code
 | .java | 56 | 0.46 |
 | .vcx | 55 | 88.49 |
 | .hlp | 52 | 6.96 |
-| .json | 48 | 2.88 |
+| .json | 48 | 2.92 |
 | .cnt | 36 | 0.06 |
 | .syn | 36 | 41.47 |
 | .tts | 25 | 3.54 |
@@ -701,3 +701,73 @@ without committing the entire 50k-line manifest.
 | `speechdata/espeak-ng-1.52.0/dictsource/fr_rules` | espeak-ng | unknown | yes | assets |
 
 _Showing 200 of 4786 candidates.  Run ``python tools/audit_assets.py --full-json assets/md/asset_audit_full.json`` to export the complete manifest._
+
+## Largest editable assets
+
+The table below highlights the largest editable resources tracked under version control.
+Use these entries to plan modularisation work, split oversized manifests, or migrate
+language packs into shared utility modules before packaging the NVDA add-on.
+
+| Path | Synthesizer | Size (MiB) | Notes |
+|------|-------------|------------|-------|
+| `assets/html/wikipedia_languages.html` | unspecified | 1.65 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/json/archive_inventory.json` | unspecified | 0.95 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/csv/wikipedia_languages.csv` | unspecified | 0.79 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/md/archive_inventory.md` | unspecified | 0.37 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/md/asset_audit_report.json` | unspecified | 0.28 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/espeak-ng-1.52.0/src/ucd-tools/src/scripts.c` | espeak-ng | 0.26 | Currently in speechdata; recommend staging under assets to match audit policy. Editable resource is hidden in speechdata; move so version control can track diffs. |
+| `assets/json/binary_asset_index.json` | unspecified | 0.25 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/txt/building_ibm_tts.txt` | ibm tts | 0.20 |  |
+| `speechdata/espeak-ng-1.52.0/src/ucd-tools/src/categories.c` | espeak-ng | 0.19 | Currently in speechdata; recommend staging under assets to match audit policy. Editable resource is hidden in speechdata; move so version control can track diffs. |
+| `assets/md/README.md` | unspecified | 0.14 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/txt/datajake_archive_urls.txt` | unspecified | 0.13 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/json/voice_parameter_report.json` | unspecified | 0.13 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/json/speechdata_extensionless_inventory.json` | unspecified | 0.13 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/espeak-ng-1.52.0/src/ucd-tools/src/proplist.c` | espeak-ng | 0.12 | Currently in speechdata; recommend staging under assets to match audit policy. Editable resource is hidden in speechdata; move so version control can track diffs. |
+| `speechdata/espeak-ng-1.52.0/src/ucd-tools/src/case.c` | espeak-ng | 0.12 | Currently in speechdata; recommend staging under assets to match audit policy. Editable resource is hidden in speechdata; move so version control can track diffs. |
+| `speechdata/festival/festival/lib/dicts/cmu/cmudict-0.4.diff` | unspecified | 0.12 | Currently in speechdata; recommend staging under assets to match audit policy. Editable resource is hidden in speechdata; move so version control can track diffs. Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/json/language_research_index.json` | unspecified | 0.11 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/md/iso_language_expansion.md` | unspecified | 0.09 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/json/integration_scope.json` | unspecified | 0.09 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/json/language_pronunciation_validation.json` | unspecified | 0.09 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/md/asset_audit_report.md` | unspecified | 0.09 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/espeak-ng-1.52.0/src/libespeak-ng/dictionary.c` | espeak-ng | 0.08 | Currently in speechdata; recommend staging under assets to match audit policy. Editable resource is hidden in speechdata; move so version control can track diffs. |
+| `assets/md/voice_parameter_report.md` | unspecified | 0.08 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/py/seed_language_profiles.py` | unspecified | 0.08 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `assets/json/world_language_seeds.json` | unspecified | 0.08 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+
+## Largest archival payloads
+
+These entries surface the heaviest runtime binaries or speech corpora currently staged
+under ``speechdata``.  Use them to schedule extraction or recompression passes while
+keeping CodeQL-friendly source assets in ``assets``.
+
+| Path | Synthesizer | Size (MiB) | Notes |
+|------|-------------|------------|-------|
+| `speechdata/festival/festival/lib/voices/czech/czech_ph/group/ph.group` | unspecified | 27.97 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/espeak-ng-master/dictsource/extra/ru_listx` | espeak-ng | 22.67 |  |
+| `speechdata/espeak-ng-1.52.0/dictsource/extra/ru_listx` | espeak-ng | 22.15 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/de4` | espeak-ng | 21.24 |  |
+| `speechdata/orpheus/orpheus/Language/00044/Carol.vcx` | unspecified | 18.82 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/orpheus/orpheus/Language/00001/Lucy.vcx` | unspecified | 18.80 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/orpheus/orpheus/Language/00044/Alan.vcx` | unspecified | 17.23 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/orpheus/orpheus/Language/00046/anders.vcx` | unspecified | 16.53 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/orpheus/orpheus/Language/00001/Brad.vcx` | unspecified | 16.51 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/nl2` | espeak-ng | 14.49 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/ee1` | espeak-ng | 11.57 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/ic1` | espeak-ng | 11.48 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/sw1` | espeak-ng | 11.01 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/de2` | espeak-ng | 9.96 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/cz2` | espeak-ng | 9.36 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/hu1` | espeak-ng | 8.51 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/la1` | espeak-ng | 8.23 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/af1` | espeak-ng | 7.68 |  |
+| `speechdata/newfon/bin/dict.dat` | unspecified | 7.24 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/newfon/dict.dat` | unspecified | 7.12 | Synthesizer family undetected—tag the path or relocate next to known assets for clarity. |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/us3` | espeak-ng | 7.07 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/us1` | espeak-ng | 6.90 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/us2` | espeak-ng | 6.75 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/it3` | espeak-ng | 6.47 |  |
+| `speechdata/mbrulainespeak/espeak-data/mbrola/en1` | espeak-ng | 6.41 |  |
+
+_Review the JSON manifest for the full archival list if additional triage is needed._
