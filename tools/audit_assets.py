@@ -23,12 +23,14 @@ import mimetypes
 import os
 from dataclasses import dataclass, asdict
 from pathlib import Path
+from datetime import datetime, timezone
 from typing import Dict, Iterable, List, Tuple
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS_DIR = ROOT / "assets"
 SPEECHDATA_DIR = ROOT / "speechdata"
 DEFAULT_TARGETS = (ASSETS_DIR, SPEECHDATA_DIR)
+RELOCATION_DISPLAY_LIMIT = 200
 
 # File extensions that typically indicate editable text content.
 TEXT_EXTENSIONS = {
@@ -204,8 +206,33 @@ def summarise(records: Iterable[AssetRecord]) -> Dict[str, Dict[str, int]]:
     return summary
 
 
+def location_bucket(record: AssetRecord) -> str:
+    return record.path.split("/", 1)[0]
+
+
+def relocation_candidates(records: Iterable[AssetRecord]) -> List[AssetRecord]:
+    candidates: List[AssetRecord] = []
+    for record in records:
+        actual_root = location_bucket(record)
+        if actual_root != record.recommended_location:
+            candidates.append(record)
+    return sorted(candidates, key=lambda record: (record.recommended_location, record.path))
+
+
+def summarise_relocations(relocations: Iterable[AssetRecord]) -> Dict[str, Dict[str, int]]:
+    summary: Dict[str, Dict[str, int]] = {}
+    for record in relocations:
+        bucket = summary.setdefault(record.recommended_location, {"count": 0, "bytes": 0})
+        bucket["count"] += 1
+        bucket["bytes"] += record.size_bytes
+    return summary
+
+
 def render_markdown(records: List[AssetRecord]) -> str:
     summary = summarise(records)
+    relocations = relocation_candidates(records)
+    relocation_limit = RELOCATION_DISPLAY_LIMIT
+    displayed = relocations[:relocation_limit]
     lines = [
         "# Synthesizer asset audit",
         "",
@@ -232,16 +259,37 @@ def render_markdown(records: List[AssetRecord]) -> str:
     for synth, payload in sorted(summary.items()):
         size_mib = payload["bytes"] / (1024 * 1024)
         lines.append(f"| {synth} | {payload['count']} | {size_mib:.2f} |")
-    lines.extend([
-        "",
-        "## Recommended relocations",
-        "",
-        "| Path | Category | Editable | Suggested home |",
-        "|------|----------|----------|----------------|",
-    ])
-    for record in records:
+    lines.extend(
+        [
+            "",
+            "## Relocation priorities",
+            "",
+            "The table below only lists files whose current root directory (``assets`` or ``speechdata``)",
+            "does not match the recommended location.  Use these entries to plan incremental clean-ups",
+            "without committing the entire 50k-line manifest.",
+            "",
+            "| Path | Synthesizer | Category | Editable | Suggested home |",
+            "|------|-------------|----------|----------|----------------|",
+        ]
+    )
+    for record in displayed:
         lines.append(
-            f"| `{record.path}` | {record.category} | {'yes' if record.editable else 'no'} | {record.recommended_location} |"
+            "| `{path}` | {synth} | {category} | {editable} | {home} |".format(
+                path=record.path,
+                synth=record.synthesizer,
+                category=record.category,
+                editable="yes" if record.editable else "no",
+                home=record.recommended_location,
+            )
+        )
+    if not relocations:
+        lines.append("| _No relocation candidates discovered._ | | | | |")
+    elif len(relocations) > relocation_limit:
+        lines.extend(
+            [
+                "",
+                f"_Showing {relocation_limit} of {len(relocations)} candidates.  Run ``python tools/audit_assets.py --full-json assets/md/asset_audit_full.json`` to export the complete manifest._",
+            ]
         )
     lines.append("")
     return "\n".join(lines)
@@ -268,18 +316,46 @@ def main() -> None:
         default=list(DEFAULT_TARGETS),
         help="Directories to audit.  Defaults to assets and speechdata.",
     )
+    parser.add_argument(
+        "--full-json",
+        type=Path,
+        help="Optional path for a complete per-file manifest (omitted by default to keep commits small).",
+    )
     args = parser.parse_args()
 
     records = build_records(iter_files(args.roots))
 
+    relocations = relocation_candidates(records)
+    summary = summarise(records)
+    relocation_summary = summarise_relocations(relocations)
+    relocation_limit = RELOCATION_DISPLAY_LIMIT
+    audit_payload = {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "total_files": len(records),
+        "total_bytes": sum(record.size_bytes for record in records),
+        "summary": summary,
+        "relocation_summary": relocation_summary,
+        "relocation_count": len(relocations),
+        "relocation_limit": relocation_limit,
+        "relocations": [
+            {**record.to_dict(), "actual_root": location_bucket(record)} for record in relocations[:relocation_limit]
+        ],
+    }
+
     args.output_json.parent.mkdir(parents=True, exist_ok=True)
     with args.output_json.open("w", encoding="utf-8") as fh:
-        json.dump([record.to_dict() for record in records], fh, indent=2)
+        json.dump(audit_payload, fh, indent=2)
         fh.write("\n")
 
     args.output_markdown.parent.mkdir(parents=True, exist_ok=True)
     with args.output_markdown.open("w", encoding="utf-8") as fh:
         fh.write(render_markdown(records))
+
+    if args.full_json:
+        args.full_json.parent.mkdir(parents=True, exist_ok=True)
+        with args.full_json.open("w", encoding="utf-8") as fh:
+            json.dump([record.to_dict() for record in records], fh, indent=2)
+            fh.write("\n")
 
 
 if __name__ == "__main__":
