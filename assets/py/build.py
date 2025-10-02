@@ -86,6 +86,7 @@ TRACE_REGISTRY = {
     "stage_speechdata_tree": "Bundle temporary speechdata/ payloads that still need extension triage.",
     "discover_speechdata_subtrees": "Enumerate candidate speechdata/ entries for targeted packaging drills.",
     "build_speechdata_inventory": "Collect extension statistics for discovered speechdata/ directories.",
+    "aggregate_speechdata_inventory": "Aggregate speechdata directory stats into a global inventory summary.",
     "write_speechdata_list_output": "Serialise speechdata listings when --list-speechdata-output is supplied.",
     "copy_optional_directory": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
     "has_runtime_assets": "Scan known locations for eci.dll so packaging can warn about missing runtimes.",
@@ -685,6 +686,26 @@ def build_speechdata_inventory(*, max_depth: int = 2) -> Dict[str, Dict[str, obj
     return inventory
 
 
+def aggregate_speechdata_inventory(
+    inventory: Dict[str, Dict[str, object]]
+) -> Dict[str, object]:
+    """Aggregate *inventory* statistics so listings can report global totals."""
+
+    summary = speechdata_listing.summarise_inventory_totals(inventory)
+
+    record_trace(
+        "aggregate_speechdata_inventory",
+        details={
+            "directories": summary.get("directories", 0),
+            "total_files": summary.get("total_files", 0),
+            "extensionless_files": summary.get("extensionless_files", 0),
+            "unique_extensions": len(summary.get("extensions", {})),
+        },
+    )
+
+    return summary
+
+
 def summarise_speechdata_entries(
     entries: Sequence[str],
     *,
@@ -702,6 +723,7 @@ def write_speechdata_list_output(
     depth: int,
     entries: Sequence[str],
     inventory: Optional[Dict[str, Dict[str, object]]],
+    inventory_totals: Optional[Dict[str, object]],
 ) -> Dict[str, object]:
     """Write a JSON payload describing the speechdata listing to *output_path*."""
 
@@ -714,6 +736,7 @@ def write_speechdata_list_output(
         "max_depth": depth,
         "entries": [] if not root_exists else summarise_speechdata_entries(entries, root=speechdata_root),
         "inventory": inventory if inventory is not None else None,
+        "inventory_totals": inventory_totals if inventory_totals is not None else None,
     }
 
     with output_path.open("w", encoding="utf-8") as handle:
@@ -726,6 +749,7 @@ def write_speechdata_list_output(
             "entries": len(entries),
             "root_exists": root_exists,
             "inventory_entries": 0 if inventory is None else len(inventory),
+            "has_inventory_totals": inventory_totals is not None,
         },
     )
 
@@ -895,8 +919,10 @@ def main() -> None:
         speechdata_root = resource_paths.speechdata_root()
         payload: Optional[Dict[str, object]] = None
         inventory: Optional[Dict[str, Dict[str, object]]] = None
+        inventory_totals: Optional[Dict[str, object]] = None
         if args.list_speechdata_summary or args.list_speechdata_output is not None:
             inventory = build_speechdata_inventory(max_depth=args.list_speechdata_depth)
+            inventory_totals = aggregate_speechdata_inventory(inventory)
         if subtrees:
             print(
                 "Discovered speechdata entries (depth ≤ "
@@ -921,6 +947,23 @@ def main() -> None:
                     "Speechdata inventory summary (depth ≤ "
                     f"{args.list_speechdata_depth}):"
                 )
+                if inventory_totals:
+                    total_parts = [
+                        f"directories={inventory_totals.get('directories', 0)}",
+                        f"total_files={inventory_totals.get('total_files', 0)}",
+                    ]
+                    total_extensionless = inventory_totals.get("extensionless_files", 0)
+                    if total_extensionless:
+                        total_parts.append(
+                            f"extensionless={total_extensionless}"
+                        )
+                    print(f" Overall totals: {'; '.join(total_parts)}")
+                    total_extensions = inventory_totals.get("extensions", {})
+                    if total_extensions:
+                        overall_extensions = ", ".join(
+                            f"{ext}×{count}" for ext, count in total_extensions.items()
+                        )
+                        print(f"   Extensions: {overall_extensions}")
                 for relative, stats in inventory.items():
                     extensions = stats.get("extensions", {})
                     extension_fragments = [
@@ -949,6 +992,7 @@ def main() -> None:
                 depth=args.list_speechdata_depth,
                 entries=subtrees,
                 inventory=inventory,
+                inventory_totals=inventory_totals,
             )
             print(f"Wrote speechdata listing to {args.list_speechdata_output}")
 
@@ -962,6 +1006,7 @@ def main() -> None:
                 "speechdata_depth": args.list_speechdata_depth,
                 "speechdata_listing": payload,
                 "speechdata_inventory": inventory,
+                "speechdata_inventory_totals": inventory_totals,
             },
         )
         return

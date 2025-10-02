@@ -159,3 +159,30 @@ def build_inventory(root: Path, *, max_depth: int = 2) -> Dict[str, Dict[str, ob
         inventory[relative] = summarise_subtree(absolute)
 
     return {key: inventory[key] for key in sorted(inventory)}
+
+
+def summarise_inventory_totals(
+    inventory: Dict[str, Dict[str, object]]
+) -> Dict[str, object]:
+    """Aggregate *inventory* statistics across all tracked directories."""
+
+    total_files = 0
+    extensionless_files = 0
+    directories = 0
+    extensions: Dict[str, int] = {}
+
+    for stats in inventory.values():
+        directories += 1
+        total_files += int(stats.get("total_files", 0) or 0)
+        extensionless_files += int(stats.get("extensionless_files", 0) or 0)
+
+        for extension, count in stats.get("extensions", {}).items():
+            key = extension.lower()
+            extensions[key] = extensions.get(key, 0) + int(count or 0)
+
+    return {
+        "directories": directories,
+        "total_files": total_files,
+        "extensionless_files": extensionless_files,
+        "extensions": dict(sorted(extensions.items())),
+    }

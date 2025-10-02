@@ -80,6 +80,27 @@ class SpeechdataListingTests(unittest.TestCase):
         self.assertEqual(dll_info["extensionless_files"], 0)
         self.assertEqual(dll_info["extensions"], {".dll": 1})
 
+    def test_summarise_inventory_totals(self) -> None:
+        inventory = {
+            "eloquence/dll": {
+                "total_files": 1,
+                "extensionless_files": 0,
+                "extensions": {".dll": 1},
+            },
+            "eloquence/syn": {
+                "total_files": 2,
+                "extensionless_files": 1,
+                "extensions": {".syn": 1},
+            },
+        }
+
+        totals = speechdata_listing.summarise_inventory_totals(inventory)
+
+        self.assertEqual(totals["directories"], 2)
+        self.assertEqual(totals["total_files"], 3)
+        self.assertEqual(totals["extensionless_files"], 1)
+        self.assertEqual(totals["extensions"], {".dll": 1, ".syn": 1})
+
 
 if __name__ == "__main__":  # pragma: no cover - unittest main hook
     unittest.main()

@@ -30,6 +30,12 @@
       ],
       "triggered": true
     },
+    "aggregate_speechdata_inventory": {
+      "calls": 0,
+      "description": "Aggregate speechdata directory stats into a global inventory summary.",
+      "events": [],
+      "triggered": false
+    },
     "build_speechdata_inventory": {
       "calls": 0,
       "description": "Collect extension statistics for discovered speechdata/ directories.",

@@ -183,6 +183,27 @@ class BuildCliFlagTests(unittest.TestCase):
         self.assertEqual(dll_stats["total_files"], 1)
         self.assertEqual(dll_stats["extensions"], {".dll": 1})
 
+    def test_aggregate_speechdata_inventory(self) -> None:
+        inventory = {
+            "eloquence/dll": {
+                "total_files": 1,
+                "extensionless_files": 0,
+                "extensions": {".dll": 1},
+            },
+            "eloquence/syn": {
+                "total_files": 2,
+                "extensionless_files": 1,
+                "extensions": {".syn": 2},
+            },
+        }
+
+        totals = build.aggregate_speechdata_inventory(inventory)
+
+        self.assertEqual(totals["directories"], 2)
+        self.assertEqual(totals["total_files"], 3)
+        self.assertEqual(totals["extensionless_files"], 1)
+        self.assertEqual(totals["extensions"], {".dll": 1, ".syn": 2})
+
     def test_summarise_speechdata_entries(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             speechdata_root = Path(tmpdir)
@@ -234,6 +255,8 @@ class BuildCliFlagTests(unittest.TestCase):
         self.assertIn("eloquence/dll/eci.dll", discovered_paths)
         self.assertIsInstance(data["inventory"], dict)
         self.assertIn("eloquence", data["inventory"])
+        self.assertIsInstance(data["inventory_totals"], dict)
+        self.assertGreaterEqual(data["inventory_totals"]["directories"], 1)
 
     def test_list_speechdata_summary_prints_inventory(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -258,6 +281,7 @@ class BuildCliFlagTests(unittest.TestCase):
 
         output = buffer.getvalue()
         self.assertIn("Speechdata inventory summary", output)
+        self.assertIn("Overall totals", output)
         self.assertIn("eloquence/dll", output)
         self.assertIn(".dll×1", output)
 
