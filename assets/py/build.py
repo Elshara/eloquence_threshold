@@ -326,6 +326,14 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--list-speechdata-bytes",
+        action="store_true",
+        help=(
+            "When listing speechdata/ summaries, include byte-level totals for each "
+            "directory and aggregated extension sizes."
+        ),
+    )
+    parser.add_argument(
         "--list-speechdata-depth",
         type=int,
         default=2,
@@ -365,6 +373,9 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 
     if args.list_speechdata_summary and not args.list_speechdata:
         parser.error("--list-speechdata-summary requires --list-speechdata")
+
+    if args.list_speechdata_bytes and not args.list_speechdata:
+        parser.error("--list-speechdata-bytes requires --list-speechdata")
 
     normalised: list[str] = []
     root_requested = False
@@ -699,6 +710,7 @@ def aggregate_speechdata_inventory(
             "directories": summary.get("directories", 0),
             "total_files": summary.get("total_files", 0),
             "extensionless_files": summary.get("extensionless_files", 0),
+            "total_bytes": summary.get("total_bytes", 0),
             "unique_extensions": len(summary.get("extensions", {})),
         },
     )
@@ -750,6 +762,9 @@ def write_speechdata_list_output(
             "root_exists": root_exists,
             "inventory_entries": 0 if inventory is None else len(inventory),
             "has_inventory_totals": inventory_totals is not None,
+            "total_bytes": 0
+            if not inventory_totals
+            else inventory_totals.get("total_bytes", 0),
         },
     )
 
@@ -907,12 +922,13 @@ def main() -> None:
             "template_url": args.template_url,
             "no_speechdata": args.no_speechdata,
             "speechdata_subtrees": args.speechdata_subtree,
-            "list_speechdata": args.list_speechdata,
-            "list_speechdata_summary": args.list_speechdata_summary,
-            "list_speechdata_depth": args.list_speechdata_depth,
-            "list_speechdata_output": args.list_speechdata_output,
-        },
-    )
+        "list_speechdata": args.list_speechdata,
+        "list_speechdata_summary": args.list_speechdata_summary,
+        "list_speechdata_bytes": args.list_speechdata_bytes,
+        "list_speechdata_depth": args.list_speechdata_depth,
+        "list_speechdata_output": args.list_speechdata_output,
+    },
+)
 
     if args.list_speechdata:
         subtrees = discover_speechdata_subtrees(max_depth=args.list_speechdata_depth)
@@ -920,7 +936,11 @@ def main() -> None:
         payload: Optional[Dict[str, object]] = None
         inventory: Optional[Dict[str, Dict[str, object]]] = None
         inventory_totals: Optional[Dict[str, object]] = None
-        if args.list_speechdata_summary or args.list_speechdata_output is not None:
+        if (
+            args.list_speechdata_summary
+            or args.list_speechdata_bytes
+            or args.list_speechdata_output is not None
+        ):
             inventory = build_speechdata_inventory(max_depth=args.list_speechdata_depth)
             inventory_totals = aggregate_speechdata_inventory(inventory)
         if subtrees:
@@ -957,6 +977,17 @@ def main() -> None:
                         total_parts.append(
                             f"extensionless={total_extensionless}"
                         )
+                    if args.list_speechdata_bytes:
+                        total_parts.append(
+                            f"bytes={inventory_totals.get('total_bytes', 0)}"
+                        )
+                        extensionless_bytes = inventory_totals.get(
+                            "extensionless_bytes", 0
+                        )
+                        if extensionless_bytes:
+                            total_parts.append(
+                                f"extensionless_bytes={extensionless_bytes}"
+                            )
                     print(f" Overall totals: {'; '.join(total_parts)}")
                     total_extensions = inventory_totals.get("extensions", {})
                     if total_extensions:
@@ -964,6 +995,15 @@ def main() -> None:
                             f"{ext}×{count}" for ext, count in total_extensions.items()
                         )
                         print(f"   Extensions: {overall_extensions}")
+                    if args.list_speechdata_bytes:
+                        total_extension_bytes = inventory_totals.get(
+                            "extension_bytes", {}
+                        )
+                        if total_extension_bytes:
+                            bytes_fragments = ", ".join(
+                                f"{ext}={size}" for ext, size in total_extension_bytes.items()
+                            )
+                            print(f"   Extension sizes: {bytes_fragments}")
                 for relative, stats in inventory.items():
                     extensions = stats.get("extensions", {})
                     extension_fragments = [
@@ -973,10 +1013,28 @@ def main() -> None:
                     extensionless = stats.get("extensionless_files", 0)
                     if extensionless:
                         summary_parts.append(f"extensionless={extensionless}")
+                    if args.list_speechdata_bytes:
+                        summary_parts.append(
+                            f"bytes={stats.get('total_bytes', 0)}"
+                        )
+                        extensionless_bytes = stats.get("extensionless_bytes", 0)
+                        if extensionless_bytes:
+                            summary_parts.append(
+                                f"extensionless_bytes={extensionless_bytes}"
+                            )
                     if extension_fragments:
                         summary_parts.append(
                             "extensions=" + ", ".join(extension_fragments)
                         )
+                    if args.list_speechdata_bytes:
+                        extension_bytes = stats.get("extension_bytes", {})
+                        if extension_bytes:
+                            summary_parts.append(
+                                "extension_bytes="
+                                + ", ".join(
+                                    f"{ext}={size}" for ext, size in extension_bytes.items()
+                                )
+                            )
                     print(f" - {relative}: {'; '.join(summary_parts)}")
             elif speechdata_root.is_dir():
                 print(
@@ -1004,6 +1062,7 @@ def main() -> None:
                 "speechdata_entries": subtrees,
                 "speechdata_root": speechdata_root,
                 "speechdata_depth": args.list_speechdata_depth,
+                "speechdata_bytes_requested": args.list_speechdata_bytes,
                 "speechdata_listing": payload,
                 "speechdata_inventory": inventory,
                 "speechdata_inventory_totals": inventory_totals,

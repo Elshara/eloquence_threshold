@@ -127,24 +127,38 @@ def summarise_entries(entries: Sequence[str], *, root: Path) -> List[Dict[str, o
 def summarise_subtree(path: Path) -> Dict[str, object]:
     """Return extension statistics for the subtree rooted at *path*."""
 
-    total = 0
-    extensionless = 0
+    total_files = 0
+    total_bytes = 0
+    extensionless_files = 0
+    extensionless_bytes = 0
     extensions: Dict[str, int] = {}
+    extension_bytes: Dict[str, int] = {}
 
     for dirpath, _, filenames in os.walk(path):
         for filename in filenames:
-            total += 1
+            total_files += 1
+            candidate = Path(dirpath, filename)
+            try:
+                size = candidate.stat().st_size
+            except OSError:
+                size = 0
+            total_bytes += size
             suffix = Path(filename).suffix
             if not suffix:
-                extensionless += 1
+                extensionless_files += 1
+                extensionless_bytes += size
                 continue
             key = suffix.lower()
             extensions[key] = extensions.get(key, 0) + 1
+            extension_bytes[key] = extension_bytes.get(key, 0) + size
 
     return {
-        "total_files": total,
-        "extensionless_files": extensionless,
+        "total_files": total_files,
+        "total_bytes": total_bytes,
+        "extensionless_files": extensionless_files,
+        "extensionless_bytes": extensionless_bytes,
         "extensions": dict(sorted(extensions.items())),
+        "extension_bytes": dict(sorted(extension_bytes.items())),
     }
 
 
@@ -167,22 +181,34 @@ def summarise_inventory_totals(
     """Aggregate *inventory* statistics across all tracked directories."""
 
     total_files = 0
+    total_bytes = 0
     extensionless_files = 0
+    extensionless_bytes = 0
     directories = 0
     extensions: Dict[str, int] = {}
+    extension_bytes: Dict[str, int] = {}
 
     for stats in inventory.values():
         directories += 1
         total_files += int(stats.get("total_files", 0) or 0)
+        total_bytes += int(stats.get("total_bytes", 0) or 0)
         extensionless_files += int(stats.get("extensionless_files", 0) or 0)
+        extensionless_bytes += int(stats.get("extensionless_bytes", 0) or 0)
 
         for extension, count in stats.get("extensions", {}).items():
             key = extension.lower()
             extensions[key] = extensions.get(key, 0) + int(count or 0)
 
+        for extension, size in stats.get("extension_bytes", {}).items():
+            key = extension.lower()
+            extension_bytes[key] = extension_bytes.get(key, 0) + int(size or 0)
+
     return {
         "directories": directories,
         "total_files": total_files,
+        "total_bytes": total_bytes,
         "extensionless_files": extensionless_files,
+        "extensionless_bytes": extensionless_bytes,
         "extensions": dict(sorted(extensions.items())),
+        "extension_bytes": dict(sorted(extension_bytes.items())),
     }

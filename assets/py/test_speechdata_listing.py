@@ -77,20 +77,28 @@ class SpeechdataListingTests(unittest.TestCase):
         self.assertIn("eloquence/dll", inventory)
         dll_info = inventory["eloquence/dll"]
         self.assertEqual(dll_info["total_files"], 1)
+        self.assertEqual(dll_info["total_bytes"], 3)
         self.assertEqual(dll_info["extensionless_files"], 0)
         self.assertEqual(dll_info["extensions"], {".dll": 1})
+        self.assertEqual(dll_info["extension_bytes"], {".dll": 3})
 
     def test_summarise_inventory_totals(self) -> None:
         inventory = {
             "eloquence/dll": {
                 "total_files": 1,
+                "total_bytes": 3,
                 "extensionless_files": 0,
+                "extensionless_bytes": 0,
                 "extensions": {".dll": 1},
+                "extension_bytes": {".dll": 3},
             },
             "eloquence/syn": {
                 "total_files": 2,
+                "total_bytes": 6,
                 "extensionless_files": 1,
+                "extensionless_bytes": 4,
                 "extensions": {".syn": 1},
+                "extension_bytes": {".syn": 2},
             },
         }
 
@@ -98,8 +106,11 @@ class SpeechdataListingTests(unittest.TestCase):
 
         self.assertEqual(totals["directories"], 2)
         self.assertEqual(totals["total_files"], 3)
+        self.assertEqual(totals["total_bytes"], 9)
         self.assertEqual(totals["extensionless_files"], 1)
+        self.assertEqual(totals["extensionless_bytes"], 4)
         self.assertEqual(totals["extensions"], {".dll": 1, ".syn": 1})
+        self.assertEqual(totals["extension_bytes"], {".dll": 3, ".syn": 2})
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest main hook

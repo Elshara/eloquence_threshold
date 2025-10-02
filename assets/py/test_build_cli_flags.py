@@ -181,19 +181,27 @@ class BuildCliFlagTests(unittest.TestCase):
         self.assertIn("eloquence/dll", inventory)
         dll_stats = inventory["eloquence/dll"]
         self.assertEqual(dll_stats["total_files"], 1)
+        self.assertEqual(dll_stats["total_bytes"], 3)
         self.assertEqual(dll_stats["extensions"], {".dll": 1})
+        self.assertEqual(dll_stats["extension_bytes"], {".dll": 3})
 
     def test_aggregate_speechdata_inventory(self) -> None:
         inventory = {
             "eloquence/dll": {
                 "total_files": 1,
+                "total_bytes": 3,
                 "extensionless_files": 0,
+                "extensionless_bytes": 0,
                 "extensions": {".dll": 1},
+                "extension_bytes": {".dll": 3},
             },
             "eloquence/syn": {
                 "total_files": 2,
+                "total_bytes": 6,
                 "extensionless_files": 1,
+                "extensionless_bytes": 4,
                 "extensions": {".syn": 2},
+                "extension_bytes": {".syn": 5},
             },
         }
 
@@ -201,8 +209,11 @@ class BuildCliFlagTests(unittest.TestCase):
 
         self.assertEqual(totals["directories"], 2)
         self.assertEqual(totals["total_files"], 3)
+        self.assertEqual(totals["total_bytes"], 9)
         self.assertEqual(totals["extensionless_files"], 1)
+        self.assertEqual(totals["extensionless_bytes"], 4)
         self.assertEqual(totals["extensions"], {".dll": 1, ".syn": 2})
+        self.assertEqual(totals["extension_bytes"], {".dll": 3, ".syn": 5})
 
     def test_summarise_speechdata_entries(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -257,6 +268,8 @@ class BuildCliFlagTests(unittest.TestCase):
         self.assertIn("eloquence", data["inventory"])
         self.assertIsInstance(data["inventory_totals"], dict)
         self.assertGreaterEqual(data["inventory_totals"]["directories"], 1)
+        self.assertIn("total_bytes", data["inventory_totals"])
+        self.assertIn("extension_bytes", data["inventory_totals"])
 
     def test_list_speechdata_summary_prints_inventory(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -284,6 +297,33 @@ class BuildCliFlagTests(unittest.TestCase):
         self.assertIn("Overall totals", output)
         self.assertIn("eloquence/dll", output)
         self.assertIn(".dll×1", output)
+
+    def test_list_speechdata_bytes_includes_sizes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            speechdata_root = Path(tmpdir, "speechdata")
+            (speechdata_root / "eloquence" / "dll").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "dll" / "eci.dll").write_bytes(b"dll")
+            (speechdata_root / "eloquence" / "syn").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "syn" / "voice.syn").write_bytes(b"syn")
+
+            argv = [
+                "build.py",
+                "--list-speechdata",
+                "--list-speechdata-depth",
+                "2",
+                "--list-speechdata-summary",
+                "--list-speechdata-bytes",
+            ]
+            with mock.patch.object(sys, "argv", argv):
+                with mock.patch.object(build.resource_paths, "speechdata_root", return_value=speechdata_root):
+                    buffer = io.StringIO()
+                    with mock.patch.object(sys, "stdout", new=buffer):
+                        build.main()
+
+        output = buffer.getvalue()
+        self.assertIn("bytes=", output)
+        self.assertIn("extension_bytes=", output)
+        self.assertIn("Extension sizes", output)
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest main hook
