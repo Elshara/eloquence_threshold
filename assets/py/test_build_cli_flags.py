@@ -45,6 +45,10 @@ class BuildCliFlagTests(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 build.parse_args(["--list-speechdata-output", "report.json"])
 
+        with mock.patch.object(sys, "stderr", io.StringIO()):
+            with self.assertRaises(SystemExit):
+                build.parse_args(["--list-speechdata-summary"])
+
     def test_parse_args_accepts_list_flags(self) -> None:
         args = build.parse_args(["--list-speechdata", "--list-speechdata-depth", "3"])
         self.assertTrue(args.list_speechdata)
@@ -162,6 +166,23 @@ class BuildCliFlagTests(unittest.TestCase):
 
         self.assertEqual(entries, [])
 
+    def test_build_speechdata_inventory(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            speechdata_root = Path(tmpdir, "speechdata")
+            (speechdata_root / "eloquence" / "dll").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "dll" / "eci.dll").write_bytes(b"dll")
+            with mock.patch.object(
+                build.resource_paths,
+                "speechdata_root",
+                return_value=speechdata_root,
+            ):
+                inventory = build.build_speechdata_inventory(max_depth=2)
+
+        self.assertIn("eloquence/dll", inventory)
+        dll_stats = inventory["eloquence/dll"]
+        self.assertEqual(dll_stats["total_files"], 1)
+        self.assertEqual(dll_stats["extensions"], {".dll": 1})
+
     def test_summarise_speechdata_entries(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             speechdata_root = Path(tmpdir)
@@ -211,6 +232,34 @@ class BuildCliFlagTests(unittest.TestCase):
         discovered_paths = [entry["path"] for entry in data["entries"]]
         self.assertIn("eloquence", discovered_paths)
         self.assertIn("eloquence/dll/eci.dll", discovered_paths)
+        self.assertIsInstance(data["inventory"], dict)
+        self.assertIn("eloquence", data["inventory"])
+
+    def test_list_speechdata_summary_prints_inventory(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            speechdata_root = Path(tmpdir, "speechdata")
+            (speechdata_root / "eloquence" / "dll").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "dll" / "eci.dll").write_bytes(b"dll")
+            (speechdata_root / "eloquence" / "syn").mkdir(parents=True)
+            (speechdata_root / "eloquence" / "syn" / "voice.syn").write_bytes(b"syn")
+
+            argv = [
+                "build.py",
+                "--list-speechdata",
+                "--list-speechdata-depth",
+                "2",
+                "--list-speechdata-summary",
+            ]
+            with mock.patch.object(sys, "argv", argv):
+                with mock.patch.object(build.resource_paths, "speechdata_root", return_value=speechdata_root):
+                    buffer = io.StringIO()
+                    with mock.patch.object(sys, "stdout", new=buffer):
+                        build.main()
+
+        output = buffer.getvalue()
+        self.assertIn("Speechdata inventory summary", output)
+        self.assertIn("eloquence/dll", output)
+        self.assertIn(".dll×1", output)
 
 
 if __name__ == "__main__":  # pragma: no cover - unittest main hook

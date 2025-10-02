@@ -30,6 +30,12 @@
       ],
       "triggered": true
     },
+    "build_speechdata_inventory": {
+      "calls": 0,
+      "description": "Collect extension statistics for discovered speechdata/ directories.",
+      "events": [],
+      "triggered": false
+    },
     "copy_optional_directory": {
       "calls": 23,
       "description": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
@@ -211,6 +217,8 @@
           "insecure": true,
           "list_speechdata": false,
           "list_speechdata_depth": 2,
+          "list_speechdata_output": null,
+          "list_speechdata_summary": false,
           "no_download": true,
           "no_speechdata": false,
           "output": "dist/test.nvda-addon",
@@ -294,6 +302,12 @@
         }
       ],
       "triggered": true
+    },
+    "write_speechdata_list_output": {
+      "calls": 0,
+      "description": "Serialise speechdata listings when --list-speechdata-output is supplied.",
+      "events": [],
+      "triggered": false
     }
   }
 }

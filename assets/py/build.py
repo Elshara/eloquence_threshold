@@ -85,6 +85,7 @@ TRACE_REGISTRY = {
     "stage_assets_tree": "Mirror the extension-scoped assets/ hierarchy into the packaged add-on.",
     "stage_speechdata_tree": "Bundle temporary speechdata/ payloads that still need extension triage.",
     "discover_speechdata_subtrees": "Enumerate candidate speechdata/ entries for targeted packaging drills.",
+    "build_speechdata_inventory": "Collect extension statistics for discovered speechdata/ directories.",
     "write_speechdata_list_output": "Serialise speechdata listings when --list-speechdata-output is supplied.",
     "copy_optional_directory": "Copy opt-in legacy/runtime directories like eloquence_data or architecture caches.",
     "has_runtime_assets": "Scan known locations for eci.dll so packaging can warn about missing runtimes.",
@@ -316,6 +317,14 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--list-speechdata-summary",
+        action="store_true",
+        help=(
+            "When listing speechdata/, print per-directory extension statistics "
+            "and include them in generated JSON reports."
+        ),
+    )
+    parser.add_argument(
         "--list-speechdata-depth",
         type=int,
         default=2,
@@ -352,6 +361,9 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 
     if args.list_speechdata_output and not args.list_speechdata:
         parser.error("--list-speechdata-output requires --list-speechdata")
+
+    if args.list_speechdata_summary and not args.list_speechdata:
+        parser.error("--list-speechdata-summary requires --list-speechdata")
 
     normalised: list[str] = []
     root_requested = False
@@ -650,6 +662,29 @@ def discover_speechdata_subtrees(*, max_depth: int = 2) -> List[str]:
     return entries
 
 
+def build_speechdata_inventory(*, max_depth: int = 2) -> Dict[str, Dict[str, object]]:
+    """Return extension statistics for directories beneath ``speechdata/``."""
+
+    root = resource_paths.speechdata_root()
+    effective_depth = max(1, max_depth)
+    exists = root.is_dir()
+    inventory = (
+        speechdata_listing.build_inventory(root, max_depth=effective_depth)
+        if exists
+        else {}
+    )
+
+    record_trace(
+        "build_speechdata_inventory",
+        details={
+            "exists": exists,
+            "max_depth": effective_depth,
+            "entries": len(inventory),
+        },
+    )
+    return inventory
+
+
 def summarise_speechdata_entries(
     entries: Sequence[str],
     *,
@@ -666,6 +701,7 @@ def write_speechdata_list_output(
     speechdata_root: Path,
     depth: int,
     entries: Sequence[str],
+    inventory: Optional[Dict[str, Dict[str, object]]],
 ) -> Dict[str, object]:
     """Write a JSON payload describing the speechdata listing to *output_path*."""
 
@@ -677,6 +713,7 @@ def write_speechdata_list_output(
         "root_exists": root_exists,
         "max_depth": depth,
         "entries": [] if not root_exists else summarise_speechdata_entries(entries, root=speechdata_root),
+        "inventory": inventory if inventory is not None else None,
     }
 
     with output_path.open("w", encoding="utf-8") as handle:
@@ -688,6 +725,7 @@ def write_speechdata_list_output(
             "output": output_path,
             "entries": len(entries),
             "root_exists": root_exists,
+            "inventory_entries": 0 if inventory is None else len(inventory),
         },
     )
 
@@ -846,6 +884,7 @@ def main() -> None:
             "no_speechdata": args.no_speechdata,
             "speechdata_subtrees": args.speechdata_subtree,
             "list_speechdata": args.list_speechdata,
+            "list_speechdata_summary": args.list_speechdata_summary,
             "list_speechdata_depth": args.list_speechdata_depth,
             "list_speechdata_output": args.list_speechdata_output,
         },
@@ -855,6 +894,9 @@ def main() -> None:
         subtrees = discover_speechdata_subtrees(max_depth=args.list_speechdata_depth)
         speechdata_root = resource_paths.speechdata_root()
         payload: Optional[Dict[str, object]] = None
+        inventory: Optional[Dict[str, Dict[str, object]]] = None
+        if args.list_speechdata_summary or args.list_speechdata_output is not None:
+            inventory = build_speechdata_inventory(max_depth=args.list_speechdata_depth)
         if subtrees:
             print(
                 "Discovered speechdata entries (depth ≤ "
@@ -873,12 +915,40 @@ def main() -> None:
                 "packaging or adjust the repository checkout."
             )
 
+        if args.list_speechdata_summary:
+            if inventory:
+                print(
+                    "Speechdata inventory summary (depth ≤ "
+                    f"{args.list_speechdata_depth}):"
+                )
+                for relative, stats in inventory.items():
+                    extensions = stats.get("extensions", {})
+                    extension_fragments = [
+                        f"{ext}×{count}" for ext, count in extensions.items()
+                    ]
+                    summary_parts = [f"total={stats.get('total_files', 0)}"]
+                    extensionless = stats.get("extensionless_files", 0)
+                    if extensionless:
+                        summary_parts.append(f"extensionless={extensionless}")
+                    if extension_fragments:
+                        summary_parts.append(
+                            "extensions=" + ", ".join(extension_fragments)
+                        )
+                    print(f" - {relative}: {'; '.join(summary_parts)}")
+            elif speechdata_root.is_dir():
+                print(
+                    "No directory-level statistics were collected within the "
+                    "requested depth. Increase --list-speechdata-depth to see "
+                    "nested directories."
+                )
+
         if args.list_speechdata_output is not None:
             payload = write_speechdata_list_output(
                 args.list_speechdata_output,
                 speechdata_root=speechdata_root,
                 depth=args.list_speechdata_depth,
                 entries=subtrees,
+                inventory=inventory,
             )
             print(f"Wrote speechdata listing to {args.list_speechdata_output}")
 
@@ -891,6 +961,7 @@ def main() -> None:
                 "speechdata_root": speechdata_root,
                 "speechdata_depth": args.list_speechdata_depth,
                 "speechdata_listing": payload,
+                "speechdata_inventory": inventory,
             },
         )
         return
