@@ -4,51 +4,15 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 from pathlib import Path
-from typing import Dict, Iterable, Tuple
+from typing import Dict
+
+import speechdata_listing
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SPEECHDATA_ROOT = REPO_ROOT / "speechdata"
 DEFAULT_JSON = REPO_ROOT / "assets" / "json" / "speechdata_inventory.json"
 DEFAULT_MARKDOWN = REPO_ROOT / "assets" / "md" / "speechdata_manifest.md"
-
-
-def iter_subtrees(max_depth: int = 2) -> Iterable[Tuple[str, Path]]:
-    """Yield subtrees (relative path, absolute path) up to ``max_depth`` directories deep."""
-    root_depth = len(SPEECHDATA_ROOT.parts)
-    for path, dirnames, _ in os.walk(SPEECHDATA_ROOT):
-        rel = Path(path).relative_to(SPEECHDATA_ROOT)
-        depth = len(Path(path).parts) - root_depth
-        if depth == 0:
-            # skip the root marker
-            continue
-        if depth > max_depth:
-            dirnames[:] = []  # prune deeper walks
-            continue
-        yield rel.as_posix(), Path(path)
-
-
-def summarise_tree(path: Path) -> Dict[str, object]:
-    total = 0
-    extensionless = 0
-    extensions: Dict[str, int] = {}
-    for dirpath, _, filenames in os.walk(path):
-        for filename in filenames:
-            total += 1
-            ext = Path(filename).suffix
-            if not ext:
-                extensionless += 1
-            else:
-                ext_key = ext.lower()
-                extensions[ext_key] = extensions.get(ext_key, 0) + 1
-    return {
-        "total_files": total,
-        "extensionless_files": extensionless,
-        "extensions": dict(sorted(extensions.items())),
-    }
-
-
 def build_manifest(data: Dict[str, Dict[str, object]]) -> str:
     lines = ["# Speechdata migration manifest", ""]
     lines.append(
@@ -119,20 +83,15 @@ def main() -> None:
             f"speechdata directory not found at {SPEECHDATA_ROOT}. Run the script from the repository root."
         )
 
-    snapshot: Dict[str, Dict[str, object]] = {}
-    for rel, path in iter_subtrees(args.max_depth):
-        snapshot[rel] = summarise_tree(path)
-
-    # Keep outputs deterministic so diffs stay readable for CodeQL and review.
-    ordered_snapshot = {key: snapshot[key] for key in sorted(snapshot)}
+    snapshot = speechdata_listing.build_inventory(SPEECHDATA_ROOT, max_depth=args.max_depth)
 
     args.json.parent.mkdir(parents=True, exist_ok=True)
     args.json.write_text(
-        json.dumps(ordered_snapshot, indent=2, ensure_ascii=False) + "\n",
+        json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     args.markdown.parent.mkdir(parents=True, exist_ok=True)
-    args.markdown.write_text(build_manifest(ordered_snapshot), encoding="utf-8")
+    args.markdown.write_text(build_manifest(snapshot), encoding="utf-8")
 
 
 if __name__ == "__main__":

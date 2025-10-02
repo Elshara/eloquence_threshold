@@ -26,7 +26,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import shutil
 import ssl
 import sys
@@ -41,6 +40,7 @@ from pathlib import Path
 from typing import Dict, Iterable, Optional, Tuple, List, Sequence
 
 import resource_paths
+import speechdata_listing
 
 if sys.version_info < (3, 8):
     raise RuntimeError("Python 3.8 or newer is required to build the add-on")
@@ -631,48 +631,19 @@ def discover_speechdata_subtrees(*, max_depth: int = 2) -> List[str]:
     """Return candidate ``speechdata/`` entries up to ``max_depth`` directories deep."""
 
     root = resource_paths.speechdata_root()
-    if max_depth < 1:
-        max_depth = 1
-
-    entries: List[str] = []
-    if not root.is_dir():
-        record_trace(
-            "discover_speechdata_subtrees",
-            details={
-                "exists": False,
-                "max_depth": max_depth,
-                "entries": 0,
-            },
-        )
-        return entries
-
-    for dirpath, dirnames, filenames in os.walk(root):
-        relative_dir = Path(dirpath).relative_to(root)
-        depth = len(relative_dir.parts)
-        dirnames.sort()
-        filenames.sort()
-
-        if depth > max_depth:
-            dirnames[:] = []
-            continue
-
-        if depth >= max_depth:
-            dirnames[:] = []
-
-        if depth > 0:
-            entries.append(relative_dir.as_posix())
-
-        for filename in filenames:
-            if depth == 0:
-                entries.append(filename)
-            else:
-                entries.append((relative_dir / filename).as_posix())
+    effective_depth = max(1, max_depth)
+    exists = root.is_dir()
+    entries = (
+        speechdata_listing.discover_entries(root, max_depth=effective_depth)
+        if exists
+        else []
+    )
 
     record_trace(
         "discover_speechdata_subtrees",
         details={
-            "exists": True,
-            "max_depth": max_depth,
+            "exists": exists,
+            "max_depth": effective_depth,
             "entries": len(entries),
         },
     )
@@ -686,45 +657,7 @@ def summarise_speechdata_entries(
 ) -> List[Dict[str, object]]:
     """Describe discovered speechdata entries with lightweight metadata."""
 
-    summary: List[Dict[str, object]] = []
-    for entry in entries:
-        resolved = root / entry
-        details: Dict[str, object] = {"path": entry}
-        try:
-            stat_result = resolved.stat()
-        except FileNotFoundError:
-            details["kind"] = "missing"
-            summary.append(details)
-            continue
-
-        if resolved.is_dir():
-            files = 0
-            directories = 0
-            try:
-                for child in resolved.iterdir():
-                    if child.is_dir():
-                        directories += 1
-                    elif child.is_file():
-                        files += 1
-            except OSError as error:
-                details["kind"] = "directory"
-                details["child_scan_error"] = type(error).__name__
-            else:
-                details["kind"] = "directory"
-                details["children"] = {
-                    "directories": directories,
-                    "files": files,
-                }
-        else:
-            details["kind"] = "file"
-            suffix = resolved.suffix
-            details["size_bytes"] = stat_result.st_size
-            details["extension"] = suffix[1:] if suffix else ""
-            details["extensionless"] = not bool(suffix)
-
-        summary.append(details)
-
-    return summary
+    return speechdata_listing.summarise_entries(entries, root=root)
 
 
 def write_speechdata_list_output(
