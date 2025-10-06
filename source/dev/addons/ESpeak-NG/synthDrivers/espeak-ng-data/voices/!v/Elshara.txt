@@ -1,0 +1,26 @@
+language variant
+name Elshara
+gender male 50
+speed 0
+pitch 74 125
+intonation 3
+voicing 100
+consonants 25 25
+tone 0 255
+formant 0 45 76 108 0
+formant 1 70 43 108 0
+formant 2 93 36 108 0
+formant 3 99 18 108 0
+formant 4 94 21 108 0
+formant 5 73 29 108 0
+formant 6 85 37 108 0
+formant 7 82 101 108 0
+formant 8 100 94 108 0
+stressLength 0 1 2 3 4 5 6 7
+stressAdd 114 114 114 114 114 114 114 114
+stressAmp 24 24 24 24 24 24 24 24
+flutter 3
+roughness 3
+breath 1 1 1 1 1 1 1 1
+breathw 1 4 16 64 256 1024 4096 16384
+echo 0 0

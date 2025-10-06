@@ -1,0 +1,1 @@
+import synthDrivers;synthDrivers._espeak.maxRate=800
